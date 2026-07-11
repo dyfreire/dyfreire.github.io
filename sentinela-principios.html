@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Por que os princípios bíblicos são importantes? | Sentinela 6-12 Jul 2026</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6c757d;
+  --border: #dee2e6;
+  --azul: #dbeafe;
+  --azul-borda: #3b82f6;
+  --cinza: #f1f3f5;
+  --cinza-borda: #6c757d;
+  --verde: #d1fae5;
+  --verde-borda: #10b981;
+  --ambar: #fef3c7;
+  --ambar-borda: #f59e0b;
+  --roxo: #ede9fe;
+  --roxo-borda: #8b5cf6;
+  --amarelo: #fef9c3;
+  --amarelo-borda: #eab308;
+  --fontes: #ffe4e6;
+  --fontes-borda: #f43f5e;
+  --link: #2563eb;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+  --azul: #1e3a8a;
+  --cinza: #334155;
+  --verde: #064e3b;
+  --ambar: #78350f;
+  --roxo: #4c1d95;
+  --amarelo: #713f12;
+  --fontes: #7f1d1d;
+  --link: #60a5fa;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0;
+  transition: background .3s, color .3s;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+header {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+header .week { font-size: .85rem; opacity: .9; }
+header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+.controls {
+  display: flex; gap: 8px; padding: 12px 16px;
+  background: var(--card); border-bottom: 1px solid var(--border);
+  position: sticky; top: 96px; z-index: 99;
+}
+.btn {
+  background: var(--azul); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; font-size: .85rem; cursor: pointer;
+  flex: 1; font-weight: 500;
+}
+.btn:hover { background: var(--cinza); }
+.btn-icon { flex: 0 0 auto; padding: 8px 12px; }
+
+.toc {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; margin-bottom: 12px; color: var(--link); }
+.toc details { margin-bottom: 8px; }
+.toc summary {
+  cursor: pointer; padding: 8px 12px; background: var(--cinza);
+  border-radius: 8px; font-weight: 600; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after { content: "▼"; font-size: .7rem; transition: transform .2s; }
+.toc details[open] summary::after { transform: rotate(180deg); }
+.toc ul { list-style: none; padding-left: 16px; margin-top: 8px; }
+.toc li a {
+  display: block; padding: 6px 0; color: var(--text);
+  text-decoration: none; font-size: .9rem; opacity: .8;
+}
+.toc li a:hover { color: var(--link); opacity: 1; }
+
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto;
+  background: var(--card); padding: 8px; border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.tab {
+  padding: 10px 14px; background: transparent; border: none;
+  border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 600;
+  white-space: nowrap; color: var(--muted); transition: all .2s;
+}
+.tab.active { background: var(--azul); color: var(--text); }
+.tab:hover:not(.active) { background: var(--cinza); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+  color: var(--link); display: flex; align-items: center; gap: 8px;
+}
+.card-title .num {
+  background: var(--azul); color: var(--text);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 700;
+}
+
+.box {
+  padding: 12px 14px; border-radius: 10px; margin-bottom: 10px;
+  border-left: 4px solid;
+}
+.box-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 6px; opacity: .8;
+}
+.box-text { font-size: .92rem; line-height: 1.55; }
+.box-emoji { font-size: 1.1rem; margin-right: 6px; }
+
+.box-pergunta { background: var(--azul); border-color: var(--azul-borda); }
+.box-texto    { background: var(--cinza); border-color: var(--cinza-borda); }
+.box-explic   { background: var(--verde); border-color: var(--verde-borda); }
+.box-aplic    { background: var(--ambar); border-color: var(--ambar-borda); }
+.box-reflex   { background: var(--roxo); border-color: var(--roxo-borda); }
+.box-resumo   { background: var(--amarelo); border-color: var(--amarelo-borda); }
+.box-fontes   { background: var(--fontes); border-color: var(--fontes-borda); }
+
+.ref {
+  display: inline-block; background: var(--azul);
+  color: var(--link); padding: 2px 8px; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--azul-borda);
+  margin: 0 2px; cursor: pointer;
+}
+.ref:hover { background: var(--azul-borda); color: white; }
+
+.modal-bg {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.6); z-index: 1000;
+  align-items: center; justify-content: center; padding: 16px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: var(--card); color: var(--text);
+  max-width: 500px; width: 100%; max-height: 80vh; overflow-y: auto;
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.modal h3 { color: var(--link); margin-bottom: 12px; font-size: 1.1rem; }
+.modal .verse-text { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.modal .close {
+  background: var(--azul); color: var(--text);
+  border: none; padding: 8px 16px; border-radius: 8px;
+  cursor: pointer; font-weight: 600; float: right;
+}
+.modal a {
+  display: inline-block; margin-top: 8px; color: var(--link);
+  font-size: .85rem; text-decoration: none; font-weight: 600;
+}
+
+.section-header {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.section-header h2 { color: var(--link); font-size: 1.15rem; }
+.section-header .emoji { font-size: 1.5rem; margin-right: 6px; }
+
+.review-card {
+  background: var(--amarelo); border: 2px dashed var(--amarelo-borda);
+  border-radius: 12px; padding: 16px; margin-bottom: 12px;
+}
+.review-card h4 { color: var(--text); margin-bottom: 8px; font-size: 1rem; }
+.review-card p { font-size: .92rem; line-height: 1.6; }
+
+/* Fontes & Mídia - novo estilo */
+.fontes-list { list-style: none; padding: 0; margin: 0; }
+.fontes-list li {
+  font-size: .85rem; padding: 6px 0;
+  border-bottom: 1px dashed var(--fontes-borda);
+  display: flex; align-items: flex-start; gap: 6px;
+}
+.fontes-list li:last-child { border-bottom: none; }
+.fontes-list .icon { flex-shrink: 0; }
+.fontes-list a { color: var(--link); text-decoration: none; font-weight: 500; }
+.fontes-list a:hover { text-decoration: underline; }
+.fontes-list .nota {
+  display: block; font-style: italic; opacity: .85;
+  font-size: .82rem; margin-top: 2px; padding-left: 22px;
+}
+
+/* Media preview */
+.media-card {
+  background: rgba(255,255,255,.6);
+  border: 1px solid var(--fontes-borda);
+  border-radius: 8px; padding: 10px; margin-top: 8px;
+  font-size: .85rem; line-height: 1.5;
+}
+.media-card .label {
+  font-weight: 700; color: var(--fontes-borda);
+  font-size: .75rem; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+[data-theme="dark"] .media-card { background: rgba(0,0,0,.3); }
+
+footer {
+  text-align: center; padding: 24px 16px; font-size: .8rem;
+  color: var(--muted); border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+  header h1 { font-size: 1.1rem; }
+  .card { padding: 14px; }
+  .box { padding: 10px 12px; }
+  .box-text { font-size: .88rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📖 Por que os princípios bíblicos são importantes?</h1>
+  <div class="week">Sentinela · 6-12 de julho de 2026</div>
+  <div class="cantico">🎵 Cântico 98 — A Bíblia, um presente de Deus</div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-icon" onclick="toggleTheme()">🌓 Tema</button>
+  <button class="btn" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">📑 Índice</button>
+</div>
+
+<div class="container">
+
+<div class="toc" id="toc">
+  <h2>📑 Índice do Estudo</h2>
+  <details>
+    <summary>🔷 Introdução e Visão Geral</summary>
+    <ul>
+      <li><a href="#p1">1-2 · A Bíblia: antiga, mas atual</a></li>
+      <li><a href="#p3">3 · Perguntas que vamos responder</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 O que são princípios bíblicos?</summary>
+    <ul>
+      <li><a href="#p4">4 · Definição de princípio bíblico</a></li>
+      <li><a href="#p5">5 · Ilustração do fogão quente</a></li>
+      <li><a href="#p6">6 · Jeová nos dá liberdade</a></li>
+      <li><a href="#p7">7 · Ilustração das placas da estrada</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Por que são importantes?</summary>
+    <ul>
+      <li><a href="#p8">8 · Entender o modo de Jeová pensar</a></li>
+      <li><a href="#p9">9 · Nos tornarmos cristãos maduros</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Como identificar princípios?</summary>
+    <ul>
+      <li><a href="#p10">10 · Duas formas de identificar</a></li>
+      <li><a href="#p11">11 · Jesus no Sermão do Monte</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Três princípios do Sermão do Monte</summary>
+    <ul>
+      <li><a href="#p12">12 · Lei do assassínio (Mt 5:21,22)</a></li>
+      <li><a href="#p13">13 · Aplicar hoje: não guardar mágoa</a></li>
+      <li><a href="#p14">14 · Lei do adultério (Mt 5:27,28)</a></li>
+      <li><a href="#p15">15 · Aplicar hoje: mente pura</a></li>
+      <li><a href="#p16">16 · Lei do amor (Mt 5:43,44)</a></li>
+      <li><a href="#p17">17 · Aplicar hoje: amar a todos</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Decisão e Revisão</summary>
+    <ul>
+      <li><a href="#p18">18 · Esteja decidido a viver pelos princípios</a></li>
+      <li><a href="#rev1">Revisão · Por que os princípios são importantes?</a></li>
+      <li><a href="#rev2">Revisão · Princípios do Sermão do Monte?</a></li>
+    </ul>
+  </details>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">Introdução</button>
+  <button class="tab" onclick="showTab(1)">O que são</button>
+  <button class="tab" onclick="showTab(2)">Por quê</button>
+  <button class="tab" onclick="showTab(3)">Como identificar</button>
+  <button class="tab" onclick="showTab(4)">Aplicação</button>
+  <button class="tab" onclick="showTab(5)">Revisão</button>
+</div>
+
+<!-- TAB 0: Introdução -->
+<div class="tab-content active" id="tab0">
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Introdução e Visão Geral</h2>
+</div>
+
+<div class="card" id="p1">
+  <div class="card-title"><span class="num">1-2</span> A Bíblia é antiga, mas atual</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">(a) Por que podemos dizer que a Bíblia é um livro antigo? (b) Por que a Bíblia é útil até hoje?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"A palavra de Deus é viva e exerce poder." — <a class="ref" data-verse="Hebreus 4:12">Heb 4:12</a>; <a class="ref" data-verse="2 Timóteo 3:16, 17">2 Tim 3:16, 17</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia foi escrita há mais de 3.500 anos. Mas a mensagem de Deus continua viva e tem poder até hoje. Por dois motivos: (1) vem do "Deus vivente", nosso Criador, a Pessoa mais sábia que existe; (2) contém princípios que não mudam com o tempo, não importa a época ou os desafios da vida.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Mesmo num mundo que muda rápido, a Bíblia continua sendo útil. Quando você lê a Bíblia, lembre-se: não é só um livro antigo, é a mensagem viva de Jeová pra você hoje.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você já parou pra pensar por que um livro tão antigo ainda faz diferença na vida de milhões de pessoas hoje?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A Bíblia é antiga, mas é inspirada por Deus e cheia de princípios atemporais que ajudam pessoas de qualquer época.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/4/" target="_blank">Hebreus 4:12 — NWT (estudo completo)</a>
+          <span class="nota">"A palavra de Deus é viva" — esse poder vivo é o que torna a Bíblia relevante hoje.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/" target="_blank">2 Timóteo 3:16, 17 — NWT</a>
+          <span class="nota">Toda a Escritura é "inspirada por Deus" (gr. <i>theopneustos</i> = "soprada por Deus").</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/medias/" target="_blank">Imagens do estudo (jw.org)</a>
+          <span class="nota">Conjunto de imagens: 1) Duas Testemunhas oferecem revista; 2) Congresso em estádio; 3) Reunião com participação da assistência.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Vídeo relacionado: "A Bíblia — um livro diferente"</a>
+          <span class="nota">Mostra como a Bíblia sobreviveu ao tempo e mudou vidas.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p3">
+  <div class="card-title"><span class="num">3</span> Perguntas que vamos responder</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que perguntas vamos responder neste estudo?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Neste estudo, vamos responder as seguintes perguntas: <b>O que são princípios bíblicos?</b> Por que eles são tão importantes para nós hoje? <b>Como podemos identificar esses princípios</b> quando lemos a Bíblia? Além disso, vamos ver como Jesus chamava a atenção para esses princípios ao ensinar.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Ter as perguntas em mente ajuda a focar a leitura. Antes de começar, releia essas 3 perguntas e pense: "O que eu já sei? O que quero aprender?"</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Dessas 3 perguntas, qual te chama mais atenção? Por quê?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O estudo vai responder: O que são? Por que são importantes? Como identificar? + Como Jesus ensinou.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📋</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Índice da Sentinela — maio 2026</a>
+          <span class="nota">Outros artigos da mesma edição: "Como usar os princípios para treinar a consciência", "Seja sábio sobre ensino adicional", "Continue forte espiritualmente", "Respeite as decisões de outros", "Personagem: Manaém".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/" target="_blank">Publicações relacionadas</a>
+          <span class="nota">Livro "Achegue-se a Jeová" (cap. 16) aprofunda como a Bíblia nos guia em decisões.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- TAB 1: O que são -->
+<div class="tab-content" id="tab1">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>O que são princípios bíblicos?</h2>
+</div>
+
+<div class="card" id="p4">
+  <div class="card-title"><span class="num">4</span> Definição de princípio bíblico</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que são princípios bíblicos?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Deves amar a Jeová, teu Deus, com todo o teu coração." — <a class="ref" data-verse="Mateus 22:37">Mt 22:37</a>; <a class="ref" data-verse="Salmo 119:111">Sl 119:111</a>; <a class="ref" data-verse="Isaías 40:8">Is 40:8</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Princípios bíblicos são <b>verdades básicas</b> que servem de base para as leis de Deus. Às vezes, uma lei já é um princípio. Mas os princípios são <b>superiores</b> às leis, porque podem ser aplicados em várias situações e em épocas diferentes. Princípios são os <b>motivos por trás</b> das leis. Uma lei talvez fique desatualizada, mas isso nunca acontece com um princípio.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando você entende o motivo por trás de uma regra, fica mais fácil tomar boas decisões em situações novas que a regra não cobre diretamente.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue lembrar de uma lei na Bíblia cujo princípio te ajudou a tomar uma decisão?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Princípios são verdades básicas, motivos por trás das leis. Não mudam com o tempo e mostram a maneira de Jeová pensar.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/22/" target="_blank">Mateus 22:37 — NWT (notas de estudo)</a>
+          <span class="nota">"Com todo o teu coração" — no hebraico, "coração" (leb) refere-se à pessoa inteira, incluindo mente, emoções e decisões. Não é só sentimento.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/119/" target="_blank">Salmo 119:111 — NWT</a>
+          <span class="nota">"Testemunhos" (heb. <i>'edut</i>) = declarações, mandamentos. São "herança" porque mostram o caminho de Jeová.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/40/" target="_blank">Isaías 40:8 — NWT</a>
+          <span class="nota">A "palavra do nosso Deus" permanece para sempre — em contraste com a relva e a flor que secam. Princípios são eternos!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/achegue-se-a-jeova/" target="_blank">"Achegue-se a Jeová" — cap. 16: "Como tomar boas decisões"</a>
+          <span class="nota">Aprofunda a diferença entre princípios e regras detalhadas.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p5">
+  <div class="card-title"><span class="num">5</span> Ilustração: o fogão quente</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que ilustração nos ajuda a entender a diferença entre leis e princípios?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Uma mãe diz ao filho pequeno: "Não encoste no fogão." Isso é uma <b>lei</b>. Mas o <b>princípio</b> por trás é: encostar em algo quente machuca. Esse princípio se aplica ao fogão, mas também a ferro de passar, aquecedor, qualquer coisa quente. O princípio não se aplica só dentro de casa. Quando o filho crescer, ele provavelmente vai usar o fogão, mas ainda vai precisar se lembrar do princípio: cuidado com coisas quentes.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Pense numa lei da Bíblia que você conhece. Qual é o princípio por trás dela? Como esse princípio te ajuda em situações novas?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Às vezes a gente obedece uma "lei" sem entender o motivo. Como seria diferente se conhecesse o princípio?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A lei diz o que fazer. O princípio mostra por quê. Conhecer o princípio te dá liberdade pra tomar boas decisões em situações diferentes.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem do estudo: "Uma lei talvez mude, mas o princípio por trás dela não"</a>
+          <span class="nota">Ilustração visual: mostra uma mãe protegendo o filho do fogão, representando a lei protetora de Deus.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/" target="_blank">Livro de Provérbios — NWT</a>
+          <span class="nota">Provérbios está cheio de princípios atemporais. Veja especialmente Pv 1-9 (introdução à sabedoria) e Pv 22-24 (regras de vida).</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p6">
+  <div class="card-title"><span class="num">6</span> Jeová nos dá liberdade</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">(a) O que Jeová nos dá por meio da sua Palavra? (b) Como Jeová mostra que confia em nós?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Vocês foram chamados para ser livres." — <a class="ref" data-verse="Gálatas 5:13">Gál 5:13</a>; <a class="ref" data-verse="Tiago 2:11">Tia 2:11</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Motivado por amor, Jeová nos deu leis específicas para nos proteger. Mas ele também nos ajuda a entender os princípios por trás dessas leis. Ele não nos dá uma lei para cada situação da vida. Em vez disso, ele nos dá princípios que nos ajudam a tomar boas decisões. Assim, Jeová mostra que confia em nós, nos dando liberdade para tomarmos decisões que provam que o amamos.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando você toma uma decisão baseada em princípio (e não só em regra), você está mostrando a Jeová que o ama de verdade. Que decisões essa semana você pode tomar com base em princípio?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Como você se sente quando Jeová confia em você pra tomar suas próprias decisões?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jeová nos deu leis para nos proteger e princípios para nos guiar. Ele confia em nós pra tomar decisões que provam nosso amor.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/" target="_blank">Gálatas 5:13 — NWT (notas de estudo)</a>
+          <span class="nota">"Chamados para ser livres" — contexto: Paulo combate os que queriam impor a Lei mosaica. Liberdade cristã ≠ licença pra pecar.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/2/" target="_blank">Tiago 2:11 — NWT</a>
+          <span class="nota">A Lei mosaica era interligada — transgredir um mandamento era transgredir o todo. Mas o princípio por trás continua válido.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Confie no treinamento de Jeová"</a>
+          <span class="nota">Como Jeová treina seu povo com princípios, não só regras.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p7">
+  <div class="card-title"><span class="num">7</span> Ilustração: as placas da estrada</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como os princípios bíblicos podem nos ajudar?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Na estrada, encontramos placas que mostram leis (como limite de velocidade). Outras placas avisam de <b>possíveis perigos</b>: pista escorregadia, animais atravessando. O motorista experiente analisa a situação e dirige com cuidado. Ele reduz a velocidade na chuva ou neblina. A Bíblia tem leis que dizem o que devemos ou não fazer. Mas ela também tem <b>princípios</b> que nos alertam de possíveis perigos. Eles nos ajudam a analisar as situações e a tomar cuidado para ficar longe do que desagrada a Jeová.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Pense numa situação difícil que você enfrentou. Tem um princípio bíblico que te ajudou a "ler a placa de perigo" e evitar um problema?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você tem agido mais como "motorista experiente" (lendo princípios) ou como alguém que só olha a placa de velocidade (regras)?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Princípios bíblicos são como placas de alerta: nos ajudam a identificar perigos antes que aconteçam.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem: "Placas na estrada que avisam o motorista de possíveis perigos"</a>
+          <span class="nota">A ilustração mostra placas de trânsito como alerta. Os princípios bíblicos funcionam de forma parecida na nossa vida.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/27/" target="_blank">Provérbios 27:12 — comparação</a>
+          <span class="nota">"O prudente vê o perigo e se esconde, mas os inexperientes seguem em frente e sofrem as consequências" — outro princípio de "ler as placas".</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- TAB 2: Por que importam -->
+<div class="tab-content" id="tab2">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Por que os princípios bíblicos são importantes?</h2>
+</div>
+
+<div class="card" id="p8">
+  <div class="card-title"><span class="num">8</span> Entender o modo de Jeová pensar</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Se procurarmos por princípios ao ler a Bíblia, nós vamos aprender a fazer o quê?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Apresentem o seu corpo como um serviço sagrado com a sua faculdade de raciocínio." — <a class="ref" data-verse="Romanos 12:1, 2">Rom 12:1, 2</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Procurar por princípios bíblicos nos ajuda a entender o modo de Jeová pensar. Ao ler a Bíblia, precisamos procurar por lições práticas. Temos que pensar em por que Jeová incluiu essas lições e como podemos aplicá-las. Assim, aprendemos a usar nossa "faculdade de raciocínio" para servir a Jeová e comprovamos por nós mesmos "a boa, aceitável e perfeita vontade de Deus".</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Na próxima vez que ler a Bíblia, pergunte-se: "Por que Jeová incluiu isso? O que isso me ensina sobre ele? Como posso aplicar na minha vida?"</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você já parou pra pensar em <i>por que</i> Jeová deixou um relato específico na Bíblia? O que isso revela sobre ele?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Procurar princípios na leitura da Bíblia nos ajuda a conhecer Jeová e usar nosso raciocínio pra agradá-lo.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/" target="_blank">Romanos 12:1, 2 — NWT (notas de estudo)</a>
+          <span class="nota">"Sacrifício vivo" — contraste com sacrifícios de animais mortos na Lei mosaica. Somos dedicados a Jeová mas ainda "vivos", em serviço ativo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/" target="_blank">"Faculdade de raciocínio" (gr. <i>logikēn</i>)</a>
+          <span class="nota">Significa "serviço racional" ou "ministério que envolve a mente". Não é emocional cego, mas inteligente e dedicado.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/" target="_blank">"Não vos conformeis com este sistema"</a>
+          <span class="nota">"Sistema" (gr. <i>aiōni</i>) refere-se ao arranjo mundano atual. Renovação da mente = transformação no jeito de pensar.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p9">
+  <div class="card-title"><span class="num">9</span> Nos tornarmos cristãos maduros</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é outro benefício de viver de acordo com os princípios bíblicos?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"O alimento sólido é para os maduros." — <a class="ref" data-verse="Hebreus 5:13, 14">Heb 5:13, 14</a>; <a class="ref" data-verse="Salmo 147:11">Sl 147:11</a>; <a class="ref" data-verse="Provérbios 23:15, 26">Pv 23:15, 26</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Aplicar os princípios da Bíblia nos ajuda a nos tornar cristãos maduros. Nossa amizade com Jeová fica mais achegada. Pense nas crianças: elas precisam de uma lista com várias regras. Mas Jeová não nos trata como crianças, e sim como adultos maduros. Ele confia que vamos tomar decisões de acordo com a sua vontade, e quando fazemos isso, ele fica muito feliz.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Em vez de só seguir regras, pense: "Qual é o princípio aqui? Como isso mostra o que Jeová valoriza?" Você vai amadurecer espiritualmente.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Onde você está na jornada: ainda precisando de regras detalhadas ou já conseguindo tomar decisões com base em princípios?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Viver pelos princípios bíblicos nos torna cristãos maduros e aprofunda nossa amizade com Jeová.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/5/" target="_blank">Hebreus 5:13, 14 — NWT (notas de estudo)</a>
+          <span class="nota">"Leite" (alimento básico) vs "alimento sólido" (doutrina avançada) — metáfora de educação. Cristãos maduros distinguem bem e mal por princípio.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/147/" target="_blank">Salmo 147:11 — NWT</a>
+          <span class="nota">"Jeová se agrada dos que o temem" — nosso objetivo não é agradar homens, mas Jeová. Isso nos dá motivação para tomar decisões com base em princípios.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/23/" target="_blank">Provérbios 23:15, 26 — NWT</a>
+          <span class="nota">"Dá-me o teu coração" — Jeová quer nossa devoção interior, não só obediência exterior.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/mantenha-se-amoroso/" target="_blank">"Mantenha-se Amoroso no Mundo de Satanás" — capítulo 5</a>
+          <span class="nota">Discute como usar princípios bíblicos para tomar decisões diárias no mundo atual.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- TAB 3: Como identificar -->
+<div class="tab-content" id="tab3">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Como identificar princípios bíblicos?</h2>
+</div>
+
+<div class="card" id="p10">
+  <div class="card-title"><span class="num">10</span> Duas formas de identificar</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos identificar princípios bíblicos?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"A sabedoria entra no teu coração." — <a class="ref" data-verse="Provérbios 2:10-12">Pv 2:10-12</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Duas formas: (1) Ler a Bíblia procurando lições que nos ajudem a entender o modo de Jeová pensar. (2) Tentar encontrar os motivos por trás das leis. Para isso, precisamos orar pedindo a ajuda dele e desenvolver nossa própria habilidade de raciocínio. Pergunte-se: "Por que Jeová deu essa lei? O que ele pensa sobre condutas parecidas? Que lição esse relato me ensina?"</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Escolha um relato bíblico e faça essas 3 perguntas. Você vai se surpreender com a profundidade que vai encontrar.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você costuma ler a Bíblia de forma superficial ou procurando os princípios por trás do que está escrito?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Para identificar princípios: leia procurando lições práticas e descubra os motivos por trás das leis. Ore e use seu raciocínio.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/2/" target="_blank">Provérbios 2:10-12 — NWT</a>
+          <span class="nota">"Sabedoria" e "conhecimento" — não são opostos. Sabedoria = aplicar o conhecimento. Conhecimento = entender os fatos.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/" target="_blank">Salmo 119 — Salmo sobre a Palavra de Deus</a>
+          <span class="nota">O capítulo mais longo da Bíblia inteiro sobre amar os princípios de Deus. 176 versículos!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Vídeo: "Como fazer estudo pessoal efetivo"</a>
+          <span class="nota">Demonstra técnicas de leitura bíblica que ajudam a extrair princípios.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p11">
+  <div class="card-title"><span class="num">11</span> Jesus no Sermão do Monte</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">No Sermão do Monte, como Jesus nos ensinou a identificar princípios bíblicos?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">No Sermão do Monte, Jesus mostrou como podemos identificar princípios bíblicos. Em três exemplos, ele disse primeiro qual era a lei. Depois, mostrou qual era o motivo, ou princípio, por trás da lei. Vamos ver os três exemplos a seguir. Ao meditar no que Jesus ensinou, vamos ver como esses princípios podem nos ajudar a tomar boas decisões hoje.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Sempre que ler uma lei na Bíblia, faça como Jesus: pergunte "qual é o motivo por trás?" e "como esse princípio se aplica hoje?"</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">O exemplo de Jesus nos mostra que Jeová não quer só obediência mecânica, mas entendimento do coração. Como isso muda sua forma de estudar a Bíblia?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jesus ensinou o método: primeiro a lei, depois o princípio por trás. Vamos seguir esse padrão ao estudar a Bíblia.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5-7/" target="_blank">Mateus 5-7 — Sermão do Monte (NWT completo)</a>
+          <span class="nota">O Sermão do Monte tem 107 versículos, com 6 contrastes entre a Lei e o princípio (Mt 5:21-48). Leia todos!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem: "Jesus mostrando como identificar os princípios por trás das leis"</a>
+          <span class="nota">Ilustração clássica: Jesus no monte, explicando a multidão.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Filme "Jesus — O Maior Homem Que Viveu" — capítulo sobre o Sermão do Monte</a>
+          <span class="nota">Dramatização que ajuda a visualizar Jesus ensinando.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- TAB 4: Aplicação (3 princípios do Sermão do Monte) -->
+<div class="tab-content" id="tab4">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Três princípios do Sermão do Monte</h2>
+</div>
+
+<div class="card" id="p12">
+  <div class="card-title"><span class="num">12</span> Lei do assassínio — Mateus 5:21,22</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é um princípio por trás da lei em Mateus 5:21, 22?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Não assassine. Todo aquele que continuar irado com seu irmão terá que prestar contas." — <a class="ref" data-verse="Mateus 5:21, 22">Mt 5:21, 22</a>; <a class="ref" data-verse="1 João 3:15">1 Jo 3:15</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A lei diz: "Não assassine." O princípio é: Jeová não quer que <b>odiemos</b> outras pessoas, seja em ações, em palavras ou até em pensamentos. Jesus mostrou que, mesmo que uma pessoa não cometa assassinato, se ela 'continuar irada com seu irmão' ou disser coisas cruéis, ela está violando o princípio. São atitudes assim que levam ao assassinato.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Cuidado com raiva não resolvida, palavras cruéis e ressentimentos. São sementes de males muito maiores.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você tem alimentado alguma mágoa ou ressentimento? Como isso pode afetar suas palavras e ações?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A lei proíbe o assassinato. O princípio proíbe o ódio. Jeová se importa com o que está no nosso coração.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Mateus 5:21, 22 — NWT (notas de estudo)</a>
+          <span class="nota">"Irado" (gr. <i>orgizomenos</i>) = ira persistente, não acesso rápido de raiva. É uma condição habitual do coração.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">"Imprestável" (gr. <i>raka</i>)</a>
+          <span class="nota">Termo aramaico insultuoso que significa algo como "cabeça vazia" ou "inútil". Jesus condena até insultos verbais.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">"Tolo estúpido" (gr. <i>mōre</i>)</a>
+          <span class="nota">Mais grave que <i>raka</i> — implica rejeição moral total da pessoa. A pena é "fogo Gehena" (destruição eterna).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/3/" target="_blank">1 João 3:15 — NWT</a>
+          <span class="nota">Confirma o princípio: "Todo aquele que odeia seu irmão é assassino" — o ódio é a raiz do assassinato.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem: "Não assassine" (Mateus 5:21)</a>
+          <span class="nota">Ilustração clássica: Jesus mostrando a lei na tábua.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p13">
+  <div class="card-title"><span class="num">13</span> Como aplicar o princípio do ódio hoje</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos aplicar o princípio de Mateus 5:21, 22 em nossa vida?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Deves amar o teu próximo como a ti mesmo." — <a class="ref" data-verse="Levítico 19:18">Lv 19:18</a>; <a class="ref" data-verse="Jó 36:13">Jó 36:13</a>; <a class="ref" data-verse="Provérbios 10:12">Pv 10:12</a>; <a class="ref" data-verse="1 João 3:15">1 Jo 3:15</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Não devemos guardar mágoa ou ressentimento, mesmo quando alguém nos trata mal. Por quê? Porque sentimentos assim alimentam o ódio, o que pode nos levar a fazer ou dizer <b>coisas cruéis</b>. Isso inclui fofocas, comentários maldosos e até a postura fria. Precisamos cuidar do nosso coração.</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação expandida — As 4 formas de "ódio disfarçado"</div>
+    <div class="box-text">O parágrafo 13 do artigo original menciona 3 manifestações de ódio. Vamos aprofundar cada uma com base em princípios bíblicos:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      <b>1. FOFOCAS (gr. <i>psithyria</i>)</b> — Espalhar informações (muitas vezes verdadeiras) sobre alguém que não está presente. Mesmo sendo verdade, se a intenção é fofocar, é pecado! "Aquele que anda murmurando revela segredos; portanto, não te intrometas com o que tagarela." — <a class="ref" data-verse="Provérbios 20:19">Pv 20:19</a>. Paulo lista "chismosos" entre vícios graves — <a class="ref" data-verse="Romanos 1:29">Rm 1:29</a>.<br><br>
+      <b>2. COMENTÁRIOS MALDOSOS (gr. <i>katalalia</i> = difamação)</b> — Falar mal de alguém PRA PREJUDICAR. É a forma mais grave. "Não difamarás o teu próximo." — <a class="ref" data-verse="Êxodo 22:28">Êx 22:28</a>. A difamação é comparada a assassinar a reputação.<br><br>
+      <b>3. POSTURA FRIA (indiferença deliberada)</b> — Não se importar com o sofrimento alheio. "Se alguém disser: 'Eu amo a Deus', mas odiar seu irmão, é mentiroso." — <a class="ref" data-verse="1 João 4:20">1 Jo 4:20</a>. Indiferença é forma passiva de ódio.<br><br>
+      <b>4. MENTIRA sobre alguém (gr. <i>pseudos</i> + <i>katara</i> = falsa acusação)</b> — Inventar ou distorcer fatos sobre outra pessoa. "Não dirás falso testemunho contra o teu próximo." — <a class="ref" data-verse="Êxodo 20:16">Êx 20:16</a>. Mentir sobre alguém é das piores formas de ódio, porque pode destruir a vida da pessoa.
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Por que fofoca e mentira são tão graves?</div>
+    <div class="box-text">A Bíblia liga essas 4 formas de ódio ao <b>assassinato espiritual</b>:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      • "Todo aquele que odeia seu irmão é <b>assassino</b>" — <a class="ref" data-verse="1 João 3:15">1 Jo 3:15</a><br>
+      • "A língua é um <b>fogo</b>" — <a class="ref" data-verse="Tiago 3:6">Tg 3:6</a><br>
+      • "A morte e a vida estão no poder da língua" — <a class="ref" data-verse="Provérbios 18:21">Pv 18:21</a><br>
+      • "Aquele que profere mentiras <b>não escapará</b>" — <a class="ref" data-verse="Provérbios 19:5">Pv 19:5</a><br>
+      • "O falso testemunha não ficará <b>impune</b>" — <a class="ref" data-verse="Provérbios 19:9">Pv 19:9</a>
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Fofoca vs Lidar com Problemas Reais</div>
+    <div class="box-text">Importante: existe diferença entre <b>fofoca</b> e <b>lidar com um problema real</b>:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      ✅ <b>Permitido:</b> Contar a um ancião sobre abuso, fraude ou perigo real. "Antes, repreende-o entre ti e ele só; se te ouvir, ganhaste o teu irmão." — <a class="ref" data-verse="Mateus 18:15">Mt 18:15</a>.<br>
+      ❌ <b>Proibido:</b> Espalhar pra outros "só pra avisar", "porque todo mundo precisa saber", ou pra se sentir superior.<br>
+      <b>Teste:</b> "Estou contando isso pra resolver ou pra desabafar? Pra proteger alguém ou pra ferir?" Se for pra ferir, é fofoca.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando alguém te irritar, respire fundo e pergunte-se: "Estou alimentando raiva? Que palavras ou ações essa raiva pode gerar?" Pratique o que Jesus ensinou: "Amai os vossos inimigos, bendizei os que vos maldizem, fazei bem aos que vos odeiam." — <a class="ref" data-verse="Mateus 5:44">Mt 5:44</a>.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação prática — 5 passos contra a fofoca</div>
+    <div class="box-text">
+      1. <b>Não pergunte</b> "Você viu o que fulano fez?" — quebra a cadeia<br>
+      2. <b>Não compartilhe</b> mesmo que te contem algo — "não te intrometas com o que tagarela"<br>
+      3. <b>Redirecione</b> — "Vamos falar de algo melhor?"<br>
+      4. <b>Confronte com amor</b> se ouvir alguém fofocando<br>
+      5. <b>Peça perdão</b> a Jeová se você fofocou — e à pessoa (se possível)
+    </div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você tem tendência a guardar mágoas? Já espalhou algo sobre alguém mesmo sendo verdade? Como você pode mudar isso hoje? Lembre-se: "A resposta suave acalma o furor, mas a palavra dura excita a ira." — <a class="ref" data-verse="Provérbios 15:1">Pv 15:1</a></div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Não guardar mágoa. Não cultivar ressentimento. Tratar os outros com amor, mesmo quando erram. Fofoca, comentários maldosos, postura fria e mentira sobre alguém são 4 formas de ódio disfarçado — todas condenadas por Jeová.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia (notas de estudo profundas)</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/3/19/" target="_blank">Levítico 19:18 — NWT (notas de estudo)</a>
+          <span class="nota">"Amarás o teu próximo como a ti mesmo" (heb. <i>we'ahavta le're'aka kamokha</i>) = princípio de reciprocidade. Jesus chamou de "segundo maior mandamento" (Mt 22:39). Era revolucionário — povos antigos só amavam os do próprio grupo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/36/" target="_blank">Jó 36:13 — NWT</a>
+          <span class="nota">"Hipócritas de coração" (heb. <i>chaneph</i>) = profanos, apóstatas que fingem retidão. Acumulam ira sem buscar a Jeová. Jeová "os prende" — não deixa impune.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/10/" target="_blank">Provérbios 10:12 — NWT (notas)</a>
+          <span class="nota">"O ódio provoca conflitos" (heb. <i>sin'ah</i> = ódio intenso) vs "o amor cobre todas as transgressões" (heb. <i>kesut</i> = cobrir, perdoar). O contraste é proposital: o que o ódio destrói, o amor reconstrói.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/3/" target="_blank">1 João 3:15 — NWT (notas profundas)</a>
+          <span class="nota">"Todo aquele que odeia seu irmão é assassino" (gr. <i>anthrōpoktonos</i> = homicida) — João usa o termo técnico pra homicídio premeditado. Não é exagero, é <b>realidade espiritual</b>. A vida eterna "não permanece" no assassino — o ódio persistente bloqueia a salvação.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/20/" target="_blank">Provérbios 20:19 — NWT (sobre fofoca)</a>
+          <span class="nota">"Tagarela" (heb. <i>petach shephatayim</i> = "lábios que se abrem") = pessoa que não para de falar, espalha tudo. "Não te intrometas" = não se associe, não dê ouvido, não participe.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/1/" target="_blank">Romanos 1:29, 30 — NWT (lista de vícios)</a>
+          <span class="nota">"Chismosos" (gr. <i>psithyristas</i>) vem de <i>psithos</i> = sussurro. Paulo lista entre vícios GRAVES: "cheios de todo tipo de injustiça ... caluniadores, odiadores de Deus, insolentes, soberbos, fanfarrões, inventores de coisas más". Fofoca não é "coisa boba".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/22/" target="_blank">Êxodo 22:28 — NWT (não difamar)</a>
+          <span class="nota">"Não difamarás" (heb. <i>lo' teqallel</i>) = literalmente "não amaldiçoarás". No hebraico, difamar e amaldiçoar são a mesma palavra. A difamação é vista como <b>maldição</b>.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/20/" target="_blank">Êxodo 20:16 — NWT (9º mandamento)</a>
+          <span class="nota">"Falso testemunho" (heb. <i>ed shaqer</i> = testemunha de mentira). Não é só em tribunal — é em qualquer situação. Mentir sobre alguém em conversa = quebrar o 9º mandamento.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/19/" target="_blank">Provérbios 19:5, 9 — NWT (testemunha falsa)</a>
+          <span class="nota">"Não ficará impune" e "não escapará" — repetição enfática em hebraico. A testemunha falsa é culpada duas vezes: do crime de mentir E do dano à vítima.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/18/" target="_blank">Mateus 18:15 — NWT (procedimento correto)</a>
+          <span class="nota">"Se teu irmão pecar, vai e repreende-o entre ti e ele só" — esse é o procedimento BÍBLICO pra lidar com problemas. NÃO é fofocar com todos. <b>Confronto direto primeiro</b>.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/" target="_blank">Tiago 3:6 — NWT (a língua é fogo)</a>
+          <span class="nota">"A língua é fogo" (gr. <i>pūr</i>). Tiago continua: "é o mundo da injustiça" — a língua pode colocar em chamas toda a nossa vida. Por isso precisa ser domada com a ajuda de Jeová.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/18/" target="_blank">Provérbios 18:21 — NWT</a>
+          <span class="nota">"Morte e vida" (heb. <i>mawet wechayyim</i>) estão no poder da língua. A mesma língua pode dar vida (animar, encorajar) ou dar morte (destruir reputação, matar emocionalmente). Escolha palavras de vida!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/4/" target="_blank">1 João 4:20 — NWT</a>
+          <span class="nota">"Se alguém disser: 'Amo a Deus', e odiar seu irmão, é mentiroso" (gr. <i>pseustēs</i>). Amar a Deus E odiar o irmão é <b>impossível</b>. Quem diz amar a Deus mas odeia o próximo é MENTIROSO. O amor a Deus se prova no amor ao próximo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Mateus 5:44 — NWT (amar inimigos)</a>
+          <span class="nota">"Amai os vossos inimigos, bendizei os que vos maldizem" — Jesus é radical. Não é só "não odeie", é <b>AME ATIVAMENTE</b> quem te faz mal. Isso é o princípio por trás da lei de "amar o próximo".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/15/" target="_blank">Provérbios 15:1 — NWT</a>
+          <span class="nota">"Resposta suave acalma o furor, mas a palavra dura excita a ira" (heb. <i>ma'aneh rak</i> vs <i>davar 'az</i>). Em vez de revidar fofoca com fofoca, responda com suavidade. Isso quebra o ciclo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Não deixe a fofoca destruir amizades"</a>
+          <span class="nota">Histórias reais de pessoas que lutaram contra a fofoca e salvaram amizades.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/mantenha-se-amoroso/" target="_blank">"Mantenha-se Amoroso" — cap. 16: "Quando alguém fala mal de você"</a>
+          <span class="nota">Como lidar quando outros fofocam sobre você. Princípio de Mateus 5:44 em ação.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/17/" target="_blank">Provérbios 17:9 — NWT (cobrir vs expor)</a>
+          <span class="nota">"O que encobre a transgressão busca amor, mas o que volta a falar do assunto separa os amigos mais chegados." Princípio: COBRIR é amor; REPETIR é destruir.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/23/" target="_blank">Êxodo 23:1 — NWT</a>
+          <span class="nota">"Não levantarás falso rumor" + "não te associarás com o ímpio para ser testemunha injusta" — dois mandamentos em um. Cuidado tanto com QUEM você ouve quanto com QUEM você ajuda a espalhar.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p14">
+  <div class="card-title"><span class="num">14</span> Lei do adultério — Mateus 5:27, 28</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é o princípio por trás da lei em Mateus 5:27, 28?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Não cometa adultério." — <a class="ref" data-verse="Mateus 5:27, 28">Mt 5:27, 28</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A lei diz: "Não cometa adultério." O princípio é: Jeová não odeia só a imoralidade sexual, mas também <b>pensamentos</b> que poderiam fazer a pessoa cometê-la. Jesus disse que, se um homem casado continuasse olhando para uma mulher que não fosse sua esposa a fim de ter relações sexuais com ela, ele já estaria cometendo adultério no coração.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Jeová se importa com seus pensamentos, não só com suas ações. Cuide do que você vê, lê e deixa entrar na mente.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Que tipo de conteúdo você consome? Está alimentando pensamentos que Jeová aprova?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A lei proíbe o adultério. O princípio proíbe até os pensamentos que levam a ele.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Mateus 5:27, 28 — NWT (notas de estudo)</a>
+          <span class="nota">"Cobiçar" (gr. <i>epithymeō</i>) = desejo intenso, deliberado. Não é atração natural, mas pensamento cultivado.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/20/" target="_blank">Êxodo 20:14 — 10º mandamento (referência)</a>
+          <span class="nota">"Não cobiçarás a mulher do teu próximo" — a Lei já proibia o desejo, não só a ação. Jesus aprofunda: mesmo sem a mulher estar ali, o coração já pecou.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/47/12/" target="_blank">2 Coríntios 12:21 — princípio de pureza</a>
+          <span class="nota">Paulo temia que, ao voltar, encontrasse "impureza" e "imoralidade sexual" entre os coríntios. Pureza é princípio contínuo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem: "Não cometa adultério" (Mateus 5:27)</a>
+          <span class="nota">Ilustração da lei no Sermão do Monte.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p15">
+  <div class="card-title"><span class="num">15</span> Como aplicar o princípio da pureza hoje</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos aplicar o princípio de Mateus 5:27, 28 em nossa vida?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Fiz um pacto com os meus olhos." — <a class="ref" data-verse="Jó 31:1-3">Jó 31:1-3</a>; <a class="ref" data-verse="2 Samuel 11:2-4">2 Sam 11:2-4</a>; <a class="ref" data-verse="Salmo 119:37">Sl 119:37</a>; <a class="ref" data-verse="Filipenses 4:8">Fl 4:8</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Não devemos ficar pensando em coisas imorais. Um cristão maduro fica longe de qualquer forma de pornografia. Ele não pensa que, se só olhar, não estaria fazendo nada de errado. Pelo contrário, ele sabe que Jeová vê seus pensamentos e ele quer ser puro por dentro.</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação expandida — Pureza não é só sobre sexo</div>
+    <div class="box-text">O parágrafo 15 do artigo original fala de imoralidade sexual e pornografia. Mas o princípio vai MUITO além. A pureza mental inclui:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      <b>1. Pureza em PALAVRAS</b> — Não só o que você faz, mas o que fala. "Não saia da vossa boca nenhuma palavra torpe." — <a class="ref" data-verse="Efésios 4:29">Ef 4:29</a>. Palavrões, piadas sujas, comentários lascivos — todos contaminam.<br><br>
+      <b>2. Pureza em OLHAR</b> — "Fiz um pacto com os meus olhos" (Jó 31:1). Jó não esperou a Lei mosaica, ele <b>decidiu</b> o que ver. Cuidado com o que você consome: filmes, sites, novelas, novelas gráficas, etc.<br><br>
+      <b>3. Pureza em PENSAMENTOS</b> — "Tudo o que é verdadeiro, tudo o que é honesto, tudo o que é justo, tudo o que é puro, tudo o que é amável, tudo o que é de boa fama ... nisso pensai." — <a class="ref" data-verse="Filipenses 4:8">Fl 4:8</a>. Pensamentos podem ser cultivados OU combatidos. Você escolhe.<br><br>
+      <b>4. Pureza em MÚSICA e MÍDIA</b> — "Apascenta-me com os teus olhos, e guia-me no caminho da eternidade." Sl 23:3. A mídia que você consome "alimenta" sua mente. Jeová quer te alimentar com o que é bom.<br><br>
+      <b>5. Pureza em COMPANHIA</b> — "As más companhias corrompem os bons hábitos." — <a class="ref" data-verse="1 Coríntios 15:33">1 Co 15:33</a>. Quem são seus amigos íntimos? Eles te aproximam ou afastam de Jeová?
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 O caso de Davi — Um alerta poderoso</div>
+    <div class="box-text">2 Samuel 11 mostra COMO a impureza começa:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      <b>1.</b> Davi <b>VIU</b> Bate-Seba se banhando (v. 2) — o olhar<br>
+      <b>2.</b> Davi <b>PERGUNTOU</b> quem era (v. 3) — o interesse<br>
+      <b>3.</b> Davi <b>MANDOU BUSCAR</b> ela (v. 4) — a ação<br>
+      <b>4.</b> Davi <b>DEU CONSELHO</b> pra matar Urias (v. 14-17) — a manipulação<br>
+      <b>5.</b> Davi <b>MENTIU</b> pra Joabe (v. 14) — a mentira<br>
+      <b>6.</b> Davi <b>TENTOU ENCOBRIR</b> por um ano (v. 27) — a negação<br>
+      <b>Resultado:</b> Assassinato, perda do bebê, rebelião familiar, problemas até a morte.<br><br>
+      <b>Lição:</b> Pureza mental não é só sobre "não ver pornografia". É sobre <b>toda a cadeia</b>: olhar → pensar → agir → mentir → encobrir. O princípio de Mt 5:27,28 quebra a cadeia no INÍCIO.
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ "Mas é só imaginação!"</div>
+    <div class="box-text">Algumas pessoas dizem: "Não fiz nada, só pensei". Mas Jesus disse: "quem olhar para uma mulher e continuar a cobiçá-la <b>já cometeu adultério no coração</b>" — <a class="ref" data-verse="Mateus 5:28">Mt 5:28</a>. Pra Jeová, o pensamento cultivado CONTA. Não existe "só pensar" — pensar é o começo de agir.</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ A pornografia é uma armadilha moderna</div>
+    <div class="box-text">A internet tornou a impureza acessível como nunca. Cada acesso:</div>
+    <div class="box-text" style="margin-top: 6px;">
+      • <b>Adiciona um padrão</b> no seu cérebro (dopamina, vício)<br>
+      • <b>Escalada</b> — você precisa cada vez de mais pra sentir<br>
+      • <b>Enfraquece</b> relacionamentos reais<br>
+      • <b>Alimenta</b> pensamentos que Jeová odeia<br>
+      • <b>Separa</b> você de Jeová<br>
+      <b>Mas há saída!</b> Jeová pode te ajudar. "Achas, ó homem fraco, que não escapará ao juízo de Deus? ... segundo a sua misericórdia nos salvou." — <a class="ref" data-verse="Romanos 2:3, 4">Rm 2:3, 4</a>. <b>Arrependimento + Jeová = liberdade.</b>
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Fique longe de qualquer coisa que estimule pensamentos impuros: filmes, sites, músicas, conversas, novelas. Lembre-se: Jeová vê seu coração. Pratique o que Jó fez: "<b>pac</b>to" (compromisso deliberado) com seus olhos — decida ANTES o que vai ver e o que não vai ver.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação prática — 5 barreiras contra impureza</div>
+    <div class="box-text">
+      1. <b>Estabeleça regras ANTES</b> — "Nunca vou ver X site/tipo de conteúdo" (Pv 4:23)<br>
+      2. <b>Evite estar sozinho</b> com temptation — "O que se abre brechas na vida o mestre do louvor, e a guarda da lei as cessa" (Pv 7)<br>
+      3. <b>Substitua</b> — quando vier pensamento impuro, pense em algo puro (Fl 4:8)<br>
+      4. <b>Ore IMEDIATAMENTE</b> — não espere o pensamento crescer<br>
+      5. <b>Conte a alguém</b> — não lute sozinho. Anciãos ou amigo maduro podem te ajudar
+    </div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Jó fez um pacto com os próprios olhos. Que "pacto" você pode fazer pra proteger sua mente? O que você consome de mídia te aproxima ou afasta de Jeová? "O que faço, ó Jeová, com minha mente o que Tu queres?" (Sl 119:5 — adaptado). Lembre-se: "O homem bom, do bom tesouro do seu coração, tira o bem." — <a class="ref" data-verse="Lucas 6:45">Lc 6:45</a></div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Pureza mental é sobre palavras, olhares, pensamentos, mídia e companhia — não só sobre atos sexuais. Davi é o alerta: um olhar levou a uma cadeia de pecados. Mas com a ajuda de Jeová, há libertação. Faça um "pacto" com seus olhos, ore sempre, e substitua o mal pelo bem.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia (notas de estudo profundas)</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/31/" target="_blank">Jó 31:1-3 — NWT (notas de estudo)</a>
+          <span class="nota">"Fiz um pacto com os meus olhos" (heb. <i>britti berit 'im-'enay</i>) = "cortei uma aliança com meus olhos". "Pacto" é palavra forte (mesmo termo da aliança de Jeová com Noé, Abraão). Jó não esperou a Lei mosaica — ele <b>decidiu por si mesmo</b> proteger seus olhos. Princípio atemporal.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/10/11/" target="_blank">2 Samuel 11:2-4 — NWT (notas profundas)</a>
+          <span class="nota">A queda de Davi em 5 etapas: <b>VER → QUERER → BUSCAR → AGIR → MENTIR → ENCOBRIR</b>. Cada etapa parecia "inocente" sozinha, mas juntas destruíram. A Pornografia é a mesma cadeia hoje: scroll → interesse → "catharsis" → vício → segredo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/50/4/" target="_blank">Filipenses 4:8 — NWT (notas)</a>
+          <span class="nota">"Penso nestas coisas" (gr. <i>tauta logizesthe</i> = calcular, considerar). Paulo diz: <b>SUBSTITUA</b>. Você não consegue esvaziar a mente, mas pode ENCHER com o que é bom. É como tirar a mancha da água mexendo o líquido.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Mateus 5:28 — NWT (notas profundas)</a>
+          <span class="nota">"Cobiçar" (gr. <i>epithymeō</i>) = desejo intenso, cultivado, deliberado. Não é atração passageira (que vem sem querer), mas <b>pensamento alimentado</b>. Jesus condena o segundo, não o primeiro. A diferença é o cultivo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/4/" target="_blank">Efésios 4:29 — NWT</a>
+          <span class="nota">"Nenhuma palavra torpe" (gr. <i>sapros logos</i> = podre, sujo, corrompido). Não é só palavrão — é qualquer palavra que "apodrece" a conversa. Gíria suja, piadas de duplo sentido, comentários maldosos — todos "apodrecem".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/" target="_blank">1 Coríntios 15:33 — NWT</a>
+          <span class="nota">"Más companhias corrompem os bons hábitos" (gr. <i>homiliai kakai chēthē thē kai ēthē chēthē</i> = "más companhias estragam costumes úteis"). Paulo cita o poeta Menandro. O princípio: a <b>companhia</b> influencia o caráter. Quem são seus amigos mais próximos?</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/6/" target="_blank">Lucas 6:45 — NWT</a>
+          <span class="nota">"Tesouro do coração" (gr. <i>thēsauros tēs kardias</i>) = o que você ACUMULA dentro de você. Se enche o coração de impureza, impureza sai. Se enche de Jeová, Jeová sai. Escolha o que você armazena.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/119/" target="_blank">Salmo 119:37 — NWT</a>
+          <span class="nota">"Desvia os meus olhos de contemplarem a vaidade" — Davi (autor de metade dos Salmos) sabia que precisava da AJUDA de Jeová. Não é "força de vontade", é oração. Pede a Jeová pra desviar seus olhos.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/2/" target="_blank">Romanos 2:3, 4 — NWT (misericórdia)</a>
+          <span class="nota">"Segundo a sua misericórdia nos salvou" — mesmo que você tenha caído, Jeová é paciente. Não desista. Arrependimento verdadeiro + Jeová = nova chance. Não há vício grande demais pra Jeová perdoar.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/4/" target="_blank">Provérbios 4:23 — NWT (guarda o coração)</a>
+          <span class="nota">"Guarda o teu coração mais do que tudo o que se guarda, porque dele procedem as fontes da vida" (heb. <i>leb</i> = coração = mente, vontade, emoções). O que entra no coração sai pela boca, pelos olhos, pelas ações. PROTEJA a entrada.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/119/" target="_blank">Salmo 119:11 — NWT (meditar na Palavra)</a>
+          <span class="nota">"Escondi a tua palavra no meu coração, para não pecar contra ti" — Davi achava a SOLUÇÃO: encher o coração com a Palavra de Jeová. Quando você medita em princípios bíblicos, não sobra espaço pra impureza.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/101/" target="_blank">Salmo 101:2-4 — NWT (compromisso)</a>
+          <span class="nota">"Andarei em minha casa com coração perfeito. Não porei coisa torpe diante dos meus olhos. ... Longe de mim o coração perverso." Davi fez um <b>plano</b> de pureza. Decida AGORA o que você vai ou não vai ver.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/7/" target="_blank">Provérbios 7 — NWT (a mulher estranha)</a>
+          <span class="nota">"Prende-me com laços... de suas palavras te afastam" — Provérbios 7 mostra como a tentação captura. "Amanhã darei", diz o tolo. "A alma dele não aprova" — não tinha convicção. Aprenda com o tolo de Pv 7: FUJA.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/2/" target="_blank">2 Timóteo 2:22 — NWT (foge das paixões)</a>
+          <span class="nota">"Foge das paixões da mocidade" (gr. <i>pheuge</i> = FUJA). Não é "resistir" ou "tentar não cair", é <b>SAIR CORRENDO</b>. Fugir é estratégia, não covardia. José fugiu de Potifar (Gn 39:12).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/" target="_blank">Gálatas 5:16 — NWT (andar no espírito)</a>
+          <span class="nota">"Andai no Espírito e jamais satisfareis a concupiscência da carne." Solução: não é "tentar não pecar", é <b>andar em outra direção</b>. Quando o Espírito te guia, o pecado perde a força.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/10/" target="_blank">1 Coríntios 10:13 — NWT (fuga possível)</a>
+          <span class="nota">"Não vos sobreveio tentação senão humana. ... mas Deus é fiel e não permitirá que sejais tentados além do que podeis suportar. Antes, com a tentação, dará também o meio de sair." <b>TEM SEMPRE ESCAPE</b>. Procure-o e siga por ele.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/39/" target="_blank">Gênesis 39:12 — NWT (José fugiu)</a>
+          <span class="nota">"José deixou a sua capa nas mãos dela, e fugiu, e saiu para fora." Quando a mulher de Potifar tentou seduzi-lo, José <b>SAIU CORRENDO</b>. Perdeu a capa (reputação), mas guardou a integridade. Vale a pena.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Jovens que venceram o desafio da pureza"</a>
+          <span class="nota">Histórias reais de jovens que venceram a pornografia com a ajuda de Jeová.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/jovens/" target="_blank">"Perguntas dos Jovens — Respostas Práticas" vol. 1 e 2</a>
+          <span class="nota">Capítulos sobre pornografia, pensamentos impuros, e como manter a pureza no mundo atual.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/mantenha-se-amoroso/" target="_blank">"Mantenha-se Amoroso" — cap. 11: "Mantenha a pureza do coração"</a>
+          <span class="nota">Prático: como cultivar pensamentos puros, evitar tentação, e orar efetivamente.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/19/" target="_blank">Salmo 19:14 — NWT (palavras e meditações)</a>
+          <span class="nota">"Sejam agradáveis as palavras da minha boca e a meditação do meu coração perante a tua face, ó Jeová, minha Rocha e meu Resgatador." Que tudo o que falamos E pensamos seja agradável a Jeová.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Filme "Davi e Golias" — lições de integridade</a>
+          <span class="nota">Davi caiu com Bate-Seba, mas se arrependeu. Jeová o perdoou e usou pra grandes coisas. Sua história é de queda E restauração.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p16">
+  <div class="card-title"><span class="num">16</span> Lei do amor — Mateus 5:43, 44</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é o princípio por trás da lei em Mateus 5:43, 44?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Ame o seu próximo e odeie o seu inimigo." — <a class="ref" data-verse="Mateus 5:43, 44">Mt 5:43, 44</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A lei dizia: "Ame o seu próximo." O princípio é: Jeová quer que a gente ame <b>todas</b> as pessoas. Nos dias de Jesus, os judeus achavam que isso envolvia amar apenas outros judeus e odiar os inimigos. Mas Jesus sabia que a ideia por trás da lei era muito mais ampla: amar até os inimigos.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">O princípio do amor não tem fronteiras. Trata com bondade quem pensa, fala ou age diferente de você.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Existe alguém que você tem dificuldade de amar? Como o princípio de Mateus 5:43, 44 pode te ajudar?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A lei limita o amor ao próximo. O princípio de Jeová estende o amor a todas as pessoas, até os inimigos.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Mateus 5:43, 44 — NWT (notas de estudo)</a>
+          <span class="nota">"Próximo" no grego é <i>plēsion</i> = próximo, próximo de você. Jesus amplia: até seus inimigos!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/3/19/" target="_blank">Levítico 19:18 — origem da lei</a>
+          <span class="nota">"Amarás o teu próximo" — original da Lei mosaica. A parte "odeie o inimigo" NÃO está na Lei; era tradição oral adicionada pelos fariseus.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/" target="_blank">Lucas 10:25-37 — Parábola do Bom Samaritano</a>
+          <span class="nota">Jesus conta que o "próximo" pode ser até um samaritano (inimigo dos judeus). Exemplo do princípio em ação.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/Por-que-os-princ%C3%ADpios-bibl%C3%ADcos-s%C3%A3o-importantes/" target="_blank">Imagem: "Ame o seu próximo" (Mateus 5:43)</a>
+          <span class="nota">Ilustração da lei do amor no Sermão do Monte.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p17">
+  <div class="card-title"><span class="num">17</span> Como aplicar o princípio do amor hoje</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos aplicar o princípio de Mateus 5:43, 44 em nossa vida?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Deus não trata as pessoas com parcialidade." — <a class="ref" data-verse="Atos 10:34, 35">At 10:34, 35</a>; <a class="ref" data-verse="Isaías 2:4">Is 2:4</a>; <a class="ref" data-verse="Miqueias 4:3">Miq 4:3</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Nós amamos todas as pessoas, então não nos envolvemos nas guerras e conflitos do mundo. Tratamos com bondade pessoas de outro país, cultura ou religião. E perdoamos quem faz algo contra nós. Esse é o amor que Jeová tem e que ele quer que tenhamos.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Hoje, faça algo gentil por alguém que normalmente você não notaria. Pode ser um elogio, um "bom dia" sincero, ou um favor simples.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Como você pode demonstrar amor genuíno por pessoas que são diferentes de você, especialmente em tempos de tanta divisão?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O amor cristão ultrapassa fronteiras. Bondade, perdão e neutralidade cristã demonstram o princípio do amor.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/44/10/" target="_blank">Atos 10:34, 35 — NWT (notas de estudo)</a>
+          <span class="nota">Contexto: Pedro e Cornélio. Jeová mostrou que os gentios também eram aceitos. "Parcialidade" = tratar com favoritismo injusto.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/2/" target="_blank">Isaías 2:4 — NWT</a>
+          <span class="nota">Profécia sobre o tempo em que as nações "transformarão espadas em relhas de arado". Visão de paz mundial.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/33/4/" target="_blank">Miqueias 4:3 — NWT</a>
+          <span class="nota">Quase idêntico a Isaías 2:4 — confirmação profética de que a paz mundial virá.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/" target="_blank">Romanos 12:14-21 — princípio do amor prático</a>
+          <span class="nota">"Abençoem os que perseguem vocês. ... Não se deixem vencer pelo mal, mas vençam o mal com o bem." Complementa o princípio de Mt 5:43, 44.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Imite a Jeová no amor"</a>
+          <span class="nota">Exemplos reais de como aplicar o princípio do amor em situações difíceis.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p18">
+  <div class="card-title"><span class="num">18</span> Esteja decidido a viver pelos princípios</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos estar decididos a continuar compreendendo a vontade de Jeová?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Continuem compreendendo qual é a vontade de Jeová." — <a class="ref" data-verse="Efésios 5:17">Ef 5:17</a>; <a class="ref" data-verse="1 Coríntios 14:20">1 Co 14:20</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Somos muito gratos por Jeová nos tratar como adultos e não como crianças! Ele quer que a gente use os princípios bíblicos para tomar boas decisões. Então, quando formos decidir algo, devemos estar determinados a continuar 'compreendendo qual é a vontade de Jeová'. Que alegria saber que ele confia em nós!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Pense numa decisão que você precisa tomar essa semana. Como os princípios bíblicos podem te guiar nessa escolha?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Jeová te trata como adulto maduro. Como essa confiança muda sua forma de tomar decisões?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Esteja decidido a usar princípios bíblicos em cada decisão. Jeová confia em você!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/5/" target="_blank">Efésios 5:17 — NWT</a>
+          <span class="nota">"Não sejais irrefletidos" (gr. <i>aphrones</i>) = sem pensamento, insensato. Compreender a vontade de Jeová requer estudo e reflexão.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/14/" target="_blank">1 Coríntios 14:20 — NWT</a>
+          <span class="nota">"Crianças na malícia, mas adultos no entendimento" — maturidade cristã é ter pensamento adulto sobre questões espirituais.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/aprenda-do-filho-de-deus/" target="_blank">"Aprenda do Grande Professor" — capítulo 8</a>
+          <span class="nota">Como tomar decisões sábias baseadas em princípios.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Vídeo: "Tome decisões que alegram Jeová"</a>
+          <span class="nota">História real de como um cristão tomou uma decisão difícil baseado em princípios.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- TAB 5: Revisão -->
+<div class="tab-content" id="tab5">
+<div class="section-header">
+  <h2><span class="emoji">📝</span>Qual é a sua resposta?</h2>
+</div>
+
+<div class="review-card" id="rev1">
+  <h4>❓ Por que os princípios bíblicos são importantes?</h4>
+  <p>Princípios bíblicos são importantes porque: (1) mostram a maneira de Jeová pensar; (2) nos ajudam a tomar boas decisões em situações novas; (3) nos tornam cristãos maduros; (4) aprofundam nossa amizade com Jeová. Diferente das leis, os princípios podem ser aplicados em qualquer época e em várias situações. Eles nos alertam sobre perigos antes que aconteçam.</p>
+</div>
+
+<div class="review-card" id="rev2">
+  <h4>❓ Quais são alguns princípios que Jesus ensinou no Sermão do Monte?</h4>
+  <p>Jesus ensinou três princípios no Sermão do Monte: (1) <b>Mateus 5:21,22</b> — a lei proíbe o assassinato, mas o princípio proíbe o ódio; (2) <b>Mateus 5:27,28</b> — a lei proíbe o adultério, mas o princípio proíbe até os pensamentos impuros; (3) <b>Mateus 5:43,44</b> — a lei limita o amor ao próximo, mas o princípio de Jeová estende o amor a todas as pessoas, até os inimigos.</p>
+</div>
+
+<div class="review-card">
+  <h4>💡 Resumo Final do Estudo</h4>
+  <p>Neste estudo, aprendemos que princípios bíblicos são verdades básicas que servem de base para as leis de Deus. Eles são superiores às leis porque não mudam com o tempo e podem ser aplicados em qualquer situação. Jeová nos deu esses princípios porque confia em nós para tomarmos decisões maduras. Jesus, no Sermão do Monte, mostrou como identificar os princípios por trás das leis. Quando vivemos de acordo com esses princípios, nossa amizade com Jeová fica mais forte e nos tornamos cristãos mais maduros.</p>
+</div>
+
+<div class="box box-fontes" style="margin-top: 16px;">
+  <div class="box-label">📚 Fontes e Recursos Adicionais</div>
+  <ul class="fontes-list">
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/" target="_blank">Tradução do Novo Mundo da Bíblia Sagrada (NWT) — online</a>
+        <span class="nota">Bíblia completa com notas de estudo, referências cruzadas, e mídia integrada.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/" target="_blank">Biblioteca de livros JW (online)</a>
+        <span class="nota">"Achegue-se a Jeová", "Mantenha-se Amoroso", "Imite a Sua Fé" e muito mais.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎬</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Library — Vídeos e filmes</a>
+        <span class="nota">Dramatizações bíblicas, explicações visuais, histórias de vida.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📰</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Sentinela de maio de 2026 — índice completo</a>
+        <span class="nota">Outros 5 artigos da mesma edição sobre princípios bíblicos.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎵</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/musica/" target="_blank">Cânticos do Reino</a>
+        <span class="nota">Cântico 98: "A Bíblia, um presente de Deus" — indicado pra este estudo.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5-7/" target="_blank">Mateus 5-7 — Sermão do Monte (NWT completo)</a>
+        <span class="nota">Releia o Sermão do Monte com a perspectiva de princípios.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<footer>
+  <p>📖 Estudo preparado para a Sentinela de 6-12 de julho de 2026</p>
+  <p>Baseado no artigo "Por que os princípios bíblicos são importantes?"</p>
+  <p>Texto bíblico: Tradução do Novo Mundo da Bíblia Sagrada (NWT)</p>
+  <p>📚 Inclui notas de estudo da NWT, referências cruzadas e links para mídia JW</p>
+  <p>💙 Feito com carinho pra Jinny</p>
+</footer>
+
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <div class="verse-text" id="modal-text"></div>
+    <a id="modal-link" target="_blank">Ver no jw.org →</a>
+    <button class="close" onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('sentinela-theme', next);
+}
+const savedTheme = localStorage.getItem('sentinela-theme');
+if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+function showTab(idx) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab' + idx).classList.add('active');
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.tabs').offsetTop - 130, behavior: 'smooth'});
+}
+
+const verses = {"Hebreus 4:12":{text:"\"A palavra de Deus é viva e exerce poder, e é mais afiada do que qualquer espada de dois gumes; penetra até a divisão da alma e do espírito, das juntas e da medula, e é apta para julgar os pensamentos e as intenções do coração.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/4/"},"2 Timóteo 3:16, 17":{text:"\"Toda a Escritura é inspirada por Deus e útil para ensinar, para repreender, para corrigir, para educar na justiça, a fim de que o homem de Deus seja plenamente competente, perfeitamente preparado para toda boa obra.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/"},"Mateus 22:37":{text:"\"Deves amar a Jeová, teu Deus, com todo o teu coração, com toda a tua alma e com toda a tua mente.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/22/"},"Salmo 119:111":{text:"\"Os teus testemunhos são a minha herança para sempre, pois são o gozo do meu coração.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/119/"},"Isaías 40:8":{text:"\"A relva seca, a flor murcha, mas a palavra do nosso Deus permanece para sempre.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/40/"},"Tiago 2:11":{text:"\"Porque se não cometes adultério, mas cometas homicídio, tens tornado-te transgressor da Lei.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/2/"},"Gálatas 5:13":{text:"\"Vocês, irmãos, foram chamados para ser livres. Mas não usem a liberdade como desculpa para satisfazer a carne; antes, sirvam uns aos outros por meio do amor.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/"},"Romanos 12:1, 2":{text:"\"Irmãos, peço-vos pelas misericórdias de Deus que apresenteis o vosso corpo como um sacrifício vivo, santo e agradável a Deus — o vosso serviço sagrado com a vossa faculdade de raciocínio. E não vos conformeis com este sistema de coisas, mas transformai-vos pela renovação da vossa mente, para que comproveis qual é a boa, aceitável e perfeita vontade de Deus.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/"},"Hebreus 5:13, 14":{text:"\"Porque todo aquele que se alimenta de leite é inexperiente na palavra da justiça, pois é criança. Mas o alimento sólido é para os maduros, para os que, pela prática, têm as suas faculdades de discernimento treinadas para distinguir tanto o bem como o mal.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/5/"},"Salmo 147:11":{text:"\"Jeová se agrada dos que o temem, dos que esperam no seu amor leal.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/147/"},"Provérbios 23:15, 26":{text:"\"Meu filho, se o teu coração for sábio, o meu coração também se alegrará. ... Meu filho, dá-me o teu coração, e que os teus olhos se agradem dos meus caminhos.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/23/"},"Provérbios 2:10-12":{text:"\"Quando a sabedoria entrar no teu coração e o conhecimento for agradável à tua alma, o discernimento te guardará e a compreensão te protegerá, para te livrar do mau caminho, do homem que fala coisas perversas.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/2/"},"Mateus 5:21, 22":{text:"\"Vocês ouviram que foi dito aos antigos: 'Não assassines'. Mas eu lhes digo: todo aquele que continuar irado com seu irmão terá que prestar contas. ... Todo aquele que disser a seu irmão: 'Imbecil' terá que prestar contas diante do tribunal. ... E todo aquele que disser: 'Tolo estúpido' terá que pagar a pena do fogo Gehena.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/"},"1 João 3:15":{text:"\"Todo aquele que odeia seu irmão é assassino, e vocês sabem que nenhum assassino tem a vida eterna permanecendo nele.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/3/"},"Levítico 19:18":{text:"\"Não te vingarás nem guardarás rancor contra os filhos do teu povo, mas amarás o teu próximo como a ti mesmo. Eu sou Jeová.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/3/19/"},"Jó 36:13":{text:"\"Os hipócritas de coração acumulam raiva; não clamam por ajuda quando ele os prende.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/36/"},"Provérbios 10:12":{text:"\"O ódio provoca conflitos, mas o amor cobre todas as transgressões.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/10/"},"Mateus 5:27, 28":{text:"\"Vocês ouviram que foi dito: 'Não cometas adultério'. Mas eu lhes digo: todo aquele que olhar para uma mulher e continuar a cobiçá-la já cometeu adultério com ela no coração.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/"},"Jó 31:1-3":{text:"\"Fiz um pacto com os meus olhos; como, pois, fixaria os olhos numa virgem? Pois qual seria a porção que eu receberia de Deus lá em cima, e qual seria a minha herança do Todo-Poderoso lá nas alturas? Não é a destruição para os injustos, e a adversidade para os que praticam o mal?\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/31/"},"2 Samuel 11:2-4":{text:"\"Certa tarde, Davi se levantou do seu leito e andava passeando no terraço da casa do rei. Dali viu uma mulher se banhando; a mulher era muito bonita. Davi mandou alguém indagar quem era a mulher. Então alguém disse: 'Não é Bate-Seba, filha de Elião, a esposa de Urias, o heteu?' Mais tarde, Davi mandou buscá-la. Ela veio, e ele se deitou com ela.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/10/11/"},"Mateus 5:43, 44":{text:"\"Vocês ouviram que foi dito: 'Ame o seu próximo e odeie o seu inimigo'. Mas eu lhes digo: continuem a amar os seus inimigos e a orar pelos que perseguem vocês.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/5/"},"Atos 10:34, 35":{text:"\"Deus não trata as pessoas com parcialidade, mas em toda nação o homem que o teme e faz o que é justo é aceitável para ele.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/44/10/"},"Isaías 2:4":{text:"\"Ele julgará entre as nações e resolverá disputas entre muitos povos. Eles transformarão as suas espadas em relhas de arado e as suas lanças em podadeiras. Uma nação não levantará a espada contra outra, e não aprenderão mais a guerra.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/2/"},"Miqueias 4:3":{text:"\"Ele julgará entre muitos povos e resolverá disputas entre nações poderosas. Eles transformarão as suas espadas em relhas de arado e as suas lanças em podadeiras. Uma nação não levantará a espada contra outra, e não aprenderão mais a guerra.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/33/4/"},"Efésios 5:17":{text:"\"Por isso, não sejais irrefletidos, mas procurai compreender qual é a vontade de Jeová.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/5/"},"1 Coríntios 14:20":{text:"\"Irmãos, não sejais crianças no entendimento. Antes, sede crianças na malícia, mas adultos no entendimento.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/14/"}};
+
+document.querySelectorAll('.ref').forEach(ref => {
+  ref.addEventListener('click', e => {
+    e.preventDefault();
+    const verse = ref.getAttribute('data-verse');
+    const data = verses[verse];
+    if (data) {
+      document.getElementById('modal-title').textContent = verse;
+      document.getElementById('modal-text').textContent = data.text;
+      document.getElementById('modal-link').href = data.link;
+      document.getElementById('modal-bg').classList.add('show');
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>

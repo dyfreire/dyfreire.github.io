@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem fala mal e quem mente — Estudo Bíblico Profundo</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6c757d;
+  --border: #dee2e6;
+  --azul: #dbeafe;
+  --azul-borda: #3b82f6;
+  --cinza: #f1f3f5;
+  --cinza-borda: #6c757d;
+  --verde: #d1fae5;
+  --verde-borda: #10b981;
+  --ambar: #fef3c7;
+  --ambar-borda: #f59e0b;
+  --roxo: #ede9fe;
+  --roxo-borda: #8b5cf6;
+  --amarelo: #fef9c3;
+  --amarelo-borda: #eab308;
+  --vermelho: #fecaca;
+  --vermelho-borda: #dc2626;
+  --fontes: #ffe4e6;
+  --fontes-borda: #f43f5e;
+  --alerta: #fee2e2;
+  --alerta-borda: #b91c1c;
+  --escudo: #cffafe;
+  --escudo-borda: #0891b2;
+  --link: #2563eb;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+  --azul: #1e3a8a;
+  --cinza: #334155;
+  --verde: #064e3b;
+  --ambar: #78350f;
+  --roxo: #4c1d95;
+  --amarelo: #713f12;
+  --vermelho: #7f1d1d;
+  --fontes: #7f1d1d;
+  --alerta: #450a0a;
+  --escudo: #164e63;
+  --link: #60a5fa;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0;
+  transition: background .3s, color .3s;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+header {
+  background: linear-gradient(135deg, #7c2d12, #b91c1c);
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+header h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+header .week { font-size: .85rem; opacity: .9; }
+header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+.controls {
+  display: flex; gap: 8px; padding: 12px 16px;
+  background: var(--card); border-bottom: 1px solid var(--border);
+  position: sticky; top: 96px; z-index: 99;
+}
+.btn {
+  background: var(--azul); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; font-size: .85rem; cursor: pointer;
+  flex: 1; font-weight: 500;
+}
+.btn:hover { background: var(--cinza); }
+.btn-icon { flex: 0 0 auto; padding: 8px 12px; }
+
+.toc {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; margin-bottom: 12px; color: var(--link); }
+.toc details { margin-bottom: 8px; }
+.toc summary {
+  cursor: pointer; padding: 8px 12px; background: var(--cinza);
+  border-radius: 8px; font-weight: 600; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after { content: "▼"; font-size: .7rem; transition: transform .2s; }
+.toc details[open] summary::after { transform: rotate(180deg); }
+.toc ul { list-style: none; padding-left: 16px; margin-top: 8px; }
+.toc li a {
+  display: block; padding: 6px 0; color: var(--text);
+  text-decoration: none; font-size: .9rem; opacity: .8;
+}
+.toc li a:hover { color: var(--link); opacity: 1; }
+
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto;
+  background: var(--card); padding: 8px; border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.tab {
+  padding: 10px 14px; background: transparent; border: none;
+  border-radius: 8px; cursor: pointer; font-size: .82rem; font-weight: 600;
+  white-space: nowrap; color: var(--muted); transition: all .2s;
+}
+.tab.active { background: var(--azul); color: var(--text); }
+.tab:hover:not(.active) { background: var(--cinza); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+  color: var(--link); display: flex; align-items: center; gap: 8px;
+}
+.card-title .num {
+  background: var(--azul); color: var(--text);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 700;
+}
+
+.box {
+  padding: 12px 14px; border-radius: 10px; margin-bottom: 10px;
+  border-left: 4px solid;
+}
+.box-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 6px; opacity: .8;
+}
+.box-text { font-size: .92rem; line-height: 1.55; }
+
+.box-pergunta { background: var(--azul); border-color: var(--azul-borda); }
+.box-texto    { background: var(--cinza); border-color: var(--cinza-borda); }
+.box-explic   { background: var(--verde); border-color: var(--verde-borda); }
+.box-aplic    { background: var(--ambar); border-color: var(--ambar-borda); }
+.box-reflex   { background: var(--roxo); border-color: var(--roxo-borda); }
+.box-resumo   { background: var(--amarelo); border-color: var(--amarelo-borda); }
+.box-alerta   { background: var(--alerta); border-color: var(--alerta-borda); }
+.box-escudo   { background: var(--escudo); border-color: var(--escudo-borda); }
+.box-fontes   { background: var(--fontes); border-color: var(--fontes-borda); }
+
+.ref {
+  display: inline-block; background: var(--azul);
+  color: var(--link); padding: 2px 8px; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--azul-borda);
+  margin: 0 2px; cursor: pointer;
+}
+.ref:hover { background: var(--azul-borda); color: white; }
+
+.modal-bg {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.6); z-index: 1000;
+  align-items: center; justify-content: center; padding: 16px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: var(--card); color: var(--text);
+  max-width: 500px; width: 100%; max-height: 80vh; overflow-y: auto;
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.modal h3 { color: var(--link); margin-bottom: 12px; font-size: 1.1rem; }
+.modal .verse-text { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.modal .close {
+  background: var(--azul); color: var(--text);
+  border: none; padding: 8px 16px; border-radius: 8px;
+  cursor: pointer; font-weight: 600; float: right;
+}
+.modal a {
+  display: inline-block; margin-top: 8px; color: var(--link);
+  font-size: .85rem; text-decoration: none; font-weight: 600;
+}
+
+.section-header {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.section-header h2 { color: var(--link); font-size: 1.15rem; }
+.section-header .emoji { font-size: 1.5rem; margin-right: 6px; }
+
+.fontes-list { list-style: none; padding: 0; margin: 0; }
+.fontes-list li {
+  font-size: .85rem; padding: 6px 0;
+  border-bottom: 1px dashed var(--fontes-borda);
+  display: flex; align-items: flex-start; gap: 6px;
+}
+.fontes-list li:last-child { border-bottom: none; }
+.fontes-list .icon { flex-shrink: 0; }
+.fontes-list a { color: var(--link); text-decoration: none; font-weight: 500; }
+.fontes-list a:hover { text-decoration: underline; }
+.fontes-list .nota {
+  display: block; font-style: italic; opacity: .85;
+  font-size: .82rem; margin-top: 2px; padding-left: 22px;
+}
+
+footer {
+  text-align: center; padding: 24px 16px; font-size: .8rem;
+  color: var(--muted); border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+  header h1 { font-size: 1.1rem; }
+  .card { padding: 14px; }
+  .box { padding: 10px 12px; }
+  .box-text { font-size: .88rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⚠️ Quem fala mal, quem mente e os falsos zelosos</h1>
+  <div class="week">Estudo Bíblico Profundo</div>
+  <div class="cantico">🎵 "Lâmpada para os meus pés é tua palavra" — Salmo 119:105</div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-icon" onclick="toggleTheme()">🌓 Tema</button>
+  <button class="btn" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">📑 Índice</button>
+</div>
+
+<div class="container">
+
+<div class="toc" id="toc">
+  <h2>📑 Índice do Estudo</h2>
+  <details open>
+    <summary>🔷 PARTE 1 — A Verdade e a Mentira</summary>
+    <ul>
+      <li><a href="#s1">1 · Jeová é o Deus da verdade</a></li>
+      <li><a href="#s2">2 · Mentira é abominação pra Jeová</a></li>
+      <li><a href="#s3">3 · Satanás: o pai da mentira</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 PARTE 2 — Quem fala mal (caluniadores)</summary>
+    <ul>
+      <li><a href="#s4">4 · Os termos bíblicos pra quem fala mal</a></li>
+      <li><a href="#s5">5 · A língua: pequeno membro, grande dano</a></li>
+      <li><a href="#s6">6 · Fofoca, murmuração, calúnia</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 PARTE 3 — Falsos zelosos (hipócritas)</summary>
+    <ul>
+      <li><a href="#s7">7 · Os fariseus: zelosos por aparência</a></li>
+      <li><a href="#s8">8 · "Tendo forma de piedade"</a></li>
+      <li><a href="#s9">9 · As 7 "Ai" de Jesus</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 PARTE 4 — Como identificar</summary>
+    <ul>
+      <li><a href="#s10">10 · Pelos seus frutos os conhecereis</a></li>
+      <li><a href="#s11">11 · Frutos do espírito vs obras da carne</a></li>
+      <li><a href="#s12">12 · Sabedoria celestial vs terrena</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 PARTE 5 — Como se proteger</summary>
+    <ul>
+      <li><a href="#s13">13 · O Diabo anda ao redor (1 Pe 5:8)</a></li>
+      <li><a href="#s14">14 · Provai os espíritos (1 Jo 4:1)</a></li>
+      <li><a href="#s15">15 · O que fazer ao identificar</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 PARTE 6 — A esperança</summary>
+    <ul>
+      <li><a href="#s16">16 · Jeová odeia a mentira mas ama a verdade</a></li>
+      <li><a href="#s17">17 · O novo mundo: nada de mentira</a></li>
+    </ul>
+  </details>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">Verdade × Mentira</button>
+  <button class="tab" onclick="showTab(1)">Quem fala mal</button>
+  <button class="tab" onclick="showTab(2)">Falsos zelosos</button>
+  <button class="tab" onclick="showTab(3)">Como identificar</button>
+  <button class="tab" onclick="showTab(4)">Proteção</button>
+  <button class="tab" onclick="showTab(5)">Esperança</button>
+</div>
+
+<!-- PARTE 1: VERDADE × MENTIRA -->
+<div class="tab-content active" id="tab0">
+<div class="section-header">
+  <h2><span class="emoji">📜</span>PARTE 1 — A Verdade e a Mentira</h2>
+</div>
+
+<div class="card" id="s1">
+  <div class="card-title"><span class="num">1</span> Jeová é o Deus da verdade</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Quem é Jeová em relação à verdade? E o que isso significa pra nós?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Na tua mão entrego o meu espírito. Tu me redimiste, ó Jeová, Deus da verdade." — <a class="ref" data-verse="Salmo 31:5">Sl 31:5</a>; "Toda palavra de Deus é pura." — <a class="ref" data-verse="Provérbios 30:5">Pv 30:5</a>; "Deus ... não pode mentir" — <a class="ref" data-verse="Tito 1:2">Tit 1:2</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jeová é chamado de "Deus da verdade". Isso não é só um título — é a <b>essência</b> do que ele é. A verdade faz parte da natureza de Jeová. Ele não pode mentir, é incapaz de enganar. Jesus disse: "A tua palavra é a verdade" (Jo 17:17). Como nosso Criador, Jeová nos fez pra valorizar a verdade também.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Se Jeová é a verdade, então a mentira é o oposto do que ele representa. Quando mentimos, estamos agindo <b>contra</b> a natureza do nosso Criador. Isso é sério!</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você se considera uma pessoa verdadeira? Existem "meias-verdades" que você conta? Como isso se compara com o padrão de Jeová?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jeová é a verdade personificada. A mentira é contrária à sua natureza.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/31/" target="_blank">Salmo 31:5 — NWT</a>
+          <span class="nota">"Deus da verdade" (heb. <i>el emet</i>) = Deus que é verdadeiro, fiel, em quem se pode confiar.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/1/" target="_blank">Tito 1:2 — NWT (notas)</a>
+          <span class="nota">"Não pode mentir" (gr. <i>apseudes</i> = sem mentira). Jeová é incapaz de mentir pela sua própria natureza.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/achegue-se-a-jeova/" target="_blank">"Achegue-se a Jeová" — capítulo sobre os atributos de Jeová</a>
+          <span class="nota">Aprofunda como a verdade é parte do caráter de Jeová.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s2">
+  <div class="card-title"><span class="num">2</span> Mentira é abominação pra Jeová</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que Jeová sente sobre a mentira?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Lábios falsos são uma abominação para Jeová, mas os que agem com verdade são o seu deleite." — <a class="ref" data-verse="Provérbios 12:22">Pv 12:22</a>; "Os lábios mentirosos são uma abominação para Jeová." — <a class="ref" data-verse="Provérbios 17:7">Pv 17:7</a>; "Não dirás falso testemunho contra o teu próximo." — <a class="ref" data-verse="Êxodo 20:16">Êx 20:16</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A palavra hebraica <b>"abominação"</b> (to'ebah) é muito forte. É o que Jeová sente por coisas <b>completamente incompatíveis</b> com sua natureza. Lábios falsos = abominação. Mas quem age com verdade é o <b>delcito</b> de Jeová — ele se alegra com pessoas verdadeiras! Repete: mentira = abominação, verdade = deleite.</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Atenção</div>
+    <div class="box-text">A Bíblia lista a mentira entre as coisas que Jeová <b>odeia</b>: "Seis coisas odiadas por Jeová, sim, sete são abomináveis para ele: olhos altivos, língua mentirosa..." — <a class="ref" data-verse="Provérbios 6:16, 17">Pv 6:16, 17</a></div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Hoje, preste atenção nas suas palavras. Você tem mentido? "Mentirinhas brancas" também contam. A verdade deve ser seu padrão — sempre.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Jeová "se deleita" com quem age com verdade. Como você se sente sabendo que a verdade pode alegrar o coração do seu Criador?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Mentira = abominação pra Jeová. Verdade = seu deleite. Não é opinião, é o que ele sente!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/12/" target="_blank">Provérbios 12:22 — NWT</a>
+          <span class="nota">"Abominação" (heb. <i>to'ebah</i>) = algo nojento, repulsivo. Usado pra coisas que Jeová detesta profundamente.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/6/" target="_blank">Provérbios 6:16-19 — NWT (as 7 coisas odiadas)</a>
+          <span class="nota">Lista completa: olhos altivos, língua mentirosa, mãos que derramam sangue inocente, coração que maquina planos iníquos, pés que se apressam pra correr pro mal, testemunha falsa que profere mentiras, e o que semeia contendas entre irmãos.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/20/" target="_blank">Êxodo 20:16 — NWT (9º mandamento)</a>
+          <span class="nota">"Falso testemunho" = mentir sobre outra pessoa. O 9º mandamento proíbe isso. Note que não é só sobre tribunais — é sobre qualquer situação.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s3">
+  <div class="card-title"><span class="num">3</span> Satanás: o pai da mentira</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Quem é o "pai da mentira"? E como ele engana?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Ele era homicida desde o princípio e não se firmou na verdade, porque nele não há verdade. Quando ele fala a mentira, fala do que é seu, porque é mentiroso e pai da mentira." — <a class="ref" data-verse="João 8:44">Jo 8:44</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jesus identificou claramente: <b>Satanás é o pai da mentira</b>. Ele foi o PRIMEIRO mentiroso. Foi homicida "desde o princípio" (causou a morte de Adão e Eva). "Não se firmou na verdade" = nunca esteve na verdade. A mentira é o idioma nativo dele. Quem mente está, de certa forma, "falando a língua" de Satanás.</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Perigo espiritual</div>
+    <div class="box-text">Satanás também é chamado de "Diabo" (<i>diabolos</i> = caluniador, difamador) e "Serpente" (Gn 3). Ele é o <b>caluniador original</b> — acusou Jó diante de Jeová (Jó 1-2), tentou Jesus no deserto, e ainda tenta nos enganar hoje.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando você se pega mentindo, lembre-se: você está usando o "idioma" de quem é inimigo de Jeová. A verdade é sua proteção!</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Como Satanás enganou Eva no Éden? (Gênesis 3:1-5) — distorceu a palavra de Jeová, omitiu partes, questionou. Mesma técnica hoje!</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Satanás = pai da mentira, homicida, caluniador. Quem mente se assemelha a ele.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/8/" target="_blank">João 8:44 — NWT (notas)</a>
+          <span class="nota">"Pai da mentira" (gr. <i>patēr tou pseudos</i>) = origem, fonte. Satanás é a fonte de toda mentira. Também chamado de "mentiroso" (<i>pseustēs</i>).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/3/" target="_blank">Gênesis 3:1-5 — NWT (a primeira mentira)</a>
+          <span class="nota">"Certamente não morrereis" — Satanás contradiz Jeová. A serpente falou do que era seu (Jo 8:44) — a mentira.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/1-2/" target="_blank">Jó 1-2 — Satanás como caluniador</a>
+          <span class="nota">"Acaso Jó serves a Jeová de graça?" — Satanás calunia o servo de Jeová. Mesma estratégia: questionar a sinceridade dos adoradores.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Filme "A história da Bíblia — Gênesis"</a>
+          <span class="nota">Dramatização da queda — mostra como a mentira entrou no mundo.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PARTE 2: QUEM FALA MAL -->
+<div class="tab-content" id="tab1">
+<div class="section-header">
+  <h2><span class="emoji">🗣️</span>PARTE 2 — Quem fala mal (caluniadores)</h2>
+</div>
+
+<div class="card" id="s4">
+  <div class="card-title"><span class="num">4</span> Os termos bíblicos pra quem fala mal</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como a Bíblia chama quem fala mal dos outros?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">A Bíblia usa vários termos gregos e hebraicos: <b>caluniador</b> (gr. <i>diabolos</i> = diabo), <b>chismoso</b> (gr. <i>psithyristēs</i> = aquele que sussurra), <b>murmurador</b> (gr. <i>mempsimoiros</i>), <b>semidor de contendas</b> (Pv 6:19), <b>acusador</b> (Ap 12:10).</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia é específica. Não é só "falar mal" — é um padrão de comportamento condenado:</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>1. Caluniador</b> (gr. <i>diabolos</i> = "que divide, que separa") — é o mesmo termo usado pra Satanás! Quem calunia é comparado ao Diabo.<br>
+      <b>2. Chismoso</b> (gr. <i>psithyristēs</i>) — aquele que sussurra, espalha segredos. Aparece em Romanos 1:29, 30.<br>
+      <b>3. Murmurador</b> (gr. <i>mempsimoiros</i>) — aquele que reclama, fala mal pelas costas. Judas 16.<br>
+      <b>4. Semidor de contendas</b> (Pv 6:19) — provoca brigas entre pessoas.
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Cuidado!</div>
+    <div class="box-text">"Não andeis murmurando nem criticando uns aos outros, irmãos. Quem murmura de um irmão e julga a seu irmão, murmura da lei e julga a lei." — <a class="ref" data-verse="Tiago 4:11">Tg 4:11</a>. Murmurar é julgar!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando for falar de alguém, pergunte-se: "Estou sendo um chismoso? Murmurador? Semidor de contendas?" Se sim, pare.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A Bíblia tem 4+ termos pra quem fala mal. Não é "só um detalhezinho" — é pecado sério.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/1/" target="_blank">Romanos 1:29, 30 — NWT</a>
+          <span class="nota">"Chismosos" (gr. <i>psithyristas</i>) — entre os vícios graves. Paulo lista: "cheios de todo tipo de injustiça ... malícia ... cobiça ... inveja ... homicídio ... contenda ... engano ... maus costumes ... bisbilhoteiros, caluniadores, odiadores de Deus, insolentes, soberbos, fanfarrões, inventores de coisas más, desobedientes aos pais".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/1/" target="_blank">Judas 1:16 — NWT</a>
+          <span class="nota">"Murmuradores" (gr. <i>mempsimoiros</i>) = aqueles que vivem reclamando, insatisfeitos, sempre falando mal. Combinado com "faladores vaidosos".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/6/" target="_blank">Provérbios 6:19 — NWT</a>
+          <span class="nota">"Semear contendas entre irmãos" — comportamento listado entre as 7 coisas odiadas por Jeová.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s5">
+  <div class="card-title"><span class="num">5</span> A língua: pequeno membro, grande dano</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é o poder destrutivo da língua?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"A língua é um pequeno membro, mas se vangloria de grandes coisas. Vejam como uma grande floresta é incendiada por um pequeno fogo. A língua é um fogo." — <a class="ref" data-verse="Tiago 3:5, 6">Tg 3:5, 6</a>; "A morte e a vida estão no poder da língua." — <a class="ref" data-verse="Provérbios 18:21">Pv 18:21</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Tiago comparou a língua a um <b>fogo</b>. Um pequeno fogo pode incendiar uma floresta inteira. A língua pode:
+    <br>• Destruir amizades
+    <br>• Destruir reputações
+    <br>• Destruir famílias
+    <br>• Destruir comunidades
+    <br>• Destruir a paz interior
+    <br>Provérbios 18:21 diz que a língua tem poder de <b>vida e morte</b>. Palavras podem construir ou destruir!</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ O que a Bíblia diz sobre controlar a língua</div>
+    <div class="box-text">"Se alguém não tropeça em palavra, esse é um homem perfeito, capaz de refrear também todo o corpo." — <a class="ref" data-verse="Tiago 3:2">Tg 3:2</a>. Quem controla a língua é considerado maduro!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Antes de falar, pense: "Se eu publicasse isso no mural da escola/igreja, eu ficaria feliz?" Se não, não fale.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você já destruiu uma amizade com palavras? Ou foi destruído por palavras de outros? Como se sentiu?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A língua é um pequeno membro com poder de fogo. Pode dar vida ou causar morte.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/" target="_blank">Tiago 3:1-12 — NWT (capítulo sobre a língua)</a>
+          <span class="nota">"Nenhum homem consegue domar a língua" — é um mal irrefreável (v. 8). Mas com a ajuda de Jeová, é possível!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/18/" target="_blank">Provérbios 18:21 — NWT</a>
+          <span class="nota">"No poder da língua" (heb. <i>bi-yad lashon</i>) = a língua tem autoridade/poder. Quem controla a língua controla vida e morte.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/34/" target="_blank">Salmo 34:13 — NWT</a>
+          <span class="nota">"Refreia a tua língua do mal e os teus lábios de falarem engano." — princípio prático pra controlar a língua.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/15/" target="_blank">Provérbios 15:4 — NWT</a>
+          <span class="nota">"A língua apaziguadora é árvore de vida, mas a língua perversa fere o espírito." — duas línguas, dois resultados.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s6">
+  <div class="card-title"><span class="num">6</span> Fofoca, murmuração, calúnia — as 3 faces</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual a diferença entre fofoca, murmuração e calúnia? Todas são pecado?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">São 3 formas de falar mal, com diferenças sutis mas importantes:</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>1. FOFOCA (gr. <i>psithyria</i>)</b> — espalhar informações (muitas vezes verdadeiras) sobre alguém que não está presente. <i>"Você sabia que ela fez tal coisa?"</i> Mesmo sendo verdade, se a intenção é fofocar, é pecado!<br><br>
+      <b>2. MURMURAÇÃO (gr. <i>mempsimoiros</i>)</b> — reclamar continuamente, geralmente sobre autoridades. <i>"O presbítero sempre faz assim..."</i> Pode ter base real, mas a atitude é errada.<br><br>
+      <b>3. CALÚNIA (gr. <i>suskophos</i> = "falsificador", <i>diabolos</i> = "caluniador")</b> — falar coisas <b>falsas</b> sobre alguém pra prejudicar. <i>"Ele roubou o dinheiro da empresa"</i> (mesmo sem prova). É a forma mais grave.
+    </div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Aquele que semeia contendas entre irmãos" — <a class="ref" data-verse="Provérbios 6:19">Pv 6:19</a>; "O falso testemunha não ficará impune, e o que profere mentiras não escapará." — <a class="ref" data-verse="Provérbios 19:5">Pv 19:5</a></div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Atenção: nem tudo é "fofoca inocente"</div>
+    <div class="box-text">"Aquele que anda murmurando revela segredos; portanto, não te intrometas com o que tagarela." — <a class="ref" data-verse="Provérbios 20:19">Pv 20:19</a>. Fofoqueiro contumaz é comparado a quem revela segredos.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça um check-up: esta semana, você fofocou, murmurou ou caluniou alguém? Peça perdão a Jeová e à pessoa (se possível).</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual das 3 você pratica mais? Como mudar?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Fofoca = espalhar fatos. Murmuração = reclamar. Calúnia = mentir. Todas são pecado!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/1/" target="_blank">Romanos 1:29-31 — NWT</a>
+          <span class="nota">"Bisbilhoteiros" (gr. <i>ptheuron</i>) = "espiões" — pessoas que se intrometem na vida alheia. Junto com "caluniadores" e "odiadores de Deus".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/20/" target="_blank">Provérbios 20:19 — NWT</a>
+          <span class="nota">"Tagarela" (heb. <i>petach-shephatayim</i>) = boca aberta, que não para de falar. Quem tagarela não tem autocontrole.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/23/" target="_blank">Êxodo 23:1 — NWT</a>
+          <span class="nota">"Não levantarás falso rumor. Não te associarás com o ímpio para ser testemunha injusta." — cuidado com a má companhia.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/17/" target="_blank">Provérbios 17:9 — NWT</a>
+          <span class="nota">"O que encobre a transgressão busca amor, mas o que volta a falar do assunto separa os amigos mais chegados."</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PARTE 3: FALSOS ZELOSOS -->
+<div class="tab-content" id="tab2">
+<div class="section-header">
+  <h2><span class="emoji">🎭</span>PARTE 3 — Falsos zelosos (hipócritas)</h2>
+</div>
+
+<div class="card" id="s7">
+  <div class="card-title"><span class="num">7</span> Os fariseus: zelosos por aparência</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que significa ser "zeloso por aparência"? Jesus nos deu um exemplo?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Eles fazem todas as suas obras para serem vistos pelos homens." — <a class="ref" data-verse="Mateus 23:5">Mt 23:5</a>; "Ai de vocês, escribas e fariseus, hipócritas! ...vocês são sepulcros caiados." — <a class="ref" data-verse="Mateus 23:27">Mt 23:27</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jesus expôs os fariseus como exemplo clássico de <b>falsos zelosos</b>. Eles pareciam religiosos por fora:
+    <br>• Usavam filactérios enormes (caixas com versículos)
+    <br>• Aumentavam as franjas das vestes
+    <br>• Faziam orações longas nas esquinas
+    <br>• Davam esmolas com trombeta
+    <br>Mas por dentro eram cheios de orgulho, ganância e imoralidade. A aparência de piedade escondia um coração podre.</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Cuidado: pode acontecer com qualquer um</div>
+    <div class="box-text">Não pense que isso era só dos fariseus! Jesus disse: "Fazei tudo para a glória de Deus" (1 Co 10:31). Se fazemos algo pra ser <b>vistos</b>, já é zelo por aparência.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando for fazer algo religioso, pergunte: "Estou fazendo isso pra Jeová ver, ou pra alguém me ver?" Se for pra alguém ver, é aparência.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você já viu alguém (ou você mesmo) ser "santo" na reunião e diferente fora dela? Isso é zelo por aparência.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Zeloso por aparência = religioso por fora, vazio por dentro. O exemplo máximo são os fariseus.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/" target="_blank">Mateus 23:5 — NWT</a>
+          <span class="nota">"Filactérios" (gr. <i>phylaktēria</i>) = caixinhas com versículos da Torá, usadas na testa e braço. Jesus não condena o uso, mas a exibição.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/" target="_blank">Mateus 23:27, 28 — NWT (sepulcros caiados)</a>
+          <span class="nota">"Sepulcros caiados" = bonitos por fora, mas cheios de ossos e imundícia por dentro. A aparência engana, a realidade é podre.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/" target="_blank">Mateus 6:1-18 — NWT (as 3 obras de piedade)</a>
+          <span class="nota">Jesus ensinou a fazer esmola, orar e jejuar EM SEGREDO, não pra ser visto. A motivação do coração é o que importa.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Filme "Jesus — O Maior Homem" — confrontos com fariseus</a>
+          <span class="nota">Dramatização dos confrontos no templo.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s8">
+  <div class="card-title"><span class="num">8</span> "Tendo forma de piedade"</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que significa "ter forma de piedade mas negar o poder dela"?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Tendo forma de piedade, mas negando o poder dela. Afasta-te também desses." — <a class="ref" data-verse="2 Timóteo 3:5">2 Tim 3:5</a>; "Professam conhecer a Deus, mas pelas suas obras o negam." — <a class="ref" data-verse="Tito 1:16">Tit 1:16</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Paulo alertou Timóteo sobre pessoas perigosas nos últimos dias. Elas têm:
+    <br>• <b>Forma</b> (gr. <i>morphōsis</i>) = aparência externa, esqueleto da religião
+    <br>• Mas <b>negam o poder</b> = a força vital da fé não está nelas
+    <br>É como um corpo sem alma: tem a forma, mas não tem vida!</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Como identificar (vs 2-5)</div>
+    <div class="box-text">Paulo lista os comportamentos:
+    <br>• Amantes de si mesmos
+    <br>• Amantes do dinheiro
+    <br>• Fanfarrões, soberbos
+    <br>• Blasfemadores, desobedientes aos pais
+    <br>• Ingratos, sem afeto natural
+    <br>• Irreconciliáveis, caluniadores
+    <br>• Sem domínio próprio, cruéis
+    <br>• Sem amor pelo bem
+    <br>• Traidores, atrevidos
+    <br>• Enchidos de orgulho
+    <br>• Amantes dos prazeres mais que de Deus
+    <br>• Tendo forma de piedade, mas negando o poder</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Cuidado com quem aparenta ter muita religião, mas dá pra perceber que o <b>fruto</b> não combina. "Pelos seus frutos os conhecereis" (Mt 7:20).</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você conhece alguém assim? Tem orado por essa pessoa? Como equilibrar "amar o inimigo" e "afastar-se do perigo"?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Forma de piedade = aparência religiosa sem vida interior. Negar o poder = sem transformação real.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/" target="_blank">2 Timóteo 3:1-5 — NWT (sinais dos últimos dias)</a>
+          <span class="nota">"Forma de piedade" (gr. <i>morphōsin eusebeias</i>) = a forma externa, o esqueleto, sem o conteúdo vivo. Compare com 1 Tim 4:8 — "a piedade tem promessa da vida presente e da futura".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/56/1/" target="_blank">Tito 1:16 — NWT</a>
+          <span class="nota">"Professam conhecer a Deus, mas o negam pelas suas obras" — Hipocrisia pura. O que você FAZ revela o que você REALMENTE crê.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/" target="_blank">Mateus 7:15-23 — NWT (falsos profetas)</a>
+          <span class="nota">"Pelos seus frutos os conhecereis" — o teste prático. "Nem todo aquele que me diz: 'Senhor, Senhor', entrará no Reino dos céus".</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s9">
+  <div class="card-title"><span class="num">9</span> As 7 "Ai" de Jesus contra os hipócritas</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Quais foram as 7 condenações de Jesus aos fariseus?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">As 7 "Ai" estão em <a class="ref" data-verse="Mateus 23:13-33">Mateus 23:13-33</a> (a "Oração de Lamento" de Jesus sobre os fariseus).</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação: As 7 condenações</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>1. "Ai de vocês, escribas e fariseus, hipócritas! ...não entram no Reino dos céus, nem deixam entrar os que estão para entrar."</b> (v. 13) — Impedem outros de conhecer a verdade.<br><br>
+      <b>2. "...devoram as casas das viúvas..."</b> (v. 14) — Exploram os vulneráveis.<br><br>
+      <b>3. "...percorrem mar e terra para fazer um prosélito, e depois o fazem filho do inferno duas vezes mais do que vocês."</b> (v. 15) — Zelo mal direcionado.<br><br>
+      <b>4. "...guias cegos!... filtram o mosquito, mas engolem o camelo."</b> (v. 16, 24) — Fixam-se em detalhes, ignoram o essencial.<br><br>
+      <b>5. "...limpam o exterior do copo e do prato, mas por dentro estão cheios de extorsão e excessos."</b> (v. 25) — Aparência sem conteúdo.<br><br>
+      <b>6. "...sepulcros caiados... por fora parecem formosos, mas por dentro estão cheios de ossos de mortos."</b> (v. 27, 28) — Beleza externa, podridão interna.<br><br>
+      <b>7. "...testemunhas falsas... filhos dos que mataram os profetas."</b> (v. 29-33) — Continuam a tradição de rejeitar a verdade.
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Aplicação pra hoje</div>
+    <div class="box-text">Jesus não tolerava <b>falsa religião</b>. Os fariseus eram os "super religiosos" do tempo dele. E Jesus os chamou de <b>hipócritas, serpentes, raça de víboras</b>! É sério.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Antes de julgar os fariseus, examine-se: em qual das 7 categorias você pode estar caindo?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Por que Jesus foi tão duro com eles? (R: Porque eles ENGANAVAM outros, usavam a religião pra se promover.)</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">As 7 "Ai" de Mateus 23 revelam o que Jeová odeia: religião falsa que explora, engana e impede outros de conhecer a verdade.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/" target="_blank">Mateus 23:13-33 — NWT (as 7 "Ai")</a>
+          <span class="nota">"Ai" (gr. <i>ouai</i>) = expressão de lamento, "como é triste!". Jesus não estava com raiva, estava triste. Mas isso não diminuía a gravidade.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/" target="_blank">"Raça de víboras" (Mt 23:33)</a>
+          <span class="nota">"Víbora" (gr. <i>echidna</i>) = serpente venenosa. Jesus comparou os fariseus a animais perigosos. Era o que eles realmente eram espiritualmente.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/11/" target="_blank">Lucas 11:39-44 — NWT (paralelo das 7 "Ai" em Lucas)</a>
+          <span class="nota">Lucas registra 6 "Ai" no capítulo 11 (sem a 2ª sobre as viúvas). A mensagem é a mesma: Deus não tolera falsa religião.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Filme "Jesus" — confronto no templo</a>
+          <span class="nota">A cena em que Jesus expulsa os cambistas e confronta os fariseus é poderosa.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PARTE 4: COMO IDENTIFICAR -->
+<div class="tab-content" id="tab3">
+<div class="section-header">
+  <h2><span class="emoji">🔍</span>PARTE 4 — Como identificar</h2>
+</div>
+
+<div class="card" id="s10">
+  <div class="card-title"><span class="num">10</span> Pelos seus frutos os conhecereis</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como Jesus disse que podemos identificar verdadeiros e falsos?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Pelos seus frutos os conhecereis. Colhem-se uvas dos espinheiros ou figos dos abrolhos? Assim, toda árvore boa produz frutos bons, mas a árvore má produz frutos maus." — <a class="ref" data-verse="Mateus 7:16-17">Mt 7:16, 17</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jesus ensinou o teste do <b>fruto</b>. Não é pelo que a pessoa FALA, é pelo que ela PRODUZ. O que sai dela naturalmente:
+    <br>• Ações
+    <br>• Atitudes
+    <br>• Comportamento com os outros
+    <br>• Como reage sob pressão
+    <br>• Como trata quem não pode ajudá-la
+    <br>• Consistência (não só em público, mas em privado)</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Cuidado com os frutos falsos</div>
+    <div class="box-text">Jesus também avisou: "Nem todo aquele que me diz: 'Senhor, Senhor', entrará no Reino dos céus. Muitos me dirão naquele dia: 'Senhor, Senhor, não profetizamos em teu nome?' E então lhes direi: 'Nunca vos conheci. Afastai-vos de mim, vós que praticais a ilegalidade.'" — <a class="ref" data-verse="Mateus 7:22, 23">Mt 7:22, 23</a>. Até pregação pode ser "fruto falso"!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Olhe para o <b>fruto a longo prazo</b>, não o de um momento. Uma pessoa pode ser muito religiosa no domingo e cruel na segunda. Olhe o padrão!</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Que fruto você está produzindo? E os que estão ao seu redor?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O teste do fruto: ações, atitudes, consistência. Não o que a pessoa fala, mas o que ela FAZ.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/" target="_blank">Mateus 7:15-20 — NWT (teste do fruto)</a>
+          <span class="nota">"Fruto" (gr. <i>karpos</i>) = resultado, produção. Não é só "resultado visível", é a NATUREZA da árvore que se revela.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/" target="_blank">Gálatas 5:22, 23 — NWT (fruto do espírito)</a>
+          <span class="nota">"Fruto do espírito" = amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, autocontrole. Nove características!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/12/" target="_blank">Mateus 12:33-37 — NWT (da boca sai o que enche o coração)</a>
+          <span class="nota">"Pelos teus palavras serás justificado, e pelos teus palavras serás condenado." A língua revela o coração.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s11">
+  <div class="card-title"><span class="num">11</span> Frutos do Espírito vs obras da carne</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual a diferença entre o fruto do Espírito e as obras da carne?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"O fruto do Espírito é: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, autocontrole. Contra essas coisas não há lei." — <a class="ref" data-verse="Gálatas 5:22, 23">Gál 5:22, 23</a>; "As obras da carne são manifestas: imoralidade sexual, impureza, lascívia, idolatria, feitiçaria, inimizades, contenda, ciúme, acessos de ira,自私 selfishness, dissensões, facções, inveja, embriaguez, orgias e coisas semelhantes." — <a class="ref" data-verse="Gálatas 5:19-21">Gál 5:19-21</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Paulo contrasts duas listas:</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>Obras da CARNE (15):</b><br>
+      imoralidade sexual, impureza, lascívia,<br>
+      idolatria, feitiçaria,<br>
+      inimizades, contenda, ciúme,<br>
+      acessos de ira,自私 selfishness,<br>
+      dissensões, facções, inveja,<br>
+      embriaguez, orgias<br><br>
+      <b>Fruto do ESPÍRITO (9):</b><br>
+      amor, alegria, paz,<br>
+      longanimidade, benignidade, bondade,<br>
+      fidelidade, mansidão, autocontrole
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Detalhe importante</div>
+    <div class="box-text">Paulo diz "<b>fruto</b>" (singular) do Espírito — é UM fruto com 9 aspectos. Não é "9 frutos separados". Já as obras da carne são "<b>obras</b>" (plural) — são muitas, variadas, descontroladas.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça um auto-check: das 15 obras da carne, alguma aparece na sua vida? E dos 9 aspectos do fruto, quais você está desenvolvendo?</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Se você perceber que alguém tem 1-2 obras da carne mas está lutando, ainda há esperança. Mas se o padrão é de orgulho, contenda, facções... cuidado.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Fruto do Espírito = 9 aspectos de Cristo. Obras da carne = 15 vícios opostos. Contraste claro!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/" target="_blank">Gálatas 5:19-23 — NWT</a>
+          <span class="nota">"Carne" (gr. <i>sarx</i>) = tendência humana imperfeita, oposta ao espírito. "Espírito" (gr. <i>pneuma</i>) = a força ativa de Deus.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/" target="_blank">Gálatas 5:24 — NWT</a>
+          <span class="nota">"Os que pertencem a Cristo Jesus crucificaram a carne junto com suas paixões e desejos." — A solução não é "tentar não pecar", é CRUCIFICAR (matar) as tendências da carne.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/mantenha-se-amoroso/" target="_blank">"Mantenha-se Amoroso no Mundo de Satanás" — capítulo 7</a>
+          <span class="nota">Como cultivar o fruto do Espírito em situações práticas.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s12">
+  <div class="card-title"><span class="num">12</span> Sabedoria celestial vs terrena</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual a diferença entre a sabedoria "de cima" e a sabedoria "terrena"?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"A sabedoria de cima é, antes de tudo, pura, depois pacífica, razoável, pronta para obedecer, cheia de misericórdia e bons frutos, sem parcialidade, sem hipocrisia. Mas a sabedoria que é de baixo é, primeiro, terrena, depois, sensual, demoníaca." — <a class="ref" data-verse="Tiago 3:17, 15">Tg 3:17, 15</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Tiago contrastou duas sabedorias:</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>Sabedoria CELESTIAL (de cima):</b><br>
+      pura, pacífica, razoável,<br>
+      pronta para obedecer,<br>
+      cheia de misericórdia e bons frutos,<br>
+      sem parcialidade, sem hipocrisia<br><br>
+      <b>Sabedoria TERRENA (de baixo):</b><br>
+      terrena, sensual, demoníaca<br>
+      (v. 14-16: "Onde há inveja e rivalidade, ali há confusão e toda coisa má.")
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ "Demoníaca" — palavra forte!</div>
+    <div class="box-text">Tiago não teve medo de chamar a sabedoria terrena de "<b>demoníaca</b>" (gr. <i>daimoniōdēs</i>). Isso é o oposto da sabedoria de Deus. Quem age com inveja, contenda, rivalidade, está agindo como os demônios.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando alguém agir com inveja, contenda ou fofoca, lembre-se: não é "só um probleminha", é sabedoria demoníaca.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual das duas sabedorias guia sua vida? Dá pra ser melhor identificado pela "de cima" (paz, misericórdia) ou "de baixo" (inveja, contenda)?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Sabedoria celestial = pura, pacífica, sem hipocrisia. Sabedoria terrena = demoníaca, cheia de inveja.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/" target="_blank">Tiago 3:13-18 — NWT (sabedoria)</a>
+          <span class="nota">"Demoníaca" (gr. <i>daimoniōdēs</i>) = como demônio, inspirada por demônios. Não é exagero, é a realidade espiritual.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/9/" target="_blank">Provérbios 9:10 — NWT</a>
+          <span class="nota">"O temor de Jeová é o princípio da sabedoria." — Toda sabedoria verdadeira começa com respeito a Jeová, não com orgulho intelectual.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/1/" target="_blank">1 Coríntios 1:18-25 — NWT (sabedoria do mundo vs de Deus)</a>
+          <span class="nota">"A palavra da cruz é loucura para os que estão perecendo, mas para nós é o poder de Deus." A sabedoria de Deus parece loucura pro mundo.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PARTE 5: PROTEÇÃO -->
+<div class="tab-content" id="tab4">
+<div class="section-header">
+  <h2><span class="emoji">🛡️</span>PARTE 5 — Como se proteger</h2>
+</div>
+
+<div class="card" id="s13">
+  <div class="card-title"><span class="num">13</span> O Diabo anda ao redor (1 Pe 5:8)</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Por que precisamos estar vigilantes contra o Diabo?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Sede vigilantes. O Diabo, vosso adversário, anda ao redor como leão rugindo, procurando a quem possa devorar. Resisti-lhe, firmes na fé." — <a class="ref" data-verse="1 Pedro 5:8, 9">1 Pe 5:8, 9</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Pedro nos alerta:
+    <br>• "Vigilantes" (gr. <i>grēgoreō</i>) = sóbrios, acordados, alertas
+    <br>• "Ao redor" (gr. <i>peripateō</i>) = andando em círculos
+    <br>• "Leão rugindo" = intimidador, predador
+    <br>• "Devorar" (gr. <i>katapinō</i>) = engolir, destruir
+    <br>• "Resisti" (gr. <i>anthistēmi</i>) = opor-se, ficar de pé contra</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ O Diabo usa pessoas!</div>
+    <div class="box-text">O Diabo não aparece com chifres vermelhos. Ele usa <b>pessoas</b>: falsos profetas, falsos irmãos, fofoqueiros, murmuradores. Quando você se protege desses, está se protegendo dele.</div>
+  </div>
+  <div class="box box-escudo">
+    <div class="box-label">🛡️ Como se proteger</div>
+    <div class="box-text">1. <b>Efésios 6:11-17</b> — Armadura de Deus (cinturão, couraça, calçados, escudo, capacete, espada)<br>
+    2. <b>2 Timóteo 2:22</b> — "Foge das paixões da mocidade. Segue a justiça, a fé, o amor, a paz"<br>
+    3. <b>Salmo 1:1, 2</b> — "Bem-aventurado o homem que não anda no conselho dos ímpios... mas na lei de Jeová está o seu deleite"</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Não minimize o perigo. O Diabo está procurando quem ele pode "devorar". Não seja presa fácil!</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O Diabo anda ao redor como leão. Precisamos de vigilância + armadura de Deus.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/60/5/" target="_blank">1 Pedro 5:8, 9 — NWT</a>
+          <span class="nota">"Vosso adversário" (gr. <i>antidikos</i>) = oponente em tribunal, acusador. Satanás nos acusa diante de Deus (Ap 12:10) e tenta nos destruir.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/6/" target="_blank">Efésios 6:11-17 — NWT (armadura de Deus)</a>
+          <span class="nota">A armadura completa: cinturão da verdade, couraça da justiça, calçados do entusiasmo pela paz, escudo da fé, capacete da salvação, espada do espírito (a Palavra).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/1/" target="_blank">Salmo 1:1, 2 — NWT</a>
+          <span class="nota">"Bem-aventurado o homem que NÃO anda no conselho dos ímpios" — proteção começa com escolher BEM as companhias.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s14">
+  <div class="card-title"><span class="num">14</span> Provai os espíritos (1 João 4:1)</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos "provar" se uma pessoa ou ensinamento é de Deus?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Amados, não creiais em todo espírito, mas provai os espíritos se são de Deus, porque muitos falsos profetas têm saído pelo mundo." — <a class="ref" data-verse="1 João 4:1">1 Jo 4:1</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">"Provar" (gr. <i>dokimazō</i>) = testar, examinar, aprovar. Não é "acreditar cegamente", é <b>investigar</b>. Como testar prata (1 Pe 1:7) ou ouro. Falsos profetas = falsos mestres que se dizem de Deus mas não são.</div>
+  </div>
+  <div class="box box-escudo">
+    <div class="box-label">🛡️ 5 testes práticos</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>1. Teste da DOUTRINA</b> — O que diz concorda com a Bíblia?<br>
+      <i>"Toda inspiração de Deus... é útil para ensinar, para repreender, para corrigir"</i> (2 Tim 3:16)<br><br>
+      <b>2. Teste do FRUTO</b> — O caráter da pessoa combina?<br>
+      <i>"Pelos seus frutos os conhecereis"</i> (Mt 7:16)<br><br>
+      <b>3. Teste do OBJETIVO</b> — Pra quê a pessoa faz o que faz?<br>
+      <i>"Falam para agradar a Deus, não aos homens"</i> (1 Ts 2:4)<br><br>
+      <b>4. Teste do AMOR</b> — Há amor verdadeiro por Jeová e pelo próximo?<br>
+      <i>"Todo aquele que ama é nascido de Deus"</i> (1 Jo 4:7)<br><br>
+      <b>5. Teste da SUBMISSÃO</b> — Reconhece Jesus como Senhor?<br>
+      <i>"Todo espírito que confessa que Jesus Cristo veio em carne é de Deus"</i> (1 Jo 4:2)
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ O dom de DISCERNIMENTO</div>
+    <div class="box-text">1 Coríntios 12:10 menciona o dom de "discernimento de espíritos" (gr. <i>diakriseis pneumatōn</i>) — habilidade dada por Deus pra distinguir o que é dEle do que não é. Não é pra todos terem igual, mas todos podem crescer nisso.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando alguém ensinar algo novo, NÃO aceite na hora. Aplique os 5 testes antes. "Tudo examinae; o que é bom retende" (1 Ts 5:21).</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">5 testes: doutrina, fruto, objetivo, amor, submissão a Jesus. Use todos!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/4/" target="_blank">1 João 4:1-6 — NWT</a>
+          <span class="nota">"Falsos profetas" (gr. <i>pseudoprophētai</i>) = profetas falsos, que se dizem de Deus. Há critério pra identificar.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/12/" target="_blank">1 Coríntios 12:10 — NWT (dom de discernimento)</a>
+          <span class="nota">"Discernimento de espíritos" (gr. <i>diakriseis pneumatōn</i>) = distinguir entre a força de Deus e outras influências.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/53/5/" target="_blank">1 Tessalonicenses 5:21 — NWT</a>
+          <span class="nota">"Examinai todas as coisas; apegai-vos ao que é bom." — princípio prático de discernimento contínuo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/5/" target="_blank">Hebreus 5:14 — NWT (discernimento treinado)</a>
+          <span class="nota">"Faculdades de discernimento treinadas" = pela prática, podemos desenvolver discernimento maduro.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s15">
+  <div class="card-title"><span class="num">15</span> O que fazer ao identificar</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Depois de identificar alguém como falso, caluniador ou mentiroso, o que fazer?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Afastai-vos de todo irmão que ande desordenadamente." — <a class="ref" data-verse="2 Tessalonicenses 3:6">2 Ts 3:6</a>; "Se alguém não obedece à nossa palavra por meio desta carta, a esse sinalizai, e não vos associeis com ele, para que se envergonhe. E, contudo, não o considereis como inimigo, mas adverti-o como irmão." — <a class="ref" data-verse="2 Tessalonicenses 3:14, 15">2 Ts 3:14, 15</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia dá orientações claras, mas com equilíbrio:</div>
+    <div class="box-text" style="margin-top: 8px;">
+      <b>1. Mateus 18:15-17</b> — Processo de disciplina:<br>
+      (a) Vai sozinho e aponta a falta<br>
+      (b) Se não ouvir, leva 2-3 testemunhas<br>
+      (c) Se não ouvir, conta à congregação<br>
+      (d) Se não ouvir, "seja para ti como o homem das nações" (não associado)<br><br>
+      <b>2. 1 Coríntios 5:11</b> — "Com tal homem, nem ainda comais"<br>
+      <b>3. 2 João 10, 11</b> — "Nem o recebais em casa, nem lhe deis boas-vindas"<br>
+      <b>4. 2 Timóteo 2:16, 17, 23</b> — "Evita ... não participes das obras infrutíferas das trevas"
+    </div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ Equilíbrio: ODIE o pecado, AME o pecador</div>
+    <div class="box-text">A Bíblia manda nos afastar de falsos, MAS também:
+    <br>• "Adverte-o como irmão" (2 Ts 3:15) — não é ódio, é correção
+    <br>• "Não considereis como inimigo" (2 Ts 3:15) — mantenha porta aberta
+    <br>• "Se possível, quanto depender de vós, tende paz com todos os homens" (Rm 12:18)
+    <br>• "Amai os vossos inimigos" (Mt 5:44)</div>
+  </div>
+  <div class="box box-escudo">
+    <div class="box-label">🛡️ Como agir</div>
+    <div class="box-text">1. <b>Confrontar com amor</b> — primeiro sozinho, depois com testemunhas<br>
+    2. <b>Não compactuar</b> — não participar da mentira ou fofoca<br>
+    3. <b>Manter distância respeitosa</b> — sem ódio, sem intimidade<br>
+    4. <b>Orar pela pessoa</b> — talvez ela mude<br>
+    5. <b>Não difamar</b> — a correção não é desculpa pra fofoca</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Se você precisa confrontar alguém, faça com AMOR, não com raiva. O objetivo é RESTAURAR, não destruir.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">1. Confrontar → 2. Não compactuar → 3. Distância respeitosa → 4. Orar → 5. Não difamar.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/18/" target="_blank">Mateus 18:15-17 — NWT (processo de disciplina)</a>
+          <span class="nota">Os 4 passos: (1) sozinho, (2) com 2-3 testemunhas, (3) à congregação, (4) separar. O objetivo sempre é RESTAURAR.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/63/2/" target="_blank">2 João 10, 11 — NWT</a>
+          <span class="nota">"Não receber em casa" — não dar apoio material ou moral a falsos mestres. Mas isso não significa ódio.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/" target="_blank">Romanos 12:17-21 — NWT</a>
+          <span class="nota">"Não se deixe vencer pelo mal, mas vença o mal com o bem." A vingança pertence a Jeová, não a nós.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PARTE 6: ESPERANÇA -->
+<div class="tab-content" id="tab5">
+<div class="section-header">
+  <h2><span class="emoji">🌅</span>PARTE 6 — A Esperança</h2>
+</div>
+
+<div class="card" id="s16">
+  <div class="card-title"><span class="num">16</span> Jeová odeia a mentira mas ama a verdade</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Qual é o equilíbrio entre a justiça de Jeová e o seu amor?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Jeová, tu és fiel em tudo o que fazes, e leal em todas as suas obras." — <a class="ref" data-verse="Salmo 145:13, 14">Sl 145:13, 14</a>; "O Senhor não demora em cumprir sua promessa, como alguns acham. Pelo contrário, ele é paciente com vocês, não querendo que ninguém pereça, mas que todos cheguem ao arrependimento." — <a class="ref" data-verse="2 Pedro 3:9">2 Pe 3:9</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jeová é <b>justo</b> (odeia mentira) E <b>misericordioso</b> (dá chance de arrepender). A Bíblia mostra:
+    <br>• Davi mentiu e foi confrontado, mas se arrependeu e foi perdoado (2 Sm 11-12; Sl 51)
+    <br>• Pedro mentiu (negou Jesus), mas se arrependeu e foi restaurado (Mt 26:69-75; Jo 21:15-17)
+    <br>• Os coríntios eram caluniadores, mas muitos se arrependeram (1 Co 6:9-11: "E assim éreis alguns de vós. Mas fostes lavados, fostes santificados, fostes justificados")</div>
+  </div>
+  <div class="box box-alerta">
+    <div class="box-label">⚠️ O perdão não é "aceitação"</div>
+    <div class="box-text">Jeová perdoa quem se ARREPENDE (muda de mentalidade, deixa o pecado). Não é "fingir que nada aconteceu" enquanto continua mentindo. Arrependimento = mudança real.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Se você foi caluniador, fofoqueiro ou mentiroso, há esperança! Arrependa-se de verdade, mude, e Jeová perdoa.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jeová odeia mentira mas ama quem se arrepende. Misericórdia + justiça = equilíbrio perfeito.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/51/" target="_blank">Salmo 51 — NWT (arrependimento de Davi)</a>
+          <span class="nota">"Cria em mim um coração puro, ó Deus" — Davi depois de mentir sobre Bate-Seba. Mostra que há perdão pra quem se arrepende.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/21/" target="_blank">João 21:15-17 — NWT (Pedro restaurado)</a>
+          <span class="nota">Depois de negar Jesus 3 vezes, Jesus pergunta 3 vezes: "Amas-me?" Restauração com amor, não com rejeição.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/6/" target="_blank">1 Coríntios 6:9-11 — NWT</a>
+          <span class="nota">"Assim éreis alguns de vós. Mas fostes lavados, fostes santificados, fostes justificados no nome do Senhor Jesus Cristo." — transformação real é possível!</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="s17">
+  <div class="card-title"><span class="num">17</span> O novo mundo: nada de mentira</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como será o novo mundo de Jeová em relação à verdade e mentira?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"E vi um novo céu e uma nova terra. ... Deus enxugará toda lágrima dos olhos deles, e não haverá mais morte, nem haverá mais luto, nem clamor, nem dor. ... Não haverá mais mentira." — baseado em <a class="ref" data-verse="Apocalipse 21:1, 4">Ap 21:1, 4</a>; "Nada de impuro entrará nela, nem quem pratica coisas detestáveis e mentiras." — <a class="ref" data-verse="Apocalipse 21:8, 27">Ap 21:8, 27</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A promessa de Jeová é que no novo mundo:
+    <br>• <b>Não haverá mentira</b> (Ap 21:8, 27 — "mentirosos" estão entre os que não entrarão)
+    <br>• <b>Não haverá calúnia</b> (a língua será domada, sem "boca de mentiroso" — Ap 14:5)
+    <br>• <b>Não haverá fofoca</b> (todos terão respeito uns pelos outros)
+    <br>• <b>Não haverá hipócritas</b> ("nada impuro" entra)
+    <br>• <b>Só verdade</b> (Jeová "habitará com os homens" — Ap 21:3)</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Imagine um mundo onde ninguém mente, ninguém fofoca, ninguém engana. Imagine olhar nos olhos de qualquer pessoa e saber que ela está sendo honesta. ISSO é o que Jeová quer pra nós!</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você quer morar num mundo assim? Então comece a praticar AGORA — diga a verdade, não fofoque, seja honesto. Você está treinando pra viver no novo mundo!</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">No novo mundo: nada de mentira, calúnia, fofoca ou hipocrisia. Só verdade, paz e amor.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/21/" target="_blank">Apocalipse 21:1-4 — NWT (novo céu e nova terra)</a>
+          <span class="nota">"Novo céu e nova terra" — não é destruição, é RENOVAÇÃO. Jeová vai consertar tudo!</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/21/" target="_blank">Apocalipse 21:8, 27 — NWT (lista dos que NÃO entrarão)</a>
+          <span class="nota">"Os medrosos, os incrédulos, os abomináveis, os homicidas, os imorais, os feiticeiros, os idólatras, e todos os mentirosos" — lugar deles é o lago de fogo. Sério.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/14/" target="_blank">Apocalipse 14:5 — NWT</a>
+          <span class="nota">"Na boca deles não se achou mentira; são irrepreensíveis" — a descrição dos 144.000, mas princípio que se aplica a todos no novo mundo.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/35/11/" target="_blank">Miqueias 4:3, 4 — NWT</a>
+          <span class="nota">"Transformarão as suas espadas em relhas de arado. ... Cada um assentará debaixo da sua videira e debaixo da sua figueira, e não haverá quem os espante." Visão de paz total.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Imagine um mundo sem mentiras"</a>
+          <span class="nota">Visualize a esperança: um mundo com verdade, paz e amor.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="box box-resumo" style="margin-top: 24px; padding: 16px;">
+  <div class="box-label">📝 RESUMO FINAL DO ESTUDO</div>
+  <div class="box-text">
+    <p><b>O que aprendemos:</b></p>
+    <p>1. <b>Jeová é o Deus da verdade</b> — a mentira é contrária à sua natureza</p>
+    <p>2. <b>Mentira é abominação</b> — uma das 7 coisas odiadas por Jeová</p>
+    <p>3. <b>Satanás é o pai da mentira</b> — quem mente se assemelha a ele</p>
+    <p>4. <b>A Bíblia chama de "caluniadores" quem fala mal</b> — o mesmo termo do Diabo</p>
+    <p>5. <b>A língua é como fogo</b> — pequeno mas devastador</p>
+    <p>6. <b>Fofoca, murmuração e calúnia são pecado</b> — mesmo quando "só falando a verdade"</p>
+    <p>7. <b>Fariseus eram zelosos por aparência</b> — religiosos por fora, vazios por dentro</p>
+    <p>8. <b>"Forma de piedade" sem poder</b> = aparência religiosa sem vida</p>
+    <p>9. <b>As 7 "Ai" de Jesus</b> condenam a falsa religião</p>
+    <p>10. <b>Identifique pelo fruto</b> — não pelo que dizem, mas pelo que fazem</p>
+    <p>11. <b>Fruto do Espírito vs obras da carne</b> — contraste claro</p>
+    <p>12. <b>Sabedoria celestial vs demoníaca</b> — inveja e contenda vêm do Diabo</p>
+    <p>13. <b>O Diabo anda ao redor como leão</b> — precisamos de armadura</p>
+    <p>14. <b>5 testes pra identificar</b> — doutrina, fruto, objetivo, amor, submissão</p>
+    <p>15. <b>Como agir</b> — confrontar com amor, não compactuar, manter distância</p>
+    <p>16. <b>Jeová perdoa quem se arrepende</b> — misericórdia + justiça</p>
+    <p>17. <b>No novo mundo: nada de mentira</b> — só verdade, paz e amor</p>
+    <p style="margin-top: 12px;"><b>Aplicação imediata:</b> Esta semana, faça um auto-check. Se você fofocou, murmurou ou mentiu, peça perdão a Jeová e à pessoa envolvida (se possível). E comprometa-se a dizer a VERDADE sempre.</p>
+  </div>
+</div>
+
+<div class="box box-fontes" style="margin-top: 16px;">
+  <div class="box-label">📚 Fontes e Recursos Adicionais</div>
+  <ul class="fontes-list">
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/" target="_blank">Tradução do Novo Mundo (NWT) — completa online</a>
+        <span class="nota">Todas as referências deste estudo podem ser lidas com notas de estudo.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/achegue-se-a-jeova/" target="_blank">"Achegue-se a Jeová" — capítulos 18-19 (atributos de Jeová)</a>
+        <span class="nota">Estudo detalhado sobre a fidelidade e veracidade de Jeová.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/imite-a-sua-fe/" target="_blank">"Imite a Sua Fé" — lições sobre integridade</a>
+        <span class="nota">Exemplos de pessoas que foram honestas, mesmo sob pressão.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎬</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Broadcasting® — "Identifique o que é verdadeiro"</a>
+        <span class="nota">Como discernir a verdade em meio a tanta informação.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/" target="_blank">Mateus 23 — Sermão de Jesus sobre os fariseus</a>
+        <span class="nota">Leia o capítulo completo. Aplica-se a qualquer época.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/" target="_blank">Tiago 3 — Sobre a língua</a>
+        <span class="nota">Todo o capítulo é sobre o poder destrutivo da língua.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<footer>
+  <p>📖 Estudo Bíblico Profundo — Quem fala mal, quem mente e os falsos zelosos</p>
+  <p>Baseado na Tradução do Novo Mundo da Bíblia Sagrada (NWT)</p>
+  <p>📚 Inclui notas de estudo da NWT, termos gregos/hebraicos originais e referências cruzadas</p>
+  <p>💙 Feito com carinho pra Jinny</p>
+</footer>
+
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <div class="verse-text" id="modal-text"></div>
+    <a id="modal-link" target="_blank">Ver no jw.org →</a>
+    <button class="close" onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('sentinela-theme', next);
+}
+const savedTheme = localStorage.getItem('sentinela-theme');
+if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+function showTab(idx) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab' + idx).classList.add('active');
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.tabs').offsetTop - 130, behavior: 'smooth'});
+}
+
+const verses = {"Salmo 31:5":{text:"\"Na tua mão entrego o meu espírito. Tu me redimiste, ó Jeová, Deus da verdade.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/31/"},"Provérbios 30:5":{text:"\"Toda palavra de Deus é pura. Ele é um escudo para os que nele confiam.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/30/"},"Tito 1:2":{text:"\"...em надежда da vida eterna, que Deus, que não pode mentir, prometeu antes dos tempos eternos...\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/56/1/"},"Provérbios 12:22":{text:"\"Lábios falsos são uma abominação para Jeová, mas os que agem com verdade são o seu deleite.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/12/"},"Provérbios 17:7":{text:"\"Não convém ao tolo a lábios excelentes; quanto menos ao príncipe lábios mentirosos!\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/17/"},"Êxodo 20:16":{text:"\"Não dirás falso testemunho contra o teu próximo.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/20/"},"Provérbios 6:16, 17":{text:"\"Seis coisas odiadas por Jeová, sim, sete são abomináveis para ele: olhos altivos, língua mentirosa, mãos que derramam sangue inocente, coração que maquina planos iníquos...\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/6/"},"João 8:44":{text:"\"Ele era homicida desde o princípio e não se firmou na verdade, porque nele não há verdade. Quando ele fala a mentira, fala do que é seu, porque é mentiroso e pai da mentira.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/8/"},"Tiago 4:11":{text:"\"Não andeis murmurando nem criticando uns aos outros, irmãos. Quem murmura de um irmão e julga a seu irmão, murmura da lei e julga a lei.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/4/"},"Tiago 3:5, 6":{text:"\"A língua é um pequeno membro, mas se vangloria de grandes coisas. Vejam como uma grande floresta é incendiada por um pequeno fogo. A língua é um fogo.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/"},"Provérbios 18:21":{text:"\"A morte e a vida estão no poder da língua, e os que a usam com gosto colherão dela os seus frutos.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/18/"},"Tiago 3:2":{text:"\"Se alguém não tropeça em palavra, esse é um homem perfeito, capaz de refrear também todo o corpo.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/"},"Provérbios 6:19":{text:"\"...semear contendas entre irmãos.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/6/"},"Provérbios 19:5":{text:"\"O falso testemunha não ficará impune, e o que profere mentiras não escapará.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/19/"},"Provérbios 20:19":{text:"\"Aquele que anda murmurando revela segredos; portanto, não te intrometas com o que tagarela.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/20/"},"Mateus 23:5":{text:"\"Eles fazem todas as suas obras para serem vistos pelos homens.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/"},"Mateus 23:27":{text:"\"Ai de vocês, escribas e fariseus, hipócritas! Pois vocês são sepulcros caiados, que por fora parecem formosos, mas por dentro estão cheios de ossos de mortos e de toda imundícia.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/"},"Mateus 23:13-33":{text:"\"Ai de vocês, escribas e fariseus, hipócritas! ...vocês percorrem mar e terra para fazer um prosélito...vocês são sepulcros caiados...raça de víboras!\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/23/"},"2 Timóteo 3:5":{text:"\"Tendo forma de piedade, mas negando o poder dela. Afasta-te também desses.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/"},"Tito 1:16":{text:"\"Professam conhecer a Deus, mas pelas suas obras o negam, sendo abomináveis, e disobedientes, e desprovidos de toda boa obra.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/56/1/"},"Mateus 7:16, 17":{text:"\"Pelos seus frutos os conhecereis. Colhem-se uvas dos espinheiros ou figos dos abrolhos? Assim, toda árvore boa produz frutos bons, mas a árvore má produz frutos maus.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/"},"Mateus 7:22, 23":{text:"\"Muitos me dirão naquele dia: 'Senhor, Senhor, não profetizamos em teu nome? ...' E então lhes direi: 'Nunca vos conheci. Afastai-vos de mim, vós que praticais a ilegalidade.'\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/"},"Gálatas 5:22, 23":{text:"\"O fruto do Espírito é: amor, alegria, paz, longanimidade, benignidade, bondade, fidelidade, mansidão, autocontrole. Contra essas coisas não há lei.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/"},"Gálatas 5:19-21":{text:"\"As obras da carne são manifestas: imoralidade sexual, impureza, lascívia, idolatria, feitiçaria, inimizades, contenda, ciúme, acessos de ira,自私 selfishness, dissensões, facções, inveja, embriaguez, orgias e coisas semelhantes.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/"},"Tiago 3:17, 15":{text:"\"A sabedoria de cima é, antes de tudo, pura, depois pacífica, razoável, pronta para obedecer, cheia de misericórdia e bons frutos, sem parcialidade, sem hipocrisia. ... Mas a sabedoria que é de baixo é, primeiro, terrena, depois, sensual, demoníaca.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/3/"},"1 Pedro 5:8, 9":{text:"\"Sede vigilantes. O Diabo, vosso adversário, anda ao redor como leão rugindo, procurando a quem possa devorar. Resisti-lhe, firmes na fé.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/60/5/"},"1 João 4:1":{text:"\"Amados, não creiais em todo espírito, mas provai os espíritos se são de Deus, porque muitos falsos profetas têm saído pelo mundo.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/62/4/"},"2 Tessalonicenses 3:6":{text:"\"Afastai-vos de todo irmão que ande desordenadamente e não segundo o ensino que recebestes de nós.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/53/3/"},"2 Tessalonicenses 3:14, 15":{text:"\"Se alguém não obedece à nossa palavra por meio desta carta, a esse sinalizai, e não vos associeis com ele, para que se envergonhe. E, contudo, não o considereis como inimigo, mas adverti-o como irmão.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/53/3/"},"Salmo 145:13, 14":{text:"\"Jeová é fiel em todas as suas promessas e leal em todas as suas obras. Jeová sustenta todos os que vacilam e levanta todos os que estão caídos.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/145/"},"2 Pedro 3:9":{text:"\"O Senhor não demora em cumprir sua promessa, como alguns acham. Pelo contrário, ele é paciente com vocês, não querendo que ninguém pereça, mas que todos cheguem ao arrependimento.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/61/3/"},"Apocalipse 21:1, 4":{text:"\"E vi um novo céu e uma nova terra. ... Deus enxugará toda lágrima dos olhos deles, e não haverá mais morte, nem haverá mais luto, nem clamor, nem dor.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/21/"},"Apocalipse 21:8, 27":{text:"\"...os medrosos, os incrédulos, os abomináveis, os homicidas, os imorais, os feiticeiros, os idólatras, e todos os mentirosos — a parte deles será no lago que arde com fogo e enxofre.\" ... \"Não entrará nela nada de impuro, nem quem pratica coisas detestáveis e mentiras.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/21/"},"Apocalipse 14:5":{text:"\"Na boca deles não se achou mentira; são irrepreensíveis.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/14/"},"Miqueias 4:3, 4":{text:"\"...transformarão as suas espadas em relhas de arado. ... Cada um assentará debaixo da sua videira e debaixo da sua figueira, e não haverá quem os espante.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/35/4/"},"Gálatas 5:24":{text:"\"Os que pertencem a Cristo Jesus crucificaram a carne junto com suas paixões e desejos.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/48/5/"},"Provérbios 9:10":{text:"\"O temor de Jeová é o princípio da sabedoria, e o conhecimento do Santo é entendimento.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/9/"},"1 Coríntios 1:18-25":{text:"\"A palavra da cruz é loucura para os que estão perecendo, mas para nós é o poder de Deus. ... A loucura de Deus é mais sábia que os homens.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/1/"},"Salmo 51":{text:"\"Cria em mim um coração puro, ó Deus, e renova dentro em mim um espírito firme. ... Purifica-me do meu pecado, e estarei puro; lava-me, e estarei mais branco do que a neve.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/51/"},"João 21:15-17":{text:"\"Quando acabaram de comer, Jesus perguntou a Simão Pedro: 'Simão, filho de João, amas-me mais do que estes?' Pedro respondeu: 'Sim, Senhor, tu sabes que te amo.' Jesus disse: 'Cuida das minhas ovelhas.'\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/21/"},"1 Coríntios 6:9-11":{text:"\"...nem os imorais, nem os idólatras, nem os adúlteros, ... nem os ladrões, ... herdarão o Reino de Deus. E assim éreis alguns de vós. Mas fostes lavados, fostes santificados, fostes justificados no nome do Senhor Jesus Cristo e no Espírito do nosso Deus.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/6/"},"Salmo 34:13":{text:"\"Quem é o homem que ama a vida e deseja ver dias felizes? Refreia a tua língua do mal e os teus lábios de falarem engano.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/34/"},"Provérbios 15:4":{text:"\"A língua apaziguadora é árvore de vida, mas a língua perversa fere o espírito.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/15/"},"Provérbios 17:9":{text:"\"O que encobre a transgressão busca amor, mas o que volta a falar do assunto separa os amigos mais chegados.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/17/"},"Êxodo 23:1":{text:"\"Não levantarás falso rumor. Não te associarás com o ímpio para ser testemunha injusta.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/23/"},"Mateus 6:1-18":{text:"\"Tende cuidado para não praticar as suas obras de justiça diante dos homens, para ser vistos por eles. ... Quando orares, entra no teu quarto, fecha a porta e ora ao teu Pai, que está em segredo.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/"},"Mateus 18:15-17":{text:"\"Se o teu irmão pecar, vai e repreende-o entre ti e ele só. Se ele te ouvir, ganhaste o teu irmão. ... Se não ouvir, leva contigo mais uma ou duas pessoas. ... Se não ouvir, conta à congregação. ... Se nem mesmo a congregação ouvir, seja para ti como o homem das nações.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/18/"},"Romanos 12:17-21":{text:"\"A ninguém retribuais mal por mal. ... Não te deixes vencer pelo mal, mas vence o mal com o bem. ... Antes, se o teu inimigo tiver fome, dá-lhe de comer; se tiver sede, dá-lhe de beber. ... Não te deixes vencer pelo mal, mas vence o mal com o bem.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/12/"},"Salmo 1:1, 2":{text:"\"Bem-aventurado o homem que não anda no conselho dos ímpios, não para no caminho dos pecadores, nem se assenta na roda dos escarnecedores. Antes, o seu deleite está na lei de Jeová, e na sua lei medita de dia e de noite.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/1/"},"2 João 10, 11":{text:"\"Se alguém vier a vocês e não trouxer este ensino, nunca o recebam em casa, nem lhe desejem as boas-vindas. Porque quem lhe deseja as boas-vindas se torna participante de suas obras más.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/63/2/"},"1 Tessalonicenses 5:21":{text:"\"Examinai todas as coisas; apegai-vos ao que é bom. Abstende-vos de toda forma de mal.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/53/5/"},"Hebreus 5:14":{text:"\"Mas o alimento sólido é para os maduros, para os que, pela prática, têm as suas faculdades de discernimento treinadas para distinguir tanto o bem como o mal.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/5/"},"1 Coríntios 12:10":{text:"\"...a outro, discernimento de espíritos; a outro,种类 kinds de línguas; e ainda a outro, interpretação de línguas.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/12/"},"1 Coríntios 5:11":{text:"\"...não vos associeis com aquele que, chamando-se irmão, é impuro, ou avarento, ou idólatra, ou difamador, ou bêbado, ou extorcioneiro; com esse nem ainda comais.\"",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/5/"}};
+
+document.querySelectorAll('.ref').forEach(ref => {
+  ref.addEventListener('click', e => {
+    e.preventDefault();
+    const verse = ref.getAttribute('data-verse');
+    const data = verses[verse];
+    if (data) {
+      document.getElementById('modal-title').textContent = verse;
+      document.getElementById('modal-text').textContent = data.text;
+      document.getElementById('modal-link').href = data.link;
+      document.getElementById('modal-bg').classList.add('show');
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>

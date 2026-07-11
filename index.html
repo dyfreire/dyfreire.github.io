@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📖 Estudos Bíblicos — A Sentinela</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6c757d;
+  --border: #dee2e6;
+  --azul: #dbeafe;
+  --azul-borda: #3b82f6;
+  --verde: #d1fae5;
+  --verde-borda: #10b981;
+  --vermelho: #fecaca;
+  --vermelho-borda: #dc2626;
+  --link: #2563eb;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
+}
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+  --azul: #1e3a8a;
+  --verde: #064e3b;
+  --vermelho: #7f1d1d;
+  --link: #60a5fa;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.5);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0;
+  transition: background .3s, color .3s;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1e40af, #7c3aed, #be185d);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255,255,255,.1) 0%, transparent 50%);
+}
+.hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+.hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; }
+.hero .subtitle { font-size: 1.15rem; opacity: .95; margin-bottom: 8px; }
+.hero .lema { font-size: 1rem; opacity: .8; font-style: italic; }
+.hero .emoji { font-size: 3rem; margin-bottom: 16px; }
+
+.container { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
+
+.controls {
+  display: flex; gap: 8px; margin-bottom: 24px;
+  justify-content: center;
+}
+.btn {
+  background: var(--azul); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 16px; font-size: .9rem; cursor: pointer;
+  font-weight: 500;
+}
+.btn:hover { background: var(--azul-borda); color: white; }
+
+.intro {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px; margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.intro p { font-size: 1rem; line-height: 1.7; }
+
+.studies {
+  display: grid; gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .studies { grid-template-columns: 1fr 1fr; }
+}
+
+.study-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 24px;
+  box-shadow: var(--shadow);
+  text-decoration: none; color: var(--text);
+  display: block; transition: transform .2s, box-shadow .2s;
+  position: relative; overflow: hidden;
+}
+.study-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.study-card .badge {
+  position: absolute; top: 12px; right: 12px;
+  background: var(--azul); color: var(--text);
+  padding: 4px 10px; border-radius: 999px;
+  font-size: .7rem; font-weight: 700;
+  text-transform: uppercase;
+}
+.study-card .emoji-big { font-size: 3rem; margin-bottom: 8px; }
+.study-card h2 { color: var(--link); font-size: 1.3rem; margin-bottom: 8px; }
+.study-card .desc { font-size: .9rem; color: var(--muted); margin-bottom: 12px; }
+.study-card ul {
+  list-style: none; padding: 0; margin: 12px 0;
+  font-size: .85rem;
+}
+.study-card ul li {
+  padding: 3px 0;
+  display: flex; align-items: center; gap: 6px;
+}
+.study-card ul li::before { content: "✓"; color: var(--verde-borda); font-weight: 700; }
+.study-card .open-link {
+  display: inline-block; margin-top: 12px;
+  color: var(--link); font-weight: 600; font-size: .9rem;
+}
+.study-card .open-link::after { content: " →"; transition: margin-left .2s; }
+.study-card:hover .open-link::after { content: " →"; margin-left: 4px; }
+
+.study-card.study-1 { border-top: 4px solid #3b82f6; }
+.study-card.study-1 .badge { background: var(--azul); }
+.study-card.study-2 { border-top: 4px solid #b91c1c; }
+.study-card.study-2 .badge { background: var(--vermelho); }
+
+.about {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 24px; margin-top: 32px;
+  box-shadow: var(--shadow);
+}
+.about h2 { color: var(--link); margin-bottom: 12px; }
+.about p { margin-bottom: 10px; font-size: .95rem; line-height: 1.7; }
+.about ul { padding-left: 20px; margin-bottom: 12px; }
+.about li { margin-bottom: 6px; font-size: .92rem; }
+
+footer {
+  text-align: center; padding: 24px 16px;
+  font-size: .8rem; color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero .subtitle { font-size: 1rem; }
+  .hero { padding: 40px 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="emoji">📖✨</div>
+    <h1>Estudos Bíblicos Interativos</h1>
+    <div class="subtitle">A Sentinela · Estudos profundos com notas de estudo</div>
+    <div class="lema">"Lâmpada para os meus pés é tua palavra" — Salmo 119:105</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <button class="btn" onclick="toggleTheme()">🌓 Alternar tema</button>
+  </div>
+
+  <div class="intro">
+    <p>Bem-vindo(a)! Estes são <strong>estudos bíblicos interativos</strong> baseados na revista <em>A Sentinela</em>, com notas de estudo da Tradução do Novo Mundo (NWT), referências cruzadas e aplicações práticas.</p>
+    <p style="margin-top: 8px;">📱 <strong>Mobile-first</strong> · 🌙 <strong>Dark mode</strong> · 🔍 <strong>Modal de versículos</strong></p>
+  </div>
+
+  <div class="studies">
+    <a href="sentinela-principios.html" class="study-card study-1">
+      <span class="badge">📅 Jun-Jul 2026</span>
+      <div class="emoji-big">📖</div>
+      <h2>Por que os princípios bíblicos são importantes?</h2>
+      <p class="desc">Estudo da Sentinela de 6-12 de julho de 2026 com 17 parágrafos enriquecidos.</p>
+      <ul>
+        <li>17 cards com 6-8 caixas cada</li>
+        <li>31 versículos clicáveis (NWT)</li>
+        <li>33+ termos gregos/hebraicos</li>
+        <li>100+ links para jw.org</li>
+        <li>Par 13 e 15 com estudos profundos</li>
+      </ul>
+      <span class="open-link">Abrir estudo</span>
+    </a>
+
+    <a href="estudo-fofoca-mentira.html" class="study-card study-2">
+      <span class="badge">⚠️ Estudo profundo</span>
+      <div class="emoji-big">🗣️</div>
+      <h2>Quem fala mal, quem mente e os falsos zelosos</h2>
+      <p class="desc">Estudo bíblico profundo em 6 partes sobre calúnia, mentira e hipocrisia religiosa.</p>
+      <ul>
+        <li>17 cards organizados em 6 partes</li>
+        <li>21 versículos clicáveis (NWT)</li>
+        <li>25+ termos gregos/hebraicos</li>
+        <li>80+ links para jw.org</li>
+        <li>Foco em identificar e se proteger</li>
+      </ul>
+      <span class="open-link">Abrir estudo</span>
+    </a>
+  </div>
+
+  <div class="about">
+    <h2>📚 Sobre estes estudos</h2>
+    <p>Cada estudo segue o padrão <strong>6 caixas coloridas</strong>:</p>
+    <ul>
+      <li>🎯 <strong>Pergunta</strong> (azul) — O que vamos responder</li>
+      <li>📜 <strong>Texto bíblico</strong> (cinza) — Versículos principais</li>
+      <li>🔍 <strong>Explicação</strong> (verde) — Contexto e princípios</li>
+      <li>💡 <strong>Aplicação</strong> (âmbar) — Como usar no dia a dia</li>
+      <li>🤔 <strong>Reflexão</strong> (púrpura) — Perguntas pessoais</li>
+      <li>📝 <strong>Resumo</strong> (amarelo) — Pontos-chave</li>
+      <li>📚 <strong>Fontes & Mídia</strong> (rosa) — Notas da NWT, links JW</li>
+    </ul>
+    <p style="margin-top: 12px;"><strong>Recursos extras:</strong> TOC dropdown com índice, abas para dividir o estudo, modal flutuante em cada versículo bíblico (clica pra ver o texto completo da NWT), e dark mode que salva sua preferência.</p>
+    <p style="margin-top: 12px;">💙 <em>Feito com carinho pra Jinny</em></p>
+  </div>
+</div>
+
+<footer>
+  <p>📖 Estudos Bíblicos · A Sentinela 2026</p>
+  <p>Hospedado no GitHub Pages · dyfreire.github.io</p>
+  <p>Texto bíblico: Tradução do Novo Mundo (NWT) · 2026</p>
+</footer>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.body.setAttribute('data-theme', saved);
+</script>
+
+</body>
+</html>
