@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preparação · Reunião 13-19 de Julho de 2026 · Jeremias 16-17</title>
+<style>
+:root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --text-soft: #4a4a4f;
+    --border: #e5e5ea;
+    --navy: #1d3557;
+    --gold: #b8860b;
+    --green: #2d6a4f;
+    --purple: #5b3a8c;
+    --blue-soft: #dbeafe;
+    --green-soft: #d1fae5;
+    --gold-soft: #fef3c7;
+    --purple-soft: #ede9fe;
+    --gray-soft: #f1f3f5;
+    --red-soft: #fee2e2;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.05);
+    --tab-active-bg: var(--navy);
+}
+[data-theme="dark"] {
+    --bg: #0f1115;
+    --card: #1a1d23;
+    --text: #e8e8ea;
+    --text-soft: #9ca3af;
+    --border: #2a2d35;
+    --navy: #5b8fb9;
+    --gold: #d4a72c;
+    --green: #5cb89b;
+    --purple: #9d7bce;
+    --blue-soft: #1e3a5f;
+    --green-soft: #1f3d2f;
+    --gold-soft: #3d3520;
+    --purple-soft: #2e2547;
+    --gray-soft: #2a2d35;
+    --red-soft: #4a2828;
+    --shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+    padding-bottom: 80px;
+}
+header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2c5783 100%);
+    color: #fff;
+    padding: 24px 20px 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+header .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+header .meta {
+    font-size: 0.82rem;
+    opacity: 0.75;
+    margin-top: 4px;
+}
+.theme-toggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.25); }
+
+/* === TABS STYLES === */
+.tabs-container {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.tabs-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 6px 12px;
+    gap: 4px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.tabs-scroll::-webkit-scrollbar { display: none; }
+.tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 9px 14px;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .15s;
+    min-height: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    font-family: inherit;
+}
+.tab-btn:hover:not(.active) {
+    background: var(--gray-soft);
+    color: var(--text);
+}
+.tab-btn.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+    font-weight: 600;
+}
+[data-theme="dark"] .tab-btn.active {
+    background: var(--navy);
+    color: #fff;
+}
+
+/* === CONTENT SECTIONS === */
+.container { max-width: 880px; margin: 0 auto; padding: 16px; }
+.tab-pane { display: none; animation: fadeIn .25s ease; }
+.tab-pane.active { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.toc {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 8px 0 16px;
+    box-shadow: var(--shadow);
+}
+.toc h2 {
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.toc details { margin-bottom: 8px; }
+.toc summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 6px 0;
+    color: var(--navy);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after {
+    content: "▾";
+    margin-left: auto;
+    transition: transform .2s;
+}
+.toc details[open] summary::after { transform: rotate(180deg); }
+.toc ul { list-style: none; padding-left: 28px; margin-top: 4px; }
+.toc li { padding: 3px 0; font-size: 0.9rem; }
+.toc a { color: var(--text-soft); text-decoration: none; }
+.toc a:hover { color: var(--navy); text-decoration: underline; }
+
+/* === SECTION CARDS === */
+.section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+}
+.section.tesouros { border-left: 5px solid var(--gold); }
+.section.cristian { border-left: 5px solid var(--purple); }
+.section.estudo { border-left: 5px solid var(--green); }
+.section.inicio { border-left: 5px solid var(--navy); }
+.section.ministerio { border-left: 5px solid #2c5f7c; }
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+.section-header .num {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.section.tesouros .section-header .num { background: var(--gold); }
+.section.cristian .section-header .num { background: var(--purple); }
+.section.estudo .section-header .num { background: var(--green); }
+.section.ministerio .section-header .num { background: #2c5f7c; }
+.section-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    flex: 1;
+    min-width: 0;
+}
+.section-header .time {
+    font-size: 0.78rem;
+    color: var(--text-soft);
+    background: var(--gray-soft);
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* === BOX CONTENT === */
+.box {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid;
+    background: var(--card);
+}
+.box-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.4; }
+.box-content { flex: 1; min-width: 0; }
+.box-content strong { display: block; font-size: 0.98rem; margin-bottom: 4px; color: var(--text); }
+.box-content p, .box-content ul { font-size: 0.93rem; color: var(--text-soft); }
+.box-content ul { padding-left: 20px; margin-top: 4px; }
+.box-content li { margin: 3px 0; }
+.box-pergunta { background: var(--blue-soft); border-left-color: #3b82f6; }
+.box-texto { background: var(--gray-soft); border-left-color: #6c757d; }
+.box-explic { background: var(--green-soft); border-left-color: #10b981; }
+.box-aplic { background: var(--gold-soft); border-left-color: #f59e0b; }
+.box-reflex { background: var(--purple-soft); border-left-color: #8b5cf6; }
+.box-resumo { background: var(--gold-soft); border-left-color: #eab308; }
+.box-fonte { background: var(--red-soft); border-left-color: #dc2626; }
+.box-destaque { background: linear-gradient(135deg, var(--blue-soft) 0%, var(--gold-soft) 100%); border-left-color: var(--navy); }
+.verse {
+    background: var(--bg);
+    border-left: 3px solid var(--navy);
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+.verse cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--text-soft);
+    margin-top: 4px;
+}
+.situation {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 10px 0;
+}
+.situation .q {
+    font-weight: 600;
+    color: var(--purple);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.situation .answer {
+    background: var(--green-soft);
+    border-left: 3px solid var(--green);
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.92rem;
+    margin-top: 8px;
+}
+details.expandable {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 8px 0;
+}
+details.expandable summary {
+    cursor: pointer;
+    padding: 10px 14px;
+    font-weight: 600;
+    color: var(--navy);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+details.expandable summary::-webkit-details-marker { display: none; }
+details.expandable summary::after {
+    content: "▸";
+    margin-left: auto;
+    color: var(--text-soft);
+    transition: transform .2s;
+}
+details.expandable[open] summary::after { transform: rotate(90deg); }
+details.expandable .content {
+    padding: 0 14px 14px;
+    font-size: 0.92rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+}
+details.expandable .content p { margin: 6px 0; }
+.highlight {
+    background: var(--gold-soft);
+    border-left: 4px solid var(--gold);
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 0 8px 8px 0;
+}
+.highlight strong { color: var(--gold); }
+.gems-list { padding-left: 0; list-style: none; }
+.gems-list li {
+    background: var(--green-soft);
+    border-left: 3px solid var(--green);
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.93rem;
+}
+.gems-list li strong { color: var(--green); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+.divider {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 18px 0;
+}
+.notes-area {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    margin: 14px 0;
+}
+.notes-area label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.notes-area textarea {
+    width: 100%;
+    min-height: 100px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    opacity: 0;
+    transition: opacity .25s;
+    z-index: 99;
+}
+.back-to-top.visible { opacity: 1; }
+
+/* Welcome panel */
+.welcome {
+    text-align: center;
+    padding: 20px 10px 30px;
+}
+.welcome .emoji {
+    font-size: 3.5rem;
+    margin-bottom: 8px;
+}
+.welcome h2 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--navy);
+}
+.welcome p {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+.welcome-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+}
+.welcome-stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    min-width: 0;
+    overflow: hidden;
+}
+.welcome-stat .icon { font-size: 1.5rem; margin-bottom: 4px; }
+.welcome-stat .label { font-size: 0.78rem; color: var(--text-soft); }
+.welcome-stat .value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: 2px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 600px) {
+    header { padding: 22px 16px 16px; }
+    header h1 { font-size: 1.25rem; }
+    .container { padding: 12px; }
+    .section { padding: 16px; }
+    .box { padding: 12px 14px; gap: 10px; }
+    .tab-btn { padding: 8px 12px; font-size: 0.82rem; }
+    .welcome .emoji { font-size: 3rem; }
+}
+</style>
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">🌙</button>
+<header>
+    <h1>📖 Preparação da Reunião</h1>
+    <div class="subtitle">Vida e Ministério Cristão</div>
+    <div class="meta"><strong>13-19 de Julho de 2026</strong> · Jeremias 16-17</div>
+    <div class="meta">Cântico 34 · Cântico 54 · Cântico 22</div>
+</header>
+<div class="tabs-container">
+    <div class="tabs-scroll" role="tablist">
+        <button class="tab-btn active" data-tab="visao-geral" role="tab">📋 Visão Geral</button>
+        <button class="tab-btn" data-tab="abertura" role="tab">🎵 Abertura</button>
+        <button class="tab-btn" data-tab="tesouros" role="tab">📖 Tesouros</button>
+        <button class="tab-btn" data-tab="ministerio" role="tab">🚪 Ministério</button>
+        <button class="tab-btn" data-tab="jovens" role="tab">✨ Jovens</button>
+        <button class="tab-btn" data-tab="estudo" role="tab">📚 Estudo</button>
+        <button class="tab-btn" data-tab="final" role="tab">🎵 Final</button>
+    </div>
+</div>
+<div class="container">
+
+<!-- ABA 1: VISÃO GERAL -->
+<div class="tab-pane active" id="pane-visao-geral" data-pane="visao-geral">
+    <div class="welcome">
+        <div class="emoji">📖</div>
+        <h2>Preparação Completa</h2>
+        <p>Toda a reunião de <strong>13-19 de Julho de 2026</strong> está organizada em abas. Use o menu acima para navegar entre as partes.</p>
+        <div class="welcome-stats">
+            <div class="welcome-stat">
+                <div class="icon">📖</div>
+                <div class="label">Tema</div>
+                <div class="value">Jeremias 16-17</div>
+            </div>
+            <div class="welcome-stat">
+                <div class="icon">⏱️</div>
+                <div class="label">Duração</div>
+                <div class="value">~1h 45min</div>
+            </div>
+            <div class="welcome-stat">
+                <div class="icon">🎯</div>
+                <div class="label">Foco</div>
+                <div class="value">Confiar em Jeová</div>
+            </div>
+            <div class="welcome-stat">
+                <div class="icon">📚</div>
+                <div class="label">Fontes</div>
+                <div class="value">5 citações</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="toc">
+        <h2>📑 Índice Rápido</h2>
+        <details open>
+            <summary>📋 Estrutura da Reunião</summary>
+            <ul>
+                <li><strong>Abertura:</strong> Cântico 34 + Comentários Iniciais (1 min)</li>
+                <li><strong>Tesouros da Palavra de Deus:</strong>
+                    <ul style="margin-top:4px;">
+                        <li>1. Faz diferença em quem confiamos! (10 min)</li>
+                        <li>2. Joias espirituais (10 min)</li>
+                        <li>3. Leitura da Bíblia (4 min)</li>
+                    </ul>
+                </li>
+                <li><strong>Ministério:</strong>
+                    <ul style="margin-top:4px;">
+                        <li>4. Iniciando conversas (3 min)</li>
+                        <li>5. Cultivando o interesse (4 min)</li>
+                        <li>6. Fazendo discípulos (5 min)</li>
+                    </ul>
+                </li>
+                <li><strong>Nossa Vida Cristã:</strong>
+                    <ul style="margin-top:4px;">
+                        <li>7. Jovens, confiem nos conselhos da Bíblia (15 min)</li>
+                        <li>8. Estudo bíblico de congregação (30 min)</li>
+                    </ul>
+                </li>
+                <li><strong>Final:</strong> Comentários finais (3 min) + Cântico 22</li>
+            </ul>
+        </details>
+        <details>
+            <summary>💎 Como usar este material</summary>
+            <ul>
+                <li>Cada aba é uma parte da reunião com o conteúdo completo.</li>
+                <li>Use o <strong>botão 🌙</strong> (canto superior direito) para alternar entre claro e escuro.</li>
+                <li>As <strong>caixas coloridas</strong> indicam o tipo: 🎯 pergunta, 📜 texto bíblico, 🔍 explicação, 💡 aplicação, 🤔 reflexão, 📝 resumo, 📚 fonte da publicação.</li>
+                <li>Os versículos NWT estão completos — basta clicar em <strong>"ver texto completo"</strong> para expandir.</li>
+                <li>Suas <strong>anotações pessoais</strong> são salvas automaticamente no navegador.</li>
+            </ul>
+        </details>
+    </nav>
+
+    <div class="notes-area">
+        <label for="notes">📝 Minhas anotações pessoais (salvo automaticamente)</label>
+        <textarea id="notes" placeholder="Escreva aqui suas reflexões, pontos para comentar, ou respostas pessoais que você quer lembrar..." oninput="saveNotes(this.value)"></textarea>
+    </div>
+</div>
+
+<!-- ABA 2: ABERTURA (Cântico 34 + Comentários Iniciais) -->
+<div class="tab-pane" id="pane-abertura" data-pane="abertura">
+    <section class="section inicio" id="abertura-cantico">
+        <div class="section-header">
+            <span class="num">🎵</span>
+            <h2>Cântico 34 e Oração</h2>
+            <span class="time">Abertura</span>
+        </div>
+        <div class="box box-destaque">
+            <div class="box-icon">🎶</div>
+            <div class="box-content">
+                <strong>Cântico 34</strong>
+                <p>"Deus é nosso Refúgio e nossa Força"</p>
+            </div>
+        </div>
+        <div class="box box-pergunta">
+            <div class="box-icon">🤲</div>
+            <div class="box-content">
+                <strong>Oração Inicial</strong>
+                <p>Feita por um irmão designado. Agradecemos a Jeová pela reunião e pela sua Palavra.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section inicio" id="abertura-comentarios">
+        <div class="section-header">
+            <span class="num">💬</span>
+            <h2>Comentários Iniciais (1 min)</h2>
+            <span class="time">1 min</span>
+        </div>
+        <div class="box box-texto">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>Introdução do Presidente</strong>
+                <p>Breves palavras dando as boas-vindas, mencionando que nesta semana o estudo será focado em Jeremias 16-17. Tema central: <em>"Faz diferença em quem confiamos!"</em></p>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Sugestão de pontos a mencionar:</strong>
+                <ul>
+                    <li>Em quem você confia para tomar decisões importantes?</li>
+                    <li>A Bíblia mostra claramente o resultado de confiar em Jeová comparado a confiar em humanos.</li>
+                    <li>Hoje vamos ver 3 pontos principais sobre confiança.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ABA 3: TESOUROS DA PALAVRA DE DEUS -->
+<div class="tab-pane" id="pane-tesouros" data-pane="tesouros">
+
+    <!-- ITEM 1 -->
+    <section class="section tesouros" id="parte1">
+        <div class="section-header">
+            <span class="num">1</span>
+            <h2>Faz diferença em quem confiamos!</h2>
+            <span class="time">10 min</span>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">🎯</div>
+            <div class="box-content">
+                <strong>Pergunta inicial do programa</strong>
+                <p>Por que é importante confiar em Jeová e não somente em seres humanos?</p>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <strong>📌 Resumo do Ponto 1:</strong>
+            Confiar em seres humanos (sem Jeová) leva à desgraça; confiar em Jeová (mesmo com imperfeição dos homens) traz vida e sucesso.
+        </div>
+
+        <!-- Subtópico A: Isaías 30:1, 2 -->
+        <h3 style="margin-top:18px;color:var(--gold);font-size:1.05rem;">📜 A) Os que confiam somente nos humanos desagradam a Jeová</h3>
+        <p style="font-size:0.85rem;color:var(--text-soft);margin:4px 0 8px;"><strong>Fonte:</strong> Isaías 30:1, 2</p>
+        <div class="verse">
+            "Ai dos filhos obstinados", diz Jeová, "Que executam planos que não procedem de mim, Que fazem alianças, mas não com a orientação do meu espírito, E assim acumulam pecado sobre pecado. Eles descem ao Egito sem me consultar, Para se abrigar sob a proteção de Faraó E se refugiar na sombra do Egito!"
+            <cite>— Isaías 30:1, 2 (NWT)</cite>
+        </div>
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Explicação</strong>
+                <p>Isaías condena Judá por buscar aliança política com o Egito em vez de confiar em Jeová. Eles fizeram planos <em>sem consultar</em> a Jeová — "executam planos que não procedem de mim". O resultado: a proteção do Egito se tornaria vergonha, não salvação (vs. 3).</p>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Aplicação para nós hoje</strong>
+                <ul>
+                    <li>Tomar decisões importantes (casamento, carreira, finanças) <em>sem consultar</em> a Jeová é desagradar a ele.</li>
+                    <li>Buscar "atalhos" humanos — política, esquemas, manipulação — em vez de seguir princípios bíblicos é "descer ao Egito".</li>
+                    <li>A falsa sensação de segurança ("sombra do Egito") acaba em vergonha.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Subtópico B: Jeremias 17:5, 6 + it-1 Junípero -->
+        <h3 style="margin-top:18px;color:var(--gold);font-size:1.05rem;">📜 B) Eles vão ter uma vida difícil</h3>
+        <p style="font-size:0.85rem;color:var(--text-soft);margin:4px 0 8px;"><strong>Fonte:</strong> Jeremias 17:5, 6 + it-1 "Junípero" n.º 2</p>
+        <div class="verse">
+            Assim diz Jeová: "Maldito o homem que confia em meros humanos, Que conta com a força dos homens, E cujo coração se afasta de Jeová. Ele se tornará como uma árvore solitária no deserto. Não verá quando vier o que é bom, Mas morará em lugares áridos no ermo, Numa terra salgada, onde ninguém pode viver."
+            <cite>— Jeremias 17:5, 6 (NWT)</cite>
+        </div>
+        <div class="box box-fonte">
+            <div class="box-icon">📚</div>
+            <div class="box-content">
+                <strong>Fonte Complementar: it-1 "Junípero" n.º 2</strong>
+                <p style="font-size:0.9rem;">"A palavra árabe ʽarʽar ajuda a identificar esta árvore como provavelmente sendo o <em>Juniperus phoenicia</em>, árvore arbustiva encontrada na região do Sinai e também na área do deserto de Edom. O radical na forma hebraica contém a ideia de <strong>'nudez' ou de estar 'despojado'</strong>... e este junípero-anão é correspondentemente descrito como de aspecto <strong>sombrio, crescendo em áreas rochosas do deserto e em penhascos</strong>."</p>
+                <p style="font-size:0.9rem;margin-top:6px;"><em>É usado apropriadamente no livro de Jeremias na comparação do homem, cujo coração se desvia de Jeová, com uma "árvore solitária na planície desértica".</em></p>
+                <p style="font-size:0.85rem;margin-top:6px;">— <em>Insight on the Scriptures</em>, vol. 1</p>
+            </div>
+        </div>
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Ponto Alto da Fonte</strong>
+                <ul>
+                    <li>O <em>Juniperus phoenicia</em> é uma árvore <strong>arbustiva</strong>, de <strong>aspecto sombrio</strong>, que cresce em <strong>áreas rochosas e desertos</strong>.</li>
+                    <li>O radical do nome hebraico (<em>ʽar·ʽár</em>) significa literalmente <strong>"nudez" ou "despojado"</strong> — o homem que confia em humanos está despido espiritualmente, sem a proteção de Jeová.</li>
+                    <li>Esta planta não tem raízes profundas que alcancem água. Está isolada — sem fruto, sem viço, sem vida.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Como usar essa ilustração no estudo</strong>
+                <ul>
+                    <li>A imagem não é só "ficar triste" — é estar <strong>sem raiz, sem água, isolado</strong>.</li>
+                    <li>Quando confiamos só em humanos (políticos, dinheiro, nossos próprios esquemas), ficamos "despojados" — sem a cobertura espiritual de Jeová.</li>
+                    <li>O resultado: "morará em lugares áridos no ermo" — uma vida de carência, mesmo que aparente sucesso externo.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-reflex">
+            <div class="box-icon">🤔</div>
+            <div class="box-content">
+                <strong>Reflexão</strong>
+                <p>Em que áreas da minha vida eu tenho confiado "na sombra do Egito" (em recursos humanos) em vez de buscar primeiro a direção de Jeová?</p>
+            </div>
+        </div>
+
+        <!-- Subtópico C: Jeremias 17:7, 8 + w09 -->
+        <h3 style="margin-top:18px;color:var(--gold);font-size:1.05rem;">📜 C) Os que confiam em Jeová serão bem-sucedidos</h3>
+        <p style="font-size:0.85rem;color:var(--text-soft);margin:4px 0 8px;"><strong>Fonte:</strong> Jeremias 17:7, 8 + w09 1/3/2009 §2</p>
+        <div class="verse">
+            "Bendito o homem que confia em Jeová, Cuja esperança está em Jeová. Ele se tornará como uma árvore plantada junto às águas, Que estende suas raízes até a corrente de água. Ele não perceberá quando o calor chegar, Mas suas folhas estarão sempre viçosas. No ano da seca ele não ficará preocupado, Nem deixará de produzir fruto."
+            <cite>— Jeremias 17:7, 8 (NWT)</cite>
+        </div>
+        <div class="box box-fonte">
+            <div class="box-icon">📚</div>
+            <div class="box-content">
+                <strong>Fonte Complementar: w09 1/3/2009 "Uma árvore cuja folhagem não murcha" §2</strong>
+                <p style="font-size:0.9rem;">"Nessas duas passagens bíblicas [Salmo 1:1-3 e Jeremias 17:7, 8], as árvores são usadas para ilustrar <strong>o que acontece com uma pessoa que faz o que é certo, que se agrada das leis de Deus e que confia nele plenamente</strong>."</p>
+                <p style="font-size:0.9rem;margin-top:6px;"><em>"As árvores de que se fala aqui são descritas como plantadas 'junto a correntes de água' ou 'junto às águas', não só perto de um rio ou riacho."</em></p>
+                <p style="font-size:0.9rem;margin-top:6px;"><strong>Ponto Alto:</strong> Mesmo hoje, em regiões agrícolas, ainda se veem valas de água e regatos fluindo de uma grande fonte de água. <em>"Geralmente, eles fazem parte de um sistema de irrigação para campos ou plantações. Às vezes, os canais de água são direcionados a um pomar ou árvores frutíferas."</em></p>
+                <p style="font-size:0.9rem;margin-top:6px;"><em>"Realmente, se adquirirmos conhecimento e entendimento exatos de Jeová Deus e desenvolvermos plena confiança nele e em suas promessas, com certeza seremos saudáveis em sentido espiritual. Nesse caso, vamos ser como o homem feliz descrito pelo salmista — 'tudo o que ele fizer será bem-sucedido'."</em></p>
+                <p style="font-size:0.85rem;margin-top:6px;">— <em>A Sentinela</em>, 1/3/2009, p. 17 §2</p>
+            </div>
+        </div>
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Ponto Alto da Fonte</strong>
+                <ul>
+                    <li>A árvore de Jeremias 17:8 é <strong>"plantada"</strong> — tem estabilidade, foi intencionalmente colocada.</li>
+                    <li>Está <strong>"junto às águas"</strong> — não "perto", mas com acesso direto à fonte de vida.</li>
+                    <li><strong>"Estende suas raízes até a corrente de água"</strong> — a árvore tem raízes tão profundas que buscam a água, garantindo sobrevivência.</li>
+                    <li>Resultado: <strong>folhas sempre viçosas + produz fruto mesmo no ano da seca.</strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Comparação: A árvore solitária vs. a árvore junto às águas</strong>
+                <ul>
+                    <li><strong>Junípero (17:6):</strong> árvore solitária, sem raiz, em deserto. Resultado: secura, esterilidade.</li>
+                    <li><strong>Árvore junto às águas (17:8):</strong> plantada, com raízes profundas. Resultado: viço + fruto + sucesso mesmo em adversidade.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-resumo">
+            <div class="box-icon">📝</div>
+            <div class="box-content">
+                <strong>Resumo do Ponto 1</strong>
+                <p>A escolha é clara: <em>"maldito"</em> o que confia só em humanos, <em>"bendito"</em> o que confia em Jeová. A diferença é como a diferença entre uma árvore seca no deserto e uma árvore frondosa junto à água. Confiar em Jeová produz uma vida que <strong>permanece verde mesmo no ano da seca</strong> — ou seja, mesmo em tempos difíceis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ITEM 2: JOIAS ESPIRITUAIS -->
+    <section class="section tesouros" id="parte2">
+        <div class="section-header">
+            <span class="num">2</span>
+            <h2>Joias Espirituais</h2>
+            <span class="time">10 min</span>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">💎</div>
+            <div class="box-content">
+                <strong>Definição do Programa</strong>
+                <p>Joias espirituais são <em>verdades profundas e inspiradoras</em> que encontramos na leitura pessoal da Bíblia. Diferente de uma simples repetição do texto, é descobrir algo que toca o coração e nos aproxima de Jeová.</p>
+            </div>
+        </div>
+
+        <!-- Pergunta específica do programa: Jeremias 17:7 + w22.02 -->
+        <h3 style="margin-top:18px;color:var(--gold);font-size:1.1rem;">🎯 Pergunta principal do programa</h3>
+        <div class="box box-pergunta">
+            <div class="box-icon">❓</div>
+            <div class="box-content">
+                <strong>Jeremias 17:7 — Por que confiar em Jeová inclui confiar nos seus representantes humanos?</strong>
+                <p style="margin-top:6px;font-size:0.9rem;"><em>Fonte: w22.02 4 §§ 7-8 — "Confie na maneira de Jeová fazer as coisas"</em></p>
+            </div>
+        </div>
+
+        <div class="box box-fonte">
+            <div class="box-icon">📚</div>
+            <div class="box-content">
+                <strong>Resumo da Fonte — w22.02 §7 e §8</strong>
+                <p style="font-size:0.9rem;"><strong>§7:</strong> "Não temos nenhuma dúvida de que Jeová sempre faz o que é certo e que podemos confiar nele. Mas pode ser que o desafio seja confiar nos homens que Jeová escolheu para cuidar do seu povo. Podemos ficar nos perguntando se esses homens realmente seguem as orientações de Jeová, ou se tomam decisões por conta própria."</p>
+                <p style="font-size:0.9rem;margin-top:8px;"><strong>§8:</strong> "Hoje, Jeová usa 'o escravo fiel e prudente' para liderar a organização dele aqui na Terra. (Mat. 24:45) Esses irmãos seguem o exemplo do corpo governante da época dos primeiros cristãos. Assim como aqueles homens do passado, o escravo fiel cuida do povo de Deus e dá orientações para os anciãos. E os anciãos cuidam para que essas orientações sejam seguidas nas congregações. <strong>Quando obedecemos ao que a organização e os anciãos nos dizem, mostramos que confiamos no modo de Jeová fazer as coisas.</strong>"</p>
+                <p style="font-size:0.9rem;margin-top:8px;"><strong>Conclusão chave (§7):</strong> <em>"A verdade é que não podemos dizer que confiamos em Jeová se não confiamos nos homens que ele escolheu para liderar o povo dele — homens que ele confia."</em></p>
+                <p style="font-size:0.85rem;margin-top:8px;">— <em>A Sentinela</em>, fevereiro 2022, p. 4 §§ 7-8</p>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Explicação da Joia</strong>
+                <ul>
+                    <li>Confiar em Jeová <strong>inclui</strong> confiar nos meios que ele usa para nos guiar: o escravo fiel e prudente, o corpo governante, os anciãos da congregação.</li>
+                    <li>É como uma corrente: <strong>Jeová → organização → anciãos → congregação</strong>. Cortar qualquer elo é enfraquecer a confiança em Jeová.</li>
+                    <li>O texto de Jeremias 17:7 ("bendito o homem que confia em Jeová") não exclui os representantes — ao contrário, <em>confiar neles é parte de confiar em Jeová</em>.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Sua resposta (modelo para o estudo)</strong>
+                <p>Confiar em Jeová inclui confiar em seus representantes porque:</p>
+                <ul>
+                    <li>Jeová <strong>escolheu</strong> esses homens para liderar (Atos 20:28).</li>
+                    <li>Eles seguem o exemplo do <em>corpo governante do primeiro século</em> (Atos 16:4, 5).</li>
+                    <li>Não confiar neles equivale a dizer que Jeová não supervisiona a própria organização.</li>
+                    <li>Quando cooperamos com decisões que talvez não compreendemos totalmente, mostramos fé no modo de Jeová fazer as coisas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEGUNDA PERGUNTA DO PROGRAMA -->
+        <hr class="divider">
+        <h3 style="color:var(--gold);font-size:1.1rem;margin-top:6px;">💎 Que joias espirituais você encontrou na leitura da Bíblia desta semana?</h3>
+        <p style="font-size:0.9rem;color:var(--text-soft);margin:8px 0 12px;"><em>Leitura da semana: Jeremias 16-17. Abaixo, uma lista de joias que podemos apresentar no estudo (escolha as que mais te tocaram):</em></p>
+
+        <ul class="gems-list">
+            <li><strong>💎 1. Jeová se importa com a nossa dor antes mesmo da calamidade</strong><br>
+            Em Jeremias 16:1-4, Jeová ordena que Jeremias <em>não se case</em> nem tenha filhos naquele lugar, porque Ele já sabia que viria destruição. Jeová estava preparando emocionalmente Jeremias para o que viria — a perda, o luto, a destruição. <em>Lição:</em> Jeová nos avisa antes para que possamos nos preparar espiritualmente.</li>
+            <li><strong>💎 2. Jeová retirou Sua paz e misericórdia temporariamente — mas com propósito</strong><br>
+            Jeremias 16:5-9 mostra que Jeová tirou a paz, o amor leal e a misericórdia do povo — não por crueldade, mas como consequência natural da rebeldia deles. O som de alegria e de festa cessaria. <em>Lição:</em> Quando alguém se afasta de Jeová, perde a paz interior — independentemente das aparências externas.</li>
+            <li><strong>💎 3. A causa de todo desastre é a rejeição consciente a Jeová</strong><br>
+            Jeremias 16:10-13 deixa claro: o povo perguntou "por que toda essa calamidade?", e Jeová respondeu: <em>"Foi porque os seus antepassados me abandonaram"</em>. <em>Lição:</em> Não existe "azar" ou "destino" — existe consequência das escolhas. Cada afastamento de Jeová tem um custo.</li>
+            <li><strong>💎 4. A restauração virá — e será MAIOR que a libertação original do Egito</strong><br>
+            Jeremias 16:14-15: <em>"Estão chegando os dias em que não dirão mais: 'Tão certo como vive Jeová, aquele que tirou o povo de Israel da terra do Egito!' mas sim: '... aquele que tirou o povo de Israel da terra do norte e de todas as terras às quais os havia espalhado!'"</em><br>
+            <em>Lição:</em> A libertação futura pelo Reino será tão poderosa que substituirá a memória do próprio Êxodo. Que esperança!</li>
+            <li><strong>💎 5. Jeová tem "muitos pescadores e caçadores" prontos para nos pescar de volta</strong><br>
+            Jeremias 16:16: <em>"Estou convocando muitos pescadores, diz Jeová, e eles os pescarão. Depois disso, convocarei muitos caçadores, e eles os caçarão em todos os montes, em todas as colinas e nas fendas dos rochedos."</em><br>
+            <em>Lição:</em> Mesmo quando nos escondemos, Jeová tem meios de nos encontrar — pessoas, situações, eventos — para nos trazer de volta a Ele. Nada está oculto dEle (vs. 17).</li>
+            <li><strong>💎 6. A confissão honesta das nações é o primeiro passo da restauração</strong><br>
+            Jeremias 16:19-20: <em>"A ti virão as nações desde os confins da terra, e elas dirão: 'Nossos antepassados herdaram pura falsidade, coisas vãs e inúteis, que não são de nenhum proveito. Será que o homem pode fazer para si deuses, que na realidade não são deuses?'"</em><br>
+            <em>Lição:</em> O fim da mentira religiosa virá quando as pessoas reconhecerem honestamente que seus ídolos são inúteis. Confessar a falsidade é o caminho para a verdade.</li>
+            <li><strong>💎 7. O pecado é gravado no coração — não só nas ações externas</strong><br>
+            Jeremias 17:1: <em>"O pecado de Judá está escrito com uma pena de ferro, está gravado com ponta de diamante na tábua do seu coração e nos chifres dos seus altares."</em><br>
+            <em>Lição:</em> O pecado não é só comportamento externo — está <em>gravado</em> no interior. A regeneração precisa alcançar o coração, não só a aparência.</li>
+            <li><strong>💎 8. A raiz do problema: confiar no braço da carne</strong><br>
+            Jeremias 17:5 define a raiz do mal: <em>"Maldito o homem que confia em meros humanos, que conta com a força dos homens, e cujo coração se afasta de Jeová."</em> Não é confiar em Jeová <em>mais</em> nos homens — é confiar em Jeová <em>em vez de</em> confiar primariamente nos homens. <em>Lição:</em> O "coração se afasta de Jeová" é a essência do problema.</li>
+            <li><strong>💎 9. O coração humano é incurável por si só</strong><br>
+            Jeremias 17:9-10: <em>"O coração é mais traiçoeiro do que qualquer outra coisa e está desesperado. Quem pode conhecê-lo? Eu, Jeová, examino o coração, sondeo os pensamentos mais íntimos."</em><br>
+            <em>Lição:</em> Não podemos confiar em nosso próprio coração (Provérbios 28:26). Precisamos da ajuda de Jeová para conhecer a nós mesmos. Só Jeová vê o interior.</li>
+            <li><strong>💎 10. A ilustração da perdiz é poderosa</strong><br>
+            Jeremias 17:11: <em>"Como a perdiz que ajunta ovos que não botou, assim é aquele que adquire riquezas de modo desonesto; elas o deixarão no meio de sua vida, e no fim ele se mostrará um insensato."</em><br>
+            <em>Lição:</em> Ganhos desonestos parecem algo nosso, mas não são — vão embora, deixando-nos expostos. Mais vale a honestidade com pouco do que a desonestidade com muito.</li>
+            <li><strong>💎 11. Jeová é descrito como "fonte de água viva"</strong><br>
+            Jeremias 17:13: <em>"Porque abandonaram a Jeová, a fonte de água viva."</em> Esta é uma das metáforas mais belas de Jeová na Bíblia. Ele não é um poço que seca — é uma fonte <em>viva</em>. <em>Lição:</em> Voltar-se para qualquer outra fonte é escolher a morte espiritual.</li>
+            <li><strong>💎 12. A oração de Jeremias é modelo de honestidade com Jeová</strong><br>
+            Jeremias 17:14-18: Jeremias ora com franqueza — <em>"Cura-me... Salva-me... Não sejas motivo de terror para mim... Esmaga-os e elimina-os completamente."</em> Ele não esconde seus sentimentos. <em>Lição:</em> Podemos ser 100% honestos com Jeová em oração — Ele aguenta e quer ouvir nossa verdade.</li>
+            <li><strong>💎 13. O sábado como sinal de fidelidade</strong><br>
+            Jeremias 17:19-27: Jeová diz que guardar o sábado é prova de obediência fiel. Se guardassem, reis e príncipes continuariam no trono de Davi. <em>Lição:</em> A obediência nos pequenos detalhes revela nosso coração — e traz bênçãos concretas.</li>
+            <li><strong>💎 14. A diferença entre "ser maldito" e "ser bendito" é onde colocamos nossa confiança</strong><br>
+            Resumindo Jeremias 17:5-8: <em>Maldito</em> = confiar em humanos = árvore seca no deserto. <em>Bendito</em> = confiar em Jeová = árvore plantada junto às águas. <em>Lição:</em> A geografia espiritual da nossa vida é definida por onde lançamos nossa âncora.</li>
+        </ul>
+    </section>
+
+    <!-- ITEM 3: LEITURA DA BÍBLIA -->
+    <section class="section tesouros" id="parte3">
+        <div class="section-header">
+            <span class="num">3</span>
+            <h2>Leitura da Bíblia</h2>
+            <span class="time">4 min</span>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">📖</div>
+            <div class="box-content">
+                <strong>Leitura designada: Jeremias 17:5-18</strong>
+                <p>Esta é a leitura da semana. O publicador designado deve ler o trecho em voz alta para a congregação.</p>
+            </div>
+        </div>
+
+        <div class="box box-texto">
+            <div class="box-icon">📜</div>
+            <div class="box-content">
+                <strong>Por que Jeremias 17:5-18 é o trecho central?</strong>
+                <p>É o trecho que contém o contraste entre <em>"maldito o homem que confia em meros humanos"</em> e <em>"bendito o homem que confia em Jeová"</em>. Também mostra a oração modelo de Jeremias (vs. 14-18) e o princípio do coração traiçoeiro (vs. 9-10). É a "joia" em forma de texto corrido.</p>
+            </div>
+        </div>
+
+        <details class="expandable">
+            <summary>📖 Ler o texto completo de Jeremias 17:5-18 (NWT)</summary>
+            <div class="content">
+                <p><strong>5</strong> Assim diz Jeová: "Maldito o homem que confia em meros humanos, que conta com a força dos homens, e cujo coração se afasta de Jeová.</p>
+                <p><strong>6</strong> Ele se tornará como uma árvore solitária no deserto. Não verá quando vier o que é bom, mas morará em lugares áridos no ermo, numa terra salgada, onde ninguém pode viver.</p>
+                <p><strong>7</strong> Bendito o homem que confia em Jeová, cuja esperança está em Jeová.</p>
+                <p><strong>8</strong> Ele se tornará como uma árvore plantada junto às águas, que estende suas raízes até a corrente de água. Ele não perceberá quando o calor chegar, mas suas folhas estarão sempre viçosas. No ano da seca ele não ficará preocupado, nem deixará de produzir fruto.</p>
+                <p><strong>9</strong> O coração é mais traiçoeiro do que qualquer outra coisa e está desesperado. Quem pode conhecê-lo?</p>
+                <p><strong>10</strong> Eu, Jeová, examino o coração, sondeo os pensamentos mais íntimos, para retribuir a cada um conforme os seus caminhos, conforme os frutos das suas obras.</p>
+                <p><strong>11</strong> Como a perdiz que ajunta ovos que não botou, assim é aquele que adquire riquezas de modo desonesto; elas o deixarão no meio de sua vida, e no fim ele se mostrará um insensato.</p>
+                <p><strong>12</strong> Um trono glorioso, enaltecido desde o princípio, é o lugar do nosso santuário.</p>
+                <p><strong>13</strong> Ó Jeová, esperança de Israel, todos os que te abandonam serão envergonhados. Os que se desviam de ti terão os seus nomes escritos no pó, porque abandonaram a Jeová, a fonte de água viva.</p>
+                <p><strong>14</strong> Cura-me, ó Jeová, e ficarei curado. Salva-me, e estarei salvo, pois tu és aquele a quem eu louvo.</p>
+                <p><strong>15</strong> Vê, há alguns que me dizem: "Onde está a palavra de Jeová? Que ela se cumpra!"</p>
+                <p><strong>16</strong> Mas, quanto a mim, não deixei de seguir-te como pastor, nem desejei o dia da calamidade. Tu bem sabes tudo que meus lábios disseram; tudo se passou diante da tua face.</p>
+                <p><strong>17</strong> Não sejas um motivo de terror para mim. Tu és o meu refúgio no dia da calamidade.</p>
+                <p><strong>18</strong> Que sejam envergonhados os meus perseguidores, mas não seja eu envergonhado. Que eles fiquem apavorados, mas não fique eu apavorado. Traz sobre eles o dia da calamidade, esmaga-os e elimina-os completamente.</p>
+            </div>
+        </details>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Dicas para apresentar a leitura</strong>
+                <ul>
+                    <li>Antes de ler, enfatize o contraste entre os versículos 5-6 e 7-8 (árvore seca vs. árvore frondosa).</li>
+                    <li>Após a leitura, faça uma pausa breve antes de passar para a próxima parte.</li>
+                    <li>Enfatize o versículo 13 — "a fonte de água viva" — como um resumo poético do capítulo.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ABA 4: FAÇA SEU MELHOR NO MINISTÉRIO -->
+<div class="tab-pane" id="pane-ministerio" data-pane="ministerio">
+
+    <section class="section ministerio" id="parte4">
+        <div class="section-header">
+            <span class="num">4</span>
+            <h2>Iniciando conversas (3 min)</h2>
+            <span class="time">3 min</span>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">🚪</div>
+            <div class="box-content">
+                <strong>De casa em casa · Use um vídeo do Kit de Ensino</strong>
+                <p>Atribuição: <em>lmd lição 5, ponto 5</em></p>
+            </div>
+        </div>
+        <div class="box box-texto">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>O que apresentar:</strong>
+                <ul>
+                    <li>Use o vídeo do Kit de Ensino designado para esta semana.</li>
+                    <li>Apresentação curta (geralmente 30-60 segundos de vídeo + aplicação).</li>
+                    <li>Mostre como iniciar uma conversa natural usando o vídeo como "quebra-gelo".</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Dica prática</strong>
+                <p>Antes de mostrar o vídeo, faça uma pergunta introdutória que conecte com a vida da pessoa. Depois do vídeo, deixe uma pergunta que gere reflexão (não apenas uma resposta pronta).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ministerio" id="parte5">
+        <div class="section-header">
+            <span class="num">5</span>
+            <h2>Cultivando o interesse (4 min)</h2>
+            <span class="time">4 min</span>
+        </div>
+        <div class="box box-pergunta">
+            <div class="box-icon">🌱</div>
+            <div class="box-content">
+                <strong>De casa em casa · Ofereça um estudo bíblico</strong>
+                <p>Atribuição: <em>lmd lição 7, ponto 4</em></p>
+            </div>
+        </div>
+        <div class="box box-texto">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>O que apresentar:</strong>
+                <ul>
+                    <li>Como identificar quando alguém tem interesse real (faz perguntas, pede para voltar).</li>
+                    <li>Como oferecer um estudo bíblico de forma natural, sem parecer insistente.</li>
+                    <li>O que ter preparado para o primeiro estudo (publicação, plano de leitura).</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Dica prática</strong>
+                <p>Use a escada do interesse: (1) demonstrar que a pessoa se importa com o assunto; (2) fazer perguntas abertas; (3) oferecer algo concreto (um estudo gratuito, sem compromisso).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section ministerio" id="parte6">
+        <div class="section-header">
+            <span class="num">6</span>
+            <h2>Fazendo discípulos (5 min)</h2>
+            <span class="time">5 min</span>
+        </div>
+        <div class="box box-pergunta">
+            <div class="box-icon">📚</div>
+            <div class="box-content">
+                <strong>lff lição 19 "Resumo", "Revisão" e "Tente o Seguinte"</strong>
+                <p>Atribuição: <em>lmd lição 11, ponto 3</em></p>
+            </div>
+        </div>
+        <div class="box box-texto">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>O que apresentar:</strong>
+                <ul>
+                    <li>Revisão dos pontos principais da lição 19 do livro <em>Aprenda a Ajudar as Pessoas a Ficar do Lado de Jeová</em> ("lff").</li>
+                    <li>Como conduzir o "Tente o Seguinte" — prática do que se aprendeu na lição.</li>
+                    <li>Como encorajar a pessoa a fazer seu próprio estudo e progresso.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Dica prática</strong>
+                <p>Não tenha pressa de "concluir" o estudo. Cada lição é uma oportunidade para a pessoa fortalecer a relação com Jeová. Lembre-se: você não está "terminando um curso" — está ajudando alguém a se aproximar de Deus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÂNTICO 54 -->
+    <section class="section inicio" id="cantico54">
+        <div class="section-header">
+            <span class="num">🎵</span>
+            <h2>Cântico 54</h2>
+            <span class="time">Transição</span>
+        </div>
+        <div class="box box-destaque">
+            <div class="box-icon">🎶</div>
+            <div class="box-content">
+                <strong>Cântico 54</strong>
+                <p>"Dá-nos coragem" ou "Jovens, sirvam a Jeová" — cântico intermediário entre as partes da reunião.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ABA 5: JOVENS, CONFIEM NOS CONSELHOS DA BÍBLIA -->
+<div class="tab-pane" id="pane-jovens" data-pane="jovens">
+
+    <section class="section cristian" id="parte7">
+        <div class="section-header">
+            <span class="num">7</span>
+            <h2>Jovens, confiem nos conselhos da Bíblia</h2>
+            <span class="time">15 min · Consideração</span>
+        </div>
+
+        <div class="highlight">
+            <strong>📌 Tema da parte:</strong> Se você é jovem e inexperiente, você é um dos alvos preferidos de Satanás. Se confiar em Jeová e nos conselhos da Bíblia, você pode evitar muito sofrimento.
+        </div>
+
+        <div class="box box-texto">
+            <div class="box-icon">📖</div>
+            <div class="box-content">
+                <strong>Texto-base: Gênesis 3:1 (NWT)</strong>
+                <p>"A serpente era o mais cauteloso de todos os animais selvagens, que Jeová Deus havia feito. Assim, ela disse à mulher: 'Foi isso mesmo que Deus disse, que vocês não devem comer de toda árvore do jardim?'"</p>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Por que Gênesis 3:1 é o texto-base?</strong>
+                <ul>
+                    <li>Satanás usa uma <strong>estratégia sutil</strong>: distorce a palavra de Deus, questiona o que Jeová disse, semeia dúvida.</li>
+                    <li>Ele aborda onde estamos mais vulneráveis — no caso de Eva, a curiosidade; no caso dos jovens, a pressão dos colegas, a insegurança, o desejo de aceitação.</li>
+                    <li>Hoje, Satanás continua "cauteloso" — não aparece como dragão, mas como "amigo" nas redes sociais, como colega que oferece uma "festinha", como "tendência" da escola.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 style="margin-top:18px;color:var(--purple);font-size:1.05rem;">🎯 As 4 situações para apresentar no estudo</h3>
+        <p style="font-size:0.9rem;color:var(--text-soft);margin:6px 0 12px;">Para cada situação, o jovem deve apresentar um exemplo bíblico ou um texto que pode ajudar.</p>
+
+        <div class="situation">
+            <div class="q">🟣 Situação 1: Seus colegas de escola zombam de você por ser diferente.</div>
+            <div class="answer">
+                <strong>📖 Exemplos bíblicos possíveis:</strong>
+                <ul style="margin-top:6px;">
+                    <li><strong>José (Gênesis 37-39):</strong> foi zombado pelos irmãos por ter princípios — acabou na prisão, mas Jeová o exaltou a governador do Egito.</li>
+                    <li><strong>Elias (1 Reis 18:17-18; 19:1-2):</strong> foi chamado de "perturbador de Israel" por Acabe por servir a Jeová.</li>
+                    <li><strong>Jesus (Marcos 3:21; João 7:5):</strong> seus próprios familiares achavam que ele estava "fora de si". Foi chamado de "comedor" e "bebedor" (Mateus 11:19).</li>
+                    <li><strong>Daniel (Daniel 6):</strong> foi ridicularizado por orar a Jeová, mas não parou.</li>
+                </ul>
+                <strong style="display:block;margin-top:8px;">📜 Textos-chave:</strong>
+                <ul style="margin-top:4px;">
+                    <li>1 Pedro 4:14, 16 — "Se vocês forem insultados pelo nome de Cristo, felizes são vocês."</li>
+                    <li>2 Timóteo 1:7 — "Deus não nos deu espírito de covardia."</li>
+                    <li>Provérbios 27:11 — "Sê sábio, meu filho, e alegra o meu coração."</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="situation">
+            <div class="q">🟣 Situação 2: Na sua congregação, não tem ninguém da sua idade para ser seu amigo.</div>
+            <div class="answer">
+                <strong>📖 Exemplos bíblicos possíveis:</strong>
+                <ul style="margin-top:6px;">
+                    <li><strong>Jeremias (Jeremias 1:6-8; 16:1-2):</strong> era jovem e se sentiu "criança". Jeová disse: "Não diga: 'Sou apenas um jovem', pois você irá a todos a quem eu te enviar."</li>
+                    <li><strong>Timóteo (1 Timóteo 4:12):</strong> "Ninguém o menospreze por ser jovem."</li>
+                    <li><strong>Davi (1 Samuel 17):</strong> era jovem e pastoreava ovelhas, mas Jeová o preparou para reis e gigantes.</li>
+                    <li><strong>Josias (2 Reis 22:1-2):</strong> começou a reinar aos 8 anos e fez o que era reto aos olhos de Jeová.</li>
+                </ul>
+                <strong style="display:block;margin-top:8px;">📜 Textos-chave:</strong>
+                <ul style="margin-top:4px;">
+                    <li>Salmo 27:10 — "Meu pai e minha mãe me abandonaram, mas Jeová me acolherá."</li>
+                    <li>Salmo 68:6 — "Deus faz o solitário viver em família."</li>
+                    <li>Isaías 41:10 — "Não temas, porque eu estou contigo."</li>
+                    <li>Hebreus 13:5b — "Nunca te deixarei e jamais te abandonarei."</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="situation">
+            <div class="q">🟣 Situação 3: Um colega de escola quer manter contato com você pelo celular ou por uma rede social.</div>
+            <div class="answer">
+                <strong>📖 Exemplos bíblicos possíveis:</strong>
+                <ul style="margin-top:6px;">
+                    <li><strong>Sansão (Juízes 14-16):</strong> Delila usou contato constante para seduzi-lo e descobrir o segredo da sua força. O resultado: ele perdeu tudo.</li>
+                    <li><strong>Rei Davi (2 Samuel 11):</strong> estava no terraço do palácio, viu Bate-Seba. A proximidade digital pode criar a mesma "visão" que levou Davi ao pecado.</li>
+                    <li><strong>Jó (Jó 31:1):</strong> "Fiz um pacto com os meus olhos; como, pois, eu olharia para uma jovem?" — Jó foi proativo sobre o que permitia entrar pela "porta" dos olhos.</li>
+                </ul>
+                <strong style="display:block;margin-top:8px;">📜 Textos-chave:</strong>
+                <ul style="margin-top:4px;">
+                    <li>1 Coríntios 15:33 — "As más companhias corrompem os costumes úteis."</li>
+                    <li>2 Timóteo 2:22 — "Foge das paixões da juventude."</li>
+                    <li>Provérbios 13:20 — "Quem anda com os sábios será sábio, mas quem se associa com os tolos acabará mal."</li>
+                    <li>1 Tessalonicenses 4:3-5 — "A vontade de Deus é a sua santificação: que vocês se abstenham da imoralidade sexual."</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="situation">
+            <div class="q">🟣 Situação 4: Um professor tenta te desanimar de seguir uma carreira no tempo integral depois que você se formar.</div>
+            <div class="answer">
+                <strong>📖 Exemplos bíblicos possíveis:</strong>
+                <ul style="margin-top:6px;">
+                    <li><strong>José (Gênesis 39):</strong> foi acusado injustamente pela esposa de Potifar, preso — mas Jeová o engrandeceu na prisão e depois o fez governador.</li>
+                    <li><strong>Moisés (Êxodo 2:11-15):</strong> era príncipe do Egito, mas escolheu "ser maltratado com o povo de Deus" (Hebreus 11:25). Foi ridicularizado, fugiu para o deserto, e Jeová o usou para livrar Israel.</li>
+                    <li><strong>Paulo (Atos 21-28):</strong> foi preso, açoitado, naufragou — mas "o reino de Deus não se pode impedir" (Atos 28:31).</li>
+                    <li><strong>Jeremias (Jeremias 20:7-8):</strong> foi ridicularizado, mas não parou de pregar.</li>
+                </ul>
+                <strong style="display:block;margin-top:8px;">📜 Textos-chave:</strong>
+                <ul style="margin-top:4px;">
+                    <li>Hebreus 11:25-26 — Moisés escolheu "o opróbrio do Cristo" como "grande riqueza" em vez dos tesouros do Egito.</li>
+                    <li>Provérbios 29:25 — "O tremor dos homens se tornará uma armadilha, mas quem confia em Jeová será protegido."</li>
+                    <li>Isaías 41:13 — "Eu, Jeová, teu Deus, seguro a tua mão direita; não temas."</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <h3 style="color:var(--purple);font-size:1.1rem;margin-top:6px;">🎬 VÍDEO: A Bíblia Pode Ajudar Você?</h3>
+        <p style="font-size:0.9rem;color:var(--text-soft);margin:4px 0 12px;"><em>Duração: ~1 min · Disponível em: jw.org/pt → Ensinos Bíblicos → Jovens → Animações no Quadro Branco</em></p>
+
+        <div class="box box-texto">
+            <div class="box-icon">📺</div>
+            <div class="box-content">
+                <strong>Resumo do vídeo</strong>
+                <p>Uma jovem de óculos está cercada por uma avalanche caótica de telas de smartphones e computadores. Ela se sente perdida, sobrecarregada pelos problemas modernos. Mas então ela entra em um corredor formado por páginas gigantes da Bíblia e começa a explorá-las. Nessas páginas, ela encontra situações bíblicas que refletem os problemas atuais: um homem em desespero, um casal com dificuldades familiares, dois jovens discutindo, pessoas buscando consolo.</p>
+                <p style="margin-top:6px;">Ao observar essas narrativas, ela percebe que a Bíblia oferece <strong>orientação prática</strong>, transformando desespero em esperança. O vídeo termina com a mão de alguém clicando no ícone do app <strong>JW.ORG</strong> em um smartphone, convidando os jovens a buscarem a ajuda da Bíblia hoje mesmo.</p>
+            </div>
+        </div>
+
+        <div class="box box-fonte">
+            <div class="box-icon">🎯</div>
+            <div class="box-content">
+                <strong>Personagens e situações mostradas</strong>
+                <ul>
+                    <li><strong>Protagonista:</strong> jovem de óculos e cabelo preso, representando o público-alvo.</li>
+                    <li><strong>Homem angustiado ajoelhado:</strong> desespero e tristeza.</li>
+                    <li><strong>Casal com bebê:</strong> dificuldades familiares.</li>
+                    <li><strong>Dois jovens brigando:</strong> conflitos interpessoais típicos da adolescência.</li>
+                    <li><strong>Duas jovens à mesa, uma consolando a outra:</strong> amizade e apoio.</li>
+                    <li><strong>Texto bíblico em destaque:</strong> Isaías 48:17 — <em>"Eu, Jeová, sou o seu Deus, Aquele que ensina o que é melhor para você."</em></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Pontos altos do vídeo (highlights)</strong>
+                <ul>
+                    <li><strong>0:08-0:12 — A metáfora das telas:</strong> o caos de informações vira organização quando ela entra na Bíblia.</li>
+                    <li><strong>0:26-0:34 — A exploração das páginas:</strong> a jovem caminha entre as páginas e encontra soluções para os problemas.</li>
+                    <li><strong>0:48 — Isaías 48:17 em destaque:</strong> o versículo de Jeová como professor pessoal.</li>
+                    <li><strong>0:56 — Toque no ícone JW.ORG:</strong> a ajuda está literalmente ao alcance das mãos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">❓</div>
+            <div class="box-content">
+                <strong>O que você aprendeu do vídeo?</strong>
+                <p style="margin-top:6px;">Possíveis respostas a serem apresentadas no estudo:</p>
+                <ul style="margin-top:6px;">
+                    <li>Que a Bíblia é um livro <strong>atual</strong>, não antiquado — ela fala diretamente aos nossos problemas de hoje.</li>
+                    <li>Que Jeová <strong>se importa pessoalmente</strong> conosco e quer nos ensinar (Isaías 48:17).</li>
+                    <li>Que existe uma <strong>alternativa ao mundo</strong>: em vez de buscar respostas em telas vazias, podemos buscá-las na Bíblia.</li>
+                    <li>Que <strong>não estamos sozinhos</strong> nos nossos problemas — pessoas na Bíblia passaram por coisas parecidas e venceram.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Comentários produtivos para discussão em grupo</strong>
+                <ul>
+                    <li>"Qual cena do início do vídeo você mais se identificou? Por que achamos tão fácil nos perder nesse 'monte de telas'?"</li>
+                    <li>"Assim como a protagonista encontrou respostas nas páginas da Bíblia, qual princípio bíblico já te ajudou a resolver um problema real?"</li>
+                    <li>"O versículo de Isaías 48:17 diz que Jeová 'ensina o que é melhor'. Como podemos ter certeza de que estamos realmente deixando ele nos ensinar?"</li>
+                    <li>"Por que brigas e desentendimentos (como mostrado no vídeo) são tão comuns entre jovens, e como a Bíblia nos ajuda a ter paz?"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-reflex">
+            <div class="box-icon">🤔</div>
+            <div class="box-content">
+                <strong>Reflexão final do vídeo</strong>
+                <p>O vídeo termina com um convite claro: a mão clica no ícone do JW.ORG. Não é um "final feliz" mágico — é um <strong>convite à ação</strong>. A protagonista sorri não porque seus problemas sumiram, mas porque ela <em>encontrou onde buscar as respostas</em>. <em>"A Bíblia pode te ajudar, mas só se você a abrir."</em></p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <h3 style="color:var(--purple);font-size:1.1rem;margin-top:6px;">🚀 TENTE O SEGUINTE: O Desafio da Leitura da Bíblia</h3>
+
+        <div class="box box-texto">
+            <div class="box-icon">🎯</div>
+            <div class="box-content">
+                <strong>Texto-base: 1 Coríntios 2:16 (NWT)</strong>
+                <p>"Pois 'quem chegou a conhecer a mente de Jeová, para poder instruí-lo'? <strong>Mas nós temos a mente de Cristo.</strong>"</p>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Explicação do desafio</strong>
+                <p>O programa propõe um <strong>desafio prático</strong>:</p>
+                <ul>
+                    <li>Todos os dias, leia <strong>um capítulo da Bíblia</strong>.</li>
+                    <li>Pesquise sobre <strong>alguma coisa que você quer saber mais</strong>.</li>
+                    <li>Conte quantos dias seguidos você consegue manter.</li>
+                </ul>
+                <p style="margin-top:8px;"><em>Por quê?</em> "Assim você vai estar <strong>treinando a sua mente para pensar como Jesus</strong> e, quando enfrentar uma situação em que precise tomar uma decisão rápida, você vai saber o que fazer. — 1 Cor. 2:16."</p>
+            </div>
+        </div>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Como aplicar 1 Coríntios 2:16 ao desafio</strong>
+                <ul>
+                    <li><strong>1 Cor. 2:16</strong> diz que temos "a mente de Cristo" — mas isso exige <em>esforço</em> para ser desenvolvido.</li>
+                    <li>Assim como um atleta treina o corpo, o jovem treina a mente lendo a Bíblia diariamente.</li>
+                    <li>O resultado prático: <strong>decisões mais rápidas e sábias</strong> em momentos de pressão (escola, amigos, redes sociais).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-resumo">
+            <div class="box-icon">📝</div>
+            <div class="box-content">
+                <strong>Resumo da Parte 7</strong>
+                <p>Jovens são alvos preferidos de Satanás, mas a Bíblia tem respostas para cada situação: zombaria, solidão, contatos em redes, pressão para desistir do serviço de tempo integral. <em>Confiar em Jeová e treinar a mente com Sua Palavra</em> é a chave para evitar sofrimento desnecessário e tomar decisões sábias.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ABA 6: ESTUDO BÍBLICO DE CONGREGAÇÃO -->
+<div class="tab-pane" id="pane-estudo" data-pane="estudo">
+
+    <section class="section estudo" id="parte8">
+        <div class="section-header">
+            <span class="num">8</span>
+            <h2>Estudo bíblico de congregação</h2>
+            <span class="time">30 min · lfb histórias 102-103</span>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">📚</div>
+            <div class="box-content">
+                <strong>Publicação: lfb — "Aprenda das Histórias da Bíblia"</strong>
+                <p>Esta semana, duas histórias serão estudadas:</p>
+                <ul>
+                    <li><strong>História 102:</strong> As visões de João (Apocalipse)</li>
+                    <li><strong>História 103:</strong> A Terra vai ser um paraíso!</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HISTÓRIA 102 -->
+        <h3 style="margin-top:18px;color:var(--green);font-size:1.15rem;">📖 História 102 — As visões de João</h3>
+
+        <div class="box box-texto">
+            <div class="box-icon">📜</div>
+            <div class="box-content">
+                <strong>Resumo da História 102</strong>
+                <p>O apóstolo João estava preso na ilha de Patmos. Enquanto estava lá, ele teve <strong>16 visões de coisas que iam acontecer no futuro</strong>. Nessas visões, Jesus mostrou para João como o nome de Jeová seria santificado, como o Reino viria e como a vontade de Deus seria feita na Terra e no céu.</p>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>As 16 visões de João — resumo das principais</strong>
+                <ul>
+                    <li><strong>Visão 1 (Ap 1:1-3):</strong> A revelação de Jesus Cristo — "Felizes os que leem em voz alta e os que ouvem as palavras desta profecia e observam as coisas nela escritas."</li>
+                    <li><strong>Visão 2 (Ap 4:1-11):</strong> O maravilhoso trono de Jeová no céu, com relâmpagos e trovões. Os 24 anciãos vestidos de branco, com coroas de ouro, se ajoelham e adoram a Jeová.</li>
+                    <li><strong>Visão 3 (Ap 7:4, 9-17):</strong> Uma grande multidão de toda a Terra adorando a Jeová. O Cordeiro (Jesus) os leva para fontes de água da vida.</li>
+                    <li><strong>Visão 4 (Ap 11:15-18):</strong> Jesus começa a reinar junto com os 24 anciãos.</li>
+                    <li><strong>Visão 5 (Ap 12:5-12):</strong> Jesus luta contra o dragão (Satanás) e os demônios. Expulsa-os do céu. Eles vêm morar na Terra.</li>
+                    <li><strong>Visão 6 (Ap 14:1, 6, 7):</strong> O Cordeiro e os 144 mil de pé no monte Sião. Um anjo voa por toda a Terra dizendo: <em>"Adorem a Deus! Deem glória a ele!"</em></li>
+                    <li><strong>Visão 7 (Ap 16:14, 16):</strong> A guerra do Armagedom — Jesus e seu exército lutam contra o mundo mau de Satanás e ganham.</li>
+                    <li><strong>Visão 8 (Ap 21:5):</strong> Paz e união no céu e na Terra. Satanás e todos os que estão do lado dele são destruídos. Todo mundo respeita o nome de Jeová e adora só a ele.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-fonte">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>Texto-chave da história 102 — Gênesis 3:15</strong>
+                <p style="font-size:0.92rem;"><em>"E porei inimizade entre você e a mulher, e entre o seu descendente e o descendente dela. Este esmagará a sua cabeça, e você ferirá o calcanhar dele."</em></p>
+                <p style="font-size:0.9rem;margin-top:6px;"><strong>Conexão:</strong> Esta profecia foi feita no Éden logo após o pecado de Adão e Eva. O "descendente da mulher" que esmagaria a cabeça da serpente é Jesus. As visões de João mostram o <em>cumprimento</em> dessa promessa — a vitória final de Jesus sobre Satanás.</p>
+            </div>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">❓</div>
+            <div class="box-content">
+                <strong>Sabe responder? (do livro)</strong>
+                <ul>
+                    <li><strong>Quantas visões João teve?</strong> 16 visões.</li>
+                    <li><strong>O que Jesus vai fazer na guerra do Armagedom?</strong> Jesus e seu exército lutarão contra o mundo mau de Satanás e ganharão.</li>
+                </ul>
+            </div>
+        </div>
+
+        <details class="expandable">
+            <summary>📚 Textos bíblicos citados na história 102</summary>
+            <div class="content">
+                <p>Apocalipse 1:1-3; 4:1-11; 7:4, 9-17; 11:15-18; 12:5-12; 14:1, 6, 7; 16:14, 16; 21:5</p>
+            </div>
+        </details>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Como apresentar no estudo (sugestão de condutor)</strong>
+                <ul>
+                    <li>Mostre como cada visão avança a "história" da vindicação do nome de Jeová.</li>
+                    <li>Destaque a visão 5 (dragão expulso do céu) — Satanás é real e foi expulso, mas continua agressivo (Apocalipse 12:12).</li>
+                    <li>Enfatize a visão final (Ap 21:5) como o clímax: <em>"Veja! Estou fazendo todas as coisas novas."</em></li>
+                    <li>Conecte com a profecia de Gênesis 3:15 — toda a Bíblia se entrelaça nessa promessa.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- HISTÓRIA 103 -->
+        <h3 style="margin-top:6px;color:var(--green);font-size:1.15rem;">🌳 História 103 — A Terra vai ser um paraíso!</h3>
+
+        <div class="box box-texto">
+            <div class="box-icon">📜</div>
+            <div class="box-content">
+                <strong>Resumo da História 103</strong>
+                <p><strong>Jeová prometeu:</strong> <em>"A tristeza, a dor, a doença e a morte não vão mais existir. Eu vou enxugar as lágrimas dos olhos de todo mundo, e ninguém vai lembrar de coisas ruins."</em></p>
+                <p style="margin-top:8px;">Jeová queria que Adão e Eva vivessem felizes e em paz no jardim do Éden. Eles deviam adorar a Deus e ter muitos filhos para encher a Terra. Mas eles desobedeceram. <strong>Mas Jeová ainda quer que a Terra seja um paraíso.</strong></p>
+            </div>
+        </div>
+
+        <div class="box box-explic">
+            <div class="box-icon">🔍</div>
+            <div class="box-content">
+                <strong>Como será o Paraíso? (detalhes da história)</strong>
+                <ul>
+                    <li>Jeová <strong>cumpre tudo o que promete</strong> (visto ao longo de todo o livro).</li>
+                    <li>O <strong>Reino de Deus</strong> vai trazer todas as coisas boas que Jeová prometeu a Abraão.</li>
+                    <li>O Diabo, os demônios e todas as pessoas más <strong>serão destruídos</strong>.</li>
+                    <li>Todos no céu e na Terra <strong>vão adorar a Jeová</strong>.</li>
+                    <li><strong>Ninguém vai ficar doente</strong> e <strong>ninguém vai morrer</strong>.</li>
+                    <li>Todo dia vamos acordar <strong>felizes e com muita saúde</strong>.</li>
+                    <li>Comida boa, casas seguras, sem medo.</li>
+                    <li>As pessoas <strong>não serão malvadas</strong> nem machucarão ninguém.</li>
+                    <li>Os <strong>animais não terão medo</strong> de nós, e nós não teremos medo deles.</li>
+                    <li>Jeová vai começar a <strong>ressuscitar</strong> as pessoas — vamos poder conhecer Abel, Noé, Abraão, Sara, Moisés, Rute, Davi, Ester.</li>
+                    <li>Sempre teremos um <strong>monte de trabalho legal</strong> para fazer!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-fonte">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>Texto-chave da história 103 — Apocalipse 4:11</strong>
+                <p style="font-size:0.92rem;"><em>"Digno és, Jeová, nosso Deus, de receber a glória, a honra e o poder, porque criaste todas as coisas."</em></p>
+                <p style="font-size:0.9rem;margin-top:6px;"><strong>Por que este texto é o "versículo-tema" do capítulo?</strong> O capítulo todo celebra o plano original de Jeová para a Terra — criar um paraíso. Essa é a Sua <em>vontade original</em> que será finalmente cumprida. Por isso, a história 103 termina com um convite pessoal: <em>"Jeová quer que você esteja no Paraíso! Então, seja cada dia mais amigo de Jeová. Assim, você vai poder ser amigo dele para sempre!"</em></p>
+            </div>
+        </div>
+
+        <div class="box box-pergunta">
+            <div class="box-icon">❓</div>
+            <div class="box-content">
+                <strong>Sabe responder? (do livro)</strong>
+                <ul>
+                    <li><strong>Que coisas boas o Reino de Deus vai fazer na Terra?</strong> Vai acabar com a tristeza, a dor, a doença e a morte. As pessoas vão viver em paz e em casas seguras, com comida boa. Vamos poder conhecer pessoas que viveram no passado.</li>
+                    <li><strong>Que servo de Jeová do passado você quer conhecer no Paraíso?</strong> Resposta pessoal — cada um pode mencionar um servo que admira (Abel, Rute, Ester, etc.).</li>
+                </ul>
+            </div>
+        </div>
+
+        <details class="expandable">
+            <summary>📚 Textos bíblicos citados na história 103</summary>
+            <div class="content">
+                <p>Apocalipse 21:3, 4; Jó 33:25; Provérbios 2:21, 22; Isaías 11:2-10; 33:24; 65:21; Mateus 6:9, 10; João 5:28, 29; 17:3</p>
+            </div>
+        </details>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Como aplicar a história 103 no estudo</strong>
+                <ul>
+                    <li>Esta é a história de <strong>encerramento do livro</strong> — toda a Bíblia converge para esta promessa: a Terra como lar da humanidade obediente.</li>
+                    <li>Faça a pergunta provocativa: <em>"Se você pudesse passar uma tarde com alguém do passado da Bíblia, quem seria? O que perguntaria a ele/ela?"</em></li>
+                    <li>Relembre que o convite é pessoal: <em>"Jeová QUER que VOCÊ esteja no Paraíso."</em> Não é para "boas pessoas" — é para quem se torna amigo de Jeová.</li>
+                    <li>Conecte com o que vimos hoje: <em>confiar em Jeová (parte 1) + confiar em Sua organização (parte 2) + confiar na Bíblia como nosso guia (parte 7) = caminho para o Paraíso.</em></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-resumo">
+            <div class="box-icon">📝</div>
+            <div class="box-content">
+                <strong>Resumo da Parte 8 — Conexão entre as duas histórias</strong>
+                <p><strong>História 102 (Visões de João)</strong> mostra <em>como</em> Jeová vai limpar a Terra (16 visões culminam na derrota de Satanás no Armagedom e na restauração).</p>
+                <p style="margin-top:8px;"><strong>História 103 (A Terra será um Paraíso)</strong> mostra <em>o que</em> Jeová vai fazer — a Terra se tornará um lar perfeito, com ressurreição, saúde, paz.</p>
+                <p style="margin-top:8px;"><strong>Juntas,</strong> elas respondem à pergunta do tema desta semana: <em>"Faz diferença em quem confiamos?"</em> — <strong>SIM, faz toda a diferença.</strong> Confiar em Jeová significa confiar em Suas promessas, e Suas promessas culminam no Paraíso.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ABA 7: COMENTÁRIOS FINAIS + CÂNTICO 22 -->
+<div class="tab-pane" id="pane-final" data-pane="final">
+
+    <section class="section inicio" id="final-comentarios">
+        <div class="section-header">
+            <span class="num">💬</span>
+            <h2>Comentários finais (3 min)</h2>
+            <span class="time">3 min</span>
+        </div>
+
+        <div class="box box-texto">
+            <div class="box-icon">📌</div>
+            <div class="box-content">
+                <strong>Resumo da reunião</strong>
+                <p>Breves palavras resumindo os pontos principais da reunião:</p>
+                <ul>
+                    <li><strong>Confiar em Jeová</strong> acima de qualquer recurso humano.</li>
+                    <li><strong>Confiar em Sua organização</strong> — escravo fiel, corpo governante, anciãos.</li>
+                    <li><strong>Treinar a mente com Sua Palavra</strong> diariamente.</li>
+                    <li><strong>Olhar para a promessa do Paraíso</strong> como destino garantido.</li>
+                </ul>
+                <p style="margin-top:6px;">Mencione a leitura da próxima semana e incentive a participação no ministério.</p>
+            </div>
+        </div>
+
+        <div class="box box-aplic">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Sugestões práticas para encerrar</strong>
+                <ul>
+                    <li>Relembrar a frase-tema: <em>"Faz diferença em quem confiamos!"</em></li>
+                    <li>Citar Provérbios 3:5, 6: <em>"Confie em Jeová de todo o coração e não se apoie no seu próprio entendimento. Reconheça-o em todos os seus caminhos, e ele endireitará as suas veredas."</em></li>
+                    <li>Convidar para a próxima reunião com entusiasmo.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section inicio" id="final-cantico">
+        <div class="section-header">
+            <span class="num">🎵</span>
+            <h2>Cântico 22 e Oração Final</h2>
+            <span class="time">Encerramento</span>
+        </div>
+        <div class="box box-destaque">
+            <div class="box-icon">🎶</div>
+            <div class="box-content">
+                <strong>Cântico 22</strong>
+                <p>Cântico de encerramento seguido da oração final.</p>
+            </div>
+        </div>
+        <div class="box box-pergunta">
+            <div class="box-icon">🤲</div>
+            <div class="box-content">
+                <strong>Oração Final</strong>
+                <p>Feita por um irmão designado. Agradecemos a Jeová pela reunião, pelo seu cuidado com o povo dele, e pedimos bênçãos para a semana à frente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section inicio">
+        <div class="section-header">
+            <span class="num">✅</span>
+            <h2>Resumo Final</h2>
+            <span class="time">Tarefa concluída</span>
+        </div>
+        <div class="box box-resumo">
+            <div class="box-icon">🎉</div>
+            <div class="box-content">
+                <strong>Tema da reunião 13-19 de Julho de 2026</strong>
+                <p style="font-size:1rem;line-height:1.6;"><em>"Faz diferença em quem confiamos!"</em></p>
+                <p style="margin-top:8px;">O tema percorre toda a reunião: do contraste entre confiar em Jeová vs. confiar em humanos (Parte 1), passando pelas joias de Jeremias 16-17 (Parte 2) e a leitura bíblica (Parte 3), até o desafio prático para jovens (Parte 7) e a esperança do Paraíso (Parte 8).</p>
+                <p style="margin-top:8px;">A grande lição: <strong>quem confia em Jeová é como árvore junto às águas — permanece verde mesmo na seca.</strong></p>
+            </div>
+        </div>
+        <div class="box box-destaque">
+            <div class="box-icon">💡</div>
+            <div class="box-content">
+                <strong>Até a próxima reunião! 🤲</strong>
+                <p>Boa preparação e boa reunião!</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">↑</button>
+
+<footer>
+    <p><strong>Preparação para a Reunião "Vida e Ministério Cristão"</strong></p>
+    <p>13-19 de Julho de 2026 · Semana 1 · Jeremias 16-17</p>
+    <p style="margin-top:12px;font-size:0.78rem;">
+        Textos bíblicos: <em>Tradução do Novo Mundo da Bíblia Sagrada (NWT)</em><br>
+        Citações de A Sentinela: © Watch Tower Bible and Tract Society of Pennsylvania<br>
+        it-1 Junípero: <em>Insight on the Scriptures</em>, vol. 1<br>
+        w09 1/3/2009: <em>A Sentinela</em> "Uma árvore cuja folhagem não murcha"<br>
+        w22.02 4 §§ 7-8: <em>A Sentinela</em> "Confie na maneira de Jeová fazer as coisas"<br>
+        lfb histórias 102-103: <em>Aprenda das Histórias da Bíblia</em>
+    </p>
+    <p style="margin-top:10px;">Feito com carinho pra você · 2026</p>
+</footer>
+</div><!-- /container -->
+
+<script>
+// Theme toggle with localStorage
+function toggleTheme() {
+    const body = document.body;
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    body.setAttribute('data-theme', isDark ? '' : 'dark');
+    document.querySelector('.theme-toggle').textContent = isDark ? '🌙' : '☀️';
+    localStorage.setItem('meeting-theme', isDark ? 'light' : 'dark');
+}
+(function initTheme() {
+    const saved = localStorage.getItem('meeting-theme');
+    if (saved === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.theme-toggle');
+            if (btn) btn.textContent = '☀️';
+        });
+    }
+})();
+
+// Tab system
+(function initTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    function activateTab(tabName) {
+        // Deactivate all
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+        // Activate selected
+        const btn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+        const pane = document.querySelector(`.tab-pane[data-pane="${tabName}"]`);
+        if (btn) btn.classList.add('active');
+        if (pane) pane.classList.add('active');
+        // Save selection
+        localStorage.setItem('meeting-tab', tabName);
+        // Scroll to top
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            activateTab(btn.getAttribute('data-tab'));
+        });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        const active = document.querySelector('.tab-btn.active');
+        if (!active) return;
+        const tabs = Array.from(tabBtns);
+        const idx = tabs.indexOf(active);
+        if (e.key === 'ArrowRight' && idx < tabs.length - 1) {
+            e.preventDefault();
+            activateTab(tabs[idx + 1].getAttribute('data-tab'));
+        } else if (e.key === 'ArrowLeft' && idx > 0) {
+            e.preventDefault();
+            activateTab(tabs[idx - 1].getAttribute('data-tab'));
+        }
+    });
+
+    // Restore last tab or default
+    const saved = localStorage.getItem('meeting-tab');
+    if (saved && document.querySelector(`.tab-btn[data-tab="${saved}"]`)) {
+        activateTab(saved);
+    }
+})();
+
+// Back to top button
+const backBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backBtn.classList.add('visible');
+    } else {
+        backBtn.classList.remove('visible');
+    }
+});
+
+// Personal notes (localStorage)
+function saveNotes(value) {
+    localStorage.setItem('meeting-notes-jul-2026-v2', value);
+}
+(function loadNotes() {
+    const saved = localStorage.getItem('meeting-notes-jul-2026-v2') 
+              || localStorage.getItem('meeting-notes-jul-2026');
+    if (saved) {
+        const ta = document.getElementById('notes');
+        if (ta) ta.value = saved;
+    }
+})();
+</script>
+</body>
+</html>
