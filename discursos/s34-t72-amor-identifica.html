@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discurso 72 — O Amor Identifica os Cristãos Verdadeiros</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #2ea043;
+  --accent-dim: #1a4a2a;
+  --highlight: #f0b941;
+  --link: #58a6ff;
+  --verse: #d2a8ff;
+  --illust: #79c0ff;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0; padding: 0;
+  line-height: 1.65;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+header.disc-header {
+  background: linear-gradient(135deg, #0a2540, #1a4a7a);
+  border-left: 4px solid var(--accent);
+  padding: 24px 28px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+header.disc-header .ref { color: var(--muted); font-size: 13px; letter-spacing: 1px; }
+header.disc-header h1 { margin: 6px 0; font-size: 26px; color: #fff; }
+header.disc-header .tema { color: var(--highlight); font-style: italic; margin-top: 8px; }
+
+.tabs {
+  display: flex; flex-wrap: wrap;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  padding: 4px;
+  position: sticky; top: 8px; z-index: 10;
+}
+.tab {
+  flex: 1; min-width: 100px;
+  padding: 10px 14px;
+  background: transparent; border: none;
+  color: var(--muted); font-size: 14px; font-weight: 600;
+  cursor: pointer; border-radius: 6px;
+  transition: all 0.15s;
+  text-align: center;
+}
+.tab:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+.tab.active { background: var(--accent); color: #fff; }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+.search-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px;
+  margin-bottom: 16px;
+}
+.search-box input {
+  width: 100%; padding: 10px;
+  background: #0d1117; border: 1px solid var(--border);
+  color: var(--text); border-radius: 6px;
+  font-size: 14px;
+}
+.search-box input:focus { outline: none; border-color: var(--accent); }
+
+.paragraph {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.paragraph:hover { border-left-color: var(--accent); }
+.paragraph .num {
+  display: inline-block;
+  background: var(--accent-dim); color: var(--accent);
+  border-radius: 4px; padding: 2px 8px;
+  font-size: 12px; font-weight: 700;
+  margin-right: 10px;
+}
+.paragraph mark.verse {
+  background: rgba(210, 168, 255, 0.18);
+  color: var(--verse);
+  padding: 1px 4px; border-radius: 3px;
+  font-weight: 600;
+}
+.paragraph mark.illust {
+  background: rgba(121, 192, 255, 0.15);
+  color: var(--illust);
+  padding: 1px 4px; border-radius: 3px;
+}
+
+.section-title {
+  color: var(--accent);
+  font-size: 18px; font-weight: 700;
+  margin: 24px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* FLUXOGRAMA */
+.flow-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px 20px;
+  overflow-x: auto;
+}
+.flow-svg {
+  display: block; margin: 0 auto;
+  max-width: 100%; height: auto;
+}
+.flow-legend {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-top: 16px; padding: 12px;
+  background: #0d1117; border-radius: 6px;
+  font-size: 13px;
+}
+.flow-legend .item { display: flex; align-items: center; gap: 6px; }
+.flow-legend .dot { width: 14px; height: 14px; border-radius: 3px; }
+
+/* ILUSTRAÇÕES */
+.illust-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--illust);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.illust-card .illust-title {
+  color: var(--illust); font-weight: 700;
+  font-size: 16px; margin-bottom: 8px;
+}
+.illust-card .illust-meta {
+  color: var(--muted); font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* VERSE LIST */
+.verse-list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.verse-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.verse-item:last-child { border-bottom: none; }
+.verse-item .ref {
+  color: var(--verse); font-weight: 700;
+  margin-right: 8px;
+}
+
+.toc-list {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 16px 20px;
+  margin-bottom: 16px;
+}
+.toc-list a {
+  color: var(--text); text-decoration: none;
+  display: block; padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.toc-list a:last-child { border-bottom: none; }
+.toc-list a:hover { color: var(--accent); }
+.toc-list .pill {
+  background: var(--accent-dim); color: var(--accent);
+  padding: 1px 8px; border-radius: 10px;
+  font-size: 11px; margin-right: 8px;
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .tabs { display: none; }
+  .tab-panel { display: block !important; }
+  .paragraph { background: #fff; border: 1px solid #999; color: #000; page-break-inside: avoid; }
+  .flow-container, .illust-card, .verse-list, .toc-list { background: #fff; color: #000; }
+  .search-box { display: none; }
+}
+
+.section-block {
+  scroll-margin-top: 80px;
+  margin-bottom: 20px;
+}
+.section-header {
+  color: var(--highlight);
+  font-size: 17px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+  padding: 8px 12px;
+  background: rgba(240, 185, 65, 0.08);
+  border-left: 4px solid var(--highlight);
+  border-radius: 4px;
+}
+
+/* === SIDEBAR (Conteúdo) === */
+.conteudo-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+.sidebar h4 {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { margin-bottom: 4px; }
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  transition: background 0.15s;
+  border-left: 3px solid transparent;
+}
+.sidebar-link:hover {
+  background: rgba(46, 160, 67, 0.1);
+  border-left-color: var(--accent);
+}
+.sidebar-link.active {
+  background: rgba(46, 160, 67, 0.18);
+  border-left-color: var(--accent);
+  color: #fff;
+}
+.sidebar-link .sb-num {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.sidebar-link .sb-title {
+  flex: 1;
+  line-height: 1.35;
+}
+.sidebar-link .sb-count {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* Mobile sandwich */
+.mobile-menu-btn {
+  display: none;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* === BADGES & PARAGRAPH STYLES === */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.badge-high {
+  background: rgba(240, 185, 65, 0.15);
+  color: var(--highlight);
+  border: 1px solid rgba(240, 185, 65, 0.4);
+}
+.badge-illust {
+  background: rgba(121, 192, 255, 0.15);
+  color: var(--illust);
+  border: 1px solid rgba(121, 192, 255, 0.4);
+}
+.paragraph.para-high {
+  border-left: 3px solid var(--highlight);
+  background: rgba(240, 185, 65, 0.05);
+}
+.paragraph.para-illust {
+  border-left: 3px solid var(--illust);
+  background: rgba(121, 192, 255, 0.04);
+}
+.paragraph.para-high.para-illust {
+  border-left: 3px solid;
+  border-image: linear-gradient(180deg, var(--highlight) 50%, var(--illust) 50%) 1;
+  background: linear-gradient(135deg, rgba(240,185,65,0.04), rgba(121,192,255,0.04));
+}
+
+/* === FLUXOGRAMA INTERATIVO === */
+.flow-block {
+  cursor: pointer;
+  transition: transform 0.15s, filter 0.15s;
+}
+.flow-block:hover { transform: scale(1.04); filter: brightness(1.15); }
+.flow-block.expanded { stroke: #fff; stroke-width: 3; }
+
+.flow-detail-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  display: none;
+}
+.flow-detail-panel.show {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn { from {opacity:0; transform:translateY(-5px);} to {opacity:1; transform:translateY(0);} }
+.flow-detail-panel .fd-title {
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.flow-detail-panel .fd-para {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: 6px;
+  border-left: 2px solid var(--accent-dim);
+}
+.flow-detail-panel .fd-para.high { border-left-color: var(--highlight); }
+.flow-detail-panel .fd-para.illust { border-left-color: var(--illust); }
+.flow-detail-panel .fd-para .fd-num {
+  color: var(--muted);
+  font-size: 11px;
+  margin-right: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .conteudo-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    border-right: 1px solid var(--border);
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .mobile-menu-btn { display: block; }
+  .sidebar-overlay {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99;
+  }
+  .sidebar-overlay.show { display: block; }
+}
+
+/* === MODAL === */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.25s;
+}
+@keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+.modal-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.modal-header h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 18px;
+}
+.modal-close {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.modal-close:hover { color: #fff; border-color: var(--accent); }
+.modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+.modal-body .fd-para {
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  background: var(--bg);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-dim);
+  line-height: 1.6;
+}
+.modal-body .fd-para.high { border-left-color: var(--highlight); background: rgba(240, 185, 65, 0.06); }
+.modal-body .fd-para.illust { border-left-color: var(--illust); background: rgba(121, 192, 255, 0.05); }
+.modal-body .fd-num {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-right: 8px;
+  font-weight: 700;
+}
+.modal-body hr {
+  border: 0;
+  border-top: 1px dashed var(--border);
+  margin: 16px 0;
+}
+.modal-body .modal-hint {
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="disc-header">
+  <div class="ref">S34 · TESOUROS DA PALAVRA DE DEUS · N.º 72</div>
+  <h1>O Amor Identifica os Cristãos Verdadeiros</h1>
+  <div class="tema">"Nisto todos saberão que vocês são meus discípulos: se tiverem amor entre si." — João 13:35</div>
+</header>
+
+<div class="tabs">
+  <button class="tab active" data-tab="visao">📋 Visão Geral</button>
+  <button class="tab" data-tab="estrutura">📑 Estrutura</button>
+  <button class="tab" data-tab="conteudo">📖 Conteúdo</button>
+  <button class="tab" data-tab="pontos">🎯 Pontos-Chave</button>
+  <button class="tab" data-tab="ilust">🎭 Ilustrações</button>
+  <button class="tab" data-tab="versiculos">📜 Versículos</button>
+  <button class="tab" data-tab="fluxo">🗺️ Fluxograma</button>
+</div>
+
+<!-- ABA: VISÃO GERAL -->
+<div class="tab-panel active" data-panel="visao">
+  <div class="section-title">Resumo do Discurso</div>
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><strong>Tema central:</strong> O amor é o sinal que identifica os verdadeiros seguidores de Jesus.</p>
+    <p style="margin-top: 10px;"><strong>Duração estimada:</strong> 30 minutos</p>
+    <p><strong>Texto-base principal:</strong> João 13:34, 35</p>
+  </div>
+
+  <div class="section-title">🔑 Mensagem Central</div>
+  <div class="paragraph" style="border-left-color: var(--highlight);">
+    <p>Pessoas sinceras ao redor do mundo buscam a verdadeira religião, mas se decepcionam porque <strong>não encontram amor verdadeiro</strong>. A Bíblia mostra que a organização de Deus se amolda ao Seu padrão: <strong>ensina e pratica o amor</strong>. Esse amor — fraternal, intenso, abnegado, perdoador — é o que identifica os cristãos verdadeiros.</p>
+  </div>
+
+  <div class="section-title">🎯 Objetivos do Orador</div>
+  <div class="paragraph">
+    <ul>
+      <li>Mostrar que o <strong>amor é o sinal característico</strong> dos discípulos de Cristo</li>
+      <li>Encorajar a tomar <strong>iniciativa</strong> em amar e honrar uns aos outros</li>
+      <li>Destacar a importância do <strong>perdão liberal</strong> para manter a união</li>
+      <li>Alertar sobre os <strong>perigos do ódio/mágoa</strong> guardados na mente e coração</li>
+      <li>Reforçar que o amor verdadeiro <strong>não é miragem</strong> — é real e visível</li>
+    </ul>
+  </div>
+
+  <div class="section-title">📌 3 Mensagens-Chave pra Fixar</div>
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><strong>1.</strong> O amor identifica os cristãos verdadeiros — não é teoria, é prática visível.</p>
+    <p style="margin-top: 8px;"><strong>2.</strong> Amor sem perdão não funciona — o perdão liberal é o "lubrificante" que mantém a união.</p>
+    <p style="margin-top: 8px;"><strong>3.</strong> Nosso amor não pode ser miragem — precisa ser água de verdade, próxima e acessível.</p>
+  </div>
+</div>
+
+<!-- ABA: ESTRUTURA -->
+<div class="tab-panel" data-panel="estrutura">
+  <div class="section-title">📑 Estrutura do Discurso</div>
+  <div class="toc-list">
+    <a href="#s1"><span class="pill">01</span>Introdução — A busca pela verdadeira religião</a>
+    <a href="#s2"><span class="pill">02</span>O amor é o sinal característico (João 13:34,35)</a>
+    <a href="#s3"><span class="pill">03</span>Romanos 12:10 — Amor fraternal e iniciativa</a>
+    <a href="#s4"><span class="pill">04</span>Ilustração: Gnus × Elefantes</a>
+    <a href="#s5"><span class="pill">05</span>Amor pra DE FORA — A pregação</a>
+    <a href="#s6"><span class="pill">06</span>Ilustração: A floresta verde (miragem)</a>
+    <a href="#s7"><span class="pill">07</span>Perdão (Colossenses 3:13)</a>
+    <a href="#s8"><span class="pill">08</span>Ilustração: O carro sem lubrificante</a>
+    <a href="#s9"><span class="pill">09</span>Ilustração: O ácido (ódio)</a>
+    <a href="#s10"><span class="pill">10</span>1 Pedro 4:8 — Amor intenso</a>
+    <a href="#s11"><span class="pill">11</span>Ilustração: Gravura das duas amigas</a>
+    <a href="#s12"><span class="pill">12</span>Conclusão — Colossenses 3:14 + Miragem</a>
+  </div>
+
+  <div class="section-title">📊 Tempo estimado por bloco</div>
+  <div class="paragraph">
+    <p><strong>Introdução (1):</strong> ~3 min</p>
+    <p><strong>Pontos principais (2-3):</strong> ~7 min</p>
+    <p><strong>Ilustrações &amp; aplicação (4-9):</strong> ~15 min</p>
+    <p><strong>Conclusão (10-12):</strong> ~5 min</p>
+  </div>
+</div>
+
+<!-- ABA: CONTEÚDO -->
+<div class="tab-panel" data-panel="conteudo">
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Índice das Seções</button>
+
+  <div class="conteudo-layout">
+    <aside class="sidebar" id="conteudoSidebar">
+      <h4>📑 Índice</h4>
+      <ul>
+<li><a href="#s1" class="sidebar-link"><span class="sb-num">1</span><span class="sb-title">Introdução — A busca pela verdadeira religião</span><span class="sb-count">15p</span></a></li>
+<li><a href="#s2" class="sidebar-link"><span class="sb-num">2</span><span class="sb-title">O amor é o sinal característico (João 13:34,35)</span><span class="sb-count">18p</span></a></li>
+<li><a href="#s3" class="sidebar-link"><span class="sb-num">3</span><span class="sb-title">Romanos 12:10 — Amor fraternal e iniciativa</span><span class="sb-count">24p</span></a></li>
+<li><a href="#s4" class="sidebar-link"><span class="sb-num">4</span><span class="sb-title">Ilustração: Gnus × Elefantes</span><span class="sb-count">21p</span></a></li>
+<li><a href="#s5" class="sidebar-link"><span class="sb-num">5</span><span class="sb-title">Amor pra DE FORA — A pregação</span><span class="sb-count">5p</span></a></li>
+<li><a href="#s6" class="sidebar-link"><span class="sb-num">6</span><span class="sb-title">Ilustração: A floresta verde (miragem)</span><span class="sb-count">33p</span></a></li>
+<li><a href="#s7" class="sidebar-link"><span class="sb-num">7</span><span class="sb-title">Perdão (Colossenses 3:13)</span><span class="sb-count">10p</span></a></li>
+<li><a href="#s8" class="sidebar-link"><span class="sb-num">8</span><span class="sb-title">Ilustração: O carro sem lubrificante</span><span class="sb-count">33p</span></a></li>
+<li><a href="#s9" class="sidebar-link"><span class="sb-num">9</span><span class="sb-title">Ilustração: O ácido (ódio)</span><span class="sb-count">16p</span></a></li>
+<li><a href="#s10" class="sidebar-link"><span class="sb-num">10</span><span class="sb-title">1 Pedro 4:8 — Amor intenso</span><span class="sb-count">17p</span></a></li>
+<li><a href="#s11" class="sidebar-link"><span class="sb-num">11</span><span class="sb-title">Ilustração: Gravura das duas amigas</span><span class="sb-count">21p</span></a></li>
+<li><a href="#s12" class="sidebar-link"><span class="sb-num">12</span><span class="sb-title">Conclusão — Colossenses 3:14 + Miragem</span><span class="sb-count">18p</span></a></li>
+      </ul>
+    </aside>
+
+    <div class="conteudo-main">
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="🔍 Buscar no discurso (palavras-chave, versículos, ilustrações)...">
+      </div>
+
+      <div id="parags-container">
+<section id="s1" class="section-block"><h3 class="section-header"><span class="sb-num">1</span> Introdução — A busca pela verdadeira religião<span class="section-count">15 parágrafos</span></h3><div class="paragraph"><span class="num">¶1</span>Ao redor do mundo, muitas pessoas sinceras buscam a organização verdadeira ou a religião verdadeira.</div><div class="paragraph"><span class="num">¶2</span>Não são poucas não, são muitas pessoas que fazem isso.</div><div class="paragraph"><span class="num">¶3</span>Mas na grande maioria, elas ficam decepcionadas.</div><div class="paragraph"><span class="num">¶4</span>Por que essa decepção?</div><div class="paragraph"><span class="num">¶5</span>Porque, infelizmente, na sua grande maioria, essas pessoas, elas observam que nas igrejas e religiões que elas entraram, não ensina, e o que é pior, não se pratica o amor verdadeiro.</div><div class="paragraph"><span class="num">¶6</span>Há uma carência muito grande disso.</div><div class="paragraph"><span class="num">¶7</span>Então, por isso que nós dizemos que essas pessoas sinceras, elas ficam realmente decepcionadas com as religiões.</div><div class="paragraph"><span class="num">¶8</span>Infelizmente isso acontece no cenário mundial.</div><div class="paragraph"><span class="num">¶9</span>Interessante que a Bíblia, por A mais B, deixa bem claro que a organização que se amolda aos padrões do Deus verdadeiro, essa organização não só ensina, mas também pratica o amor.</div><div class="paragraph"><span class="num">¶10</span>O amor entre os membros e desses mesmos membros para outros de fora.</div><div class="paragraph"><span class="num">¶11</span>A Bíblia deixa bem claro isso.</div><div class="paragraph para-high"><span class="num">¶12</span>Interessante que ao falar sobre o amor, esse tópico, esse tema, é o sinal característico de cada servo do Deus verdadeiro.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph para-high"><span class="num">¶13</span>Sinal característico.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶14</span>Será que isso é relevante ou importante?</div><div class="paragraph"><span class="num">¶15</span>É sim.</div></section>
+<section id="s2" class="section-block"><h3 class="section-header"><span class="sb-num">2</span> O amor é o sinal característico (João 13:34,35)<span class="section-count">18 parágrafos</span></h3><div class="paragraph para-high para-illust"><span class="num">¶16</span>Por exemplo, Imagine na sua mente um vagalume, então eu vou descrever como que é um vagalume para você, um vagalume é um mamífero que vive no continente africano e tem listas pretas e brancas, é assim que você enxerga um vagalume?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶17</span>Talvez estaria pensando, o irmão orador ali está meio por fora, mas eu descrevi o que?</div><div class="paragraph para-high para-illust"><span class="num">¶18</span>Uma zebra tem o seu sinal característico: ela é um mamífero de quatro patas, com listras pretas e brancas. Já o vaga-lume é um inseto que brilha à noite. Ou seja, cada animal tem as suas próprias características.
+É por isso que dizemos que um sinal característico é algo que já faz parte daquele ser — nasce com ele, é natural dele. Quando pensamos no nome de uma pessoa, de um animal ou de uma planta, logo vem à mente alguma marca que só ele tem.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high"><span class="num">¶19</span>E do cristão não é diferente, o sinal característico do cristão verdadeiro, em harmonia aqui com o tema, é o amor, não é falar em línguas, não é cura, não é ressuscitar os mortos, nada disso, é o amor, a Bíblia deixa claro isso, como por exemplo em <mark class="verse">João <mark class="verse">13:34</mark></mark>,35, se você puder dar uma olhadinha na sua Bíblia, em João <mark class="verse">capítulo 13</mark>, palavras estas do próprio Jesus Cristo, <mark class="verse">versículo 34</mark> primeiro, Ele disse assim, olha: 34 Eu lhes dou um novo mandamento: Amem uns aos outros; assim como eu amei vocês, amem também uns aos outros. 35 Por meio disto todos saberão que vocês são meus discípulos: se tiverem amor entre si.”<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph para-high"><span class="num">¶20</span>Vamos esmiuçar um pouquinho esse versículo, quando ele disse aqui, olha, eu lhes dou um novo mandamento, o que ele estava querendo dizer com isso?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶21</span>Até então, sabia-se que o mandamento, ali que era conhecido na época, dizia, ame o próximo, como a ti mesmo, Mas analisando friamente a realidade dessa frase, desse mandamento.</div><div class="paragraph"><span class="num">¶22</span>Uma pessoa que não tem amor próprio, já pensou como que ela vai amar o próximo?</div><div class="paragraph"><span class="num">¶23</span>Como a si mesmo, quer dizer, ele não vai amar o semelhante já que ele não tem amor próprio.</div><div class="paragraph para-high"><span class="num">¶24</span>Por isso que é interessante esse novo mandamento que Cristo disse aqui.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶25</span>Amar uns aos outros assim como eu amei vocês.</div><div class="paragraph para-high"><span class="num">¶26</span>O livro Perspicaz mostra que Cristo tinha o amor abnegado, ou seja, amou mais os outros do que a si mesmo, isso fez Jesus Cristo, entre outras coisas, a entregar a sua vida em benefício nosso, de toda a humanidade, por assim dizer.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph para-high"><span class="num">¶27</span>E o <mark class="verse">versículo 35</mark> diz, por meio disto, do amor, todos saberão que vocês são meus discípulos, se tiverem amor entre si, esse entre si também é interessante, já que ele estava falando com os seus discípulos, o entre si subtende que nós, que o cristão verdadeiro precisa demonstrar amor para outro cristão verdadeiro, é óbvio tem que amar toda a humanidade, todo ser humano, mas em especial os nossos irmaos, e isso vai identificar determinada pessoa como sendo ou não um cristão verdadeiro.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶28</span>Está bem claro?</div><div class="paragraph"><span class="num">¶29</span>Conseguiu entender?</div><div class="paragraph"><span class="num">¶30</span>Teve alguma dificuldade de entender esse ponto?</div><div class="paragraph"><span class="num">¶31</span>É claro que não, Jesus Cristo foi o mais claro possível, para qualquer pessoa entender isso.</div><div class="paragraph"><span class="num">¶32</span>Agora, onde nós podemos encontrar o amor verdadeiro, os cristãos verdadeiros, Sendo bem objetivo é só entre o povo de Jeová, que se encontra o amor verdadeiro, o amor genuíno.</div><div class="paragraph"><span class="num">¶33</span>Nós mostramos isso, e isso é algo que eu falo e acredito que cada um aqui presente falaria de boca cheia, Nós demonstramos o amor verdadeiro.</div></section>
+<section id="s3" class="section-block"><h3 class="section-header"><span class="sb-num">3</span> Romanos 12:10 — Amor fraternal e iniciativa<span class="section-count">24 parágrafos</span></h3><div class="paragraph"><span class="num">¶34</span>Romanos <mark class="verse">capítulo 12</mark>, por gentileza, se você puder aí abrir a sua Bíblia, faça isso.</div><div class="paragraph"><span class="num">¶35</span>Romanos <mark class="verse">capítulo 12</mark>, vamos pensar um pouquinho a respeito aqui do <mark class="verse">versículo 10</mark>:</div><div class="paragraph para-high"><span class="num">¶36</span>Com amor fraternal, tenham ternos sentimentos uns pelos outros. Tomem a iniciativa em honrar uns aos outros.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶37</span>Amor fraternal.</div><div class="paragraph"><span class="num">¶38</span>envolve aí um sentimento genuíno realmente, de amor.</div><div class="paragraph"><span class="num">¶39</span>E o versículo menciona, tome iniciativa em honrar uns aos outros.</div><div class="paragraph"><span class="num">¶40</span>Ou tome iniciativa também, &quot;em amar uns aos outros.&quot;</div><div class="paragraph"><span class="num">¶41</span>A gente não espera que os outros nos amem, para amar os outros.</div><div class="paragraph"><span class="num">¶42</span>A gente toma iniciativa nisso.</div><div class="paragraph"><span class="num">¶43</span>Se o outro vai nos amar ou não, Tanto faz… nós já fizemos a nossa parte, não é?</div><div class="paragraph"><span class="num">¶44</span>A gente vai dormir com a consciência tranquila.</div><div class="paragraph"><span class="num">¶45</span>e isso acontece entre nós testemunhas de Jeová, cada um aqui toma iniciativa em amar um ao outro.</div><div class="paragraph para-illust"><span class="num">¶46</span>Se o irmão puder colocar a primeira imagem aí, para nós falarmos um pouquinho a respeito dela, ela é bastante interessante, percebemos aí a prática do amor, no mundo eles conhecem o amor apenas como um sentimento, mas o cristão verdadeiro ele sabe que o amor vai muito mais do que um mero sentimento, vai além disso, o amor ele tem que ser algo na prática, é o que nós observamos aí, uma mãe e a sua filha amorosamente ajudando uma pessoa idosa já um tanto quanto que debilitada, conforme nós podemos observar pelo andadorzinho ali do lado, e deve ser algo muito difícil, extenuante, complicado para essas duas irmãs, a mãe e a filha, demonstrar o amor genuíno, difícil né, aquilo causa uma tristeza nelas né, imagina, a gente observa aí o sorriso de felicidade, o semblante de felicidade que mãe e filha tem, imagine que tipo de adulto será essa jovenzinha quando ela amadurecer né, ela não será diferente da mãe dela, que também está praticando o amor, E a senhora idosa, no caso ali a nossa irmã idosa, olha como ela fica feliz em receber o amor.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-illust"><span class="num">¶47</span>Então é assim que acontece, eu tenho certeza, pode tirar a imagem se desejar irmão, obrigado viu.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶48</span>Qualquer um aqui, se acabar ficando doente, olha, não vai faltar gente, irmãos para ajudá-lo.</div><div class="paragraph"><span class="num">¶49</span>Porque a Bíblia mostra que o amigo verdadeiro, ele é nascido para momentos de dificuldade.</div><div class="paragraph"><span class="num">¶50</span>Quando tem um churrasco, uma festa, todo mundo parece ser amigo, mas o amigo genuíno é aquele que quando você está lá no leito do hospital, vai te visitar.</div><div class="paragraph"><span class="num">¶51</span>Se precisar ficar a noite com você, pousar lá, ele vai ficar também a noite com você.</div><div class="paragraph"><span class="num">¶52</span>Ele não vai pensar, eu não vou e não, porque o hospital é um lugar que eu não me agrado muito, é um ambiente que não é muito bom para mim, então eu não vou.</div><div class="paragraph"><span class="num">¶53</span>Mas e no dia que essa mesma pessoa estiver lá?</div><div class="paragraph"><span class="num">¶54</span>Ele não vai depender de que outro pense diferente?</div><div class="paragraph"><span class="num">¶55</span>Então quem tem o amor verdadeiro é um amigo para quando há dificuldades.</div><div class="paragraph"><span class="num">¶56</span>Mas se particularmente falando, eu perceber que eu preciso fazer alguma melhora nesse respeito, qualquer esforço valerá realmente a pena.</div><div class="paragraph"><span class="num">¶57</span>todas as testemunhas de Jeová, não só nós aqui desta congregação, mas em todas as congregações ao redor do planeta, todas ajudam bondosamente, amorosamente, uma a outra quando em necessidade.</div></section>
+<section id="s4" class="section-block"><h3 class="section-header"><span class="sb-num">4</span> Ilustração: Gnus × Elefantes<span class="section-count">21 parágrafos</span></h3><div class="paragraph para-high para-illust"><span class="num">¶58</span>HMM… um exemplo que podemos dar para isso é os Gnus.
+Já viu um gnu de perto?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶59</span>Talvez não, mas na televisão, nesses documentários, o gnu, ele se parece muito com um touro em miniatura, um pouco menor, um touro um pouco menor.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶60</span>e o gnu ele é muito poderoso, tem chifres ali que são muito afiados os chifres deles, e o gnu na savana africana ele anda aos milhares, é muito gnu mesmo, quando há um êxodo de gnu de um lugar para outro é muito gnu, é muito animal.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶61</span>Mas quando um inimigo, um leão, por exemplo, uma hiena, ataca aquele número grande de gnu, sabe o que acontece?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶62</span>Os gnu se juntam todos e vão enfrentar aquele monte de leão e destrói os leões.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶63</span>Não, não acontece isso.</div><div class="paragraph"><span class="num">¶64</span>Quando um único leão avança naquele bando, é cada um para si e Deus para todos.</div><div class="paragraph para-high para-illust"><span class="num">¶65</span>Raríssimas são as  ocasiões, em que um gnu volta para defender o outro, mas na sua grande maioria das vezes é cada um para si, salve-se quem puder, os guinus são assim, será que nós somos assim também?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶66</span>Sera que nós tambem somos assim?
+Diante da dificuldade é cada um para si?</div><div class="paragraph para-high para-illust"><span class="num">¶67</span>Não, nós somos bem semelhantes aos elefantes, os elefantes já são diferentes, quando um leão, por exemplo, ataca uma manada de elefante, Então todos os elefantes, eles ficam em círculo, e no meio do círculo ficam os mais frágeis.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶68</span>E eles ficam lá.</div><div class="paragraph"><span class="num">¶69</span>Vem.</div><div class="paragraph"><span class="num">¶70</span>Nenhum leão se arrisca.</div><div class="paragraph para-high para-illust"><span class="num">¶71</span>Porque não é só pelo tamanho do elefante, mas porque eles estão unidos ali.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶72</span>Assim somos nós.</div><div class="paragraph para-high para-illust"><span class="num">¶73</span>Quando passamos por dificuldade, a gente não foge que nem os gnus, a gente se ajunta, a gente se ajuda.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶74</span>Isso é demonstrar o verdadeiro amor como Cristo mostrou.</div><div class="paragraph"><span class="num">¶75</span>Por isso existe entre nós paz e união.</div><div class="paragraph"><span class="num">¶76</span>Agora, digno de nota, deixar bem claro que nós demonstramos amor não só para nós mesmo, mas para as demais pessoas aí fora.</div><div class="paragraph"><span class="num">¶77</span>E como que nós fazemos isso?</div><div class="paragraph"><span class="num">¶78</span>Não é por criar escolas, creches, não é para ficar arrecadando cesta básica aí, nada disso daí, nós fazemos algo diferente.</div></section>
+<section id="s5" class="section-block"><h3 class="section-header"><span class="sb-num">5</span> Amor pra DE FORA — A pregação<span class="section-count">5 parágrafos</span></h3><div class="paragraph"><span class="num">¶79</span>Nós ajudamos as pessoas por algo que não perece, mas algo que permanece pela vida eterna.</div><div class="paragraph"><span class="num">¶80</span>Nós amorosamente enfrentamos sérias dificuldades aí fora, como sol, chuva, em alguns lugares até a a nossa liberdade, para ajudar as pessoas a conhecerem o Deus verdadeiro Jeová.</div><div class="paragraph"><span class="num">¶81</span>E quando elas conhecem a Jeová e se achegam a Jeová, elas tem aí, ajuda para viver eternamente.</div><div class="paragraph"><span class="num">¶82</span>Não é algo amoroso?</div><div class="paragraph"><span class="num">¶83</span>Toda vez que a gente sai de manhã cedo, enfrentando um sol, escaldante, para pregar as boas novas, ensinar por meio do estudo, isso é demonstração viva do amor.</div></section>
+<section id="s6" class="section-block"><h3 class="section-header"><span class="sb-num">6</span> Ilustração: A floresta verde (miragem)<span class="section-count">33 parágrafos</span></h3><div class="paragraph para-illust"><span class="num">¶84</span>Agora, talvez alguém possa estar pensando, O orador então, ele está querendo dizer que as testemunhas de Jeová são perfeitas, não, ninguém aqui está dizendo que as testemunhas de Jeová são perfeitas, imagine por exemplo uma floresta, floresta verdejante, você está andando em cima dela de helicóptero, ou avião, enfim, está voando em cima dela, Lá do alto você observa aquela floresta magnífica, insumir de vista.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶85</span>Verde para todo lado.</div><div class="paragraph"><span class="num">¶86</span>Exuberância.</div><div class="paragraph"><span class="num">¶87</span>Árvores.</div><div class="paragraph"><span class="num">¶88</span>Maravilha.</div><div class="paragraph para-illust"><span class="num">¶89</span>Mas vamos supor que aconteça algo e você tem que descer no meio dessa floresta.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶90</span>O que você passa a observar agora?</div><div class="paragraph para-illust"><span class="num">¶91</span>Cobras, lagartos, escorpiões, aranhas.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶92</span>E isso causa um certo arrepio em alguém.</div><div class="paragraph"><span class="num">¶93</span>Eu mesmo não gosto muito de aranhas.</div><div class="paragraph para-illust"><span class="num">¶94</span>Talvez você de cobras.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-illust"><span class="num">¶95</span>E tudo isso tem na floresta, dentro da floresta.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶96</span>Lá no alto, de longe, maravilha.</div><div class="paragraph"><span class="num">¶97</span>Mas quando chega pertinho, lá embaixo, aí começa a observar certas coisas que não se agradam muito.</div><div class="paragraph"><span class="num">¶98</span>O que eu estou querendo dizer com isso?</div><div class="paragraph para-illust"><span class="num">¶99</span>Estou querendo dizer com isso que entre nós, entre os servos de Jeová, isso não é de hoje, vem desde lá do primeiro século, ou antes até, podemos dizer assim, dos servos de Jeová, sempre teve cobras, lagartos e escorpiões, ou seja, imperfeição, problemas, atrito, sempre teve, enquanto existir a imperfeição, sempre terá, essa é a realidade, teve, tem e terá enquanto existir a imperfeição, Por exemplo, os discípulos lá do primeiro século, falando a respeito dos apóstolos de Jesus Cristo, abandonaram a Jesus, Pedro negou Jesus Cristo três vezes, mais tarde Pedro, ele usou um tanto quanto que fingimento, dupla personalidade em determinada ocasião, precisou ser corrigido por Paulo depois, o próprio apóstolo Paulo, ali com Barnabé, quase saiu nas vias de fato, uma discussão acalorada, as cobras, lagartos e escorpiões, as imperfeições, os atritos que havia lá no primeiro século.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶100</span>Certamente Jeová, ele não esperava a perfeição de nenhum desses, E não é diferente hoje em dia, ele não espera a perfeição de ninguém.</div><div class="paragraph"><span class="num">¶101</span>Ah, se Jeová de acordo com o Salmo 130, ficasse lá observando, procurando os erros de cada um de nós e fazendo questão, apontando aqueles erros.</div><div class="paragraph"><span class="num">¶102</span>Quem aqui ficaria de pé?</div><div class="paragraph"><span class="num">¶103</span>Nem eu e nem ninguém.</div><div class="paragraph"><span class="num">¶104</span>Mas Jeová não faz isso.</div><div class="paragraph"><span class="num">¶105</span>Não que Jeová faça vista grossa para erros graves.</div><div class="paragraph"><span class="num">¶106</span>Não, mas certas coisas Jeová, ele entende que devido a imperfeição isso vai acontecer.</div><div class="paragraph"><span class="num">¶107</span>Agora falando a respeito lá do passado, Pedro, Paulo, todos estes se deixaram corrigir pela humildade, foram humildes, corrigiram seus problemas e continuaram servindo a Jeová Deus.</div><div class="paragraph"><span class="num">¶108</span>Assim como no passado, Jeová Deus ele espera que nós hoje sejamos também humildes.</div><div class="paragraph para-illust"><span class="num">¶109</span>Se eu por acaso soltar alguma cobra, lagarto, escorpião, O que eu preciso fazer?<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶110</span>Reconhecer isso e procurar eliminar esses répteis o mais rápido possível.</div><div class="paragraph"><span class="num">¶111</span>E procurar seguir a Jeová o mais depressa possível.</div><div class="paragraph"><span class="num">¶112</span>É isso que ele espera de mim e de cada um aqui presente.</div><div class="paragraph"><span class="num">¶113</span>Se há atrito, esses atritos têm que ser resolvidos o mais breve possível, o mais rápido possível.</div><div class="paragraph"><span class="num">¶114</span>E o perdão, vai ser uma ferramenta indispensável, para se manter o amor nesse respeito.</div><div class="paragraph"><span class="num">¶115</span>Porque sem o perdão, quando alguém fizer isso aqui(usar sinal de pequeno) para nós, vai ficar difícil, para as duas partes, se não houver o perdão.</div><div class="paragraph"><span class="num">¶116</span>O perdão ele é imprescindível, em vez de nos ofender, nós podemos e devemos mostrar amor e perdoar, é isso que se espera ali.</div></section>
+<section id="s7" class="section-block"><h3 class="section-header"><span class="sb-num">7</span> Perdão (Colossenses 3:13)<span class="section-count">10 parágrafos</span></h3><div class="paragraph"><span class="num">¶117</span>Veja Colossenses capítulo <mark class="verse">3:13</mark>, Colossenses <mark class="verse">capítulo 3</mark>, e observem atentamente o <mark class="verse">versículo 13</mark>, vejam como encaixa esse versículo com que acabamos de falar.</div><div class="paragraph para-high"><span class="num">¶118</span>Continuem a suportar uns aos outros, e a perdoar uns aos outros liberalmente, mesmo que alguém tenha razão para queixa contra o outro.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph para-high"><span class="num">¶119</span>Assim como Jeová os perdoou liberalmente, vocês devem fazer o mesmo.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶120</span>Então aqui o perdão, o versículo mostrou, tem que ser liberal, ou seja, em abundância, sem restrição…</div><div class="paragraph"><span class="num">¶121</span>ótimo, perdoa, desde que…       esse desde que tem que ser eliminado, perdoa, perdoa, acabou, vida que segue, vamos continuar servindo a Jeová, que passou, passou, é isso que o versículo está querendo dizer com a palavra liberal.</div><div class="paragraph"><span class="num">¶122</span>E outras particularidades desse versículo também são relevantes ou importantes.</div><div class="paragraph"><span class="num">¶123</span>Por exemplo, o versículo inicia dizendo, continuem a suportar.</div><div class="paragraph"><span class="num">¶124</span>E depois, no meio disse, mesmo que alguém tenha razão para a queixa.</div><div class="paragraph"><span class="num">¶125</span>Esses dois pensamentos aqui indicam que haverá dano ou atrito.</div><div class="paragraph"><span class="num">¶126</span>Haverá dano ou atrito, como foi lá no passado, haverá dano ou atrito hoje também.</div></section>
+<section id="s8" class="section-block"><h3 class="section-header"><span class="sb-num">8</span> Ilustração: O carro sem lubrificante<span class="section-count">33 parágrafos</span></h3><div class="paragraph para-illust"><span class="num">¶127</span>Imagine um veículo, um carro, O carro mais bonito que você acha.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶128</span>Imaginou ele?</div><div class="paragraph"><span class="num">¶129</span>Imaginou?</div><div class="paragraph para-illust"><span class="num">¶130</span>Um carro muito bonito mesmo.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶131</span>A cor que você ama.</div><div class="paragraph"><span class="num">¶132</span>Do jeito que você quer.</div><div class="paragraph para-illust"><span class="num">¶133</span>Um carro maravilhoso.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶134</span>Agora, imagine esse mesmo carro sem nenhum lubrificante nele.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶135</span>Por melhor que seja o motor, a aerodinâmica desse carro, visto que ele não tem nenhum lubrificante, ele não vai muito longe, né?
+Ele consegue andar por 4 minutos em baixa rotação, depois disso
+vai fundir o motor, vai travar tudo.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶136</span>Ele não vai longe.</div><div class="paragraph para-high para-illust"><span class="num">¶137</span>O lubrificante, ele é vital para que as engrenagens funcionem, para que tudo seja suave.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶138</span>Vai haver atrito das engrenagens.</div><div class="paragraph para-high para-illust"><span class="num">¶139</span>Engrenagem contra engrenagem.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶140</span>Mas o lubrificante vai impedir que haja desgaste excessivo.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶141</span>Percebeu?</div><div class="paragraph para-high para-illust"><span class="num">¶142</span>O lubrificante, ele tem que existir.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶143</span>O amor tem que existir.</div><div class="paragraph para-high para-illust"><span class="num">¶144</span>o amor é esse lubrificante.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶145</span>Tenha em mente uma verdade.</div><div class="paragraph"><span class="num">¶146</span>Geralmente nós pensamos assim, que bom se tudo acontecesse do meu jeito.</div><div class="paragraph"><span class="num">¶147</span>Seria uma maravilha, ao menos para mim.</div><div class="paragraph"><span class="num">¶148</span>Mas eu tenho que entender que nem tudo, ou melhor, eu tenho que entender que a grande maioria das coisas não acontece do meu jeito.</div><div class="paragraph"><span class="num">¶149</span>Não acontece do meu jeito.</div><div class="paragraph"><span class="num">¶150</span>Essa é uma realidade que eu preciso encarar.</div><div class="paragraph"><span class="num">¶151</span>A grande maioria das coisas acontece de um jeito que eu não gostaria, não me agradaria.</div><div class="paragraph para-high para-illust"><span class="num">¶152</span>É aí que entra esse lubrificante.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶153</span>O amor.</div><div class="paragraph para-high"><span class="num">¶154</span>Vai fazer com que aquele atrito que há, ele não crie desgaste excessivo.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶155</span>E com isso, nós vamos continuar a servir a Jeová com alegria.</div><div class="paragraph para-high para-illust"><span class="num">¶156</span>Quantos, quantos infelizmente abandonaram o caminho da vereda da justiça(caminho de Jeová) porque não tiveram esse lubrificante?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-illust"><span class="num">¶157</span>Parecia um carro bonito, mas travou tudo.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶158</span>Falta do lubrificante, que é o amor.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶159</span>Agora quer ver outro exemplo?</div></section>
+<section id="s9" class="section-block"><h3 class="section-header"><span class="sb-num">9</span> Ilustração: O ácido (ódio)<span class="section-count">16 parágrafos</span></h3><div class="paragraph para-high para-illust"><span class="num">¶160</span>Se você tivesse ácido, onde você guardaria o ácido?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶161</span>Será que você guardaria o ácido num recipiente qualquer?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶162</span>Não.</div><div class="paragraph para-high para-illust"><span class="num">¶163</span>o ácido ele corrói as coisas.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶164</span>Então você procuraria saber qual é o melhor recipiente para guardar o ácido.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶165</span>Não cabe a mim dizer qual seria esse recipiente que eu não sei esses dados técnicos, mas o ácido tem que ser guardado num recipiente adequado.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶166</span>Muito mais corrosivo do que o ácido é o ódio, é a mágoa, é o contrário do amor.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high"><span class="num">¶167</span>E sabe onde muitas pessoas guardam isso que é altamente corrosivo?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶168</span>na mente, e para piorar, no coração.</div><div class="paragraph"><span class="num">¶169</span>O que acontece?</div><div class="paragraph"><span class="num">¶170</span>A mente e o coração não foram feitos para ficar alimentando ou guardando ódio, mágoa, ressentimento, isso vai corroer a mente, vai corroer o íntimo de cada um.</div><div class="paragraph"><span class="num">¶171</span>Então essas coisas corrosivas, como a mágoa, o ódio, não podem ser guardadas na nossa mente e no nosso coração, tem que ser removidas desses lugares.</div><div class="paragraph"><span class="num">¶172</span>Certo?</div><div class="paragraph"><span class="num">¶173</span>E nós precisamos ter um certo senso de urgência no que diz respeito a essas coisas.</div><div class="paragraph"><span class="num">¶174</span>Nós devemos evitar pensar assim, por exemplo?</div><div class="paragraph"><span class="num">¶175</span>Ah, deixa, com o tempo passa, normalmente irmãos, não passa, a coisa só tende a piorar.</div></section>
+<section id="s10" class="section-block"><h3 class="section-header"><span class="sb-num">10</span> 1 Pedro 4:8 — Amor intenso<span class="section-count">17 parágrafos</span></h3><div class="paragraph"><span class="num">¶176</span><mark class="verse">1ª de Pedro</mark>, por favor.</div><div class="paragraph"><span class="num">¶177</span><mark class="verse">1ª de Pedro</mark>, deixa eu achar aqui, <mark class="verse">capítulo 4</mark>, <mark class="verse">versículo 8</mark>, fala assim ó.</div><div class="paragraph para-high"><span class="num">¶178</span>Acima de tudo, tenham intenso amor uns pelos outros, porque o amor cobre uma multidão de pecados.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶179</span>Então, aqui o que nós somos ensinados?</div><div class="paragraph para-high para-illust"><span class="num">¶180</span>A palavra intenso também transmite a ideia de algo esticado, é que nem um instrumento de corda, um violão, por exemplo.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶181</span>Se ele não estiver bem esticado, bem afinado, vai dar um som diferente, um som que não vai agradar.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶182</span>Ou ele é muito grave, ou ele é muito agudo, não vai agradar a ninguém.</div><div class="paragraph para-high para-illust"><span class="num">¶183</span>Então tem que estar bem esticadinho, certinho, na tensão certa, bem afinado.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶184</span>Então é isso que o texto está querendo dizer aqui.</div><div class="paragraph para-high para-illust"><span class="num">¶185</span>Tenho intenso amor pelos outros, precisamos ser afinados nesse sentido.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶186</span>Cada um aqui tem que estar em sintonia.</div><div class="paragraph para-high para-illust"><span class="num">¶187</span>Imagina, todo mundo aqui bem afinadinho no que diz respeito ao amor, será uma maravilha.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-illust"><span class="num">¶188</span>E o versículo diz-se ainda, olha, o amor cobra uma multidão de pecados.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶189</span>É como uma maquiagem, uma maquiagem muito poderosa, que esconde defeitos que talvez a gente venha a ter, né?</div><div class="paragraph"><span class="num">¶190</span>Talvez uma ruga pela idade, uma cicatriz, aquela maquiagem forte, ela vai tampar isso.</div><div class="paragraph"><span class="num">¶191</span>É o que o versículo está querendo dizer a respeito do amor.</div><div class="paragraph para-illust"><span class="num">¶192</span>A outra gravura, por gentileza, irmão.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div></section>
+<section id="s11" class="section-block"><h3 class="section-header"><span class="sb-num">11</span> Ilustração: Gravura das duas amigas<span class="section-count">21 parágrafos</span></h3><div class="paragraph para-illust"><span class="num">¶193</span>Nessa gravura nós observamos que houve cobras, lagartos e escorpiões entre essas duas irmãs, houve atrito entre elas duas.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶194</span>Uma saiu realmente chateada com a outra, talvez até pensando, para mim ela morreu.</div><div class="paragraph"><span class="num">¶195</span>Olha, já matou a irmã na mente.</div><div class="paragraph"><span class="num">¶196</span>Aí, passou um ano, dois anos, passou três anos, quatro, passou uma década, elas se encontraram.</div><div class="paragraph"><span class="num">¶197</span>Deram um abraço apertado e se perdoaram.</div><div class="paragraph para-illust"><span class="num">¶198</span>É assim que você entende essa gravura?<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶199</span>Não.</div><div class="paragraph"><span class="num">¶200</span>Repara que elas estão com a mesma vestimenta.</div><div class="paragraph"><span class="num">¶201</span>Então não passou uma década.</div><div class="paragraph"><span class="num">¶202</span>Passou talvez algumas horas, de repente nem isso, mas elas procuraram correr, tiveram um senso de urgência, não deixaram que esse sentimento negativo fosse alimentado na mente e no coração, e olha, tudo resolvido.</div><div class="paragraph"><span class="num">¶203</span>Será que eu também faço assim?</div><div class="paragraph"><span class="num">¶204</span>Será que eu ajo com esse mesmo senso de urgência?</div><div class="paragraph"><span class="num">¶205</span>Sou rápido em resolver as questões delicadas, os atritos que existem entre os irmãos?</div><div class="paragraph"><span class="num">¶206</span>O amor vai nos ajudar a acelerar as coisas.</div><div class="paragraph para-illust"><span class="num">¶207</span>Obrigado, irmão, pela imagem.<div class="badges"><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶208</span>Olha, não estou querendo dizer aqui que é fácil perdoar, tem os seus desafios.</div><div class="paragraph para-high"><span class="num">¶209</span>Uns talvez tem mais facilidade do que outros, mas o que vai ajudar a todos nós a perdoar de modo abrangente ou liberalmente conforme o texto lido, é orar, orar a Jeová intensamente pedindo Espírito Santo e isso vai nos ajudar a desenvolver qualidades como a paz, paciência, perseverança, brandura e o amor que é o tema aqui do discurso.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph"><span class="num">¶210</span>Outra ajuda é o estudo minucioso da palavra de Deus, junto com o esforço de se colocar em prática, essas ajudas aqui, olha, é batata, funciona mesmo, se colocar em prática vai observar, olha bem o que o orador falou né, funciona mesmo, orar a Jeová pedindo Espírito Santo e estudar e praticar a palavra de Jeová.</div><div class="paragraph"><span class="num">¶211</span>Certamente nós queremos adorar a Deus, mas não sozinhos.</div><div class="paragraph"><span class="num">¶212</span>Ao lado daquele que também adora Jeová a Deus, demonstrando o verdadeiro amor.</div><div class="paragraph"><span class="num">¶213</span>E como é maravilhoso fazer parte de um grupo que mostra isso.</div></section>
+<section id="s12" class="section-block"><h3 class="section-header"><span class="sb-num">12</span> Conclusão — Colossenses 3:14 + Miragem<span class="section-count">18 parágrafos</span></h3><div class="paragraph"><span class="num">¶214</span>O último texto que nós vamos ler é Colossenses <mark class="verse">capítulo 3</mark>.</div><div class="paragraph"><span class="num">¶215</span>De novo, vamos voltar lá em Colossenses <mark class="verse">capítulo 3</mark>.</div><div class="paragraph para-high"><span class="num">¶216</span>Agora, o <mark class="verse">versículo 14</mark>, diz assim óh, mas além de todas essas coisas, revistam-se de amor, pois é o perfeito vínculo de união. o perfeito vínculo de união. Viu irmãos é o amor, revestir-se de amor.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶217</span>Imagina aquele fio desencapado, você dona de casa, percebe lá que um fio está desencapado, e o outro também, e quase está encostando no outro, maridão, marido, marido, olha o que vai acontecer lá, acelera, tem que encapar esses fios, se houver contato não vai haver uma explosão ali, então quando a gente se reveste de amor, se tiver atrito não vai ter explosão, como é importante demonstrar ter o amor e fortalecer isso dentro de nós, o irmão vai mostrar agora a última imagem desse discurso, Essa imagem mostra uma pessoa, talvez a primeira vez ele está visitando um salão do reino da Testemunha de Jeová, e ele está sendo cumprimentado de uma maneira bem calorosa, amorosa pelos irmãos ali.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph"><span class="num">¶218</span>Será que ele pensa, o que eu estou fazendo aqui?</div><div class="paragraph"><span class="num">¶219</span>Estou no lugar errado?</div><div class="paragraph"><span class="num">¶220</span>Não, né?</div><div class="paragraph"><span class="num">¶221</span>Imaginem, ele não vê a hora de voltar de novo.</div><div class="paragraph"><span class="num">¶222</span>Talvez isso aconteceu com você a primeira vez que você veio no salão do reino, não sei se foi nesse mesmo salão.</div><div class="paragraph"><span class="num">¶223</span>mas eu passei por uma situação semelhante a essa, mesmo pode ter acontecido com você, não é?</div><div class="paragraph"><span class="num">¶224</span>É isso que acontece em todos os salões do reino, hoje eu fiquei parado lá atrás e observei isso, os irmãos aqui se cumprimentando, até brinquei com o irmão Jorge, o povo falando bastante, porque demonstra amor, povo alegre, povo de Jeová é assim, povo alegre, já aconteceu de você entrar aqui nesse mesmo salão do reino e ninguém te cumprimentar?</div><div class="paragraph"><span class="num">¶225</span>Ou cumprimentar só por obrigação?</div><div class="paragraph"><span class="num">¶226</span>Não né?</div><div class="paragraph"><span class="num">¶227</span>A demonstração vívida do amor, a gente sente isso na pele, quando nós entramos no salão do reino.</div><div class="paragraph"><span class="num">¶228</span>O ar que a gente respira, é amor, isso alegra muito a Jeová a Deus, ele olha isso, nós não sejamos mesquinhos, mas sejamos sempre abrangentes, liberais em demonstrar amor.</div><div class="paragraph"><span class="num">¶229</span>Muitos pelegrinos que viajam pelo deserto, homens do deserto, eles costumam dizer que viram miragens, que la no fundo enxergar uma pequeno laguinho com agua e vc morrendo de cede vai correndo beber, e não poucos já perderam a vida por causa de miragens.</div><div class="paragraph para-high para-illust"><span class="num">¶230</span>O que é uma miragem?<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div><div class="paragraph para-high para-illust"><span class="num">¶231</span>é uma ilusão de ótica, na verdade é uma mentira, uma falsidade, um engano, isso é uma 
+Nós começamos falando do sinal característico. A zebra tem as suas listras, o vaga-lume tem o seu brilho — cada ser tem aquilo que já nasce com ele. E o sinal do cristão verdadeiro é o amor.
+Mas que amor é esse? Ao longo do discurso nós fomos vendo.
+Não é ser como o gnu, que na dificuldade foge e é cada um por si. É ser como o elefante, que faz círculo e protege o mais frágil no meio.
+Não é ser o carro sem lubrificante, que trava no primeiro atrito. É deixar o amor lubrificar as engrenagens, para que o atrito não vire desgaste.
+Não é guardar o ácido do ódio e da mágoa no coração. É remover isso com urgência e perdoar liberalmente.
+Não é ser a corda frouxa, que desafina. É ter o amor intenso, bem afinado, em sintonia uns com os outros.
+Não é ser o fio desencapado que provoca explosão. É se revestir de amor, para que, mesmo havendo atrito, não haja explosão.
+E, acima de tudo, não é ser uma miragem — aquela ilusão que promete água de longe e só entrega areia de perto, que engana e chega a custar vidas. Que o nosso amor nunca seja assim: não uma bela imagem à distância, mas que seja água de verdade para quem chega perto poder saciar sua sede.
+Porque, em harmonia com o tema, é esse amor — real, praticado, visível — que identifica os verdadeiros seguidores de Jesus, os CRISTÃOS verdadeiros.<div class="badges"><span class="badge badge-high">⭐ Ponto alto</span><span class="badge badge-illust">🎭 Ilustração</span></div></div></section>
+      </div>
+    </div>
+  </div>
+</div><!-- ABA: PONTOS-CHAVE -->
+<div class="tab-panel" data-panel="pontos">
+  <div class="section-title">🎯 Resumo dos Pontos Principais</div>
+
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><span class="num">P1</span><strong>O amor é o SINAL CARACTERÍSTICO dos discípulos de Cristo.</strong></p>
+    <p style="margin-top: 6px;">João 13:34, 35 — "Novo mandamento: amem-se uns aos outros como eu os amei. Nisto todos saberão que vocês são meus discípulos."</p>
+    <p style="margin-top: 6px;"><em>Jesus não disse: "vocês serão conhecidos pela sua obediência às regras", mas pelo AMOR.</em></p>
+  </div>
+
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><span class="num">P2</span><strong>Amor fraternal = tomar INICIATIVA (não esperar reciprocidade).</strong></p>
+    <p style="margin-top: 6px;">Romanos 12:10 — "Tenham ternos sentimentos uns pelos outros. Tomem a iniciativa em honrar uns aos outros."</p>
+    <p style="margin-top: 6px;"><em>A gente não espera o outro nos amar pra então amar.</em></p>
+  </div>
+
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><span class="num">P3</span><strong>O perdão LIBERAL é indispensável.</strong></p>
+    <p style="margin-top: 6px;">Colossenses 3:13 — "Continuem a suportar uns aos outros e a perdoar uns aos outros LIBERALMENTE, mesmo que alguém tenha razão para queixa."</p>
+    <p style="margin-top: 6px;"><em>O amor é o "lubrificante" que impede o desgaste. Sem perdão, tudo trava.</em></p>
+  </div>
+
+  <div class="paragraph" style="border-left-color: var(--accent);">
+    <p><span class="num">P4</span><strong>O amor precisa ser INTENSO.</strong></p>
+    <p style="margin-top: 6px;">1 Pedro 4:8 — "Acima de tudo, tenham INTENSO amor uns pelos outros, porque o amor cobre multidão de pecados."</p>
+    <p style="margin-top: 6px;"><em>Intenso = esticado, afinado (como corda de violão). Tem que estar na tensão certa.</em></p>
+  </div>
+
+  <div class="paragraph" style="border-left-color: var(--highlight);">
+    <p><span class="num">CONCLUSÃO</span><strong>O amor identifica os cristãos verdadeiros.</strong></p>
+    <p style="margin-top: 6px;">Colossenses 3:14 — "Revistam-se de amor, pois é o perfeito vínculo de união."</p>
+    <p style="margin-top: 6px;"><em>Não é miragem — é água de verdade pra quem chega perto.</em></p>
+  </div>
+</div>
+
+<!-- ABA: ILUSTRAÇÕES -->
+<div class="tab-panel" data-panel="ilust">
+  <div class="section-title">🎭 Ilustrações do Discurso</div>
+
+  <div class="illust-card">
+    <div class="illust-title">🦓 Vagalume / Zebra — Sinal característico</div>
+    <div class="illust-meta">Início do discurso · parágrafos ~5-7</div>
+    <p><strong>Ponto:</strong> Assim como o vagalume tem luz própria e a zebra tem listras, o cristão tem o AMOR como marca.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> Descrever mentalmente um vagalume — luzinha piscando no escuro. Depois, uma zebra — listras inconfundíveis. Perguntar: "qual é o sinal do cristão?" → Resposta: o amor.</p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">🐃 Gnus × Elefantes — União na dificuldade</div>
+    <div class="illust-meta">Meio do discurso · parágrafos ~28-36</div>
+    <p><strong>Ponto:</strong> Gnus se separam quando um leão ataca ("cada um por si"). Elefantes se unem — nenhum leão se arrisca.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> Descrever os gnus (parecem bois, chifres afiados) sendo atacados — correm em todas as direções. Raramente um gnu volta pra defender o outro. Já os elefantes formam um círculo protetor — ficam juntos. <em>"Assim somos nós — quando vem dificuldade, a gente se une, não foge."</em></p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">🌳 Floresta verde / Miragem</div>
+    <div class="illust-meta">Meio/fim · parágrafos ~42-48 + conclusão</div>
+    <p><strong>Ponto:</strong> De longe a floresta é linda (verde exuberante). De perto tem cobras, lagartos, escorpiões. <em>O amor verdadeiro NÃO é miragem</em> — não promete água de longe e entrega areia de perto.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> Pedir ao irmão pra mostrar a gravura da floresta (verde exuberante). Depois perguntar: "E se você descer pra dentro? O que vai encontrar?" → Cobras, escorpiões. Comparar com o amor entre as testemunhas de Jeová — pode ter atrito, mas tem reparação rápida.</p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">🚗 Carro sem lubrificante</div>
+    <div class="illust-meta">Meio/fim · parágrafos ~63-78</div>
+    <p><strong>Ponto:</strong> O amor é o lubrificante que impede o desgaste entre as engrenagens (irmãos). Sem ele, até o carro mais bonito trava.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> Pedir pra imaginar o carro mais bonito do mundo. Perguntar: "E se ele não tiver lubrificante?" → Engrenagens rangendo, travando, parando. <em>O amor faz a mesma função entre nós.</em></p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">⚗️ Ácido na mente — Ódio</div>
+    <div class="illust-meta">Meio/fim · parágrafos ~79-87</div>
+    <p><strong>Ponto:</strong> Ácido corrói qualquer recipiente. Ódio guardado na mente/coração corrói a pessoa por dentro.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> "Se você tivesse ácido, onde guardaria? Num recipiente forte, certo? Agora: muito mais corrosivo que ácido é o ÓDIO. E onde as pessoas guardam? Na mente. E pior, no coração." → Senso de urgência pra eliminar.</p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">🎻 Corda de violão afinada</div>
+    <div class="illust-meta">Bloco do 1 Pedro 4:8 · parágrafos ~89-93</div>
+    <p><strong>Ponto:</strong> Amor intenso = corda esticada na tensão certa. Frouxa = som ruim. Esticada demais = arrebenta.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> "Imagine um violão. Se a corda não estiver bem esticada, afinada, vai dar som desafinado — ou grave demais, ou agudo demais. <em>O nosso amor precisa estar na tensão certa.</em>"</p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">👭 Gravura — Duas amigas que brigaram</div>
+    <div class="illust-meta">Bloco do 1 Pedro 4:8 · parágrafos ~95-100</div>
+    <p><strong>Ponto:</strong> Duas amigas que tiveram atrito, mas resolveram rápido (mesma vestimenta = pouco tempo). Urgência no perdão.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> Mostrar gravura. Perguntar: "Quanto tempo passou até elas se resolverem?" → Repare na mesma roupa. Resposta: algumas horas. <em>"Será que eu também ajo com esse senso de urgência?"</em></p>
+  </div>
+
+  <div class="illust-card">
+    <div class="illust-title">🔌 Fio desencapado</div>
+    <div class="illust-meta">Conclusão · parágrafos ~108-112</div>
+    <p><strong>Ponto:</strong> Um fio desencapado precisa ser coberto com fita isolante. O amor é a "fita isolante" que protege os relacionamentos.</p>
+    <p style="margin-top: 6px;"><strong>Como apresentar:</strong> "Imagina aquele fio desencapado ali no canto. Você deixa? Não — você pega a fita isolante e cobre. O amor faz isso com a gente."</p>
+  </div>
+</div>
+
+<!-- ABA: VERSÍCULOS -->
+<div class="tab-panel" data-panel="versiculos">
+  <div class="section-title">📜 Versículos Citados no Discurso</div>
+  <div class="verse-list">
+    <div class="verse-item">
+      <span class="ref">João 13:34, 35</span>
+      <em>"Novo mandamento: amem-se uns aos outros como eu os amei. Nisto todos saberão que vocês são meus discípulos."</em>
+      <div style="color: var(--muted); font-size: 12px; margin-top: 4px;">Texto-base principal</div>
+    </div>
+    <div class="verse-item">
+      <span class="ref">Romanos 12:10</span>
+      <em>"Com amor fraternal, tenham ternos sentimentos uns pelos outros. Tomem a iniciativa em honrar uns aos outros."</em>
+    </div>
+    <div class="verse-item">
+      <span class="ref">Salmo 130:3</span>
+      <em>"Se Jeová ficasse observando os erros, quem ficaria de pé?"</em>
+      <div style="color: var(--muted); font-size: 12px; margin-top: 4px;">Sobre Jeová não esperar perfeição</div>
+    </div>
+    <div class="verse-item">
+      <span class="ref">Colossenses 3:13</span>
+      <em>"Continuem a suportar uns aos outros e a perdoar uns aos outros liberalmente, mesmo que alguém tenha razão para queixa."</em>
+    </div>
+    <div class="verse-item">
+      <span class="ref">Colossenses 3:14</span>
+      <em>"Mas, além de todas essas coisas, revistam-se de amor, pois é o perfeito vínculo de união."</em>
+    </div>
+    <div class="verse-item">
+      <span class="ref">1 Pedro 4:8</span>
+      <em>"Acima de tudo, tenham intenso amor uns pelos outros, porque o amor cobre multidão de pecados."</em>
+    </div>
+  </div>
+</div>
+
+<!-- ABA: FLUXOGRAMA -->
+<div class="tab-panel" data-panel="fluxo">
+  <div class="section-title">🗺️ Fluxograma do Discurso</div>
+  <div class="flow-container">
+    <svg class="flow-svg" viewBox="0 0 1100 1400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L9,3 z" fill="#8b949e"/>
+        </marker>
+        <linearGradient id="gIntro" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#1a4a7a"/>
+          <stop offset="100%" stop-color="#0a2540"/>
+        </linearGradient>
+        <linearGradient id="gBase" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2ea043"/>
+          <stop offset="100%" stop-color="#1a4a2a"/>
+        </linearGradient>
+        <linearGradient id="gIllust" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#79c0ff"/>
+          <stop offset="100%" stop-color="#1f6feb"/>
+        </linearGradient>
+        <linearGradient id="gConcl" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#f0b941"/>
+          <stop offset="100%" stop-color="#9e6a03"/>
+        </linearGradient>
+      </defs>
+
+      <!-- TÍTULO -->
+      <rect x="280" y="10" width="540" height="50" rx="8" fill="url(#gIntro)" stroke="#2ea043" stroke-width="2"/>
+      <text x="550" y="35" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">S34 t.72 — O AMOR IDENTIFICA</text>
+      <text x="550" y="52" text-anchor="middle" fill="#c9d1d9" font-size="13" font-style="italic">os cristãos verdadeiros</text>
+
+      <!-- 1. INTRODUÇÃO -->
+      <rect class="flow-block" data-section="s1" x="40" y="100" width="1020" height="120" rx="8" fill="url(#gIntro)" stroke="#2ea043" stroke-width="2"/>
+      <text x="60" y="125" fill="#fff" font-size="14" font-weight="700">① INTRODUÇÃO — A busca pela verdadeira religião</text>
+      <text x="60" y="150" fill="#c9d1d9" font-size="12">Pessoas sinceras buscam a organização verdadeira → decepcionam-se</text>
+      <text x="60" y="168" fill="#c9d1d9" font-size="12">porque não encontram AMOR verdadeiro praticado.</text>
+      <text x="60" y="195" fill="#79c0ff" font-size="11" font-style="italic">→ Ilustração: vagalume + zebra (sinal característico)</text>
+
+      <line x1="550" y1="220" x2="550" y2="240" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 2. TEXTO-BASE: João 13:34,35 -->
+      <rect class="flow-block" data-section="s2" x="200" y="245" width="700" height="100" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="3"/>
+      <text x="550" y="270" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">② TEXTO-BASE: João 13:34, 35</text>
+      <text x="550" y="295" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Novo mandamento: amem-se uns aos outros"</text>
+      <text x="550" y="312" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Nisto todos saberão que vocês são meus discípulos"</text>
+      <text x="550" y="332" text-anchor="middle" fill="#f0b941" font-size="11">Amor abnegado (≠ amor próprio)</text>
+
+      <!-- 3. ROMANOS 12:10 -->
+      <line x1="550" y1="345" x2="550" y2="365" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+      <rect class="flow-block" data-section="s3" x="200" y="370" width="700" height="85" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="2"/>
+      <text x="550" y="395" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">③ Romanos 12:10 — Amor fraternal</text>
+      <text x="550" y="418" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Tomem a INICIATIVA em honrar uns aos outros"</text>
+      <text x="550" y="435" text-anchor="middle" fill="#f0b941" font-size="11">Não esperar reciprocidade</text>
+
+      <line x1="550" y1="455" x2="550" y2="475" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 4. ILUSTRAÇÃO: GNUS -->
+      <rect class="flow-block" data-section="s4" x="40" y="480" width="500" height="100" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="60" y="505" fill="#fff" font-size="14" font-weight="700">④ Ilustração: Gnus × Elefantes</text>
+      <text x="60" y="528" fill="#c9d1d9" font-size="11">🐃 Gnus: "cada um por si" no perigo</text>
+      <text x="60" y="544" fill="#c9d1d9" font-size="11">🐘 Elefantes: juntam-se, defendem-se</text>
+      <text x="60" y="563" fill="#f0b941" font-size="11" font-style="italic">→ AssIM somos nós: nos unimos na dificuldade</text>
+
+      <!-- 4b. AMOR PRA DE FORA -->
+      <rect class="flow-block" data-section="s5" x="560" y="480" width="500" height="100" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="580" y="505" fill="#fff" font-size="14" font-weight="700">⑤ Amor pra DE FORA — A pregação</text>
+      <text x="580" y="528" fill="#c9d1d9" font-size="11">Não por escolas/creches/cestas básicas</text>
+      <text x="580" y="544" fill="#c9d1d9" font-size="11">Mas amorosamente: sol, chuva, pregação</text>
+      <text x="580" y="563" fill="#f0b941" font-size="11" font-style="italic">→ Elas conhecem a Jeová e têm esperança</text>
+
+      <line x1="550" y1="580" x2="550" y2="600" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 6. ILUSTRAÇÃO FLORESTA -->
+      <rect class="flow-block" data-section="s6" x="40" y="605" width="500" height="115" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="60" y="630" fill="#fff" font-size="14" font-weight="700">⑥ Ilustração: Floresta verde</text>
+      <text x="60" y="653" fill="#c9d1d9" font-size="11">Longe: exuberância, verde</text>
+      <text x="60" y="669" fill="#c9d1d9" font-size="11">Perto: cobras, lagartos, escorpiões</text>
+      <text x="60" y="688" fill="#f0b941" font-size="11" font-style="italic">→ Pode haver atrito, mas há reparação</text>
+
+      <!-- 6b. PERDÃO -->
+      <rect class="flow-block" data-section="s7" x="560" y="605" width="500" height="115" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="580" y="630" fill="#fff" font-size="14" font-weight="700">⑦ Perdão — Colossenses 3:13</text>
+      <text x="580" y="653" fill="#c9d1d9" font-size="11" font-style="italic">"Perdoem LIBERALMENTE uns aos outros"</text>
+      <text x="580" y="669" fill="#c9d1d9" font-size="11">Pedro, Paulo — Jeová entende imperfeição</text>
+      <text x="580" y="688" fill="#f0b941" font-size="11" font-style="italic">→ Reconhecer, eliminar, seguir a Jeová</text>
+
+      <line x1="550" y1="720" x2="550" y2="740" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 8. CARRO + 9. ÁCIDO -->
+      <rect class="flow-block" data-section="s8" x="40" y="745" width="500" height="110" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="60" y="770" fill="#fff" font-size="14" font-weight="700">⑧ Carro sem lubrificante</text>
+      <text x="60" y="793" fill="#c9d1d9" font-size="11">Motor bonito SEM lubrificante trava</text>
+      <text x="60" y="809" fill="#c9d1d9" font-size="11">Engrenagens rangem, desgastam</text>
+      <text x="60" y="828" fill="#f0b941" font-size="11" font-style="italic">→ O AMOR é o lubrificante da união</text>
+
+      <rect class="flow-block" data-section="s9" x="560" y="745" width="500" height="110" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
+      <text x="580" y="770" fill="#fff" font-size="14" font-weight="700">⑨ Ácido — Ódio guardado</text>
+      <text x="580" y="793" fill="#c9d1d9" font-size="11">Ácido corrói recipiente forte</text>
+      <text x="580" y="809" fill="#c9d1d9" font-size="11">Ódio guardado: mente e coração</text>
+      <text x="580" y="828" fill="#f0b941" font-size="11" font-style="italic">→ Senso de urgência pra eliminar</text>
+
+      <line x1="550" y1="855" x2="550" y2="875" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 10. 1 PEDRO 4:8 -->
+      <rect class="flow-block" data-section="s10" x="200" y="880" width="700" height="95" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="2"/>
+      <text x="550" y="905" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">⑩ 1 Pedro 4:8 — Amor INTENSO</text>
+      <text x="550" y="928" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Tenham INTENSO amor uns pelos outros, porque o amor cobre multidão de pecados"</text>
+      <text x="550" y="945" text-anchor="middle" fill="#f0b941" font-size="11">Como corda de violão afinada</text>
+      <text x="550" y="962" text-anchor="middle" fill="#79c0ff" font-size="11" font-style="italic">→ Gravura das duas amigas (urgência no perdão)</text>
+
+      <line x1="550" y1="975" x2="550" y2="995" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 11. CONCLUSÃO -->
+      <rect class="flow-block" data-section="s11-12" x="200" y="1000" width="700" height="180" rx="8" fill="url(#gConcl)" stroke="#f0b941" stroke-width="3"/>
+      <text x="550" y="1025" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">⑪ CONCLUSÃO — O amor identifica</text>
+      <text x="550" y="1048" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">os CRISTÃOS VERDADEIROS</text>
+      <text x="550" y="1075" text-anchor="middle" fill="#fff" font-size="11" font-style="italic">Colossenses 3:14 — "Revistam-se de amor"</text>
+      <text x="550" y="1092" text-anchor="middle" fill="#fff" font-size="11" font-style="italic">É o "perfeito vínculo de união"</text>
+      <text x="550" y="1120" text-anchor="middle" fill="#79c0ff" font-size="11">Fio desencapado → coberto com amor (fita isolante)</text>
+      <text x="550" y="1137" text-anchor="middle" fill="#79c0ff" font-size="11">O ar que se respira no Salão do Reino é AMOR</text>
+      <text x="550" y="1158" text-anchor="middle" fill="#f0b941" font-size="13" font-weight="700">Não é miragem — é água de verdade</text>
+
+      <!-- RODAPÉ -->
+      <text x="550" y="1230" text-anchor="middle" fill="#8b949e" font-size="11" font-style="italic">Fluxo: Introdução → Texto-base → Aplicação (3 ilustrações) → Perdão (3 ilustrações) → Conclusão</text>
+      <text x="550" y="1252" text-anchor="middle" fill="#8b949e" font-size="11" font-style="italic">Textos-base: João 13:34,35 · Romanos 12:10 · Colossenses 3:13,14 · 1 Pedro 4:8</text>
+      <text x="550" y="1274" text-anchor="middle" fill="#2ea043" font-size="11" font-weight="700">✨ "Nisto todos saberão que vocês são meus discípulos: se tiverem amor entre si" — João 13:35 ✨</text>
+    </svg>
+
+    <div class="flow-legend">
+      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#1a4a7a,#0a2540);"></div>
+  <!-- Modal para conteúdo do fluxograma -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <h3 id="modalTitle">Conteúdo</h3>
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <p class="modal-hint">👆 Clique em qualquer bloco do fluxograma acima para ver o conteúdo dessa seção aqui.</p>
+    </div>
+  </div>
+</div> Introdução</div>
+      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#2ea043,#1a4a2a);"></div> Pontos principais (texto-base)</div>
+      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#79c0ff,#1f6feb);"></div> Ilustrações</div>
+      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#f0b941,#9e6a03);"></div> Conclusão</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  // Tabs
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.tab;
+      document.querySelector(`[data-panel="${target}"]`).classList.add('active');
+    });
+  });
+
+  // TOC links: switch to Conteudo tab + smooth scroll to anchor
+  document.querySelectorAll('.toc-list a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = a.getAttribute('href').slice(1);
+      // Switch to Conteudo tab
+      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      const conteudoTab = document.querySelector('[data-tab="conteudo"]');
+      const conteudoPanel = document.querySelector('[data-panel="conteudo"]');
+      if (conteudoTab) conteudoTab.classList.add('active');
+      if (conteudoPanel) conteudoPanel.classList.add('active');
+      // Scroll to section
+      const target = document.getElementById(targetId);
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({behavior: 'smooth', block: 'start'});
+          // Highlight briefly
+          target.style.transition = 'background 0.4s';
+          target.style.background = 'rgba(240, 185, 65, 0.12)';
+          setTimeout(() => { target.style.background = ''; }, 1200);
+        }, 50);
+      }
+    });
+  });
+
+  // Search
+  const search = document.getElementById('searchInput');
+  if (search) {
+    search.addEventListener('input', e => {
+      const q = e.target.value.toLowerCase().trim();
+      const paras = document.querySelectorAll('#parags-container .paragraph');
+      paras.forEach(p => {
+        const txt = p.textContent.toLowerCase();
+        const match = !q || txt.includes(q);
+        p.style.display = match ? '' : 'none';
+      });
+      // hide section headers when all paragraphs in that section are hidden
+      document.querySelectorAll('.section-block').forEach(sec => {
+        const visibleParas = sec.querySelectorAll('.paragraph:not([style*="display: none"])');
+        const totalParas = sec.querySelectorAll('.paragraph');
+        sec.style.display = (totalParas.length > 0 && visibleParas.length === 0) ? 'none' : '';
+      });
+    });
+  }
+})();
+
+// Sidebar toggle (mobile)
+const sb = document.getElementById('conteudoSidebar');
+const overlay = document.getElementById('sidebarOverlay');
+const menuBtn = document.getElementById('mobileMenuBtn');
+if (menuBtn && sb) {
+  menuBtn.addEventListener('click', () => {
+    sb.classList.toggle('open');
+    if (overlay) overlay.classList.toggle('show');
+  });
+}
+if (overlay) {
+  overlay.addEventListener('click', () => {
+    sb.classList.remove('open');
+    overlay.classList.remove('show');
+  });
+}
+
+// Close sidebar when clicking a link on mobile
+document.querySelectorAll('.sidebar-link').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 900) {
+      sb.classList.remove('open');
+      if (overlay) overlay.classList.remove('show');
+    }
+  });
+});
+
+// Sidebar scroll-spy: highlight current section
+const sections = document.querySelectorAll('.section-block');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      sidebarLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// === FLUXOGRAMA INTERATIVO ===
+const flowPanel = document.getElementById('flowDetailPanel');
+const flowBlocks = document.querySelectorAll('.flow-block');
+const flowData = {
+  s1: 'Introdução — A busca pela verdadeira religião',
+  s2: 'O amor é o sinal característico (João 13:34,35)',
+  s3: 'Romanos 12:10 — Amor fraternal e iniciativa',
+  s4: 'Ilustração: Gnus × Elefantes',
+  s5: 'Amor pra DE FORA — A pregação',
+  s6: 'Ilustração: A floresta verde (miragem)',
+  s7: 'Perdão (Colossenses 3:13)',
+  s8: 'Ilustração: O carro sem lubrificante',
+  s9: 'Ilustração: O ácido (ódio)',
+  s10: '1 Pedro 4:8 — Amor intenso',
+  s11: 'Ilustração: Gravura das duas amigas',
+  s12: 'Conclusão — Colossenses 3:14 + Miragem'
+};
+const paragraphsBySection = {};
+sections.forEach(sec => {
+  const sid = sec.id;
+  const paras = sec.querySelectorAll('.paragraph');
+  paragraphsBySection[sid] = Array.from(paras).map(p => ({
+    text: p.textContent,
+    classes: p.className
+  }));
+});
+
+const modalOverlay = document.getElementById('modalOverlay');
+const modalBody = document.getElementById('modalBody');
+const modalTitle = document.getElementById('modalTitle');
+const modalClose = document.getElementById('modalClose');
+
+function closeModal() {
+  if (modalOverlay) modalOverlay.classList.remove('show');
+  flowBlocks.forEach(b => b.classList.remove('expanded'));
+}
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', e => {
+    if (e.target === modalOverlay) closeModal();
+  });
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+flowBlocks.forEach(block => {
+  block.addEventListener('click', () => {
+    const rawSid = block.dataset.section;
+    if (!rawSid) return;
+    // expand this block visually
+    flowBlocks.forEach(b => b.classList.remove('expanded'));
+    block.classList.add('expanded');
+    // Support compound sections (e.g. "s11-12")
+    const sids = rawSid.split('-');
+    let panelHtml = '';
+    let firstTitle = '';
+    sids.forEach((sid, idx) => {
+      const title = flowData[sid];
+      const paras = paragraphsBySection[sid] || [];
+      if (idx === 0) firstTitle = title;
+      const heading = sid.replace('s','') + (sids.length > 1 ? ' ' : '');
+      panelHtml += `<div class="fd-title" style="color: var(--accent); font-size: 16px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border);">${heading}. ${title}</div>`;
+      paras.forEach(p => {
+        const cls = (p.classes.includes('para-high') ? 'high' : '') + (p.classes.includes('para-illust') ? ' illust' : '');
+        const m = p.text.match(/¶(\d+)/);
+        const num = m ? m[1] : '';
+        const cleanText = p.text.replace(/¶\d+\s*/, '');
+        panelHtml += `<div class="fd-para ${cls.trim()}"><span class="fd-num">¶${num}</span>${cleanText}</div>`;
+      });
+      if (idx < sids.length - 1) {
+        panelHtml += '<hr>';
+      }
+    });
+    if (modalBody) modalBody.innerHTML = panelHtml;
+    if (modalTitle) {
+      modalTitle.textContent = sids.length > 1
+        ? `${sids[0].replace('s','')}–${sids[sids.length-1].replace('s','')}. ${firstTitle}`
+        : `${sids[0].replace('s','')}. ${firstTitle}`;
+    }
+    if (modalOverlay) modalOverlay.classList.add('show');
+  });
+});
+
+</script>
+</body>
+</html>
