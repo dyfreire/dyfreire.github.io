@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎤 Discursos Públicos — Vida e Ministério</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6c757d;
+    --border: #dee2e6;
+    --shadow: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
+    --link: #2563eb;
+    --gold: #d4a849;
+    --gold-bg: #fef3c7;
+    --gold-text: #92400e;
+  }
+  [data-theme="dark"] {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #334155;
+    --shadow: 0 2px 8px rgba(0,0,0,.3);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,.5);
+    --link: #60a5fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    transition: background .3s, color .3s;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1e40af, #7c3aed, #be185d);
+    color: white;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+  .hero .subtitle { font-size: 1.05rem; opacity: .95; }
+  .hero .lema { font-size: .9rem; opacity: .8; font-style: italic; margin-top: 6px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
+  .controls { display: flex; gap: 8px; margin-bottom: 24px; justify-content: center; }
+  .btn {
+    background: var(--card); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 16px; font-size: .9rem; cursor: pointer;
+    font-weight: 500;
+  }
+  .btn:hover { background: var(--gold-bg); color: var(--gold-text); }
+  .intro {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px; margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .intro p { font-size: 1rem; line-height: 1.7; }
+
+  .discursos {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) {
+    .discursos { grid-template-columns: 1fr 1fr; }
+  }
+
+  .discurso-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+    box-shadow: var(--shadow);
+    text-decoration: none; color: var(--text);
+    display: block; transition: transform .2s, box-shadow .2s;
+    border-top: 4px solid var(--gold);
+  }
+  .discurso-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .discurso-card .badge {
+    display: inline-block;
+    background: var(--gold-bg); color: var(--gold-text);
+    padding: 4px 10px; border-radius: 999px;
+    font-size: .7rem; font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .discurso-card .emoji-big { font-size: 2.5rem; margin: 4px 0; }
+  .discurso-card h2 { color: var(--link); font-size: 1.2rem; margin-bottom: 6px; }
+  .discurso-card .desc { font-size: .9rem; color: var(--muted); margin-bottom: 12px; }
+  .discurso-card ul {
+    list-style: none; padding: 0; margin: 12px 0;
+    font-size: .85rem;
+  }
+  .discurso-card ul li { padding: 3px 0; display: flex; align-items: center; gap: 6px; }
+  .discurso-card ul li::before { content: "✓"; color: var(--gold); font-weight: 700; }
+  .discurso-card .open-link {
+    display: inline-block; margin-top: 12px;
+    color: var(--link); font-weight: 600; font-size: .9rem;
+  }
+  .discurso-card .open-link::after { content: " →"; transition: margin-left .2s; }
+  .discurso-card:hover .open-link::after { margin-left: 4px; }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: .9rem;
+    text-decoration: none;
+  }
+  .back:hover { color: var(--link); }
+
+  footer {
+    text-align: center; padding: 24px 16px;
+    font-size: .8rem; color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="emoji">🎤</div>
+    <h1>Discursos Públicos</h1>
+    <div class="subtitle">Material preparado para a reunião de meio de semana</div>
+    <div class="lema">"Tenhamos nós sempre igual zelo pela palavra de Jeová!" — Toda a Escritura § 36</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <button class="btn" onclick="toggleTheme()">🌓 Alternar tema</button>
+  </div>
+
+  <a href="../" class="back">← Voltar para a página principal</a>
+
+  <div class="intro">
+    <p>Estes são <strong>discursos da seção "Tesouros da Palavra de Deus"</strong> da reunião Vida e Ministério, com todo o material fonte, roteiro narrativo, pontos altos e notas do orador.</p>
+    <p style="margin-top: 8px;">📖 <strong>Texto NWT exato</strong> · 📚 <strong>Sentinelas literais</strong> · 🎤 <strong>Roteiro pronto</strong></p>
+  </div>
+
+  <div class="discursos">
+    <a href="jeremias-2026-07-27.html" class="discurso-card">
+      <span class="badge">27 Jul–2 Ago 2026 · 10 min</span>
+      <div class="emoji-big">🕯️</div>
+      <h2>Ele pregou com coragem — Jeremias 20</h2>
+      <p class="desc">Jeremias no tronco, o "mas" que muda tudo, a Palavra como fogo.</p>
+      <ul>
+        <li>Texto-base ★ · Jer 20:9b, 11</li>
+        <li>Sentinelas w11 15/3 § 9 + w10 15/2 §§ 8-9</li>
+        <li>Insight (it-2) + "Toda a Escritura" (si_T)</li>
+        <li>Ilustração da vela (Mar 4:21) — crianças e idosos</li>
+        <li>Aplicação dupla: pregação + congregação</li>
+      </ul>
+      <span class="open-link">Abrir discurso</span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>🎤 Discursos Públicos · Reunião Vida e Ministério 2026</p>
+  <p>Hospedado no GitHub Pages · dyfreire.github.io</p>
+  <p>Texto bíblico: Tradução do Novo Mundo (NWT) · 2026</p>
+</footer>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.body.setAttribute('data-theme', saved);
+</script>
+
+</body>
+</html>

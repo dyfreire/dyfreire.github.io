@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discurso 10 min — Jeremias: Ele pregou com coragem (27 Jul–2 Ago 2026)</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a1f29;
+    --surface-2: #232a36;
+    --border: #2e3743;
+    --text: #e4e7eb;
+    --text-dim: #a0a8b5;
+    --text-muted: #6b7484;
+    --teal: #5fb3a8;
+    --teal-dark: #2a6b65;
+    --gold: #d4a849;
+    --gold-dark: #a08334;
+    --red: #c75a5a;
+    --blue: #6b8db5;
+    --purple: #9b7eb5;
+    --green: #6ba86b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  /* Header */
+  header.app-header {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, #1a4046 100%);
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--teal);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  .hdr-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge.week { background: var(--gold); color: #1a1f29; }
+  .badge.duration { background: rgba(255,255,255,0.2); color: var(--text); }
+  .badge.theme { background: var(--teal); color: #0f1419; }
+  header.app-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #fff;
+  }
+  header.app-header .subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+  }
+  /* Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px);
+  }
+  /* Sidebar */
+  nav.sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    position: sticky;
+    top: 120px;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  nav.sidebar ul { list-style: none; }
+  nav.sidebar a {
+    display: block;
+    padding: 10px 24px;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  nav.sidebar a:hover {
+    background: var(--surface-2);
+    color: var(--text);
+    border-left-color: var(--teal);
+  }
+  nav.sidebar a.active {
+    background: var(--surface-2);
+    color: var(--teal);
+    border-left-color: var(--teal);
+    font-weight: 600;
+  }
+  /* Main content */
+  main.content {
+    padding: 32px 48px;
+    max-width: 1100px;
+  }
+  h2.section {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--teal);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 18px;
+    margin: 24px 0 12px;
+    color: var(--gold);
+  }
+  h4 {
+    font-size: 15px;
+    margin: 16px 0 8px;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  p { margin-bottom: 12px; }
+  /* Verse box */
+  .verse-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--teal);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  .verse-box .ref {
+    display: inline-block;
+    background: var(--teal);
+    color: #0f1419;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .verse-box.base {
+    border-left-color: var(--gold);
+    background: linear-gradient(90deg, rgba(212,168,73,0.08) 0%, var(--surface) 30%);
+  }
+  .verse-box.base .ref {
+    background: var(--gold);
+    color: #1a1f29;
+    position: relative;
+  }
+  .verse-box.base .ref::after {
+    content: " ★";
+    color: var(--gold-dark);
+    font-size: 14px;
+  }
+  /* Citation chip (inline) */
+  .verse-chip {
+    display: inline-block;
+    background: var(--surface-2);
+    color: var(--teal);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    font-family: 'SF Mono', Menlo, monospace;
+    margin: 0 2px;
+    border: 1px solid var(--border);
+  }
+  .verse-chip.base {
+    background: var(--gold);
+    color: #1a1f29;
+    border-color: var(--gold-dark);
+  }
+  .verse-chip.base::after { content: " ★"; color: var(--gold-dark); }
+  .verse-chip.pub {
+    background: var(--surface-2);
+    color: var(--purple);
+    border-color: var(--purple);
+    font-style: italic;
+  }
+  /* Timeline / structure */
+  .timeline {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px 0;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-item .time {
+    font-weight: 700;
+    color: var(--gold);
+    font-family: 'SF Mono', Menlo, monospace;
+    font-size: 14px;
+  }
+  .timeline-item .body strong { color: var(--teal); }
+  .timeline-item .icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .icon.intro { background: var(--blue); }
+  .icon.perseguido { background: var(--red); }
+  .icon.desanimado { background: var(--purple); }
+  .icon.coragem { background: var(--green); }
+  .icon.conclusao { background: var(--gold); }
+  /* Highlight points */
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .highlight-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    border-left: 4px solid var(--gold);
+  }
+  .highlight-card .keyword {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .highlight-card .text { font-size: 14px; color: var(--text-dim); }
+  /* Discurso (roteiro) */
+  .speech {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 32px;
+    margin: 16px 0;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+  .speech .section-marker {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 24px 0 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .speech .section-marker:first-child { margin-top: 0; }
+  .speech p { margin-bottom: 14px; }
+  .speech em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .speech .pause {
+    display: inline-block;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.85em;
+    margin: 0 6px;
+  }
+  .speech .emphasis {
+    color: var(--teal);
+    font-weight: 600;
+  }
+  /* Source citations */
+  .source-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .source-card .source-title {
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .source-card .source-meta {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-family: 'SF Mono', Menlo, monospace;
+  }
+  .source-card .source-quote {
+    font-style: italic;
+    color: var(--text-dim);
+    border-left: 2px solid var(--purple);
+    padding-left: 12px;
+    margin: 8px 0;
+  }
+  .source-card .source-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: var(--surface-2);
+    color: var(--teal);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'SF Mono', Menlo, monospace;
+  }
+  .source-card .source-link:hover { background: var(--teal); color: #0f1419; }
+  .source-card .label-pending {
+    display: inline-block;
+    background: var(--gold);
+    color: #1a1f29;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: 8px;
+  }
+  /* Notes */
+  .notes-box {
+    background: var(--surface-2);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+  .notes-box strong { color: var(--gold); }
+  /* Footer */
+  footer {
+    padding: 24px 32px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  /* Responsive */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+    main.content { padding: 24px; }
+  }
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  /* Search/filter */
+  .filter-input {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .filter-input:focus { outline: none; border-color: var(--teal); }
+  /* Print */
+  @media print {
+    nav.sidebar, .tabs { display: none; }
+    .layout { grid-template-columns: 1fr; }
+    .tab-content { display: block !important; }
+    body { background: white; color: black; }
+    .verse-box, .timeline, .speech, .source-card, .highlight-card { background: white; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="hdr-badges">
+    <span class="badge week">27 Jul – 2 Ago 2026</span>
+    <span class="badge duration">10 min</span>
+    <span class="badge theme">Tesouros da Palavra de Deus</span>
+  </div>
+  <h1>Ele pregou com coragem</h1>
+  <div class="subtitle">Jeremias 20:2, 8, 9a, 9b, 11 · w11 15/3 30 § 9 · w10 15/2 7 §§ 8-9</div>
+</header>
+
+<div class="layout">
+    <nav class="sidebar">
+    <ul>
+      <li><a href="#visao-geral" class="active">📋 Visão geral</a></li>
+      <li><a href="#material-fonte">📖 Material fonte</a></li>
+      <li><a href="#versiculos">📕 Versículos NWT</a></li>
+      <li><a href="#apoio">📚 Material de apoio</a></li>
+      <li><a href="#toda-escritura">📘 Toda a Escritura</a></li>
+      <li><a href="#contexto">🔍 Contexto histórico</a></li>
+      <li><a href="#estrutura">⏱️ Estrutura (10 min)</a></li>
+      <li><a href="#roteiro">🎤 Roteiro escrito</a></li>
+      <li><a href="#pontos-altos">⭐ Pontos altos</a></li>
+      <li><a href="#ilustracoes">💡 Ilustrações possíveis</a></li>
+      <li><a href="#notas-orador">📝 Notas do orador</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+
+    <!-- ============== VISÃO GERAL ============== -->
+    <section id="visao-geral">
+      <h2 class="section">📋 Visão geral</h2>
+      <p>Discurso de <strong>10 minutos</strong> da seção <em>Tesouros da Palavra de Deus</em> para a semana de 27 de julho a 2 de agosto de 2026. Texto-base: <span class="verse-chip base">Jer 20:9b, 11</span>. Material de apoio: <span class="verse-chip pub">w11 15/3 30 § 9</span> e <span class="verse-chip pub">w10 15/2 7 §§ 8-9</span>.</p>
+      <p>Fontes extras (não-pedidas, mas valiosas) incluídas para enriquecimento:</p>
+      <ul style="padding-left: 20px; color: var(--text-dim); margin-bottom: 12px;">
+        <li><strong>📘 Toda a Escritura</strong> — estudo completo do livro de Jeremias (39 parágrafos)</li>
+        <li><strong>🔍 Insight (it_T)</strong> — verbete "Jeremias" + destaques do livro de Jeremias</li>
+        <li><strong>📕 Versículos complementares</strong> — Jer 1:4-6, Jer 38:4, Mat 16:13-14, Heb 4:12, 2 Pe 1:21, 1 Co 2:10 (texto NWT exato)</li>
+      </ul>
+      <div class="notes-box">
+        <strong>Como ler este HTML:</strong> todo o material bíblico e das Sentinelas está com o <strong>texto exato</strong> (você não precisa abrir nada para conferir). A aba <em>Roteiro escrito</em> é uma proposta de palestra pronta para adaptar; o tom é poético/surreal, com metáforas. A aba <em>Material fonte</em> traz as citações na íntegra, caso você queira ler e recortar à sua maneira. A aba <em>Toda a Escritura</em> é perfeito para entender o livro inteiro.
+      </div>
+    </section>
+
+    <!-- ============== MATERIAL FONTE ============== -->
+    <section id="material-fonte">
+      <h2 class="section">📖 Material fonte (tudo que você precisa ler)</h2>
+
+      <h3>1. Texto bíblico base — Jeremias 20:2, 8, 9a, 9b, 11 (NWT, texto exato)</h3>
+      <p>A citação central aparece duas vezes na apostila: no marcador da seção (Jer 20:2 e 8) e na linha do terceiro ponto (Jer 20:9a; 9b, 11). Os versículos <strong>2</strong>, <strong>8</strong>, <strong>9</strong> e <strong>11</strong> do capítulo 20 formam a espinha dorsal do discurso.</p>
+
+      <div class="verse-box">
+        <span class="ref">Jeremias 20:2</span>
+        Pasur golpeou então o profeta Jeremias e o pôs no tronco que havia no Portão Superior de Benjamim, na casa de Jeová.
+      </div>
+      <div class="verse-box">
+        <span class="ref">Jeremias 20:8</span>
+        Pois, sempre que falo, devo gritar e proclamar: "Violência e destruição!" A palavra de Jeová tem sido para mim um motivo de insultos e de zombarias o dia inteiro.
+      </div>
+      <div class="verse-box base">
+        <span class="ref">Jeremias 20:9a</span>
+        Então eu disse: "Não o mencionarei mais, nem falarei mais em seu nome." <em>(texto-base — momento de desânimo)</em>
+      </div>
+      <div class="verse-box base">
+        <span class="ref">Jeremias 20:9b</span>
+        Mas a sua palavra se tornou como um fogo ardente no meu coração, preso nos meus ossos; fiquei exausto de contê-la, não pude mais aguentar. <em>(texto-base — a chama interna)</em>
+      </div>
+      <div class="verse-box">
+        <span class="ref">Jeremias 20:11</span>
+        Mas Jeová estava comigo como um guerreiro atemorizante. Por isso os que me perseguem tropeçarão e não vencerão. Ficarão muito envergonhados, pois não serão bem-sucedidos. Sua humilhação será eterna; nunca será esquecida.
+      </div>
+
+      <div class="notes-box">
+        <strong>Por que Jer 20:9b e 11 são marcados como texto-base ★</strong> — Esses dois versículos são o clímax do raciocínio: Jeremias <em>quis</em> parar, mas a mensagem era quente demais para guardar; e, mesmo quando os inimigos vieram, Jeová estava com ele. É a resposta direta à pergunta do título: <em>como ele pregou com coragem?</em>
+      </div>
+
+      <h3>2. Material de apoio — Sentinelas (w11 15/3 e w10 15/2)</h3>
+      <p>As duas citações <strong>complementam Jeremias 20:9b, 11</strong> no roteiro. <strong>Texto literal</strong> copiado da sua mensagem abaixo.</p>
+
+      <div class="source-card">
+        <div class="source-title">w11 15/3 30 § 9 — A Sentinela (anúncio), 15 de março de 2011</div>
+        <div class="source-meta">Pág. 30, parágrafo 9</div>
+        <p>Complementa <span class="verse-chip base">Jer 20:9b, 11</span> mostrando como Jeová ajudou Jeremias a continuar fielmente no serviço, apesar da oposição.</p>
+        <div class="source-quote"><strong>§ 9</strong> — "Quando Jeová de início falou com ele, Jeremias tentou escusar-se da obrigação. Vemos assim que a coragem e a firmeza que ele mais tarde demonstrou não eram qualidades inatas. Não, a força extraordinária que Jeremias demonstrou durante sua carreira profética vinha realmente de sua plena confiança em Deus. De fato, Jeová estava com o profeta 'como poderoso terrível', no sentido de que o apoiava e fortalecia para cuidar de sua designação. (<span class="verse-chip">Jer. 20:11</span>) A fama de Jeremias como homem destemido e corajoso era tão grande que, nos dias do ministério terrestre de Jesus, alguns achavam que Jesus fosse Jeremias ressuscitado! — <span class="verse-chip">Mat. 16:13, 14</span>."</div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-title">w10 15/2 7 §§ 8-9 — A Sentinela (anúncio), 15 de fevereiro de 2010</div>
+        <div class="source-meta">Pág. 7, parágrafos 8 e 9</div>
+        <p>Complementa <span class="verse-chip base">Jer 20:9b, 11</span> reforçando a ideia de que a coragem de Jeremias não era inerente a ele — vinha de Jeová, e a palavra de Deus é o que o impeliu a falar.</p>
+        <div class="source-quote"><strong>§ 8</strong> — "Reflita também sobre o que ajudou o profeta Jeremias a adquirir coragem. Quando Jeová o designou como profeta para as nações, ele respondeu: 'Eis que realmente nem sei falar, pois sou apenas rapaz.' (<span class="verse-chip">Jer. 1:4-6</span>) Com o tempo, porém, Jeremias se tornou tão persistente e enfático na pregação que muitos o encaravam como alarmista. (<span class="verse-chip">Jer. 38:4</span>) Por mais de 65 anos, ele proclamou corajosamente os julgamentos de Jeová. Por sua destemida pregação, Jeremias ficou tão conhecido em Israel que, uns 600 anos mais tarde, ao observarem a coragem de Jesus no falar, alguns achavam que ele fosse Jeremias ressuscitado. (<span class="verse-chip">Mat. 16:13, 14</span>) Como foi que o antes relutante profeta Jeremias venceu sua timidez? Ele diz: '[A palavra de Deus] mostrou ser no meu coração como um fogo aceso encerrado nos meus ossos; e fiquei fatigado de contê-lo.' (<span class="verse-chip">Jer. 20:9</span>) Sim, a palavra de Jeová deu forças a Jeremias e o impeliu a falar."</div>
+        <div class="source-quote"><strong>§ 9</strong> — "Na sua carta aos hebreus, o apóstolo Paulo escreveu: 'A palavra de Deus é viva e exerce poder, e é mais afiada do que qualquer espada de dois gumes, e penetra até a divisão da alma e do espírito, e das juntas e da sua medula, e é capaz de discernir os pensamentos e as intenções do coração.' (<span class="verse-chip">Heb. 4:12</span>) A mensagem, ou palavra, de Deus pode nos afetar assim como afetou Jeremias. Lembre-se: embora tenham sido usados homens para escrever a Bíblia, ela não é uma compilação de sabedoria humana, pois foi inspirada por Deus. Em <span class="verse-chip">2 Pedro 1:21</span>, lemos: 'A profecia nunca foi produzida pela vontade do homem, mas os homens falaram da parte de Deus conforme eram movidos por espírito santo.' Quando tiramos tempo para realizar um significativo estudo pessoal da Bíblia, a nossa mente absorve a mensagem inspirada por espírito santo. (Leia <span class="verse-chip">1 Coríntios 2:10</span>.) Essa mensagem poderá tornar-se 'como um fogo' dentro de nós, que não conseguiremos reter."</div>
+      </div>
+
+      <div class="notes-box">
+        <strong>💡 Como ler essas citações no palco:</strong> você não precisa ler o parágrafo inteiro. O ganho do discurso é capturar a <em>ideia-força</em> com suas palavras. As frases que valem ouro já estão marcadas na seção <em>Roteiro escrito</em>. Use as citações longas como material de leitura pessoal, não para citar em público.
+      </div>
+    </section>
+
+    <!-- ============== VERSÍCULOS DETALHADOS ============== -->
+    <section id="versiculos">
+      <h2 class="section">📕 Versículos NWT — detalhamento</h2>
+      <p>Para entender o fluxo de Jeremias 20, ajuda ler o capítulo inteiro (20:1-18). Aqui vai a leitura completa que dá contexto aos versículos-base:</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'tab-20-1a')">20:1-6 (Pasur)</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab-20-7-11')">20:7-11 (clímax)</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab-20-12-18')">20:12-18 (lamento)</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab-complementares')">Versículos complementares</button>
+      </div>
+
+      <div id="tab-20-1a" class="tab-content active">
+        <div class="verse-box"><span class="ref">20:1</span> Quando Pasur, filho de Imer, o sacerdote — ele era o principal supervisor na casa de Jeová — ouviu Jeremias profetizar essas coisas,</div>
+        <div class="verse-box"><span class="ref">20:2</span> Pasur golpeou então o profeta Jeremias e o pôs no tronco que havia no Portão Superior de Benjamim, na casa de Jeová.</div>
+        <div class="verse-box"><span class="ref">20:3</span> No dia seguinte, quando Pasur tirou Jeremias do tronco, Jeremias lhe disse: "Jeová não te chama pelo teu nome, Pasur, mas 'Magor-Missabibe'.</div>
+        <div class="verse-box"><span class="ref">20:4-6</span> Pois assim diz Jeová: 'Eis que vou fazer de ti motivo de terror para ti mesmo e para todos os teus amigos, e eles cairão pela espada dos seus inimigos, enquanto os teus próprios olhos verão isso. Entregarei todo o Judá na mão do rei de Babilônia, e ele os levará cativos para Babilônia e os matará pela espada. [...] Pasur, e todos os moradores da tua casa, iréis para o cativeiro; e chegarás a Babilônia, e ali morrerás, e ali serás sepultado, tu e todos os teus amigos, aos quais profetizaste falsamente.'"</div>
+      </div>
+
+      <div id="tab-20-7-11" class="tab-content">
+        <div class="verse-box"><span class="ref">20:7</span> Tu me seduziste, ó Jeová, e eu me deixei seduzir. Tu me agarraste e me venceste. Tornei-me objeto de zombaria o dia inteiro; todos zombam de mim.</div>
+        <div class="verse-box"><span class="ref">20:8</span> Pois, sempre que falo, devo gritar e proclamar: "Violência e destruição!" A palavra de Jeová tem sido para mim um motivo de insultos e de zombarias o dia inteiro.</div>
+        <div class="verse-box base"><span class="ref">20:9a</span> Então eu disse: "Não o mencionarei mais, nem falarei mais em seu nome."</div>
+        <div class="verse-box base"><span class="ref">20:9b</span> Mas a sua palavra se tornou como um fogo ardente no meu coração, preso nos meus ossos; fiquei exausto de contê-la, não pude mais aguentar.</div>
+        <div class="verse-box"><span class="ref">20:10</span> Pois ouvi a calúnia de muitos: "Terror de todos os lados! Denunciem-no! Vamos denunciá-lo!" Todos os meus amigos íntimos estão à espera da minha queda: "Talvez ele se deixe seduzir, e então nós o venceremos e nos vingaremos dele."</div>
+        <div class="verse-box base"><span class="ref">20:11</span> Mas Jeová estava comigo como um guerreiro atemorizante. Por isso os que me perseguem tropeçarão e não vencerão. Ficarão muito envergonhados, pois não serão bem-sucedidos. Sua humilhação será eterna; nunca será esquecida.</div>
+      </div>
+
+      <div id="tab-20-12-18" class="tab-content">
+        <div class="verse-box"><span class="ref">20:12</span> Mas tu, ó Jeová dos Exércitos, que examinas o justo, que vês as inclinações e o coração, deixa-me ver a tua vingança sobre eles, pois a ti revelei a minha causa.</div>
+        <div class="verse-box"><span class="ref">20:13</span> Cantai a Jeová! Louvai a Jeová! Pois ele salvou a vida do pobre das mãos dos malfeitores.</div>
+        <div class="verse-box"><span class="ref">20:14-18</span> Maldito o dia em que nasci! [...] Por que saí da madre, para ver tormento e tristeza, e para que os meus dias se consumam em vergonha?</div>
+      </div>
+
+      <div id="tab-complementares" class="tab-content">
+        <p>São versículos que aparecem naturalmente no roteiro, citados pelas Sentinelas. Texto NWT exato:</p>
+        <div class="verse-box"><span class="ref">Jeremias 1:4-6</span> Eu recebi a seguinte palavra de Jeová: "Antes de formá-lo no ventre da sua mãe, eu já conhecia você; e, antes de você nascer, eu o santifiquei. Eu o fiz profeta para as nações." <strong>Mas eu disse: "Ai, Soberano Senhor Jeová! Eu não sei falar, pois sou apenas um rapaz."</strong></div>
+        <div class="verse-box"><span class="ref">Jeremias 38:4</span> Os príncipes disseram ao rei: "Por favor, ordene que esse homem seja morto, pois com essas palavras ele está desanimando os soldados que restam nesta cidade e também todo o povo. Esse homem não busca a paz deste povo, mas a calamidade deles."</div>
+        <div class="verse-box"><span class="ref">Mateus 16:13, 14</span> Quando chegou à região de Cesareia de Filipe, Jesus perguntou aos seus discípulos: "Quem os homens dizem que o Filho do Homem é?" <strong>Responderam: "Alguns dizem João Batista; outros, Elias; e ainda outros, Jeremias ou um dos profetas."</strong></div>
+        <div class="verse-box"><span class="ref">Hebreus 4:12</span> <strong>Porque a palavra de Deus é viva e exerce poder, e é mais afiada do que qualquer espada de dois gumes, e penetra a ponto de fazer divisão entre a alma e o espírito, e entre as juntas e a medula, e é capaz de discernir os pensamentos e as intenções do coração.</strong></div>
+        <div class="verse-box"><span class="ref">2 Pedro 1:21</span> <strong>Porque a profecia nunca foi produzida pela vontade do homem, mas os homens falaram da parte de Deus conforme eram movidos por espírito santo.</strong></div>
+        <div class="verse-box"><span class="ref">1 Coríntios 2:10</span> <strong>Porque é a nós que Deus as revelou por meio do seu espírito, pois o espírito investiga todas as coisas, até mesmo as coisas profundas de Deus.</strong></div>
+        <div class="notes-box">
+          <strong>Por que esses versículos?</strong> Eles são citados pelas Sentinelas w11 15/3 30 § 9 e w10 15/2 7 §§ 8-9. Você não precisa citá-los todos no palco — escolha 1-2. Mas é bom ter o texto NWT aqui para conferir antes de adaptar.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== MATERIAL DE APOIO ============== -->
+    <section id="apoio">
+      <h2 class="section">📚 Material de apoio (Sentinelas)</h2>
+      <p>São dois artigos. <strong>Texto literal incluído</strong> direto da sua mensagem. Você pode ainda abrir no JW Library para conferir o contexto do artigo.</p>
+
+      <div class="source-card">
+        <div class="source-title">📘 w11 15/3 30 § 9 — "Mantenha-se ocupado no serviço de Jeová"</div>
+        <div class="source-meta">Sentinela (anúncio) · 15 de março de 2011 · p. 30, § 9</div>
+        <p><strong>Ideia-força:</strong> a coragem de Jeremias não era inata — vinha da confiança em Jeová, que o apoiava "como poderoso terrível". A fama de Jeremias era tão grande que, no tempo de Jesus, alguns achavam que Jesus fosse Jeremias ressuscitado.</p>
+        <div class="source-quote">"Quando Jeová de início falou com ele, Jeremias tentou escusar-se da obrigação. Vemos assim que a coragem e a firmeza que ele mais tarde demonstrou não eram qualidades inatas. Não, a força extraordinária que Jeremias demonstrou durante sua carreira profética vinha realmente de sua plena confiança em Deus. De fato, Jeová estava com o profeta 'como poderoso terrível', no sentido de que o apoiava e fortalecia para cuidar de sua designação. (<span class="verse-chip">Jer. 20:11</span>) A fama de Jeremias como homem destemido e corajoso era tão grande que, nos dias do ministério terrestre de Jesus, alguns achavam que Jesus fosse Jeremias ressuscitado! — <span class="verse-chip">Mat. 16:13, 14</span>."</div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-title">📘 w10 15/2 7 §§ 8-9 — "Jeová é 'um guerreiro poderoso em batalha'"</div>
+        <div class="source-meta">Sentinela (anúncio) · 15 de fevereiro de 2010 · p. 7, §§ 8-9</div>
+        <p><strong>Ideia-força:</strong> Jeremias começou tímido ("sou apenas rapaz") mas pregou por mais de 65 anos com tamanha coragem que lembrava Jeremias redivivo. A palavra de Deus virou um "fogo aceso" nos seus ossos. ²Pe 1:21 explica por quê: era "inspirada por espírito santo". E Heb 4:12 diz que essa palavra é "viva e exerce poder" — então pode nos afetar do mesmo jeito.</p>
+        <div class="source-quote"><strong>§ 8.</strong> "Reflita também sobre o que ajudou o profeta Jeremias a adquirir coragem. Quando Jeová o designou como profeta para as nações, ele respondeu: 'Eis que realmente nem sei falar, pois sou apenas rapaz.' (<span class="verse-chip">Jer. 1:4-6</span>) Com o tempo, porém, Jeremias se tornou tão persistente e enfático na pregação que muitos o encaravam como alarmista. (<span class="verse-chip">Jer. 38:4</span>) Por mais de 65 anos, ele proclamou corajosamente os julgamentos de Jeová. Por sua destemida pregação, Jeremias ficou tão conhecido em Israel que, uns 600 anos mais tarde, ao observarem a coragem de Jesus no falar, alguns achavam que ele fosse Jeremias ressuscitado. (<span class="verse-chip">Mat. 16:13, 14</span>) Como foi que o antes relutante profeta Jeremias venceu sua timidez? Ele diz: '[A palavra de Deus] mostrou ser no meu coração como um fogo aceso encerrado nos meus ossos; e fiquei fatigado de contê-lo.' (<span class="verse-chip">Jer. 20:9</span>) Sim, a palavra de Jeová deu forças a Jeremias e o impeliu a falar."</div>
+        <div class="source-quote"><strong>§ 9.</strong> "Na sua carta aos hebreus, o apóstolo Paulo escreveu: 'A palavra de Deus é viva e exerce poder, e é mais afiada do que qualquer espada de dois gumes, e penetra até a divisão da alma e do espírito, e das juntas e da sua medula, e é capaz de discernir os pensamentos e as intenções do coração.' (<span class="verse-chip">Heb. 4:12</span>) A mensagem, ou palavra, de Deus pode nos afetar assim como afetou Jeremias. [...] Essa mensagem poderá tornar-se 'como um fogo' dentro de nós, que não conseguiremos reter."</div>
+      </div>
+
+      <div class="notes-box">
+        <strong>🔗 Para abrir no JW Library:</strong> pesquise <em>Sentinela 15/3/2011, p. 30, § 9</em> e <em>Sentinela 15/2/2010, p. 7, §§ 8-9</em>. No roteiro, cito apenas as frases curtas — sem ler o parágrafo inteiro em público.
+      </div>
+    </section>
+
+    <!-- ============== TODA A ESCRITURA ============== -->
+    <section id="toda-escritura">
+      <h2 class="section">📘 Toda a Escritura — Estudo completo de Jeremias</h2>
+      <p>Trecho integral de <em>"Toda a Escritura É Inspirada por Deus e Proveitosa"</em> (si_T) sobre o livro bíblico número 24 — Jeremias. <strong>Texto verbatim</strong> extraído da JW Library local. 39 parágrafos + nota de rodapé. Clique nos versículos bíblicos para abrir direto na Bíblia.</p>
+
+      <div class="notes-box">
+        <strong>📌 Como ler este estudo:</strong> o documento é dividido em 3 partes — <em>Introdução</em> (escritor, lugares, comissão), <em>CONTEÚDO DE JEREMIAS</em> (parágrafos 6-35) e <em>POR QUE É PROVEITOSO</em> (parágrafos 36-39). Os parágrafos mais aproveitáveis para o seu discurso estão marcados com <span style="color: var(--gold); font-weight: 700;">⚡</span>.
+      </div>
+
+      <h3 style="margin-top: 24px;">📜 Introdução</h3>
+      <p><strong>Escritor:</strong> Jeremias<br>
+      <strong>Lugares da Escrita:</strong> Judá e Egito<br>
+      <strong>Escrita Completada:</strong> 580 AEC<br>
+      <strong>Tempo Abrangido:</strong> 647-580 AEC</p>
+
+      <p><strong>1. Quando foi Jeremias comissionado, e por quem?</strong><br>
+      O PROFETA Jeremias viveu numa época perigosa e turbulenta. No ano 647 AEC, o 13.º ano do reinado do Rei Josias de Judá, que temia a Deus, Jeová o comissionou. Durante os trabalhos de restauração da casa de Jeová, encontrou-se e leu-se perante o rei o livro da Lei de Jeová. Josias empenhou-se em fazer com que fosse cumprida, mas, no máximo, só pôde deter temporariamente o desvio para a idolatria. O avô de Josias, Manassés, que reinou 55 anos, e seu pai, Amom, que foi assassinado depois de um reinado de apenas 2 anos, ambos agiram de modo iníquo. Induziram o povo a praticar repugnantes orgias e ritos horríveis, de modo que estava habituado a oferecer incenso à "rainha dos céus" e sacrifícios humanos a deuses demoníacos. Manassés inundou Jerusalém de sangue inocente. — <span class="verse-chip">Jer. 1:2;</span> <span class="verse-chip">44:19;</span> <span class="verse-chip">2 Reis 21:6, 16, 19-23;</span> <span class="verse-chip">23:26, 27</span>.</p>
+
+      <p><strong>2. Qual era a tarefa de Jeremias, e que período de anos cheios de eventos abrangeu sua obra de profetizar?</strong><br>
+      A tarefa de Jeremias não era fácil. Tinha de servir na qualidade de profeta de Jeová e anunciar a desolação de Judá e de Jerusalém, bem como que o magnífico templo de Jeová seria incendiado e que seu povo seria levado ao cativeiro — catástrofes quase inacreditáveis! Havia de continuar a profetizar em Jerusalém por 40 anos, durante os reinados dos maus reis Jeoacaz, Jeoiaquim, Joaquim (Conias) e Zedequias. (<span class="verse-chip">Jer. 1:2, 3</span>) Mais tarde, no Egito, tinha de profetizar contra as idolatrias dos refugiados judeus ali. Seu livro foi completado em 580 AEC. O período abrangido pelo livro de Jeremias é, portanto, de 67 anos, período este cheio de acontecimentos. — <span class="verse-chip">Jer. 52:31</span>.</p>
+
+      <p><strong>3. (a) Como foram estabelecidas a canonicidade e a autenticidade do livro de Jeremias nos tempos dos hebreus? (b) Que testemunho adicional sobre isto se encontra nas Escrituras Gregas Cristãs?</strong><br>
+      O nome do profeta e de seu livro é, em hebraico, <em>Yir·meyáh</em> ou <em>Yir·meyá·hu</em>, que significa, talvez: "Jeová Exalta; ou: Jeová Solta [provavelmente da madre]". Esse livro figura em todos os catálogos das Escrituras Hebraicas, e a sua canonicidade é geralmente aceita. O modo impressionante do cumprimento de diversas profecias durante a própria vida de Jeremias atesta plenamente a sua autenticidade. Outrossim, as Escrituras Gregas Cristãs mencionam diversas vezes o nome de Jeremias. (<span class="verse-chip">Mat. 2:17, 18;</span> <span class="verse-chip">16:14;</span> <span class="verse-chip">27:9</span>) Que Jesus estudou o livro de Jeremias, é evidenciado pelo fato de que, quando purificou o templo, citou a um só tempo as palavras de <span class="verse-chip">Jeremias 7:11</span> e de <span class="verse-chip">Isaías 56:7</span>. (<span class="verse-chip">Mar. 11:17;</span> <span class="verse-chip">Luc. 19:46</span>) Por causa de sua intrepidez e coragem, algumas pessoas chegaram a pensar que Jesus fosse Jeremias. (<span class="verse-chip">Mat. 16:13, 14</span>) A profecia de Jeremias relativa a um novo pacto (<span class="verse-chip">Jer. 31:31-34</span>) é mencionada por Paulo, em <span class="verse-chip">Hebreus 8:8-12 e 10:16, 17</span>. Paulo cita <span class="verse-chip">Jeremias 9:24</span>, ao dizer: "Quem se jactar, jacte-se em Jeová." (<span class="verse-chip">1 Cor. 1:31</span>) Revelação (Apocalipse) <span class="verse-chip">Rev. 18:21</span> faz uma aplicação mais poderosa ainda da ilustração de <span class="verse-chip">Jeremias (51:63, 64)</span> sobre a ruína de Babilônia.</p>
+
+      <p><strong>4. Como confirma a arqueologia a narrativa?</strong><br>
+      As descobertas arqueológicas também confirmam o relato de Jeremias. Por exemplo, uma crônica babilônica fala da tomada de Jerusalém por Nabucodonosor (Nabucodorosor) em 617 AEC, quando este capturou o rei (Joaquim) e nomeou outro (Zedequias) que ele próprio escolheu. — <span class="verse-chip">24:1;</span> <span class="verse-chip">29:1, 2;</span> <span class="verse-chip">37:1</span>.<sup>a</sup></p>
+
+      <p><strong>5. (a) O que se sabe sobre o próprio Jeremias? (b) O que se pode dizer quanto ao seu estilo?</strong><br>
+      Possuímos uma biografia mais completa de Jeremias do que de quaisquer dos outros profetas da antiguidade, com exceção de Moisés. <span style="color: var(--gold); font-weight: 700;">⚡</span> Jeremias revela muitas coisas a respeito de si mesmo, de seus sentimentos e de suas emoções, o que indica que ele era dotado de intrépido destemor e coragem, temperados pela humildade e ternura de coração. Além de sua função como profeta, era sacerdote, compilador da Escritura e historiador exato. Ele era filho do sacerdote Hilquias, de Anatote, uma cidade reservada aos sacerdotes, no interior, ao norte de Jerusalém, "na terra de Benjamim". (<span class="verse-chip">1:1</span>) O estilo de Jeremias é claro, direto e fácil de compreender. Há grande número de comparações e muita linguagem figurada, e o livro é redigido tanto em prosa como em forma de poesia.</p>
+
+      <h3 style="margin-top: 28px;">📜 CONTEÚDO DE JEREMIAS</h3>
+
+      <p><strong>6. Em que ordem está a matéria da profecia?</strong><br>
+      A matéria não está em ordem cronológica, mas, antes, segundo os assuntos. Assim, a narrativa faz muitas mudanças quanto ao tempo e circunstâncias. Por fim, descreve-se a desolação de Jerusalém e de Judá, em todos os pormenores, no <span class="verse-chip">capítulo 52</span>. Isto não só mostra o cumprimento de grande parte da profecia, mas fornece também uma tela de fundo para o livro de Lamentações que vem em seguida.</p>
+
+      <p><strong>7. Como se torna Jeremias profeta, e como Jeová o tranqüiliza?</strong><br>
+      Jeová comissiona a Jeremias (<span class="verse-chip">1:1-19</span>). Será que foi porque Jeremias queria ser profeta ou porque procedia de família sacerdotal que foi comissionado? Jeová mesmo explica: "Antes de formar-te no ventre, eu te conheci, e antes de saíres da madre, eu te santifiquei. Eu te constituí profeta para as nações." É uma designação da parte de Jeová. Está Jeremias disposto a ir? Humildemente, ele apresenta a desculpa: "Sou apenas rapaz." Jeová o tranqüiliza, dizendo: "Eis que pus as minhas palavras na tua boca. Vê, comissionei-te no dia de hoje para estares sobre as nações e sobre os reinos, para desarraigares, e para demolires, e para destruíres, para derrubares, para construíres e para plantares." Jeremias não deve temer. "Por certo lutarão contra ti, mas não prevalecerão contra ti, pois 'eu estou contigo', é a pronunciação de Jeová, 'para te livrar'." — <span class="verse-chip">1:5, 6, 9, 10, 19</span>.</p>
+
+      <p><strong>8. (a) Em que foi infiel Jerusalém? (b) Como vai Jeová trazer sobre ela a calamidade?</strong><br>
+      Jerusalém é esposa infiel (<span class="verse-chip">2:1-6:30</span>). Que mensagem traz a palavra de Jeová a Jeremias? Jerusalém esqueceu o seu primeiro amor. Ela abandonou a Jeová, a Fonte de águas vivas, e prostituiu-se com deuses estranhos. De videira seleta de casta tinta, ela se transformou "em varas degeneradas duma videira estrangeira". (<span class="verse-chip">2:21</span>) Suas saias ficaram manchadas do sangue das almas dos pobres inocentes. Até mesmo Israel, que se prostituiu, provou ser mais justa do que Judá. Deus convida esses filhos renegados a retornar a ele, pois ele é o dono marital deles. Mas agiram como esposa infiel. Poderão retornar, se se desfizerem de suas coisas repugnantes e circuncidarem seu coração. "Levantai um sinal de aviso rumo a Sião", pois Jeová trará uma calamidade procedente do norte. (<span class="verse-chip">4:6</span>) Derrocada sobre derrocada! Como leão que sai de sua moita, como vento causticante que sopra através do ermo, assim virá o executor de Jeová com seus carros como um tufão.</p>
+
+      <p><strong>9. (a) Que mensagem tem Jeremias para a Jerusalém obstinada? (b) De que valor são suas proclamações de paz?</strong><br>
+      Percorra Jerusalém. O que vê? Apenas transgressões e infidelidade! O povo negou a Jeová, e a Sua palavra na boca de Jeremias tem de tornar-se um fogo para o devorar como pedaços de lenha. Visto que os israelitas abandonaram a Jeová para servir um deus estranho, Ele também os fará servir a estrangeiros, numa terra estranha. São obstinados! Têm olhos, mas não podem ver, têm ouvidos, mas não podem ouvir. Que horror! Os profetas e os sacerdotes profetizam na realidade com falsidade, "e meu próprio povo amou-o assim", diz Jeová. (<span class="verse-chip">5:31</span>) A calamidade vem do norte, e contudo, "desde o menor até mesmo ao maior deles, cada um obtém para si um lucro injusto". Dizem: "'Há paz! Há paz'! quando não há paz." (<span class="verse-chip">6:13, 14</span>) Mas, o assolador virá subitamente. Jeová fez de Jeremias um examinador de metais entre eles, mas não há nada senão escória e prata rejeitada. São totalmente maus.</p>
+
+      <p><strong>10. Por que terá Jerusalém o mesmo fim desastroso que Silo e Efraim?</strong><br>
+      Aviso de que o templo não é proteção (<span class="verse-chip">7:1-10:25</span>). A palavra de Jeová vem a Jeremias e ele tem de fazer proclamação junto ao portão do templo. Ouça-o proclamar aos que vão entrando nele: 'Jactam-se sobre o templo de Jeová, mas o que estão fazendo? Oprimem o órfão e a viúva, derramam sangue inocente, andam atrás de outros deuses, furtam, assassinam, adulteram, perjuram e oferecem sacrifícios a Baal! Hipócritas! Têm feito da casa de Jeová "um mero covil de salteadores". Lembrem-se do que Jeová fez a Silo. Ele fará o mesmo à sua casa, ó Judá, e os lançará fora, assim como lançou fora a Efraim (Israel), ao norte.' — <span class="verse-chip">Jer. 7:4-11;</span> <span class="verse-chip">1 Sam. 2:12-14;</span> <span class="verse-chip">3:11-14;</span> <span class="verse-chip">4:12-22</span>.</p>
+
+      <p><strong>11. Por que é inútil orar por Judá?</strong><br>
+      É inútil orar por Judá. O povo até mesmo faz bolos para sacrificar à "rainha dos céus"! Deveras, "esta é a nação cujo povo não obedeceu à voz de Jeová, seu Deus, e que não aceitou a disciplina. Pereceu a fidelidade". (<span class="verse-chip">Jer. 7:18, 28</span>) Judá colocou coisas repugnantes na casa de Jeová, e queimou seus filhos e suas filhas nos altos de Tofete, no vale de Hinom. Eis que será chamado "o vale da matança", e seus cadáveres servirão de comida para as aves e para os animais. (<span class="verse-chip">7:32</span>) A alegria e a exultação hão de cessar em Judá e em Jerusalém.</p>
+
+      <p><strong>12. Em vez de paz, o que sobrevirá a Judá e aos deuses que ela adotou?</strong><br>
+      Esperava-se a paz e a cura, mas eis o terror! Por causa da obstinação deles, o resultado será dispersão, extermínio e lamentação. 'Jeová é o Deus vivente e o Rei por tempo indefinido.' Quanto aos deuses que não fizeram os céus e a terra, não há espírito neles. São vaidade e trabalho de zombaria, e perecerão. (<span class="verse-chip">10:10-15</span>) Jeová lançará fora os habitantes do país. Escute! Um grande retumbo desde a terra do norte que desolará as cidades de Judá. O profeta reconhece que 'não é do homem terreno o dirigir o seu caminho', e ora pedindo para ser corrigido, a fim de que não seja aniquilado. — <span class="verse-chip">10:23</span>.</p>
+
+      <p><strong>13. Por que se proíbe a Jeremias que interceda por Judá, e como o fortalece Jeová numa hora de perigo?</strong><br>
+      Maldição sobre os que violam o pacto (<span class="verse-chip">11:1-12:17</span>). Judá desobedeceu aos termos do seu pacto com Jeová. É em vão que o povo pede ajuda. Jeremias não deve orar por Judá, pois Jeová "acendeu um fogo" para consumir esta outrora frondosa oliveira. (<span class="verse-chip">11:16</span>) Jeremias, ameaçado de morte pelo povo de Anatote, sua cidade natal, volta-se para Jeová em busca de força e ajuda. Jeová promete punir os habitantes de Anatote. Jeremias pergunta: 'Por que é que o caminho dos iníquos tem prosperado?' Jeová assegura-lhe: 'Desarraigarei e destruirei a nação desobediente.' — <span class="verse-chip">12:1, 17</span>.</p>
+
+      <p><strong>14. (a) Por meio de que ilustrações faz Jeová saber que Jerusalém é irreformável e que o julgamento contra ela é irreversível? (b) O que sentiu Jeremias depois de comer as palavras de Jeová?</strong><br>
+      Jerusalém é irreformável e está condenada (<span class="verse-chip">13:1-15:21</span>). Jeremias conta que Jeová lhe ordenou que pusesse um cinto de linho sobre seus quadris e daí o escondesse na fenda dum rochedo junto ao Eufrates. Quando Jeremias foi retirá-lo, estava arruinado. "Não prestava para nada." Assim Jeová mostra a sua decisão de arruinar "o orgulho de Judá e o orgulho abundante de Jerusalém". (<span class="verse-chip">13:7, 9</span>) Jeová espatifará a ambas na embriaguez delas, como grandes talhas cheias de vinho. "Pode o cusita mudar a sua pele ou o leopardo as suas malhas?" (<span class="verse-chip">13:23</span>) Da mesma forma, Jerusalém é irreformável. Jeremias não deve orar por seus habitantes. Mesmo que Moisés e Samuel intercedessem por eles a Jeová, este não os escutaria, pois já determinou devotar Jerusalém à destruição. Jeová fortalece a Jeremias para enfrentar os que o vituperam. Jeremias encontra as palavras de Jeová e as come, resultando em 'exultação e alegria de seu coração'. (<span class="verse-chip">15:16</span>) Não é momento para pilhérias, mas para confiar em Jeová que prometeu estabelecer Jeremias como muralha fortificada de cobre contra aquele povo.</p>
+
+      <p><strong>15. (a) Quão crítica é a situação, e que ordem de Jeová dá ênfase a isso? (b) Como chegará o povo a conhecer o nome de Jeová, e por que os seus pecados não o enganam?</strong><br>
+      Jeová enviará pescadores e caçadores (<span class="verse-chip">16:1-17:27</span>). Em vista da desolação iminente, Jeová dá a seguinte ordem a Jeremias: "Não deves tomar para ti uma esposa e não deves vir a ter filhos e filhas neste lugar." (<span class="verse-chip">16:2</span>) Não é tempo nem de se lamentar nem de banquetear-se com o povo, pois Jeová está prestes a arremessá-los daquela terra. Jeová promete também enviar 'pescadores para pescá-los e caçadores para caçá-los', e, com tudo isso, "terão de saber que [seu] nome é Jeová". (<span class="verse-chip">16:16, 21</span>) O pecado de Judá está gravado no seu coração com estilo de ferro, sim, com ponta de diamante. "O coração é mais traiçoeiro do que qualquer outra coisa e está desesperado", mas Jeová pode esquadrinhar o coração. Ninguém pode enganá-lo. Os apóstatas "abandonaram a fonte de água viva, Jeová". (<span class="verse-chip">17:9, 13</span>) Se Judá não santificar o dia de sábado, Jeová fará que o fogo devore seus portões e suas torres.</p>
+
+      <p><strong>16. O que ilustra Jeová por meio do oleiro e seus vasos de barro?</strong><br>
+      O oleiro e o barro (<span class="verse-chip">18:1-19:15</span>). Jeová ordena a Jeremias que vá à casa do oleiro. Ele observa ali como o oleiro transforma um vaso de barro que está estragado em outro vaso segundo o seu agrado. Jeová declara então ser o Oleiro da casa de Israel, tendo o poder de demolir ou de edificar. A seguir, diz a Jeremias que leve uma botija de oleiro ao vale de Hinom e anuncie ali a calamidade que Jeová fará vir, porque o povo encheu esse lugar de sangue inocente, queimando seus filhos como holocaustos para Baal. Daí, Jeremias precisa quebrar a botija para mostrar como Jeová destroçará Jerusalém e o povo de Judá.</p>
+
+      <p style="background: linear-gradient(90deg, rgba(212,168,73,0.10) 0%, transparent 100%); padding: 12px 16px; border-radius: 6px;"><strong>17. Que experiência difícil tem Jeremias, mas será que isto o faz calar-se?</strong> <span style="color: var(--gold); font-weight: 700;">⚡</span><br>
+      <strong>Não há desistência sob perseguição</strong> (<span class="verse-chip">20:1-18</span>). Pasur, o comissário do templo, irritado com a intrépida pregação de Jeremias, <strong>coloca-o no tronco por uma noite</strong>. Ao ser solto, Jeremias prediz o cativeiro e a morte de Pasur em Babilônia. Angustiado por ser objeto de escárnio e por causa do vitupério lançado contra ele, Jeremias cogita desistir. Entretanto, não consegue ficar calado. <strong>A palavra de Jeová vem a ser-lhe 'no coração como fogo ardente, encerrado nos seus ossos', de modo que ele se sente compelido a falar.</strong> Embora amaldiçoe o dia em que nasceu, ele clama: "Cantai a Jeová! Louvai a Jeová! Porque livrou a alma do pobre da mão dos malfeitores." — <span class="verse-chip">20:9, 13</span>.</p>
+
+      <p><strong>18. Que mensagem anuncia Jeremias a Zedequias?</strong><br>
+      A indignação de Jeová contra os governantes (<span class="verse-chip">21:1-22:30</span>). Em resposta a uma pergunta de Zedequias, Jeremias lhe informa que a ira de Jeová se acendeu contra a cidade: O rei de Babilônia a sitiará, e ela será destruída pela pestilência, pela espada, pela fome e pelo fogo. Salum (Jeoacaz) morrerá no exílio, Jeoiaquim será sepultado como um jumento, e seu filho Conias (Joaquim) será lançado fora de Judá para morrer em Babilônia.</p>
+
+      <p><strong>19. O que profetiza Jeremias sobre um "renovo justo", e o que é ilustrado pelas duas cestas de figos?</strong><br>
+      Esperança num "renovo justo" (<span class="verse-chip">23:1-24:10</span>). Jeová promete que verdadeiros pastores substituirão os pastores falsos, e que "um renovo justo", da descendência de Davi, um rei, "há de reinar e agir com discrição, e executar o juízo e a justiça na terra". Qual é o seu nome? "Será chamado: Jeová É Nossa Justiça." Ele ajuntará o restante disperso. (<span class="verse-chip">23:5, 6</span>) Se os profetas tivessem ficado no grupo íntimo de Jeová, teriam feito o povo ouvir e desviar-se do seu caminho mau. Ao contrário, diz Jeová, "fazem meu povo vaguear por causa das suas falsidades". (<span class="verse-chip">23:22, 32</span>) "Eis duas cestas de figos." Jeremias usa os figos bons e os ruins para ilustrar que um restante fiel retornará à sua terra no favor de Deus, ao passo que outro grupo terá um fim calamitoso. — <span class="verse-chip">24:1, 5, 8-10</span>.</p>
+
+      <p><strong>20. Como usa Jeová Babilônia como seu servo, mas, por sua vez, qual será o destino dela?</strong><br>
+      A controvérsia de Jeová com as nações (<span class="verse-chip">25:1-38</span>). Este capítulo resume os julgamentos expostos em pormenores nos capítulos 45-49. Por meio de três profecias paralelas, Jeová pronuncia agora calamidade para todas as nações da terra. Em primeiro lugar, Nabucodonosor é identificado com o servo de Jeová para devastar a Judá e as nações em sua volta, e "estas nações terão de servir ao rei de Babilônia por setenta anos". Depois disso, será a vez de Babilônia, e ela se tornará "baldios desolados por tempo indefinido". — <span class="verse-chip">25:1-14</span>.</p>
+
+      <p><strong>21. Quem tem de beber do copo do furor de Jeová? Com que resultado?</strong><br>
+      A segunda profecia consiste na visão do copo de vinho do furor de Jeová. Jeremias tem de levar esse copo às nações, e elas "terão de beber, e balouçar, e agir como homens endoidecidos", porque Jeová as destruirá. Primeiro, tem de levá-lo a Jerusalém e a Judá! Daí, ao Egito, depois, à Filístia, em seguida, tem de passar para o outro lado, para Edom, depois para cima, para Tiro, a países em toda a parte, e para "todos os outros reinos da terra que há na superfície do solo; e o próprio rei de Sesaque beberá após eles". 'Beberão, vomitarão e cairão'. Nenhum deles será poupado. — <span class="verse-chip">25:15-29</span>.</p>
+
+      <p><strong>22. Por meio de que grande calamidade se expressará a ira ardente de Jeová?</strong><br>
+      Na terceira profecia, Jeremias emprega um estilo poético de extrema beleza. "Do alto bramirá o próprio Jeová . . . contra todos os habitantes da terra." Um barulho, uma calamidade, uma grande tormenta! "E os mortos por Jeová certamente virão a estar naquele dia de uma extremidade da terra até à outra extremidade da terra." Não haverá lamentos nem sepultamentos. Serão como estrume sobre o solo. Os falsos pastores serão mortos junto com os majestosos do seu rebanho. Não há escape para eles. Ouça o uivo deles! O próprio Jeová "está assolando seu pasto . . . por causa da sua ira ardente". — <span class="verse-chip">25:30-38</span>.</p>
+
+      <p><strong>23. (a) Que conspiração se faz contra Jeremias, qual é a sua defesa, e que precedentes são mencionados para o absolver? (b) Como encena Jeremias o futuro cativeiro em Babilônia, e que profecia a respeito de Hananias se cumpre?</strong><br>
+      Jeremias vindicado (<span class="verse-chip">26:1-28:17</span>). Os governantes e o povo conspiram matar Jeremias. O profeta faz a sua defesa. É a palavra de Jeová que ele falou. Se o matarem, terão matado um homem inocente. O veredicto: não culpado. Os anciãos relembram os precedentes dos profetas Miquéias e Urijá, ao considerarem o caso de Jeremias. A seguir, Jeová ordena a Jeremias que faça ligaduras e jugos e os ponha sobre seu pescoço, e daí os envie às nações vizinhas para anunciar que serão subjugadas pelo rei de Babilônia por três gerações de governantes. Hananias, um dos falsos profetas, opõe-se a Jeremias. Declara que o jugo de Babilônia será quebrado em dois anos, e retrata isto quebrando o jugo de madeira. Jeová reforça a sua profecia, mandando Jeremias fazer jugos de ferro e anunciar que Hananias morrerá naquele ano. Hananias morre mesmo.</p>
+
+      <p><strong>24. (a) Que mensagem envia Jeremias aos exilados em Babilônia? (b) Com quem concluirá Jeová um novo pacto, e como mostrará este ser maior do que o pacto anterior?</strong><br>
+      Consolo para os exilados em Babilônia (<span class="verse-chip">29:1-31:40</span>). Jeremias escreve aos exilados levados a Babilônia com Jeconias (Joaquim): Estabeleçam-se aí, pois haverá um período de 70 anos de exílio antes de Jeová os trazer de volta. Jeová ordena a Jeremias que escreva num livro a respeito do retorno deles: Jeová quebrará seu jugo, e eles "certamente servirão a Jeová, seu Deus, e a Davi, seu rei, a quem [eu, Jeová] levantarei para eles". (<span class="verse-chip">30:9</span>) Raquel deve reter sua voz do choro, pois seus filhos certamente "retornarão da terra do inimigo". (<span class="verse-chip">31:16</span>) E, agora, uma declaração tranqüilizadora de Jeová! <strong>Ele concluirá com as casas de Judá e de Israel um novo pacto. Este pacto será muito maior do que aquele que eles violaram!</strong> Jeová escreverá a sua lei no íntimo deles, no seu coração. "E vou tornar-me seu Deus e eles mesmos se tornarão meu povo." Desde o menor até o maior, todos conhecerão a Jeová, e ele perdoará o erro deles. (<span class="verse-chip">31:31-34</span>) A sua cidade será reedificada como algo santo para Jeová.</p>
+
+      <p><strong>25. Como se acentua que vem com certeza a restauração de Israel, e que novas traz a palavra de Jeová?</strong><br>
+      Confirmado o pacto de Jeová com Davi (<span class="verse-chip">32:1-34:22</span>). Durante o último sítio de Jerusalém, por parte de Nabucodonosor, Jeremias fica sob restrição. Todavia, como sinal de que Jeová há de restaurar Israel, Jeremias compra um campo em Anatote e guarda as escrituras num vaso de barro. A palavra de Jeová traz agora boas novas: Judá e Jerusalém se regozijarão de novo, e Jeová cumprirá o seu pacto com Davi. Mas tu, ó Zedequias, fica avisado de que o rei de Babilônia incendiará esta cidade e tu mesmo irás ao cativeiro em Babilônia. Ai dos donos de escravos que concordaram em libertar seus escravos, mas violaram o seu pacto!</p>
+
+      <p><strong>26. Que promessa faz Jeová aos recabitas, e por quê?</strong><br>
+      A promessa de Jeová a Recabe (<span class="verse-chip">35:1-19</span>). Nos dias do Rei Jeoiaquim, Jeová envia Jeremias aos recabitas. Estes haviam buscado refúgio em Jerusalém quando os babilônios se aproximaram pela primeira vez. Jeremias lhes oferece vinho. Eles recusam beber, por causa da ordem de seu antepassado Jonadabe, dada mais de 250 anos antes. Deveras, que notável contraste com a conduta infiel de Judá! Jeová lhes promete: "De Jonadabe, filho de Recabe, não se decepará homem, impedindo-o de ficar de pé diante de mim para sempre." — <span class="verse-chip">35:19</span>.</p>
+
+      <p><strong>27. O que torna necessário reescrever as profecias de Jeremias?</strong><br>
+      Jeremias reescreve o livro (<span class="verse-chip">36:1-32</span>). Jeová ordena a Jeremias que escreva todas as palavras de suas profecias até a data. Jeremias as dita a Baruque, que então as lê em voz alta na casa de Jeová, num dia de jejum. O Rei Jeoiaquim manda trazer o rolo, e, ao ouvir uma parte dele, rasga-o furiosamente e o joga no fogo. Ele dá ordens para prenderem Jeremias e Baruque, mas Jeová os esconde e ordena a Jeremias que reescreva o rolo.</p>
+
+      <p><strong>28. (a) Que profecias persiste Jeremias em fazer? (b) Que contraste há entre a conduta de Ebede-Meleque e a dos príncipes?</strong><br>
+      Os últimos dias de Jerusalém (<span class="verse-chip">37:1-39:18</span>). A narrativa volta ao reinado de Zedequias. Este rei pede a Jeremias que ore a Jeová em favor de Judá. O profeta recusa fazer isso, dizendo que é certa a destruição de Jerusalém. Jeremias tenta ir a Anatote, mas é apanhado como desertor, é espancado e encarcerado por muitos dias. Daí, Zedequias manda buscá-lo. Há alguma palavra da parte de Jeová? Sim, certamente que há! "Serás entregue na mão do rei de Babilônia!" (<span class="verse-chip">37:17</span>) Furiosos com a sua persistência em profetizar ruína, os príncipes lançam Jeremias numa cisterna cheia de lama. Ebede-Meleque, o etíope eunuco na casa do rei, intercede bondosamente pelo profeta, de modo que Jeremias é socorrido da morte lenta, mas fica em detenção no Pátio da Guarda. Zedequias novamente manda buscar Jeremias que lhe dá o conselho: 'Entregue-se ao rei de Babilônia, senão irá ao cativeiro e Jerusalém será destruída!' — <span class="verse-chip">38:17, 18</span>.</p>
+
+      <p><strong>29. Que calamidade se abate então sobre Jerusalém, mas que acontece com Jeremias e com Ebede-Meleque?</strong><br>
+      O sítio de Jerusalém dura 18 meses, e, no 11.º ano de Zedequias, faz-se uma brecha na cidade. O rei foge com o seu exército, mas é apanhado. Seus filhos e os nobres são chacinados diante de seus olhos, e ele é cegado e levado em grilhões para Babilônia. A cidade é incendiada e reduzida a ruínas, e todos, exceto alguns pobres, são levados ao exílio em Babilônia. Por ordem de Nabucodonosor, Jeremias é solto do pátio da guarda. Antes de sua soltura, o profeta fala a Ebede-Meleque sobre a promessa de Jeová de o salvar, 'porque confiou em Jeová'. — <span class="verse-chip">39:18</span>.</p>
+
+      <p><strong>30. Como rejeita o conselho de Jeremias o povo remanescente, e que julgamento de condenação pronuncia Jeremias no Egito?</strong><br>
+      Últimos eventos em Mispá e no Egito (<span class="verse-chip">40:1-44:30</span>). Jeremias fica em Mispá com Gedalias, a quem os babilônios nomeiam governador sobre o povo remanescente. Dois meses mais tarde, Gedalias é assassinado. O povo procura o conselho de Jeremias, e ele lhes transmite a palavra de Deus: 'Jeová não os desarraigará desta terra. Não temam por causa do rei de Babilônia. Se, porém, descerem ao Egito, morrerão!' Assim mesmo, eles descem ao Egito, levando a Jeremias e a Baruque com eles. Em Tafnes, no Egito, Jeremias dá a conhecer o julgamento de condenação pronunciado por Jeová: O rei de Babilônia estabelecerá o seu trono no Egito. É em vão Israel adorar os deuses do Egito e oferecer de novo sacrifícios à "rainha dos céus". Esqueceram os israelitas que Jeová trouxe desolação sobre Jerusalém por causa de sua idolatria? Jeová trará calamidade sobre eles na terra do Egito, e não retornarão a Judá. Como sinal, Jeová entregará o próprio Faraó Hofra nas mãos dos seus inimigos.</p>
+
+      <p><strong>31. Como é Baruque tranqüilizado?</strong><br>
+      A sorte de Baruque (<span class="verse-chip">45:1-5</span>). Baruque fica muito angustiado de ouvir as repetidas profecias de condenação proferidas por Jeremias. Baruque é aconselhado a pensar primeiro na obra de Jeová de edificar e de derrubar em vez de procurar "grandes coisas" para si mesmo. (<span class="verse-chip">45:5</span>) Ele será salvo de toda a calamidade.</p>
+
+      <p><strong>32. Contra quem virá "a espada de Jeová"?</strong><br>
+      A espada de Jeová contra as nações (<span class="verse-chip">46:1-49:39</span>). Jeremias fala das vitórias de Babilônia sobre o Egito em Carquemis e em outras partes. Embora as nações sejam exterminadas, Jacó permanecerá, mas não ficará impune. "A espada de Jeová" virá contra os filisteus, contra o orgulhoso Moabe e o jactancioso Amom, contra Edom e Damasco, Quedar e Hazor. (<span class="verse-chip">47:6</span>) O arco de Elão será quebrado.</p>
+
+      <p><strong>33. (a) O que acontecerá ao copo de ouro, Babilônia? (b) Em conseqüência disso, o que deve fazer o povo de Deus?</strong><br>
+      A espada de Jeová contra Babilônia (<span class="verse-chip">50:1-51:64</span>). Jeová fala a respeito de Babilônia: Contem-no entre as nações. Não ocultem nada. Babilônia foi capturada e os seus deuses foram envergonhados. Fujam dela. Qual malho, ela que esmagou as nações de toda a terra, ela própria foi quebrada. "Ó Presunção", opressora dos cativos Israel e Judá, saiba que Jeová dos exércitos é o Resgatador deles. Babilônia se tornará um covil de animais uivantes. "Como se deu no derrubamento de Sodoma e de Gomorra, . . . por Deus . . ., não morará ali nenhum homem." (<span class="verse-chip">50:31, 40</span>) Babilônia tem sido um copo de ouro nas mãos de Jeová para embriagar as nações, mas, subitamente, ela caiu, de modo que ela própria está destroçada. Uivai por ela, povos. Jeová despertou o espírito dos reis dos medos para que a arruínem. Os poderosos de Babilônia deixaram de lutar. Tornaram-se como mulheres. A filha de Babilônia será pisada, tornando-se dura como a eira. "Terão de dormir um sono de duração indefinida, do qual nunca acordarão." O mar veio e cobriu Babilônia com a multidão das ondas. "Saí do meio dela, ó meu povo, e ponde cada um a sua alma a salvo da ira ardente de Jeová." (<span class="verse-chip">51:39, 45</span>) Ouça o clamor, o grande estrondo de Babilônia! As armas de guerra de Babilônia têm de ser fragmentadas, pois Jeová é um Deus de recompensa. Sem falta, ele retribuirá.</p>
+
+      <p><strong>34. Por meio de que sinal se ilustra a queda de Babilônia?</strong><br>
+      Jeremias ordena a Seraías: 'Vai a Babilônia e lê em voz alta estas palavras da profecia contra Babilônia. Daí, amarra uma pedra no livro e lança-o no meio do Eufrates. "E terás de dizer: 'Assim afundará Babilônia e nunca mais se levantará por causa da calamidade que trago sobre ela.'" ' — <span class="verse-chip">51:61-64</span>.</p>
+
+      <p><strong>35. Que história se segue?</strong><br>
+      História da queda de Jerusalém (<span class="verse-chip">52:1-34</span>). Este relato é quase idêntico ao abrangido antes em <span class="verse-chip">2 Reis 24:18-20;</span> <span class="verse-chip">25:1-21, 27-30</span>.</p>
+
+      <h3 style="margin-top: 28px;">📜 POR QUE É PROVEITOSO</h3>
+
+      <p style="background: linear-gradient(90deg, rgba(212,168,73,0.10) 0%, transparent 100%); padding: 12px 16px; border-radius: 6px;"><strong>36. (a) Que exemplo de zelo corajoso encontramos em Jeremias? (b) Em que sentido constituem também Baruque, os recabitas e Ebede-Meleque excelentes exemplos para nós?</strong> <span style="color: var(--gold); font-weight: 700;">⚡</span><br>
+      <strong>Esta profecia inspirada é sumamente edificante e proveitosa.</strong> <span style="color: var(--gold); font-weight: 700;">⚡</span> Veja o corajoso exemplo do próprio profeta. <strong>Sem temer, ele proclamou uma mensagem impopular a um povo ímpio. Rejeitou a associação com os malfeitores. Compreendeu a urgência da mensagem de Jeová, devotando-se de todo o coração à obra de Jeová, sem desistir. Constatou que a palavra de Deus era semelhante a um fogo nos seus ossos, e era a exultação e a alegria de seu coração.</strong> (<span class="verse-chip">Jer. 15:16-20;</span> <span class="verse-chip">20:8-13</span>) <strong>Tenhamos nós sempre igual zelo pela palavra de Jeová!</strong> Estejamos nós também sempre prontos a dar apoio leal aos servos de Deus, como deu Baruque a Jeremias. A obediência sincera dos recabitas é também um exemplo esplêndido para nós, assim como o é a bondosa consideração de Ebede-Meleque pelo perseguido profeta. — <span class="verse-chip">36:8-19, 32;</span> <span class="verse-chip">35:1-19;</span> <span class="verse-chip">38:7-13;</span> <span class="verse-chip">39:15-18</span>.</p>
+
+      <p><strong>37. Como um exame do livro de Jeremias fortalece nossa fé no poder que Jeová tem de fazer profecias?</strong><br>
+      As palavras que Jeová dirigiu a Jeremias se cumpriram com surpreendente exatidão. Isto certamente fortalece a nossa fé no poder de Jeová de fazer profecias. Tome, por exemplo, as profecias, cujo cumprimento o próprio Jeremias viu, tais como: o cativeiro de Zedequias e a destruição de Jerusalém (<span class="verse-chip">Jer. 21:3-10;</span> <span class="verse-chip">39:6-9</span>), o destronamento e a morte no cativeiro do Rei Salum (Jeoacaz) (<span class="verse-chip">Jer. 22:11, 12;</span> <span class="verse-chip">2 Reis 23:30-34;</span> <span class="verse-chip">2 Crô. 36:1-4</span>), a deportação do Rei Conias (Joaquim) para Babilônia (<span class="verse-chip">Jer. 22:24-27;</span> <span class="verse-chip">2 Reis 24:15, 16</span>) e a morte, no espaço de um ano, do falso profeta Hananias. (<span class="verse-chip">Jer. 28:16, 17</span>) Todas essas profecias, e outras mais, foram cumpridas exatamente como Jeová predissera. Profetas e servos posteriores de Jeová também acharam que as profecias de Jeremias tinham peso e eram proveitosas. Por exemplo, Daniel compreendeu, lendo os escritos de Jeremias, que a desolação de Jerusalém duraria 70 anos, e Esdras chamou atenção para o cumprimento das palavras de Jeremias no fim dos 70 anos. — <span class="verse-chip">Dan. 9:2;</span> <span class="verse-chip">2 Crô. 36:20, 21;</span> <span class="verse-chip">Esd 1:1;</span> <span class="verse-chip">Jer. 25:11, 12;</span> <span class="verse-chip">29:10</span>.</p>
+
+      <p><strong>38. (a) Que pacto, mencionado também por Jesus, é salientado na profecia de Jeremias? (b) Que esperança do Reino é anunciada?</strong><br>
+      Na ocasião em que instituiu a celebração da Refeição Noturna do Senhor com seus discípulos, Jesus mostrou o cumprimento da profecia de Jeremias com relação ao novo pacto. Assim, ele se referiu ao "novo pacto em virtude do meu sangue", por meio do qual seus discípulos obtiveram perdão de seus pecados e foram ajuntados como nação espiritual de Jeová. (<span class="verse-chip">Luc. 22:20;</span> <span class="verse-chip">Jer. 31:31-34</span>) Os gerados pelo espírito, convidados a participar do novo pacto, são os que Cristo introduz no pacto para o Reino, a fim de reinarem com ele nos céus. (<span class="verse-chip">Luc. 22:29;</span> <span class="verse-chip">Rev. 5:9, 10;</span> <span class="verse-chip">20:6</span>) Este Reino é mencionado diversas vezes na profecia de Jeremias. Em meio a todas as denúncias contra a Jerusalém sem fé, Jeremias apresentou um raio de esperança: "'Eis que vêm dias', é a pronunciação de Jeová, 'e eu vou suscitar a Davi um renovo justo. E um rei há de reinar e agir com discrição, e executar o juízo e a justiça na terra'." Este rei será chamado "Jeová É Nossa Justiça". — <span class="verse-chip">Jer. 23:5, 6</span>.</p>
+
+      <p><strong>39. Que certeza nos é dada pelo retorno de um restante do cativeiro de Babilônia, segundo predito por Jeremias?</strong><br>
+      Jeremias fala de novo de uma restauração: "E certamente servirão a Jeová, seu Deus, e a Davi, seu rei, a quem levantarei para eles." (<span class="verse-chip">30:9</span>) Finalmente, ele fala da boa palavra que Jeová tem dito a respeito de Israel e de Judá, no sentido de que "naqueles dias e naquele tempo [Jeová fará] brotar um renovo justo para Davi", para multiplicar a sua semente e para que haja "um filho reinante no seu trono". (<span class="verse-chip">33:15, 21</span>) Tão certo quanto um restante voltou de Babilônia, assim o Reino deste justo "renovo" fará com que reine a justiça e a retidão sobre toda a terra. — <span class="verse-chip">Luc. 1:32</span>.</p>
+
+      <div class="notes-box">
+        <strong>📌 Nota de rodapé a:</strong> Estudo Perspicaz das Escrituras, Vol. 2, página 438; veja também "Nabucodonosor, Nabucodorosor".
+      </div>
+
+      <h3 style="margin-top: 28px;">⚡ Resumo — os parágrafos mais valiosos para o seu discurso</h3>
+      <p>Dos 39 parágrafos, três são especialmente úteis para o tema <em>"Ele pregou com coragem"</em>:</p>
+      <div class="highlight-card">
+        <div class="keyword">⚡ § 5 — Biografia introdutória</div>
+        <div class="text">"<em>Jeremias revela muitas coisas a respeito de si mesmo, de seus sentimentos e de suas emoções, o que indica que ele era dotado de intrépido destemor e coragem, temperados pela humildade e ternura de coração.</em>" — Bom para abrir o discurso: Jeremias era humano, não um herói de ferro.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="keyword">⚡ § 17 — É o parágrafo do seu texto-base (Jer 20:1-18)</div>
+        <div class="text">"<em>Pasur, o comissário do templo, irritado com a intrépida pregação de Jeremias, coloca-o no tronco por uma noite. [...] Jeremias cogita desistir. Entretanto, não consegue ficar calado. A palavra de Jeová vem a ser-lhe 'no coração como fogo ardente, encerrado nos seus ossos', de modo que ele se sente compelido a falar.</em>" — Este é literalmente o resumo em uma frase de Jeremias 20:2, 9, 11. Citação direta da fonte.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="keyword">⚡ § 36 — A aplicação ("POR QUE É PROVEITOSO")</div>
+        <div class="text">"<em>Sem temer, ele proclamou uma mensagem impopular a um povo ímpio. Rejeitou a associação com os malfeitores. Compreendeu a urgência da mensagem de Jeová, devotando-se de todo o coração à obra de Jeová, sem desistir. Constatou que a palavra de Deus era semelhante a um fogo nos seus ossos, e era a exultação e a alegria de seu coração. Tenhamos nós sempre igual zelo pela palavra de Jeová!</em>" — Perfeito para a aplicação final ao auditorio.</div>
+      </div>
+    </section>
+
+    <!-- ============== CONTEXTO HISTÓRICO ============== -->
+    <section id="contexto">
+      <h2 class="section">🔍 Contexto histórico (Insight sobre as Escrituras)</h2>
+      <p>Material extraído do <em>Insight on the Scriptures</em> (Vol. 2, p. 55-58) que você tem instalado no JW Library. <strong>Texto das citações é exato</strong> — vem direto do banco it_T, decifrado.</p>
+
+      <div class="source-card">
+        <div class="source-title">📗 Insight, vol. 2 — "Jeremias" (parágrafo 10)</div>
+        <div class="source-meta">it-2 pp. 55-56 · § "Comissionado Como Profeta"</div>
+        <div class="source-quote">"Pode-se depreender, à base desta observação dele [<span class="verse-chip">Je 1:6</span> — 'sou apenas rapaz'], e por se compará-la com a intrepidez e a firmeza dele durante seu ministério profético, que <strong>tal vigor incomum não era algo inerente a Jeremias, mas deveras provinha de ele se estribar plenamente em Jeová</strong>. Deveras, Jeová estava com ele, 'como um poderoso terrível', e foi Jeová quem fez de Jeremias 'uma cidade fortificada, e uma coluna de ferro, e muralhas de cobre contra toda a terra'. (<span class="verse-chip">Je 20:11</span>; <span class="verse-chip">1:18, 19</span>) A reputação de coragem e intrepidez de Jeremias era tamanha que, durante o ministério terrestre de Jesus, alguns julgavam ser ele o Jeremias redivivo. (<span class="verse-chip">Mt 16:13, 14</span>)"</div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-title">📗 Insight, vol. 2 — "Jeremias" (parágrafo 15, final)</div>
+        <div class="source-meta">it-2 p. 57 · § "Coragem, Perseverança, Amor" (final)</div>
+        <div class="source-quote">"Por vezes, em sua longa carreira, <strong>Jeremias ficou desanimado e necessitou a confirmação do apoio de Jeová, mas, mesmo em adversidade, não deixou de invocar a Jeová, pedindo-lhe ajuda</strong>. — <span class="verse-chip">Je 20</span>."</div>
+      </div>
+
+      <div class="source-card">
+        <div class="source-title">📗 Insight, vol. 2 — "Jeremias, Livro de" (Destaques de Jeremias)</div>
+        <div class="source-meta">it-2 p. 58 · § "Jeremias sofre por profetizar destemidamente"</div>
+        <div class="source-quote">"<strong>Jeremias sofre por profetizar destemidamente.</strong> É golpeado e posto no tronco onde passa a noite. (<span class="verse-chip">Je 20:1-18</span>)"</div>
+      </div>
+
+      <div class="notes-box">
+        <strong>Como essas três citações do Insight encaixam no discurso:</strong> elas sustentam todos os pontos. <em>Parágrafo 10</em> = a coragem vinha de Jeová (Jer 20:11). <em>Parágrafo 15</em> = Jeremias ficou desanimado (Jer 20:9a). <em>Destaques</em> = ele foi posto no tronco (Jer 20:2). Você não precisa citar todas no palco — escolha 1 ou 2 como fonte de argumentação.
+      </div>
+    </section>
+
+    <!-- ============== ESTRUTURA ============== -->
+    <section id="estrutura">
+      <h2 class="section">⏱️ Estrutura do discurso (10 minutos)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time">0:00–1:30</div>
+          <div class="body"><span class="icon intro"></span><strong>① Quem foi Jeremias</strong> — menino sacerdote de Anatote, tímido ("sou apenas rapaz"), pregou 65 anos, comparado a Jesus. Era humano, não de ferro. (Todo Escritura § 5, Sentinela w10 § 8, Mat 16:13,14, Jer 1:6) — <strong>1,5 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">1:30–3:30</div>
+          <div class="body"><span class="icon perseguido"></span><strong>② O dia em que Pasur o amarrou</strong> — o Portão Superior de Benjamim, o tronço, a humilhação pública, quem passava na frente. (Jer 20:1-2, 8) — <strong>2 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">3:30–4:30</div>
+          <div class="body"><span class="icon desanimado"></span><strong>③ O "mas" que muda tudo</strong> — Jeremias quis parar, mas a Palavra virou fogo nos ossos. (<span class="verse-chip">Jer 20:9a</span> + <span class="verse-chip base">Jer 20:9b</span>) — <strong>1 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">4:30–6:30</div>
+          <div class="body"><span class="icon coragem"></span><strong>④ Por que a Palavra é como fogo</strong> — ilustração da vela (crianças e idosos), Marcos 4:21, Heb 4:12, mostrar imagem da apostila. (Mar 4:21, Heb 4:12, w11 § 9) — <strong>2 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">6:30–7:30</div>
+          <div class="body"><span class="icon coragem"></span><strong>⑤ Jeremias pregava por AMOR</strong> — "amava as pessoas, por isso pregava". Chorou por Jerusalém, escreveu Lamentações. (it-2 ¶ 12,14, Jer 8:21-22, 9:1) — <strong>1 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">7:30–9:00</div>
+          <div class="body"><span class="icon coragem"></span><strong>⑥ O que aprendemos hoje</strong> — aplicação dupla: pregação (a chama não sai) + congregação (Ebede-Meleque). (Jer 38:7-13, 39:18, w10 § 9) — <strong>1,5 min</strong></div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">9:00–10:00</div>
+          <div class="body"><span class="icon conclusao"></span><strong>⑦ Conclusão de impacto</strong> — "Tenhamos igual zelo" + a chama que se espalha. (Toda Escritura § 36) — <strong>1 min</strong></div>
+        </div>
+      </div>
+      <div class="notes-box">
+        <strong>Por que essa estrutura funciona:</strong> o roteiro conta uma história (quem é → o que aconteceu → o que ele sentiu → o que isso ensina → por que fazemos o que fazemos → o que fazemos hoje), em vez de listar pontos. Isso ajuda a audiência (incluindo crianças e idosos) a acompanhar. O texto-base <span class="verse-chip base">Jer 20:9b</span> entra no clímax (bloco 3), e a frase "Jeremias amava as pessoas, por isso pregava" entra no bloco 5 (coração do discurso).
+      </div>
+    </section>
+
+    <!-- ============== ROTEIRO ESCRITO ============== -->
+    <section id="roteiro">
+      <h2 class="section">🎤 Roteiro escrito (proposta de palestra)</h2>
+      <p>Estrutura narrativa: <em>quem é Jeremias → o que aconteceu → o que ele sentiu → o que isso ensina → por que ele pregava → o que aprendemos → mensagem final</em>. <strong>Tom acessível</strong> — pensado para crianças e idosos entenderem. Adapte, ajuste tempos, troque ilustrações. Veja <em>Notas do Orador</em> para dicas práticas.</p>
+
+      <div class="speech">
+
+        <p class="section-marker">① Quem foi Jeremias · 1,5 min</p>
+
+        <p>Antes de falarmos sobre Jeremias ser corajoso, vamos conhecer quem ele era.</p>
+
+        <p>Jeremias nasceu numa família de sacerdotes, na cidade de Anatote, pertinho de Jerusalém. Ele era um rapaz. E quando Jeová o convidou para ser profeta, ele disse: <em>"Ai, Soberano Senhor Jeová! Eu não sei falar, pois sou apenas rapaz."</em> <span class="verse-chip">Jeremias 1:6</span> Não era um guerreiro destemido. Era um menino tímido.</p>
+
+        <p>Mas ele pregou por mais de <span class="emphasis">65 anos</span>. Com tanta coragem que, uns 600 anos depois, quando viram Jesus falar com destemor, alguns acharam que Jesus fosse Jeremias ressuscitado. <span class="verse-chip">Mateus 16:13, 14</span> <span class="verse-chip pub">w10 15/2 7 § 8</span></p>
+
+        <p>O livro "Toda a Escritura" descreve Jeremias assim: <em>"Jeremias... era dotado de intrépido destemor e coragem, temperados pela humildade e ternura de coração."</em> <span class="verse-chip pub">Toda a Escritura § 5</span> Não era de ferro. Era de carne. Mas era corajoso.</p>
+
+        <p class="section-marker">② O dia em que Pasur o amarrou · 2 min</p>
+
+        <p>Vamos ver uma cena concreta. Jeremias pregava em Jerusalém. Pregava alto: <em>"Violência e destruição!"</em> <span class="verse-chip">Jeremias 20:8</span> O povo não gostava. E Pasur — o comissário do templo, o cargo mais alto depois do sumo sacerdote — decidiu dar um exemplo público.</p>
+
+        <p>Ele mandou <em>golpear</em> Jeremias e o <em>pôs no tronco</em>. <span class="verse-chip">Jeremias 20:2</span> E não em qualquer lugar. <em>No Portão Superior de Benjamim, na casa de Jeová.</em></p>
+
+        <div class="notes-box" style="margin: 16px 0;">
+          <strong>📌 Contexto para você contar em suas palavras:</strong> o Portão Superior de Benjamim ficava na parte <strong>norte</strong> do complexo do templo — era por onde o povo entrava. Era palco de execução de justiça. O tronco era uma madeira curva oca, onde se prendiam as mãos, o pescoço ou os pés. Pasur escolheu aquele portão porque era o mais visível: o povo passava por ali para cultuar a Jeová.
+        </div>
+
+        <p>Por que ali? Porque era o local por onde o povo passava para entrar no templo. Todos os adoradores que chegavam para cultuar a Jeová <em>passavam por ali</em>. Jeremias ficou preso naquele portão, <em>exposto para todo mundo ver</em>.</p>
+
+        <p>O que Pasur queria? Que Jeremias se calasse. Que o povo visse: <em>"Olha, o homem que fala contra nós — ali está ele, é um criminoso, um trapaceiro preso."</em> Era uma humilhação pública. <span class="pause">[pausa]</span> Era a tentativa de fazer o mensageiro de Deus virar motivo de zombaria.</p>
+
+        <p class="section-marker">③ O "mas" que muda tudo · 1 min</p>
+
+        <p>Jeremias ficou sozinho naquela noite. E ele chegou ao limite. Numa conversa íntima, ele disse: <em>"Não o mencionarei mais. Não falarei mais em seu nome."</em> <span class="verse-chip">Jeremias 20:9a</span></p>
+
+        <p>Ele quis parar. Ele era humano. Não era de ferro, lembra?</p>
+
+        <p>Mas.</p>
+
+        <p>Tem um "mas" no versículo 9. Um "mas" que muda tudo. <span class="pause">[pausa]</span> <em>"Mas a sua palavra se tornou como um fogo ardente no meu coração, preso nos meus ossos; fiquei exausto de contê-la, não pude mais aguentar."</em> <span class="verse-chip base">Jeremias 20:9b</span></p>
+
+        <p>Não dá para segurar um fogo quando ele entra nos ossos. Não dá.</p>
+
+        <p class="section-marker">④ Por que a Palavra é como fogo · 2 min</p>
+
+        <p>Eu quero falar sobre isso de um jeito que toda criança e todo idoso aqui possa entender. Quem aqui já acendeu uma vela? <span class="pause">[pausa]</span> Levante a mão. <span class="pause">[pausa]</span> Quando você acende a vela, a chama é pequenininha. Mas o que a luz faz? Ela se espalha. Ela ilumina tudo. Ninguém precisa carregar a luz pela casa — <em>ela se espalha sozinha.</em></p>
+
+        <p>Jesus usou exatamente esse exemplo. Ele disse: <em>"Também não se acende uma lamparina para colocá-la debaixo de um cesto, não é? Para colocá-la no candeeiro, e ela brilha para todos os que estão na casa."</em> <span class="verse-chip">Marcos 4:21</span></p>
+
+        <p>A Palavra de Jeová é essa lamparina. Quando ela se acende em você, ela não fica parada. Ela se espalha. Não dá para esconder. Não dá para colocar debaixo de um cesto. <em>Não dá para colocar Jeremias no tronco e esperar que ele se cale</em> — porque a chama já está dentro.</p>
+
+        <p>A Bíblia chama a Palavra de Deus de <em>"viva e que exerce poder, mais afiada do que qualquer espada de dois gumes"</em>. <span class="verse-chip">Hebreus 4:12</span> <span class="verse-chip pub">w10 15/2 7 § 9</span> Mais afiada. Viva. <span class="pause">[pausa]</span></p>
+
+        <p>Olha a imagem <span class="verse-chip pub">[mostrar imagem da apostila: 202026244_univ_cnt_1.jpg]</span>. Jeremias pregando, alguns rejeitam, outros gritam. A mensagem continua saindo. <em>A chama não apaga.</em></p>
+
+        <p>A Sentinela de 15 de março de 2011, página 30, parágrafo 9, diz: <em>"A força extraordinária que Jeremias demonstrou não era qualidade inata — vinha realmente de sua plena confiança em Deus."</em> <span class="verse-chip pub">w11 15/3 30 § 9</span> Não era dele. Era de Jeová. Por isso a chama não apagava.</p>
+
+        <p class="section-marker">⑤ Jeremias pregava por AMOR · 1 min</p>
+
+        <p>Mas espera. <em>Por que</em> ele pregava? Por que tanta coragem? Era teimosia? Era orgulho?</p>
+
+        <p>Não. Era <span class="emphasis">AMOR</span>. A Sentinela de 15 de fevereiro de 2010, página 7, parágrafo 8, lembra que Jeremias começou tímido. "Sou apenas rapaz." Mas ele venceu a timidez. Por quê? <em>"A palavra de Jeová deu forças a Jeremias e o impeliu a falar."</em> <span class="verse-chip pub">w10 15/2 7 § 8</span></p>
+
+        <p>E o que estava no coração de Jeremias? O Insight nos conta: <em>"Jeremias não era queixoso crônico. Antes, mostrava ser amoroso, atencioso e compassivo. [...] A coragem e a perseverança de Jeremias eram igualadas pelo amor que ele sentia por seu povo."</em> <span class="verse-chip">it-2 ¶ 12, 14</span></p>
+
+        <p>Ele chorou por causa de Jerusalém. <span class="verse-chip">Jeremias 8:21, 22;</span> <span class="verse-chip">9:1</span> Ele escreveu Lamentações — um livro inteiro de lágrimas por amor ao povo.</p>
+
+        <p>Jeremias amava as pessoas. <em>Por isso</em> ele pregava.</p>
+
+        <p class="section-marker">⑥ O que aprendemos hoje · 1,5 min</p>
+
+        <p>O que isso ensina para nós, em 2026?</p>
+
+        <p>Se somos seguidores de Cristo, somos como Jeremias. Temos uma mensagem. Não é uma mensagem popular. Mas é uma mensagem de vida. Às vezes, ela vai ser rejeitada. Às vezes, vamos ser colocados no "tronco" — na escola, no trabalho, na vizinhança, na família. O que fazer?</p>
+
+        <p>Lembrar que a Palavra de Jeová é como fogo. Se essa chama entrou em nós, <em>ela não sai</em>. Como a Sentinela de 15 de fevereiro de 2010, página 7, parágrafo 9, lembra: <em>"Essa mensagem poderá tornar-se 'como um fogo' dentro de nós, que não conseguiremos reter."</em> <span class="verse-chip pub">w10 15/2 7 § 9</span></p>
+
+        <p>E lembrar também: Jeremias pregava por <em>amor</em>. Se nós pregamos por amor, não vamos desistir quando a reação for Pasur. Vamos amar mais forte. Como ele amou.</p>
+
+        <p>Mas o aprendizado não é só para o campo. É também para dentro da congregação. Na história de Jeremias, tinha gente que queria matá-lo. Mas tinha também um homem chamado <span class="emphasis">Ebede-Meleque</span> — um etíope, um estrangeiro, um eunuco na casa do rei. <em>Ele arriscou a própria vida</em> para tirar Jeremias da cisterna de lama. <span class="verse-chip">Jeremias 38:7-13</span> E Deus recompensou Ebede-Meleque: <em>"Salvarei a tua vida... porque confiaste em Jeová."</em> <span class="verse-chip">Jeremias 39:18</span></p>
+
+        <p>Hoje, na nossa congregação, há irmãos que passam por momentos difíceis — doença, desânimo, problemas. Nós podemos ser como Pasur — indiferentes — ou como Ebede-Meleque — que arrisca a vida pelo outro. Ser cristão não é só pregar lá fora. <em>É também cuidar dos de dentro.</em></p>
+
+        <p class="section-marker">⑦ Conclusão de impacto · 1 min</p>
+
+        <p>Jeremias pregou com coragem. Amou as pessoas. Não desistiu. Nem quando Pasur o prendeu. Nem quando o mundo zombou. Nem quando ele mesmo quis parar.</p>
+
+        <p>O livro "Toda a Escritura" nos encoraja com uma frase que vale ouro: <em>"Tenhamos nós sempre igual zelo pela palavra de Jeová!"</em> <span class="verse-chip pub">Toda a Escritura § 36</span></p>
+
+        <p>Que essa chama se acenda em nós. E que ela não fique só dentro de nós — <em>que ela se espalhe.</em> Para o campo. Para a congregação. Para todos.</p>
+
+        <p><span class="emphasis">A chama continua.</span></p>
+
+      </div>
+
+      <div class="notes-box">
+        <strong>Sobre o tom:</strong> o roteiro é mais simples e acessível que a versão anterior. As metáforas (vela, fogo, tronco) são do cotidiano. <em>Se quiser mais poesia,</em> a versão anterior tinha o "livro que queima" como abertura — pode retomar. As duas versões se misturam bem.
+      </div>
+    </section>
+
+    <!-- ============== PONTOS ALTOS ============== -->
+    <section id="pontos-altos">
+      <h2 class="section">⭐ Pontos altos (frases-chave para marcar)</h2>
+      <p>São os momentos que você quer que a audiência <em>leve para casa</em>. Os marcados com ❤ são o cerne do discurso.</p>
+
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="keyword">❤ Olho no Jeremias (intro)</div>
+          <div class="text">"Não era de ferro. Era de carne. Mas era corajoso."</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Cena do tronco</div>
+          <div class="text">"No portão por onde o povo passava para adorar, o mensageiro de Deus estava preso."</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Humilhação</div>
+          <div class="text">"'Olha, o homem que fala contra nós — ali está ele, é um criminoso, um trapaceiro preso.'"</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Texto-base ★</div>
+          <div class="text">"Mas a sua palavra se tornou como um fogo ardente no meu coração, preso nos meus ossos."</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Ilustração da vela</div>
+          <div class="text">"Não dá para colocar Jeremias no tronco e esperar que ele se cale — porque a chama já está dentro."</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Espada de dois gumes</div>
+          <div class="text">"A palavra de Deus é viva e exerce poder, mais afiada do que qualquer espada de dois gumes." (Heb 4:12)</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">❤ O motor era AMOR</div>
+          <div class="text">"Jeremias amava as pessoas. <em>Por isso</em> ele pregava."</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">❤ Amor aos irmãos (Ebede-Meleque)</div>
+          <div class="text">"Ser cristão não é só pregar lá fora. <em>É também cuidar dos de dentro.</em>"</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Pergunta de impacto</div>
+          <div class="text">"Hoje, somos como Pasur — indiferentes — ou como Ebede-Meleque — que arrisca a vida pelo outro?"</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Mensagem final</div>
+          <div class="text">"Tenhamos nós sempre igual zelo pela palavra de Jeová!" (Toda Escritura § 36)</div>
+        </div>
+        <div class="highlight-card">
+          <div class="keyword">Lema de fechamento</div>
+          <div class="text">"A chama continua."</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ILUSTRAÇÕES ============== -->
+    <section id="ilustracoes">
+      <h2 class="section">💡 Ilustrações possíveis</h2>
+      <p>Você pode usar 1-2 ilustrações no discurso. A apostila pede a imagem oficial, e o roteiro já mostra a ilustração da vela e o exemplo de Ebede-Meleque.</p>
+
+      <div class="highlight-card">
+        <div class="keyword">Imagem oficial da apostila</div>
+        <div class="text">202026244_univ_cnt_1.jpg — "Jeremias proclama corajosamente a mensagem de Jeová em público. Alguns se recusam a ouvir enquanto outros gritam com ele." Use no bloco ④, quando falar da Palavra como fogo.</div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="keyword">Ilustração principal — A vela (incluída no roteiro)</div>
+        <div class="text">Acenda uma vela (se possível) no momento em que falar do fogo. Ou peça para uma criança levantar a mão e dizer se já acendeu uma vela. A luz da vela não dá para esconder. Marcos 4:21 é a base. <strong>Perfeita para crianças e idosos.</strong></div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="keyword">Ilustração 2 — A brasa na mão</div>
+        <div class="text">Se tocar uma brasa quente do fogão, o que você faz? Você joga fora rápido, não é? É involuntário. Ninguém fica com uma brasa queimando na mão de propósito. Assim é a Palavra de Jeová: quando ela entra em você, não dá para segurar.</div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="keyword">Ilustração 3 — A chaleira fervendo</div>
+        <div class="text">O que acontece com a chaleira quando a água ferve? Ela faz barulho. Não dá para esconder que está fervendo. Assim é a Palavra em nós: quando ela entra, transborda.</div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="keyword">Ilustração 4 — Ebede-Meleque (incluída no roteiro)</div>
+        <div class="text">Na história de Jeremias, Pasur quis calar. Mas Ebede-Meleque — um estrangeiro, um eunuco, sem poder — ARRISCOU a vida para tirar Jeremias da cisterna de lama. Aplicação: na nossa congregação, podemos ser como Pasur ou como Ebede-Meleque.</div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="keyword">Ilustração 5 — Experiência pessoal (recomendada)</div>
+        <div class="text">Uma vez, quando [você] estava exausto de pregar, aconteceu [X — uma experiência sua]. Foi aí que entendi que a coragem não vem de mim. Vem de Jeová. (Se quiser usar, conte uma vez só, no bloco ⑥.)</div>
+      </div>
+    </section>
+
+    <!-- ============== NOTAS DO ORADOR ============== -->
+    <section id="notas-orador">
+      <h2 class="section">📝 Notas do orador</h2>
+
+      <h3>Antes de subir ao palco</h3>
+      <ul style="padding-left: 20px; color: var(--text-dim);">
+        <li>Você já tem o texto-base na memória? Jeremias 20:9b.</li>
+        <li>Você leu as duas Sentinelas (w11 e w10)? As frases curtas estão no roteiro.</li>
+        <li>Você sabe qual será sua ilustração pessoal? A da vela está pronta; se quiser contar uma experiência, decida antes.</li>
+        <li>Onde você vai colocar as pausas? Marque no roteiro.</li>
+      </ul>
+
+      <h3>No palco</h3>
+      <ul style="padding-left: 20px; color: var(--text-dim);">
+        <li><strong>Olho no Jeremias humano</strong> — no bloco ①, lembre sempre que ele não era de ferro. O contraste é o que torna a história poderosa.</li>
+        <li><strong>Cena do tronco com detalhe</strong> — no bloco ②, faça pausas curtas. Quem passava na frente? Por que ali? Imagine o portão cheio de gente. Leve o auditório junto.</li>
+        <li><strong>O "mas" do versículo 9b</strong> — é uma palavra grande. Faça uma pausa antes e fale devagar.</li>
+        <li><strong>Bloco ④ (vela)</strong> — se puder acender uma vela de verdade, faça. Se não, peça para uma criança levantar a mão e dizer se já acendeu uma vela. Mostrar a imagem da apostila logo em seguida.</li>
+        <li><strong>❤ Bloco ⑤ (AMOR)</strong> — esse é o coração do discurso. Fale devagar. "Jeremias amava as pessoas. Por isso ele pregava." Deixe a frase pousar.</li>
+        <li><strong>Ebede-Meleque no bloco ⑥</strong> — conte a história dele como uma surpresa. Leve a audiência a pensar em Pasur primeiro, depois mostre que existe outra opção.</li>
+        <li><strong>Conclusão</strong> — "Tenhamos nós sempre igual zelo pela palavra de Jeová!" — frase forte, voz firme. Termine com "A chama continua."</li>
+      </ul>
+
+      <h3>⚠️ O que NÃO fazer</h3>
+      <ul style="padding-left: 20px; color: var(--text-dim);">
+        <li>Não parafraseie os versículos. Leia o texto NWT como está na seção <em>Material fonte</em>.</li>
+        <li>Não diga "Sentinela w11 15/3 30 § 9" lendo o código — diga com naturalidade: "a Sentinela de 15 de março de 2011, página 30, parágrafo 9".</li>
+        <li>Não leia as Sentinelas em público. São longas; capture apenas a frase-força e a cite resumindo.</li>
+        <li>Não use mais de 2 ilustrações. Menos é mais.</li>
+        <li>Não fique no poético demais — esse roteiro é mais acessível, e isso é proposital. Crianças e idosos precisam acompanhar.</li>
+      </ul>
+
+      <h3>📚 Versículos complementares citados no roteiro</h3>
+      <p>Você abriu portas para mais versículos, citados naturalmente no discurso. Se quiser ler o contexto em casa:</p>
+      <ul style="padding-left: 20px; color: var(--text-dim);">
+        <li><span class="verse-chip">Jeremias 1:6</span> — Jeremias "ainda sou rapaz".</li>
+        <li><span class="verse-chip">Mateus 16:13, 14</span> — Jesus comparado a Jeremias ressuscitado.</li>
+        <li><span class="verse-chip">Marcos 4:21</span> — a lamparina debaixo do cesto (ilustração da vela).</li>
+        <li><span class="verse-chip">Hebreus 4:12</span> — a palavra de Deus como espada de dois gumes.</li>
+        <li><span class="verse-chip">Jeremias 8:21, 22; 9:1</span> — Jeremias chorou por causa de Jerusalém.</li>
+        <li><span class="verse-chip">Jeremias 38:7-13</span> — Ebede-Meleque tira Jeremias da cisterna.</li>
+        <li><span class="verse-chip">Jeremias 39:18</span> — Deus recompensa Ebede-Meleque.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Material compilado em 29 jul 2026 · Texto NWT verbatim do JW Library local · Texto das Sentinelas (w11 15/3 § 9; w10 15/2 §§ 8-9) fornecido por você · Insight (it_T) e "Toda a Escritura" (si_T) verbatim do cache local
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // Tabs
+  function openTab(evt, tabId) {
+    const parent = evt.currentTarget.closest('section');
+    parent.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    parent.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+  // Smooth scroll + sidebar active state
+  document.querySelectorAll('nav.sidebar a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      document.querySelectorAll('nav.sidebar a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+  // Highlight on scroll
+  const sections = document.querySelectorAll('main.content > section[id]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        document.querySelectorAll('nav.sidebar a').forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
