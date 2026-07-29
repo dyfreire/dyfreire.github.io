@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📘 Ande Corajosamente com Deus · Estudo Cap. 1 — Enoque</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6c757d;
+    --border: #dee2e6;
+    --azul: #dbeafe;
+    --azul-borda: #3b82f6;
+    --cinza: #f1f3f5;
+    --cinza-borda: #6c757d;
+    --verde: #d1fae5;
+    --verde-borda: #10b981;
+    --ambar: #fef3c7;
+    --ambar-borda: #f59e0b;
+    --roxo: #ede9fe;
+    --roxo-borda: #8b5cf6;
+    --amarelo: #fef9c3;
+    --amarelo-borda: #eab308;
+    --fontes: #ffe4e6;
+    --fontes-borda: #f43f5e;
+    --link: #2563eb;
+    --shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  [data-theme="dark"] {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #334155;
+    --azul: #1e3a8a;
+    --cinza: #334155;
+    --verde: #064e3b;
+    --ambar: #78350f;
+    --roxo: #4c1d95;
+    --amarelo: #713f12;
+    --fontes: #7f1d1d;
+    --link: #60a5fa;
+    --shadow: 0 2px 8px rgba(0,0,0,.3);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0;
+    transition: background .3s, color .3s;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+  header {
+    background: linear-gradient(135deg, #b45309, #d97706);
+    color: white;
+    padding: 20px 16px;
+    text-align: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+  header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+  header .week { font-size: .85rem; opacity: .9; }
+  header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+  .controls {
+    display: flex; gap: 8px; padding: 12px 16px;
+    background: var(--card); border-bottom: 1px solid var(--border);
+    position: sticky; top: 96px; z-index: 99;
+  }
+  .btn {
+    background: var(--azul); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: .85rem; cursor: pointer;
+    flex: 1; font-weight: 500;
+  }
+  .btn:hover { background: var(--cinza); }
+  .btn-icon { flex: 0 0 auto; padding: 8px 12px; }
+
+  .toc {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .toc h2 { font-size: 1rem; margin-bottom: 12px; color: var(--link); }
+  .toc details { margin-bottom: 8px; }
+  .toc summary {
+    cursor: pointer; padding: 8px 12px; background: var(--cinza);
+    border-radius: 8px; font-weight: 600; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc summary::after { content: "▼"; font-size: .7rem; transition: transform .2s; }
+  .toc details[open] summary::after { transform: rotate(180deg); }
+  .toc ul { list-style: none; padding-left: 16px; margin-top: 8px; }
+  .toc li a {
+    display: block; padding: 6px 0; color: var(--text);
+    text-decoration: none; font-size: .9rem; opacity: .8;
+  }
+  .toc li a:hover { color: var(--link); opacity: 1; }
+
+  .tabs {
+    display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto;
+    background: var(--card); padding: 8px; border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .tab {
+    padding: 10px 14px; background: transparent; border: none;
+    border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 600;
+    white-space: nowrap; color: var(--muted); transition: all .2s;
+  }
+  .tab.active { background: var(--azul); color: var(--text); }
+  .tab:hover:not(.active) { background: var(--cinza); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .card-title {
+    font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+    color: var(--link); display: flex; align-items: center; gap: 8px;
+  }
+  .card-title .num {
+    background: var(--ambar); color: #1a1a1a;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .box {
+    padding: 12px 14px; border-radius: 10px; margin-bottom: 10px;
+    border-left: 4px solid;
+  }
+  .box-label {
+    font-size: .7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .5px; margin-bottom: 6px; opacity: .8;
+  }
+  .box-text { font-size: .92rem; line-height: 1.55; }
+  .box-emoji { font-size: 1.1rem; margin-right: 6px; }
+
+  .box-pergunta { background: var(--azul); border-color: var(--azul-borda); }
+  .box-texto    { background: var(--cinza); border-color: var(--cinza-borda); }
+  .box-explic   { background: var(--verde); border-color: var(--verde-borda); }
+  .box-aplic    { background: var(--ambar); border-color: var(--ambar-borda); }
+  .box-reflex   { background: var(--roxo); border-color: var(--roxo-borda); }
+  .box-resumo   { background: var(--amarelo); border-color: var(--amarelo-borda); }
+  .box-fontes   { background: var(--fontes); border-color: var(--fontes-borda); }
+
+  .ref {
+    display: inline-block; background: var(--azul);
+    color: var(--link); padding: 2px 8px; border-radius: 6px;
+    font-size: .82rem; font-weight: 600; text-decoration: none;
+    border: 1px solid var(--azul-borda);
+    margin: 0 2px; cursor: pointer;
+  }
+  .ref:hover { background: var(--azul-borda); color: white; }
+
+  .modal-bg {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.6); z-index: 1000;
+    align-items: center; justify-content: center; padding: 16px;
+  }
+  .modal-bg.show { display: flex; }
+  .modal {
+    background: var(--card); color: var(--text);
+    max-width: 500px; width: 100%; max-height: 80vh; overflow-y: auto;
+    border-radius: 14px; padding: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+  }
+  .modal h3 { color: var(--link); margin-bottom: 12px; font-size: 1.1rem; }
+  .modal .verse-text { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+  .modal .close {
+    background: var(--azul); color: var(--text);
+    border: none; padding: 8px 16px; border-radius: 8px;
+    cursor: pointer; font-weight: 600; float: right;
+  }
+  .modal a {
+    display: inline-block; margin-top: 8px; color: var(--link);
+    font-size: .85rem; text-decoration: none; font-weight: 600;
+  }
+
+  .section-header {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    text-align: center; box-shadow: var(--shadow);
+  }
+  .section-header h2 { color: var(--link); font-size: 1.15rem; }
+  .section-header .emoji { font-size: 1.5rem; margin-right: 6px; }
+
+  .review-card {
+    background: var(--amarelo); border: 2px dashed var(--amarelo-borda);
+    border-radius: 12px; padding: 16px; margin-bottom: 12px;
+  }
+  .review-card h4 { color: var(--text); margin-bottom: 8px; font-size: 1rem; }
+  .review-card p { font-size: .92rem; line-height: 1.6; }
+
+  .fontes-list { list-style: none; padding: 0; margin: 0; }
+  .fontes-list li {
+    font-size: .85rem; padding: 6px 0;
+    border-bottom: 1px dashed var(--fontes-borda);
+    display: flex; align-items: flex-start; gap: 6px;
+  }
+  .fontes-list li:last-child { border-bottom: none; }
+  .fontes-list .icon { flex-shrink: 0; }
+  .fontes-list a { color: var(--link); text-decoration: none; font-weight: 500; }
+  .fontes-list a:hover { text-decoration: underline; }
+  .fontes-list .nota {
+    display: block; font-style: italic; opacity: .85;
+    font-size: .82rem; margin-top: 2px; padding-left: 22px;
+  }
+
+  .box-artigo { background: #fffbeb; border-color: #d97706; border-left: 4px solid #d97706; }
+  .box-artigo .box-text { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.75; font-size: .95rem; white-space: pre-line; }
+  .box-artigo .box-text .highlight { background: rgba(212,168,73,0.18); padding: 1px 4px; border-radius: 3px; font-weight: 600; }
+  [data-theme="dark"] .box-artigo { background: #422006; }
+  [data-theme="dark"] .box-artigo .box-text { color: #fef3c7; }
+
+  .imagem-fig {
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 12px 0;
+    text-align: center;
+  }
+  .imagem-fig img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .imagem-fig figcaption {
+    font-size: .8rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  footer {
+    text-align: center; padding: 24px 16px; font-size: .8rem;
+    color: var(--muted); border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+
+  @media (max-width: 480px) {
+    .container { padding: 12px; }
+    header h1 { font-size: 1.1rem; }
+    .card { padding: 14px; }
+    .box { padding: 10px 12px; }
+    .box-text { font-size: .88rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📘 Ande Corajosamente com Deus</h1>
+  <div class="week">Estudo Bíblico de Congregação · Cap. 1 — Enoque</div>
+  <div class="cantico">"Ele andou com o verdadeiro Deus"</div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-icon" onclick="toggleTheme()">🌓 Tema</button>
+  <button class="btn" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">📑 Índice</button>
+</div>
+
+<div class="container">
+
+<div class="toc" id="toc">
+  <h2>📑 Índice do Estudo</h2>
+  <details>
+    <summary>🔷 Contexto do livro</summary>
+    <ul>
+      <li><a href="#intro-livro">Introdução do livro — "Levantem-se, vamos embora"</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Seção 1 — Patriarcas e juízes</summary>
+    <ul>
+      <li><a href="#secao1-abertura">Abertura da Seção 1</a></li>
+      <li><a href="#linha-tempo">Linha do tempo</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Cap. 1 — Enoque</summary>
+    <ul>
+      <li><a href="#c1-1">Enoque sabia o que era se sentir sozinho</a></li>
+      <li><a href="#c1-2">Recusou ser como as pessoas más</a></li>
+      <li><a href="#c1-3">Pregou a mensagem de Jeová</a></li>
+      <li><a href="#c1-4">Jeová o protegeu</a></li>
+      <li><a href="#c1-leia">Leia o relato na Bíblia</a></li>
+      <li><a href="#c1-considerar">Para considerar</a></li>
+      <li><a href="#c1-a1">Analise: Como começaram a invocar o nome de Jeová?</a></li>
+      <li><a href="#c1-a2">Analise: Enoque foi o primeiro profeta fiel</a></li>
+      <li><a href="#c1-a3">Analise: Sabia que seria testado</a></li>
+      <li><a href="#c1-a4">Analise: Enoque não foi para o céu</a></li>
+      <li><a href="#c1-m1">Medite: Situações que exigem coragem</a></li>
+      <li><a href="#c1-m2">Medite: Como Jeová se sente</a></li>
+      <li><a href="#c1-m3">Medite: Como imitar a coragem de Enoque</a></li>
+      <li><a href="#c1-p1">Quadro completo: O que aprendo sobre Jeová</a></li>
+      <li><a href="#c1-p2">Quadro completo: Relação com o propósito de Jeová</a></li>
+      <li><a href="#c1-p3">Quadro completo: O que perguntar a Enoque</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Material de apoio</summary>
+    <ul>
+      <li><a href="#apoio-insight">Insight — Verbete "Enoque"</a></li>
+      <li><a href="#apoio-versiculos">Versículos-chave NWT</a></li>
+      <li><a href="#apoio-sentinela">Sentinelas citadas (abrir no JW Library)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Revisão</summary>
+    <ul>
+      <li><a href="#revisao">Pergunta de revisão</a></li>
+    </ul>
+  </details>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">Contexto</button>
+  <button class="tab" onclick="showTab(1)">Cap. 1 — Enoque</button>
+  <button class="tab" onclick="showTab(2)">Perguntas</button>
+  <button class="tab" onclick="showTab(3)">Material de Apoio</button>
+  <button class="tab" onclick="showTab(4)">Revisão</button>
+</div>
+
+<!-- TAB 0: CONTEXTO -->
+<div class="tab-content active" id="tab0">
+
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Contexto do livro e da Seção 1</h2>
+</div>
+
+<!-- INTRODUÇÃO DO LIVRO -->
+<div class="card" id="intro-livro">
+  <div class="card-title"><span class="num">📖</span> Introdução do livro — "Levantem-se, vamos embora"</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta de abertura</div>
+    <div class="box-text">Jesus disse: "Levantem-se, vamos embora." Por que essas palavras mostram tanta coragem?</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"<em>Levantem-se, vamos embora.</em>" — <a class="ref" data-verse="Mateus 26:46">Mt 26:46</a></div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (par. 1-2)</div>
+    <div class="box-text">"Levantem-se, vamos embora." Provavelmente, essas são as palavras mais corajosas que alguém já disse! Talvez você se pergunte por que essas palavras mostram coragem. Vamos descobrir a resposta por analisar quem disse isso e por quê. — Mat. 26:46.
+
+Foi Jesus Cristo que falou essas palavras para seus discípulos. E essa não foi a única vez que ele disse isso. (João 14:31) Mas agora a situação era bem diferente. Já era tarde da noite, e ele estava no jardim de Getsêmani, perto de Jerusalém. Jesus sabia que um grupo de homens armados estava se aproximando. Jesus estava prestes a passar pelo <span class="highlight">maior teste que qualquer homem poderia enfrentar.</span>"</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Jesus estava num momento de perigo e mesmo assim foi em direção ao perigo. Ser corajoso não é ausência de medo — é ir adiante porque você confia em Jeová.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue pensar numa situação em que precisou avançar para o perigo, sabendo que Jeová estava com você?</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jesus é o exemplo máximo de coragem. Ele não fugiu do perigo — enfrentou sabendo que Jeová estava com ele.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/26/" target="_blank">Mateus 26:36-46 — NWT</a>
+          <span class="nota">Contexto: Jesus orando no Getsêmani, sabendo que seria preso.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/14/" target="_blank">João 14:31 — outras vezes em que Jesus disse "Levantem-se, vamos embora"</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- SEÇÃO 1 ABERTURA -->
+<div class="card" id="secao1-abertura">
+  <div class="card-title"><span class="num">1</span> A Seção 1 começa aqui</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como você acha que esta seção se conecta com o tema "Ande Corajosamente com Deus"?</div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (abertura da Seção 1)</div>
+    <div class="box-text">"SEÇÃO 1 — Dos dias dos patriarcas ao tempo dos juízes
+
+Nesta seção, vamos fazer uma viagem por um período de unos <span class="highlight">2.200 anos</span>. Vamos começar com Enoque, que viveu enquanto Adão ainda estava vivo, terminando na época do profeta Samuel, que designou o primeiro rei de Israel.
+
+Ao longo da viagem, vamos ver exemplos incríveis de coragem, como <span class="highlight">Noé, Abraão, Sara, Moisés, Raabe, Débora e Gideão</span>. Alguns tiveram de percorrer longas distâncias, enfrentando muitos perigos. Já outros tiveram de encarar o desafio de participar nas 'guerras de Jeová'. Todos eles mostraram coragem ao cumprir suas designações dadas pelo Deus que tanto amavam."</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Enoque é o "elo" perfeito para começar: ele é o primeiro ser humano a demonstrar coragem num mundo hostil. Todos os capítulos seguintes são variações dessa coragem em diferentes contextos.</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A Seção 1 cobre 21 personagens + 2.200 anos (Enoque → Samuel). Tema central: coragem para cumprir designações.</div>
+  </div>
+</div>
+
+<!-- LINHA DO TEMPO -->
+<div class="card" id="linha-tempo">
+  <div class="card-title"><span class="num">⏱️</span> Linha do tempo da Seção 1</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A linha do tempo mostra a ordem cronológica das 21 histórias desta seção. <strong>Enoque é a primeira pessoa</strong> — ele viveu ao mesmo tempo que Adão.</div>
+  </div>
+
+  <div class="imagem-fig">
+    <img src="linha-tempo-secao1.jpg" alt="Linha do tempo da Seção 1 — De Enoque a Samuel">
+    <figcaption>📊 Linha do tempo do livro (Doc 6, p. 14)</figcaption>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Tabela da Linha do tempo</div>
+    <div class="box-text">Antes do Dilúvio
+• Adão — 4026-3096 a.C.
+• <strong>Enoque — 3404-3039 a.C.</strong>
+• Noé — 2970-2020 a.C.
+
+Depois do Dilúvio
+• Abraão — 2018-1843 a.C.
+• Sara — 2008-1881 a.C.
+• Rebeca — 1900*-1775* a.C.
+• Jacó — 1858-1711 a.C.
+• José — 1767-1657 a.C.
+• Moisés — 1593-1473 a.C.
+• Calebe — 1552-1450* a.C.
+• Josué — 1560*-1450* a.C.
+• Raabe — 1500*-1400* a.C.
+
+Tempo dos juízes
+• Noemi, Rute, Débora, Baraque, Jael, Gideão, Sansão, Jefté — 1450*-1120* a.C.
+• Samuel — 1180*-1080* a.C.
+
+*Data aproximada.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Enoque era <em>avô de Metusalém</em> (o homem que mais viveu na Bíblia, 969 anos). Metusalém morreu no ano do Dilúvio. Enoque é o início de uma linhagem excepcional.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/" target="_blank">Gênesis 5:1-32 — A linhagem de Adão até Noé</a>
+          <span class="nota">Mostra a posição de Enoque na genealogia.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 1: CAP. 1 — ENOQUE -->
+<div class="tab-content" id="tab1">
+
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Capítulo 1 — "Ele andou com Deus"</h2>
+</div>
+
+<!-- PAR. 1-2 -->
+<div class="card" id="c1-1">
+  <div class="card-title"><span class="num">1</span> Enoque sabia o que era se sentir sozinho</div>
+
+  <div class="imagem-fig">
+    <img src="cap1-capa.jpg" alt="Ilustração da capa do Cap. 1 — Enoque andou com Deus">
+    <figcaption>🎨 Imagem de capa do capítulo (Doc 7, p. 16)</figcaption>
+  </div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como seria se sentir sozinho na sua fé, mesmo entre muitas pessoas?</div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (par. 1-2)</div>
+    <div class="box-text">"<strong>Enoque sabia muito bem o que era se sentir sozinho.</strong> Ele era bem diferente das pessoas à sua volta. Tanto que, de todos os que viviam na sua época, ele é o único descrito na Bíblia com as seguintes palavras: 'Enoque continuou andando com o verdadeiro Deus.'
+
+Como isso era possível para um simples humano na Terra? E o que podemos aprender sobre coragem com o exemplo de Enoque?
+
+Enoque andou com o verdadeiro Deus de <span class="highlight">pelo menos duas maneiras importantes</span>."</div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Enoque viveu numa época de violência, culto falso e corrupção moral. Mas ele foi <em>diferente</em>. A Bíblia o elogia como único daquela geração que "andou com o verdadeiro Deus".</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Hoje, você também pode ser o único em sua escola, trabalho ou família que defende os princípios bíblicos. Como Enoque, você pode ser "diferente" sem ser arrogante.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">O que significa "andar com Deus" na prática do dia a dia?</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Enoque era diferente do mundo à sua volta. Ele andou com Deus de duas maneiras: recusando-se a ser mau, e fazendo o que Jeová pediu.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/24/" target="_blank">Gênesis 5:24 — Enoque andou com Deus</a>
+          <span class="nota">"Andou com o verdadeiro Deus" — expressão única a Enoque. Implica comunhão diária, não apenas crença.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- PAR. 3 — Recusou ser como as pessoas más -->
+<div class="card" id="c1-2">
+  <div class="card-title"><span class="num">2</span> A primeira maneira: recusou ser como as pessoas más</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que uma pessoa precisa fazer para <em>não ser influenciada</em> por um ambiente violento?</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Se Caim deve ser vingado sete vezes, então Lameque setenta e sete vezes." — <a class="ref" data-verse="Gênesis 4:23, 24">Gn 4:23, 24</a>; <a class="ref" data-verse="Gênesis 4:26">Gn 4:26</a></div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (par. 3)</div>
+    <div class="box-text">"A primeira foi que <span class="highlight">ele se recusou a ser como as pessoas más que viviam em volta dele.</span> Como era a situação naquela época?
+
+Enoque era a sétima geração desde Adão e Eva; Adão era bem idoso, mas ainda estava vivo. As pessoas tinham a mesma atitude rebelde do primeiro casal humano e, por isso, o mundo estava cheio de <span class="highlight">violência</span>. Essa violência começou quando o primeiro filho de Adão e Eva, Caim, matou seu próprio irmão Abel, o primeiro homem que mostrou fé em Jeová.
+
+E alguns dos descendentes de Caim eram tão cruéis quanto ele, ou até mais. (Gên. 4:23, 24) Apesar de toda a violência daquela época, Enoque não se deixou influenciar. <span class="highlight">Ele continuou sendo um homem bom e pacífico, e isso agradou a Deus.</span>"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Naquele tempo as pessoas começaram a invocar o nome de Jeová." — <a class="ref" data-verse="Gênesis 4:26">Gn 4:26</a></div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original (continuação)</div>
+    <div class="box-text">"Muitos anos antes de Enoque nascer, 'as pessoas começaram a invocar o nome de Jeová'. (Gên. 4:26) <span class="highlight">Será que elas faziam isso porque tinham fé em Deus? Dificilmente. Parece que as pessoas usavam o nome de Deus de forma desrespeitosa.</span> Enoque se recusou a participar nisso. Ele amava a Jeová e tinha muito respeito pelo seu nome sagrado. Por isso, ele era diferente das pessoas de sua época."</div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Dois pontos fortes: (1) Enoque ficou fora da violência; (2) ele protegeu o nome de Jeová. Hoje, defender o nome de Jeová continua sendo um ato de coragem — recusar usar o nome de Deus em vão.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Recuse-se a: xingar, usar o nome de Deus em vão, participar de bullying. Enoque fez isso há quase 4000 anos — você pode fazer hoje.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você usa o nome de Jeová com reverência? Ou como qualquer outra palavra?</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Enoque escolher ser diferente — recusou violência e protegeu o nome de Jeová. Isso exigiu coragem numa época hostil.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/4/" target="_blank">Gênesis 4 — A história de Caim e Abel</a>
+          <span class="nota">Mostra a violência que Enoque queria evitar.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/2/20/" target="_blank">Êxodo 20:7 — o terceiro mandamento</a>
+          <span class="nota">"Não uses o nome de Jeová teu Deus em vão" — princípio que Enoque obedecia.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- PAR. 4 — Pregou a mensagem de Jeová -->
+<div class="card" id="c1-3">
+  <div class="card-title"><span class="num">3</span> A segunda maneira: pregou a mensagem de Jeová</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Por que pregar a mensagem de Jeová exigia coragem naquela época?</div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (par. 4)</div>
+    <div class="box-text">"A segunda maneira em que Enoque andou com Deus foi por <span class="highlight">fazer o que Jeová pediu a ele.</span> E para isso ele precisou de ainda mais coragem.
+
+Jeová queria que Enoque servisse como profeta e transmitisse uma mensagem para todas aquelas pessoas más. A mensagem dizia: 'Vejam! Jeová veio com as suas santas miríades para executar julgamento contra todos, e para condenar todos os ímpios por todas as ações ímpias que fizeram de modo ímpio e por todas as coisas chocantes que os pecadores ímpios falaram contra ele.'"
+
+Essas palavras de Enoque eram tão verdadeiras que o verbo 'veio' está no passado, como se o julgamento de Deus já tivesse acontecido. <span class="highlight">Isso mostrava que a profecia de Enoque iria com certeza se cumprir.</span> E a mensagem trazia um forte julgamento de Jeová contra os ímpios, ou seja, as pessoas afastadas de Deus. Por isso, Enoque repetiu a palavra 'ímpio' quatro vezes.
+
+Com certeza, essas palavras irritaram aqueles que ouviram a pregação de Enoque. <span class="highlight">Mesmo assim, ele foi corajoso e disse a eles aquilo que Jeová queria que eles ouvissem.</span>"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Vejam! Jeová veio com as suas santas miríades para executar julgamento contra todos, e para condenar todos os ímpios..." — <a class="ref" data-verse="Judas 14, 15">Jd 14, 15</a></div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Enoque foi o <em>primeiro ser humano</em> a servir como profeta. Ele pregou a mensagem de julgamento que está em Judas 14, 15. É um privilégio enorme — e exige coragem, porque a mensagem era impopular.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Hoje, falar de julgamento (de Babilônia, do fim deste sistema) também pode ser impopular. Mas é uma mensagem de Jeová — e pregar é uma honra.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual é a reação das pessoas quando você fala sobre o fim do mundo? Isso é parte da nossa coragem moderna.</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Enoque foi o primeiro profeta humano. Pregou a mensagem de Judas 14, 15, mesmo sabendo que iria irritar.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/14/" target="_blank">Judas 14, 15 — A profecia de Enoque</a>
+          <span class="nota">A única profecia de Enoque que temos na Bíblia. Fala do julgamento de Jeová.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- PAR. 5 — Jeová o protegeu -->
+<div class="card" id="c1-4">
+  <div class="card-title"><span class="num">4</span> Jeová o protegeu</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Por que Jeová "transferiu" Enoque em vez de deixá-lo continuar pregando?</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Antes de ser transferido, [Enoque] recebeu o testemunho de que havia agradado a Deus." — <a class="ref" data-verse="Hebreus 11:5">Hb 11:5</a></div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Livro (par. 5)</div>
+    <div class="box-text">"Como as pessoas reagiram? A Bíblia não diz, mas ela dá a entender que chegou uma época em que Enoque estava em grande perigo. Como assim? A Bíblia diz: 'Depois, ele não foi mais visto, porque Deus o tomou.' O que aconteceu?
+
+Aquelas pessoas más odiavam Enoque e provavelmente o perseguiam. Mas Jeová não permitiu que elas machucassem ou matassem Enoque. <span class="highlight">Em vez de deixá-lo enfrentar esses perigos, Jeová amorosamente fez com que seu querido amigo dormisse na morte.</span> Assim, Enoque estaria seguro na memória de Jeová, onde ninguém poderia fazer nenhum mal a ele.
+
+Mas, antes disso, Jeová deu a Enoque algo muito especial. A Bíblia diz: 'Antes de ser transferido, [Enoque] recebeu o testemunho de que havia agradado a Deus.' Talvez Jeová tenha dado a Enoque uma visão sobre o que ele teria no futuro: uma vida pacífica em um paraíso na Terra.
+
+<span class="highlight">Antes de dar seu último suspiro, de uma coisa Enoque podia ter total certeza: ele tinha o amor e a aprovação de Jeová por causa de sua forte fé e de sua grande coragem!</span>"</div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Jeová não deixou Enoque morrer nas mãos dos inimigos. Ele "transferiu" Enoque — provavelmente pondo-o num sono na morte, semelhante a Moisés (Deuteronômio 34:5, 6). É uma morte, não uma ida ao céu.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Jeová protege de modos diferentes: às vezes nos tira do perigo; às vezes dá força para suportar. De qualquer forma, ele cuida de quem é fiel.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Quais são as evidências de que Jeová está cuidando de você, mesmo em momentos difíceis?</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Enoque morreu protegido por Jeová. Antes de morrer, sabia que tinha a aprovação divina. Sua coragem foi registrada como exemplo eterno.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/" target="_blank">Hebreus 11:5 — Pela fé Enoque foi transferido</a>
+          <span class="nota">"Transferido" = um "fim" antes do tempo natural da morte. Hebreus 11:13 explica que nem Enoque nem Abraão, Isaque ou Jacó receberam as promessas — eles morreram confiando na promessa.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/5/34/" target="_blank">Deuteronômio 34:5, 6 — Moisés também "desapareceu"</a>
+          <span class="nota">Paralelo: Jeová também escondeu o corpo de Moisés. Mesma forma de "proteção" do profeta.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEIA O RELATO NA BÍBLIA -->
+<div class="card" id="c1-leia">
+  <div class="card-title"><span class="num">📖</span> Leia o relato na Bíblia</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Os três textos que resumem a história de Enoque. Leia cada um em casa ou na reunião para entender melhor.</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Genealogia de Enoque</div>
+    <div class="box-text">"Enoque viveu 65 anos e então se tornou pai de Metusalém. Depois de se tornar pai de Metusalém, Enoque continuou andando com o verdadeiro Deus por 300 anos. E ele se tornou pai de filhos e de filhas. De modo que todos os dias de Enoque somaram 365 anos. Enoque continuou andando com o verdadeiro Deus. Depois, ele não foi mais visto, porque Deus o tomou." — <a class="ref" data-verse="Gênesis 5:21-24">Gn 5:21-24</a></div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Fé de Enoque</div>
+    <div class="box-text">"Pela fé Enoque foi transferido para não ver a morte, e não foi achado em parte alguma, porque Deus o havia transferido; pois, antes de ser transferido, ele recebeu o testemunho de que havia agradado a Deus." — <a class="ref" data-verse="Hebreus 11:5">Hb 11:5</a></div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Profecia de Enoque</div>
+    <div class="box-text">"O sétimo depois de Adão, Enoque, profetizou também acerca这些人, dizendo: 'Vejam! Jeová veio com as suas santas miríades para executar julgamento contra todos, e para condenar todos os ímpios por todas as ações ímpias que fizeram de modo ímpio e por todas as coisas chocantes que os pecadores ímpios falaram contra ele.'" — <a class="ref" data-verse="Judas 14, 15">Jd 14, 15</a></div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Os três versículos juntos mostram: (1) sua vida de fidelidade, (2) como Deus o protegeu, (3) a mensagem que ele pregou. Enoque é coerente.</div>
+  </div>
+</div>
+
+<!-- PARA CONSIDERAR -->
+<div class="card" id="c1-considerar">
+  <div class="card-title"><span class="num">💭</span> Para considerar</div>
+
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta inicial</div>
+    <div class="box-text">De que maneiras Enoque mostrou coragem?</div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão de resposta</div>
+    <div class="box-text"><strong>(1)</strong> Recusou ser como as pessoas más (recusou violência, protegeu o nome de Jeová). <strong>(2)</strong> Enfrentou a pregação a um público hostil (1.º humano a profetizar). <strong>(3)</strong> Confiou em Jeová mesmo quando estava em perigo.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Enoque não foi <em>corajoso por natureza</em>. Foi corajoso porque <em>andou com Deus</em>. Nós também: a coragem vem da proximidade com Jeová.</div>
+  </div>
+
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Enoque mostrou coragem em três áreas: pessoal (recusar violência), missionária (pregar contra os ímpios), e espiritual (confiar em Jeová).</div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 2: PERGUNTAS -->
+<div class="tab-content" id="tab2">
+
+<div class="section-header">
+  <h2><span class="emoji">❓</span>Analise mais a fundo — 4 perguntas</h2>
+</div>
+
+<!-- Pergunta 1 -->
+<div class="card" id="c1-a1">
+  <div class="card-title"><span class="num">1</span> Como talvez as pessoas começaram a "invocar o nome de Jeová"?</div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Naquele tempo as pessoas começaram a invocar o nome de Jeová." — <a class="ref" data-verse="Gênesis 4:26">Gn 4:26</a></div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Linha de raciocínio</div>
+    <div class="box-text">É provável que usassem o nome de Jeová de forma <em>desrespeitosa</em>, em rituais idólatras ou como uma expressão comum — não como adoração genuína. O contraste com Enoque é claro: ele <em>recusou</em> isso. <em>Referência adicional: w01 15/9 29 § 3</em>.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Usar o nome de Jeová em vão é uma das formas mais comuns de "desrespeito" hoje (palavrões, frases feitas, memes). Enoque teria se recusado a isso.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue pensar em situações do dia a dia em que o nome de Deus é usado sem respeito?</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/4/26/" target="_blank">Gênesis 4:26 — NWT</a>
+          <span class="nota">"Invocar" o nome de Jeová pode ter sido o início da adoração, mas o contexto sugere uso desrespeitoso, porque "só Enoque andou com Deus".</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📰</span>
+        <div>
+          <em>Sentinela de 15/9/2001, p. 29, § 3</em> — abrir no JW Library
+          <span class="nota">Citação oficial para essa pergunta.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Pergunta 2 -->
+<div class="card" id="c1-a2">
+  <div class="card-title"><span class="num">2</span> Enoque foi o primeiro humano fiel a fazer quê?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Linha de raciocínio</div>
+    <div class="box-text">Enoque foi o <strong>primeiro humano fiel a servir como profeta</strong> — transmitir a mensagem de Jeová a outras pessoas. Não foi o primeiro a falar de Deus (Adão, Abel, Caim), mas o primeiro a receber uma mensagem profética de julgamento para pregar. <em>Referência: w01 15/9 31 § 5</em>.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Enoque provou que é possível ser profeta sem estudioso / doutor: basta ter intimidade com Jeová e estar disposto a obedecer.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você se sente chamado a transmitir uma mensagem de Jeová? Como?</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📰</span>
+        <div>
+          <em>Sentinela de 15/9/2001, p. 31, § 5</em> — abrir no JW Library
+          <span class="nota">Citação oficial para essa pergunta.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Pergunta 3 -->
+<div class="card" id="c1-a3">
+  <div class="card-title"><span class="num">3</span> Por que Enoque provavelmente já sabia que sua coragem seria testada?</div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Se Caim deve ser vingado sete vezes, então Lameque setenta e sete vezes." — <a class="ref" data-verse="Gênesis 4:23, 24">Gn 4:23, 24</a></div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Linha de raciocínio</div>
+    <div class="box-text">Ele vivia num mundo <strong>violento</strong> (Gên 4:23, 24). Viu o que aconteceu com Abel — o primeiro homem de fé foi morto. Enoque sabia que ser diferente do mundo atrai perseguição. Mesmo assim, escolheu ser fiel. <em>Referência: w06 1/10 19 §§ 13-14</em>.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Hoje, ser cristão pode custar relacionamentos, oportunidades, aceitação. Mas Enoque nos mostra que vale a pena.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Numa situação difícil, você prefere ser aceito pelo mundo ou ter a aprovação de Jeová?</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/4/" target="_blank">Gênesis 4 — A violência dos descendentes de Caim</a>
+          <span class="nota">Lameque era tão violento que reconheceu ter matado alguém.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📰</span>
+        <div>
+          <em>Sentinela de 1/10/2006, p. 19, §§ 13-14</em> — abrir no JW Library
+          <span class="nota">Citação oficial para essa pergunta.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Pergunta 4 -->
+<div class="card" id="c1-a4">
+  <div class="card-title"><span class="num">4</span> Como explicar que Enoque não foi para o céu?</div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Nenhum homem subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem." — <a class="ref" data-verse="João 3:13">Jo 3:13</a></div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Pela fé Enoque foi transferido para não ver a morte..." — <a class="ref" data-verse="Hebreus 11:5">Hb 11:5</a>; <a class="ref" data-verse="Hebreus 11:13">Hb 11:13</a></div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Linha de raciocínio</div>
+    <div class="box-text">Hb 11:13 mostra que <em>todos</em> os homens de fé "morreram" sem receber as promessas. Jesus disse em Jo 3:13 que "ninguém subiu ao céu" — antes da vinda de Jesus, só ele tinha esse privilégio. Então Enoque <strong>morreu</strong>, e "Deus o tomou" — provavelmente um "transe profético" (Insight). Hebreus 11:5 diz "foi transferido para não ver a morte" — sem agonias.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Muitos cristãs e religiões ensinam que Enoque foi para o céu. Essa ideia <em>não tem apoio bíblico</em>. Enoque morreu e está no túmulo de Jeová, aguardando a ressurreição.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual é a esperança de Enoque agora? Terra Paradisíaca, não céu.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/" target="_blank">Hebreus 11 — A grande nuvem de testemunhas</a>
+          <span class="nota">v. 13: "Todos esses morreram com fé." Enoque não é exceção.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/5/34/" target="_blank">Deuteronômio 34:5, 6 — Paralelo com Moisés</a>
+          <span class="nota">Moisés também "desapareceu" sem morrer normalmente. Jeová escondeu o corpo.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-header">
+  <h2><span class="emoji">💭</span>Medite no que aprendeu — 3 perguntas</h2>
+</div>
+
+<!-- Medite 1 -->
+<div class="card" id="c1-m1">
+  <div class="card-title"><span class="num">M1</span> Que situações talvez exijam mais coragem para pregar?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão de resposta</div>
+    <div class="box-text"><strong>Situações do dia a dia:</strong></div>
+    <ul style="margin-left: 16px; margin-top: 6px;">
+      <li>Cônjuge ou familiar não-crente que zomba da nossa fé</li>
+      <li>Pressão no trabalho para mentir ou comprometer princípios</li>
+      <li>Ridicularização na escola por não celebrar festas</li>
+      <li>Alguém que amamos se afastar de Jeová</li>
+      <li>Vecinos que nos evitam por causa da nossa posição</li>
+    </ul>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Com base em Enoque, o que ajuda</div>
+    <div class="box-text">A <strong>amizade íntima com Jeová</strong>, a confiança de que ele nos protege, lembrar que outros antes de nós venceram.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão pessoal</div>
+    <div class="box-text">Alguma dessas situações já viveu? Como Enoque teria agido?</div>
+  </div>
+</div>
+
+<!-- Medite 2 -->
+<div class="card" id="c1-m2">
+  <div class="card-title"><span class="num">M2</span> Como Jeová se sente quando andamos corajosamente com ele?</div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Seja sábio, meu filho, e alegre meu coração, para que eu possa dar uma resposta àquele que me desafia." — <a class="ref" data-verse="Provérbios 27:11">Pv 27:11</a></div>
+  </div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Linha de raciocínio</div>
+    <div class="box-text">Pv 27:11 mostra que Jeová se <strong>alegra</strong> quando somos corajosos. Hb 11:5 diz que Enoque "recebeu o testemunho de que havia agradado a Deus". Jeová se sente alegre, honrado, valorizado, quando somos corajosos. Não estamos sozinhos — ele cuida de nós.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando você for pregador, lembre: Jeová está do seu lado. Sua coragem é manter a aprovação dele.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual é a sensação de saber que Jeová se alegra com você?</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/27/" target="_blank">Provérbios 27:11 — NWT</a>
+          <span class="nota">"Resposta" = defesa contra detractores. A coragem de um filho fiel é a defesa de Jeová.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Medite 3 -->
+<div class="card" id="c1-m3">
+  <div class="card-title"><span class="num">M3</span> Como você pode imitar a coragem de Enoque na sua vida?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão de resposta</div>
+    <div class="box-text">Ser <strong>diferente do mundo</strong> sem ser arrogante. <strong>Proteger o nome de Jeová</strong>. <strong>Pregar a verdade</strong> mesmo quando é difícil. <strong>Confiar</strong> que Jeová protege quem é fiel.</div>
+  </div>
+
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Escolha 1 ação concreta para esta semana: recusar uma festa, defender a verdade numa conversa, voltar a estudar depois do desânimo.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Enoque era "apenas um simples humano na Terra" — e mesmo assim ele foi corajoso. O que te impede?</div>
+  </div>
+</div>
+
+<div class="section-header">
+  <h2><span class="emoji">🔍</span>Pense no quadro completo — 3 perguntas</h2>
+</div>
+
+<!-- Quadro 1 -->
+<div class="card" id="c1-p1">
+  <div class="card-title"><span class="num">P1</span> O que esse relato me ensina sobre Jeová?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão</div>
+    <div class="box-text">Jeová é um Deus <strong>pessoal</strong>: ele viu Enoque, chamou-o, deu-lhe uma missão, protegeu-o. Jeová também nos vê, nos chama, nos protege.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Há uma missão que Jeová quer que EU cumpra esta semana?</div>
+  </div>
+</div>
+
+<!-- Quadro 2 -->
+<div class="card" id="c1-p2">
+  <div class="card-title"><span class="num">P2</span> Como esse relato está relacionado com o propósito de Jeová?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão</div>
+    <div class="box-text">O propósito de Jeová é que a Terra seja cheia de pessoas justas (Gên 1:28). Enoque é um dos primeiros a alinhar-se com esse propósito. Sua coragem é um mini-cumprimento do propósito divino.</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Hoje, milhares de Testemunhas de Jeová em todo o mundo "andam com Deus" — como Enoque. Somos parte da mesma história.</div>
+  </div>
+</div>
+
+<!-- Quadro 3 -->
+<div class="card" id="c1-p3">
+  <div class="card-title"><span class="num">P3</span> O que eu gostaria de perguntar a Enoque quando ele for ressuscitado?</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Sugestão</div>
+    <div class="box-text">• "Como era pregar para uma geração tão violenta?"</div>
+    <div class="box-text">• "Qual foi a sua maior prova de coragem?"</div>
+    <div class="box-text">• "O que você viu quando 'Deus o tomou'?"</div>
+    <div class="box-text">• "Você viu Adão? Como ele era?"</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">E... quando Enoque for ressuscitado, qual é a primeira coisa que VOCÊ vai dizer a ele?</div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 3: MATERIAL DE APOIO -->
+<div class="tab-content" id="tab3">
+
+<div class="section-header">
+  <h2><span class="emoji">📚</span>Material de apoio</h2>
+</div>
+
+<!-- INSIGHT -->
+<div class="card" id="apoio-insight">
+  <div class="card-title"><span class="num">📗</span> Insight — Verbete "Enoque"</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Fonte</div>
+    <div class="box-text">Estudo Perspicaz das Escrituras, Vol. 2, p. 21-22. Texto verbatim do JW Library local.</div>
+  </div>
+
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto verbatim</div>
+    <div class="box-text">"Enoque 'prosseguiu andando com o verdadeiro Deus.' (Gên 5:18, 21-24; He 11:5; 12:1) Como profeta de Jeová, <span class="highlight">predisse que Deus viria com Suas santas miríades para executar julgamento nos iníquos.</span> (Ju 14, 15) <span class="highlight">É provável que tenha sido perseguido por causa do seu profetizar.</span> No entanto, Deus não permitiu que os oponentes matassem Enoque. Antes, Jeová 'o tomou', isto é, abreviou sua vida à idade de 365 anos, uma idade muito inferior à da maioria de seus contemporâneos. Enoque foi 'transferido para não ver a morte', o que talvez signifique que Deus o pôs num transe profético e então terminou a vida de Enoque enquanto estava no transe, de modo que não sofreu as agonias da morte. (Gên 5:24; He 11:5, 13) No entanto, <span class="highlight">não foi levado para o céu</span>, em vista da expressa declaração de Jesus, em João 3:13. Parece que, como se deu no caso do corpo de Moisés, Jeová fez desaparecer o corpo de Enoque, pois 'não foi achado em parte alguma'. — De 34:5, 6; Ju 9."</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">O Insight confirma três pontos: (1) Enoque profetizou, (2) foi perseguido, (3) não foi para o céu. Tudo isso reforça a Pergunta 4 do estudo.</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/estudo-perspicaz/" target="_blank">Estudo Perspicaz das Escrituras, Vol. 2 — verbete "Enoque"</a>
+          <span class="nota">Verbete completo começa na p. 21. Há 2 entradas para "Enoque" — a primeira é o filho de Caim (que não é nosso estudo).</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- VERSÍCULOS -->
+<div class="card" id="apoio-versiculos">
+  <div class="card-title"><span class="num">📖</span> Versículos-chave NWT</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Para guardar</div>
+    <div class="box-text">Os versículos mais importantes para entender Enoque. <strong>Clique em qualquer um</strong> para ver o texto completo da NWT.</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Gênesis 5:21-24 — A linhagem de Enoque</div>
+    <div class="box-text"><a class="ref" data-verse="Gênesis 5:21">Gn 5:21</a> · <a class="ref" data-verse="Gênesis 5:22">Gn 5:22</a> · <a class="ref" data-verse="Gênesis 5:23">Gn 5:23</a> · <a class="ref" data-verse="Gênesis 5:24">Gn 5:24</a> — 365 anos de vida, pai de Metusalém, "andou com o verdadeiro Deus"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Gênesis 4:23-26 — Contexto de violência</div>
+    <div class="box-text"><a class="ref" data-verse="Gênesis 4:23">Gn 4:23</a> · <a class="ref" data-verse="Gênesis 4:24">Gn 4:24</a> — A violência de Lameque</div>
+    <div class="box-text"><a class="ref" data-verse="Gênesis 4:26">Gn 4:26</a> — "As pessoas começaram a invocar o nome de Jeová"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Hebreus 11:5 — A fé de Enoque</div>
+    <div class="box-text"><a class="ref" data-verse="Hebreus 11:5">Hb 11:5</a> — "Pela fé Enoque foi transferido"</div>
+    <div class="box-text"><a class="ref" data-verse="Hebreus 11:13">Hb 11:13</a> — "Todos esses morreram com fé"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Judas 14, 15 — A profecia de Enoque</div>
+    <div class="box-text"><a class="ref" data-verse="Judas 14, 15">Jd 14, 15</a> — "Jeová veio com suas santas miríades para executar julgamento"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Confirmar a posição sobre o céu</div>
+    <div class="box-text"><a class="ref" data-verse="João 3:13">Jo 3:13</a> — "Nenhum homem subiu ao céu"</div>
+    <div class="box-text"><a class="ref" data-verse="Deuteronômio 34:5, 6">Dt 34:5, 6</a> — Paralelo: Moisés "desapareceu"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📜 Aprovação divina</div>
+    <div class="box-text"><a class="ref" data-verse="Provérbios 27:11">Pv 27:11</a> — "Alegre o meu coração"</div>
+  </div>
+
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/" target="_blank">Gênesis 5 completo — Linhagem de Adão a Noé</a>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/" target="_blank">Hebreus 11 — A grande nuvem de testemunhas</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- SENTINELAS -->
+<div class="card" id="apoio-sentinela">
+  <div class="card-title"><span class="num">📰</span> Sentinelas citadas (abrir no JW Library)</div>
+
+  <div class="box box-explic">
+    <div class="box-label">🔍 Atenção</div>
+    <div class="box-text">Essas 3 Sentinelas <strong>não estão em cache local</strong> — não tem como puxar o texto automaticamente. Pesquise o título no JW Library para conferir o texto exato.</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📰 Usada na Pergunta 1</div>
+    <div class="box-text"><strong>Sentinela de 15/9/2001, p. 29, § 3</strong> — fonte oficial sobre "invocar o nome de Jeová"</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📰 Usada na Pergunta 2</div>
+    <div class="box-text"><strong>Sentinela de 15/9/2001, p. 31, § 5</strong> — fonte oficial sobre Enoque como primeiro profeta fiel</div>
+  </div>
+
+  <div class="box box-texto">
+    <div class="box-label">📰 Usada na Pergunta 3</div>
+    <div class="box-text"><strong>Sentinela de 1/10/2006, p. 19, §§ 13-14</strong> — fonte oficial sobre Enoque saber que seria testado</div>
+  </div>
+
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Como usar</div>
+    <div class="box-text">Antes de preparar o estudo, abra cada Sentinelha no JW Library. Leia o contexto do artigo (não só o parágrafo). Use para fundamentar a resposta oral — não precisa citar textualmente, mas a ideia fica mais redonda.</div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 4: REVISÃO -->
+<div class="tab-content" id="tab4">
+
+<div class="section-header">
+  <h2><span class="emoji">📝</span>Qual é a sua resposta?</h2>
+</div>
+
+<div class="review-card" id="revisao">
+  <h4>❓ Como a história de Enoque nos ensina a fortalecer nossa coragem?</h4>
+  <p>Enoque nos ensina que coragem <strong>não é ausência de medo</strong>, mas escolha de obedecer a Jeová mesmo quando o mundo é hostil. Ele mostrou coragem em três áreas:</p>
+  <p><strong>(1) Coragem pessoal</strong> — recusou ser como as pessoas más; num mundo violento, escolheu ser pacífico. Recusou-se a usar o nome de Jeová de forma desrespeitosa.</p>
+  <p><strong>(2) Coragem profética</strong> — foi o primeiro humano fiel a servir como profeta; pregou a mensagem de Judas 14, 15 mesmo sabendo que iria irritar.</p>
+  <p><strong>(3) Coragem espiritual</strong> — confiou em Jeová mesmo quando a perseguição cresceu. Jeová o protegeu.</p>
+  <p>E como Enoque recebeu a <strong>aprovação de Jeová</strong> (Hb 11:5), nós também podemos ter essa aprovação. "Alguém vai nos odiar por causa do nome de Jesus. Mas, se vocês perseverarem até o fim, vão ganhar a vida." — Mateus 10:22.</p>
+</div>
+
+<div class="review-card">
+  <h4>💡 Resumo Final do Estudo</h4>
+  <p>Enoque viveu há cerca de 5.500 anos, mas sua história ainda fala a corações de pessoas como você e eu. Ele era "apenas um simples humano" — assim como nós. Mas ele escolheu andar com Deus em meio a um mundo violento, pregou a mensagem de Jeová mesmo sob perseguição, e morreu em paz, com a aprovação divina.</p>
+  <p>Quando somos tentados a desistir, lembremos de Enoque. Quando parece que a mensagem não é bem aceita, lembremos de Enoque. Quando estamos exaustos de pregar, lembremos de Enoque.</p>
+  <p>Sua coragem não era dele — era de Jeová. A nossa também é. Use-a.</p>
+</div>
+
+<div class="box box-fontes" style="margin-top: 16px;">
+  <div class="box-label">📚 Recursos adicionais</div>
+  <ul class="fontes-list">
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/" target="_blank">Tradução do Novo Mundo da Bíblia Sagrada (NWT)</a>
+        <span class="nota">Releia Gênesis 5 + Hebreus 11:5 + Judas 14, 15 + Mateus 10:22.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/ande-corajosamente-com-deus/" target="_blank">Ande Corajosamente com Deus — livro completo</a>
+        <span class="nota">Os 54 capítulos contam 54 histórias de coragem. Enoque é a primeira.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/estudo-perspicaz/" target="_blank">Estudo Perspicaz das Escrituras, Vol. 2</a>
+        <span class="nota">Verbete "Enoque" — p. 21-22.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎬</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Library — Vídeos de animação</a>
+        <span class="nota">Procure por "Enoque" para encontrar animações da história.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/" target="_blank">Gênesis 5 — Genealogia completa</a>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/" target="_blank">Hebreus 11 — A grande nuvem de testemunhas</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+<footer>
+  <p>📘 Ande Corajosamente com Deus · Cap. 1 — Enoque</p>
+  <p>Estudo Bíblico de Congregação · 30 min</p>
+  <p>Baseado no livro "Ande Corajosamente com Deus" (wcg_T, 2025)</p>
+  <p>Texto bíblico: Tradução do Novo Mundo da Bíblia Sagrada (NWT) · 2026</p>
+  <p>📚 Inclui Insight verbete literal + referências cruzadas + links para mídia JW</p>
+  <p>💙 Feito com carinho pra Jinny</p>
+</footer>
+
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <div class="verse-text" id="modal-text"></div>
+    <a id="modal-link" target="_blank">Ver no jw.org →</a>
+    <button class="close" onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('wcg-theme', next);
+}
+const savedTheme = localStorage.getItem('wcg-theme');
+if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+function showTab(idx) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab' + idx).classList.add('active');
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.tabs').offsetTop - 130, behavior: 'smooth'});
+}
+
+const verses = {
+  "Mateus 26:46": {text: "\"Levantem-se, vamos embora.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/26/"},
+  "Gênesis 4:26": {text: "\"Naquele tempo as pessoas começaram a invocar o nome de Jeová.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/4/"},
+  "Gênesis 4:23, 24": {text: "\"Se Caim deve ser vingado sete vezes, então Lameque setenta e sete vezes.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/4/"},
+  "Gênesis 5:21": {text: "\"Enoque viveu 65 anos e então se tornou pai de Metusalém.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/"},
+  "Gênesis 5:22": {text: "\"Depois de se tornar pai de Metusalém, Enoque continuou andando com o verdadeiro Deus por 300 anos. E ele se tornou pai de filhos e de filhas.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/"},
+  "Gênesis 5:23": {text: "\"De modo que todos os dias de Enoque somaram 365 anos.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/"},
+  "Gênesis 5:24": {text: "\"Enoque continuou andando com o verdadeiro Deus. Depois, ele não foi mais visto, porque Deus o tomou.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/1/5/"},
+  "Hebreus 11:5": {text: "\"Pela fé Enoque foi transferido para não ver a morte, e não foi achado em parte alguma, porque Deus o havia transferido; pois, antes de ser transferido, ele recebeu o testemunho de que havia agradado a Deus.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/"},
+  "Hebreus 11:13": {text: "\"Todos esses morreram com fé, embora não recebessem as coisas prometidas; mas as viram de longe e as aceitaram com alegria, e declararam publicamente que eram estrangeiros e residentes temporários naquela terra.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/"},
+  "Judas 14, 15": {text: "\"O sétimo depois de Adão, Enoque, profetizou também acerca这些人, dizendo: 'Vejam! Jeová veio com as suas santas miríades para executar julgamento contra todos, e para condenar todos os ímpios por todas as ações ímpias que fizeram de modo ímpio e por todas as coisas chocantes que os pecadores ímpios falaram contra ele.'\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/65/14/"},
+  "João 3:13": {text: "\"Nenhum homem subiu ao céu, a não ser aquele que desceu do céu, o Filho do Homem.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/3/"},
+  "Deuteronômio 34:5, 6": {text: "\"Ali morreu Moisés, servo de Jeová, na terra de Moabe, conforme a palavra de Jeová. E ele o sepultou no vale, na terra de Moabe, diante de Bete-Peor; e, até o dia de hoje, ninguém sabe onde fica o seu túmulo.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/5/34/"},
+  "Provérbios 27:11": {text: "\"Seja sábio, meu filho, e alegre meu coração, para que eu possa dar uma resposta àquele que me desafia.\"", link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/27/"}
+};
+
+document.querySelectorAll('.ref').forEach(ref => {
+  ref.addEventListener('click', e => {
+    e.preventDefault();
+    const verse = ref.getAttribute('data-verse');
+    const data = verses[verse];
+    if (data) {
+      document.getElementById('modal-title').textContent = verse;
+      document.getElementById('modal-text').textContent = data.text;
+      document.getElementById('modal-link').href = data.link;
+      document.getElementById('modal-bg').classList.add('show');
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>

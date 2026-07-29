@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 Estudos Bíblicos — Ande Corajosamente com Deus</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6c757d;
+    --border: #dee2e6;
+    --shadow: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
+    --link: #2563eb;
+  }
+  [data-theme="dark"] {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #334155;
+    --link: #60a5fa;
+    --shadow: 0 2px 8px rgba(0,0,0,.3);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,.5);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+    transition: background .3s, color .3s;
+  }
+  .hero {
+    background: linear-gradient(135deg, #b45309, #d97706);
+    color: white;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+  .hero .subtitle { font-size: 1.05rem; opacity: .95; }
+  .hero .lema { font-size: .9rem; opacity: .8; font-style: italic; margin-top: 6px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 20px; }
+  .controls { display: flex; gap: 8px; margin-bottom: 24px; justify-content: center; }
+  .btn {
+    background: var(--card); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 16px; font-size: .9rem; cursor: pointer;
+    font-weight: 500;
+  }
+  .btn:hover { background: var(--border); }
+  .intro {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px; margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .studies {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 700px) {
+    .studies { grid-template-columns: 1fr 1fr; }
+  }
+  .study-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+    box-shadow: var(--shadow);
+    text-decoration: none; color: var(--text);
+    display: block; transition: transform .2s, box-shadow .2s;
+    border-top: 4px solid #d97706;
+  }
+  .study-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .study-card .badge {
+    display: inline-block;
+    background: #fef3c7; color: #92400e;
+    padding: 4px 10px; border-radius: 999px;
+    font-size: .7rem; font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .study-card .emoji-big { font-size: 2.5rem; margin: 4px 0; }
+  .study-card h2 { color: var(--link); font-size: 1.2rem; margin-bottom: 6px; }
+  .study-card .desc { font-size: .9rem; color: var(--muted); margin-bottom: 12px; }
+  .study-card ul {
+    list-style: none; padding: 0; margin: 12px 0;
+    font-size: .85rem;
+  }
+  .study-card ul li { padding: 3px 0; display: flex; align-items: center; gap: 6px; }
+  .study-card ul li::before { content: "✓"; color: #d97706; font-weight: 700; }
+  .study-card .open-link {
+    display: inline-block; margin-top: 12px;
+    color: var(--link); font-weight: 600; font-size: .9rem;
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: .9rem;
+    text-decoration: none;
+  }
+  .back:hover { color: var(--link); }
+  footer {
+    text-align: center; padding: 24px 16px;
+    font-size: .8rem; color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="emoji">📘</div>
+    <h1>Estudos Bíblicos de Congregação</h1>
+    <div class="subtitle">Ande Corajosamente com Deus · Livro de estudo</div>
+    <div class="lema">"Ele andou com o verdadeiro Deus" — Gênesis 5:24</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <button class="btn" onclick="toggleTheme()">🌓 Alternar tema</button>
+  </div>
+
+  <a href="../" class="back">← Voltar para a página principal</a>
+
+  <div class="intro">
+    <p>Estes são os <strong>estudos bíblicos de congregação (30 min)</strong> baseados no livro <em>Ande Corajosamente com Deus</em>. Cada estudo traz o texto verbatim do livro, perguntas com linhas de raciocínio, material de apoio (Insight, versículos-chave) e revisão final.</p>
+    <p style="margin-top: 8px;">📖 <strong>Texto original verbatim</strong> · 🔍 <strong>Insight + NWT</strong> · 🌓 <strong>Dark mode</strong> · 📑 <strong>Modal de versículos</strong></p>
+  </div>
+
+  <div class="studies">
+    <a href="estudo-wcg-secao1-cap1-enoque.html" class="study-card">
+      <span class="badge">🆕 Seção 1 · Cap. 1</span>
+      <div class="emoji-big">🕯️</div>
+      <h2>Enoque — "Ele andou com Deus"</h2>
+      <p class="desc">O primeiro ser humano descrito como "andando com o verdadeiro Deus". Primeira pessoa corajosa da história.</p>
+      <ul>
+        <li>15 cards no padrão "6 caixas"</li>
+        <li>13 versículos clicáveis (NWT)</li>
+        <li>Insight verbete "Enoque" verbatim</li>
+        <li>5 abas: Contexto, Cap. 1, Perguntas, Material de Apoio, Revisão</li>
+        <li>Imagens do livro (capa + linha do tempo)</li>
+      </ul>
+      <span class="open-link">Abrir estudo</span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>📘 Estudo Bíblico de Congregação · Ande Corajosamente com Deus 2026</p>
+  <p>Hospedado no GitHub Pages · dyfreire.github.io</p>
+  <p>Texto bíblico: Tradução do Novo Mundo (NWT) · 2026</p>
+</footer>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+const saved = localStorage.getItem('theme');
+if (saved) document.body.setAttribute('data-theme', saved);
+</script>
+
+</body>
+</html>
