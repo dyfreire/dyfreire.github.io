@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continue espiritualmente forte ao obter ensino adicional | Sentinela 27 Jul–2 Ago 2026</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6c757d;
+  --border: #dee2e6;
+  --azul: #dbeafe;
+  --azul-borda: #3b82f6;
+  --cinza: #f1f3f5;
+  --cinza-borda: #6c757d;
+  --verde: #d1fae5;
+  --verde-borda: #10b981;
+  --ambar: #fef3c7;
+  --ambar-borda: #f59e0b;
+  --roxo: #ede9fe;
+  --roxo-borda: #8b5cf6;
+  --amarelo: #fef9c3;
+  --amarelo-borda: #eab308;
+  --fontes: #ffe4e6;
+  --fontes-borda: #f43f5e;
+  --link: #2563eb;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #334155;
+  --azul: #1e3a8a;
+  --cinza: #334155;
+  --verde: #064e3b;
+  --ambar: #78350f;
+  --roxo: #4c1d95;
+  --amarelo: #713f12;
+  --fontes: #7f1d1d;
+  --link: #60a5fa;
+  --shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0;
+  transition: background .3s, color .3s;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+header {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+header .week { font-size: .85rem; opacity: .9; }
+header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+.controls {
+  display: flex; gap: 8px; padding: 12px 16px;
+  background: var(--card); border-bottom: 1px solid var(--border);
+  position: sticky; top: 96px; z-index: 99;
+}
+.btn {
+  background: var(--azul); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; font-size: .85rem; cursor: pointer;
+  flex: 1; font-weight: 500;
+}
+.btn:hover { background: var(--cinza); }
+.btn-icon { flex: 0 0 auto; padding: 8px 12px; }
+
+.toc {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; margin-bottom: 12px; color: var(--link); }
+.toc details { margin-bottom: 8px; }
+.toc summary {
+  cursor: pointer; padding: 8px 12px; background: var(--cinza);
+  border-radius: 8px; font-weight: 600; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after { content: "▼"; font-size: .7rem; transition: transform .2s; }
+.toc details[open] summary::after { transform: rotate(180deg); }
+.toc ul { list-style: none; padding-left: 16px; margin-top: 8px; }
+.toc li a {
+  display: block; padding: 6px 0; color: var(--text);
+  text-decoration: none; font-size: .9rem; opacity: .8;
+}
+.toc li a:hover { color: var(--link); opacity: 1; }
+
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto;
+  background: var(--card); padding: 8px; border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.tab {
+  padding: 10px 14px; background: transparent; border: none;
+  border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 600;
+  white-space: nowrap; color: var(--muted); transition: all .2s;
+}
+.tab.active { background: var(--azul); color: var(--text); }
+.tab:hover:not(.active) { background: var(--cinza); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+  color: var(--link); display: flex; align-items: center; gap: 8px;
+}
+.card-title .num {
+  background: var(--azul); color: var(--text);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 700;
+}
+
+.box {
+  padding: 12px 14px; border-radius: 10px; margin-bottom: 10px;
+  border-left: 4px solid;
+}
+.box-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 6px; opacity: .8;
+}
+.box-text { font-size: .92rem; line-height: 1.55; }
+.box-emoji { font-size: 1.1rem; margin-right: 6px; }
+
+.box-pergunta { background: var(--azul); border-color: var(--azul-borda); }
+.box-texto    { background: var(--cinza); border-color: var(--cinza-borda); }
+.box-explic   { background: var(--verde); border-color: var(--verde-borda); }
+.box-aplic    { background: var(--ambar); border-color: var(--ambar-borda); }
+.box-reflex   { background: var(--roxo); border-color: var(--roxo-borda); }
+.box-resumo   { background: var(--amarelo); border-color: var(--amarelo-borda); }
+.box-fontes   { background: var(--fontes); border-color: var(--fontes-borda); }
+
+.ref {
+  display: inline-block; background: var(--azul);
+  color: var(--link); padding: 2px 8px; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--azul-borda);
+  margin: 0 2px; cursor: pointer;
+}
+.ref:hover { background: var(--azul-borda); color: white; }
+
+.modal-bg {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.6); z-index: 1000;
+  align-items: center; justify-content: center; padding: 16px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: var(--card); color: var(--text);
+  max-width: 500px; width: 100%; max-height: 80vh; overflow-y: auto;
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.modal h3 { color: var(--link); margin-bottom: 12px; font-size: 1.1rem; }
+.modal .verse-text { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.modal .close {
+  background: var(--azul); color: var(--text);
+  border: none; padding: 8px 16px; border-radius: 8px;
+  cursor: pointer; font-weight: 600; float: right;
+}
+.modal a {
+  display: inline-block; margin-top: 8px; color: var(--link);
+  font-size: .85rem; text-decoration: none; font-weight: 600;
+}
+
+.section-header {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.section-header h2 { color: var(--link); font-size: 1.15rem; }
+.section-header .emoji { font-size: 1.5rem; margin-right: 6px; }
+
+.review-card {
+  background: var(--amarelo); border: 2px dashed var(--amarelo-borda);
+  border-radius: 12px; padding: 16px; margin-bottom: 12px;
+}
+.review-card h4 { color: var(--text); margin-bottom: 8px; font-size: 1rem; }
+.review-card p { font-size: .92rem; line-height: 1.6; }
+
+/* Fontes & Mídia - novo estilo */
+.fontes-list { list-style: none; padding: 0; margin: 0; }
+.fontes-list li {
+  font-size: .85rem; padding: 6px 0;
+  border-bottom: 1px dashed var(--fontes-borda);
+  display: flex; align-items: flex-start; gap: 6px;
+}
+.fontes-list li:last-child { border-bottom: none; }
+.fontes-list .icon { flex-shrink: 0; }
+.fontes-list a { color: var(--link); text-decoration: none; font-weight: 500; }
+.fontes-list a:hover { text-decoration: underline; }
+.fontes-list .nota {
+  display: block; font-style: italic; opacity: .85;
+  font-size: .82rem; margin-top: 2px; padding-left: 22px;
+}
+
+
+.box-artigo { background: #fffbeb; border-color: #d97706; border-left: 4px solid #d97706; }
+.box-artigo .box-text { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.75; font-size: .95rem; white-space: pre-line; }
+[data-theme="dark"] .box-artigo { background: #422006; }
+[data-theme="dark"] .box-artigo .box-text { color: #fef3c7; }
+
+/* Media preview */
+.media-card {
+  background: rgba(255,255,255,.6);
+  border: 1px solid var(--fontes-borda);
+  border-radius: 8px; padding: 10px; margin-top: 8px;
+  font-size: .85rem; line-height: 1.5;
+}
+.media-card .label {
+  font-weight: 700; color: var(--fontes-borda);
+  font-size: .75rem; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+[data-theme="dark"] .media-card { background: rgba(0,0,0,.3); }
+
+footer {
+  text-align: center; padding: 24px 16px; font-size: .8rem;
+  color: var(--muted); border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+  header h1 { font-size: 1.1rem; }
+  .card { padding: 14px; }
+  .box { padding: 10px 12px; }
+  .box-text { font-size: .88rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📖 Continue espiritualmente forte ao obter ensino adicional</h1>
+  <div class="week">Sentinela · 27 de julho – 2 de agosto de 2026</div>
+  <div class="cantico">🎵 Cântico 56 — Faça da verdade a sua vida</div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-icon" onclick="toggleTheme()">🌓 Tema</button>
+  <button class="btn" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">📑 Índice</button>
+</div>
+
+<div class="container">
+
+<div class="toc" id="toc">
+  <h2>📑 Índice do Estudo</h2>
+  <details open>
+    <summary>🔷 Introdução</summary>
+    <ul>
+      <li><a href="#p1-2">1-2 · Andando no mesmo rumo como um soldado (Fl 3:16)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Continue com uma boa rotina espiritual</summary>
+    <ul>
+      <li><a href="#p3">3 · O desafio: mais compromissos</a></li>
+      <li><a href="#p4">4 · "Bastante para fazer na obra do Senhor" (1Co 15:58)</a></li>
+      <li><a href="#p5">5 · Antes de começar: defina suas prioridades</a></li>
+      <li><a href="#p6">6 · Perguntas para avaliar (imagem)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Proteja o seu raciocínio</summary>
+    <ul>
+      <li><a href="#p7">7 · O desafio: filosofia deste mundo</a></li>
+      <li><a href="#p8">8 · "Proteger seu raciocínio" (Pv 5:1, 2)</a></li>
+      <li><a href="#p9">9 · Antes de começar: confiança na Bíblia</a></li>
+      <li><a href="#p10">10 · Como continuar protegendo (1Ti 4:15)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Use bem o seu tempo</summary>
+    <ul>
+      <li><a href="#p11">11 · O desafio: tempo curto</a></li>
+      <li><a href="#p12">12 · "Use o tempo do melhor modo" (Ef 5:15, 16)</a></li>
+      <li><a href="#p13">13 · Antes de começar: programação realista</a></li>
+      <li><a href="#p14">14 · Perguntas para avaliar</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Continue andando com quem é sábio</summary>
+    <ul>
+      <li><a href="#p15">15 · O desafio: más companhias</a></li>
+      <li><a href="#p16">16 · "Quem anda com sábios se tornará sábio" (Pv 13:20)</a></li>
+      <li><a href="#p17">17 · Antes de começar: defina limites</a></li>
+      <li><a href="#p18">18 · Perguntas para avaliar (imagem)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Prepare-se para os desafios</summary>
+    <ul>
+      <li><a href="#p19">19 · Como um alpinista (Ef 6:11-13)</a></li>
+      <li><a href="#p20">20 · "Persistir em examinar se está na fé" (2Co 13:5)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Revisão e Resumo</summary>
+    <ul>
+      <li><a href="#rev1">Revisão · Os 4 princípios para o ensino adicional</a></li>
+      <li><a href="#rev2">Revisão · O que fazer ANTES de começar</a></li>
+      <li><a href="#rev3">Revisão · O que avaliar DURANTE o curso</a></li>
+    </ul>
+  </details>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">Introdução</button>
+  <button class="tab" onclick="showTab(1)">Rotina Espiritual</button>
+  <button class="tab" onclick="showTab(2)">Raciocínio</button>
+  <button class="tab" onclick="showTab(3)">Tempo</button>
+  <button class="tab" onclick="showTab(4)">Companhias</button>
+  <button class="tab" onclick="showTab(5)">Desafios</button>
+  <button class="tab" onclick="showTab(6)">Revisão</button>
+</div>
+
+<!-- TAB 0: Introdução -->
+<div class="tab-content active" id="tab0">
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Introdução</h2>
+</div>
+
+<div class="card" id="p1-2">
+  <div class="card-title"><span class="num">1-2</span> Continuar andando no mesmo rumo como um soldado</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">(a) Se decidir começar um curso adicional, o que você precisa fazer? (b) O que aprendemos da expressão "andando nesse mesmo rumo"? <a class="ref" data-verse="Fl 3:16">Fl 3:16</a></div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"De qualquer modo, seja qual for o progresso que já fizemos, prossigamos andando nesse mesmo rumo." — <a class="ref" data-verse="Fl 3:16">Fl 3:16</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Alguns servos de Jeová, depois de concluírem o ensino básico exigido pelo governo, decidem fazer um curso adicional. Se decidir obter ensino adicional, você precisa tomar cuidado para que sua amizade com Jeová continue forte. Na época da escola, você enfrentou testes de fé e foi bem-sucedido. Agora precisa continuar "andando nesse mesmo rumo", ou seja, continuar sendo leal a Jeová. O verbo grego traduzido como "andando nesse mesmo rumo" era usado para se referir a um grupo de soldados marchando juntos. Podemos aplicar isso a quem decide fazer um curso adicional: essa pessoa tem que ser como um soldado e continuar marchando no serviço a Jeová, sem parar nem recuar.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Se você está pensando em fazer um curso adicional (ou já está fazendo), defina agora: Jeová sempre em primeiro lugar. Assim como um soldado mantém a marcha mesmo cansado, mantenha sua rotina espiritual mesmo sob a pressão dos estudos.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Que "marcha" você tem mantido ultimamente? Alguma área da sua rotina espiritual está enfraquecendo?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Fazer um curso adicional exige continuar "andando no mesmo rumo" — ser como um soldado leal a Jeová que não para nem recua.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 1-2)</div>
+    <div class="box-text">Alguns servos de Jeová, depois de concluírem o ensino básico exigido pelo governo, decidem fazer um curso adicional. Eles talvez achem que, com esse tipo de curso, vão conseguir encontrar um trabalho que os ajude a se sustentar e dar o seu melhor no serviço a Jeová. Se decidir obter ensino adicional, você precisa tomar cuidado para que sua amizade com Jeová continue forte. (Tia. 4:8a) Como você pode fazer isso? Com certeza, na época da escola, você enfrentou testes de fé e foi bem-sucedido. Agora você vai precisar continuar "andando nesse mesmo rumo", ou seja, continuar sendo leal a Jeová, como já está fazendo. — Leia Filipenses 3:16.
+
+O verbo grego que aparece na frase traduzida como "andando nesse mesmo rumo" geralmente era usado para se referir a um grupo de soldados marchando juntos. Podemos aplicar isso a quem decide fazer um curso adicional. Essa pessoa tem que ser como um soldado e continuar marchando no seu serviço a Jeová, sem parar nem recuar. Neste estudo, vamos ver quatro princípios bíblicos importantes, mas que não são novidade para você. São princípios que você já usou no passado e precisa continuar usando enquanto faz um curso adicional e também depois disso.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/50/3/" target="_blank">Filipenses 3:16 — NWT</a>
+          <span class="nota">Texto-base do estudo. "Andando nesse mesmo rumo" = continuar leal a Jeová.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/59/4/" target="_blank">Tiago 4:8a — NWT</a>
+          <span class="nota">"Acheguem-se a Deus, e ele se achegará a vocês" — princípio-chave para manter a amizade com Jeová.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">🎵</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/musica/" target="_blank">Cântico 56 — "Faça da verdade a sua vida"</a>
+          <span class="nota">Cântico inicial deste estudo.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📋</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Índice da Sentinela — maio 2026</a>
+          <span class="nota">Outros artigos: "Por que os princípios bíblicos são importantes?", "Como usar os princípios para treinar a consciência", "Seja sábio sobre ensino adicional", "Respeite as decisões de outros", "Personagem: Manaém".</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 1: Rotina Espiritual -->
+<div class="tab-content" id="tab1">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Continue com uma boa rotina espiritual</h2>
+</div>
+
+<div class="card" id="p3">
+  <div class="card-title"><span class="num">3</span> Como fazer um curso adicional pode afetar a sua rotina espiritual?</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como fazer um curso adicional pode afetar a sua rotina espiritual?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Contudo, tenho o seguinte contra você: você abandonou o amor que tinha no princípio." — <a class="ref" data-verse="Ap 2:4">Ap 2:4</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Por causa do ensino adicional, você pode acabar tendo mais compromissos e atividades ao longo do dia. É normal querer se sair bem nos estudos, mas você pode começar a ver seu serviço a Jeová como algo menos importante. Pode até ser que você passe a deixar de lado coisas como assistir às reuniões, participar na pregação, fazer estudo pessoal e orar.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Não espere o problema aparecer. Antes de começar, defina horários fixos para reuniões, pregação e estudo pessoal — e proteja esses horários como compromissos inegociáveis.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue lembrar da última vez que perdeu uma reunião por causa de estudo ou trabalho? O que isso revela sobre suas prioridades?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Mais compromissos = risco de ver o serviço a Jeová como menos importante. As reuniões, pregação, estudo pessoal e oração podem ser deixadas de lado.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 3)</div>
+    <div class="box-text">Desafio: Por causa do ensino adicional, você pode acabar tendo mais compromissos e atividades ao longo do dia. É normal querer se sair bem nos estudos, mas você pode começar a ver seu serviço a Jeová como algo menos importante. Pode até ser que você passe a deixar de lado coisas como assistir às reuniões, participar na pregação, fazer estudo pessoal e orar. — Apo. 2:4.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/2/" target="_blank">Apocalipse 2:4 — NWT</a>
+          <span class="nota">Jesus alerta a congregação de Éfeso: "você abandonou o amor que tinha no princípio". O curso adicional pode fazer o mesmo conosco se não tomarmos cuidado.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p4">
+  <div class="card-title"><span class="num">4</span> Tenha “bastante para fazer na obra do Senhor”</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que pode ajudar você a ter "bastante para fazer na obra do Senhor"? <a class="ref" data-verse="1Co 15:58">1Co 15:58</a></div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Portanto, meus amados irmãos, sejam firmes, inabaláveis, e tenham sempre bastante para fazer na obra do Senhor, sabendo que o seu trabalho árduo no Senhor não é em vão." — <a class="ref" data-verse="1Co 15:58">1Co 15:58</a>; <a class="ref" data-verse="Mt 22:37">Mt 22:37</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Para não cair de uma bicicleta, você precisa estar em movimento. Da mesma forma, para não cair em sentido espiritual, você precisa continuar em movimento — ter "bastante para fazer na obra do Senhor". Isso não tem a ver apenas com o tempo que você gasta em atividades espirituais, mas principalmente com a importância que dá a elas. Sempre lembre que primeiro você é um servo de Jeová, e depois um aluno.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Em vez de pensar "ser espiritual ocupa meu tempo", pense "é meu tempo MAIS importante". Reorganize sua agenda em torno das atividades espirituais, e não o contrário.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Quando você planeja sua semana, as reuniões e a pregação vêm antes ou depois dos estudos?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Para não "cair" espiritualmente, continue em movimento. Primeiro servo de Jeová, depois aluno.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 4)</div>
+    <div class="box-text">Para não cair de uma bicicleta, você precisa estar em movimento. Da mesma forma, para não cair em sentido espiritual, você precisa continuar em movimento, ou seja, ter "bastante para fazer na obra do Senhor". Isso não tem a ver apenas com o tempo que você gasta em atividades espirituais, mas principalmente com a importância que dá a elas. Sempre lembre que primeiro você é um servo de Jeová, e depois um aluno. — Mat. 22:37.
+
+Uma jovem chamada Samantha diz: "Eu prometi a mim mesma que, se em algum momento meu curso atrapalhasse meu serviço a Jeová, eu ia largar o curso."</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/" target="_blank">1 Coríntios 15:58 — NWT</a>
+          <span class="nota">"Tenham sempre bastante para fazer na obra do Senhor" — princípio-chave: estar sempre em movimento na obra.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/22/" target="_blank">Mateus 22:37 — NWT</a>
+          <span class="nota">Amar a Jeová de todo o coração é a primeira prioridade — antes de qualquer curso.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">💬</span>
+        <div>
+          <span>Exemplo de Samantha</span>
+          <span class="nota">"Eu prometi a mim mesma que, se em algum momento meu curso atrapalhasse meu serviço a Jeová, eu ia largar o curso."</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p5">
+  <div class="card-title"><span class="num">5</span> Antes de começar: tenha em mente o que é mais importante</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você pode fazer para continuar tendo uma boa rotina espiritual?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text"><a class="ref" data-verse="Js 1:8">Js 1:8</a> · <a class="ref" data-verse="Mt 28:19">Mt 28:19</a> · <a class="ref" data-verse="Mt 28:20">Mt 28:20</a> · <a class="ref" data-verse="Hb 10:25">Hb 10:25</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Antes de começar o ensino adicional, tenha bem em mente o que é mais importante. Pergunte-se: "O que exatamente eu pretendo fazer para continuar assistindo às reuniões, indo ao campo e fazendo o meu estudo pessoal?" Você também pode pensar na época da escola — o que fez para continuar dando prioridade a essas coisas? Se perceber que poderia ter se saído melhor, pense em que mudanças pode fazer agora.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça um "plano de prioridades" ANTES de começar o curso. Escreva em quais dias/horários você vai: (1) assistir reuniões; (2) ir ao campo; (3) fazer estudo pessoal; (4) orar. Trate esses compromissos como sagrados.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Olhando para sua época da escola: o que você fez bem? O que mudaria?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Antes de começar, defina claramente como vai manter: reuniões, pregação, estudo pessoal e oração.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 5)</div>
+    <div class="box-text">O que você pode fazer antes de começar o ensino adicional?
+Tenha bem em mente o que é mais importante para você. Pergunte-se: "O que exatamente eu pretendo fazer para continuar assistindo às reuniões, indo ao campo e fazendo o meu estudo pessoal?" (Jos. 1:8; Mat. 28:19, 20; Heb. 10:25) Você também pode pensar na época da escola. O que você fez para continuar dando prioridade a essas coisas? Se perceber que poderia ter se saído melhor, pense em que mudanças você pode fazer agora. Esteja decidido a continuar com uma boa rotina espiritual enquanto estiver fazendo um curso adicional. É importante se dedicar aos estudos, mas nunca a ponto de prejudicar sua adoração a Jeová. — Mat. 6:24.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/6/1/" target="_blank">Josué 1:8 — NWT</a>
+          <span class="nota">O livro da Lei sempre nos lábios — meditação diária.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/28/" target="_blank">Mateus 28:19, 20 — NWT</a>
+          <span class="nota">A grande comissão — fazer discípulos é prioritário.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/10/" target="_blank">Hebreus 10:25 — NWT</a>
+          <span class="nota">"Não deixando de nos reunir" — princípio das reuniões.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/" target="_blank">Mateus 6:24 — NWT</a>
+          <span class="nota">Não se pode ser escravo de dois senhores.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p6">
+  <div class="card-title"><span class="num">6</span> Perguntas para avaliar se Jeová continua em primeiro lugar</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que perguntas seria bom você se fazer? (Veja também a imagem.)</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Depois de começar a fazer um curso adicional, tire tempo para avaliar se Jeová continua em primeiro lugar na sua vida. Talvez você possa fazer isso todo mês. Seria bom se perguntar: (1) Tenho o hábito de perder reuniões ou de chegar atrasado? (2) Durante as reuniões, fico distraído pensando nos trabalhos que tenho que entregar? (3) Será que só assisto às reuniões por videoconferência? (4) Estou orando e lendo a Bíblia menos do que antes? (5) Será que vou ao campo só por obrigação e fico ansioso para ir embora?</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Agende uma "autoavaliação mensal" — pode ser todo último domingo do mês. Releia essas 5 perguntas com calma. Se respondeu "sim" para alguma, aja imediatamente para mudar.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Das 5 perguntas acima, qual te incomodou mais? Por quê? O que você vai fazer a respeito esta semana?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Autoavaliação mensal: 5 perguntas simples para verificar se Jeová continua em primeiro lugar.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 6)</div>
+    <div class="box-text">Depois de começar a fazer um curso adicional, tire tempo para avaliar se Jeová continua em primeiro lugar na sua vida. Você talvez possa fazer isso todo mês. Seria bom se perguntar: "Tenho o hábito de perder reuniões ou de chegar atrasado? Durante as reuniões, fico distraído pensando nos trabalhos que tenho que entregar? Será que só assisto às reuniões por videoconferência? Estou orando e lendo a Bíblia menos do que antes? Será que vou ao campo só por obrigação e fico ansioso para ir embora?" Se você respondeu "sim" a uma ou mais dessas perguntas, é sinal de que precisa agir rápido pra mudar. Jamais permita que os estudos atrapalhem você de colocar Jeová em primeiro lugar na vida.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Imagem do estudo: "Não deixe que os estudos atrapalhem você de colocar Jeová em primeiro lugar"</a>
+          <span class="nota">Ilustração visual mostrando um jovem equilibrando estudos e serviço a Jeová.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📋</span>
+        <div>
+          <span>Ferramenta: lista de checagem mensal</span>
+          <span class="nota">Sugestão: imprima essas 5 perguntas e marque-as todo mês.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 2: Raciocínio -->
+<div class="tab-content" id="tab2">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Proteja o seu raciocínio</h2>
+</div>
+
+<div class="card" id="p7">
+  <div class="card-title"><span class="num">7</span> Cuidado com a filosofia deste mundo</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como fazer um curso adicional pode afetar seu modo de pensar?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Tenham cuidado para que ninguém os escravize por meio de filosofia e vão engano, que são baseados em tradições humanas, nas coisas elementares do mundo, e não em Cristo;" — <a class="ref" data-verse="Cl 2:8">Cl 2:8</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Alguns cursos podem expor você ao que a Bíblia chama de "filosofia e vão engano" deste mundo. Pode ser que eles ensinem que Deus não existe e promovam a teoria da evolução. Você também pode acabar aprendendo a confiar demais em si mesmo. Um jovem conta: "O curso que eu fiz não ensinava apenas habilidades, ele tentava mudar nosso modo de pensar. E muitas vezes isso ia contra o modo de pensar de Jeová. Por exemplo, a gente aprendia que o sucesso só depende de nós mesmos. Então comecei a achar que não precisava de Jeová pra ser feliz e ficou mais difícil confiar nele."</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Antes de se matricular, pesquise: o que esse curso ensina sobre Deus? Sobre a origem da vida? Se já está fazendo, identifique os "ensinamentos do mundo" que conflitam com a Bíblia e separe claramente o que é acadêmico do que é princípio espiritual.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue identificar qual foi a última vez que um ensinamento do curso (ou da internet) abalou sua fé? Como reagiu?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Cursos podem ensinar filosofia do mundo, evolucionismo e autoconfiança — todos opostos aos princípios bíblicos.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 7)</div>
+    <div class="box-text">Desafio: Alguns cursos podem expor você ao que a Bíblia chama de "filosofia e vão engano" deste mundo. (Col. 2:8) Pode ser que eles ensinem que Deus não existe e promovam a teoria da evolução. Você também pode acabar aprendendo a confiar demais em si mesmo. Um jovem conta: "O curso que eu fiz não ensinava apenas habilidades, ele tentava mudar nosso modo de pensar. E muitas vezes isso ia contra o modo de pensar de Jeová. Por exemplo, a gente aprendia que o sucesso só depende de nós mesmos. Então comecei a achar que não precisava de Jeová pra ser feliz e ficou mais difícil confiar nele."</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/51/2/" target="_blank">Colossenses 2:8 — NWT</a>
+          <span class="nota">"Tenham cuidado para que ninguém os escravize por meio de filosofia e vão engano" — princípio de proteção do raciocínio.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">💬</span>
+        <div>
+          <span>Exemplo real do jovem no curso</span>
+          <span class="nota">O testemunho dele mostra que curso adicional pode mudar valores — mesmo sem perceber.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p8">
+  <div class="card-title"><span class="num">8</span> Por que é importante proteger o seu raciocínio</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Por que é importante "proteger o seu raciocínio"? <a class="ref" data-verse="Pv 5:1">Pv 5:1</a></div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Caso contrário, você vai gemer no fim da sua vida, Quando a sua carne e o seu corpo definharem, Para que você proteja o seu raciocínio E resguarde o conhecimento com os seus lábios." — <a class="ref" data-verse="Pv 5:1">Pv 5:1</a>; <a class="ref" data-verse="Pv 5:2">Pv 5:2</a> · <a class="ref" data-verse="1Pe 5:8">1Pe 5:8</a> · <a class="ref" data-verse="1Co 3:18">1Co 3:18</a>; <a class="ref" data-verse="1Co 3:19">1Co 3:19</a>; <a class="ref" data-verse="1Co 3:20">1Co 3:20</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia diz que você deve "proteger o seu raciocínio". Se precisamos proteger nosso raciocínio, é porque ele está em perigo. E realmente, o mundo de Satanás está o tempo todo tentando contaminar nosso modo de pensar. O espírito deste mundo pode levar você a duvidar se deve mesmo seguir as normas de moral da Bíblia, se Deus nos criou ou até se ele existe. Alguns talvez digam que a maneira de pensar deles é "superior", mas na verdade é inferior. Para Deus, "a sabedoria deste mundo é tolice".</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Crie o hábito de "filtrar" cada ensinamento novo do curso: "Isso está de acordo com o que a Bíblia ensina?" Quando vier uma ideia contrária, anote e pesquise na Bíblia ou em jw.org a resposta de Jeová.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">1 Pedro 5:8 diz que o Diabo "anda em volta" como leão rugindo. Como isso se aplica à sala de aula ou aos colegas de curso?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O raciocínio precisa ser protegido porque o espírito do mundo quer contaminá-lo. Para Deus, a sabedoria do mundo é tolice.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 8)</div>
+    <div class="box-text">Leia Provérbios 5:1, 2.
+A Bíblia diz que você deve "proteger o seu raciocínio". Se precisamos proteger nosso raciocínio, é porque ele está em perigo. E realmente, o mundo de Satanás está o tempo todo tentando contaminar nosso modo de pensar. (1 Ped. 5:8) O espírito deste mundo pode levar você a duvidar se deve mesmo seguir as normas de moral da Bíblia, se Deus nos criou ou até se ele existe. Alguns talvez digam que a maneira de pensar deles é "superior", mas na verdade é inferior. Para Deus, "a sabedoria deste mundo é tolice". — 1 Cor. 3:18-20.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/5/" target="_blank">Provérbios 5:1, 2 — NWT</a>
+          <span class="nota">"Para que você proteja o seu raciocínio e resguarde o conhecimento" — princípio central deste bloco.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/60/5/" target="_blank">1 Pedro 5:8 — NWT</a>
+          <span class="nota">O Diabo anda em volta como leão rugindo, procurando a quem devorar.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/3/" target="_blank">1 Coríntios 3:18-20 — NWT</a>
+          <span class="nota">"A sabedoria deste mundo é tolice perante Deus" — aviso direto sobre filosofia humana.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p9">
+  <div class="card-title"><span class="num">9</span> Antes de começar: tenha certeza da sua confiança na Bíblia</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você pode fazer para proteger seu raciocínio?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Para proteger seu modo de pensar, antes de começar a fazer um curso, você precisa ter certeza de que a sua confiança nos ensinos da Bíblia é forte. Pergunte-se: "Por que eu acredito em Deus? O que me faz ter certeza que a Bíblia é a Palavra dele? Por que eu confio que os padrões de moral da Bíblia são superiores aos do mundo?" Você também pode pensar na época da escola. Nessa fase você com certeza ficou exposto ao modo de pensar do mundo. Será que a confiança das pessoas na teoria da evolução fez a sua fé enfraquecer? Você se sentia muito tentado a imitar as coisas erradas que seus colegas faziam? Se achar que poderia ter feito algo diferente, o que você pode fazer agora para aumentar sua confiança na Bíblia? Durante o curso adicional, nunca deixe que a maneira de pensar dos outros faça você duvidar do que acredita.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Antes de iniciar o curso, escreva 3 razões pelas quais você acredita em Deus e na Bíblia. Releia essas razões sempre que vier dúvida. Reforce seu estudo pessoal durante o curso.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Se um colega te perguntasse "Por que você acredita em Deus?", você saberia responder de pronto?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Antes do curso, fortaleça a confiança na Bíblia. Identifique os ataques da época da escola e esteja preparado.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 9)</div>
+    <div class="box-text">O que você pode fazer antes de começar o ensino adicional?
+Para proteger seu modo de pensar, antes de começar a fazer um curso, você precisa ter certeza de que a sua confiança nos ensinos da Bíblia é forte. Pergunte-se: "Por que eu acredito em Deus? O que me faz ter certeza que a Bíblia é a Palavra dele? Por que eu confio que os padrões de moral da Bíblia são superiores aos do mundo?"
+Você também pode pensar na época da escola. Nessa fase você com certeza ficou exposto ao modo de pensar do mundo. Será que a confiança das pessoas na teoria da evolução fez a sua fé enfraquecer? Você se sentia muito tentado a imitar as coisas erradas que seus colegas faziam? Se achar que poderia ter feito algo diferente, o que você pode fazer agora para aumentar sua confiança na Bíblia?
+Durante o curso adicional, nunca deixe que a maneira de pensar dos outros faça você duvidar do que acredita. — 2 Tim. 2:16-18.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/2/" target="_blank">2 Timóteo 2:16-18 — NWT</a>
+          <span class="nota">"Rejeite as conversas vãs que violam o que é santo" — princípio para evitar ser influenciado.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/" target="_blank">Sentinela de maio 2019 — "Não seja enganado pela sabedoria deste mundo"</a>
+          <span class="nota">Artigo complementar sugerido pelo estudo para aprofundar proteção do raciocínio.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p10">
+  <div class="card-title"><span class="num">10</span> Como continuar protegendo seu modo de pensar</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você pode fazer para continuar protegendo seu modo de pensar?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Medite nessas coisas; concentre-se totalmente nelas, para que o seu progresso seja claramente visto por todos." — <a class="ref" data-verse="1Ti 4:15">1Ti 4:15</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Ao longo do curso, tire tempo para pensar em como está se saindo. Pergunte-se: "Será que estou sendo influenciado pelas coisas erradas que as pessoas ao meu redor fazem? Eu consigo identificar quando um ensino do mundo é sem valor? Eu tenho certeza absoluta de que só o Reino de Deus pode resolver os problemas da humanidade?" Para proteger o seu raciocínio, continue sendo um estudante dedicado da Palavra de Deus. O estudo da Bíblia e a meditação vão fortalecer sua confiança nas verdades que você aprendeu.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Mantenha uma rotina diária de leitura da Bíblia + meditação, mesmo que curta (5-10 min). Esse é o "antídoto" diário contra o envenenamento do raciocínio.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você tem dedicado tempo diário à meditação? Está percebendo progresso espiritual, ou estagnou?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Continue sendo estudante dedicado da Palavra de Deus. Meditação diária = proteção constante do raciocínio.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 10)</div>
+    <div class="box-text">Ao longo do curso, tire tempo para pensar em como está se saindo. Pergunte-se: "Será que estou sendo influenciado pelas coisas erradas que as pessoas ao meu redor fazem? Eu consigo identificar quando um ensino do mundo é sem valor? Eu tenho certeza absoluta de que só o Reino de Deus pode resolver os problemas da humanidade?"
+Para proteger o seu raciocínio, continue sendo um estudante dedicado da Palavra de Deus. O estudo da Bíblia e a meditação vão fortalecer sua confiança nas verdades que você aprendeu. — 1 Tim. 4:15.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/54/4/" target="_blank">1 Timóteo 4:15 — NWT</a>
+          <span class="nota">"Medite nessas coisas; concentre-se totalmente nelas" — chave para progresso espiritual.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 3: Tempo -->
+<div class="tab-content" id="tab3">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Use bem o seu tempo</h2>
+</div>
+
+<div class="card" id="p11">
+  <div class="card-title"><span class="num">11</span> O ensino adicional pode te deixar sem tempo</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como fazer um curso adicional pode afetar o seu tempo?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">O ensino adicional pode acabar deixando você sem tempo pra nada, principalmente em época de provas ou quando você tem um prazo apertado para entregar um trabalho. Se não usar bem o tempo, você pode ficar estressado ou até completamente esgotado. Por isso, é muito importante cuidar da sua saúde física e emocional.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Não espere esgotar. Logo no início do curso, planeje períodos de descanso e exercícios físicos. Saúde física e emocional é pré-requisito para continuar servindo a Jeová com alegria.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Quando foi a última vez que você descansou de verdade (sem culpa) e fez exercício físico?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Curso adicional pode sugar todo o seu tempo. Sem planejamento, gera estresse e esgotamento. Cuide da saúde.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 11)</div>
+    <div class="box-text">Desafio: O ensino adicional pode acabar deixando você sem tempo pra nada, principalmente em época de provas ou quando você tem um prazo apertado para entregar um trabalho. Se não usar bem o tempo, você pode ficar estressado ou até completamente esgotado. Por isso, é muito importante cuidar da sua saúde física e emocional.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">🩺</span>
+        <div>
+          <span>Dica de saúde: sono e exercício</span>
+          <span class="nota">8h de sono + 30min de exercício físico 3x/semana = diferença enorme no rendimento acadêmico.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p12">
+  <div class="card-title"><span class="num">12</span> Use o seu tempo do melhor modo possível</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Para "usar o seu tempo do melhor modo possível", que atividades você precisa incluir na sua programação? <a class="ref" data-verse="Ef 5:15">Ef 5:15</a></div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Assim, estejam bem atentos para não andarem como tolos, mas como sábios, usando o seu tempo do melhor modo possível, porque os dias são maus." — <a class="ref" data-verse="Ef 5:15">Ef 5:15</a>; <a class="ref" data-verse="Ef 5:16">Ef 5:16</a> · <a class="ref" data-verse="Sl 133:1">Sl 133:1</a> · <a class="ref" data-verse="Pv 18:1">Pv 18:1</a> · <a class="ref" data-verse="Mt 6:33">Mt 6:33</a> · <a class="ref" data-verse="Ec 4:6">Ec 4:6</a> · <a class="ref" data-verse="1Ti 4:8">1Ti 4:8</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Nem sempre vai ser fácil "usar o seu tempo do melhor modo possível". Por isso, é muito importante ter equilíbrio. Por exemplo, é verdade que você precisa estudar. Mas você também precisa tirar tempo para estar com sua família e com os irmãos da congregação. E nada é mais importante do que suas necessidades espirituais. Além disso, pode ser que você tenha responsabilidades em casa ou no trabalho. E ainda é preciso cuidar da saúde, descansando o suficiente e fazendo exercícios. Tudo isso exige uma boa programação!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça uma "matriz de tempo" semanal: 6 áreas precisam de tempo — (1) Estudos, (2) Família, (3) Irmãos, (4) Espiritual, (5) Trabalho/casa, (6) Saúde/descanso. Distribua blocos fixos para cada uma. O Reino em primeiro lugar.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Olhando para sua semana atual: quanto tempo sobra para estar com sua família? E com os irmãos? E para descansar?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Equilíbrio é essencial: estudo + família + irmãos + espiritual + trabalho + saúde. Tudo precisa de tempo na programação.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 12)</div>
+    <div class="box-text">Leia Efésios 5:15, 16.
+Nem sempre vai ser fácil "usar o seu tempo do melhor modo possível". Por isso, é muito importante ter equilíbrio. Por exemplo, é verdade que você precisa estudar. Mas você também precisa tirar tempo para estar com sua família e com os irmãos da congregação. (Sal. 133:1; Pro. 18:1) E nada é mais importante do que suas necessidades espirituais. (Mat. 6:33) Além disso, pode ser que você tenha responsabilidades em casa ou no trabalho. E ainda é preciso cuidar da saúde, descansando o suficiente e fazendo exercícios. (Ecl. 4:6; 1 Tim. 4:8) Tudo isso exige uma boa programação!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/5/" target="_blank">Efésios 5:15, 16 — NWT</a>
+          <span class="nota">"Usando o seu tempo do melhor modo possível, porque os dias são maus" — princípio central de administração do tempo.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/133/" target="_blank">Salmo 133:1 — NWT</a>
+          <span class="nota">União entre irmãos — preciosa e boa.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/" target="_blank">Mateus 6:33 — NWT</a>
+          <span class="nota">"Busquem primeiro o Reino" — prioridade absoluta.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/21/4/" target="_blank">Eclesiastes 4:6 — NWT</a>
+          <span class="nota">Melhor um punhado de descanso do que dois de trabalho árduo.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/54/4/" target="_blank">1 Timóteo 4:8 — NWT</a>
+          <span class="nota">"O treinamento físico traz algum benefício" — equilíbrio entre espiritual e físico.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📋</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/jovens-perguntam/" target="_blank">jw.org — "Os Jovens Perguntam: Como posso aproveitar melhor meu tempo?"</a>
+          <span class="nota">Artigo complementar sugerido pelo estudo.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p13">
+  <div class="card-title"><span class="num">13</span> Antes de começar: faça uma programação realista</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você pode fazer para usar bem o seu tempo?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Os planos do diligente certamente dão bons resultados, Mas todos os precipitados acabarão na pobreza." — <a class="ref" data-verse="Pv 21:5">Pv 21:5</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia diz que ter um planejamento traz bons resultados. Aplicando esse princípio, faça uma programação realista antes de começar a fazer um curso adicional. Algo que pode ajudar é pensar na época da escola. Será que você organizava bem o seu tempo? Se tinha dificuldade com isso, que ajustes você pode fazer agora? Para se livrar da sensação de que nunca tem tempo pra nada, aprenda a controlar o tempo que você tem.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Use um app de calendário ou agenda física. Bloqueie horários para cada atividade. Revise toda semana no domingo à noite o que funcionou e o que precisa ajustar.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você é do tipo que organiza bem o tempo ou deixa tudo pra última hora? O que precisa mudar?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Planejamento traz bons resultados. Faça uma programação realista ANTES de começar o curso.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 13)</div>
+    <div class="box-text">O que você pode fazer antes de começar o ensino adicional?
+A Bíblia diz que ter um planejamento traz bons resultados. (Pro. 21:5) Aplicando esse princípio, faça uma programação realista antes de começar a fazer um curso adicional. Algo que pode ajudar é pensar na época da escola. Será que você organizava bem o seu tempo? Se tinha dificuldade com isso, que ajustes você pode fazer agora? Para se livrar da sensação de que nunca tem tempo pra nada, aprenda a controlar o tempo que você tem.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/21/" target="_blank">Provérbios 21:5 — NWT</a>
+          <span class="nota">"Os planos do diligente certamente dão bons resultados" — princípio de planejamento.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p14">
+  <div class="card-title"><span class="num">14</span> Perguntas para ver se está usando bem seu tempo</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que perguntas podem ajudar você a ver se está usando bem seu tempo?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Sem orientação perita, o povo cai, Mas com muitos conselheiros há bons resultados." — <a class="ref" data-verse="Pv 11:14">Pv 11:14</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Enquanto faz um curso adicional, pare e pense em como está sua rotina. Pergunte-se: "Com a minha programação atual, estou conseguindo descansar o suficiente e fazer exercícios físicos? Ainda encontro tempo para estar com os irmãos? Estou entregando os trabalhos dentro do prazo? Se não, é porque ando muito ocupado ou porque estou deixando tudo para a última hora? Será que pessoas que me conhecem bem concordariam com as minhas respostas?" Se perceber que precisa mudar sua programação ou simplesmente ter mais autodisciplina, não demore para agir. Você pode até pedir dicas a pessoas que são boas em organizar o tempo.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça essa autoavaliação todo mês. Peça feedback honesto de um amigo/amiga de confiança sobre como está sua rotina.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Se um pai, mãe ou amigo íntimo olhasse sua agenda, o que achariam? Estariam contentes ou preocupados?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Perguntas mensais de autoavaliação do tempo. Peça opinião de quem te conhece bem.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 14)</div>
+    <div class="box-text">Enquanto faz um curso adicional, pare e pense em como está sua rotina. Pergunte-se: "Com a minha programação atual, estou conseguindo descansar o suficiente e fazer exercícios físicos? Ainda encontro tempo para estar com os irmãos? Estou entregando os trabalhos dentro do prazo? Se não, é porque ando muito ocupado ou porque estou deixando tudo para a última hora? Será que pessoas que me conhecem bem concordariam com as minhas respostas?"
+Se perceber que precisa mudar sua programação ou simplesmente ter mais autodisciplina, não demore para agir. Você pode até pedir dicas a pessoas que são boas em organizar o tempo. — Pro. 11:14.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/11/" target="_blank">Provérbios 11:14 — NWT</a>
+          <span class="nota">"Sem orientação perita, o povo cai, mas com muitos conselheiros há bons resultados" — pedir ajuda é sabedoria, não fraqueza.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 4: Companhias -->
+<div class="tab-content" id="tab4">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Continue andando com quem é sábio</h2>
+</div>
+
+<div class="card" id="p15">
+  <div class="card-title"><span class="num">15</span> O desafio das más companhias no curso</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como fazer um curso adicional pode afetar você?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Não se deixem enganar. Más companhias estragam bons hábitos." — <a class="ref" data-verse="1Co 15:33">1Co 15:33</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Durante um curso adicional, pode ser que seus colegas te convidem para sair e você fique com vontade de aceitar. Afinal, vocês passam muito tempo juntos nas aulas e têm várias coisas em comum. Você pode até achar que tem mais em comum com eles do que com alguns irmãos. Mas cuidado! É verdade que você e seus colegas se parecem em alguns aspectos, mas existe uma grande diferença: você quer agradar a Jeová, e eles não. Quanto mais tempo passar com seus colegas, mais o modo de pensar deles vai te influenciar.
+
+Foi isso o que aconteceu com Michael, que fez um curso de quatro anos na área de elétrica. Ele conta: "Eu passava mais de 40 horas por semana com meus colegas. Eles eram desrespeitosos com as mulheres, ouviam músicas erradas e falavam muita besteira. Com o tempo, comecei a achar tudo isso normal."</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Não aceite convites automaticamente. Avalie: isso me aproxima de Jeová ou me afasta? Seja gentil com colegas, mas defina limites claros de frequência e tipo de atividade.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você tem mais em comum com seus colegas de curso ou com seus irmãos na fé? Com quem você passa mais tempo?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Colegas de curso podem influenciar negativamente com o tempo. Defina limites antes de começar.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 15)</div>
+    <div class="box-text">Desafio: Durante um curso adicional, pode ser que seus colegas te convidem para sair e você fique com vontade de aceitar. Afinal, vocês passam muito tempo juntos nas aulas e têm várias coisas em comum. Você pode até achar que tem mais em comum com eles do que com alguns irmãos. Mas cuidado! É verdade que você e seus colegas se parecem em alguns aspectos, mas existe uma grande diferença: você quer agradar a Jeová, e eles não. Quanto mais tempo passar com seus colegas, mais o modo de pensar deles vai te influenciar. (1 Cor. 15:33)
+
+Foi isso o que aconteceu com Michael, que fez um curso de quatro anos na área de elétrica. Ele conta: "Eu passava mais de 40 horas por semana com meus colegas. Eles eram desrespeitosos com as mulheres, ouviam músicas erradas e falavam muita besteira. Com o tempo, comecei a achar tudo isso normal."</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/" target="_blank">1 Coríntios 15:33 — NWT</a>
+          <span class="nota">"Más companhias estragam bons hábitos" — princípio bíblico sobre amizades.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">💬</span>
+        <div>
+          <span>Exemplo real de Michael</span>
+          <span class="nota">4 anos + 40h semanais com colegas = influência gradual negativa. Mesmo sem perceber.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p16">
+  <div class="card-title"><span class="num">16</span> Quem anda com sábios se tornará sábio</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que lição aprendemos de <a class="ref" data-verse="Pv 13:20">Pv 13:20</a>?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Quem anda com sábios se tornará sábio, Mas quem se junta com tolos acabará mal." — <a class="ref" data-verse="Pv 13:20">Pv 13:20</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia nos alerta contra o perigo das más companhias. Mas ela também diz: "Quem anda com sábios se tornará sábio." A lição é clara: nós somos influenciados pelas nossas amizades, tanto para o bem como para o mal. Então, escolha amigos que querem o seu melhor e que, assim como você, amam a Jeová.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Liste os 3 amigos mais próximos durante o curso. Eles amam a Jeová? Se não, use isso como sinal de alerta e invista mais nas amizades da congregação.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Quem são os 3 amigos que mais influenciam você hoje? Eles te aproximam ou te afastam de Jeová?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Somos influenciados pelas amizades — para o bem ou para o mal. Escolha amigos que amam a Jeová.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 16)</div>
+    <div class="box-text">Leia Provérbios 13:20.
+A Bíblia nos alerta contra o perigo das más companhias. Mas ela também diz: "Quem anda com sábios se tornará sábio." A lição é clara: nós somos influenciados pelas nossas amizades, tanto para o bem como para o mal. Então, escolha amigos que querem o seu melhor e que, assim como você, amam a Jeová.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/13/" target="_blank">Provérbios 13:20 — NWT</a>
+          <span class="nota">"Quem anda com sábios se tornará sábio, mas quem se junta com tolos acabará mal."</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/seja-feliz-para-sempre/" target="_blank">Livro "Seja Feliz para Sempre!" — Lição 48: "Escolha bem os amigos"</a>
+          <span class="nota">Sugestão do próprio artigo para aprofundar o tema de amizades.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p17">
+  <div class="card-title"><span class="num">17</span> Antes de começar: defina o nível de amizade com colegas</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você pode fazer para não ter más companhias?</div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Defina o nível de amizade que você vai ter com seus colegas. Um irmão chamado Trenton conta: "Eu trato bem os meus colegas, mas não passo tempo com eles depois das aulas. Para mim, nós somos apenas colegas, não melhores amigos."
+
+E no seu caso, qual vai ser a sua estratégia? Para responder essa pergunta, pense na época da escola. Que limites você definiu para não ter tanta amizade com seus colegas? Se perceber que poderia ter se saído melhor, que mudanças você pode fazer agora? Esteja determinado a continuar andando com quem é sábio e limitando sua amizade com quem não ama a Jeová.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Defina AGORA: "Eu vou tratar meus colegas com respeito, mas não vou sair com eles fora das aulas." Ou outro limite que faça sentido para você. O segredo é decidir ANTES, não no calor do convite.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Olhando para sua época da escola: você deixou as amizades com colegas irem longe demais? O que te ajudou ou te atrapalhou?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Defina ANTES os limites de amizade com colegas. Decida quem vai ser seu melhor amigo e quem será apenas colega.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 17)</div>
+    <div class="box-text">O que você pode fazer antes de começar o ensino adicional?
+Defina o nível de amizade que você vai ter com seus colegas. Um irmão chamado Trenton conta: "Eu trato bem os meus colegas, mas não passo tempo com eles depois das aulas. Para mim, nós somos apenas colegas, não melhores amigos."
+
+E no seu caso, qual vai ser a sua estratégia? Para responder essa pergunta, pense na época da escola. Que limites você definiu para não ter tanta amizade com seus colegas? Se perceber que poderia ter se saído melhor, que mudanças você pode fazer agora? Esteja determinado a continuar andando com quem é sábio e limitando sua amizade com quem não ama a Jeová.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">💬</span>
+        <div>
+          <span>Exemplo de Trenton</span>
+          <span class="nota">"Tratamos bem os colegas, mas não passamos tempo com eles fora das aulas. Somos apenas colegas, não melhores amigos."</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p18">
+  <div class="card-title"><span class="num">18</span> Perguntas para avaliar se está evitando más companhias</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que perguntas é bom você se fazer? (Veja também a imagem.)</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Feliz é o homem que não anda segundo o conselho dos maus, Não pisa no caminho dos pecadores, Nem se senta com o grupo dos zombadores." — <a class="ref" data-verse="Sl 1:1">Sl 1:1</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">De tempos em tempos, avalie como está se saindo. Pergunte-se: "Será que estou ficando próximo demais dos meus colegas? Estou começando a pensar, falar e agir como eles? Será que Jeová concordaria com as minhas respostas?" (Sal. 1:1) Se perceber que está sendo influenciado pelos seus colegas, não demore para agir! Escolha como melhores amigos só aqueles que também amam a Jeová. Além disso, não tenha medo de falar sobre Jeová com os seus colegas, até porque você está numa posição privilegiada para fazer isso.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Revise suas últimas 3 saídas: foram com irmãos ou com colegas? Se percebeu desequilíbrio, marque um encontro com um irmão/amiga da congregação esta semana. E aproveite a próxima oportunidade para dar testemunho a um colega de forma natural.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Pense no Salmo 1:1 — qual dos "passos" você tem dado ultimamente: o caminho dos maus, o dos pecadores ou o dos zombadores?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Autoavaliação periódica sobre amizades. Não tenha medo de falar sobre Jeová com seus colegas.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 18)</div>
+    <div class="box-text">De tempos em tempos, avalie como está se saindo. Pergunte-se: "Será que estou ficando próximo demais dos meus colegas? Estou começando a pensar, falar e agir como eles? Será que Jeová concordaria com as minhas respostas?" (Sal. 1:1) Se perceber que está sendo influenciado pelos seus colegas, não demore para agir! Escolha como melhores amigos só aqueles que também amam a Jeová. Além disso, não tenha medo de falar sobre Jeová com os seus colegas, até porque você está numa posição privilegiada para fazer isso.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/1/" target="_blank">Salmo 1:1 — NWT</a>
+          <span class="nota">"Feliz é o homem que não anda segundo o conselho dos maus" — princípio de felicidade está em escolher bem as companhias.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">🖼️</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Imagem do estudo: "Não tenha medo de falar com seus colegas sobre Jeová"</a>
+          <span class="nota">Ilustração: uma irmã em seu curso de cabeleireira dá testemunho a uma colega.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 5: Desafios -->
+<div class="tab-content" id="tab5">
+<div class="section-header">
+  <h2><span class="emoji">🔷</span>Prepare-se para os desafios</h2>
+</div>
+
+<div class="card" id="p19">
+  <div class="card-title"><span class="num">19</span> Prepare-se como um alpinista</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como você pode se preparar para superar os desafios que vai enfrentar? (Ilustre.)</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Vistam a armadura completa de Deus, para que possam se manter firmes contra as artimanhas do Diabo; pois temos uma luta, não contra sangue e carne, mas contra os governos, contra as autoridades, contra os governantes mundiais desta escuridão, contra as forças espirituais malignas nos lugares celestiais. Por essa razão, vistam a armadura completa de Deus, para que possam resistir no dia mau e, depois de terem feito tudo, se manter firmes." — <a class="ref" data-verse="Ef 6:11">Ef 6:11</a>; <a class="ref" data-verse="Ef 6:12">Ef 6:12</a>; <a class="ref" data-verse="Ef 6:13">Ef 6:13</a> · <a class="ref" data-verse="1Co 9:26">1Co 9:26</a>; <a class="ref" data-verse="1Co 9:27">1Co 9:27</a> · <a class="ref" data-verse="1Co 10:31">1Co 10:31</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">Antes de escalar uma montanha, um bom alpinista se prepara. É verdade que ele não pode prever todos os desafios que vai enfrentar. Mas ele cuida da saúde física, usa roupas apropriadas e define um objetivo — ele sabe bem aonde quer chegar. Você pode tentar algo parecido enquanto faz um curso adicional. Continue cuidando da sua amizade com Jeová e usando "a armadura completa de Deus". Além disso, tenha bem em mente que seu objetivo não é alcançar o que o mundo chama de sucesso, mas dar glória a Jeová em tudo o que fizer.</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Visualize seu "alpinista interior": (1) Saúde: sono + alimentação + exercício. (2) Roupas apropriadas: rotinas espirituais diárias. (3) Objetivo claro: dar glória a Jeová, não conquistar status mundial. (4) Armadura completa de Deus: estudo, oração, reuniões, pregação.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual é o seu objetivo principal ao fazer este curso? "Sucesso do mundo" ou "glória para Jeová"?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Seja como um alpinista: prepare-se (saúde, espiritualidade, objetivo) e vista a armadura completa de Deus.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 19)</div>
+    <div class="box-text">Antes de escalar uma montanha, um bom alpinista se prepara. É verdade que ele não pode prever todos os desafios que vai enfrentar. Mas ele cuida da saúde física, usa roupas apropriadas e define um objetivo — ele sabe bem aonde quer chegar. Você pode tentar algo parecido enquanto faz um curso adicional. Continue cuidando da sua amizade com Jeová e usando "a armadura completa de Deus". Além disso, tenha bem em mente que seu objetivo não é alcançar o que o mundo chama de sucesso, mas dar glória a Jeová em tudo o que fizer. — Efe. 6:11-13; 1 Cor. 9:26, 27; 10:31.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/6/" target="_blank">Efésios 6:11-13 — NWT</a>
+          <span class="nota">"Vistam a armadura completa de Deus" — proteção espiritual contra ataques do mundo.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/9/" target="_blank">1 Coríntios 9:26, 27 — NWT</a>
+          <span class="nota">Paulo lutava "não como quem golpeia o ar" — disciplina e propósito claro.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/10/" target="_blank">1 Coríntios 10:31 — NWT</a>
+          <span class="nota">"Quer comam, quer bebam, quer façam qualquer outra coisa, façam tudo para a glória de Deus."</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+<div class="card" id="p20">
+  <div class="card-title"><span class="num">20</span> Persistir em examinar se está na fé</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como você pode "persistir em examinar se está na fé"? <a class="ref" data-verse="2Co 13:5">2Co 13:5</a></div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Persistam em examinar se estão na fé; persistam em pôr à prova o que vocês mesmos são. Ou não reconhecem que Jesus Cristo está em união com vocês? A menos que estejam reprovados." — <a class="ref" data-verse="2Co 13:5">2Co 13:5</a> · <a class="ref" data-verse="Pv 3:5">Pv 3:5</a>; <a class="ref" data-verse="Pv 3:6">Pv 3:6</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação</div>
+    <div class="box-text">A Bíblia diz: "Persistam em examinar se estão na fé; persistam em pôr à prova o que vocês mesmos são." Você pode seguir esse conselho enquanto estiver fazendo um curso adicional. Como vimos neste estudo, sempre tire um tempo para avaliar como está se saindo: Será que você continua com uma boa rotina espiritual? Você está se protegendo do modo de pensar do mundo? Está usando bem o seu tempo? Quem são os seus amigos — pessoas que amam a Jeová ou más companhias? Essas são perguntas que toda Testemunha de Jeová deve se fazer, não importa se está na escola, no trabalho ou em outro lugar. Em qualquer fase da vida, faça o máximo para manter sua fé forte. Se você der o seu melhor para continuar amigo de Jeová, ele vai te ajudar a ter a melhor vida de todas!</div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Adote o "exame de 4 pontos" como prática mensal: (1) Rotina espiritual? (2) Raciocínio protegido? (3) Tempo bem usado? (4) Amigos certos? Confie em Jeová de todo o coração (Pv 3:5, 6) — Ele vai endireitar suas veredas.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Quais destas 4 áreas você precisa fortalecer AGORA? O que vai mudar concretamente esta semana?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Examine-se na fé continuamente. Confie em Jeová de todo o coração. Ele prometeu a melhor vida — a vida eterna.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 20)</div>
+    <div class="box-text">A Bíblia diz: "Persistam em examinar se estão na fé; persistam em pôr à prova o que vocês mesmos são." (2 Cor. 13:5) Você pode seguir esse conselho enquanto estiver fazendo um curso adicional. Como vimos neste estudo, sempre tire um tempo para avaliar como está se saindo. Será que você continua com uma boa rotina espiritual? Você está se protegendo do modo de pensar do mundo? Está usando bem o seu tempo? Quem são os seus amigos — pessoas que amam a Jeová ou más companhias? Essas são perguntas que toda Testemunha de Jeová deve se fazer, não importa se está na escola, no trabalho ou em outro lugar. Em qualquer fase da vida, faça o máximo para manter sua fé forte. Se você der o seu melhor para continuar amigo de Jeová, ele vai te ajudar a ter a melhor vida de todas! — Pro. 3:5, 6.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <div class="box-text"><ul class="fontes-list">
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/47/13/" target="_blank">2 Coríntios 13:5 — NWT</a>
+          <span class="nota">"Persistam em examinar se estão na fé" — princípio de autoavaliação contínua.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/3/" target="_blank">Provérbios 3:5, 6 — NWT</a>
+          <span class="nota">"Confie em Jeová de todo o seu coração... e ele endireitará as suas veredas." Promessa final do estudo.</span>
+        </div>
+      </li>
+<li>
+        <span class="icon">📋</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/jovens-perguntam/" target="_blank">jw.org — "Os Jovens Perguntam: O que preciso fazer agora que me batizei? — Parte 1: Continue fazendo suas atividades"</a>
+          <span class="nota">Artigo complementar sugerido pelo estudo.</span>
+        </div>
+      </li>
+</ul></div>
+  </div>
+</div>
+
+</div>
+
+<!-- TAB 6: Revisão -->
+<div class="tab-content" id="tab6">
+<div class="section-header">
+  <h2><span class="emoji">📝</span>Revisão e Resumo Final</h2>
+</div>
+
+<div class="review-card" id="rev1">
+  <h4>❓ Quais são os 4 princípios bíblicos para quem decide fazer um curso adicional?</h4>
+  <p>Os <b>4 princípios</b> são:</p>
+  <ol>
+    <li><b>Continue com uma boa rotina espiritual</b> — mantenha reuniões, pregação, estudo pessoal e oração (par. 3-6).</li>
+    <li><b>Proteja o seu raciocínio</b> — não deixe a filosofia do mundo contaminar seu modo de pensar (par. 7-10).</li>
+    <li><b>Use bem o seu tempo</b> — planeje com equilíbrio: espiritual, família, estudos, saúde (par. 11-14).</li>
+    <li><b>Continue andando com quem é sábio</b> — defina limites com os colegas de curso (par. 15-18).</li>
+  </ol>
+  <p>Texto-base: <b>Filipenses 3:16</b> — "prossigamos andando nesse mesmo rumo" como um soldado leal.</p>
+</div>
+
+<div class="review-card" id="rev2">
+  <h4>❓ O que fazer ANTES de começar o curso adicional?</h4>
+  <ul>
+    <li><b>Antes (Rotina):</b> tenha em mente o que é mais importante — defina como vai manter reuniões, pregação e estudo pessoal (par. 5).</li>
+    <li><b>Antes (Raciocínio):</b> fortaleça sua confiança na Bíblia — saiba por que acredita em Deus (par. 9).</li>
+    <li><b>Antes (Tempo):</b> faça uma programação realista — baseada em Provérbios 21:5 (par. 13).</li>
+    <li><b>Antes (Companhias):</b> defina o nível de amizade com colegas — eles serão apenas colegas, não melhores amigos (par. 17).</li>
+  </ul>
+</div>
+
+<div class="review-card" id="rev3">
+  <h4>❓ O que avaliar DURANTE o curso?</h4>
+  <ul>
+    <li><b>Rotina (par. 6):</b> perdeu reuniões? Chega atrasado? Só assiste por videoconferência? Ora menos?</li>
+    <li><b>Tempo (par. 14):</b> está descansando? Está com os irmãos? Está entregando no prazo?</li>
+    <li><b>Companhias (par. 18):</b> está ficando próximo demais dos colegas? Começa a pensar/agir como eles?</li>
+    <li><b>Persistência (par. 20):</b> continue se examinando na fé. Confie em Jeová — Pv 3:5, 6.</li>
+  </ul>
+</div>
+
+<div class="review-card">
+  <h4>💡 Resumo Final do Estudo</h4>
+  <p>Fazer um curso adicional é uma decisão séria. Não é proibido, mas exige preparação. Antes de começar, defina suas prioridades espirituais, fortaleça sua fé na Bíblia, planeje bem o tempo e ponha limites na amizade com colegas. Durante o curso, avalie-se todo mês: rotina espiritual, raciocínio protegido, tempo bem usado, amizades certas. Vista a "armadura completa de Deus" e seja como um alpinista que sabe aonde quer chegar. Seu objetivo não é o sucesso do mundo, mas dar glória a Jeová em tudo que fizer. Se der o seu melhor para continuar amigo de Jeová, ele vai te ajudar a ter a melhor vida de todas — a vida eterna.</p>
+</div>
+
+<div class="box box-fontes" style="margin-top: 16px;">
+  <div class="box-label">📚 Fontes e Recursos Adicionais</div>
+  <ul class="fontes-list">
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/" target="_blank">Tradução do Novo Mundo da Bíblia Sagrada (NWT) — online</a>
+        <span class="nota">Bíblia completa com notas de estudo, referências cruzadas e mídia integrada.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📰</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2026/" target="_blank">Sentinela de maio de 2026 — índice completo</a>
+        <span class="nota">Outros 5 artigos da mesma edição: "Por que os princípios bíblicos são importantes?", "Como usar os princípios para treinar a consciência", "Seja sábio sobre ensino adicional", "Respeite as decisões de outros", "Personagem: Manaém".</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/seja-feliz-para-sempre/" target="_blank">Livro "Seja Feliz para Sempre!" — Lição 48: "Escolha bem os amigos"</a>
+        <span class="nota">Aprofunda o tema das amizades, sugerido pelo próprio artigo (par. 16).</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📋</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/jovens-perguntam/" target="_blank">jw.org — "Os Jovens Perguntam"</a>
+        <span class="nota">Artigos complementares sugeridos pelo estudo: "O que preciso fazer agora que me batizei? — Parte 1" (par. 6) e "Como posso aproveitar melhor meu tempo?" (par. 13).</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📰</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/revistas/" target="_blank">Sentinela de maio de 2019 — "Não seja enganado pela 'sabedoria deste mundo'"</a>
+        <span class="nota">Artigo complementar sobre proteção do raciocínio, sugerido pelo estudo (par. 9).</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎵</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/musica/" target="_blank">Cânticos do Reino</a>
+        <span class="nota">Cântico 56 (inicial): "Faça da verdade a sua vida" · Cântico 87 (final): "As reuniões nos encorajam a".</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<footer>
+  <p>📖 Estudo preparado para a Sentinela de 27 de julho – 2 de agosto de 2026</p>
+  <p>Baseado no artigo "Continue espiritualmente forte ao obter ensino adicional" (w26, 27 jul–2 ago 2026, p. 16-21)</p>
+  <p>Texto-base: Filipenses 3:16 — "prossigamos andando nesse mesmo rumo"</p>
+  <p>Texto bíblico: Tradução do Novo Mundo da Bíblia Sagrada (NWT)</p>
+  <p>📚 Inclui notas de estudo da NWT, referências cruzadas e links para mídia JW</p>
+  <p>💙 Feito com carinho pra Jinny</p>
+</footer>
+
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <div class="verse-text" id="modal-text"></div>
+    <a id="modal-link" target="_blank">Ver no jw.org →</a>
+    <button class="close" onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('sentinela-theme', next);
+}
+const savedTheme = localStorage.getItem('sentinela-theme');
+if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+function showTab(idx) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab' + idx).classList.add('active');
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.tabs').offsetTop - 130, behavior: 'smooth'});
+}
+
+const verses = {"Fl 3:16":{text:"De qualquer modo, seja qual for o progresso que já fizemos, prossigamos andando nesse mesmo rumo.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/50/3/#v=16"},
+"Ap 2:4":{text:"Contudo, tenho o seguinte contra você: você abandonou o amor que tinha no princípio.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/2/#v=4"},
+"1Co 15:58":{text:"Portanto, meus amados irmãos, sejam firmes, inabaláveis, e tenham sempre bastante para fazer na obra do Senhor, sabendo que o seu trabalho árduo no Senhor não é em vão.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/#v=58"},
+"Mt 22:37":{text:"Ele lhe disse: “‘Ame a Jeová, seu Deus, de todo o seu coração, de toda a sua alma e de toda a sua mente.’",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/22/#v=37"},
+"Js 1:8":{text:"Este livro da Lei deve estar sempre em seus lábios; leia-o em voz baixa dia e noite, para obedecer cuidadosamente a tudo o que está escrito nele. Assim seu caminho será bem-sucedido, e você agirá sabiamente.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/6/1/#v=8"},
+"Mt 28:19":{text:"Portanto, vão e façam discípulos de pessoas de todas as nações, batizando-as em nome do Pai, e do Filho, e do espírito santo,",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/28/#v=19"},
+"Mt 28:20":{text:"ensinando-as a obedecer a todas as coisas que lhes ordenei. E saibam que eu estou com vocês todos os dias, até o final do sistema de coisas.”",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/28/#v=20"},
+"Hb 10:25":{text:"não deixando de nos reunir, como é costume de alguns, mas nos encorajando uns aos outros, e ainda mais ao passo que vocês veem chegar o dia.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/10/#v=25"},
+"Mt 6:24":{text:"“Ninguém pode ser escravo de dois senhores; pois ou odiará um e amará o outro, ou se apegará a um e desprezará o outro. Vocês não podem ser escravos de Deus e das Riquezas.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/#v=24"},
+"Cl 2:8":{text:"Tenham cuidado para que ninguém os escravize por meio de filosofia e vão engano, que são baseados em tradições humanas, nas coisas elementares do mundo, e não em Cristo;",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/51/2/#v=8"},
+"Pv 5:1":{text:"Caso contrário, você vai gemer no fim da sua vida, Quando a sua carne e o seu corpo definharem,",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/5/#v=1"},
+"Pv 5:2":{text:"Para que você proteja o seu raciocínio E resguarde o conhecimento com os seus lábios.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/5/#v=2"},
+"1Pe 5:8":{text:"Mantenham os sentidos, sejam vigilantes! Seu adversário, o Diabo, anda em volta como um leão que ruge, procurando a quem devorar.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/60/5/#v=8"},
+"1Co 3:18":{text:"Que ninguém engane a si mesmo: se alguém entre vocês pensa que é sábio neste sistema de coisas, torne-se tolo, para que se torne sábio.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/3/#v=18"},
+"1Co 3:19":{text:"Porque a sabedoria deste mundo é tolice perante Deus, pois está escrito: “Ele apanha os sábios na sua própria astúcia.”",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/3/#v=19"},
+"1Co 3:20":{text:"E também: “Jeová sabe que os raciocínios dos sábios são fúteis.”",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/3/#v=20"},
+"2Ti 2:16":{text:"Mas rejeite as conversas vãs que violam o que é santo, pois levarão a uma impiedade cada vez maior,",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/2/#v=16"},
+"2Ti 2:17":{text:"e as palavras deles se espalharão como gangrena. Himeneu e Fileto estão entre eles.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/2/#v=17"},
+"2Ti 2:18":{text:"Esses homens se desviaram da verdade, dizendo que a ressurreição já ocorreu, e estão arruinando a fé de alguns.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/2/#v=18"},
+"1Ti 4:15":{text:"Medite nessas coisas; concentre-se totalmente nelas, para que o seu progresso seja claramente visto por todos.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/54/4/#v=15"},
+"Ef 5:15":{text:"Assim, estejam bem atentos para não andarem como tolos, mas como sábios,",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/5/#v=15"},
+"Ef 5:16":{text:"usando o seu tempo do melhor modo possível, porque os dias são maus.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/5/#v=16"},
+"Sl 133:1":{text:"É como óleo precioso derramado sobre a cabeça, que desce pela barba, a barba de Arão, e desce até a gola da sua veste. [Nota: na NWT, o v. 1 do Salmo 133 funciona como título/intitulação do salmo; o conteúdo começa no v. 2.]",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/133/#v=1"},
+"Pv 18:1":{text:"A riqueza do rico é a sua cidade fortificada; Na sua imaginação ela é como uma muralha protetora.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/18/#v=1"},
+"Mt 6:33":{text:"“Persistam, então, em buscar primeiro o Reino e a justiça de Deus, e todas essas outras coisas lhes serão acrescentadas.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/#v=33"},
+"Ec 4:6":{text:"Melhor é um punhado de descanso do que dois punhados de trabalho árduo e correr atrás do vento.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/21/4/#v=6"},
+"1Ti 4:8":{text:"Pois o treinamento físico traz algum benefício, mas a devoção a Deus é benéfica para todas as coisas, visto que tem a promessa da vida presente e da vida que virá.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/54/4/#v=8"},
+"Pv 21:5":{text:"Os planos do diligente certamente dão bons resultados, Mas todos os precipitados acabarão na pobreza.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/21/#v=5"},
+"Pv 11:14":{text:"Sem orientação perita, o povo cai, Mas com muitos conselheiros há bons resultados.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/11/#v=14"},
+"1Co 15:33":{text:"Não se deixem enganar. Más companhias estragam bons hábitos.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/#v=33"},
+"Pv 13:20":{text:"Quem anda com sábios se tornará sábio, Mas quem se junta com tolos acabará mal.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/13/#v=20"},
+"Sl 1:1":{text:"Feliz é o homem que não anda segundo o conselho dos maus, Não pisa no caminho dos pecadores, Nem se senta com o grupo dos zombadores.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/1/#v=1"},
+"Ef 6:11":{text:"Vistam a armadura completa de Deus, para que possam se manter firmes contra as artimanhas do Diabo;",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/6/#v=11"},
+"Ef 6:12":{text:"pois temos uma luta, não contra sangue e carne, mas contra os governos, contra as autoridades, contra os governantes mundiais desta escuridão, contra as forças espirituais malignas nos lugares celestiais.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/6/#v=12"},
+"Ef 6:13":{text:"Por essa razão, vistam a armadura completa de Deus, para que possam resistir no dia mau e, depois de terem feito tudo, se manter firmes.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/49/6/#v=13"},
+"1Co 9:26":{text:"Portanto, não corro sem rumo; direciono os meus golpes de modo a não golpear o ar;",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/9/#v=26"},
+"1Co 9:27":{text:"surro o meu corpo e o conduzo como escravo, para que, depois de ter pregado a outros, eu mesmo não venha a ser de algum modo reprovado.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/9/#v=27"},
+"1Co 10:31":{text:"Portanto, quer vocês comam, quer bebam, quer façam qualquer outra coisa, façam todas as coisas para a glória de Deus.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/10/#v=31"},
+"2Co 13:5":{text:"Persistam em examinar se estão na fé; persistam em pôr à prova o que vocês mesmos são. Ou não reconhecem que Jesus Cristo está em união com vocês? A menos que estejam reprovados.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/47/13/#v=5"},
+"Pv 3:5":{text:"Confie em Jeová de todo o seu coração; Não confie no seu próprio entendimento.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/3/#v=5"},
+"Pv 3:6":{text:"Lembre-se dele em todos os seus caminhos, E ele endireitará as suas veredas.",link:"https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/3/#v=6"}};
+
+document.querySelectorAll('.ref').forEach(ref => {
+  ref.addEventListener('click', e => {
+    e.preventDefault();
+    const verse = ref.getAttribute('data-verse');
+    const data = verses[verse];
+    if (data) {
+      document.getElementById('modal-title').textContent = verse;
+      document.getElementById('modal-text').textContent = data.text;
+      document.getElementById('modal-link').href = data.link;
+      document.getElementById('modal-bg').classList.add('show');
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
