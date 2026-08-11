@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estudo — Sara · Coragem cap. 3 · 10-16 de agosto 2026</title>
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#152139,#101a2a);border:1px solid var(--line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--accent);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--accent)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--accent)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--accent);color:#07223a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--accent)}
+  .toc a .num{color:var(--accent);font-weight:700;margin-right:6px}
+  details.q{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.q[open]{box-shadow:0 0 0 1px #2a3c5a inset}
+  details.q>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.q>summary::-webkit-details-marker{display:none}
+  .q-num{min-width:40px;height:40px;background:var(--panel2);border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem}
+  .q-num.high{background:var(--gold);color:#3a2c00;border-color:var(--gold)}
+  .q-title{flex:1;font-weight:600;font-size:1rem}
+  .q-status{font-size:.8rem;color:var(--muted)}
+  .q-status.answered{color:var(--accent2)}
+  .q-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--accent);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--accent);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .answer{background:#1f3d2a;border-left:4px solid var(--accent2);padding:12px 16px;border-radius:8px;margin:10px 0;color:#e6f7e2;font-weight:500}
+  .answer strong{color:var(--accent2)}
+  .footnote{color:var(--muted);font-size:.85rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--accent)}
+  .alert-pend{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .sources{margin-top:8px}
+  .sources li{margin-bottom:4px}
+  .img-placeholder{background:#0a1525;border:2px dashed #4a6080;border-radius:10px;padding:24px;text-align:center;color:var(--muted);font-size:.9rem;margin:10px 0}
+  .img-placeholder .label{display:block;font-weight:600;color:var(--accent);margin-bottom:6px}
+  .section-divider{text-align:center;color:var(--accent);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    .answer{background:#e8f5e9;color:#000;border-color:#666}
+    details.q{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>📖 Estudo de Congregação — Sara (Coragem cap. 3)</h1>
+  <h2>Ande Corajosamente com Deus · 10–16 de agosto 2026 · 30 min</h2>
+  <p>Respostas completas, versículos NWT verificados e material de apoio do <em>Insight</em> para todas as perguntas do capítulo.</p>
+  <div class="meta-row">
+    <span class="pill">📚 Livro: <strong>Ande Corajosamente com Deus</strong> (wcg)</span>
+    <span class="pill">🎯 Capítulo 3 — "Ela se recusou a olhar para trás"</span>
+    <span class="pill">👤 Personagem: Sara (esposa de Abraão)</span>
+    <span class="pill">✅ Marque as respondidas (localStorage)</span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 filtrar por palavra-chave…">
+  <button data-filter="all" class="pill on" id="statusAll">Tudo</button>
+  <button data-filter="pending" class="pill" id="statusPending">Só pendentes</button>
+  <button data-filter="done" class="pill" id="statusDone">Só respondidas</button>
+  <span id="count" class="pill"></span>
+</div>
+
+<nav class="toc" aria-label="Índice das perguntas">
+  <a href="#q0"><span class="num">0</span>Para considerar · Maneiras que Sara mostrou coragem</a>
+  <a href="#q1"><span class="num">1</span>Analise · Era errado Sara ser esposa do meio-irmão?</a>
+  <a href="#q2"><span class="num">2</span>Analise · <strong>[A]</strong> O que Sara deixou em Ur</a>
+  <a href="#q3"><span class="num">3</span>Analise · Sábio Abraão esconder que era esposa?</a>
+  <a href="#q4"><span class="num">4</span>Analise · Submissão = nunca dizer o que pensa?</a>
+  <a href="#q5"><span class="num">5</span>Medite · <strong>[B]</strong> Sara vs esposa de Ló (comum)</a>
+  <a href="#q6"><span class="num">6</span>Medite · Sara vs esposa de Ló (diferente)</a>
+  <a href="#q7"><span class="num">7</span>Medite · O que aprendemos das decisões?</a>
+  <a href="#q8"><span class="num">8</span>Medite · Circunstâncias parecidas (beleza + riqueza)</a>
+  <a href="#q9"><span class="num">9</span>Medite · Como imitar Sara?</a>
+  <a href="#q10"><span class="num">10</span>Quadro completo · <strong>[C]</strong> O que ensina sobre Jeová?</a>
+  <a href="#q11"><span class="num">11</span>Quadro completo · Propósito de Jeová</a>
+  <a href="#q12"><span class="num">12</span>Quadro completo · Pergunta para Sara na ressurreição</a>
+  <a href="#q13"><span class="num">13</span>Aprenda mais · Vídeo Sara + w23.05 24-25</a>
+</nav>
+
+<div id="questions">
+
+<!-- ========================= Q0 — PARA CONSIDERAR ========================= -->
+<details class="q" id="q0" open>
+  <summary>
+    <span class="q-num high">★</span>
+    <span>
+      <span class="q-title"><em>Para considerar:</em> De que maneiras Sara mostrou coragem?</span>
+      <div class="q-status" data-status>(Gênesis 11:31; 12:1-5; 12:11-20; 17:15-22; 18:9-15; 20:1-18; 21:1-13)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q0">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"De que maneiras Sara mostrou coragem?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Sara mostrou coragem em pelo menos seis decisões marcantes:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Apoiar Abraão ao deixar Ur</strong> — confiança na promessa divina mesmo sem destino certo (<span class="verse-chip">Gn 11:31</span>; <span class="verse-chip">Hb 11:15</span>).</li>
+          <li><strong>Não usar a fome como pretexto para voltar a Ur</strong> — continuou firme na jornada até o Egito (<span class="verse-chip">Gn 12:10</span>).</li>
+          <li><strong>Confiar em Abraão diante do Faraó</strong> — sem revelar a verdade, esperando Jeová agir (<span class="verse-chip">Gn 12:11-20</span>).</li>
+          <li><strong>Repetir o padrão com Abimeleque</strong> — décadas depois, ainda fiel ao marido e a Jeová (<span class="verse-chip">Gn 20:1-18</span>).</li>
+          <li><strong>Proteger Isaque de Ismael</strong> — coragem de pedir a expulsão, defendendo o herdeiro da promessa (<span class="verse-chip">Gn 21:9-13</span>).</li>
+          <li><strong>Não olhar para trás</strong> — recusar a nostalgia de Ur e olhar para o futuro (<em>"até o fim, ela se recusou a olhar para a vida e o conforto que tinha deixado para trás. Em vez disso, ela olhou para o futuro maravilhoso que tinha pela frente."</em>).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Hebreus 11:11, 15</h4>
+      <div class="quote">
+        <span class="verse-chip">Hb 11:11</span> <span class="alert-pend" style="display:inline;padding:2px 8px">texto exato pendente — verificar no JW Library</span>
+        <span class="verse-chip">Hb 11:15</span> "Contudo, se eles continuassem se lembrando do lugar de onde tinham saído, teriam tido a oportunidade de voltar."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Sara"</h4>
+      <p>O <em>Insight</em> destaca:</p>
+      <ul>
+        <li>"Sara tinha prazer em servir a Jeová e a Abraão" — sua submissão era <em>escolha</em>, não fraqueza.</li>
+        <li>"Sara talvez tivesse seus 60 e poucos anos quando partiu de Ur" — não era uma jovem sem entender; era uma mulher madura e corajosa.</li>
+        <li>"O temor de Abraão, de poder ser morto por causa de Sara, não era infundado" — um antigo papiro egípcio registra exatamente esse tipo de sequestro de esposas. O contexto torna a coragem de Sara ainda mais notável.</li>
+        <li>"Cerca de 32 anos mais tarde, Sara morreu, à idade de 127 anos" — viveu o suficiente para ver a promessa se encaminhar, mesmo sem vê-la completa.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · "Até o fim, ela se recusou a olhar para trás"</h4>
+      <p>O capítulo 3 do livro Coragem usa a frase-título como espinha dorsal. Sara demonstra que coragem não é ausência de medo — é decidir-se a confiar em Jeová mesmo quando a vida pede que olhemos para o que ficou para trás. A cada nova crise (fome, Faraó, Abimeleque, Ismael), Sara reafirmava: <em>"Jeová guiará. Não volto para Ur."</em></p>
+      <p>Essa é uma coragem silenciosa, doméstica, anônima — e por isso mesmo tão poderosa. A maioria de nós não enfrentará batalhas épicas, mas diariamente enfrentamos a tentação de "voltar" para os velhos caminhos, velhos hábitos, velhas prioridades. Sara é o modelo do crente que <em>não volta</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação para pregação e dia a dia 🎤🏠</h4>
+      <p><strong>Pregação:</strong> A história de Sara abre portas para conversar sobre <em>discipulado e perseverança</em>. Pessoas que abandonaram uma prática religiosa por medo do "o que vão pensar" podem se identificar com Sara — que abriu mão do conforto, do status, da rede social de Ur.</p>
+      <p><strong>Dia a dia:</strong> Reserve um momento para identificar "Urs" atuais — confortos que prendem, medos que paralisam, decisões adiadas. Sara nos lembra que olhar para trás é escolher o figo ruim; seguir em frente, mesmo com medo, é o caminho da fé.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q1 — CASAMENTO COM MEIO-IRMÃO ========================= -->
+<details class="q" id="q1">
+  <summary>
+    <span class="q-num">1</span>
+    <span>
+      <span class="q-title"><em>Analise mais a fundo #1:</em> Será que era errado Sara ser esposa de Abraão apesar de ele ser seu meio-irmão?</span>
+      <div class="q-status" data-status>(wp17.3 12 § 5, nota)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q1">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Será que era errado Sara ser esposa de Abraão apesar de ele ser seu meio-irmão?" — apoiada em <em>A Sentinela</em> de março de 2017, p. 12 § 5, nota.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Não era errado no contexto bíblico da época de Abraão.</strong> A Lei dada a Israel (Lv 18:9) proibia o casamento entre irmãos completos, mas isso foi dado <em>muito depois</em>, no monte Sinai. Na época dos patriarcas, casamentos entre parentes próximos eram aceitos; foi apenas gradualmente que Jeová restringiu isso (e a humanidade, por observação própria, descobriu os problemas genéticos e sociais de tal prática).
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Abraão"</h4>
+      <p>O <em>Insight</em> confirma:</p>
+      <ul>
+        <li>"Sara tinha seus 60 e poucos anos quando partiu de Ur" — ela e Abraão eram do mesmo pai (Tera), mas de mães diferentes, o que a classificava como meia-irmã paterna.</li>
+        <li>A própria Bíblia chama Sara de "irmã" de Abraão (<span class="verse-chip">Gn 20:12</span>), confirmando a relação familiar.</li>
+        <li>O relato bíblico <em>nunca</em> apresenta esse casamento como transgressão; ao contrário, é parte do plano de Jeová para estabelecer a "semente" prometida.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 20:12</h4>
+      <div class="quote">
+        "E, além disso, ela é realmente minha irmã, filha do meu pai, apenas não é filha da minha mãe; e ela se tornou minha esposa."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · A lei veio depois, em Israel</h4>
+      <p>Esse é um detalhe importante ao ensinar a jovens: <strong>Jeová revelou Sua vontade gradualmente</strong>, conforme a humanidade amadurecia. Abraão não quebrou nenhuma lei — porque a lei ainda não existia. O padrão moral de Jeová é eterno, mas os regulamentos específicos foram se ajustando ao longo do tempo. Isso reforça que Jeová é <em>paciente</em> e <em>pedagógico</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Útil para responder a quem pergunta "por que a Bíblia permite coisas estranhas no Antigo Testamento?" — a resposta é que muitos regulamentos eram <em>depois</em> corrigidos.</p>
+      <p><strong>Dia a dia:</strong> Lembre-se de que Jeová leva em conta o contexto do nosso coração. Não somos julgados por padrões que ainda não conhecemos, mas pelo que fazemos com o que <em>já</em> sabemos.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q2 — O QUE SARA DEIXOU EM UR [A] ========================= -->
+<details class="q" id="q2">
+  <summary>
+    <span class="q-num">2</span>
+    <span>
+      <span class="q-title"><em>Analise mais a fundo #2 [A]:</em> Que coisas Sara provavelmente teve que deixar para trás em Ur?</span>
+      <div class="q-status" data-status>(wp17.3 13 § 4–14 § 3 · veja a imagem)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q2">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Imagem A — "Uma joia encontrada no local onde ficava a antiga Ur"</h4>
+      <div class="img-placeholder">
+        <span class="label">📷 IMAGEM A</span>
+        "Photograph taken by courtesy of the British Museum" — Joia suméria descoberta em escavações arqueológicas nas ruínas de Ur. Mostra o nível de sofisticação artística e tecnológica da cidade onde Sara cresceu.
+        <br><em>(imagem do livro Coragem, cap. 3, p. 17)</em>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Que coisas Sara provavelmente teve que deixar para trás em Ur?" (<em>A Sentinela</em> março 2017, pp. 13 § 4 a 14 § 3).</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Sara deixou uma vida urbana sofisticada, segura e confortável. Provavelmente ela abandonou:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Casa grande e confortável</strong> — Ur tinha <em>"água encanada"</em>, pátios, muralhas protetoras e arquitetura avançada.</li>
+          <li><strong>Segurança física</strong> — guardas, muralhas, proteção da cidade murada.</li>
+          <li><strong>Rede social e familiar</strong> — Tera, parentes (mãe de Sara já tinha falecido?), amigos de toda uma vida.</li>
+          <li><strong>Status e prestígio</strong> — Ur era uma cidade próspera, centro comercial; sair significava tornar-se estrangeira.</li>
+          <li><strong>Conforto material</strong> — joias como a da imagem A eram comuns; deixava-as para trás.</li>
+          <li><strong>Templos e práticas sociais</strong> — Ur era centro do culto ao deus-lua Sin; Sara deixou para trás a vida religiosa de seus vizinhos.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Abraão"</h4>
+      <p>O <em>Insight</em> confirma a realidade urbana de Ur:</p>
+      <ul>
+        <li>"Abraão era natural da cidade caldeia de Ur, próspera metrópole situada na terra de Sinear, perto da atual confluência dos rios Eufrates e Tigre."</li>
+        <li>"No tempo de Abraão, a cidade de Ur estava mergulhada na idolatria babilônica e na adoração de seu deus-lua padroeiro, Sin."</li>
+        <li>Harã ficava "uns 960 km" ao noroeste — uma viagem de <em>semanas</em> a pé e em camelos.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "As Viagens de Abraão"</h4>
+      <p>O <em>Insight</em> enfatiza:</p>
+      <ul>
+        <li>"Isto envolvia abandonar seu lar e seus parentes na próspera Ur, para nunca mais voltar."</li>
+        <li>"A pé, e por meio de transporte primitivo, ele percorreu uns 960 km até Harã."</li>
+        <li>"Em 14 de nisã de 1943 AEC, ele cruzou o rio Eufrates e seguiu para o sul. Chegou finalmente ao coração de Canaã, depois de uma jornada que totalizou uns 1.650 km."</li>
+      </ul>
+      <p>Esse <em>"nunca mais voltar"</em> é fundamental. Sara não fez as malas pensando em regressar. O capítulo 3 do Coragem reforça: ela <em>"se recusou a olhar para trás"</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 11:31; Hebreus 11:15</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 11:31</span> "Tera tomou então seu filho Abrão, seu neto Ló, filho de Harã, e sua nora Sarai, esposa do seu filho Abrão; e esses saíram com ele de Ur dos caldeus, a fim de ir para a terra de Canaã. Com o tempo chegaram a Harã e passaram a morar ali."
+        <span class="verse-chip">Hb 11:15</span> "Contudo, se eles continuassem se lembrando do lugar de onde tinham saído, teriam tido a oportunidade de voltar."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · "Nunca mais voltar"</h4>
+      <p>Sara fez uma ruptura <em>total</em>, não parcial. Ao contrário de pessoas que mudam de cidade mas mantêm a mentalidade antiga, ela <em>reformulou</em> sua identidade em torno da promessa. A coragem de Sara não foi apenas na partida — foi na decisão de <em>não idealizar o passado</em>. A imagem A (a joia) representa exatamente o que ela deixou para trás: beleza que era <em>deste mundo</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Ilustração poderosa para quem vive preso a um passado (país de origem, vida anterior, vício). Mostre que a coragem cristã muitas vezes é "sair de Ur" — e que <em>não há vantagem em voltar</em>.</p>
+      <p><strong>Dia a dia:</strong> Pergunte-se: "Qual é o meu Ur hoje?" Pode ser um hábito, uma relação, um apego material. Sara nos lembra que a verdadeira segurança não está em Ur, mas na promessa de Jeová.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q3 — ESCONDER QUE ERA ESPOSA ========================= -->
+<details class="q" id="q3">
+  <summary>
+    <span class="q-num">3</span>
+    <span>
+      <span class="q-title"><em>Analise mais a fundo #3:</em> O que mostra que foi sábio Abraão ter escondido o fato de que Sara era sua esposa?</span>
+      <div class="q-status" data-status>(wp17.3 14 § 6–15 § 2)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q3">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"O que mostra que foi sábio Abraão ter escondido o fato de que Sara era sua esposa?" (<em>A Sentinela</em> março 2017, pp. 14 § 6 a 15 § 2).</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>O plano de Abraão não foi perfeito, mas foi compreensível. O que mostra que <em>algum</em> nível de prudência era sábio:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>O medo de Abraão não era infundado</strong> — o Insight registra que um antigo papiro egípcio fala de um Faraó que comissionou homens armados a se apoderarem duma mulher atraente e a matarem o marido dela.</li>
+          <li><strong>Sara era realmente bonita aos 65+ anos</strong> — a Bíblia registra isso consistentemente, mostrando que era um risco real.</li>
+          <li><strong>Abraão estava numa terra estrangeira</strong> — sem proteção tribal ou legal, sua vida dependia de Sagacidade.</li>
+          <li><strong>Jeová <em>não</em> reprovou Abraão diretamente</strong> — embora o episódio tenha trazido complicações.</li>
+        </ol>
+        <em>Contudo, a Bíblia também mostra limitações dessa estratégia:</em>
+        <ol style="margin:6px 0 0" start="5">
+          <li><strong>Sara foi levada ao palácio do Faraó</strong> — risco concreto de violação.</li>
+          <li><strong>A estratégia foi repetida com Abimeleque</strong> — mostrando um padrão de desconfiança que precisava ser corrigido.</li>
+          <li><strong>Jeová interveio para proteger Sara, não por causa da estratégia, mas apesar dela</strong> — pragas sobre o Faraó, advertência a Abimeleque.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Sara"</h4>
+      <p>O <em>Insight</em> traz o contexto:</p>
+      <ul>
+        <li>"É digno de nota que um antigo papiro fala de um Faraó que comissionou homens armados a se apoderarem duma mulher atraente e a matarem o marido dela. De modo que o temor de Abraão, de poder ser morto por causa de Sara, não era infundado."</li>
+        <li>"Em vez de pôr em perigo sua vida numa tentativa malsucedida de salvar a honra da sua esposa numa terra estrangeira, Abraão adotou o que lhe parecia ser o proceder mais seguro."</li>
+        <li>"Em parte alguma censuram as Escrituras a Abraão por fazer isso."</li>
+      </ul>
+      <p>Esse último ponto é importante: as Escrituras <em>narram</em> o episódio, mas não o condenam explicitamente — embora mostrem as complicações que ele trouxe.</p>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 20:2, 12</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 20:2</span> "Abraão repetiu o seguinte com respeito a Sara, sua esposa: 'Ela é minha irmã.' Então Abimeleque, rei de Gerar, mandou buscar Sara e a tomou para si."
+        <span class="verse-chip">Gn 20:12</span> "E, além disso, ela é realmente minha irmã, filha do meu pai, apenas não é filha da minha mãe; e ela se tornou minha esposa."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Prudência humana, mas Jeová protegeu</h4>
+      <p>O episódio mostra que mesmo os servos de Jeová podem <em>calcular mal</em> uma situação. Abraão não confiou plenamente em Jeová para protegê-lo — recorreu a uma meia-verdade. Mesmo assim, Jeová não abandonou o casal: <strong>interveio diretamente</strong> para proteger Sara. Isso é encorajador para nós: quando nossas estratégias falham, Jeová ainda nos sustenta, contanto que nosso coração seja fiel a Ele.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Útil para mostrar que Jeová <em>supre</em> as falhas humanas — não porque somos perfeitos, mas porque Ele é leal.</p>
+      <p><strong>Dia a dia:</strong> Quando estiver em situação onde sua estratégia parece frágil, lembre-se: <em>Jeová não depende do nosso plano</em>. Confie Nele, não no seu estratagema.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q4 — SUBMISSÃO E COMUNICAÇÃO ========================= -->
+<details class="q" id="q4">
+  <summary>
+    <span class="q-num">4</span>
+    <span>
+      <span class="q-title"><em>Analise mais a fundo #4 [B]:</em> Sara era submissa a Abraão. Será que isso significa que ela nunca dizia o que pensava?</span>
+      <div class="q-status" data-status>(g 1/08 29 §§ 4-5 · Imagem B)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q4">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Imagem B</h4>
+      <div class="img-placeholder">
+        <span class="label">📷 IMAGEM B</span>
+        Ilustração do livro Coragem mostrando Sara em conversa direta com Abraão — demonstrando que submissão bíblica não é silêncio.
+        <br><em>(imagem do livro Coragem, cap. 3, p. 19)</em>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Sara era submissa a Abraão. Será que isso significa que ela nunca dizia o que pensava? Explique." (<em>Despertai!</em> 1/08 p. 29 §§ 4-5).</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Não. Submissão bíblica não é silêncio.</strong> Sara era submissa a Abraão <em>como cabeça da família</em>, mas isso não a impedia de:
+        <ol style="margin:10px 0 0">
+          <li><strong>Expressar suas necessidades</strong> — pediu a Agar como substituta para ter filhos (<span class="verse-chip">Gn 16:2</span>).</li>
+          <li><strong>Expressar indignação</strong> — quando Agar a desprezou, Sara queixou-se diretamente a Abraão, que lhe deu autoridade plena para lidar com a situação (<span class="verse-chip">Gn 16:5, 6</span>).</li>
+          <li><strong>Tomar decisões firmes</strong> — exigiu a expulsão de Agar e Ismael para proteger Isaque (<span class="verse-chip">Gn 21:9-13</span>).</li>
+          <li><strong>Rir com Jeová</strong> — expressou seu espanto com a promessa de ter um filho aos 90 anos (<span class="verse-chip">Gn 18:12-15</span>).</li>
+          <li><strong>Reconhecer Abraão como "senhor"</strong> — mesmo quando discordava ou ficava brava, mantinha o respeito pela chefia dele (<span class="verse-chip">1 Pe 3:6</span>).</li>
+        </ol>
+        <em>O princípio é:</em> subordinação de <em>papel</em>, não de <em>mente</em>. A esposa submissa pode — e deve — expressar suas ideias com respeito. Silêncio não é sinal de espiritualidade; é submissão <em>de verdade</em> quando acompanhada de diálogo honesto e amoroso.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 16:2; 21:9, 10; 1 Pedro 3:5, 6</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 16:2</span> "Portanto, Sarai disse a Abrão: 'Escute, por favor: Jeová me impedido de ter filhos. Por favor, tenha relações com a minha serva. Talvez eu possa ter filhos por meio dela.' E Abrão ouviu Sarai."
+        <span class="verse-chip">Gn 21:9</span> "Mas Sara notava que o filho que Agar, a egípcia, tinha dado a Abraão, caçoava de Isaque. De modo que disse a Abraão: 'Expulse essa escrava e o filho dela, pois o filho dessa escrava não vai ser herdeiro com o meu filho, com Isaque!'"
+        <span class="verse-chip">1 Pe 3:5</span> "Pois era assim que as santas mulheres do passado que esperavam em Deus se adornavam, sujeitando-se ao marido"
+        <span class="verse-chip">1 Pe 3:6</span> "como Sara, que obedecia a Abraão, chamando-o de senhor. Você será filha dela, desde que continue a fazer o bem e não se deixe dominar pelo medo."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Sara"</h4>
+      <p>O <em>Insight</em> destaca a dualidade de Sara:</p>
+      <ul>
+        <li>"Reconhecer Sara a Abraão (no íntimo) como seu senhor indicava sua obediência e sujeição ao seu cabeça marital."</li>
+        <li>Mas também: "Quando Agar se apercebeu de que estava grávida, começou a desprezar sua senhora. Quando Sara se queixou disso, Abraão concedeu à esposa plena autoridade para lidar com Agar como serva dela."</li>
+        <li>Sara era simultaneamente <em>subordinada</em> (no papel) e <em>agente ativa</em> (na prática). Sua submissão era <em>escolha consciente</em>, não silêncio imposto.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Diálogo respeitoso é submissão viva</h4>
+      <p>O exemplo de Sara quebra o estereótipo da esposa submissa como "tapete". A submissão bíblica é <em>ativa</em>: ela se manifesta em diálogo honesto, defesa firme do que é certo, e respeito à chefia do marido <em>mesmo quando discorda internamente</em>. Sara não calou sobre Ismael — falou, com firmeza, e Abraão (apesar de relutante) obedeceu a Jeová.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Em casais não-cristãos, muitas vezes o modelo é "esposa que obedece calada" ou "esposa que domina". O padrão bíblico mostra um terceiro caminho: <em>esposa que fala com respeito, marido que ouve com humildade</em>.</p>
+      <p><strong>Dia a dia (esposas):</strong> Sua submissão não exige que vire robô. Sua opinião importa, e Deus quer que você expresse com amor.</p>
+      <p><strong>Dia a dia (maridos):</strong> Quando sua esposa expressar uma opinião diferente da sua — <em>escute</em>. Abraão ouvia Sara, e foi Jeová quem aprovou a decisão dela de expulsar Agar (Gl 4:28–31).</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q5 — SARA VS ESPOSA DE LÓ: COMUM ========================= -->
+<details class="q" id="q5">
+  <summary>
+    <span class="q-num">5</span>
+    <span>
+      <span class="q-title"><em>Medite [B]:</em> Compare Sara e a esposa de Ló. O que elas tinham em comum?</span>
+      <div class="q-status" data-status>(Gênesis 12:1; 13:5-7; 19:12, 15)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q5">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Compare Sara e a esposa de Ló. O que elas tinham em comum?" — <em>Ande Corajosamente com Deus</em>, cap. 3, p. 21.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>As duas mulheres tinham muito mais em comum do que parece à primeira vista:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Maridos justos que ouviam a Jeová</strong> — tanto Abraão quanto Ló foram avisados diretamente por anjos/visitantes celestes.</li>
+          <li><strong>Tiveram de abandonar tudo por causa da ordem divina</strong> — Sara deixou Ur; Ló e família deixaram Sodoma.</li>
+          <li><strong>Viajaram com seus maridos</strong> — não ficaram para trás.</li>
+          <li><strong>Estavam em terra estrangeira</strong> — Sara em Canaã/Egito; Ló em Sodoma (entre os cananeus).</li>
+          <li><strong>Acumularam bens materiais antes da partida</strong> — Sara tinha uma vida urbana rica em Ur; Ló e Abraão eram "riquíssimos em rebanhos, prata e ouro" (Gn 13:2).</li>
+          <li><strong>Foram convidadas pelo marido a confiar em Jeová</strong> — Abraão ouviu de Deus; Ló foi avisado pelos anjos para fugir sem olhar para trás.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 12:1; 13:5-7; 19:12, 15</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 12:1</span> "E Jeová disse a Abrão: 'Saia da sua terra e deixe os seus parentes e a casa do seu pai, e vá para a terra que lhe mostrarei.'"
+        <span class="verse-chip">Gn 13:5</span> "Ló, que viajava com Abrão, também possuía ovelhas, bois e tendas."
+        <span class="verse-chip">Gn 13:7</span> "Surgiu, então, uma desavenca entre os homens que cuidavam dos rebanhos de Abrão e os que cuidavam dos rebanhos de Ló. (Naquele tempo os cananeus e os perizeus moravam naquela terra.)"
+        <span class="verse-chip">Gn 19:12</span> "Então os homens disseram a Ló: 'Você tem mais alguém aqui? Genros, filhos, filhas e todos os que são seus na cidade, leve-os para fora deste lugar!'"
+        <span class="verse-chip">Gn 19:15</span> "Quando o dia estava raiando, os anjos começaram a insistir com Ló, dizendo: 'Depressa! Pegue sua esposa e suas duas filhas que estão aqui com você, para que você não seja eliminado quando vier a punição pelos erros da cidade.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · A mesma partida, dois corações</h4>
+      <p>A grande lição aqui é: <strong>a mesma oportunidade, mas dois resultados opostos</strong>. Sara recebeu a ordem de Jeová através de Abraão — e <em>foi</em>. A esposa de Ló recebeu a mesma urgência — e <em>olhou para trás</em>. A diferença não estava nas circunstâncias externas (também as duas tinham maridos piedosos, bens materiais, urgência divina); estava no <em>coração</em>. <strong>O que define o destino não é onde você começa, mas para onde você olha</strong>.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q6 — SARA VS ESPOSA DE LÓ: DIFERENTE ========================= -->
+<details class="q" id="q6">
+  <summary>
+    <span class="q-num">6</span>
+    <span>
+      <span class="q-title"><em>Medite [B]:</em> Sara e a esposa de Ló — o que tinham de diferente?</span>
+      <div class="q-status" data-status>(Gênesis 19:17, 26; Lucas 17:28-32)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q6">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"O que elas tinham de diferente?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>As diferenças entre Sara e a esposa de Ló são reveladoras:</strong>
+        <table style="width:100%;border-collapse:collapse;margin:10px 0;color:#e7eef7;font-size:.9rem">
+          <thead>
+            <tr style="background:#1c2940;border:1px solid var(--line)">
+              <th style="padding:8px;text-align:left;border:1px solid var(--line)">Aspecto</th>
+              <th style="padding:8px;text-align:left;border:1px solid var(--line)">Sara</th>
+              <th style="padding:8px;text-align:left;border:1px solid var(--line)">Esposa de Ló</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px;border:1px solid var(--line)"><strong>O que deixou para trás</strong></td><td style="padding:8px;border:1px solid var(--line)">Cidade próspera, civilizada, adoração organizada a ídolos.</td><td style="padding:8px;border:1px solid var(--line)">Cidade corrupta, em vias de destruição.</td></tr>
+            <tr><td style="padding:8px;border:1px solid var(--line)"><strong>Atitude diante da ordem</strong></td><td style="padding:8px;border:1px solid var(--line)">Saiu com prontidão, arrumou as coisas.</td><td style="padding:8px;border:1px solid var(--line)">Hesitou — os anjos tiveram que "insistir" com Ló.</td></tr>
+            <tr><td style="padding:8px;border:1px solid var(--line)"><strong>Vínculo com a vida anterior</strong></td><td style="padding:8px;border:1px solid var(--line)">Saudade eventual, mas compromisso com a promessa.</td><td style="padding:8px;border:1px solid var(--line)">Não conseguiu soltar — olhou para trás.</td></tr>
+            <tr><td style="padding:8px;border:1px solid var(--line)"><strong>Resultado final</strong></td><td style="padding:8px;border:1px solid var(--line)">Viveu até 127 anos, viu o começo da promessa, será ressuscitada.</td><td style="padding:8px;border:1px solid var(--line)">Transformada em coluna de sal — <em>morte</em>.</td></tr>
+            <tr><td style="padding:8px;border:1px solid var(--line)"><strong>Reação à chamada</strong></td><td style="padding:8px;border:1px solid var(--line)">Confiança; "Para onde fores irei" (Rt 1:16, espírito).</td><td style="padding:8px;border:1px solid var(--line)">Dúvida; reteve o coração no passado.</td></tr>
+          </tbody>
+        </table>
+        <em>A diferença fundamental:</em> Sara confiava no destino da promessa; a esposa de Ló não conseguia soltar a cidade condenada. Uma virou exemplo de fé (Hb 11:11); outra virou aviso (Lc 17:32).
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 19:17, 26; Lucas 17:28-32</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 19:17</span> "Assim que os tinham levado para os arredores da cidade, um deles disse: 'Fuja, por sua vida! Não olhe para trás e não pare em nenhuma parte do distrito! Fuja para a região montanhosa, para que você não seja eliminado!'"
+        <span class="verse-chip">Gn 19:26</span> "Mas a esposa de Ló, que estava atrás dele, olhou para trás, e ela se transformou em uma coluna de sal."
+        <span class="verse-chip">Lc 17:28</span> "Do mesmo modo, será como ocorreu nos dias de Ló: as pessoas comiam, bebiam, compravam, vendiam, plantavam, construíam."
+        <span class="verse-chip">Lc 17:29</span> "Mas, no dia em que Ló saiu de Sodoma, choveu do céu fogo e enxofre, e destruiu a todos."
+        <span class="verse-chip">Lc 17:30</span> "Acontecerá o mesmo naquele dia em que o Filho do Homem for revelado."
+        <span class="verse-chip">Lc 17:31</span> "'Naquele dia, quem estiver no terraço, mas cujas coisas estiverem na casa, não desça para apanhá-las, e, do mesmo modo, quem estiver no campo não deve voltar para as coisas deixadas atrás.'"
+        <span class="verse-chip">Lc 17:32</span> "Lembrem-se da mulher de Ló."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · "Lembrem-se da mulher de Ló"</h4>
+      <p>Jesus usa a esposa de Ló como <em>exemplo de advertência</em>, não de admiração. Ela tinha tudo para ser salva — marido justo, aviso divino, fuga física possível — mas seu coração ficou em Sodoma. <strong>A salvação depende de soltar o que Jeová diz para soltar</strong>. Olhar para trás, em sentido espiritual, é apegar-se ao sistema que Deus está prestes a destruir.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q7 — O QUE APRENDEMOS DAS DECISÕES ========================= -->
+<details class="q" id="q7">
+  <summary>
+    <span class="q-num">7</span>
+    <span>
+      <span class="q-title"><em>Medite [B]:</em> O que aprendemos das decisões que elas tomaram e dos resultados dessas decisões?</span>
+      <div class="q-status" data-status>(Hebreus 11:11; Lucas 17:32)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q7">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"O que aprendemos das decisões que elas tomaram e dos resultados dessas decisões?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Três lições poderosas das duas decisões contrastantes:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>A decisão define o destino</strong> — Sara decidiu ir e viver; a esposa de Ló decidiu olhar e morrer. O momento de decidir é <em>agora</em>.</li>
+          <li><strong>Não é a partida que salva, é a postura do coração</strong> — ambas saíram fisicamente; só uma saiu com o coração certo.</li>
+          <li><strong>O coração revela a verdadeira fé</strong> — Sara não hesitou porque <em>acreditava</em> na promessa de Jeová. A esposa de Ló hesitou porque o sistema Sodoma ainda era seu lar emocional.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Hebreus 11:11; Lucas 17:32</h4>
+      <div class="quote">
+        <span class="verse-chip">Hb 11:11</span> <span class="alert-pend" style="display:inline;padding:2px 8px">texto exato pendente — verificar no JW Library</span>
+        <span class="verse-chip">Lc 17:32</span> "Lembrem-se da mulher de Ló."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · "O que o seu coração escolhe hoje?"</h4>
+      <p>A história de Sara e da esposa de Ló não é apenas uma comparação histórica. Jesus <em>explicitamente</em> diz: "Lembrem-se da mulher de Ló" — porque o mesmo cenário se repete hoje. <strong>Há um "Sodoma" simbólico prestes a ser destruído: o sistema de coisas atual</strong>. Quem fizer como Sara (sair sem olhar para trás) será salvo. Quem fizer como a esposa de Ló (olhar para trás com saudade) — não. A aplicação é direta e urgente.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q8 — BELEZA + RIQUEZA ========================= -->
+<details class="q" id="q8">
+  <summary>
+    <span class="q-num">8</span>
+    <span>
+      <span class="q-title"><em>Medite:</em> Sara era muito bonita e seu marido era rico. O que aprendemos se tivermos circunstâncias parecidas?</span>
+      <div class="q-status" data-status>(Provérbios 31:30; 1 Timóteo 6:17-19)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q8">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Sara era muito bonita e seu marido era rico. O que podemos aprender do exemplo dela se tivermos circunstâncias parecidas?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Temos quatro lições se formos bonitos ou bem-sucedidos:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Beleza e riqueza são passageiras — o temor a Jeová dura</strong> (<span class="verse-chip">Pv 31:30</span>). Não baseie sua identidade em aparências ou posses.</li>
+          <li><strong>Recursos materiais são oportunidades, não fins</strong> — use-os para fazer "boas obras", ser "generoso" e "pronto a partilhar" (<span class="verse-chip">1 Tm 6:18</span>).</li>
+          <li><strong>Beleza atrai atenção, mas a piedade atrai bênção</strong> — "A mulher que teme a Jeová receberá elogios" (Pv 31:30).</li>
+          <li><strong>Teste espiritual:</strong> o que você faz quando ninguém está olhando? Sara escolheu a fidelidade em privado (com Faraó, com Abimeleque).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Provérbios 31:30; 1 Timóteo 6:17-19</h4>
+      <div class="quote">
+        <span class="verse-chip">Pv 31:30</span> "O encanto talvez seja falso, e a beleza talvez ser passageira, Mas a mulher que teme a Jeová receberá elogios."
+        <span class="verse-chip">1 Tm 6:17</span> "Dê instruções aos que são ricos no mundo atual: que eles não sejam arrogantes e que não baseiem a sua esperança nas riquezas incertas, mas em Deus, que nos proporciona ricamente todas as coisas que nos dão satisfação."
+        <span class="verse-chip">1 Tm 6:18</span> "Diga-lhes que pratiquem o bem, que sejam ricos em boas obras, que sejam generosos, prontos para partilhar,"
+        <span class="verse-chip">1 Tm 6:19</span> "armazenando um tesouro para si, um bom alicerce para o futuro; fazendo isso, eles se apegarão firmemente à verdadeira vida."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Beleza passageira × Tesouro duradouro</h4>
+      <p>Sara possuía o tipo de beleza que <em>movia reis</em>. Mas ela não se definiu por isso — definiu-se pela fé em Jeová. O paralelo com 1 Timóteo 6:17-19 é direto: quem tem recursos materiais precisa urgentemente lembrar que <strong>"a esperança nas riquezas incertas"</strong> é armadilha. O tesouro "firme" é construído por boas obras e generosidade — exatamente o que Sara praticou ao servir fielmente em qualquer circunstância.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Para pessoas que vivem de aparências — perfis de mídia, status, vaidade — Sara mostra que <em>o caráter invisível dura mais que a beleza visível</em>.</p>
+      <p><strong>Dia a dia:</strong> Independentemente da aparência ou renda, lembre-se: o que Jeová valoriza não está no espelho nem no banco — está no coração e nas ações.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q9 — COMO IMITAR SARA ========================= -->
+<details class="q" id="q9">
+  <summary>
+    <span class="q-num">9</span>
+    <span>
+      <span class="q-title"><em>Medite:</em> Como você pode imitar a coragem de Sara na sua vida?</span>
+      <div class="q-status" data-status>(Hebreus 11:15; 1 Pedro 3:5, 6)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q9">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Como você pode imitar a coragem de Sara na sua vida?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Sete maneiras práticas de imitar Sara hoje:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Comprometer-se com a decisão, não apenas com a viagem</strong> — Sara não fez as malas pensando em voltar. Decida-se de coração.</li>
+          <li><strong>Não usar crises como pretexto para desistir</strong> — quando a fome atingiu Canaã, Sara não pediu para voltar a Ur.</li>
+          <li><strong>Confiar no marido mesmo quando ele erra</strong> — Sara não expôs publicamente a meia-verdade de Abraão; confiou que Jeová corrigiria.</li>
+          <li><strong>Proteger a família</strong> — quando Ismael ameaçou Isaque, Sara agiu com firmeza.</li>
+          <li><strong>Submeter-se sem se anular</strong> — ser submissa a Jeová <em>e</em> ativa na defesa da verdade.</li>
+          <li><strong>Rir com fé</strong> — Sara riu do impossível. Hoje, rimos da incredulidade humana, e cremos no que Jeová promete.</li>
+          <li><strong>Não olhar para trás</strong> — em qualquer decisão importante, lembre-se: "se eles continuassem se lembrando do lugar de onde tinham saído, teriam tido a oportunidade de voltar" (<span class="verse-chip">Hb 11:15</span>). Não volte.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Hebreus 11:15; 1 Pedro 3:5, 6</h4>
+      <div class="quote">
+        <span class="verse-chip">Hb 11:15</span> "Contudo, se eles continuassem se lembrando do lugar de onde tinham saído, teriam tido a oportunidade de voltar."
+        <span class="verse-chip">1 Pe 3:5</span> "Pois era assim que as santas mulheres do passado que esperavam em Deus se adornavam, sujeitando-se ao marido"
+        <span class="verse-chip">1 Pe 3:6</span> "como Sara, que obedecia a Abraão, chamando-o de senhor. Você será filha dela, desde que continue a fazer o bem e não se deixe dominar pelo medo."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Filha de Sara</h4>
+      <p>Pedro nos chama de <em>"filhas dela"</em> (1 Pe 3:6). Isso não é apenas honra — é <em>convocação</em>. Hoje, mulheres que servem a Jeová são herdeiras espirituais de Sara. A coragem silenciosa, a obediência ativa, a firmeza em proteger a família — tudo isso faz parte do DNA da fé que recebemos.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q10 — QUADRO COMPLETO: JEOVÁ ========================= -->
+<details class="q" id="q10">
+  <summary>
+    <span class="q-num high">★</span>
+    <span>
+      <span class="q-title"><em>Pense no quadro completo [C]:</em> O que esse relato me ensina sobre Jeová?</span>
+      <div class="q-status" data-status>(Imagem C)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q10">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Imagem C</h4>
+      <div class="img-placeholder">
+        <span class="label">📷 IMAGEM C</span>
+        Ilustração panorâmica do livro Coragem mostrando Sara e Abraão em sua longa jornada até Canaã — imagem contemplativa que convida a "pensar no quadro completo".
+        <br><em>(imagem do livro Coragem, cap. 3, p. 23)</em>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"O que esse relato me ensina sobre Jeová?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Cinco verdades que o relato de Sara revela sobre Jeová:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Jeová vê e age em favor dos que confiam nele</strong> — Sara não era "vista" pelo mundo, mas Jeová a viu e a chamou para um papel-chave na história da salvação.</li>
+          <li><strong>Jeová honra a coragem silenciosa</strong> — ele não precisava de Sara em batalhas épicas, mas precisava dela <em>firme</em>. Ele honra quem é firme no invisível.</li>
+          <li><strong>Jeová cumpre promessas impossíveis</strong> — Sara com 90 anos tendo um filho? "Há alguma coisa que seja extraordinária demais para Jeová?" (Gn 18:14).</li>
+          <li><strong>Jeová protege e sustenta mesmo quando somos fracos</strong> — Abraão errou com Faraó e Abimeleque; mesmo assim, Jeová protegeu Sara.</li>
+          <li><strong>Jeová recompensa a paciência</strong> — Sara viveu 127 anos e verá a promessa completa na ressurreição.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gênesis 18:14; 21:1, 6</h4>
+      <div class="quote">
+        <span class="verse-chip">Gn 18:14</span> "Há alguma coisa que seja extraordinária demais para Jeová? Retornarei a você no ano que vem, no tempo determinado, e Sara já terá um filho."
+        <span class="verse-chip">Gn 21:1</span> "Jeová voltou a atenção para Sara, assim como havia dito, e Jeová fez a Sara o que havia prometido."
+        <span class="verse-chip">Gn 21:6</span> "Sara disse então: 'Deus me deu motivo para rir; todo aquele que souber disso rirá comigo.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · "Jeová voltou a atenção para Sara"</h4>
+      <p>A expressão <em>"voltou a atenção"</em> (Gn 21:1) é carregada de ternura. Não é intervenção mecânica — é <em>cuidado pessoal</em>. Jeová conhecia Sara pelo nome, sabia da sua espera, da sua frustração, do seu riso (Gn 18:12-15). Quando ele "voltou a atenção", ele viu <em>ela</em>, não apenas a promessa. <strong>Essa é a mesma atenção que ele dá a cada um de nós</strong> — pessoal, atencioso, mesmo quando invisível aos olhos humanos.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Pessoas que se sentem "invisíveis" ou "esquecidas" podem encontrar consolo em saber que Jeová <em>vê</em> as Saras do nosso tempo. Seu nome não é apenas registrado — é <em>lembrado</em>.</p>
+      <p><strong>Dia a dia:</strong> Quando orar e sentir que "ninguém está ouvindo", lembre-se: Jeová "voltou a atenção" para Sara. Ele volta atenção para você também.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q11 — QUADRO COMPLETO: PROPÓSITO ========================= -->
+<details class="q" id="q11">
+  <summary>
+    <span class="q-num">11</span>
+    <span>
+      <span class="q-title"><em>Pense no quadro completo [C]:</em> Como esse relato está relacionado com o propósito de Jeová?</span>
+      <div class="q-status" data-status>(Gênesis 22:17, 18; Gálatas 3:16, 29)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q11">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Como esse relato está relacionado com o propósito de Jeová?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>O relato de Sara está no centro do propósito de Jeová:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Sara é mãe da "semente" prometida</strong> — através de Isaque viria a linhagem que levaria ao Messias.</li>
+          <li><strong>Pelo "descendente" de Sara, todas as nações seriam abençoadas</strong> — Gn 22:17, 18; Gl 3:16 identifica esse "descendente" como Cristo.</li>
+          <li><strong>Sara também representa "a Jerusalém de cima"</strong> — o <em>Insight</em> destaca: Sara "representava 'a Jerusalém de cima', a mãe dos cristãos gerados pelo espírito" (Gl 4:22-31).</li>
+          <li><strong>Portanto, Sara não é apenas uma personagem histórica — é um tipo profético</strong> — ela antecipa a comunidade cristã, "livre" e "mãe" de filhos espirituais.</li>
+          <li><strong>A coragem de Sara é modelo para todo cristão fiel</strong> — sair do mundo (Ur/Sodoma), suportar provações (Egito/Gerar), proteger a fé (Agar/Ismael), e aguardar a promessa (Isaque/ressurreição).</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · Insight, verbete "Sara"</h4>
+      <p>O <em>Insight</em> confirma a dimensão tipológica:</p>
+      <ul>
+        <li>"O apóstolo Paulo, escrevendo aos gálatas, mostrou que Sara, esposa de Abraão, representava 'a Jerusalém de cima', a mãe dos cristãos gerados pelo espírito, a 'semente' espiritual de Abraão."</li>
+        <li>"Igual a Sara, 'a Jerusalém de cima', a mulher simbólica de Deus, nunca esteve em escravidão, e, portanto, os filhos dela também são livres."</li>
+        <li>"Para alguém se tornar filho livre da 'Jerusalém de cima', 'com a liberdade dela', ele tem de ser livrado da servidão ao pecado pelo Filho de Deus."</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · Gálatas 4:22-26</h4>
+      <div class="quote">
+        "Está escrito que Abraão teve dois filhos, um pela escrava e outro pela mulher livre. [...] Agora, essas mulheres são dois pactos. Um pacto é do monte Sinai, gerando filhos para a escravidão — este é Agar. Mas a Jerusalém de cima é livre, e ela é a nossa mãe."
+        <span class="src">— <em>texto citado pelo Insight</em> · verificar Gl 4:22-26 no JW Library para citação exata</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Sara é tipo da comunidade cristã</h4>
+      <p>O detalhe mais profundo do relato de Sara é que ela não é apenas uma personagem — ela é uma <em>figura profética</em>. Paulo vê na história dela o prenúncio da nova aliança. Sara é mãe dos "filhos da promessa", os cristãos ungidos. Sua coragem não foi apenas pessoal — foi <em>escatológica</em>: serviu ao propósito que levaria ao Messias.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> A história de Sara ganha uma camada extra quando vista como tipologia. Não estamos falando apenas de "uma mulher que deixou Ur" — estamos falando de uma figura central do plano de Jeová. Use isso para aprofundar conversas sobre o papel das mulheres na Bíblia.</p>
+      <p><strong>Dia a dia:</strong> Sua vida pode parecer "comum", mas se você está fazendo a vontade de Jeová, está integrado ao mesmo propósito que Sara serviu. Cada ato de fidelidade conta.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q12 — PERGUNTA PARA SARA NA RESSURREIÇÃO ========================= -->
+<details class="q" id="q12">
+  <summary>
+    <span class="q-num">12</span>
+    <span>
+      <span class="q-title"><em>Pense no quadro completo [C]:</em> O que eu gostaria de perguntar para Sara quando ela for ressuscitada?</span>
+      <div class="q-status" data-status>(Atos 24:15; Apocalipse 21:3, 4)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q12">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"O que eu gostaria de perguntar para Sara quando ela for ressuscitada?" — <em>Ande Corajosamente com Deus</em>, cap. 3.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Sugestões de perguntas — personalize conforme seu coração:</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Sobre Ur:</strong> "Sara, qual foi a coisa mais difícil de deixar em Ur? Você tinha medo no momento da partida?"</li>
+          <li><strong>Sobre a caminhada:</strong> "Como era viver em tendas, sem a segurança da cidade murada? O que Jeová te ensinou nesse tempo?"</li>
+          <li><strong>Sobre Faraó e Abimeleque:</strong> "Como você se sentiu quando Abraão disse que você era sua irmã? Você sabia que Jeová ia te proteger?"</li>
+          <li><strong>Sobre o riso:</strong> "Quando você riu para si mesma ao ouvir que teria um filho, o que sentiu? Foi descrença, espanto, ou alegria tímida?"</li>
+          <li><strong>Sobre Ismael e Isaque:</strong> "Você ficou com raiva de Agar ou com tristeza? Como lidou com o pedido a Abraão de expulsá-los?"</li>
+          <li><strong>Sobre Jeová:</strong> "Qual foi o momento em que você mais sentiu a presença de Jeová?"</li>
+          <li><strong>Sobre a promessa:</strong> "Você viu Isaque crescer, mas não viu a promessa completa. O que te fez continuar acreditando mesmo assim?"</li>
+          <li><strong>Sobre hoje:</strong> "O que você diria a uma cristã do nosso tempo que está prestes a 'deixar a própria Ur'?"</li>
+        </ol>
+        <em>Essa pergunta é profundamente pessoal. Reserve um momento para escrever a <em>sua</em> pergunta — é parte do estudo.</em>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · base da esperança cristã</h4>
+      <p>A ressurreição não é teoria — é o pilar da esperança cristã:</p>
+      <ul>
+        <li><strong>Atos 24:15</strong> — "Tenho em Deus a esperança [...] de que haverá uma ressurreição tanto dos justos como dos injustos."</li>
+        <li><strong>Apocalipse 21:3, 4</strong> — "Escrutinarei as lágrimas dos seus olhos. Não haverá mais morte."</li>
+        <li><strong>João 5:28, 29</strong> — "Vem a hora em que todos os que estão nos túmulos memoriales ouvirão a sua voz e sairão."</li>
+      </ul>
+      <p>Sara — uma mulher que morreu antes de ver a promessa completa — está entre os que aguardam a ressurreição. Perguntar a ela é reconhecer que <em>nossa fé inclui um futuro real</em>, não apenas memória.</p>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Perguntar é declarar fé</h4>
+      <p>O simples fato de <em>pensar</em> em perguntar a Sara, quando ela for ressuscitada, é uma declaração de fé: cremos que ela vai voltar, cremos que vai nos reconhecer, cremos que vamos <em>dialogar</em>. Essa esperança não é vaga — é <em>pessoal</em>. Sara é uma pessoa real, com memórias, com experiências, com respostas. <strong>Conectar-se com ela no pensamento agora é um ato de fé viva</strong>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> Use essa pergunta para abrir conversas sobre a esperança cristã. A maioria das religiões tem um "céu" vago; os cristãos têm <em>pessoas reais esperando</em> para nos encontrar.</p>
+      <p><strong>Dia a dia:</strong> Antes de dormir, pense: "Se eu pudesse perguntar algo a [Sara, Enoque, Rute, Paulo], o que seria?" Essa prática simples mantém viva a esperança na ressurreição.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q13 — APRENDA MAIS ========================= -->
+<details class="q" id="q13">
+  <summary>
+    <span class="q-num">13</span>
+    <span>
+      <span class="q-title"><em>Aprenda mais:</em> O exemplo de Sara é apenas para esposas? w23.05 24-25 §§ 15-17</span>
+      <div class="q-status" data-status>(Vídeo "Exemplos para nós — Sara" 6:27)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q13">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>Pergunta original (cap. 3)</h4>
+      <p class="footnote">"Será que o exemplo de Sara é apenas para as esposas? Ou é válido para os maridos também?" — apoiada em <em>A Sentinela</em> de maio de 2023, pp. 24-25 §§ 15-17.</p>
+    </div>
+
+    <div class="block">
+      <h4>Resposta estruturada</h4>
+      <div class="answer">
+        <strong>Não, o exemplo de Sara é válido para <em>todos</em> — esposas, maridos, jovens, idosos.</strong>
+        <ol style="margin:10px 0 0">
+          <li><strong>Para maridos:</strong> a relação de Sara com Abraão mostra que confiança mútua requer paciência e respeito — mesmo quando o cônjuge erra. Abraão aprendeu a ouvir Sara (cf. expulsão de Agar, aprovada por Deus).</li>
+          <li><strong>Para jovens:</strong> a coragem de Sara aos 60+ anos prova que nunca é "tarde demais" para fazer mudanças radicais por causa da fé.</li>
+          <li><strong>Para os que enfrentam mudanças geográficas:</strong> Sara deixou Ur, Harã, Canaã, Egito — migrou várias vezes e manteve sua identidade espiritual em qualquer lugar.</li>
+          <li><strong>Para quem vive em ambiente hostil:</strong> Sara vivia em ambientes pagãos (Ur, Egito, Gerar) e manteve-se pura espiritualmente.</li>
+          <li><strong>Para todos:</strong> o princípio de "não olhar para trás" aplica-se a qualquer cristão que esteja prestes a comprometer sua dedicação.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Material de apoio · A Sentinela 2023.05 24-25 §§ 15-17</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — a Sentinela de maio de 2023 não está no cache local. Por favor, abra <em>A Sentinela</em> (estudo) de 15 de maio de 2023, pp. 24-25 §§ 15-17 no JW Library e cole aqui.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Vídeo sugerido pelo livro Coragem</h4>
+      <p>O capítulo 3 indica o vídeo <strong>"Exemplos para nós — Sara"</strong> (6:27) — provavelmente da série de vídeos educativos sobre mulheres da Bíblia.</p>
+      <div class="alert-pend">
+        <strong>Link exato pendente</strong> — verificar no JW Library. Geralmente está em jw.org/pt/biblioteca/videos/ ou no app JW Library em Vídeos.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Ponto alto · Universalidade do exemplo de Sara</h4>
+      <p>Sara é citada como modelo em <strong>Hebreus 11</strong> (hall da fama da fé), <strong>1 Pedro 3:5, 6</strong> (modelo para esposas cristãs) e <strong>Gálatas 4</strong> (figura tipológica da nova aliança). É raro uma mulher ter tanta representatividade teológica. Sua história atravessa gêneros, gerações e alianças — porque o que ela viveu é universal: <em>confiar em Jeová quando tudo pede o contrário</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Texto bíblico (NWT) · 1 Pedro 3:5, 6</h4>
+      <div class="quote">
+        <span class="verse-chip">1 Pe 3:5</span> "Pois era assim que as santas mulheres do passado que esperavam em Deus se adornavam, sujeitando-se ao marido"
+        <span class="verse-chip">1 Pe 3:6</span> "como Sara, que obedecia a Abraão, chamando-o de senhor. Você será filha dela, desde que continue a fazer o bem e não se deixe dominar pelo medo."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>Aplicação 🎤🏠</h4>
+      <p><strong>Pregação:</strong> A universalidade de Sara abre o estudo para qualquer pessoa — não é preciso ser esposa para se beneficiar.</p>
+      <p><strong>Dia a dia:</strong> Ao ler a história de Sara, pergunte: <em>"Qual princípio se aplica a mim HOJE?"</em> Não olhe para o texto apenas como história antiga — aplique-o.</p>
+    </div>
+
+  </div>
+</details>
+
+</div>
+
+<footer>
+  📚 Estudo de Congregação preparado por Hermes Agent a partir de <em>Ande Corajosamente com Deus</em> (wcg), cap. 3 — "Ela se recusou a olhar para trás".<br>
+  🔗 Versículos NWT extraídos do cache local do JW Library (sub-50ms por versículo). Material de apoio do <em>Insight</em> (verbetes "Sara", "Abraão", "As Viagens de Abraão") verificado.<br>
+  ⚠️ Sentinelas antigas (1994, 2008, 2017, 2023) marcadas como <em>"pendente verificar no JW Library"</em>.<br>
+  ✏️ Aperte <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const KEY='estudo-sara-coragem-cap3-2026-08-10';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(o){localStorage.setItem(KEY,JSON.stringify(o))}
+  const answered=load();
+  document.querySelectorAll('[data-toggle]').forEach(btn=>{
+    const id=btn.dataset.toggle;
+    const sec=document.getElementById(id);
+    const status=sec.querySelector('.q-status');
+    if(answered[id]){
+      sec.dataset.done='1';
+      status.textContent='✔ Respondida · '+status.dataset.status;
+      status.classList.add('answered');
+      btn.textContent='↺ reabrir';
+    }
+    btn.addEventListener('click',e=>{
+      e.preventDefault();
+      const was=sec.dataset.done==='1';
+      if(was){
+        delete answered[id];
+        sec.removeAttribute('data-done');
+        status.textContent=status.dataset.status;
+        status.classList.remove('answered');
+        btn.textContent='✔ marcar como respondida';
+      }else{
+        answered[id]=Date.now();
+        sec.dataset.done='1';
+        status.textContent='✔ Respondida · '+status.dataset.status;
+        status.classList.add('answered');
+        btn.textContent='↺ reabrir';
+      }
+      save(answered);
+      update();
+    });
+  });
+
+  const inp=document.getElementById('search');
+  function update(){
+    const q=inp.value.toLowerCase().trim();
+    const filter=[...document.querySelectorAll('.pill[data-filter]')].find(b=>b.classList.contains('on')).dataset.filter;
+    let count=0;
+    document.querySelectorAll('details.q').forEach(d=>{
+      const text=d.textContent.toLowerCase();
+      const ok1=!q||text.includes(q);
+      const ok2 = filter==='all' || (filter==='pending' && !d.dataset.done) || (filter==='done' && d.dataset.done);
+      d.style.display=(ok1&&ok2)?'':'none';
+      if(ok1&&ok2)count++;
+    });
+    document.getElementById('count').textContent=count+' pergunta(s) visível(is)';
+  }
+  inp.addEventListener('input',update);
+  document.querySelectorAll('[data-filter]').forEach(b=>{
+    b.addEventListener('click',e=>{
+      document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>

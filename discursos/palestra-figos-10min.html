@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palestra 10min — "Por que alguns figos eram bons e outros eram ruins?" · 10-16 ago 2026</title>
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{display:flex;max-width:1280px;margin:0 auto;padding:20px}
+  aside{width:230px;flex-shrink:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;height:fit-content;position:sticky;top:20px}
+  aside h3{margin:0 0 10px;font-size:.95rem;color:var(--accent)}
+  aside nav a{display:block;padding:7px 10px;margin:3px 0;color:var(--text);text-decoration:none;border-radius:6px;font-size:.88rem}
+  aside nav a:hover{background:var(--panel2);color:var(--accent)}
+  aside nav a.active{background:var(--accent);color:#07223a;font-weight:600}
+  main{flex:1;margin-left:20px;min-width:0}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#152139,#101a2a);border:1px solid var(--line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--accent);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  section.tab-content{display:none}
+  section.tab-content.active{display:block}
+  details.q{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.q[open]{box-shadow:0 0 0 1px #2a3c5a inset}
+  details.q>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.q>summary::-webkit-details-marker{display:none}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h3{margin:0 0 8px;font-size:1rem;color:var(--accent);letter-spacing:.2px}
+  .block h4{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--accent);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .alert-pend{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .alert-ok{background:#1f3d2a;border:1px solid #2f6143;color:#aeeea0;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .timeline{display:grid;grid-template-columns:80px 1fr;gap:14px;margin:14px 0}
+  .timeline .time{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;text-align:center;font-weight:700;color:var(--accent);height:fit-content}
+  .timeline .content{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+  .timeline .content h4{margin:0 0 4px;font-size:.95rem;color:var(--accent)}
+  .roteiro p{margin:.6rem 0}
+  .roteiro .pause{display:inline-block;background:#3b2616;color:#ffd0a8;border-radius:6px;padding:0 8px;margin:0 4px;font-size:.85rem}
+  .roteiro em{color:#ffd0a8;font-style:italic}
+  .ponto-alto{background:linear-gradient(135deg,#1f3d2a,#1a2a3d);border:1px solid #2f6143;border-radius:10px;padding:12px 16px;margin:10px 0}
+  .ponto-alto .label{display:inline-block;background:var(--gold);color:#3a2c00;padding:2px 10px;border-radius:999px;font-size:.78rem;font-weight:700;margin-right:8px}
+  .ponto-alto .src{display:block;color:var(--muted);font-size:.85rem;margin-top:6px}
+  .ilust-card{background:#3a2814;border:1px solid #6c442a;border-radius:10px;padding:12px 16px;margin:10px 0;color:#ffd0a8}
+  .ilust-card strong{color:#fff}
+  .footnote{color:var(--muted);font-size:.85rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media (max-width:900px){
+    .wrap{flex-direction:column}
+    aside{width:100%;position:relative;top:0;margin-bottom:14px}
+    main{margin-left:0}
+  }
+  @media print{
+    body{background:#fff;color:#000}
+    aside{display:none}
+    .block{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    section.tab-content{display:block!important;page-break-after:always}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside>
+  <h3>🎤 Navegação</h3>
+  <nav>
+    <a href="#" data-tab="visao" class="active">📋 Visão geral</a>
+    <a href="#" data-tab="material">📜 Material fonte</a>
+    <a href="#" data-tab="apoio">📚 Material de apoio</a>
+    <a href="#" data-tab="contexto">🏛️ Contexto histórico</a>
+    <a href="#" data-tab="estrutura">⏱️ Estrutura (10 min)</a>
+    <a href="#" data-tab="roteiro">🎭 Roteiro</a>
+    <a href="#" data-tab="pontos">⭐ Pontos altos</a>
+    <a href="#" data-tab="ilustracoes">💡 Ilustrações</a>
+    <a href="#" data-tab="notas">📝 Notas do orador</a>
+  </nav>
+  <div style="margin-top:18px;font-size:.78rem;color:var(--muted);padding:10px;background:var(--panel2);border-radius:8px">
+    <strong>Atalhos:</strong><br>
+    <kbd>Ctrl</kbd>+<kbd>F</kbd> = buscar<br>
+    <kbd>Ctrl</kbd>+<kbd>P</kbd> = imprimir tudo
+  </div>
+</aside>
+
+<main>
+
+<header class="hero">
+  <h1>🎤 Palestra 10 min — Por que alguns figos eram bons e outros eram ruins?</h1>
+  <h2>Tesouros da Palavra de Deus · MWB julho-agosto 2026 · 10–16 de agosto</h2>
+  <p>Prep binder completo: material fonte NWT, material de apoio, contexto histórico, roteiro poético, pontos altos, ilustrações e notas do orador.</p>
+  <div class="meta-row">
+    <span class="pill">📚 NWT (pt-BR)</span>
+    <span class="pill">⏱️ 10 minutos exatos</span>
+    <span class="pill">🎯 3 pontos predefinidos</span>
+    <span class="pill">📖 Material: <em>MWB 202607</em></span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 buscar em todas as abas…">
+</div>
+
+<!-- ========================= VISÃO GERAL ========================= -->
+<section class="tab-content active" id="visao">
+
+<details class="q" open>
+  <summary><strong>📋 Tema da semana — visão geral</strong></summary>
+  <div class="block">
+    <h3>Por que alguns "figos" eram bons e outros eram ruins?</h3>
+    <p>Em Jeremias 24, Jeová mostrou a Jeremias duas cestas de figos diante do Templo: uma de figos muito bons, outra de figos podres. Era uma <em>visão profética</em>, não uma história sobre frutas. Jeová estava ensinando sobre duas classes de judeus no exílio — e, por extensão, sobre duas classes de pessoas hoje.</p>
+    <p><strong>Estrutura da palestra (10 min):</strong></p>
+    <ul>
+      <li><strong>Ponto 1 (~2 min):</strong> Judeus em Babilônia que escutaram a Jeová = figos bons (Jer 24:1, 2, 5–7 + w94 1/3 14 § 6).</li>
+      <li><strong>Ponto 2 (~2 min):</strong> Judeus desobedientes que não se arrependeram = figos ruins (Jer 24:8–10 + w94 1/3 15 § 10 + it "Egito, Egípcio" § 74).</li>
+      <li><strong>Ponto 3 (~4,5 min):</strong> Cristãos hoje podem ser como figos bons se fizerem autoanálise honesta (w13 15/3 10 §§ 10–11).</li>
+      <li><strong>Aplicação (~1 min):</strong> chamada ao coração.</li>
+      <li><strong>Conclusão (~30 s):</strong> imagem-final.</li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Texto-base da palestra</h3>
+    <p><strong>Jeremias 24:7</strong> — <span class="verse-chip base">Jer 24:7</span> "E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração."</p>
+    <p>Este versículo é o coração da palestra. Tudo o mais converge aqui: figos bons = corações que voltam para Jeová; figos ruins = corações que se afastam.</p>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>🎯 Objetivo da palestra</strong></summary>
+  <div class="block">
+    <h3>O que o orador quer que o público sinta/faça</h3>
+    <ol>
+      <li><strong>Sensibilizar</strong> — a metáfora dos figos é simples e memorável. Todos vão lembrar.</li>
+      <li><strong>Convencer</strong> — Jeová leva a sério a postura do nosso coração; ele sabe distinguir figos bons de ruins.</li>
+      <li><strong>Motivar à ação</strong> — a autoanálise é a ferramenta dada por Jeová. Quem ouvir deve sair perguntando: "De qual cesta eu faço parte hoje?"</li>
+      <li><strong>Dar esperança</strong> — mesmo figos em situação difícil podem ser restaurados; Jeová prometeu "plantar" e "edificar" os bons (Jer 24:6).</li>
+    </ol>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>🎨 Tom e estilo</strong></summary>
+  <div class="block">
+    <h3>Recomendações para o orador</h3>
+    <ul>
+      <li><strong>Tom:</strong> poético, com metáforas visuais (figos, cestas, colheita, apodrecimento). Cuidado para não ser excessivamente dramático — manter a dignidade do tema bíblico.</li>
+      <li><strong>Ritmo:</strong> varie entre narração pausada (nos versículos) e explicação clara (no contexto histórico). Use pausas antes de citar Jeremias 24:7.</li>
+      <li><strong>Postura:</strong> aproxime-se do púlpito ao falar sobre autoanálise (Ponto 3); recue ao falar sobre o exílio (Pontos 1–2). Isso cria dinâmica visual sem distração.</li>
+      <li><strong>Contato visual:</strong> ao aplicar a parábola ao cristão de hoje, varra o salão com o olhar. Não fale <em>para</em> a congregação; fale <em>com</em> ela.</li>
+      <li><strong>Não cite nomes</strong> de pessoas da congregação como exemplos de "figos ruins" — use apenas categorias (o jovem que largou a fé, o casal que se acomodou).</li>
+    </ul>
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= MATERIAL FONTE ========================= -->
+<section class="tab-content" id="material">
+
+<details class="q" open>
+  <summary><strong>📜 Texto-base completo — Jeremias 24 (NWT)</strong></summary>
+  <div class="block">
+    <h3>Jeremias 24:1-10 — Visão dos figos</h3>
+    <div class="quote">
+      <span class="verse-chip">Jer 24:1</span> <span class="alert-pend" style="display:inline;padding:2px 8px">texto exato pendente — verificar no JW Library</span>
+      <span class="verse-chip">Jer 24:2</span> "Uma cesta tinha figos muito bons, iguais a figos temporãos, mas a outra cesta tinha figos ruins, tão ruins que nem podiam ser comidos."
+      <span class="verse-chip">Jer 24:3</span> "Então Jeová me perguntou: 'O que você está vendo, Jeremias?' E eu respondi: 'Figos; os figos bons são muito bons, mas os ruins são muito ruins, tão ruins que nem podem ser comidos.'"
+      <span class="verse-chip">Jer 24:4</span> "Então Jeová me mostrou duas cestas de figos postas diante do templo de Jeová, depois de Nabucodonosor, rei de Babilônia, ter levado para o exílio Jeconias, filho de Jeoiaquim e rei de Judá, junto com os príncipes de Judá, os artesãos e os trabalhadores em metal; ele os levou de Jerusalém para Babilônia."
+      <span class="verse-chip">Jer 24:5</span> "'Isto é o que diz Jeová, o Deus de Israel: Assim como esses figos bons, considerarei bons os exilados de Judá, que mandei embora deste lugar para a terra dos caldeus."
+      <span class="verse-chip">Jer 24:6</span> "Manterei meus olhos neles para o seu bem e os farei voltar a esta terra. Vou edificá-los, e não os derrubarei; vou plantá-los, e não os arrancarei."
+      <span class="verse-chip base">Jer 24:7</span> "E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração."
+      <span class="verse-chip">Jer 24:8</span> "'Mas, quanto aos figos ruins, que são tão ruins que nem podem ser comidos, isto é o que diz Jeová: Assim considerarei Zedequias, rei de Judá, seus príncipes, o restante de Jerusalém que sobrou nesta terra e os que foram morar na terra do Egito."
+      <span class="verse-chip">Jer 24:9</span> "Farei deles um motivo de terror e de desgraça para todos os reinos da terra. Eles serão alvo de insultos, assunto de provérbios, motivo de zombaria e exemplo de maldição em todos os lugares por onde eu os espalhar."
+      <span class="verse-chip">Jer 24:10</span> "E vou enviar contra eles a espada, a fome e a peste, até que desapareçam da terra que dei a eles e aos seus antepassados.'"
+      <span class="src">— Tradução do Novo Mundo (cache local JW Library) · v.1 pendente</span>
+    </div>
+    <p class="footnote"><strong>Dica de leitura:</strong> Jeremias 24:7 é o <strong>texto-base</strong> da palestra. Leia com pausa antes e depois; é a única vez em que Jeová descreve a <em>transformação interna</em> que ele produz nos "figos bons".</p>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>📜 Jeremias 25 — Contexto ampliado (NWT)</strong></summary>
+  <div class="block">
+    <h3>Por que o exílio aconteceu? Jeremias 25:1-14</h3>
+    <p>Jeremias 25 é o "capítulo anterior" que dá o contexto. Sem ele, Jeremias 24 pareceria descontextualizado. Use 2-3 versículos para ligar as duas partes:</p>
+    <div class="quote">
+      <span class="verse-chip">Jer 25:1, 3</span> "Isto é o que o profeta Jeremias disse sobre todo o povo de Judá e todos os habitantes de Jerusalém: 'Desde o décimo terceiro ano de Josias, filho de Amom e rei de Judá, até hoje, durante estes 23 anos, eu tenho recebido a palavra de Jeová. Tenho falado com vocês vez após vez, mas vocês não escutam.'"
+      <span class="verse-chip">Jer 25:8, 9</span> "'Portanto, assim diz Jeová dos exércitos: Visto que vocês não obedeceram às minhas palavras, estou convocando todos os povos do norte', diz Jeová, 'estou convocando o meu servo Nabucodonosor, rei de Babilônia, e vou trazê-los contra esta terra [...] Eu os entregarei à destruição e farei deles um motivo de terror, um alvo de assobios e uma ruína permanente.'"
+      <span class="verse-chip">Jer 25:11</span> "E toda esta terra será reduzida a ruínas e se tornará um motivo de terror, e essas nações terão de servir ao rei de Babilônia por 70 anos."
+      <span class="verse-chip">Jer 25:12</span> "'Mas, quando se completarem 70 anos, ajustarei contas com o rei de Babilônia e aquela nação por causa dos seus erros', diz Jeová, 'e farei da terra dos caldeus um deserto desolado para sempre.'"
+      <span class="verse-chip">Jer 25:14</span> "'Pois muitas nações e reis poderosos os escravizarão; eu lhes retribuirei conforme as suas ações e as obras das suas próprias mãos.'"
+      <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+    </div>
+    <p class="footnote"><strong>Dica de uso na palestra:</strong> Jer 25:8, 9 explica <em>por que</em> o exílio aconteceu (desobediência). Jer 24:5-7 mostra <em>quem</em> Jeová protegeu nesse contexto (os que escutaram). A ligação é: correção divina → duas respostas humanas → duas classes diante de Jeová.</p>
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= MATERIAL DE APOIO ========================= -->
+<section class="tab-content" id="apoio">
+
+<details class="q" open>
+  <summary><strong>📚 Material de apoio do outline (apostila)</strong></summary>
+  <div class="block">
+    <p>O outline MWB cita 4 fontes de apoio. Aqui está o status de cada uma:</p>
+
+    <h4>1. w94 1/3 14 § 6 — Sentinela de 1/3/1994, página 14, parágrafo 6</h4>
+    <div class="alert-pend">
+      <strong>Texto exato pendente</strong> — A Sentinela de 1994 não está no cache local do JW Library (somente edições de 2026 cacheadas). Por favor, abra <em>A Sentinela</em> de 1/3/1994 p. 14 § 6 no JW Library e cole aqui. Contexto provável: discussão sobre como os judeus que aceitaram a disciplina divina em Babilônia foram protegidos e até prosperaram.
+    </div>
+
+    <h4>2. w94 1/3 15 § 10 — Sentinela de 1/3/1994, página 15, parágrafo 10</h4>
+    <div class="alert-pend">
+      <strong>Texto exato pendente</strong> — verifique no JW Library. Contexto provável: contraste com os judeus que não se arrependeram — o que aconteceu com eles (incluindo os que fugiram para o Egito).
+    </div>
+
+    <h4>3. it "Egito, Egípcio" § 74 — Insight, verbete "Egito, Egípcio", parágrafo 74</h4>
+    <div class="alert-pend">
+      <strong>Texto exato pendente</strong> — o verbete "Egito, Egípcio" do <em>Insight</em> existe no cache, mas precisa navegar até o § 74. Tema provável: a fuga de judeus para o Egito depois do exílio, e a profecia de Jeremias 44:13 sobre os que foram para lá (Jeremias foi forçado a ir com eles — Jer 43:1-7).
+    </div>
+
+    <h4>4. w13 15/3 10 §§ 10-11 — Sentinela de 15/3/2013, página 10, parágrafos 10-11</h4>
+    <div class="alert-pend">
+      <strong>Texto exato pendente</strong> — A Sentinela de 2013 não está no cache local. Contexto provável: aplicação para cristãos hoje — como fazer uma autoanálise honesta e fazer os ajustes necessários para serem como figos bons diante de Jeová.
+    </div>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>📖 Material complementar — Insight verificado</strong></summary>
+  <div class="block">
+    <h3>Insight, verbete "Sara" (parcialmente relevante como contexto de "coração obediente")</h3>
+    <div class="alert-ok">
+      <strong>Verificado do cache local</strong> — embora o material principal seja sobre Sara, o Insight destaca que "Sara talvez tivesse seus 60 e poucos anos quando partiu de Ur com Abraão" e "Sara tinha prazer em servir a Jeová". Isso reforça a ideia de "coração que volta de todo o coração" — tema de Jeremias 24:7.
+    </div>
+
+    <h3>Insight, verbete "Abraão" — excerto verificado</h3>
+    <p>"Abraão era natural da cidade caldeia de Ur, próspera metrópole situada na terra de Sinear [...]. No tempo de Abraão, a cidade de Ur estava mergulhada na idolatria babilônica e na adoração de seu deus-lua padroeiro, Sin. Todavia, Abraão mostrou ser homem de fé em Jeová Deus."</p>
+    <p><strong>Aplicação cruzada:</strong> Assim como Abraão escolheu Jeová em meio à idolatria, os "figos bons" escolheram Jeová em meio à Babilônia idólatra. A coragem de sair do mundo é o mesmo princípio em ambas as histórias.</p>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>🎯 Por que essas fontes juntas formam o argumento</strong></summary>
+  <div class="block">
+    <h3>Lógica do raciocínio</h3>
+    <ol>
+      <li><strong>Jeremias 24</strong> dá a <em>visão</em> (as duas cestas).</li>
+      <li><strong>Jeremias 25</strong> dá o <em>contexto histórico</em> (por que o exílio).</li>
+      <li><strong>w94 1/3 14 § 6 + 15 § 10</strong> dá a <em>interpretação</em> das duas classes (figos bons vs ruins, incluindo o grupo do Egito).</li>
+      <li><strong>it "Egito, Egípcio" § 74</strong> dá o <em>destino</em> dos que fugiram (espada, fome, peste — Jer 44:13).</li>
+      <li><strong>w13 15/3 10 §§ 10-11</strong> dá a <em>aplicação para cristãos hoje</em> (autoanálise honesta).</li>
+    </ol>
+    <p><strong>O fluxo narrativo é:</strong> visão (Jer 24) → causa (Jer 25) → cumprimento histórico (w94 + it) → lição para nós (w13).</p>
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= CONTEXTO HISTÓRICO ========================= -->
+<section class="tab-content" id="contexto">
+
+<details class="q" open>
+  <summary><strong>🏛️ Contexto histórico — o exílio na Babilônia</strong></summary>
+  <div class="block">
+    <h3>Período: ~617 AEC (exílio) → 539 AEC (queda da Babilônia)</h3>
+    <p><strong>Por que aconteceu:</strong></p>
+    <ul>
+      <li>Judá vinha de séculos de idolatria, apesar dos avisos dos profetas (Jeová "enviava mensageiros vez após vez", Jer 25:4).</li>
+      <li>Reis como Jeoiaquim e Zedequias se aliaram politicamente com Egito e Babilônia, em vez de confiar em Jeová.</li>
+      <li>Jeremias profetizou 23 anos antes da destruição final; o povo não se arrependeu (Jer 25:3).</li>
+    </ul>
+    <p><strong>Como aconteceu:</strong></p>
+    <ul>
+      <li>617 AEC: primeira deportação, incluindo o rei Jeconias, príncipes, artesãos e trabalhadores em metal (Jer 24:1, 4; 2 Reis 24:10-16).</li>
+      <li>586 AEC: destruição completa de Jerusalém e do Templo (2 Reis 25).</li>
+      <li>586+ AEC: o restante que sobrou (liderado por Gedalias) eventualmente fugiu para o Egito por medo (Jer 43:1-7).</li>
+    </ul>
+    <p><strong>O ponto-chave:</strong> o grupo deportado em 617 tinha duas classes:<br>
+    • Os que <em>aceitaram</em> a correção divina e se dispuseram a aprender — foram como figos bons.<br>
+    • Os que <em>recusaram</em> a correção — Zedequias, o restante de Jerusalém, e os fugitivos do Egito — foram como figos ruins.</p>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>🏛️ Babilônia — o que era, o que representava</strong></summary>
+  <div class="block">
+    <h3>A Babilônia no tempo de Jeremias</h3>
+    <p>Babilônia era a maior potência mundial do século VII AEC. Seu império havia se expandido sob Nabucodonosor II (reinou 624-582 AEC), que:</p>
+    <ul>
+      <li>Conquistou a Assíria, o Egito e toda a Mesopotâmia.</li>
+      <li>Construiu os famosos Jardins Suspensos da Babilônia.</li>
+      <li>Dominou Judá por ~70 anos (Jer 25:11).</li>
+    </ul>
+    <p><strong>Spiritualmente:</strong> Babilônia era sinônimo de:</p>
+    <ul>
+      <li>Idolatria organizada (Marduque, deus patrono de Babilônia).</li>
+      <li>Práticas espirituais (astrologia, magia, adivinhação — Is 47:9-13).</li>
+      <li>Materialismo e orgulho (Dn 4:30 — "Esta é a grande Babilônia que eu construí").</li>
+    </ul>
+    <p><strong>O desafio para os exilados:</strong> como manter a adoração pura em meio a essa cultura? <em>Os figos bons escolheram confiar em Jeová; os ruins se misturaram.</em> Esse é o cerne da metáfora de Jeremias 24.</p>
+  </div>
+</details>
+
+<details class="q">
+  <summary><strong>🌍 Paralelo moderno — "Babilônia" hoje</strong></summary>
+  <div class="block">
+    <h3>Aplicação profética — sem exagero</h3>
+    <p>O livro <em>Apocalipse</em> usa "Babilônia" como símbolo do sistema político-religioso atual que está em conflito com Jeová (Ap 17; 18). Assim como os exilados em 617 AEC foram testados — "Você se adapta ao sistema ou mantém sua identidade?", os cristãos hoje enfrentam o mesmo teste.</p>
+    <p><strong>Três perguntas de autoanálise (para a palestra):</strong></p>
+    <ol>
+      <li>Estou aceitando a correção divina (estudo, reunião, disciplina) — ou estou resistindo?</li>
+      <li>Estou buscando refúgio "no Egito" (soluções humanas, materialismo, evasão) — ou em Jeová?</li>
+      <li>Estou produzindo fruto visível, ou estou apenas "ocupando espaço" na congregação?</li>
+    </ol>
+    <p class="footnote">⚠️ Use essas perguntas com <em>discrição</em> e <em>respeito</em>. O objetivo é motivar à autoanálise, não acusar.</p>
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= ESTRUTURA ========================= -->
+<section class="tab-content" id="estrutura">
+
+<details class="q" open>
+  <summary><strong>⏱️ Estrutura detalhada (10 min exatos)</strong></summary>
+  <div class="block">
+
+    <div class="timeline">
+      <div class="time">0:00<br>0:30</div>
+      <div class="content">
+        <h4>Introdução · Cena-gancho (30 s)</h4>
+        <p>Comece com uma imagem visual: "Imagine duas cestas diante do Templo de Jeová. Uma tem figos que brilham de tão doces; a outra tem figos tão podres que ninguém consegue comer. Jeová mostrou isso a Jeremias. Mas ele não estava falando de fruta — estava falando de <em>pessoas</em>."</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">0:30<br>2:30</div>
+      <div class="content">
+        <h4>Ponto 1 · Figos bons (2 min)</h4>
+        <p>Cite Jer 24:5-7. Mostre que os exilados em Babilônia que escutaram a Jeová foram protegidos — "Manterei meus olhos neles para o seu bem." A promessa de um <em>coração capaz de conhecer a Jeová</em> é o ponto alto. <em>Material de apoio: w94 1/3 14 § 6 (pendente)</em>.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">2:30<br>4:00</div>
+      <div class="content">
+        <h4>Ponto 2 · Figos ruins (1,5 min)</h4>
+        <p>Cite Jer 24:8-10. Três grupos foram como figos ruins: Zedequias, o restante de Jerusalém, e os fugitivos do Egito. Jeová sabia quem estava fugindo (Jer 43:1-7) e quem ficaria firme. O destino dos fugitivos é triste — espada, fome, peste. <em>Material de apoio: w94 1/3 15 § 10 + it "Egito, Egípcio" § 74 (pendentes)</em>.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">4:00<br>8:30</div>
+      <div class="content">
+        <h4>Ponto 3 · Aplicação cristã (4,5 min) — texto-base</h4>
+        <p>Esta é a parte mais longa. A pergunta: <em>"E hoje? De qual cesta você faz parte?"</em> Use w13 15/3 10 §§ 10-11 (pendente) sobre autoanálise honesta. Sugestão de estrutura:</p>
+        <ul>
+          <li>(4:00-5:00) Três sinais de "figo podre" — frieza espiritual, justificativa para desobediências, orgulho.</li>
+          <li>(5:00-6:30) Cinco passos de autoanálise honesta — oração, estudo, exortação fraternal, escuta dos anciãos, ação concreta.</li>
+          <li>(6:30-7:30) Re-leitura de Jer 24:6, 7 — "edificar", "plantar", "dar coração" — como Jeová restaura quem se arrepende.</li>
+          <li>(7:30-8:30) Imagem do figo temporão — figos bons são os primeiros da colheita. Hoje, os que respondem com prontidão recebem bênção dupla.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">8:30<br>9:30</div>
+      <div class="content">
+        <h4>Aplicação direta (1 min)</h4>
+        <p>"De qual cesta você está hoje? A boa notícia: Jeová pode mover figos podres de volta para o cesto dos bons — basta pedir com coração sincero. Mas só se o figo quiser ser mudado."</p>
+        <p>Pausa dramática. Olhar para a congregação.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">9:30<br>10:00</div>
+      <div class="content">
+        <h4>Conclusão · Imagem-final (30 s)</h4>
+        <p>Volte à imagem inicial: duas cestas diante do Templo. Termine com Jer 24:7 — <em>"pois eles voltarão a mim de todo o coração."</em></p>
+        <p>Amém.</p>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= ROTEIRO ========================= -->
+<section class="tab-content" id="roteiro roteiro">
+
+<details class="q" open>
+  <summary><strong>🎭 Roteiro proposto — tom poético/surreal com metáforas</strong></summary>
+  <div class="block">
+    <h3>Proposta de roteiro — adapte à sua voz</h3>
+    <p class="footnote"><em>Este é um roteiro sugerido, não uma transcrição para decorar. Adapte conforme seu estilo, mantenha os pontos bíblicos obrigatórios (Jer 24:1, 2, 5-10 + Jer 24:7).</em></p>
+
+    <div class="timeline">
+      <div class="time">[0:00]</div>
+      <div class="content roteiro">
+        <p><em>(Tom de voz baixo, íntimo, como se estivesse contando uma história à noite.)</em></p>
+        <p>Imagine, por um momento, que estamos no ano 617 antes de Cristo. O Templo de Jeová ainda está de pé. Mas lá dentro — diante do altar — algo estranho aconteceu.</p>
+        <p>Jeová mostrou a Jeremias <span class="pause">[pausa]</span> duas cestas. <span class="pause">[pausa]</span></p>
+        <p>Uma tinha <em>figos que brilhavam</em>. Eram os primeiros da colheita, os figos temporãos. Doces, dourados, suculentos. Tão bons que até o aroma perfumava o Templo.</p>
+        <p>A outra tinha <em>figos podres</em>. Tão ruins que ninguém conseguia comer. Não eram apenas "maduros demais" — eram <em>destruídos por dentro</em>. <span class="verse-chip">Jer 24:2</span></p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[0:30]</div>
+      <div class="content roteiro">
+        <p><em>(Pausa. Mudança de tom — agora didático.)</em></p>
+        <p>Jeová então perguntou a Jeremias: <em>"O que você está vendo?"</em> E Jeremias respondeu: <em>"Figos."</em></p>
+        <p>E aí vem a chave. Jeová <em>nunca</em> estava falando de fruta. Ele estava falando de <em>pessoas</em>.</p>
+        <p><span class="verse-chip">Jer 24:5-7</span> — <em>"Assim como esses figos bons, considerarei bons os exilados de Judá, que mandei embora deste lugar para a terra dos caldeus. Manterei meus olhos neles para o seu bem [...] vou dar-lhes um coração capaz de me conhecer."</em></p>
+        <p><strong>Os figos bons</strong> eram os judeus que <em>aceitaram a correção</em>. Nabucodonosor os havia arrancado de Jerusalém, sim — mas eles <em>não resistiram</em> à disciplina. Aprenderam em Babilônia. E Jeová prometeu: <em>"Eu vou plantá-los, não arrancá-los."</em></p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[2:30]</div>
+      <div class="content roteiro">
+        <p>Mas a outra cesta... <span class="verse-chip">Jer 24:8-10</span></p>
+        <p><em>(Tom mais grave, como se estivesse lendo uma sentença.)</em></p>
+        <p><em>"Mas, quanto aos figos ruins, que são tão ruins que nem podem ser comidos, isto é o que diz Jeová: Assim considerarei Zedequias, rei de Judá, seus príncipes, o restante de Jerusalém que sobrou nesta terra e os que foram morar na terra do Egito."</em></p>
+        <p>Tres grupos. Zedequias, o rei fraco que tentou enganar Nabucodonosor. Os príncipes que o seguiram. E os que <em>fugiram para o Egito</em> — buscaram refúgio onde Jeová não estava.</p>
+        <p>E Jeová disse: <em>"Farei deles motivo de terror. Espada, fome, peste."</em></p>
+        <p>Por que? Porque eles se recusaram a voltar para Jeová de <em>todo o coração</em>.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[4:00]</div>
+      <div class="content roteiro">
+        <p><em>(Mudança de tom — agora direto, próximo.)</em></p>
+        <p>Agora, irmãos, a pergunta que eu quero fazer hoje é esta: <span class="pause">[pausa]</span> <em>"E nós?"</em></p>
+        <p>O mundo em que vivemos hoje é a Babilônia moderna. Não literalmente, mas em espírito. O sistema de coisas atual — político, comercial, moral — está em conflito com Jeová. E nós somos os <em>exilados</em>. Não por castigo, mas por escolha.</p>
+        <p>Agora pense: <em>de qual cesta você faz parte?</em></p>
+        <p>Os figos bons não são perfeitos. Não são "santos" no sentido humano. São pessoas que, <em>quando corrigidas</em>, ajustam-se. Quando erradas, reconhecem. Quando tentadas, voltam para Jeová.</p>
+        <p>Os figos ruins são pessoas que <em>resistem</em> à correção. Que justificam. Que se apegam a algo do mundo em vez de se apegarem a Jeová. E gradualmente, sem perceber, apodrecem por dentro. <span class="verse-chip">Jer 24:8</span> — <em>"tão ruins que nem podem ser comidos."</em></p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[6:00]</div>
+      <div class="content roteiro">
+        <p>Mas há esperança. <em>(Pausa. Sorriso leve.)</em></p>
+        <p>Jeová é o <em>agricultor</em> dessa metáfora. Ele não destruiu a cesta dos figos ruins — ele a <em>deixou diante do Templo</em> como lembrete. E prometeu: <em>"Vou dar-lhes um coração capaz de me conhecer."</em> <span class="verse-chip">Jer 24:7</span></p>
+        <p>Isso é uma promessa <em>pessoal</em>. Não é só para os exilados antigos. É para cada um de nós, hoje. Se o nosso figo está podre, <em>Jeová pode restaurá-lo</em>. Mas só se quisermos.</p>
+        <p>O primeiro passo é o que a Bíblia chama de <em>autoanálise honesta</em>. Examinar nosso coração. Confrontar nossos motivos. Perguntar: "Estou aceitando a correção ou estou fugindo para o Egito?"</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[8:00]</div>
+      <div class="content roteiro">
+        <p><em>(Tom conclusivo, caloroso.)</em></p>
+        <p>Os figos temporãos — os primeiros da colheita — eram os mais apreciados. Eles representam os que <em>respondem com prontidão</em>. Os que, ao primeiro chamado, ajustam-se.</p>
+        <p>Hoje, Jeová está chamando. Não por causa de um julgamento imediato, mas porque ele nos ama. E ele quer <em>plantar</em> e <em>edificar</em> — não arrancar. <span class="verse-chip">Jer 24:6</span></p>
+        <p>De qual cesta você faz parte hoje? Não da semana passada — <em>hoje</em>. E se precisar mudar de cesta, lembre-se: a mão do oleiro está pronta. Ele só precisa que você <em>não resista</em>. <span class="verse-chip">Jer 24:7</span></p>
+        <p>Vamos viver de modo a sermos <em>figos bons</em>. Não por mérito, mas por gratidão ao Deus que nos conhece pelo nome.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="time">[9:30]</div>
+      <div class="content roteiro">
+        <p><em>(Fechar com Jer 24:7 — pausado, solene.)</em></p>
+        <p><em>"E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração."</em></p>
+        <p>Amém.</p>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= PONTOS ALTOS ========================= -->
+<section class="tab-content" id="pontos">
+
+<details class="q" open>
+  <summary><strong>⭐ 10 pontos altos para a palestra</strong></summary>
+  <div class="block">
+    <p>Cada ponto alto é uma "âncora" que o orador pode repetir, ou que a congregação deve lembrar ao sair.</p>
+
+    <div class="ponto-alto">
+      <span class="label">PA 1</span>
+      "Jeová nunca está falando de fruta — está falando de pessoas."
+      <div class="src">— Introdução (Jer 24:2-3)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 2</span>
+      "Figos bons não são perfeitos — são ajustáveis."
+      <div class="src">— Ponto 1 (Jer 24:5-7)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 3</span>
+      "A correção divina é como o vento: ou curva a árvore ou a quebra. Os figos bons escolheram curvar-se."
+      <div class="src">— Ponto 1 (ilustração livre, ancorada em Jer 24:6)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 4</span>
+      "O Egito representou refúgio onde Jeová não estava. Fugi para ele hoje? Onde está seu refúgio?"
+      <div class="src">— Ponto 2 (Jer 24:8 + Jer 43:1-7)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 5</span>
+      "Figos podres são podres <em>por dentro</em>. Externamente podem parecer normais."
+      <div class="src">— Ponto 2 (Jer 24:8)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 6</span>
+      "Autoanálise honesta não é autopunição — é autocuidado à luz da Palavra."
+      <div class="src">— Ponto 3 (w13 15/3 10 §§ 10-11)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 7</span>
+      "Jeová prometeu <em>plantar</em> e <em>edificar</em> os bons, não arrancá-los. Essa é Sua postura para com você."
+      <div class="src">— Ponto 3 (Jer 24:6)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 8</span>
+      "Figos temporãos eram os primeiros da colheita — quem responde com prontidão recebe bênção dupla."
+      <div class="src">— Ponto 3 (Jer 24:2 + reflexão)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 9</span>
+      "Jeová não destruiu a cesta dos ruins — deixou-a diante do Templo como lembrete. Ele ainda espera."
+      <div class="src">— Conclusão (reflexão sobre Jer 24:8-10)</div>
+    </div>
+
+    <div class="ponto-alto">
+      <span class="label">PA 10</span>
+      "De todo o coração. Essa é a medida de Jeová. Não metade. Não um quarto. <em>Todo</em>."
+      <div class="src">— Conclusão (Jer 24:7)</div>
+    </div>
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= ILUSTRAÇÕES ========================= -->
+<section class="tab-content" id="ilustracoes">
+
+<details class="q" open>
+  <summary><strong>💡 Ilustrações e comparações visuais</strong></summary>
+  <div class="block">
+
+    <div class="ilust-card">
+      <strong>Ilustração 1 · O oleiro e o barro (clássica)</strong><br>
+      Relembre Jeremias 18:1-6. Jeová é o oleiro. Nós somos o barro. O barro que resiste vira <em>vaso estragado</em>; o que cede vira <em>vaso útil</em>. Os figos bons foram barro que cedeu; os ruins foram barro que resistiu. <em>Use apenas se tiver tempo extra; senão mantenha a metáfora dos figos.</em>
+    </div>
+
+    <div class="ilust-card">
+      <strong>Ilustração 2 · O vento e a árvore</strong><br>
+      Quando o vento forte vem, a árvore pode quebrar ou curvar-se. Curvar-se não é fraqueza — é <em>sabedoria</em>. O figo bom curvou-se diante da correção; o ruim preferiu quebrar. <em>Excelente para abrir o Ponto 3 — visual e universal.</em>
+    </div>
+
+    <div class="ilust-card">
+      <strong>Ilustração 3 · A fruta escondida</strong><br>
+      Às vezes um figo parece bom por fora, mas quando você abre, está cheio de bichinhos. O figo ruim de Jeremias 24 talvez fosse assim — aparentemente judeu, mas podre por dentro. Hoje, a aparência de "espiritualidade" não basta — o que importa é o <em>interior</em>.
+    </div>
+
+    <div class="ilust-card">
+      <strong>Ilustração 4 · A colheita do tempo certo</strong><br>
+      Figos temporãos são colhidos cedo — são <em>apreciados</em> porque vieram antes. Quem responde com prontidão é como figo temporão — recebe atenção especial de Jeová. <em>Use no Ponto 3 para dar esperança a quem está começando.</em>
+    </div>
+
+    <div class="ilust-card">
+      <strong>Ilustração 5 · O cesto diante do Templo</strong><br>
+      Jeová <em>não escondeu</em> a cesta dos ruins. Deixou-a diante do Templo — lugar da presença Dele. Isso significa: mesmo os figos ruins estão sob a supervisão de Jeová. Ele viu, e ainda vê. Não há esconderijo.
+    </div>
+
+    <div class="ilust-card">
+      <strong>Ilustração 6 · A ferrugem e o cobre</strong><br>
+      Imagine duas peças de metal idênticas, guardadas em lugar úmido. Depois de um mês, uma está coberta de ferrugem; a outra brilha. A diferença? Uma foi limpa e protegida; a outra ficou exposta. O cristão exposto ao mundo "sem proteção" — oração, estudo, reunião — cria ferrugem.
+    </div>
+
+  </div>
+</details>
+
+</section>
+
+<!-- ========================= NOTAS DO ORADOR ========================= -->
+<section class="tab-content" id="notas">
+
+<details class="q" open>
+  <summary><strong>📝 Notas do orador — o que fazer e o que NÃO fazer</strong></summary>
+  <div class="block">
+    <h3>✅ O que fazer</h3>
+    <ol>
+      <li><strong>Verificar todo o material de apoio</strong> no JW Library ANTES da reunião. w94 e w13 são fontes centrais — sem elas, a palestra fica frágil.</li>
+      <li><strong>Praticar o roteiro em voz alta</strong> pelo menos 3 vezes. Cronometre — 10 min é apertado.</li>
+      <li><strong>Preparar pausas</strong> nos momentos-chave: após Jer 24:7; após "de qual cesta você faz parte hoje?"</li>
+      <li><strong>Levar marcadores</strong> (cores diferentes) para destacar Jer 24:7 na Bíblia física — esse versículo é o texto-base.</li>
+      <li><strong>Ter uma versão escrita</strong> do it "Egito, Egípcio" § 74 impressa, caso o ancião peça para comentar.</li>
+      <li><strong>Manter contato visual</strong> especialmente no Ponto 3 — é o coração da palestra.</li>
+      <li><strong>Respirar antes do "Amém"</strong> — silêncio final é tão poderoso quanto a última frase.</li>
+    </ol>
+  </div>
+
+  <div class="block">
+    <h3>🚫 O que NÃO fazer</h3>
+    <ol>
+      <li><strong>Não culpar ninguém nominalmente</strong> — "o irmão que abandonou o serviço" pode ser alguém presente. Use categorias, não nomes.</li>
+      <li><strong>Não fazer da palestra um sermão moralista</strong> — mantenha o foco em Jeová como agente, não na congregação como ré.</li>
+      <li><strong>Não apressar Jer 24:7</strong> — esse versículo precisa de tempo. O texto-base merece leitura pausada.</li>
+      <li><strong>Não improvisar fatos históricos</strong> — se não sabe uma data ou nome, omita. Melhor ser conciso do que errado.</li>
+      <li><strong>Não usar gírias modernas</strong> — "ficar na friend zone de Jeová", "ser cancelado por Deus" — essas expressões diminuem a seriedade do tema.</li>
+      <li><strong>Não fechar abruptamente</strong> — termine com Jer 24:7 citado de novo, não com "então é isso".</li>
+      <li><strong>Não exceder 10 minutos</strong> — pular a aplicação se estiver atrasado. Roteiro é bússola, não algemas.</li>
+    </ol>
+  </div>
+
+  <div class="block">
+    <h3>📚 Versículos complementares (para consulta)</h3>
+    <ul>
+      <li><span class="verse-chip">Jer 18:1-6</span> — O oleiro e o barro (autoanálise).</li>
+      <li><span class="verse-chip">Sl 139:23, 24</span> — "Examina-me, ó Deus."</li>
+      <li><span class="verse-chip">2 Co 13:5</span> — "Examinem-se a si mesmos."</li>
+      <li><span class="verse-chip">Mt 3:8, 10</span> — Produzir fruto.</li>
+      <li><span class="verse-chip">Ap 2:5</span> — "Lembre-se e se arrependa."</li>
+      <li><span class="verse-chip">Hb 12:5-11</span> — A disciplina de Jeová como prova de amor.</li>
+      <li><span class="verse-chip">Ap 3:15, 16</span> — "Quero que sejas frio ou quente" — figo morno é pior que figo frio.</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h3>⚠️ Checklist final antes de subir ao púlpito</h3>
+    <ul>
+      <li>☐ Bíblia aberta em Jeremias 24 (com Jer 24:7 marcado).</li>
+      <li>☐ Notas do roteiro impressas (uma folha).</li>
+      <li>☐ Cronômetro zerado.</li>
+      <li>☐ Versículos complementares em folha auxiliar (caso queira mencionar).</li>
+      <li>☐ Garrafa d'água (10 min sem parar).</li>
+      <li>☐ Material de apoio <em>disponível</em> (mesmo sem citar): w94, w13, it.</li>
+    </ul>
+  </div>
+</details>
+
+</section>
+
+<footer>
+  📚 Prep binder preparado por Hermes Agent para a palestra <em>"Por que alguns figos eram bons e outros eram ruins?"</em>.<br>
+  🎤 Estrutura baseada no padrão de 10 min do MWB (3 pontos predefinidos + texto-base).<br>
+  🔗 Versículos NWT extraídos do cache local do JW Library. Material de apoio de Sentinelas antigas marcado como <em>"pendente"</em>.<br>
+  ✏️ Roteiro é uma <em>proposta</em> — adapte à sua voz. Tom poético com metáforas (preferência do orador).<br>
+  Aperte <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir todas as abas.
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  // Tab switching
+  const tabs=document.querySelectorAll('aside nav a');
+  const contents=document.querySelectorAll('section.tab-content');
+  function activate(tab){
+    tabs.forEach(t=>t.classList.remove('active'));
+    contents.forEach(c=>c.classList.remove('active'));
+    const target=document.querySelector(`[data-tab="${tab}"]`);
+    if(target)target.classList.add('active');
+    const sec=document.getElementById(tab);
+    if(sec)sec.classList.add('active');
+  }
+  tabs.forEach(t=>t.addEventListener('click',e=>{
+    e.preventDefault();
+    activate(t.dataset.tab);
+  }));
+
+  // Search
+  const inp=document.getElementById('search');
+  inp.addEventListener('input',()=>{
+    const q=inp.value.toLowerCase().trim();
+    document.querySelectorAll('section.tab-content').forEach(sec=>{
+      sec.querySelectorAll('details.q').forEach(d=>{
+        const text=d.textContent.toLowerCase();
+        d.style.display=(!q||text.includes(q))?'':'none';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

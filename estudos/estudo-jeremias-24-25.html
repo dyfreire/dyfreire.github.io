@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estudo — Jeremias 24-25 · 10-16 de agosto 2026</title>
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#152139,#101a2a);border:1px solid var(--line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--accent);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--accent)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--accent)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--accent);color:#07223a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--accent)}
+  .toc a .num{color:var(--accent);font-weight:700;margin-right:6px}
+  details.q{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.q[open]{box-shadow:0 0 0 1px #2a3c5a inset}
+  details.q>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.q>summary::-webkit-details-marker{display:none}
+  .q-num{min-width:40px;height:40px;background:var(--panel2);border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem}
+  .q-num.high{background:var(--gold);color:#3a2c00;border-color:var(--gold)}
+  .q-title{flex:1;font-weight:600;font-size:1rem}
+  .q-status{font-size:.8rem;color:var(--muted)}
+  .q-status.answered{color:var(--accent2)}
+  .q-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--accent);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.45rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--accent);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .footnote{color:var(--muted);font-size:.85rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--accent)}
+  .sources{margin-top:8px}
+  .sources li{margin-bottom:4px}
+  .alert-warn{background:#3b2616;border:1px solid #6c442a;color:#ffd0a8;padding:12px;border-radius:10px;margin:10px 0}
+  .alert-pend{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .top-tag{display:inline-block;background:#1f3d2a;border:1px solid #2f6143;color:#aeeea0;padding:3px 10px;border-radius:999px;font-size:.78rem;margin-right:6px;font-weight:600}
+  .ministerio-tag{display:inline-block;background:#3a2814;border:1px solid #6c442a;color:#ffd0a8;padding:3px 10px;border-radius:999px;font-size:.78rem;margin-right:6px;font-weight:600}
+  .preg-tag{display:inline-block;background:#2a1f3d;border:1px solid #4a3a6c;color:#d0c0ff;padding:3px 10px;border-radius:999px;font-size:.78rem;margin-right:6px;font-weight:600}
+  .dia-tag{display:inline-block;background:#1f2d3d;border:1px solid #3a6080;color:#a0d0ff;padding:3px 10px;border-radius:999px;font-size:.78rem;margin-right:6px;font-weight:600}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.q{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>📖 Estudo da Semana — Jeremias 24–25</h1>
+  <h2>Vida e Ministério · Apostila Julho–Agosto 2026 · 10–16 de agosto</h2>
+  <p>Cântico <strong>124</strong> · Tesouros da Palavra de Deus (10+10+4 min) · Faça seu Melhor no Ministério (4+4+4 min) · Estudo de Congregação: <strong>wcg cap. 3 — Sara</strong></p>
+  <div class="meta-row">
+    <span class="pill">📚 NWT (pt-BR)</span>
+    <span class="pill">📖 Material fonte: MWB 202607</span>
+    <span class="pill">🎯 Pontos altos marcados</span>
+    <span class="pill">✅ Marque as respondidas (localStorage)</span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 filtrar por palavra-chave…">
+  <button data-filter="all" class="pill on" id="statusAll">Tudo</button>
+  <button data-filter="pending" class="pill" id="statusPending">Só pendentes</button>
+  <button data-filter="done" class="pill" id="statusDone">Só respondidas</button>
+  <span id="count" class="pill"></span>
+</div>
+
+<nav class="toc" aria-label="Índice das perguntas">
+  <a href="#q1"><span class="num">1</span>Ponto 1 · Figos bons (Jer 24:1, 2, 5–7)</a>
+  <a href="#q2"><span class="num">2</span>Ponto 1 · Figos ruins (Jer 24:8–10)</a>
+  <a href="#q3"><span class="num">3</span>Ponto 1 · Cristãos como figos bons (autoanálise)</a>
+  <a href="#q4"><span class="num">4</span>Ponto 2 · Joia espiritual: Nabucodonosor servo?</a>
+  <a href="#q5"><span class="num">5</span>Ponto 2 · Por que Jeová puniu Babilônia?</a>
+  <a href="#q6"><span class="num">6</span>Ponto 3 · Leitura: Jeremias 24:1–10</a>
+  <a href="#q7"><span class="num">7</span>Ministério · Iniciando conversas</a>
+  <a href="#q8"><span class="num">8</span>Ministério · Cultivando interesse</a>
+  <a href="#q9"><span class="num">9</span>Ministério · Encorajando estudante da Bíblia</a>
+</nav>
+
+<div id="questions">
+
+<!-- ========================= Q1 — FIGOS BONS ========================= -->
+<details class="q" id="q1" open>
+  <summary>
+    <span class="q-num">1</span>
+    <span>
+      <span class="q-title"><span class="top-tag">Ponto alto</span>Por que os judeus que foram para o exílio eram como figos bons?</span>
+      <div class="q-status" data-status>(Jeremias 24:1, 2, 5–7)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q1">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 24:2</span> Uma cesta tinha figos muito bons, iguais a figos temporãos, mas a outra cesta tinha figos muito ruins, tão ruins que nem podiam ser comidos.
+        <span class="verse-chip">Jer 24:5</span> "Assim como esses figos bons, considerarei bons os exilados de Judá, que mandei embora deste lugar para a terra dos caldeus.
+        <span class="verse-chip">Jer 24:6</span> Manterei meus olhos neles para o seu bem e os farei voltar a esta terra. Vou edificá-los, e não os derrubarei; vou plantá-los, e não os arrancarei.
+        <span class="verse-chip">Jer 24:7</span> E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração.
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+      <p class="footnote"><strong>Contexto histórico:</strong> visão recebida por Jeremias "depois de Nabucodonosor ter levado para o exílio Jeconias [...] junto com os príncipes de Judá, os artesãos e os trabalhadores em metal" (Jer 24:1 — <span class="alert-pend" style="display:inline;padding:2px 8px">texto exato pendente — verificar no JW Library; v.1 não consta do cache da NWT Study Edition pt-BR</span>). O grupo do exílio incluía os que foram deportados em 617 AEC.</p>
+    </div>
+
+    <div class="block">
+      <h4>2. Material de apoio · w94 1/3 14 § 6</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — a Sentinela de 1/3 de 1994 não está no cache local (somente edições de 2026 estão). Por favor, abra a w94 1/3 página 14 § 6 no JW Library e cole o parágrafo aqui. Enquanto isso, o contexto que o outline fornece: os judeus que aceitaram a disciplina divina foram como figos bons.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>3. Ponto alto — por que foram "bons"?</h4>
+      <p>Os figos <em>temporãos</em> (Jer 24:2) eram os primeiros da colheita, muito apreciados. Do mesmo modo, Jeová viu os exilados como preciosos porque:</p>
+      <ol>
+        <li><strong>Aceitaram a correção divina</strong> — não resistiram ao julgamento, mas foram "como o barro nas mãos do oleiro" (Jer 18:6).</li>
+        <li><strong>Estavam dispostos a aprender</strong> — Jeová prometeu dar-lhes "um coração capaz de me conhecer" (v.7), o que indica que eles eram receptivos.</li>
+        <li><strong>Jeová prometeu restaurá-los</strong> — "Manterei meus olhos neles para o seu bem e os farei voltar" (v.6). Seriam edificados, não arrancados.</li>
+      </ol>
+      <p>Aqui vemos um princípio importante: <em>não é a situação que determina o valor diante de Deus, mas a atitude do coração diante da correção</em>.</p>
+    </div>
+
+    <div class="block">
+      <h4>4. Aplicação para a pregação 🎤</h4>
+      <p class="preg-tag">Pregação</p>
+      <p>Quando alguém mostra resistência à mensagem do Reino, em vez de desistir, podemos destacar como Jeová viu com bons olhos aqueles que <em>aceitaram</em> a disciplina. A atitude de humildade — como a dos exilados — é exatamente o que abre o coração para a verdade. Isso encoraja a pessoa a refletir sobre o que a está impedindo de aceitar a mensagem.</p>
+    </div>
+
+    <div class="block">
+      <h4>5. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Quando passamos por uma prova — perda, correção, mudança inesperada — a pergunta certa não é "por que comigo?", mas "que atitude Jeová quer que eu tenha agora?". O segredo dos "figos bons" foi justamente aceitar a mão do oleiro e deixar-se moldar.</p>
+    </div>
+
+    <div class="block">
+      <h4>6. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">Jer 18:1-6</span> — O oleiro e o barro (disposição para ser remodelado).</li>
+        <li><span class="verse-chip">Jer 29:10-14</span> — A restauração depois dos 70 anos (conexão direta com Jer 25).</li>
+        <li><span class="verse-chip">2 Cr 36:15, 16</span> — Jeová "enviava mensageiros vez após vez" — os exilados foram sensíveis a isso.</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q2 — FIGOS RUINS ========================= -->
+<details class="q" id="q2">
+  <summary>
+    <span class="q-num">2</span>
+    <span>
+      <span class="q-title"><span class="top-tag">Ponto alto</span>Por que os judeus desobedientes eram como figos ruins?</span>
+      <div class="q-status" data-status>(Jeremias 24:8–10)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q2">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 24:8</span> "Mas, quanto aos figos ruins, que são tão ruins que nem podem ser comidos, isto é o que diz Jeová: 'Assim considerarei Zedequias, rei de Judá, seus príncipes, o restante de Jerusalém que sobrou nesta terra e os que foram morar na terra do Egito.
+        <span class="verse-chip">Jer 24:9</span> Farei deles um motivo de terror e de desgraça para todos os reinos da terra. Eles serão alvo de insultos, assunto de provérbios, motivo de zombaria e exemplo de maldição em todos os lugares por onde eu os espalhar.
+        <span class="verse-chip">Jer 24:10</span> E vou enviar contra eles a espada, a fome e a peste, até que desapareçam da terra que dei a eles e aos seus antepassados.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>2. Material de apoio · w94 1/3 15 § 10 · it "Egito, Egípcio" § 74</h4>
+      <div class="alert-pend">
+        <strong>w94 1/3 15 § 10 — texto pendente</strong> (Sentinela de 1994 não cacheada).
+        <br><br>
+        <strong>it "Egito, Egípcio" § 74 — texto verificado do Insight (verbete "Egito, Egípcio"):</strong> alguns judeus, depois do exílio, fugiram para o Egito em vez de aceitar a disciplina de Jeová em Babilônia. O insight explica que esse grupo incluía Jeremias (forçado a ir com eles — Jer 43:1-7). Jeová declarou que aqueles que foram para o Egito experimentariam a espada, a fome e a peste (Jer 44:13).
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>3. Ponto alto — por que foram "ruins"?</h4>
+      <p>Jeremias identifica três grupos como figos ruins:</p>
+      <ol>
+        <li><strong>Zedequias e seus príncipes</strong> — o rei que liderou a rebelião final contra a Babilônia (2 Cr 36:13).</li>
+        <li><strong>O restante de Jerusalém que sobrou</strong> — os que ficaram na terra depois da deportação.</li>
+        <li><strong>Os que foram morar na terra do Egito</strong> — fugitivos que preferiram confiar no Egito em vez de aceitar a disciplina em Babilônia.</li>
+      </ol>
+      <p>Note o que tinham em comum: <em>recusaram a correção divina</em>. Os figos ruins eram "tão ruins que nem podiam ser comidos" (v.2, 8) — isto é, inúteis, descartáveis, sem proveito.</p>
+      <p><strong>Lição:</strong> Jeová não pune por prazer, mas porque precisa haver consequências firmes para que a injustiça não prevaleça. A rejeição deliberada traz consequência segura.</p>
+    </div>
+
+    <div class="block">
+      <h4>4. Aplicação para a pregação 🎤</h4>
+      <p class="preg-tag">Pregação</p>
+      <p>Quando alguém diz "eu creio em Deus mas não preciso seguir nenhuma orientação específica", podemos lembrar que a recusa deliberada à direção de Jeová tem consequência. Não é ameaça, é princípio: <em>um coração endurecido não produz fruto</em>. A parábola dos figos mostra que Jeová sabe distinguir — e age conforme.</p>
+    </div>
+
+    <div class="block">
+      <h4>5. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Pequenas desobediências deliberadas se acumulam como figos podres numa cesta — podem não ser percebidas de imediato, mas tornam a pessoa "tão ruim que não pode ser comida" (inútil para os propósitos de Jeová). A pergunta que cada cristão deve fazer regularmente: <em>"Estou cultivando figos bons, ou deixando apodrecer os bons que recebi?"</em></p>
+    </div>
+
+    <div class="block">
+      <h4>6. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">Jer 43:1-7</span> — A fuga forçada para o Egito.</li>
+        <li><span class="verse-chip">Jer 44:13</span> — Espada, fome e peste sobre os que foram para o Egito.</li>
+        <li><span class="verse-chip">Mt 3:8, 10</span> — "Produzam fruto que mostre o arrependimento" — figos que não produzem fruto são cortados.</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q3 — AUTOANÁLISE ========================= -->
+<details class="q" id="q3">
+  <summary>
+    <span class="q-num">3</span>
+    <span>
+      <span class="q-title"><span class="top-tag">Ponto alto</span>Como os cristãos hoje podem ser como figos bons?</span>
+      <div class="q-status" data-status>(w13 15/3 10 §§ 10-11)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q3">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Material de apoio · w13 15/3 10 §§ 10-11</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — Sentinela de 2013 não cacheada (somente w_T_2026xx). Por favor, abra w13 15/3 página 10 §§ 10-11 no JW Library e cole os parágrafos aqui.
+        <br><br>
+        <em>Contexto do outline:</em> o artigo mostra como os cristãos podem avaliar-se honestamente — fazer uma autoanálise cuidadosa e fazer os ajustes necessários para serem como figos bons diante de Jeová.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>2. Ponto alto — autoanálise honesta</h2>
+      <p>A visão de Jeremias continua viva hoje. Jeová continua examinando o fruto que produzimos. Como fazer uma autoanálise honesta?</p>
+      <ol>
+        <li><strong>Examinar os motivos</strong> — faço as coisas para ser visto pelos homens ou para agradar a Jeová? (Mt 6:1-6).</li>
+        <li><strong>Confrontar os pensamentos</strong> — há ressentimento, orgulho, desejos impróprios? (Sl 139:23, 24).</li>
+        <li><strong>Verificar as ações</strong> — minha rotina de estudo, oração, reuniões, serviço está produzindo fruto? (Jo 15:8).</li>
+        <li><strong>Aceitar a correção dos anciãos</strong> — eles são como Jeová com os figos bons, que mantém "meus olhos neles para o seu bem" (Jer 24:6).</li>
+        <li><strong>Fazer ajustes sem demora</strong> — não esperar a "cesta podre" ficar evidente.</li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h4>3. Aplicação para a pregação 🎤</h4>
+      <p class="preg-tag">Pregação</p>
+      <p>A ilustração dos figos pode abrir conversas profundas: <em>"Você já parou para pensar em qual cesta estaria hoje? O que te impede de produzir o melhor fruto?"</em> É uma abordagem que não condena, mas convida à reflexão honesta. Ao mesmo tempo, mostra que Jeová conhece cada um de nós individualmente.</p>
+    </div>
+
+    <div class="block">
+      <h4>4. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Reserve um momento por mês para uma "revisão dos figos":</p>
+      <ul>
+        <li>Reli os princípios bíblicos sobre os quais tropecei?</li>
+        <li>Ajustei o que precisava ser ajustado?</li>
+        <li>Estou produzindo fruto visível (no caráter, na família, no serviço)?</li>
+      </ul>
+      <p><em>Dica prática:</em> use a revisão da reunião do meio de semana como ferramenta. As partes designadas geralmente cobrem áreas onde precisamos crescer.</p>
+    </div>
+
+    <div class="block">
+      <h4>5. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">Sl 139:23, 24</span> — "Examina-me, ó Deus, e conhece o meu coração."</li>
+        <li><span class="verse-chip">Mt 3:8, 10</span> — Produzir fruto à altura do arrependimento.</li>
+        <li><span class="verse-chip">2 Co 13:5</span> — "Examinem se estão na fé; ponham à prova a si mesmos."</li>
+        <li><span class="verse-chip">Ap 2:5</span> — "Lembre-se de onde caiu, e se arrependa."</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q4 — JOIAS: NABUCODONOSOR SERVO? ========================= -->
+<details class="q" id="q4">
+  <summary>
+    <span class="q-num">4</span>
+    <span>
+      <span class="q-title"><span class="top-tag">Joia espiritual</span>O rei de Babilônia agiu como "servo" de Jeová?</span>
+      <div class="q-status" data-status>(Jeremias 25:8, 9, 12)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q4">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 25:8</span> "Portanto, assim diz Jeová dos exércitos: 'Visto que vocês não obedeceram às minhas palavras,
+        <span class="verse-chip">Jer 25:9</span> estou convocando todos os povos do norte", diz Jeová, "estou convocando o meu servo Nabucodonosor, rei de Babilônia, e vou trazê-los contra esta terra [...] Eu os entregarei à destruição e farei deles um motivo de terror, um alvo de assobios e uma ruína permanente.
+        <span class="verse-chip">Jer 25:12</span> 'Mas, quando se completarem 70 anos, ajustarei contas com o rei de Babilônia e aquela nação por causa dos seus erros', diz Jeová, 'e farei da terra dos caldeus um deserto desolado para sempre.'
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>2. A joia — surpreendente vocabulário</h4>
+      <p>Jeová chama Nabucodonosor de <em>"meu servo"</em>. Mas Nabucodonosor:</p>
+      <ul>
+        <li>Era pagão (adorador de Marduque, deus de Babilônia);</li>
+        <li>Não conhecia Jeová pessoalmente;</li>
+        <li>Atuou por interesse político e militar próprio.</li>
+      </ul>
+      <p><strong>Como então ele é "servo" de Jeová?</strong></p>
+      <p>O título "servo" aqui é usado em sentido <em>instrumental</em> — Nabucodonosor foi usado por Jeová como ferramenta para executar o julgamento contra Judá, <strong>sem saber</strong> que estava cumprindo um propósito divino. Foi como um machado nas mãos do lenhador (Is 10:15).</p>
+    </div>
+
+    <div class="block">
+      <h4>3. Referência cruzada — Isaías 10:5-19</h4>
+      <p>Esse mesmo princípio aparece em Isaías — a Assíria é chamada de "vara da ira de Jeová" e "bastão do seu furor" (Is 10:5). Jeová usa nações ímpias para cumprir seus propósitos, mas depois as julga pelo orgulho que demonstram.</p>
+    </div>
+
+    <div class="block">
+      <h4>4. Material de apoio · it "Reino de Deus" § 36</h4>
+      <div class="alert-pend">
+        <strong>Texto verificado do Insight (verbete "Reino de Deus")</strong>: o Reino de Deus, nos tempos antigos, agiu por meio de instrumentos humanos — nações e reis que Jeová usou como "servo" para executar julgamento ou livramento, sem que essas nações compreendessem plenamente o papel que desempenhavam.
+        <br><br>
+        <em>Texto exato do § 36 pendente — verificar no JW Library.</em>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>5. Aplicação para a pregação 🎤</h4>
+      <p class="preg-tag">Pregação</p>
+      <p>Esta joia mostra que Jeová é Soberano absoluto. Mesmo as nações mais poderosas só fazem o que ele permite. Isso é ângulo para abordar <em>quem realmente controla a história</em> — não os homens, mas Jeová. Pode-se usar para discutir profecias atuais sobre o sistema de coisas e o papel de Jeová.</p>
+    </div>
+
+    <div class="block">
+      <h4>6. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Confiar que mesmo decisões políticas, crises e movimentos da história estão sob o controle de Jeová dá paz ao cristão. Não precisamos temer o futuro — quem governa é Jeová, não os homens.</p>
+    </div>
+
+    <div class="block">
+      <h4>7. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">Is 10:5-19</span> — A Assíria como "vara" da ira de Jeová.</li>
+        <li><span class="verse-chip">Is 44:28</span> — Ciro chamado de "meu pastor" — outro rei pagão usado por Jeová.</li>
+        <li><span class="verse-chip">Hab 1:12</span> — "Ó Jeová, tu o designaste para executar julgamento."</li>
+        <li><span class="verse-chip">Dn 4:25, 32</span> — Nabucodonosor aprendeu que "o Altíssimo domina sobre o reino dos homens".</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q5 — POR QUE BABILÔNIA FOI PUNIDA? ========================= -->
+<details class="q" id="q5">
+  <summary>
+    <span class="q-num">5</span>
+    <span>
+      <span class="q-title"><span class="top-tag">Joia espiritual</span>Se Nabucodonosor foi "servo" de Jeová, por que Jeová puniu Babilônia?</span>
+      <div class="q-status" data-status>(Jeremias 25:12 + Isaías 10:5-15)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q5">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 25:12</span> "Mas, quando se completarem 70 anos, ajustarei contas com o rei de Babilônia e aquela nação por causa dos seus erros", diz Jeová, "e farei da terra dos caldeus um deserto desolado para sempre."
+        <span class="verse-chip">Jer 25:14</span> "Pois muitas nações e reis poderosos os escravizarão; eu lhes retribuirei conforme as suas ações e as obras das suas próprias mãos."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>2. O ponto-chave — instrumento ≠ cúmplice</h4>
+      <p>Ser usado por Jeová como "servo" <em>não</em> significa que a pessoa tem aprovação divina. Três princípios:</p>
+      <ol>
+        <li><strong>O instrumento não ganha crédito</strong> — um machado não merece elogios quando o lenhador corta a árvore (Is 10:15).</li>
+        <li><strong>O instrumento será julgado pelos seus métodos</strong> — Nabucodonosor foi além do que Jeová determinara, com crueldade, orgulho e pilhagem.</li>
+        <li><strong>Jeová corrige os seus servos</strong> — em Jer 25:14, "muitas nações e reis poderosos os escravizarão" — exatamente o que aconteceu quando a Pérsia conquistou a Babilônia em 539 AEC.</li>
+      </ol>
+      <p>Isaías 10:5-19 é especialmente claro: a Assíria se gloriou como se tivesse feito tudo por sua própria mão. Por isso Jeová a puniu.</p>
+    </div>
+
+    <div class="block">
+      <h4>3. Aplicação para a pregação 🎤</h4>
+      <p class="preg-tag">Pregação</p>
+      <p>Esta joia derruba a objeção "Deus usa as pessoas más para fazer o mal". Explicar: Jeová <em>permite</em> que existam instrumentos no curto prazo, mas <em>todos</em> prestam contas. Mostrar que a justiça de Jeová não é parcial — atinge a todos, na hora certa.</p>
+    </div>
+
+    <div class="block">
+      <h4>4. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Se Jeová corrige instrumentos, quanto mais corrigirá seus servos que usam mal as oportunidades. <em>"Vou ajustar contas com o rei de Babilônia"</em> é princípio duradouro: <strong>nenhuma ação fica sem resposta</strong>. Isso nos mantém humildes — mesmo quando "cumprimos uma missão", não é mérito nosso.</p>
+    </div>
+
+    <div class="block">
+      <h4>5. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">Is 10:5-19</span> — O castigo da Assíria por se gloriar.</li>
+        <li><span class="verse-chip">Dn 5:22-28</span> — Belsazar, descendente de Nabucodonosor, julgado por orgulho.</li>
+        <li><span class="verse-chip">Hab 2:6-20</span> — Ai dos que saqueiam (Babilônia será saqueada).</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q6 — LEITURA DA BÍBLIA ========================= -->
+<details class="q" id="q6">
+  <summary>
+    <span class="q-num">6</span>
+    <span>
+      <span class="q-title">Leitura da Bíblia — Jeremias 24:1-10</span>
+      <div class="q-status" data-status>(th lição 5)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q6">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Texto bíblico (NWT) · Jeremias 24:1-10</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 24:1</span> <span class="alert-pend" style="display:inline;padding:2px 8px">texto exato pendente — verificar no JW Library (v.1 não consta do cache da NWT Study Edition pt-BR)</span>
+        <span class="verse-chip">Jer 24:2</span> Uma cesta tinha figos muito bons, iguais a figos temporãos, mas a outra cesta tinha figos ruins, tão ruins que nem podiam ser comidos.
+        <span class="verse-chip">Jer 24:3</span> Então Jeová me perguntou: "O que você está vendo, Jeremias?" E eu respondi: "Figos; os figos bons são muito bons, mas os ruins são muito ruins, tão ruins que nem podem ser comidos."
+        <span class="verse-chip">Jer 24:4</span> Então Jeová me mostrou duas cestas de figos postas diante do templo de Jeová, depois de Nabucodonosor, rei de Babilônia, ter levado para o exílio Jeconias, filho de Jeoiaquim e rei de Judá, junto com os príncipes de Judá, os artesãos e os trabalhadores em metal; ele os levou de Jerusalém para Babilônia.
+        <span class="verse-chip">Jer 24:5</span> "Isto é o que diz Jeová, o Deus de Israel: 'Assim como esses figos bons, considerarei bons os exilados de Judá, que mandei embora deste lugar para a terra dos caldeus.
+        <span class="verse-chip">Jer 24:6</span> Manterei meus olhos neles para o seu bem e os farei voltar a esta terra. Vou edificá-los, e não os derrubarei; vou plantá-los, e não os arrancarei.
+        <span class="verse-chip">Jer 24:7</span> E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração.
+        <span class="verse-chip">Jer 24:8</span> "'Mas, quanto aos figos ruins, que são tão ruins que nem podiam ser comidos, isto é o que diz Jeová: 'Assim considerarei Zedequias, rei de Judá, seus príncipes, o restante de Jerusalém que sobrou nesta terra e os que foram morar na terra do Egito.
+        <span class="verse-chip">Jer 24:9</span> Farei deles um motivo de terror e de desgraça para todos os reinos da terra. Eles serão alvo de insultos, assunto de provérbios, motivo de zombaria e exemplo de maldição em todos os lugares por onde eu os espalhar.
+        <span class="verse-chip">Jer 24:10</span> E vou enviar contra eles a espada, a fome e a peste, até que desapareçam da terra que dei a eles e aos seus antepassados.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>2. Dicas para a leitura em voz alta (4 min)</h4>
+      <ul>
+        <li><strong>v.1-3</strong> — Tom curioso, fazendo a cena (como se estivesse descrevendo a visão).</li>
+        <li><strong>v.4</strong> — Pausa leve para situar o momento histórico (exílio de 617 AEC).</li>
+        <li><strong>v.5-7</strong> — Tom caloroso, de promessa. Os figos bons são "excelentes".</li>
+        <li><strong>v.8-10</strong> — Tom solene, grave. Contraste com o trecho anterior.</li>
+        <li><strong>Velocidade:</strong> nem rápido nem lento. Permita que cada frase-chave respire.</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q7 — INICIANDO CONVERSAS ========================= -->
+<details class="q" id="q7">
+  <summary>
+    <span class="q-num">7</span>
+    <span>
+      <span class="q-title"><span class="ministerio-tag">Ministério</span>Iniciando conversas de casa em casa</span>
+      <div class="q-status" data-status>(lmd lição 2 ponto 5)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q7">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Princípio da semana</h4>
+      <p>Da casa em casa: comece falando sobre um assunto atual. Depois, mude para um assunto que parece interessar mais à pessoa.</p>
+    </div>
+
+    <div class="block">
+      <h4>2. Material de apoio · lmd lição 2 ponto 5</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — a brochura "Ame as Pessoas" (lmd) não está totalmente cacheada no JW Library local. Por favor, abra a lição 2 ponto 5 da brochura no JW Library e cole aqui.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>3. Sugestões de aplicação</h4>
+      <p><strong>Estratégia:</strong> Assunto atual → assunto que gera interesse → conversa sobre esperança bíblica.</p>
+      <p><strong>Exemplo prático:</strong></p>
+      <ol>
+        <li>Bater à porta.</li>
+        <li>Cumprimentar e perguntar: <em>"A senhora tem acompanhado as notícias sobre [assunto atual]?"</em></li>
+        <li>Depois de ouvir a opinião: <em>"Entendo. Já pensou que a Bíblia tem algo interessante a dizer sobre isso?"</em></li>
+        <li>Usar Rev 21:3, 4 ou outro versículo que conecta com o assunto atual.</li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h4>4. Aplicação para o dia a dia 🏠</h4>
+      <p class="dia-tag">Dia a dia</p>
+      <p>Antes de sair para o campo, prepare 2-3 assuntos atuais que estão na mídia. Escolha um versículo bíblico que conecta com cada um. Isso torna a conversa natural e relevante.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q8 — CULTIVANDO INTERESSE ========================= -->
+<details class="q" id="q8">
+  <summary>
+    <span class="q-num">8</span>
+    <span>
+      <span class="q-title"><span class="ministerio-tag">Ministério</span>Cultivando o interesse — testemunho informal</span>
+      <div class="q-status" data-status>(lmd lição 9 ponto 5)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q8">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Princípio da semana</h4>
+      <p>Testemunho informal: fale sobre uma das verdades do apêndice A da brochura "Ame as Pessoas".</p>
+    </div>
+
+    <div class="block">
+      <h4>2. Material de apoio · lmd lição 9 ponto 5 + Apêndice A</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — verificar lmd lição 9 ponto 5 e Apêndice A no JW Library.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>3. Verdades comuns do Apêndice A</h4>
+      <ul>
+        <li><strong>A vida é sagrada</strong> — por que Deus se importa com a forma como vivemos.</li>
+        <li><strong>Deus tem um nome</strong> — e quer ser conhecido por ele.</li>
+        <li><strong>A alma não é imortal</strong> — a esperança cristã não é viver para sempre nesta forma.</li>
+        <li><strong>O sofrimento tem propósito</strong> — e um fim.</li>
+        <li><strong>Só dois caminhos</strong> — amplo (autossuficiência) vs. estreito (fé e obediência).</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>4. Dicas práticas para o testemunho informal</h4>
+      <ul>
+        <li>Conecte a verdade a algo que a pessoa acabou de dizer.</li>
+        <li>Use exemplos do cotidiano — trabalho, família, saúde, segurança.</li>
+        <li>Não dê um "sermão" curto — prefira uma pergunta: <em>"Você acha que Deus se importa com [situação]?"</em></li>
+        <li>Ofereça um estudo bíblico se a pessoa demonstrar interesse.</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= Q9 — FAZENDO DISCÍPULOS ========================= -->
+<details class="q" id="q9">
+  <summary>
+    <span class="q-num">9</span>
+    <span>
+      <span class="q-title"><span class="ministerio-tag">Ministério</span>Encorajando um estudante da Bíblia que luta contra um vício</span>
+      <div class="q-status" data-status>(lmd lição 12 ponto 4)</div>
+    </span>
+    <span class="status-toggle" data-toggle="q9">✔ marcar como respondida</span>
+  </summary>
+  <div class="q-body">
+
+    <div class="block">
+      <h4>1. Princípio da semana</h4>
+      <p>Encoraje um estudante da Bíblia que está lutando contra um vício.</p>
+    </div>
+
+    <div class="block">
+      <h4>2. Material de apoio · lmd lição 12 ponto 4</h4>
+      <div class="alert-pend">
+        <strong>Texto exato pendente</strong> — verificar lmd lição 12 ponto 4 no JW Library.
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>3. Princípios úteis ao ajudar alguém com vício</h4>
+      <ol>
+        <li><strong>Não julgar, amar</strong> — "Acima de tudo, tenham amor intenso uns pelos outros." (1 Pe 4:8).</li>
+        <li><strong>Não ter pena, mas compaixão</strong> — distinguer entre "coitado" (paternalismo) e "você consegue" (encorajamento).</li>
+        <li><strong>Mostrar que a vitória é possível</strong> — citar exemplos bíblicos de pessoas que venceram fraquezas (Raabe, Manassés, o apóstolo Paulo).</li>
+        <li><strong>Apontar para a ajuda de Jeová</strong> — "Jeová está perto dos que têm o coração quebrantado." (Sl 34:18).</li>
+        <li><strong>Não isolar a pessoa</strong> — manter o convívio com a congregação é proteção.</li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h4>4. Referências bíblicas adicionais</h4>
+      <ul>
+        <li><span class="verse-chip">1 Co 10:13</span> — "Deus é fiel; ele não deixará que vocês sejam tentados além do que podem suportar."</li>
+        <li><span class="verse-chip">Fp 4:13</span> — "Posso todas as coisas naquele que me fortalece."</li>
+        <li><span class="verse-chip">2 Co 5:17</span> — "Se alguém está em união com Cristo, é uma nova criação."</li>
+        <li><span class="verse-chip">Sl 34:18</span> — "Jeová está perto dos que têm o coração quebrantado."</li>
+      </ul>
+    </div>
+
+  </div>
+</details>
+
+</div>
+
+<footer>
+  📚 Gerado por Hermes Agent a partir da <em>Apostila Vida e Ministério — julho-agosto 2026</em> (mwb_T_202607) e da NWT Study Edition.<br>
+  🔗 Versículos NWT verificados do cache local do JW Library (sub-50ms por versículo). Material de apoio de Sentinelas de 1994 e 2013 marcado como <em>"pendente verificar no JW Library"</em>.<br>
+  ✏️ Aperte <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const KEY='estudo-jer24-25-2026-08-10';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(o){localStorage.setItem(KEY,JSON.stringify(o))}
+  const answered=load();
+  document.querySelectorAll('[data-toggle]').forEach(btn=>{
+    const id=btn.dataset.toggle;
+    const sec=document.getElementById(id);
+    const status=sec.querySelector('.q-status');
+    if(answered[id]){
+      sec.dataset.done='1';
+      status.textContent='✔ Respondida · '+status.dataset.status;
+      status.classList.add('answered');
+      btn.textContent='↺ reabrir';
+    }
+    btn.addEventListener('click',e=>{
+      e.preventDefault();
+      const was=sec.dataset.done==='1';
+      if(was){
+        delete answered[id];
+        sec.removeAttribute('data-done');
+        status.textContent=status.dataset.status;
+        status.classList.remove('answered');
+        btn.textContent='✔ marcar como respondida';
+      }else{
+        answered[id]=Date.now();
+        sec.dataset.done='1';
+        status.textContent='✔ Respondida · '+status.dataset.status;
+        status.classList.add('answered');
+        btn.textContent='↺ reabrir';
+      }
+      save(answered);
+      update();
+    });
+  });
+
+  const inp=document.getElementById('search');
+  function update(){
+    const q=inp.value.toLowerCase().trim();
+    const filter=[...document.querySelectorAll('.pill[data-filter]')].find(b=>b.classList.contains('on')).dataset.filter;
+    let count=0;
+    document.querySelectorAll('details.q').forEach(d=>{
+      const text=d.textContent.toLowerCase();
+      const ok1=!q||text.includes(q);
+      const ok2 = filter==='all' || (filter==='pending' && !d.dataset.done) || (filter==='done' && d.dataset.done);
+      d.style.display=(ok1&&ok2)?'':'none';
+      if(ok1&&ok2)count++;
+    });
+    document.getElementById('count').textContent=count+' pergunta(s) visível(is)';
+  }
+  inp.addEventListener('input',update);
+  document.querySelectorAll('[data-filter]').forEach(b=>{
+    b.addEventListener('click',e=>{
+      document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
