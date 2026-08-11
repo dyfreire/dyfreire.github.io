@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joias Espirituais — Jeremias 24-25 · 10-16 Ago 2026</title>
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>💎 Joias Espirituais — Jeremias 24-25</h1>
+  <h2>10 Tesouros profundos para a reunião · 10-16 de agosto 2026</h2>
+  <p>Cada joia é uma verdade revelada por Jeová sobre Si mesmo, Seu povo e o propósito que Se cumprirá. Textos NWT verificados do cache local do JW Library.</p>
+  <div class="meta-row">
+    <span class="pill">💎 10 joias principais</span>
+    <span class="pill">📚 NWT (pt-BR)</span>
+    <span class="pill">🎯 Marcadas para reflexão</span>
+    <span class="pill">✅ Marque as estudadas (localStorage)</span>
+  </div>
+</header>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 filtrar por palavra-chave…">
+  <button data-filter="all" class="pill on" id="statusAll">Tudo</button>
+  <button data-filter="pending" class="pill" id="statusPending">Só pendentes</button>
+  <button data-filter="done" class="pill" id="statusDone">Só estudadas</button>
+  <span id="count" class="pill"></span>
+</div>
+
+<nav class="toc" aria-label="Índice das joias">
+  <a href="#j1"><span class="num">1</span>Jeová transforma o coração</a>
+  <a href="#j2"><span class="num">2</span>Jeová edifica, não destrói</a>
+  <a href="#j3"><span class="num">3</span>Nabucodonosor: "meu servo"</a>
+  <a href="#j4"><span class="num">4</span>Jeová julga até quem usou</a>
+  <a href="#j5"><span class="num">5</span>O fim do som de alegria</a>
+  <a href="#j6"><span class="num">6</span>O cálice do furor de Jeová</a>
+  <a href="#j7"><span class="num">7</span>Jeová é justo, não parcial</a>
+  <a href="#j8"><span class="num">8</span>Jeová julga pessoalmente</a>
+  <a href="#j9"><span class="num">9</span>Os mortos espalhados</a>
+  <a href="#j10"><span class="num">10</span>Os pastores serão julgados</a>
+  <a href="#jc"><span class="num">＋</span>Joias complementares</a>
+  <a href="#ja"><span class="num">➜</span>Aplicação prática</a>
+</nav>
+
+<div id="joias">
+
+<!-- ========================= JOIA 1 — Jer 24:7 ========================= -->
+<details class="j" id="j1" open>
+  <summary>
+    <span class="j-num">1</span>
+    <span>
+      <span class="j-title">Jeová transforma o coração</span>
+      <div class="j-status" data-status>(Jeremias 24:7)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j1">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 24:7</span> "E vou dar-lhes um coração capaz de me conhecer, de saber que eu sou Jeová. Eles se tornarão o meu povo, e eu me tornarei o seu Deus, pois eles voltarão a mim de todo o coração."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Jeová não apenas perdoa — Ele transforma</strong> o coração por dentro. Não é "tapar o mal", é substituir.</li>
+        <li><strong>"Coração capaz de conhecer"</strong> = capacidade espiritual, não só informação. É uma predisposição interior que vem de Jeová.</li>
+        <li><strong>A relação é recíproca</strong>: "meu povo" ↔ "seu Deus". Não é unilateral.</li>
+        <li><strong>"De todo o coração"</strong> — sem divisão, sem reservas, sem meias-medidas. Esta é a medida de Jeová.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Ez 36:26, 27</span> "Darei a vocês um coração novo e colocarei dentro de vocês um espírito novo." ·
+      <span class="verse-chip">Fp 1:6</span> "Aquele que começou a boa obra em vocês vai completá-la." ·
+      <span class="verse-chip">Sl 119:32</span> "Correrei pelo caminho dos teus mandamentos, porque me fazes livre."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>"De todo o coração" — não existe "jeová 50%". Quem conhece Jeová recebe um coração <em>novo</em>, não remendado.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 2 — Jer 24:6 ========================= -->
+<details class="j" id="j2">
+  <summary>
+    <span class="j-num">2</span>
+    <span>
+      <span class="j-title">Jeová edifica, não destrói</span>
+      <div class="j-status" data-status>(Jeremias 24:6)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j2">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 24:6</span> "Manterei meus olhos neles para o seu bem e os farei voltar a esta terra. Vou edificá-los, e não os derrubarei; vou plantá-los, e não os arrancarei."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Jeová age como agricultor</strong>: planta, rega, cuida — não derruba.</li>
+        <li><strong>Antítese reveladora</strong>: edificar/não derrubar · plantar/não arrancar. Cada negativo é uma promessa positiva.</li>
+        <li><strong>"Manterei meus olhos neles"</strong> = cuidado pessoal, contínuo, atento. Não é "lanço um olhar e esqueço".</li>
+        <li><strong>"Para o seu bem"</strong> — a correção divina SEMPRE tem propósito benéfico (<span class="verse-chip">Hb 12:10</span>).</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">1 Co 3:6, 7</span> "Eu plantei, Apolo regou, mas Deus fazia crescer." ·
+      <span class="verse-chip">Hb 12:5-11</span> Disciplina como evidência de amor. ·
+      <span class="verse-chip">Sl 32:8</span> "Vou instruir você e mostrar o caminho."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Jeová prometeu a Abraão multiplicar seus descendentes "como as estrelas do céu" (<span class="verse-chip">Gn 15:5</span>). A promessa a Jeremias segue o mesmo princípio: Jeová não desperdiça Seus investimentos. Quem Ele planta, Ele cuida.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 3 — Jer 25:8, 9 ========================= -->
+<details class="j" id="j3">
+  <summary>
+    <span class="j-num">3</span>
+    <span>
+      <span class="j-title">Nabucodonosor: "meu servo"</span>
+      <div class="j-status" data-status>(Jeremias 25:8, 9)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j3">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 25:8</span> "Portanto, assim diz Jeová dos exércitos: 'Visto que vocês não obedeceram às minhas palavras,
+        <span class="verse-chip base">Jer 25:9</span> estou convocando todos os povos do norte', diz Jeová, 'estou convocando o meu servo Nabucodonosor, rei de Babilônia, e vou trazê-los contra esta terra, contra os seus habitantes e contra todas as nações ao redor. Eu os entregarei à destruição e farei deles um motivo de terror, um alvo de assobios e uma ruína permanente.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Jeová usa instrumentos humanos</strong> — até pagãos — para cumprir Seus propósitos.</li>
+        <li><strong>Soberania absoluta</strong>: nenhuma nação age fora do controle de Jeová, mesmo sem saber.</li>
+        <li><strong>Título "servo" é instrumental</strong>, não relacional. Nabucodonosor não adorava Jeová; foi usado como ferramenta.</li>
+        <li><strong>Comparação reveladora</strong>: assim como um machado é servo do lenhador (<span class="verse-chip">Is 10:15</span>), Nabucodonosor foi servo sem saber.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Is 10:5-19</span> A Assíria como "vara" da ira de Jeová. ·
+      <span class="verse-chip">Is 44:28</span> Ciro chamado de "meu pastor" — outro rei pagão usado por Jeová. ·
+      <span class="verse-chip">Hab 1:12</span> "Ó Jeová, tu o designaste para executar julgamento."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Mesmo quando o Reino de Deus não estava governando diretamente, Jeová já mostrava sua soberania usando nações para cumprir Seus propósitos. Hoje, com o Reino <em>estabelecido</em> (1914), o controle é ainda mais visível.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 4 — Jer 25:12, 14 ========================= -->
+<details class="j" id="j4">
+  <summary>
+    <span class="j-num">4</span>
+    <span>
+      <span class="j-title">Jeová julga até quem usou</span>
+      <div class="j-status" data-status>(Jeremias 25:12, 14)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j4">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 25:12</span> "'Mas, quando se completarem 70 anos, ajustarei contas com o rei de Babilônia e aquela nação por causa dos seus erros', diz Jeová, 'e farei da terra dos caldeus um deserto desolado para sempre.'
+        <span class="verse-chip">Jer 25:14</span> "'Pois muitas nações e reis poderosos os escravizarão; eu lhes retribuirei conforme as suas ações e as obras das suas próprias mãos.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>O prazo de 70 anos era definido</strong>, não aberto — Jeová tem cronograma preciso.</li>
+        <li><strong>"Ajustarei contas"</strong> — expressão de justiça pessoal, não delegada.</li>
+        <li><strong>Quem foi usado como instrumento também responde pelo excesso</strong> de crueldade que praticou.</li>
+        <li><strong>Cumprimento profético</strong>: Babilônia caiu em 539 AEC para a Pérsia (<span class="verse-chip">Dn 5</span>) — exatamente após 70 anos.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Dn 5:22-28</span> Belsazar julgado na noite em que Babilônia caiu. ·
+      <span class="verse-chip">Hab 2:6-20</span> "Ai dos que saqueiam" — a Babilônia seria saqueada. ·
+      <span class="verse-chip">Ap 18:5-8</span> "Deus se lembrou das injustiças dela" — princípio eterno.
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Ser "servo" de Jeová não é cheque em branco. Após servir ao propósito, Jeová pede contas do <em>como</em>. Isso é justo — instrumento não tem autonomia.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 5 — Jer 25:10 ========================= -->
+<details class="j" id="j5">
+  <summary>
+    <span class="j-num">5</span>
+    <span>
+      <span class="j-title">O fim do som de alegria</span>
+      <div class="j-status" data-status>(Jeremias 25:10)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j5">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 25:10</span> "Porei fim ao som de exultação e ao som de alegria entre eles, à voz do noivo e à voz da noiva, ao som do moinho manual e à luz da lâmpada."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>O juízo interrompe a vida cotidiana</strong> — não é apenas evento espiritual.</li>
+        <li><strong>Quatro marcadores</strong>: festa (noiva/noivo), trabalho (moinho), segurança (lâmpada).</li>
+        <li><strong>"Luz da lâmpada"</strong> = direção e segurança — será apagada.</li>
+        <li><strong>Aplicação profética</strong>: a destruição do sistema atual também trará interrupção completa (Ap 18:22-23).</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Ap 18:22, 23</span> "Jamais se ouvirá em ti... voz de noivo nem voz de noiva." ·
+      <span class="verse-chip">Ap 2:5</span> "Se não se arrepender, moverei o seu candeeiro do seu lugar." ·
+      <span class="verse-chip">Mt 24:38, 39</span> "Comiam, bebiam, casavam — até o dia em que Noé entrou na arca."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>O fim da alegria deste mundo está chegando. Não porque Jeová é cruel, mas porque quem constrói a vida sobre o que Ele vai destruir perde tudo. Melhor construir sobre o que permanece eterno.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 6 — Jer 25:15-16 ========================= -->
+<details class="j" id="j6">
+  <summary>
+    <span class="j-num">6</span>
+    <span>
+      <span class="j-title">O cálice do furor de Jeová</span>
+      <div class="j-status" data-status>(Jeremias 25:15, 16)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j6">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 25:15</span> "Pois assim me disse Jeová, o Deus de Israel: 'Pegue da minha mão este cálice com o vinho do meu furor e faça com que todas as nações às quais envio você bebam dele.
+        <span class="verse-chip">Jer 25:16</span> Elas beberão, ficarão cambaleando e agirão como loucos por causa da espada que estou enviando contra elas.'"
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Jeová não envia calamidade por capricho</strong> — é ato de julgamento deliberado.</li>
+        <li><strong>"Vinho do meu furor"</strong> = metáfora do efeito <em>intoxicante</em> do juízo (perde-se o controle).</li>
+        <li><strong>Jeremias é distribuidor ativo</strong> do cálice — o profeta participa e avisa antes.</li>
+        <li><strong>Precedência</strong>: começa por Jerusalém (<span class="verse-chip">Jer 25:18</span>) — princípio da Joia 7.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Ap 14:10</span> "Beberá o vinho do furor de Deus." ·
+      <span class="verse-chip">Ap 16:19</span> Cálice do vinho do furor de Sua ira. ·
+      <span class="verse-chip">Is 51:17, 22</span> "Bebe do cálice do furor na mão de Jeová."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Hoje, Jeová <em>também</em> oferece um cálice — mas é o cálice da salvação (Sl 116:13). A diferença é que este não é obrigado. Quem não aceita o cálice do Reino beberá o cálice do furor.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 7 — Jer 25:29 ========================= -->
+<details class="j" id="j7">
+  <summary>
+    <span class="j-num">7</span>
+    <span>
+      <span class="j-title">Jeová é justo, não parcial</span>
+      <div class="j-status" data-status>(Jeremias 25:29)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j7">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 25:29</span> "Pois, se a calamidade que estou trazendo começa com a cidade que leva o meu nome, deveriam vocês ficar impunes? Vocês não ficarão impunes, pois estou convocando uma espada contra todos os habitantes da terra', diz Jeová dos exércitos."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Princípio: ninguém está isento</strong> do julgamento de Jeová.</li>
+        <li><strong>Jeová começa com Seu próprio povo</strong> — isso prova Sua imparcialidade.</li>
+        <li><strong>Hoje: a congregação cristã é julgada primeiro</strong> e com maior rigor — peso maior, responsabilidade maior.</li>
+        <li><strong>Imparcialidade de Jeová</strong> é a base da confiança no julgamento final.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">1 Pe 4:17</span> "É tempo de o julgamento começar pela casa de Deus." ·
+      <span class="verse-chip">At 10:34, 35</span> "Deus não é parcial." ·
+      <span class="verse-chip">Dt 10:17</span> "Ele não aceita suborno nem aceita pessoas."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Quando vemos Jeová começar com Sua própria cidade, isso é <em>motivo de confiança</em>, não de escândalo. Significa que o julgamento final será absolutamente justo.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 8 — Jer 25:30, 31 ========================= -->
+<details class="j" id="j8">
+  <summary>
+    <span class="j-num">8</span>
+    <span>
+      <span class="j-title">Jeová julga pessoalmente</span>
+      <div class="j-status" data-status>(Jeremias 25:30, 31)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j8">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 25:30</span> "E você deve profetizar para eles todas estas palavras, dizendo: 'Lá do alto Jeová rugirá, e da sua santa morada fará ouvir a sua voz. Ele rugirá alto contra a sua habitação. Gritando como os que pisam uvas no lagar, Ele cantará triunfantemente contra todos os habitantes da terra.'
+        <span class="verse-chip base">Jer 25:31</span> 'Um barulho ressoará até os confins da terra, pois Jeová tem uma causa contra as nações. Ele julgará pessoalmente toda a humanidade. E entregará os maus à espada', diz Jeová."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>Imagem do leão rugindo</strong> — Juiz supremo, não subestimá-Lo.</li>
+        <li><strong>"Pessoalmente"</strong> — não por procuração, não por intermediários. Jeová <em>mesmo</em> julga.</li>
+        <li><strong>"Causa contra as nações"</strong> — julgamento de escala universal.</li>
+        <li><strong>Cantará "triunfantemente"</strong> — não é depressão divina; é vitória legal garantida.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Jl 3:16</span> "Jeová rugirá de Sião." ·
+      <span class="verse-chip">Am 1:2</span> "Ruge do Senhor desde Sião." ·
+      <span class="verse-chip">Ap 19:11-15</span> Cristo julgando com espada da boca.
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>O juízo não é um processo burocrático. É pessoal, decidido, universal. "Causa contra as nações" significa que nenhum sistema — político, comercial, religioso — escapa.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 9 — Jer 25:33 ========================= -->
+<details class="j" id="j9">
+  <summary>
+    <span class="j-num">9</span>
+    <span>
+      <span class="j-title">Os mortos espalhados</span>
+      <div class="j-status" data-status>(Jeremias 25:33)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j9">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip base">Jer 25:33</span> "E naquele dia os mortos por Jeová ficarão espalhados de uma extremidade da terra à outra extremidade da terra. Não serão lamentados, nem recolhidos, nem enterrados. Eles se tornarão como estrume sobre o solo."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>A escala global do juízo final</strong> — literalmente "de uma extremidade à outra".</li>
+        <li><strong>Sem honra</strong> — ninguém para chorar os mortos. Contraste com culturas antigas, que honravam os mortos.</li>
+        <li><strong>"Como estrume"</strong> = degradação completa, contraste com o valor que tinham.</li>
+        <li><strong>Contraste com a esperança cristã</strong>: "darão seus mortos" (Ap 20:13).</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Ap 20:13, 14</span> "O mar deu os mortos que estavam nele; e a morte e o túmulo deram os mortos que estavam neles." ·
+      <span class="verse-chip">Ap 22:12</span> "Veja, venho depressa, e a minha recompensa está comigo." ·
+      <span class="verse-chip">Dn 12:2</span> "Uma multidão dos que dormem no pó da terra acordará."
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>O destino dos que rejeitam Jeová é terrível. Mas Jeová permitiu a esperança da <em>ressurreição</em> justamente para os que escolhessem viver. O juízo é real — mas a saída também é real.</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIA 10 — Jer 25:34-38 ========================= -->
+<details class="j" id="j10">
+  <summary>
+    <span class="j-num">10</span>
+    <span>
+      <span class="j-title">Os pastores serão julgados</span>
+      <div class="j-status" data-status>(Jeremias 25:34-38)</div>
+    </span>
+    <span class="status-toggle" data-toggle="j10">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>Texto bíblico (NWT)</h4>
+      <div class="quote">
+        <span class="verse-chip">Jer 25:34</span> "Lamentem, pastores, e clamem! Rolem no chão, majestosos do rebanho, porque já chegou o dia para vocês serem abatidos e espalhados; vocês cairão como um vaso precioso!
+        <span class="verse-chip">Jer 25:35</span> Os pastores não têm para onde fugir, nem os majestosos do rebanho para onde escapar.
+        <span class="verse-chip">Jer 25:38</span> "Ele saiu do seu esconderijo como um leão novo, e a terra deles se tornou um motivo de terror por causa da espada cruel e da sua ira ardente."
+        <span class="src">— Tradução do Novo Mundo (cache local JW Library)</span>
+      </div>
+    </div>
+
+    <div class="learn">
+      <h4>💡 O que aprendemos</h4>
+      <ul>
+        <li><strong>"Pastores" e "majestosos do rebanho"</strong> = governantes, líderes religiosos, elites.</li>
+        <li><strong>"Vaso precioso" quebrado</strong> — o que parecia valioso se torna inútil.</li>
+        <li><strong>Jeová age como leão</strong> — não domesticado, não subestimável.</li>
+        <li><strong>Sem esconderijo</strong> — nem para onde fugir.</li>
+      </ul>
+    </div>
+
+    <div class="connection">
+      <strong>🔗 Conexões bíblicas:</strong>
+      <span class="verse-chip">Ez 34:2-10</span> "Ai dos pastores de Israel que se apascentam a si mesmos." ·
+      <span class="verse-chip">Sl 2:2-5</span> Governantes das nações contra Jeová e seu Ungido. ·
+      <span class="verse-chip">Ap 19:19, 20</span> "A besta e os reis da terra" julgados.
+    </div>
+
+    <div class="block">
+      <h4>🎯 Ponto alto para lembrar</h4>
+      <p>Hoje, este princípio tem aplicação poderosa: anciãos, superintendentes, líderes de circuito, do Corpo Governante — todos prestarão contas por seu pastoreio. "Pondere cuidadosamente como anda no meio deles" (Hb 13:17).</p>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= JOIAS COMPLEMENTARES ========================= -->
+<div class="section-divider">─ ─ ─ JOIAS COMPLEMENTARES (para aprofundar) ─ ─ ─</div>
+
+<details class="j" id="jc">
+  <summary>
+    <span class="j-num" style="background:linear-gradient(135deg,#5b21b6,#9333ea)">＋</span>
+    <span>
+      <span class="j-title">6 joias complementares para conexões adicionais</span>
+      <div class="j-status" data-status>(Para consulta cruzada)</div>
+    </span>
+    <span class="status-toggle" data-toggle="jc">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="block">
+      <h4>📚 Isaías 10:5-19 — A Assíria como "vara" da ira de Jeová</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>Jeová usa a Assíria como ferramenta, mas a pune pelo orgulho.</li>
+          <li>Princípio: instrumento não tem autonomia. Quem serve ao propósito não está acima do julgamento.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📚 Daniel 4:28-37 — Nabucodonosor aprende que "o Altíssimo domina"</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>O mesmo Nabucodonosor do Jeremias 25 — depois de 7 anos de loucura como animal, ele reconhece Jeová.</li>
+          <li>Até os reis pagãos podem aprender. O juízo é pedagógico quando há arrependimento.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📚 Daniel 5 — Belsazar julgado na noite em que Babilônia caiu</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>"Pesado na balança e achado em falta" — o veredito veio <em>naquela mesma noite</em>.</li>
+          <li>Poder aparente zero diante do julgamento de Jeová.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📚 Hebreus 12:5-11 — A correção divina como prova de amor</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>"Deus trata os filhos como pais tratam." Toda correção tem propósito pedagógico.</li>
+          <li>Conecta direto com Jer 24:6 — "manterei meus olhos neles para o seu bem".</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📚 Apocalipse 14:6, 7 — "Temei a Deus, porque chegou a hora do seu juízo"</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>A mensagem do Reino anuncia que o juízo de Jeová é iminente.</li>
+          <li>É a primeira mensagem angélica depois do trono de Deus estabelecido (1914?).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📚 Apocalipse 18 — A queda da "Babilônia moderna"</h4>
+      <div class="learn">
+        <h4>💡 Joia complementar</h4>
+        <ul>
+          <li>"Deus se lembrou das injustiças dela" — eco direto de Jer 25:12.</li>
+          <li>O mesmo princípio da Joia 4, atualizado para o fim do sistema atual.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<!-- ========================= APLICAÇÃO PRÁTICA ========================= -->
+<div class="section-divider">─ ─ ─ APLICAÇÃO PRÁTICA ─ ─ ─</div>
+
+<details class="j" id="ja" open>
+  <summary>
+    <span class="j-num" style="background:linear-gradient(135deg,#10b981,#34d399);color:#003828">➜</span>
+    <span>
+      <span class="j-title">Como aplicar essas joias na pregação 🎤 e na vida 🏠</span>
+      <div class="j-status" data-status>(Para quem vai apresentar e para quem vai refletir)</div>
+    </span>
+    <span class="status-toggle" data-toggle="ja">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+
+    <div class="apply-card">
+      <div class="apply-cell">
+        <strong>🎤 Na pregação</strong>
+        <p>Use Jer 25:29 para iniciar conversas sobre a imparcialidade de Jeová. Pessoas que reclamam "Deus é injusto" precisam ouvir que Ele começou com a própria cidade.</p>
+      </div>
+      <div class="apply-cell">
+        <strong>🏠 No dia a dia</strong>
+        <p>Quando passar por correção, lembre-se da Joia 1: Jeová não apenas vê, transforma. A correção que você enfrenta agora está produzindo fruto eterno.</p>
+      </div>
+      <div class="apply-cell">
+        <strong>🎤 Na pregação</strong>
+        <p>Jer 25:5 é poderoso para mostrar que Jeová "enviava vez após vez" — Ele não manda castigo sem aviso. Use para construir confiança, não medo.</p>
+      </div>
+      <div class="apply-cell">
+        <strong>🏠 No dia a dia</strong>
+        <p>Applique Jer 24:7 como autoanálise: "Estou voltando a Jeová de todo o coração, ou reservando áreas para mim mesmo?"</p>
+      </div>
+      <div class="apply-cell">
+        <strong>🎤 Para quem duvida</strong>
+        <p>Joia 5 (Jer 25:10) mostra que o mundo está em contagem regressiva. Use para mostrar urgência da mensagem, sem alarmismo.</p>
+      </div>
+      <div class="apply-cell">
+        <strong>🏠 No estudo pessoal</strong>
+        <p>Sublinhe cada joia em sua Bíblia. Releia uma por dia. Em 10 dias, você terá todas as verdades de Jer 24-25 internalizadas.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h4>📊 Resumo de todas as joias em uma frase</h4>
+      <ol>
+        <li><strong>J1:</strong> Jeová transforma o coração — não apenas perdoa.</li>
+        <li><strong>J2:</strong> Jeová edifica, planta e cuida — não destrói.</li>
+        <li><strong>J3:</strong> Jeová usa instrumentos humanos para Seus propósitos.</li>
+        <li><strong>J4:</strong> Quem foi usado como instrumento também responde pelo como.</li>
+        <li><strong>J5:</strong> O juízo interrompe a vida cotidiana.</li>
+        <li><strong>J6:</strong> O cálice do furor é ato deliberado, não casual.</li>
+        <li><strong>J7:</strong> Jeová é imparcial — começa com Seu próprio povo.</li>
+        <li><strong>J8:</strong> Jeová julga pessoalmente, não por procuração.</li>
+        <li><strong>J9:</strong> O juízo final será de escala global.</li>
+        <li><strong>J10:</strong> Os líderes também serão julgados.</li>
+      </ol>
+    </div>
+
+  </div>
+</details>
+
+</div>
+
+<footer>
+  💎 Joias Espirituais de Jeremias 24-25 — preparado por Hermes Agent.<br>
+  📚 Versículos NWT verificados do cache local do JW Library (sub-50ms por versículo).<br>
+  🎤 Para palestra de 10min "Tesouros da Palavra de Deus" — semana 10-16 de agosto de 2026.<br>
+  ✏️ Aperte <kbd>Ctrl</kbd>+<kbd>P</kbd> para imprimir.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const KEY='joias-jeremias-24-25-2026-08-10';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(o){localStorage.setItem(KEY,JSON.stringify(o))}
+  const answered=load();
+  document.querySelectorAll('[data-toggle]').forEach(btn=>{
+    const id=btn.dataset.toggle;
+    const sec=document.getElementById(id);
+    const status=sec.querySelector('.j-status');
+    if(answered[id]){
+      sec.dataset.done='1';
+      status.textContent='✔ Estudada · '+status.dataset.status;
+      status.classList.add('answered');
+      btn.textContent='↺ reabrir';
+    }
+    btn.addEventListener('click',e=>{
+      e.preventDefault();
+      const was=sec.dataset.done==='1';
+      if(was){
+        delete answered[id];
+        sec.removeAttribute('data-done');
+        status.textContent=status.dataset.status;
+        status.classList.remove('answered');
+        btn.textContent='✔ marcar como estudada';
+      }else{
+        answered[id]=Date.now();
+        sec.dataset.done='1';
+        status.textContent='✔ Estudada · '+status.dataset.status;
+        status.classList.add('answered');
+        btn.textContent='↺ reabrir';
+      }
+      save(answered);
+      update();
+    });
+  });
+
+  const inp=document.getElementById('search');
+  function update(){
+    const q=inp.value.toLowerCase().trim();
+    const filter=[...document.querySelectorAll('.pill[data-filter]')].find(b=>b.classList.contains('on')).dataset.filter;
+    let count=0;
+    document.querySelectorAll('details.j').forEach(d=>{
+      const text=d.textContent.toLowerCase();
+      const ok1=!q||text.includes(q);
+      const ok2 = filter==='all' || (filter==='pending' && !d.dataset.done) || (filter==='done' && d.dataset.done);
+      d.style.display=(ok1&&ok2)?'':'none';
+      if(ok1&&ok2)count++;
+    });
+    document.getElementById('count').textContent=count+' joia(s) visível(is)';
+  }
+  inp.addEventListener('input',update);
+  document.querySelectorAll('[data-filter]').forEach(b=>{
+    b.addEventListener('click',e=>{
+      document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
