@@ -226,9 +226,55 @@ header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
   max-width: 100%; height: auto; border-radius: 8px;
   border: 1px solid var(--border);
 }
+.img-card img.zoomable {
+  cursor: zoom-in; transition: transform .25s, box-shadow .25s;
+}
+.img-card img.zoomable:hover {
+  transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
 .img-card figcaption {
   font-size: .82rem; color: var(--muted); margin-top: 8px;
   line-height: 1.5; font-style: italic;
+}
+
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,.92);
+  align-items: center; justify-content: center;
+  padding: 20px; cursor: zoom-out;
+}
+.lightbox.show { display: flex; }
+.lightbox img {
+  max-width: 95vw; max-height: 85vh;
+  object-fit: contain; border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  animation: lb-pop .25s ease-out;
+}
+.lightbox .lb-caption {
+  position: absolute; bottom: 16px; left: 16px; right: 16px;
+  color: #f1f5f9; text-align: center;
+  font-size: .9rem; line-height: 1.5;
+  background: rgba(0,0,0,.5); padding: 10px 14px;
+  border-radius: 8px;
+}
+.lightbox .lb-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255,255,255,.15); color: white;
+  border: none; width: 40px; height: 40px;
+  border-radius: 50%; cursor: pointer;
+  font-size: 1.2rem; font-weight: 700;
+  transition: background .2s;
+}
+.lightbox .lb-close:hover { background: rgba(255,255,255,.3); }
+.lightbox .lb-hint {
+  position: absolute; top: 16px; left: 16px;
+  color: rgba(255,255,255,.7); font-size: .8rem;
+  background: rgba(0,0,0,.4); padding: 6px 10px;
+  border-radius: 6px;
+}
+@keyframes lb-pop {
+  from { opacity: 0; transform: scale(.92); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 .timeline {
@@ -434,7 +480,7 @@ footer {
 </div>
 
 <div class="img-card">
-  <img src="sentinelas/2026442_univ_cnt_1.jpg" alt="Multiplicação dos pães">
+  <img class="zoomable" src="2026442_univ_cnt_1.jpg" alt="Multiplicação dos pães" data-caption="🖼️ Multiplicação dos pães e dos peixes — o milagre imediatamente antes do discurso de Cafarnaum (Jo 6:1-13). Foi este sinal que levou a multidão a dizer 'Este é realmente o Profeta' (Jo 6:14) — mas a mesma fé, testada no dia seguinte, não sobreviveu.">
   <figcaption>🖼️ Multiplicação dos pães e dos peixes — o milagre imediatamente antes do discurso de Cafarnaum (Jo 6:1-13). Foi este sinal que levou a multidão a dizer "Este é realmente o Profeta" (Jo 6:14) — mas a mesma fé, testada no dia seguinte, não sobreviveu.</figcaption>
 </div>
 
@@ -509,7 +555,7 @@ footer {
 </div>
 
 <div class="img-card">
-  <img src="sentinelas/2026442_univ_cnt_3.jpg" alt="Muitos abandonaram Jesus, mas Pedro e os apóstolos continuaram">
+  <img class="zoomable" src="2026442_univ_cnt_3.jpg" alt="Muitos abandonaram Jesus, mas Pedro e os apóstolos continuaram" data-caption="🖼️ 'Muitos que estavam seguindo Jesus o abandonaram, mas Pedro e os outros apóstolos continuaram com ele' (Veja o parágrafo 3.)">
   <figcaption>🖼️ "Muitos que estavam seguindo Jesus o abandonaram, mas Pedro e os outros apóstolos continuaram com ele" (Veja o parágrafo 3.)</figcaption>
 </div>
 </div>
@@ -793,7 +839,7 @@ footer {
 </div>
 
 <div class="img-card">
-  <img src="sentinelas/2026442_univ_cnt_2.jpg" alt="Nebulosa, peixe, avião — exemplos de design na natureza">
+  <img class="zoomable" src="2026442_univ_cnt_2.jpg" alt="Nebulosa, peixe, avião — exemplos de design na natureza" data-caption="🖼️ 'Nebula: IAC/RGO/David Malin Images; fish and car: Mercedes-Benz USA; plane: Kristen Bartlett/University of Florida'. Imagem citada no parágrafo 9 — exemplos de 'design' tanto na natureza quanto na engenharia humana, mostrando que o design exige um designer.">
   <figcaption>🖼️ "Nebula: IAC/RGO/David Malin Images; fish and car: Mercedes-Benz USA; plane: Kristen Bartlett/University of Florida". Imagem citada no parágrafo 9 — exemplos de "design" tanto na natureza quanto na engenharia humana, mostrando que o design exige um designer.</figcaption>
 </div>
 </div>
@@ -1656,6 +1702,13 @@ footer {
 
 </div>
 
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+  <div class="lb-hint">Clique fora ou pressione Esc para fechar</div>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lb-caption" id="lightbox-caption"></div>
+</div>
+
 <div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <h3 id="modal-title"></h3>
@@ -1734,7 +1787,23 @@ document.querySelectorAll('.ref').forEach(ref => {
 function closeModal() {
   document.getElementById('modal-bg').classList.remove('show');
 }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeLightbox(); } });
+
+// Lightbox zoom para imagens
+document.querySelectorAll('.zoomable').forEach(img => {
+  img.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox-caption').textContent = img.dataset.caption || img.alt;
+    document.getElementById('lightbox').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+  document.body.style.overflow = '';
+}
 </script>
 
 </body>
