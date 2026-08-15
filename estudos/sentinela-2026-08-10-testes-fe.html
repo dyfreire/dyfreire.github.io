@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como continuar leal a Jeová ao enfrentar testes de fé | Sentinela 10-16 Ago 2026</title>
+<style>
+:root {
+  --bg: #f8f9fa; --card: #ffffff; --text: #1a1a1a; --muted: #6c757d;
+  --border: #dee2e6; --azul: #dbeafe; --azul-borda: #3b82f6;
+  --cinza: #f1f3f5; --cinza-borda: #6c757d; --verde: #d1fae5;
+  --verde-borda: #10b981; --ambar: #fef3c7; --ambar-borda: #f59e0b;
+  --roxo: #ede9fe; --roxo-borda: #8b5cf6; --amarelo: #fef9c3;
+  --amarelo-borda: #eab308; --fontes: #ffe4e6; --fontes-borda: #f43f5e;
+  --link: #2563eb; --shadow: 0 2px 8px rgba(0,0,0,.08);
+  --base: #fbbf24; --base-borda: #d97706;
+}
+[data-theme="dark"] {
+  --bg: #0f172a; --card: #1e293b; --text: #f1f5f9; --muted: #94a3b8;
+  --border: #334155; --azul: #1e3a8a; --cinza: #334155; --verde: #064e3b;
+  --ambar: #78350f; --roxo: #4c1d95; --amarelo: #713f12; --fontes: #7f1d1d;
+  --link: #60a5fa; --shadow: 0 2px 8px rgba(0,0,0,.3);
+  --base: #d97706; --base-borda: #fbbf24;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+  font-size: 16px; padding: 0; transition: background .3s, color .3s;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 16px; }
+header {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  color: white; padding: 20px 16px; text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+header h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+header .week { font-size: .85rem; opacity: .9; }
+header .cantico { font-size: .8rem; opacity: .85; margin-top: 4px; }
+
+.controls {
+  display: flex; gap: 8px; padding: 12px 16px;
+  background: var(--card); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 99;
+}
+.btn {
+  background: var(--azul); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 12px; font-size: .85rem; cursor: pointer;
+  flex: 1; font-weight: 500;
+}
+.btn:hover { background: var(--cinza); }
+.btn-icon { flex: 0 0 auto; padding: 8px 12px; }
+
+.toc {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.toc h2 { font-size: 1rem; margin-bottom: 12px; color: var(--link); }
+.toc details { margin-bottom: 8px; }
+.toc summary {
+  cursor: pointer; padding: 8px 12px; background: var(--cinza);
+  border-radius: 8px; font-weight: 600; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after { content: "▼"; font-size: .7rem; transition: transform .2s; }
+.toc details[open] summary::after { transform: rotate(180deg); }
+.toc ul { list-style: none; padding-left: 16px; margin-top: 8px; }
+.toc li a {
+  display: block; padding: 6px 0; color: var(--text);
+  text-decoration: none; font-size: .9rem; opacity: .8;
+}
+.toc li a:hover { color: var(--link); opacity: 1; }
+
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 16px; overflow-x: auto;
+  background: var(--card); padding: 8px; border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.tab {
+  padding: 10px 14px; background: transparent; border: none;
+  border-radius: 8px; cursor: pointer; font-size: .85rem; font-weight: 600;
+  white-space: nowrap; color: var(--muted); transition: all .2s;
+}
+.tab.active { background: var(--azul); color: var(--text); }
+.tab:hover:not(.active) { background: var(--cinza); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 1rem; font-weight: 700; margin-bottom: 12px;
+  color: var(--link); display: flex; align-items: center; gap: 8px;
+}
+.card-title .num {
+  background: var(--azul); color: var(--text);
+  width: 28px; height: 28px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 700;
+}
+
+.box {
+  padding: 12px 14px; border-radius: 10px; margin-bottom: 10px;
+  border-left: 4px solid;
+}
+.box-label {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .5px; margin-bottom: 6px; opacity: .8;
+}
+.box-text { font-size: .92rem; line-height: 1.55; }
+.box-emoji { font-size: 1.1rem; margin-right: 6px; }
+
+.box-pergunta { background: var(--azul); border-color: var(--azul-borda); }
+.box-texto { background: var(--cinza); border-color: var(--cinza-borda); }
+.box-explic { background: var(--verde); border-color: var(--verde-borda); }
+.box-aplic { background: var(--ambar); border-color: var(--ambar-borda); }
+.box-reflex { background: var(--roxo); border-color: var(--roxo-borda); }
+.box-resumo { background: var(--amarelo); border-color: var(--amarelo-borda); }
+.box-fontes { background: var(--fontes); border-color: var(--fontes-borda); }
+.box-base { background: linear-gradient(135deg, #fef3c7, #fde68a); border-color: var(--base-borda); border-width: 4px; }
+[data-theme="dark"] .box-base { background: linear-gradient(135deg, #78350f, #92400e); color: #fef3c7; }
+.box-cron { background: #fce7f3; border-color: #be185d; }
+[data-theme="dark"] .box-cron { background: #831843; color: #fce7f3; }
+.box-cantico { background: #e0f2fe; border-color: #0284c7; }
+[data-theme="dark"] .box-cantico { background: #0c4a6e; color: #e0f2fe; }
+
+.ref {
+  display: inline-block; background: var(--azul);
+  color: var(--link); padding: 2px 8px; border-radius: 6px;
+  font-size: .82rem; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--azul-borda); margin: 0 2px; cursor: pointer;
+}
+.ref:hover { background: var(--azul-borda); color: white; }
+.ref.base {
+  background: linear-gradient(135deg, var(--base), #f59e0b);
+  color: #422006; border-color: var(--base-borda);
+  font-weight: 700; padding: 3px 9px;
+}
+.ref.base::before { content: "★ "; }
+
+.modal-bg {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.6); z-index: 1000;
+  align-items: center; justify-content: center; padding: 16px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: var(--card); color: var(--text);
+  max-width: 500px; width: 100%; max-height: 80vh; overflow-y: auto;
+  border-radius: 14px; padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.modal h3 { color: var(--link); margin-bottom: 12px; font-size: 1.1rem; }
+.modal .verse-text { font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.modal .close {
+  background: var(--azul); color: var(--text);
+  border: none; padding: 8px 16px; border-radius: 8px;
+  cursor: pointer; font-weight: 600; float: right;
+}
+.modal a {
+  display: inline-block; margin-top: 8px; color: var(--link);
+  font-size: .85rem; text-decoration: none; font-weight: 600;
+}
+
+.section-header {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.section-header h2 { color: var(--link); font-size: 1.15rem; }
+.section-header .emoji { font-size: 1.5rem; margin-right: 6px; }
+
+.review-card {
+  background: var(--amarelo); border: 2px dashed var(--amarelo-borda);
+  border-radius: 12px; padding: 16px; margin-bottom: 12px;
+}
+[data-theme="dark"] .review-card { background: #713f12; color: #fef3c7; }
+.review-card h4 { color: var(--text); margin-bottom: 8px; font-size: 1rem; }
+.review-card p { font-size: .92rem; line-height: 1.6; }
+
+.fontes-list { list-style: none; padding: 0; margin: 0; }
+.fontes-list li {
+  font-size: .85rem; padding: 8px 0;
+  border-bottom: 1px dashed var(--fontes-borda);
+  display: flex; align-items: flex-start; gap: 6px;
+}
+.fontes-list li:last-child { border-bottom: none; }
+.fontes-list .icon { flex-shrink: 0; }
+.fontes-list a { color: var(--link); text-decoration: none; font-weight: 500; }
+.fontes-list a:hover { text-decoration: underline; }
+.fontes-list .nota {
+  display: block; font-style: italic; opacity: .85;
+  font-size: .82rem; margin-top: 2px; padding-left: 22px;
+}
+
+.box-artigo { background: #fffbeb; border-color: #d97706; border-left: 4px solid #d97706; }
+.box-artigo .box-text { font-family: 'Georgia', 'Times New Roman', serif; line-height: 1.75; font-size: .95rem; white-space: pre-line; }
+[data-theme="dark"] .box-artigo { background: #422006; }
+[data-theme="dark"] .box-artigo .box-text { color: #fef3c7; }
+
+.media-card {
+  background: rgba(255,255,255,.6);
+  border: 1px solid var(--fontes-borda);
+  border-radius: 8px; padding: 10px; margin-top: 8px;
+  font-size: .85rem; line-height: 1.5;
+}
+.media-card .label {
+  font-weight: 700; color: var(--fontes-borda);
+  font-size: .75rem; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+[data-theme="dark"] .media-card { background: rgba(0,0,0,.3); }
+
+.img-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px; margin-bottom: 14px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.img-card img {
+  max-width: 100%; height: auto; border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.img-card figcaption {
+  font-size: .82rem; color: var(--muted); margin-top: 8px;
+  line-height: 1.5; font-style: italic;
+}
+
+.timeline {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px; margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.timeline h3 { font-size: .95rem; color: var(--link); margin-bottom: 10px; }
+.timeline-row {
+  display: grid; grid-template-columns: 110px 1fr;
+  gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--border);
+  font-size: .88rem;
+}
+.timeline-row:last-child { border-bottom: none; }
+.timeline-row .date { font-weight: 700; color: var(--base-borda); }
+
+.cantico-block {
+  background: var(--box-cantico); border: 1px solid #0284c7;
+  border-left: 4px solid #0284c7; border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.cantico-block .titulo {
+  font-weight: 700; color: #0284c7;
+  font-size: .95rem; margin-bottom: 6px;
+}
+[data-theme="dark"] .cantico-block .titulo { color: #7dd3fc; }
+.cantico-block .versiculos {
+  font-size: .88rem; line-height: 1.7; opacity: .95;
+  white-space: pre-line; font-style: italic;
+}
+
+footer {
+  text-align: center; padding: 24px 16px; font-size: .8rem;
+  color: var(--muted); border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+@media (max-width: 480px) {
+  .container { padding: 12px; }
+  header h1 { font-size: 1.1rem; }
+  .card { padding: 14px; }
+  .box { padding: 10px 12px; }
+  .box-text { font-size: .88rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📖 Como continuar leal a Jeová ao enfrentar testes de fé</h1>
+  <div class="week">Sentinela · 10–16 de agosto de 2026</div>
+  <div class="cantico">🎵 Cântico 122 — Vamos continuar firmes! · Cântico 123 — Obedecemos a Jeová e à sua organização</div>
+</header>
+
+<div class="controls">
+  <button class="btn btn-icon" onclick="toggleTheme()">🌓 Tema</button>
+  <button class="btn" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">📑 Índice</button>
+</div>
+
+<div class="container">
+
+<div class="toc" id="toc">
+  <h2>📑 Índice do Estudo</h2>
+  <details>
+    <summary>🔷 Introdução e Visão Geral</summary>
+    <ul>
+      <li><a href="#p1">1-2 · O incidente em Cafarnaum (João 6)</a></li>
+      <li><a href="#p3">3 · Como os apóstolos reagiram</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Que testes podemos enfrentar?</summary>
+    <ul>
+      <li><a href="#p4">4 · Tipos de testes de fé</a></li>
+      <li><a href="#p5">5 · Ilustração do prédio em zona de terremotos</a></li>
+      <li><a href="#p6">6 · Os apóstolos tinham alicerce firme</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Verdade 1 — Jeová é o Criador</summary>
+    <ul>
+      <li><a href="#p7">7 · Apocalipse 4:11 — por que importa?</a></li>
+      <li><a href="#p8-9">8-9 · O que fazer se você duvida que Jeová é o Criador</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Verdade 2 — Jeová é o Autor da Bíblia</summary>
+    <ul>
+      <li><a href="#p10">10 · Como encarar a Bíblia</a></li>
+      <li><a href="#p11">11 · Por que a Bíblia é inspirada por Deus</a></li>
+      <li><a href="#p12">12 · O que fazer se temos dúvidas sobre a Bíblia</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Verdade 3 — As Testemunhas de Jeová são o povo de Deus</summary>
+    <ul>
+      <li><a href="#p13">13 · O que fazer se duvidamos da organização</a></li>
+      <li><a href="#p14">14 · Mateus 24:14 — a obra mundial de pregação</a></li>
+      <li><a href="#p15">15 · Mateus 6:9 e Isaías 43:10 — o nome de Jeová</a></li>
+      <li><a href="#p16">16 · João 13:34, 35 — o amor entre irmãos</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Nunca Abandone Jeová</summary>
+    <ul>
+      <li><a href="#p17-18">17-18 · Que situações talvez enfrentemos e o que dizer com confiança</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>🔷 Material de Apoio</summary>
+    <ul>
+      <li><a href="#cron">📅 Cronologia — Onde Jesus estava quando disse isso (32 d.C.)</a></li>
+      <li><a href="#cants">🎵 Cânticos 122 e 123 (letra completa)</a></li>
+      <li><a href="#hist">📖 Contexto Histórico — Cafarnaum, Pedro, Tibério</a></li>
+      <li><a href="#rev">📝 Revisão das Respostas</a></li>
+    </ul>
+  </details>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">Introdução</button>
+  <button class="tab" onclick="showTab(1)">Testes de Fé</button>
+  <button class="tab" onclick="showTab(2)">Verdade 1</button>
+  <button class="tab" onclick="showTab(3)">Verdade 2</button>
+  <button class="tab" onclick="showTab(4)">Verdade 3</button>
+  <button class="tab" onclick="showTab(5)">Conselho Final</button>
+  <button class="tab" onclick="showTab(6)">Material</button>
+</div>
+
+<!-- TAB 0: Introdução -->
+<div class="tab-content active" id="tab0">
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Introdução — O que aconteceu em Cafarnaum?</h2>
+</div>
+
+<div class="card" id="p1">
+  <div class="card-title"><span class="num">1-2</span> O que aconteceu em Cafarnaum?</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que aconteceu enquanto Jesus estava ensinando em Cafarnaum?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">
+      “Essas palavras são chocantes. Quem pode escutar isso?” — <a class="ref" data-verse="João 6:60">Jo 6:60</a><br>
+      “A menos que comam a carne do Filho do Homem e bebam o seu sangue, vocês não têm vida em si mesmos. Quem se alimenta da minha carne e bebe o meu sangue tem vida eterna, e eu o ressuscitarei no último dia.” — <a class="ref" data-verse="João 6:53, 54">Jo 6:53, 54</a>
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Jesus tinha acabado de alimentar 5.000 homens com cinco pães e dois peixes (Jo 6:1-13). A multidão queria fazê-lo rei à força (Jo 6:15). Mas Jesus "sabia o que ia fazer" (Jo 6:6) — usou aquela oportunidade para ensinar uma das verdades mais profundas de seu ministério: ele é o "verdadeiro pão do céu" (Jo 6:32), "o pão de Deus" (Jo 6:33), "o pão da vida" (Jo 6:35), "o pão vivo" (Jo 6:51).
+      <br><br>
+      Em Cafarnaum, na sinagoga, Jesus comparou-se ao maná que os israelitas comeram no deserto — mas disse que, diferente do maná, ele daria vida <b>eterna</b>. Esse ensino <b>chocou</b> muitos. O verbo grego <i>skléros</i> (χληρός) usado em João 6:60 significa "duro, severo, difícil de aceitar" — descreve coisas que causam repulsa. Os ouvintes entenderam as palavras de Jesus literalmente (uma mordida física na carne dele) e ficaram ofendidos.
+      <br><br>
+      <b>Por que Jesus falou assim?</b> Estava testando a sinceridade da fé deles. Se só queriam pães materiais, não estavam prontos para verdades espirituais. Seus ensinos começaram a distinguir entre discípulos superficiais (que o seguiram pelo pão) e discípulos verdadeiros (que o seguiriam pela mensagem).
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando aceitamos um ensino difícil da Bíblia, precisamos parar e perguntar: "Estou rejeitando isso só porque não entendo, ou porque vai contra algo que eu quero fazer?" Jesus não estava encorajando canibalismo — ele estava mostrando que precisamos "absorver" toda a sua vida, obras e ensinamentos a tal ponto que eles se tornem parte de nós. Hoje, ler a Bíblia, meditar nela e aplicá-la é o jeito de "comer" a carne e "beber" o sangue de Jesus.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">A multidão tinha acabado de ver um milagre impressionante — alimentar 5.000 com cinco pães. Mesmo assim, deixaram Jesus por causa de um ensino difícil. Você consegue imaginar ter estado lá? Teria ficado ou ido embora? Hoje, qual ensino da Bíblia você acha "difícil de engolir"? O que isso revela sobre o fundamento da sua fé?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jesus ensinou em Cafarnaum que é o "pão da vida" — quem se alimenta dele tem vida eterna. Suas palavras sobre "comer sua carne e beber seu sangue" foram tão chocantes que muitos discípulos o abandonaram. O ensino separou os seguidores superficiais dos seguidores verdadeiros.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 1-2)</div>
+    <div class="box-text">"Essas palavras são chocantes. Quem pode escutar isso?" (João 6:60) Foi assim que muitos discípulos de Jesus reagiram ao ouvir as coisas que ele estava ensinando em Cafarnaum. Jesus tinha dito: "A menos que comam a carne do Filho do Homem e bebam o seu sangue, vocês não têm vida em si mesmos." E ele continuou: "Quem se alimenta da minha carne e bebe o meu sangue tem vida eterna, e eu o ressuscitarei no último dia." — João 6:53, 54.
+
+² Para alguns, as palavras de Jesus foram tão fortes que eles deixaram de segui-lo. Será que foi porque não tinham nenhuma fé nele? Na verdade, antes dessa ocasião, alguns, incluindo os discípulos de Jesus, ficaram tão impressionados com o que ele tinha feito que disseram: "Este é realmente o Profeta que devia vir ao mundo." (João 6:14) Então fica claro que aquelas pessoas tinham alguma fé em Jesus. Mas quando essa fé foi testada, eles não continuaram leais a ele.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/" target="_blank">João 6 — NWT (capítulo completo)</a>
+          <span class="nota">Contexto: o capítulo começa com a multiplicação dos pães (Jo 6:1-13) e termina com a confissão de Pedro (Jo 6:68). Reflete a transição do milagre físico para a revelação espiritual.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/51/1/" target="_blank">Colossenses 1:23 — NWT</a>
+          <span class="nota">A frase "clerón, ef' hymín" (κληρὸν ἐφ' ὑμῖν) usada em Jo 6:60 vem da raiz grega <i>sklḗrós</i> = "duro, severo". Paulo usa a mesma raiz em Cl 1:23 ("firmes" no alicerce).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🌍</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/51/1/" target="_blank">Cafarnaum — onde tudo aconteceu</a>
+          <span class="nota">Cidade portuária no mar da Galileia, casa de Pedro (Mc 1:29). Era a "base de operações" de Jesus na Galileia. (Insight, vol. 1, p. 411)</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="img-card">
+  <img src="sentinelas/2026442_univ_cnt_1.jpg" alt="Multiplicação dos pães">
+  <figcaption>🖼️ Multiplicação dos pães e dos peixes — o milagre imediatamente antes do discurso de Cafarnaum (Jo 6:1-13). Foi este sinal que levou a multidão a dizer "Este é realmente o Profeta" (Jo 6:14) — mas a mesma fé, testada no dia seguinte, não sobreviveu.</figcaption>
+</div>
+
+<div class="card" id="p3">
+  <div class="card-title"><span class="num">3</span> Como os apóstolos reagiram?</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como os apóstolos reagiram às palavras de Jesus, e por quê?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico (TEXTO-BASE)</div>
+    <div class="box-text">
+      "Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus." — <a class="ref base" data-verse="João 6:68, 69">Jo 6:68, 69</a>
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Quando Jesus perguntou aos 12 apóstolos se eles também queriam ir embora, Pedro deu uma resposta que se tornou um modelo de lealdade: <b>"Para quem iremos?"</b> — uma pergunta retórica que expressa adesão inabalável. Não significa que Pedro entendeu tudo o que Jesus disse (ele mesmo admite não entender); significa que ele reconheceu onde estaria a vida eterna.
+      <br><br>
+      Repare nas três confissões de Pedro em João 6:68, 69 (que coincidem com a confissão em Cesareia — <a class="ref" data-verse="Lucas 9:20">Lc 9:20</a>):
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>"O Cristo de Deus"</b> — reconhecia Jesus como o Messias prometido</li>
+        <li><b>"O Santo de Deus"</b> — reconhecia Jesus como separado/consagrado para a missão divina</li>
+        <li><b>"Tem declarações de vida eterna"</b> — reconhecia que só Jesus tem as palavras de Deus</li>
+      </ol>
+      <br>
+      Contrastando com a multidão que <b>o abandonou</b> (Jo 6:66), Pedro e os apóstolos <b>permaneceram</b>. A diferença não era nível de entendimento — era a qualidade do alicerce da fé.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando surgem dúvidas ou dificuldades, a pergunta certa não é "Eu entendo?" — é "<b>Para quem eu irei?</b>" Nenhum sistema humano, nenhuma filosofia, nenhum líder promete vida eterna. Só Jesus tem essas declarações. Permanecer com ele é a única resposta lógica para quem quer viver para sempre.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Pedro não disse "eu entendo tudo". Ele disse "eu sei quem você é". Existe diferença entre entender a Bíblia palavra por palavra e ter convicção de que ela é a mensagem de Deus. Onde você está hoje nesse espectro?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Os apóstolos reagiram com lealdade — Pedro confessou que Jesus é o Cristo de Deus, o Santo de Deus, e tem declarações de vida eterna. Mesmo sem entender tudo, eles escolheram permanecer.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 3)</div>
+    <div class="box-text">Os apóstolos tiveram uma reação diferente. Quando Jesus perguntou se eles também queriam deixar de segui-lo, Pedro respondeu: "Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus." (João 6:68, 69) Repare que Pedro não disse que ele e os outros apóstolos tinham entendido totalmente o que Jesus quis dizer quando falou que eles precisariam comer sua carne e beber seu sangue. Independentemente do que tinham entendido naquele momento, eles escolheram continuar leais a Jesus. Por quê? Porque a fé deles era baseada numa verdade inegável: Jesus era "o Cristo de Deus". — Luc. 9:20, 35.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">⭐</span>
+        <div>
+          <b>Texto-base do estudo</b> — A confissão de Pedro no final de João 6 amarra todo o estudo. Note que Jo 6:68 aparece em quase todos os artigos do nosso material como âncora.
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/9/" target="_blank">Lucas 9:20, 35 — NWT</a>
+          <span class="nota">A confissão de Pedro em Cesareia (Lc 9:20) e a voz de Deus na Transfiguração (Lc 9:35) reforçam que Pedro tinha convicção messiânica antes mesmo de Pentecostes.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/" target="_blank">1 Coríntios 15:58 — NWT</a>
+          <span class="nota">"Tenham sempre bastante para fazer na obra do Senhor" — leia junto com o artigo 6 do estudo (o alicerce firme).</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="img-card">
+  <img src="sentinelas/2026442_univ_cnt_3.jpg" alt="Muitos abandonaram Jesus, mas Pedro e os apóstolos continuaram">
+  <figcaption>🖼️ "Muitos que estavam seguindo Jesus o abandonaram, mas Pedro e os outros apóstolos continuaram com ele" (Veja o parágrafo 3.)</figcaption>
+</div>
+</div>
+
+<!-- TAB 1: Testes de Fé -->
+<div class="tab-content" id="tab1">
+<div class="section-header">
+  <h2><span class="emoji">🧪</span>Que testes vamos enfrentar?</h2>
+</div>
+
+<div class="card" id="p4">
+  <div class="card-title"><span class="num">4</span> Tipos de testes de fé</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que testes talvez enfrentemos?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">
+      "— claro, desde que vocês continuem na fé, estabelecidos no alicerce e firmes, sem serem afastados da esperança das boas novas que ouviram." — <a class="ref" data-verse="Colossenses 1:23">Cl 1:23</a>
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O artigo lista <b>três tipos principais</b> de testes de fé que podemos enfrentar hoje:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Ajuste de entendimento</b> — quando há uma mudança na compreensão de um ensino bíblico (ex.: a "geração" em Mateus 24:34, novas luzes sobre profecias). Estes testes exigem humildade e confiança no "escravo fiel e prudente" (Mt 24:45).</li>
+        <li><b>Tragédias pessoais</b> — por que Jeová permitiu que algo doloroso acontecesse? (Pessoas justas sofrem, mas Deus não é culpado — Jó 1:22; Tg 1:13.)</li>
+        <li><b>Magoa de alguém próximo</b> — um amigo, parente, ou irmão na congregação nos magoa ou age com injustiça. (Talvez o "ferro que entra na alma" de Pv 27:17.)</li>
+      </ol>
+      <br>
+      Todos esses testes compartilham algo em comum: testam a <b>qualidade do alicerce</b> da nossa fé, não a quantidade de informação que temos. Paulo sabia disso quando escreveu "continuem na fé, estabelecidos no <b>alicerce</b> e firmes" — a palavra grega <i>themelíōi</i> (θεμελίῳ) refere-se ao fundamento de um prédio.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Antes de reagir a qualquer teste de fé, faça um teste de alicerce: "Eu acredito em Jeová, na Bíblia e na organização porque eles têm evidências sólidas — ou porque eu só cresci assim?" Se o fundamento é forte, testes não derrubam — refinam.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Qual dos três testes é o mais provável de te atingir? Como você tem se preparado para ele? E honestamente — quando foi o último teste que você enfrentou? Ele te aproximou de Jeová ou te afastou?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Nossa lealdade pode ser testada de três formas: (1) ajustes de entendimento sobre doutrina; (2) tragédias que nos fazem questionar por que Jeová não interveio; (3) mágoa de pessoas que respeitamos.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 4)</div>
+    <div class="box-text">Nossa lealdade a Jeová pode ser testada de várias maneiras. Por exemplo, quando há um ajuste de entendimento sobre um ensino bíblico ou uma mudança na maneira como pregamos. Outra situação é quando passamos por alguma tragédia e ficamos pensando por que Jeová não impediu isso. Nossa lealdade também pode ser testada quando um amigo nos magoa ou alguém que respeitamos nos trata de uma maneira que parece injusta.</div>
+  </div>
+</div>
+
+<div class="card" id="p5">
+  <div class="card-title"><span class="num">5</span> Ilustração do prédio em zona de terremotos</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como podemos ilustrar a importância de fortalecer nossa fé?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Portanto, meus amados irmãos, sejam firmes, inabaláveis, e tenham sempre bastante para fazer na obra do Senhor, sabendo que o seu trabalho árduo no Senhor não é em vão." — <a class="ref" data-verse="1 Coríntios 15:58">1 Co 15:58</a>; leia <a class="ref" data-verse="Colossenses 1:23">Cl 1:23</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Jesus já tinha usado uma ilustração parecida no Sermão do Monte (Mt 7:24-27): <i>"Todo aquele que ouve essas minhas palavras e as pratica é como um homem prudente que construiu a sua casa sobre a rocha."</i> Mas aqui o enfoque é diferente — não é só ouviu-colocou em prática, é <b>continuou firme quando os tremores vieram</b>.
+      <br><br>
+      Imagine uma casa construída numa planície aluvial — uma região geológica instável. Para sobreviver a um terremoto, ela precisa de uma fundação profunda que vá até a rocha-mãe. Da mesma forma, nossa fé precisa estar firmada em <b>verdades que não mudam</b> — a existência de Jeová, a confiabilidade da Bíblia, a identidade do povo de Deus.
+      <br><br>
+      Paulo une dois conceitos em 1 Coríntios 15:58: <b>firmes</b> (sedentários, ancorados) + <b>inabaláveis</b> (não sujeitos a ser movidos) + <b>abundantes na obra</b> (produtivos). Não é uma fé passiva — é uma fé que <b>age</b>.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça uma "inspeção do alicerce" este mês: liste as 3 maiores dúvidas ou fraquezas na sua fé. Para cada uma, escreva uma "evidência" da qual você está convencido. Se faltam evidências, estude mais — não espere o terremoto.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Em Mateus 7:26, Jesus chama quem ouve mas não pratica de "homem tolo". Em outras palavras, ouvir a verdade não é o bastante — é preciso <b>construir</b> em cima dela. O que você tem construído na sua fé este mês?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Como um prédio em zona de terremotos precisa de fundação profunda, nossa fé precisa estar firmada em verdades que não mudam. Não basta ouvir — é preciso construir em cima das verdades.</div>
+  </div>
+</div>
+
+<div class="card" id="p6">
+  <div class="card-title"><span class="num">6</span> Os apóstolos tinham alicerce firme</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que ajudou os apóstolos a continuar leais a Jesus?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus." — <a class="ref" data-verse="João 6:68, 69">Jo 6:68, 69</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O artigo identifica <b>três verdades</b> que formavam o alicerce dos apóstolos — e que formarão o nosso:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Jeová é o Criador de todas as coisas</b> — e por isso é digno de adoração.</li>
+        <li><b>Jeová é o Autor da Bíblia</b> — portanto, ela é a mensagem dele para nós.</li>
+        <li><b>Jesus é o Filho de Deus</b> — ele tem "declarações de vida eterna" e apoio total de Jeová.</li>
+      </ol>
+      <br>
+      <b>Paralelo moderno:</b> assim como Pedro escolheu Jesus em vez do "mundo fácil", hoje nós escolhemos a organização de Jeová quando o mundo oferece alternativas mais cômodas. As mesmas três verdades sustentam nossa decisão.
+      <br><br>
+      <b>Insight histórico:</b> Pedro e André foram pescadores-galileus (Mt 4:18-22), trabalhadores braçais com pouca escolaridade rabínica (At 4:13). Mas eles tinham algo mais importante — eles <b>andaram com Jesus</b> pessoalmente. Nós não temos isso, mas temos o registro dos Evangelhos + o conselho do "escravo fiel" (Mt 24:45). O resultado prático é o mesmo: adesão inabalável.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Ao final de cada semana, reflita: "Esta semana, eu fortifiquei alguma das três verdades do meu alicerce? Ou elas só ficaram no piloto automático?" A fé é como músculo — se você não usar, atrofia.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Pedro não era teólogo formado — era pescador. Mas ele tinha uma relação pessoal com Jesus e três verdades firmes. Você tem dedicado tempo para fortalecer essas três verdades, ou tem confiado apenas em "eu cresci na Verdade"?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Os apóstolos foram leais porque tinham três convicções firmes: Jeová é o Criador, é o Autor da Bíblia, e Jesus tem declarações de vida eterna. Essas três verdades são o alicerce da nossa fé também.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 6)</div>
+    <div class="box-text">Mesmo quando muitos abandonaram Jesus, os apóstolos continuaram leais a ele. Por quê? Eles estavam convencidos que Jeová deve ser adorado por ser o Criador de todas as coisas; que Jesus é o Filho de Deus e tem "declarações de vida eterna"; e que Jesus tem total apoio de Jeová. Agora, em vez de considerarmos várias situações que podem testar nossa fé, vamos nos concentrar em três verdades que podem nos ajudar a continuar bem firmes, seja qual for o teste que enfrentarmos. São elas: (1) Jeová é o Criador de todas as coisas; (2) Jeová é o Autor da Bíblia; e (3) as Testemunhas de Jeová são o povo de Deus. Se estivermos totalmente convencidos dessas três verdades, vamos continuar leais a Jeová em qualquer situação.</div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 2: Verdade 1 — Criador -->
+<div class="tab-content" id="tab2">
+<div class="section-header">
+  <h2><span class="emoji">🌍</span>Verdade 1 — Jeová é o Criador</h2>
+</div>
+
+<div class="card" id="p7">
+  <div class="card-title"><span class="num">7</span> Apocalipse 4:11 — por que importa?</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que Apocalipse 4:11 nos lembra, e por que é importante ter certeza disso?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Digno és, Jeová, nosso Deus, de receber a glória, a honra e o poder, porque criaste todas as coisas, e por tua vontade elas vieram à existência e foram criadas." — <a class="ref" data-verse="Apocalipse 4:11">Ap 4:11</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Apocalipse 4 descreve a cena celestial em que 24 anciãos se lançam diante do trono de Deus. O versículo 11 é o motivo da adoração deles: a <b>criação</b> por si só torna Jeová digno de glória, honra e poder. Note o nome pessoal — <b>Jeová</b> — usado aqui, o que confirma que o Deus verdadeiro tem nome, e que ele o revelou.
+      <br><br>
+      O versículo declara que todas as coisas vieram à existência "pela tua vontade" — não por acidente, não por força bruta, não por "big bang" sem propósito. Esse é o fundamento de toda a adoração pura (Mt 4:10): se Jeová é o Criador, ele tem o direito de dizer como devemos adorá-lo.
+      <br><br>
+      <b>Por que isso é vital para a fé?</b> Se duvidamos que Jeová é o Criador, todo o resto da fé desmorona. Hebreus 11:6 diz que <i>"sem fé é impossível agradar a Deus, pois quem se aproxima de Deus tem de crer que ele existe e que se torna o recompensador dos que o buscam seriamente"</i> — aceitar que ele existe é o primeiro passo.
+      <br><br>
+      <b>Contextualização:</b> vivemos num mundo saturado de evolucionismo — televisão, documentários, manchetes na internet. Paulo já sabia que isso seria um teste, por isso escreveu em Romanos 1:20 que a criação mostra o poder eterno de Deus de modo <b>claramente visto</b>.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Reserve 5 minutos por dia esta semana para observar a criação ao seu redor — o céu, as plantas, o corpo humano. Use isso como "reforço do alicerce". A fé vem pelo ouvir (Rm 10:17), mas é <b>mantida</b> pela contemplação das evidências (Sl 19:1).</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue explicar por que acredita que Jeová é o Criador — em palavras claras, para uma criança de 5 anos? Se a resposta é "porque meus pais sempre me ensinaram isso", vale aprofundar.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Apocalipse 4:11 declara que Jeová é digno de adoração porque ele criou todas as coisas. A criação é a base da nossa fé — sem ela, todo o resto fica sem fundamento.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 7)</div>
+    <div class="box-text">Leia Apocalipse 4:11. Esse texto nos lembra que Jeová criou todas as coisas. Esse fato, por si só, já torna Jeová digno de nossa adoração. E quando meditamos no seu impressionante poder, nós ficamos convencidos que ele pode nos ajudar em qualquer desafio. Só que, por culpa de Satanás, o mundo está cheio de informações falsas que fazem as pessoas duvidarem da existência de Deus. Alguns cientistas talvez até defendam a ideia de que a vida surgiu sozinha. É importante estarmos totalmente convencidos que Jeová é o Criador e que ele nos ama. Assim, quando sofrermos, não vamos ter dúvida de que ele existe e que vai nos ajudar. — Heb. 11:6.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/" target="_blank">Hebreus 11:6 — NWT</a>
+          <span class="nota">"Sem fé é impossível agradar a Deus" — o "crer que ele existe" é pré-requisito. Note a ordem: existência → recompensa.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/1/" target="_blank">Romanos 1:20 — NWT</a>
+          <span class="nota">"As suas qualidades invisíveis [...] são claramente vistas desde a criação do mundo" — Paulo argumentou com os romanos pagãos usando a criação como evidência.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/4/" target="_blank">Apocalipse 4 — NWT (cap. completo)</a>
+          <span class="nota">Neste capítulo, 24 anciãos + 4 criaturas vivas adoram a Jeová. Note a Trindade NÃO está envolvida — é o Pai, no trono, recebendo adoração direta. Os 24 anciãos representam os 12 patriarcas + 12 apóstolos.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p8-9">
+  <div class="card-title"><span class="num">8-9</span> O que fazer se você duvida que Jeová é o Criador</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que você deve fazer se começar a ter dúvidas de que Jeová é o Criador?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Pois as suas qualidades invisíveis — isto é, seu poder eterno e Divindade — são claramente vistas desde a criação do mundo, porque são percebidas por meio das coisas feitas." — <a class="ref" data-verse="Romanos 1:20">Rm 1:20</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O artigo dá um conselho prático muito sábio: <b>"aja imediatamente"</b>. Não espere a dúvida crescer. Use os materiais que a própria organização preparou para fortalecer a fé nesta área específica:
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Brochura "A Vida — Teve um Criador?"</b> — argumento direto, pensada para conversa com céticos.</li>
+        <li><b>Brochura "A Origem da Vida — Cinco Perguntas Que Merecem Resposta"</b> — respostas a objeções comuns.</li>
+        <li><b>Série "Teve um Projeto?"</b> — conteúdo audiovisual em jw.org com demonstrações de design na natureza.</li>
+        <li><b>Livro "Existe um Criador Que Se Importa com Você?"</b> — abordagem emocional + racional.</li>
+      </ul>
+      <br>
+      A citação de Jessica (EUA) é poderosa: depois de ler a brochura "A Origem da Vida", ela disse que os argumentos a ajudaram a <b>eliminar</b> qualquer dúvida. Isso mostra que dúvidas <b>não são pecado</b> — o que importa é o que fazemos com elas.
+      <br><br>
+      <b>Insight útil:</b> Jordan (um jovem citado no parágrafo 12) diz que "preciso provar pra mim mesmo se aquilo é verdade". Esse é o princípio bíblico de 1 Tessalonicenses 5:21 — "examinem todas as coisas; apeguem-se ao que é bom". A organização <b>encoraja</b> que você examine a fé com honestidade.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Esta semana, pegue um dos materiais sugeridos e leia <b>15 minutos por dia</b>. Não é "tarefa chata" — é "blindagem espiritual". Se você nunca releu essas brochuras desde que se batizou, talvez seja a hora.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Jessica achou que "já sabia" que Jeová era o Criador, mas a releitura eliminou suas dúvidas. O que isso te sugere sobre a importância de <b>revisitar</b> verdades básicas?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Se você começa a duvidar que Jeová é o Criador: aja imediatamente. Pesquise em nossas publicações — A Vida — Teve um Criador?, A Origem da Vida, série "Teve um Projeto?", livro Existe um Criador — até eliminar a dúvida.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 8-9)</div>
+    <div class="box-text">⁸ Se você começar a duvidar que Jeová é o Criador, aja imediatamente. Pesquise a fundo informações em nossas publicações sobre a verdade clara e evidente de que Jeová criou todas as coisas. Nas brochuras A Vida — Teve um Criador? e A Origem da Vida — Cinco Perguntas Que Merecem Resposta, você pode encontrar muitas informações que vão fortalecer sua fé. Além disso, você pode encontrar outras fortes evidências na série "Teve um Projeto?", no site jw.org. Jessica, uma jovem dos Estados Unidos, diz: "Depois de ler a brochura Origem da Vida, eu tive certeza de que os fatos mostram que um Projetista muito inteligente está por trás de tudo. Eu já sabia disso, mas os argumentos dessa brochura me ajudaram a eliminar qualquer dúvida que eu tinha." Outra coisa que ajudou muitas pessoas foi reler o livro Existe um Criador Que Se Importa com Você?. Pode ser que você já tenha lido essas publicações, mas que tal ler novamente?
+
+⁹ No seu próximo projeto de estudo pessoal, você pode analisar evidências que provam que Deus existe. Além de fortalecer sua fé na existência de Jeová, sua pesquisa vai ajudar você a conhecer melhor a personalidade dele. (Rom. 1:20) Você também vai poder usar o que aprendeu para ajudar outros que duvidam que Deus existe. O fato é: Jeová nos deu inúmeras provas de que ele é o nosso Criador.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/folhetos/lc-criador/" target="_blank">Brochura: A Vida — Teve um Criador?</a>
+          <span class="nota">Folheto de 32 páginas, mostra como a vida tem assinatura de um Projetista. Argumentos: DNA, células, sistema circulatório, sistemas conjugados.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/folhetos/origem-vida/" target="_blank">Brochura: A Origem da Vida — Cinco Perguntas Que Merecem Resposta</a>
+          <span class="nota">Responde: 1) O que é vida? 2) De onde veio a vida? 3) A vida evoluiu? 4) O design exige um designer? 5) Por que acreditar na Bíblia?</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">🎬</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">Série "Teve um Projeto?" (jw.org)</a>
+          <span class="nota">Episódios curtos mostrando design na natureza: bandeira-de-cauda-de-andorinha, estrela-do-mar, simbiose, baile das abelhas, etc. Excelente para estudos de família.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📒</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/existe-criador/" target="_blank">Livro: Existe um Criador Que Se Importa com Você?</a>
+          <span class="nota">Abordagem direta das 5 perguntas principais sobre a existência de Deus. Ideal para quem está começando a estudar.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="img-card">
+  <img src="sentinelas/2026442_univ_cnt_2.jpg" alt="Nebulosa, peixe, avião — exemplos de design na natureza">
+  <figcaption>🖼️ "Nebula: IAC/RGO/David Malin Images; fish and car: Mercedes-Benz USA; plane: Kristen Bartlett/University of Florida". Imagem citada no parágrafo 9 — exemplos de "design" tanto na natureza quanto na engenharia humana, mostrando que o design exige um designer.</figcaption>
+</div>
+</div>
+
+<!-- TAB 3: Verdade 2 — Bíblia -->
+<div class="tab-content" id="tab3">
+<div class="section-header">
+  <h2><span class="emoji">📖</span>Verdade 2 — Jeová é o Autor da Bíblia</h2>
+</div>
+
+<div class="card" id="p10">
+  <div class="card-title"><span class="num">10</span> Como encarar a Bíblia</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como encaramos a Bíblia?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Toda a Escritura é inspirada por Deus e proveitosa para ensinar, para repreender, para endireitar as coisas, para disciplinar em justiça, a fim de que o homem de Deus seja plenamente competente, completamente equipado para toda boa obra." — <a class="ref" data-verse="2 Timóteo 3:16, 17">2 Tm 3:16, 17</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O termo grego <i>theopneustos</i> (θεόπνευστος) em 2 Timóteo 3:16 é uma única palavra — literalmente, "soprada por Deus" (<i>theo</i> = Deus + <i>pneustos</i> = soprado/respirado). Pedro explica como isso funcionou: <i>"homens falaram da parte de Deus, conforme eram movidos por espírito santo"</i> (2 Pe 1:21). Os escritores não perderam a personalidade — mantiveram estilo, vocabulário, contexto cultural — mas o conteúdo veio de Deus.
+      <br><br>
+      Paulo descreve 4 utilidades da Escritura inspirada:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Ensinar</b> (didaskalía) — doutrina correta</li>
+        <li><b>Repreender</b> (elegmos) — correção de erros</li>
+        <li><b>Endireitar</b> (epanórthosis) — ajustamento, retoque</li>
+        <li><b>Disciplinar em justiça</b> (paideía) — educação moral</li>
+      </ol>
+      <br>
+      O resultado: o "homem de Deus" (cristão maduro) é "plenamente competente, completamente equipado" — adjetivo grego <i>ártios</i> (ἄρτιος) significa "completo, sem falta". A Bíblia tem tudo o que precisamos para servir a Deus.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Trate a Bíblia como sua "caixa de ferramentas espirituais". Quando surgir dúvida, abra-a. Quando precisar de coragem, abra-a. Quando quiser entender Jeová melhor, abra-a. Cada livro, cada capítulo, cada versículo tem uma função específica.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você consegue pensar em algum momento em que a Bíblia te "repreendeu" ou "endireitou" — onde um ensinamento específico te fez mudar um comportamento? Ou ela tem ficado mais na estante do que no coração?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A Bíblia é inspirada por Deus — "soprada por Ele". Ela tem 4 utilidades: ensinar, repreender, endireitar, disciplinar. Ela nos torna completamente equipados para toda boa obra.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 10)</div>
+    <div class="box-text">Leia 2 Timóteo 3:16, 17. A Bíblia é uma mensagem inspirada de Jeová para a humanidade. Ela responde às perguntas mais importantes da vida, nos diz qual é a vontade de Jeová e o que ele quer que façamos. Nós acreditamos que Jeová é o Autor da Bíblia, o que faz da Bíblia o livro mais importante em nossa vida. Por isso, fazemos o máximo para entender a Palavra de Deus e colocar em prática o que ela ensina.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/" target="_blank">2 Timóteo 3:16, 17 — NWT</a>
+          <span class="nota">Único versículo na Bíblia que descreve <b>todos</b> os usos da Escritura. Paulo escreveu isso no final da vida, sob perseguição.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/61/1/" target="_blank">2 Pedro 1:20, 21 — NWT</a>
+          <span class="nota">Pedro confirma o mecanismo: "homens falaram da parte de Deus, conforme eram movidos por espírito santo". A inspiração não é ditado mecânico — é "movidos" (gr. <i>ferómenoi</i>), como um barco é movido pelo vento.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p11">
+  <div class="card-title"><span class="num">11</span> Por que a Bíblia é inspirada por Deus</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que convence você que a Bíblia é inspirada por Deus?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Vejam, estou para morrer, e vocês bem sabem, de todo o seu coração e de toda a sua alma, que não falhou nem sequer uma palavra de todas as boas promessas que Jeová, seu Deus, lhes fez. Todas elas se cumpriram para vocês. Nem sequer uma delas falhou." — <a class="ref" data-verse="Josué 23:14">Js 23:14</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O artigo apresenta <b>cinco evidências</b> de que a Bíblia é inspirada por Deus:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Exatidão histórica</b> — Lucas 3:1, 2 é tão preciso que nomeia 6 governantes simultâneos (Tibério César, Pôncio Pilatos, Herodes, Filipe, Lisânias, Anás e Caifás). Inscrições arqueológicas confirmaram os nomes. (Veja <a class="ref" data-verse="Lucas 3:1, 2">Lc 3:1, 2</a>)</li>
+        <li><b>Exatidão científica</b> — Jó 26:7 ("estende os céus do norte sobre o vazio, suspende a terra sobre o nada") foi escrito há 3.500 anos, mas usa linguagem que combina com a astronomia e geologia modernas. (<a class="ref" data-verse="Jó 26:7">Jó 26:7</a>)</li>
+        <li><b>Distribuição sem paralelo</b> — o livro mais distribuído de todos os tempos, apesar de séculos de tentativas de eliminá-lo.</li>
+        <li><b>Unidade impressionante</b> — 40 escritores ao longo de 1.600 anos, mas a mensagem não se contradiz. Demonstra um Autor por trás.</li>
+        <li><b>Atualidade + profecia cumprida</b> — Pr 13:20, 15:21; Mt 7:12 continuam relevantes. Josué 23:14 — promessa confirmada.</li>
+      </ol>
+      <br>
+      <b>Para refletir:</b> nenhum outro livro da história combina essas 5 qualidades. Você consegue pensar em outro que tenha o mesmo nível de evidência?
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Compartilhe no estudo de família uma dessas 5 evidências, especialmente com crianças. Por exemplo, mostre como Jó 26:7 é compatível com a ciência moderna. A fé fica mais forte quando é compartilhada com explicação.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Você acha mais forte a evidência histórica (Lucas 3:1, 2), a científica (Jó 26:7) ou a profética (Josué 23:14)? Por que aquela em particular te convence mais? Talvez seja a que você tem mais facilidade de compartilhar.</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">A Bíblia é inspirada por Deus: (1) é historicamente exata, (2) é cientificamente correta, (3) é o livro mais distribuído do mundo, (4) tem unidade apesar de 40 escritores, (5) é atual e suas profecias se cumpriram.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 11)</div>
+    <div class="box-text">Por que temos certeza de que Jeová é o Autor da Bíblia? Por várias razões. Por exemplo, a Bíblia é exata ao falar sobre assuntos históricos. (Luc. 3:1, 2) Ela também é exata quando fala sobre a natureza. (Jó 26:7) Além disso, ela é o livro mais distribuído de todos os tempos, apesar dos esforços de Satanás de eliminá-la. A Bíblia foi escrita por uns 40 homens num período de cerca de 1.600 anos; ainda assim, sua mensagem se completa e não se contradiz. Mesmo tendo sido escrita há muito tempo, seus conselhos continuam atuais e ajudam milhões de pessoas até hoje. (Pro. 13:20; 15:21; Mat. 7:12) E muitas profecias da Bíblia já se cumpriram, o que é mais um motivo para confiarmos nela. (Jos. 23:14) Com toda a certeza, a Bíblia é um livro inspirado por Deus!</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/3/" target="_blank">Lucas 3:1, 2 — NWT</a>
+          <span class="nota">Tibério César (14–37 EC, ano 15o = 28–29 EC); Pôncio Pilatos (26–36 EC); Herodes Antipas (4 AEC – 39 EC); Filipe (4 AEC – 34 EC). <b>Todas as datas conferem com o início do batismo de João Batista</b>. A "inscrição de Pilatos" em Cesareia confirma sua precisão.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/26/" target="_blank">Jó 26:7 — NWT</a>
+          <span class="nota">"Estende os céus do norte sobre o vazio" — astronomia moderna confirma que o hemisfério celeste norte é "vazio" (ausência de estrelas brilhantes). "Suspende a terra sobre o nada" — concorda com a ausência de apoio visível da Terra no espaço.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/6/23/" target="_blank">Josué 23:14 — NWT</a>
+          <span class="nota">Palavras de despedida de Josué. Note: ele disse "não falhou nem sequer uma palavra" — declaração profética que se cumpriu em cada detalhe. Como Josué pôde ter tanta certeza? Porque conhecia Jeová pessoalmente.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p12">
+  <div class="card-title"><span class="num">12</span> O que fazer se temos dúvidas sobre a Bíblia</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que devemos fazer se já não temos tanta certeza de que Jeová é o Autor da Bíblia?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Ora, se alguém construir sobre o alicerce com ouro, prata, pedras preciosas, ou com madeira, feno, palha, a qualidade da obra de cada um ficará evidente, pois o dia a porá à mostra; porque será revelada por meio de fogo, e o próprio fogo mostrará que tipo de obra cada um realizou." — <a class="ref" data-verse="1 Coríntios 3:12, 13">1 Co 3:12, 13</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O artigo dá um conselho muito prático: <b>coloque em oração e aja em harmonia</b>. Não peça a Jeová convicção se você não vai agir. A fé exige movimento — Tiago 2:26 lembra que "a fé, sem obras, está morta".
+      <br><br>
+      O exemplo de <b>Jordan</b> é tocante: <i>"Eu não vou logo acreditando em tudo que me falam. Eu preciso provar pra mim mesmo se aquilo é verdade. Sinceramente, eu ainda tenho algumas dúvidas de vez em quando. Mas aí eu me esforço para fazer pesquisas em nossas publicações, encontrar respostas e eliminar minhas dúvidas."</i>
+      <br><br>
+      Três lições de Jordan:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Não é pecado ter dúvidas</b> — ele "ainda tem algumas dúvidas de vez em quando".</li>
+        <li><b>Ele pesquisa</b> — não deixa a dúvida criar raiz.</li>
+        <li><b>Ele age</b> — "encontrar respostas e eliminar minhas dúvidas".</li>
+      </ol>
+      <br>
+      A ilustração de 1 Coríntios 3:12, 13 é poderosa: nossas obras serão testadas pelo "fogo" — algumas resistem (ouro, prata, pedras preciosas), outras viram cinzas (madeira, feno, palha). A diferença entre "fé autêntica" e "fé oca" é o que construímos em cima.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Se você tem uma dúvida específica sobre a Bíblia, escreva-a. Depois, faça uma busca no wol.jw.org com a pergunta. Comece pelo Reasoning Book ou pelo <i>Estudo Perspicaz das Escrituras</i> (Insight). Em 30 minutos, muitas dúvidas se dissolvem.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Paulo usa materiais de construção (ouro, prata, pedras preciosas vs. madeira, feno, palha). Qual material você está usando para construir sua fé? O que você vai levar para o "fogo" do teste?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Se temos dúvidas sobre a Bíblia: (1) coloque em oração, (2) aja em harmonia com o que pediu, (3) pesquise em nossas publicações, (4) encontre respostas e elimine a dúvida. A fé exige movimento.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 12)</div>
+    <div class="box-text">O que devemos fazer se começarmos a ter dúvidas de que Jeová é o Autor da Bíblia? Devemos colocar isso em oração e agir em harmonia com o que pedimos. Veja o que um jovem irmão chamado Jordan, que foi criado como Testemunha de Jeová, diz: "Eu não vou logo acreditando em tudo que me falam. Eu preciso provar pra mim mesmo se aquilo é verdade. Sinceramente, eu ainda tenho algumas dúvidas de vez em quando. Mas aí eu me esforço para fazer pesquisas em nossas publicações, encontrar respostas e eliminar minhas dúvidas." Quanto mais ficamos convencidos que Jeová inspirou a Bíblia, mais fortalecemos o alicerce da nossa fé. — 1 Cor. 3:12, 13.</div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 4: Verdade 3 — Organização -->
+<div class="tab-content" id="tab4">
+<div class="section-header">
+  <h2><span class="emoji">👥</span>Verdade 3 — As Testemunhas de Jeová são o povo de Deus</h2>
+</div>
+
+<div class="card" id="p13">
+  <div class="card-title"><span class="num">13</span> O que fazer se duvidamos da organização</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">O que devemos fazer se começarmos a duvidar sobre quem é o povo de Deus hoje?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Realmente, então, pelos seus frutos vocês reconhecerão esses homens. Nem todo o que me disser: 'Senhor, Senhor', entrará no Reino dos céus, mas apenas aquele que fizer a vontade do meu Pai, que está nos céus." — <a class="ref" data-verse="Mateus 7:20, 21">Mt 7:20, 21</a>; leia também <a class="ref" data-verse="2 Timóteo 4:3, 4">2 Tm 4:3, 4</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O conselho aqui é simples e prático: <b>não deixe a dúvida criar raízes</b>. Em vez disso, faça <b>três perguntas</b> a si mesmo:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>'Quem está fazendo seu melhor para levar uma vida de acordo com os padrões da Bíblia?'</b> — medite nas reuniões, na pregação, nas decisões morais dos irmãos ao seu redor.</li>
+        <li><b>'Quem baseia suas crenças no que a Bíblia diz?'</b> — compare com igrejas que adicionam tradições, filosofia, ou ecumenismo.</li>
+        <li><b>'Quem está fazendo a vontade de Jeová hoje?'</b> — pense na pregação, no discipulado, na unidade entre congregações.</li>
+      </ol>
+      <br>
+      Mateus 7:20 é o teste dos "frutos" — usado por Jesus para discernir verdadeiros e falsos. Significa: examine o estilo de vida, as prioridades, os resultados de longo prazo de uma organização.
+      <br><br>
+      2 Timóteo 4:3, 4 fala de professores falsos que virão quando as pessoas "não suportarem o ensinamento sadio". Note: quem <b>ama</b> o ensinamento sadio é sinal de fidelidade a Jeová.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Faça este exercício esta semana: anote 3 exemplos concretos de como a organização mudou sua vida (uma decisão que você tomou por causa de um conselho, um estudo bíblico que te ajudou, etc.). Cole a lista dentro da sua Bíblia.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Jeová sempre teve um povo organizado — desde Noé, passando por Israel, até a congregação cristã. O que faz a organização de Jeová hoje <b>diferente</b> das religiões do mundo? (Resposta curta: a base bíblica + a obra de pregação mundial + a unidade entre culturas.)</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Se duvidamos da organização: não deixemos a dúvida criar raízes. Perguntemos: Quem vive segundo a Bíblia? Quem baseia nela suas crenças? Quem faz a vontade de Jeová? Os "frutos" da organização respondem isso.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 13)</div>
+    <div class="box-text">Se em algum momento começarmos a ter dúvidas de que as Testemunhas de Jeová são a organização que Jeová está usando hoje, não podemos deixar que elas criem raízes. Em vez disso, precisamos esclarecer nossas dúvidas. Por exemplo, podemos meditar no seguinte: 'Quem está fazendo seu melhor para levar uma vida de acordo com os padrões da Bíblia? Quem baseia suas crenças no que a Bíblia diz? Quem está fazendo a vontade de Jeová hoje?' — Mat. 7:20, 21; 2 Tim. 4:3, 4.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/" target="_blank">Mateus 7:20, 21 — NWT</a>
+          <span class="nota">O "teste dos frutos" no Sermão do Monte. Jesus não usou regras externas, mas resultados visíveis: comportamento, amor, dedicação.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/4/" target="_blank">2 Timóteo 4:3, 4 — NWT</a>
+          <span class="nota">Paulo avisa que nos "últimos dias" muitos preferirão "cocá-cegas" — Ensino confortável em vez de verdade. Esse tempo chega quando a maioria "não suporta o ensinamento sadio".</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p14">
+  <div class="card-title"><span class="num">14</span> Mateus 24:14 — a obra mundial de pregação</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como as Testemunhas de Jeová têm sido usadas para cumprir a profecia de Mateus 24:14?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"E estas boas novas do Reino serão pregadas em toda a terra habitada, em testemunho a todas as nações, e então virá o fim." — <a class="ref" data-verse="Mateus 24:14">Mt 24:14</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Mateus 24:14 é uma das profecias mais importantes do Sermão do Monte das Oliveiras. Jesus respondeu a 4 perguntas dos discípulos: (1) Quando será a destruição do templo? (2) Qual será o sinal da tua presença? (3) O que vai acontecer antes do fim? (4) Como saberemos o fim?
+      <br><br>
+      Esta profecia foi dita na Páscoa de 33 EC, no Monte das Oliveiras. Jesus predisse que uma pregação mundial ocorreria <b>antes</b> do fim. Note os elementos:
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Em toda a terra habitada</b> (gr. <i>oikouménē</i> οἰκουμένη) — alcance geográfico mundial</li>
+        <li><b>Em testemunho a todas as nações</b> — para todos os grupos étnicos</li>
+        <li><b>E então virá o fim</b> — a pregação universal precede o fim</li>
+      </ul>
+      <br>
+      O artigo destaca que <b>apenas</b> as Testemunhas de Jeová pregam "as boas novas do Reino de Deus em mais de 240 países e territórios" — e esse trabalho já é realizado há mais de cem anos. Isso é uma <b>prova visível</b> de que somos a organização de Jeová.
+      <br><br>
+      <b>Paralelo profético:</b> assim como os profetas do AT (Isaías, Jeremias) cumpriram suas missões ao longo de décadas, esta pregação mundial também está em andamento há gerações.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando o estudante no campo perguntar "por que vocês pregam de casa em casa?", esta é a resposta direta: "Porque Jesus disse que isso aconteceria antes do fim — e estamos fazendo parte agora." Sua pregação tem impacto profético.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">A profecia de Mt 24:14 foi dita há quase 2.000 anos. Por que só agora — nas últimas décadas — uma religião está pregando em mais de 240 países ao mesmo tempo? O que mudou?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Jesus profetizou que as boas novas do Reino seriam pregadas em toda a terra habitada, em testemunho a todas as nações, e então viria o fim. Hoje, apenas as Testemunhas de Jeová estão pregando em mais de 240 países — e há mais de 100 anos.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 14)</div>
+    <div class="box-text">Ao analisar quem está fazendo a vontade de Deus hoje, podemos nos perguntar: 'Quem está realizando o trabalho de pregação que Jesus disse que ocorreria durante os últimos dias?' (Mat. 24:14) A resposta é bem fácil de enxergar: Deus está usando o seu povo, as Testemunhas de Jeová, para realizar a obra de pregação. Apenas as Testemunhas de Jeová pregam as boas novas do Reino de Deus em mais de 240 países e territórios. E esse trabalho já é realizado há mais de cem anos. Sem dúvida, as Testemunhas de Jeová continuam focadas e consideram a pregação o trabalho mais importante que existe. — Mat. 28:19, 20.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/24/" target="_blank">Mateus 24:14 — NWT</a>
+          <span class="nota">Profecia central do Sermão das Oliveiras. Cumprida em nossos dias — verificação histórica do início da pregação organizada pelas Testemunhas de Jeová (séc. 20).</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/28/" target="_blank">Mateus 28:19, 20 — NWT</a>
+          <span class="nota">A grande comissão de Jesus. Note a tríade: "façam discípulos", "batizem", "ensinem". Esse trio de ações define a obra das Testemunhas de Jeová.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p15">
+  <div class="card-title"><span class="num">15</span> Mateus 6:9 e Isaías 43:10 — o nome de Jeová</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Como as Testemunhas de Jeová dão honra ao nome de Deus hoje?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">
+      "Pai nosso, que estás nos céus, santificado seja o teu nome." — <a class="ref" data-verse="Mateus 6:9">Mt 6:9</a>; <a class="ref" data-verse="Isaías 43:10">Is 43:10</a>: "Vocês são as minhas testemunhas, diz Jeová, Sim, meu servo a quem escolhi, para que vocês me conheçam e tenham fé em mim, e entendam que eu sou o mesmo."
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O nome <b>Jeová</b> é central na Bíblia. Aparece mais de <b>7.000 vezes</b> na NWT (Texto Principal + Notas). É o Tetragrama (4 letras hebraicas: יהוה – YHWH).
+      <br><br>
+      Mateus 6:9 ensina o modelo de oração: <b>a primeira coisa</b> a pedir é "santificado seja o teu nome". Antes de pedir pão, antes de pedir perdão, antes de pedir proteção — o nome vem primeiro. Isso mostra a prioridade de Jeová.
+      <br><br>
+      Isaías 43:10 mostra o papel das "testemunhas" de Jeová: <b>dar a conhecer</b> o nome dele e <b>ter fé</b> nele. Note: somos identificados pelo nome dele — somos "Testemunhas <b>de Jeová</b>". Não escolhemos esse nome; Jeová o revela (Sl 83:18).
+      <br><br>
+      Por que isso é raro no mundo cristão? A maioria das Bíblias substituiu o nome por "SENHOR" (em letras maiúsculas) ou "Deus". A superstição judaica antiga de não pronunciar o nome de Deus criou a confusão. A NWT restaurou o nome nos lugares onde aparece, devolvendo a identidade do Deus verdadeiro.
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-text">
+      <b>Comparação com outras religiões:</b>
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Catolicismo</b> — usa "Deus" e "Senhor"; o nome "Jeová" foi removido das Bíblias portuguesas.</li>
+        <li><b>Islamismo</b> — usa "Alá" (que originalmente pode ter derivado de "El" — Deus, mas não é o nome pessoal).</li>
+        <li><b>Judaísmo</b> — substituiu por "Adonai" (Senhor) por superstição.</li>
+        <li><b>Testemunhas de Jeová</b> — usam "Jeová" (forma latinizada do Tetragrama).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Ao orar esta semana, comece declarando o nome de Jeová. "Querido Jeová, ..." — use o nome dele. Ore pelo nome dele. Declare o nome dele. É um privilégio que poucos no mundo têm.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">O nome "Jeová" aparece cerca de 7.000 vezes na Bíblia. Mas quantas vezes você falou o nome de Deus em oração esta semana? Em conversa normal? O nome é precioso — ou ficou corriqueiro?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">As Testemunhas de Jeová dão honra ao nome dele: temos orgulho de ser chamadas por ele. Nosso nome pessoal é "Jeová" — revelado na Bíblia mais de 7.000 vezes. A maioria das religiões substituiu o nome; nós o preservamos.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 15)</div>
+    <div class="box-text">Leia Mateus 6:9 e Isaías 43:10. Fazemos parte de um povo que é identificado pelo nome pessoal de Deus, Jeová, e isso torna esse nome conhecido. Então, temos muito orgulho de ser chamados Testemunhas de Jeová. Hoje a maioria das pessoas não sabe que o nome de Deus é Jeová, mas nós nos esforçamos muito para produzir uma Bíblia em que o nome de Deus aparece nos lugares em que deveria. Ele é encontrado mais de 7 mil vezes no texto principal da Tradução do Novo Mundo da Bíblia Sagrada.</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/" target="_blank">Mateus 6:9 — NWT</a>
+          <span class="nota">A primeira petição do "Pai-Nosso" é sobre o nome de Deus. Antes de qualquer pedido, vem a honra ao nome.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/43/" target="_blank">Isaías 43:10 — NWT</a>
+          <span class="nota">As testemunhas de Jeová têm a missão de dar a conhecer o nome. Esta profecia se aplica especificamente a nós no fim dos tempos.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📚</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/83/" target="_blank">Salmo 83:18 (NWT)</a>
+          <span class="nota">"Para que as pessoas saibam que tu, cujo nome é Jeová, só tu és o Altíssimo sobre toda a terra."</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="p16">
+  <div class="card-title"><span class="num">16</span> João 13:34, 35 — o amor entre irmãos</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Por que podemos dizer que as Testemunhas de Jeová estão obedecendo a ordem em João 13:34, 35?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">"Eu lhes dou um novo mandamento: Amem uns aos outros; assim como eu amei vocês, amem também uns aos outros. Por meio disto todos saberão que vocês são meus discípulos: se tiverem amor entre si." — <a class="ref" data-verse="João 13:34, 35">Jo 13:34, 35</a></div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      Jesus deu este mandamento na <b>noite da Páscoa de 33 EC</b>, pouco antes de ser preso. É o "novo mandamento" — chamado novo porque o amor deveria ser <b>como Jesus amou</b> (sacrificial), não apenas o amor normal entre vizinhos.
+      <br><br>
+      O sinal de identidade dos discípulos de Jesus é o <b>amor entre si</b> — não o amor aos inimigos, não o amor a Deus, mas o amor dentro da comunidade. O mundo vai reconhecer os discípulos verdadeiros por esse amor.
+      <br><br>
+      O artigo descreve nossa família mundial como "um milagre moderno". Por quê?
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Diversidade cultural</b> — somos de todos os países, raças, línguas.</li>
+        <li><b>Unidade apesar das diferenças</b> — sem impor uma cultura sobre outra.</li>
+        <li><b>Amor sacrificial</b> — separar-se do mundo para manter a paz.</li>
+        <li><b>Hospitalidade universal</b> — visitar outra congregação em viagem é como estar em casa.</li>
+      </ul>
+      <br>
+      O cenário mundial atual (polarização, guerras, ódio nas redes sociais) torna esse amor ainda mais evidente. Nenhum outro grupo religioso consegue demonstrar esse nível de amor entre culturas.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Na sua próxima viagem a outra cidade, visite a Salão do Reino local. Converse com irmãos diferentes. Peça para jantar com uma família. Esse hábito simples demonstra o amor que identifica os cristãos verdadeiros.</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Em João 13:34, "novo mandamento" significa "como eu vos amei" — sacrificialmente. Como você tem demonstrado amor sacrificial aos irmãos? E como pode melhorar?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">O sinal de identidade dos discípulos de Jesus é o amor entre si. As Testemunhas de Jeová, vindas de 240 países, demonstram esse amor de forma visível — uma "família mundial" que é um milagre moderno.</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 16)</div>
+    <div class="box-text">Leia João 13:34, 35. Nossa família mundial é um milagre moderno. O amor e união que existe entre nós é algo que chama atenção no mundo hoje, que é tão frio e dividido. Nós somos de culturas diferentes e temos histórias de vida diferentes, mesmo assim nos esforçamos ao máximo para ter amor e paz entre nós. Já experimentou visitar outra congregação durante uma viagem? Essa é uma boa oportunidade para meditar no amor e na união dos nossos irmãos e irmãs. Você vai ter mais uma prova de que Jeová está mesmo usando suas Testemunhas para fazer sua vontade hoje. Lembrar disso pode nos ajudar a continuar leais a Jeová em qualquer teste de fé.</div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 5: Conselho Final -->
+<div class="tab-content" id="tab5">
+<div class="section-header">
+  <h2><span class="emoji">🛡️</span>Nunca Abandone Jeová</h2>
+</div>
+
+<div class="card" id="p17-18">
+  <div class="card-title"><span class="num">17-18</span> Que situações talvez enfrentemos e o que dizer com confiança</div>
+  <div class="box box-pergunta">
+    <div class="box-label">🎯 Pergunta</div>
+    <div class="box-text">Que situações talvez enfrentemos, mas o que podemos dizer com confiança?</div>
+  </div>
+  <div class="box box-texto">
+    <div class="box-label">📜 Texto bíblico</div>
+    <div class="box-text">
+      "Vimos, nos últimos dias, tempos críticos, difíceis de suportar. [...] Mas as pessoas más e os impostores se tornarão cada vez piores, enganando e sendo enganados." — <a class="ref" data-verse="2 Timóteo 3:1, 13">2 Tm 3:1, 13</a><br>
+      <b>Texto-base:</b> "Senhor, para quem iremos? O senhor tem declarações de vida eterna." — <a class="ref base" data-verse="João 6:68, 69">Jo 6:68, 69</a>
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-label">🔍 Explicação esmiuçada</div>
+    <div class="box-text">
+      O parágrafo 17 começa com uma das frases mais marcantes do apóstolo Paulo: <b>"estes últimos dias trazem tantas dificuldades"</b>. O foco aqui é a realidade atual — e o artigo é cuidadoso ao listar tipos específicos de situações que podem nos atingir:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Orientações da organização que não entendemos completamente</b> — note que o artigo não diz que <b>não</b> seguimos, mas que <b>não entendemos</b>. Equívoco é diferente de rejeição. Quando uma decisão organizacional é tomada, podemos confiar no princípio de Provérbios 3:5, 6.</li>
+        <li><b>Magoa de alguém na congregação</b> — ironicamente, pode vir de quem deveria nos ajudar. Mateus 24:10 avisou que um sinal dos últimos dias é que os próprios discípulos se "magoariam" mutuamente.</li>
+        <li><b>Falta de respostas</b> — talvez não vejamos logo uma saída. Pode ser que o teste dure anos.</li>
+      </ol>
+      <br>
+      O conselho do parágrafo 18 é poderoso: <b>independente do conflito emocional, sempre podemos continuar leais</b>. Por quê? Porque sabemos três verdades:
+      <ol style="padding-left: 22px; margin: 6px 0;">
+        <li>Jeová é o Criador</li>
+        <li>Jeová é o Autor da Bíblia</li>
+        <li>Somos o povo de Deus</li>
+      </ol>
+      <br>
+      Assim como Pedro disse a Jesus <b>"Para quem iremos?"</b> (Jo 6:68), nós também podemos dizer a Jeová isso. Não porque entendemos tudo — mas porque reconhecemos onde está a vida eterna.
+    </div>
+  </div>
+  <div class="box box-aplic">
+    <div class="box-label">💡 Aplicação</div>
+    <div class="box-text">Quando vier um teste de fé que parece irresolvível, ore assim: "Jeová, eu não entendo tudo, mas sei que você é meu Criador, que a Bíblia é sua Palavra, e que somos seu povo. Ajude-me a permanecer firme como Pedro."</div>
+  </div>
+  <div class="box box-reflex">
+    <div class="box-label">🤔 Reflexão</div>
+    <div class="box-text">Pedro não disse que <b>queria</b> ficar — ele perguntou "para quem iremos?". É uma pergunta de lógica: <b>não existe alternativa melhor</b>. Você tem essa convicção — ou tem outras "portas de saída" mentais?</div>
+  </div>
+  <div class="box box-resumo">
+    <div class="box-label">📝 Resumo</div>
+    <div class="box-text">Em qualquer situação, sempre podemos continuar leais a Jeová porque temos as três verdades: ele é o Criador, ele é o Autor da Bíblia, e nós somos seu povo. Como Pedro, dizemos: "Para quem iremos?"</div>
+  </div>
+  <div class="box box-artigo">
+    <div class="box-label">📜 Texto Original do Artigo (par. 17-18)</div>
+    <div class="box-text">¹⁷ Nós vivemos em tempos críticos e difíceis de suportar. É por isso que esses últimos dias trazem tantas dificuldades para todos nós. (2 Tim. 3:1, 13) Talvez passemos por situações desafiadoras. Pode ser que a organização nos dê orientações que não entendemos completamente. Ou alguém na congregação talvez nos magoe ou faça algo injusto contra nós. Seja qual for o problema, talvez a gente não veja logo uma saída ou não tenha as respostas às nossas perguntas.
+
+¹⁸ Apesar de todo o conflito emocional que essas situações podem nos causar, sempre podemos continuar leais a Jeová. Por quê? Porque estamos convencidos que ele é o Criador, que ele é o Autor da Bíblia e que as Testemunhas de Jeová são o seu povo. Assim como Pedro disse a Jesus, nós também podemos dizer a Jeová: 'Para quem iremos? O Senhor tem declarações de vida eterna.'</div>
+  </div>
+  <div class="box box-fontes">
+    <div class="box-label">📚 Fontes & Mídia</div>
+    <ul class="fontes-list">
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/" target="_blank">2 Timóteo 4:3, 4 — NWT</a>
+          <span class="nota">"Virá tempo em que não suportarão o ensinamento sadio" — característica dos últimos dias.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">📖</span>
+        <div>
+          <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/19/3/" target="_blank">Salmo 73:1-28 — NWT (referência)</a>
+          <span class="nota">Salmo de Asafe, que se sentiu tentado quando viu prosperidade dos maus. Resolveu indo ao santuário. Útil para quem está em dúvida.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="box box-base" style="margin-top: 16px;">
+  <div class="box-label">⭐ RESPOSTA-MODELO FINAL (texto-base)</div>
+  <div class="box-text">
+    "Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus." — <a class="ref base" data-verse="João 6:68, 69">João 6:68, 69</a>
+    <br><br>
+    <b>Por que essa é a resposta certa:</b> Pedro não disse que entendia tudo. Não disse que a vida seria fácil. Não disse que nunca teria dúvidas. Ele disse: <b>"Para quem iremos?"</b> — reconhecendo que Jesus é a única fonte de vida eterna. Essa é a resposta de quem tem o alicerce firme.
+  </div>
+</div>
+</div>
+
+<!-- TAB 6: Material de Apoio -->
+<div class="tab-content" id="tab6">
+<div class="section-header">
+  <h2><span class="emoji">📚</span>Material de Apoio</h2>
+</div>
+
+<!-- Cronologia -->
+<div class="card" id="cron">
+  <div class="card-title">📅 Cronologia — Onde Jesus estava quando disse isso</div>
+  <div class="box box-cron">
+    <div class="box-text">
+      <b>O Discurso de Cafarnaum (João 6:22-71) aconteceu em 32 d.C., perto da Páscoa (Jo 6:4)</b>
+      <br><br>
+      Segundo o Apêndice A7-D da NWT Study Edition ("O grande ministério de Jesus na Galileia – Parte 2"), a sequência de eventos que culminou neste discurso foi:
+    </div>
+  </div>
+  <div class="timeline">
+    <h3>📅 Linha do tempo (32 d.C.)</h3>
+    <div class="timeline-row">
+      <div class="date">31 ou 32 d.C.</div>
+      <div>Região de Cafarnaum — Ilustrações sobre o Reino (Mt 13)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Mar da Galileia — Acalma tempestade (Mt 8:18, 23-27)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Região de Gadara — Manda demônios para os porcos (Mt 8:28-34)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Provavelmente Cafarnaum — Cura mulher, ressuscita filha de Jairo (Mt 9:18-26)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Galileia — Expande obra enviando apóstolos (Mt 9:35–11:1)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Tiberíades — Herodes corta cabeça de João Batista (Mt 14:1-12)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date"><b>32 d.C., Páscoa</b></div>
+      <div><b>Cafarnaum — Apóstolos voltam; Jesus alimenta 5.000 (Jo 6:1-13)</b></div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Lado NE do mar — Anda sobre o mar; cura muitos (Jo 6:14-21)</div>
+    </div>
+    <div class="timeline-row">
+      <div class="date"><b>32 d.C., PÓS-Páscoa</b></div>
+      <div><b>Cafarnaum — "Eu sou o pão da vida"; muitos abandonam (Jo 6:22-71)</b></div>
+    </div>
+    <div class="timeline-row">
+      <div class="date">32 d.C.</div>
+      <div>Cafarnaum — Tradições × Palavra de Deus (Mt 15:1-20)</div>
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-text">
+      <b>Por que isso importa:</b> O discurso em João 6 não foi isolado. Jesus alimentou 5.000 (Jo 6:1-13) — a multidão queria fazê-lo rei (Jo 6:15). Jesus fugiu para a montanha (Jo 6:15). No dia seguinte, a multidão o procura; Jesus aproveita para dar o ensino sobre o "pão da vida". Esse é o teste de fé em questão: não era sobre comida, era sobre <b>quem Jesus realmente é</b>.
+      <br><br>
+      <b>Ponto-chave:</b> Este discurso foi provavelmente em <b>abril/maio de 32 d.C.</b> — entre a 2ª Páscoa do ministério de Jesus (Jo 6:4) e a Páscoa final de 33 d.C. (Jo 13:1). Apenas ~1 ano antes da sua morte.
+    </div>
+  </div>
+</div>
+
+<!-- Cânticos -->
+<div class="card" id="cants">
+  <div class="card-title">🎵 Cânticos 122 e 123 (letra completa)</div>
+  <div class="cantico-block">
+    <div class="titulo">🎵 Cântico 122 — "Vamos continuar firmes!" (1 Coríntios 15:58)</div>
+    <div class="versiculos">
+1. Hoje vivemos num mundo ruim;
+   As provações não parecem ter fim.
+   Bem corajosos nós temos que ser;
+   Firmes na fé nos manter.
+
+   (REFRÃO)
+   Bem firmes vamos ficar
+   E ser leais a Jeová.
+   Vida ele dará
+   A quem perseverar.
+
+2. Todos os dias sofremos pressões
+   E não é fácil vencer tentações.
+   Mas, se amarmos as leis de Jeová,
+   Nada vai nos abalar.
+
+   (REFRÃO)
+   Bem firmes vamos ficar
+   E ser leais a Jeová.
+   Vida ele dará
+   A quem perseverar.
+
+3. Na pregação sirvamos a Deus com prazer
+   E sempre tenhamos bastante a fazer.
+   Logo o fim deste mundo virá;
+   Vamos com zelo pregar!
+
+   (REFRÃO)
+   Bem firmes vamos ficar
+   E ser leais a Jeová.
+   Vida ele dará
+   A quem perseverar.
+
+(Veja também Luc. 21:9; 1 Ped. 4:7.)
+    </div>
+  </div>
+  <div class="cantico-block">
+    <div class="titulo">🎵 Cântico 123 — "Obedecemos a Jeová e à sua organização" (1 Coríntios 14:33)</div>
+    <div class="versiculos">
+1. Como conseguimos todos alcançar
+   Com as boas novas sobre Jeová?
+   Sendo sempre unidos na adoração,
+   Firmes e leais à organização.
+
+   (REFRÃO)
+   Com humildade obedecemos
+   Ao nosso Deus e Pai.
+   Ele nos ama e nos protege;
+   Nós queremos ser leais.
+
+2. Nosso Deus dá força pra nos ajudar
+   E o seu escravo para nos guiar.
+   Sempre obedientes, vamos ser leais
+   E pregar a todos — desistir jamais!
+
+   (REFRÃO)
+   Com humildade obedecemos
+   Ao nosso Deus e Pai.
+   Ele nos ama e nos protege;
+   Nós queremos ser leais.
+
+(Veja também Luc. 12:42; Heb. 13:7, 17.)
+    </div>
+  </div>
+  <div class="box box-explic">
+    <div class="box-text">
+      <b>Observações sobre os cânticos:</b>
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li><b>Cântico 122</b> — fala sobre "provações", "tentações", "mundo ruim" — perfeito para o tema do artigo sobre testes de fé.</li>
+        <li><b>Cântico 123</b> — fala sobre "unidos na adoração", "leais à organização", "obedecemos" — alinhado com a Verdade 3 (As Testemunhas de Jeová são o povo de Deus).</li>
+        <li><b>Refrão</b> dos dois cânticos: "ser leais a Jeová" — o tema central do estudo.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Contexto histórico -->
+<div class="card" id="hist">
+  <div class="card-title">📖 Contexto Histórico — Cafarnaum, Pedro, Tibério</div>
+  <div class="box box-cron">
+    <div class="box-label">🏛️ Cafarnaum (do hebraico "Aldeia de Naum" ou "Aldeia de Consolo")</div>
+    <div class="box-text">
+      <b>Localização:</b> Margem noroeste do mar da Galileia. Tinha coletoria de impostos (onde Jesus convocou Mateus, Mt 9:9) e provavelmente um posto militar (centurião, Mt 8:5). Era uma cidade de substancial importância — "cidade da Galileia". Os principais candidatos à localização arqueológica: <b>Tell Hum (Kefar Nahum)</b>, a cerca de 4 km a NE de Khan Minyeh.
+      <br><br>
+      <b>Por que Cafarnaum?</b>
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li>Local de trabalho de Pedro (Mc 1:29 — "a casa de Simão e André")</li>
+        <li>Base de operações de Jesus — "veio morar em Cafarnaum" (Mt 4:13)</li>
+        <li>Rio Jordão deságua no mar da Galileia perto dali — abundância de peixe</li>
+        <li>Estrada que ligava Mesopotâmia à Palestina passava pela cidade</li>
+      </ul>
+      <b>Observação sobre João 6:</b> O texto não diz exatamente onde Jesus deu este discurso, mas como a sinagoga de Cafarnaum era seu "púlpito costumeiro" (Mc 1:21), é provável que tenha sido ali.
+    </div>
+  </div>
+  <div class="box box-cron">
+    <div class="box-label">👤 Pedro — o pescador que se tornou rocha</div>
+    <div class="box-text">
+      <b>Nomes:</b> Simeão (hebraico, "ouvir"), Simão (grego), Pedro (grego, "rocha"), Cefas (aramaico). 5 nomes nas Escrituras!
+      <br><br>
+      <b>Casa:</b> Betsaida (Jo 1:44) — depois Cafarnaum (Lc 4:31, 38).
+      <br><br>
+      <b>Família:</b> Filho de João (ou Jonas, Mt 16:17). Irmão de André. Casado (1 Co 9:5). Sogra morava com ele (Mc 1:29-31).
+      <br><br>
+      <b>Trabalho:</b> Pescador, em sociedade com Tiago e João, filhos de Zebedeu (Lc 5:7, 10). Não era pescador isolado — era dono de empresa.
+      <br><br>
+      <b>Escolaridade:</b> Os líderes judeus o viam como "homem indouto e comum" (At 4:13) — não havia treinado em escola rabínica, mas tinha conhecimento prático das Escrituras.
+      <br><br>
+      <b>Por que Jesus o escolheu?</b> "Qualidades firmes como rocha" — Pedro seria uma "influência fortalecedora" para os concristãos (Jo 1:47, 48; Lc 22:32).
+    </div>
+  </div>
+  <div class="box box-cron">
+    <div class="box-label">🏛️ Tibério César — o contexto histórico de Lucas 3:1, 2</div>
+    <div class="box-text">
+      <b>Tibério César</b> (42 AEC – 37 EC) foi o segundo imperador romano. Nasceu como Tibério Cláudio Nero, foi adotado por Augusto em 4 AEC. Augusto morreu em 17 de agosto de 14 EC; Tibério foi proclamado imperador em 15 de setembro de 14 EC.
+      <br><br>
+      <b>O "décimo quinto ano do reinado de Tibério César"</b> (Lc 3:1) — quando João Batista começou a batizar:
+      <ul style="padding-left: 22px; margin: 6px 0;">
+        <li>Contando a partir da morte de Augusto (agosto de 14 EC): 15o ano = agosto de 28 EC a agosto de 29 EC.</li>
+        <li>Contando a partir da proclamação oficial (setembro de 14 EC): 15o ano = setembro de 28 EC a setembro de 29 EC.</li>
+      </ul>
+      <b>Pôncio Pilatos</b> (governador 26-36 EC), <b>Herodes (Antipas)</b> (4 AEC – 39 EC), <b>Filipe</b> (4 AEC – 34 EC), <b>Lisânias</b> (de Abilene), <b>Anás</b> (sumo sacerdote 6-15 EC), <b>Caifás</b> (18-36 EC). TODOS os 6 governantes são confirmados por fontes históricas extrabíblicas (Tácito, Josefo, inscrições de Cesareia).
+      <br><br>
+      <b>Por que isso importa</b> — Lucas 3:1, 2 está entre os textos bíblicos mais historicamente verificáveis. Mostra que a Bíblia é precisa.
+    </div>
+  </div>
+</div>
+
+<!-- Revisão -->
+<div class="card" id="rev">
+  <div class="card-title">📝 Revisão — Respostas para consideração</div>
+  <div class="review-card">
+    <h4>❓ P1-2 — O que aconteceu em Cafarnaum?</h4>
+    <p>Jesus ensinou que comer sua carne e beber seu sangue (absorver toda sua vida e ensinamentos) é necessário para ter vida eterna. As palavras dele foram tão "chocantes" (gr. <i>sklērós</i>) que muitos discípulos o abandonaram (Jo 6:60, 66). Mas antes desse abandono, alguns tinham dito que ele era "o Profeta" (Jo 6:14) — então tinham fé, mas não suportaram o teste.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P3 — Como os apóstolos reagiram?</h4>
+    <p>Pedro confessou: "Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus." (Jo 6:68, 69). Não entenderam tudo, mas escolheram permanecer. Sua fé era baseada em três verdades: Jesus é o Cristo de Deus, o Santo de Deus, e tem vida eterna.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P4 — Que testes podemos enfrentar?</h4>
+    <p>(1) Ajustes de entendimento sobre doutrina ou método de pregação. (2) Tragédias que nos fazem questionar por que Jeová não interveio. (3) Magoa ou tratamento injusto de pessoas que respeitamos. Todos esses testam a qualidade do alicerce da nossa fé.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P5-6 — A ilustração do prédio</h4>
+    <p>Como um prédio em zona de terremotos precisa de fundação profunda, nossa fé precisa estar firmada em verdades que não mudam. Os apóstolos tinham três convicções firmes: Jeová é o Criador, é o Autor da Bíblia, e Jesus tem declarações de vida eterna. Se estamos totalmente convencidos dessas três verdades, vamos permanecer leais em qualquer situação.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P7 — Apocalipse 4:11</h4>
+    <p>"Digno és, Jeová, nosso Deus, de receber a glória, a honra e o poder, porque criaste todas as coisas." Esse texto nos lembra que Jeová é o Criador — e somente por isso já é digno de adoração. É importante acreditar nisso porque sem fé que ele existe, é impossível agradar a Deus (Hb 11:6).</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P8-9 — O que fazer se tenho dúvidas sobre o Criador</h4>
+    <p>Aja imediatamente. Pesquise a fundo: brochuras "A Vida — Teve um Criador?", "A Origem da Vida — Cinco Perguntas Que Merecem Resposta", a série "Teve um Projeto?" no jw.org, e o livro "Existe um Criador Que Se Importa com Você?". Releia se necessário. Use o que aprendeu para ajudar outros.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P10 — Como encarar a Bíblia</h4>
+    <p>A Bíblia é inspirada por Deus (gr. <i>theopneustos</i> — "soprada por Deus"). É útil para (1) ensinar, (2) repreender, (3) endireitar, (4) disciplinar em justiça. Faz de nós "homens de Deus plenamente competentes" (2 Tm 3:16, 17). Por isso, fazemos o máximo para entendê-la e praticá-la.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P11 — Por que a Bíblia é inspirada</h4>
+    <p>5 evidências: (1) Historicamente exata (Lc 3:1, 2 — 6 governantes corretamente nomeados). (2) Cientificamente correta (Jó 26:7 — descrição astronomicamente precisa). (3) Livro mais distribuído de todos os tempos. (4) Unidade apesar de 40 escritores em 1.600 anos. (5) Profecias cumpridas (Js 23:14).</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P12 — Dúvidas sobre a Bíblia</h4>
+    <p>Coloque em oração e aja em harmonia com o que pediu. Pesquise em nossas publicações para encontrar respostas e eliminar dúvidas. (Exemplo de Jordan — "Eu não vou logo acreditando em tudo que me falam. Eu preciso provar pra mim mesmo se aquilo é verdade.") Construa com materiais nobres (ouro, prata, pedras preciosas) — não com madeira, feno, palha.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P13 — Dúvidas sobre a organização</h4>
+    <p>Não deixe a dúvida criar raízes. Faça três perguntas: (1) Quem está fazendo seu melhor para viver segundo a Bíblia? (2) Quem baseia suas crenças na Bíblia? (3) Quem está fazendo a vontade de Jeová? Os "frutos" (Mt 7:20, 21) ajudarão a responder.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P14 — Mateus 24:14</h4>
+    <p>Jesus profetizou que as boas novas do Reino seriam pregadas em toda a terra habitada, em testemunho a todas as nações, e então viria o fim. Hoje, apenas as Testemunhas de Jeová pregam em mais de 240 países — há mais de 100 anos. Cumprimento profético visível.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P15 — Honra ao nome de Deus</h4>
+    <p>Somos identificados pelo nome pessoal de Deus — Jeová. A primeira petição do Pai-Nosso é "santificado seja o teu nome" (Mt 6:9). Isaías 43:10 nos chama de "testemunhas" de Jeová. O nome dele aparece mais de 7.000 vezes na NWT. Temos orgulho de ser chamados Testemunhas de Jeová.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P16 — João 13:34, 35</h4>
+    <p>"Amem uns aos outros — como eu vos amei." O sinal dos discípulos de Jesus é o amor entre si. Nossa família mundial é um milagre moderno — 240 países, culturas diferentes, mas amor e unidade visíveis. Podemos verificar isso visitando congregações em viagens.</p>
+  </div>
+  <div class="review-card">
+    <h4>❓ P17-18 — Em qualquer teste, podemos dizer...</h4>
+    <p>Vivemos em "tempos críticos, difíceis de suportar" (2 Tm 3:1). Podemos passar por orientações que não entendemos, mágoas na congregação, ou falta de respostas. Mas sempre podemos continuar leais porque sabemos as três verdades. Como Pedro, dizemos: "Senhor, para quem iremos? O Senhor tem declarações de vida eterna." (Jo 6:68)</p>
+  </div>
+</div>
+
+<div class="box box-fontes" style="margin-top: 16px;">
+  <div class="box-label">📚 Fontes e Recursos Adicionais</div>
+  <ul class="fontes-list">
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/" target="_blank">Tradução do Novo Mundo da Bíblia Sagrada (NWT)</a>
+        <span class="nota">Bíblia completa com notas de estudo, referências cruzadas, e mídia integrada.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/publicacoes/livros/" target="_blank">Biblioteca de livros JW (online)</a>
+        <span class="nota">"Achegue-se a Jeová", "Mantenha-se Amoroso", "Imite a Sua Fé" e muito mais.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📖</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/" target="_blank">João 6 — NWT (cap. completo)</a>
+        <span class="nota">Releia o capítulo inteiro para entender o contexto completo do discurso em Cafarnaum.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📰</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-agosto-2026/" target="_blank">Sentinela de agosto de 2026 — índice completo</a>
+        <span class="nota">Outros artigos da mesma edição sobre continuar leal.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎵</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/musica/" target="_blank">Cânticos do Reino</a>
+        <span class="nota">Cânticos 122 e 123 — "Vamos continuar firmes!" e "Obedecemos a Jeová e à sua organização".</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/" target="_blank">1 Coríntios 15:58 — NWT</a>
+        <span class="nota">"Sejam firmes, inabaláveis, e tenham sempre bastante para fazer na obra do Senhor" — o versículo central sobre manter-se firme.</span>
+      </div>
+    </li>
+    <li>
+      <span class="icon">🎬</span>
+      <div>
+        <a href="https://www.jw.org/pt/biblioteca/videos/" target="_blank">JW Library — Vídeos e filmes</a>
+        <span class="nota">Dramatizações bíblicas, explicações visuais, histórias de vida.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<footer>
+  <p>📖 Estudo preparado para a Sentinela de 10–16 de agosto de 2026</p>
+  <p>Baseado no artigo "Como continuar leal a Jeová ao enfrentar testes de fé"</p>
+  <p>Texto bíblico: Tradução do Novo Mundo da Bíblia Sagrada (NWT)</p>
+  <p>📚 Inclui notas de estudo da NWT, referências cruzadas, contexto histórico e cronologia</p>
+  <p>💙 Feito com carinho pra Adiel</p>
+</footer>
+
+</div>
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <div class="verse-text" id="modal-text"></div>
+    <a id="modal-link" target="_blank">Ver no jw.org →</a>
+    <button class="close" onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const current = body.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('sentinela-theme', next);
+}
+const savedTheme = localStorage.getItem('sentinela-theme');
+if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+function showTab(idx) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab' + idx).classList.add('active');
+  document.querySelectorAll('.tab')[idx].classList.add('active');
+  window.scrollTo({top: document.querySelector('.tabs').offsetTop - 130, behavior: 'smooth'});
+}
+
+const verses = {
+  "João 6:68": {text: 'Simão Pedro lhe respondeu: "Senhor, para quem iremos? O senhor tem declarações de vida eterna."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "João 6:69": {text: '"Nós cremos e sabemos que o senhor é o Santo de Deus."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "João 6:68, 69": {text: '"Senhor, para quem iremos? O senhor tem declarações de vida eterna. Nós cremos e sabemos que o senhor é o Santo de Deus."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "João 6:60": {text: 'Ao ouvirem isso, muitos dos seus discípulos disseram: "Essas palavras são chocantes. Quem pode escutar isso?"', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "João 6:53, 54": {text: '"A menos que comam a carne do Filho do Homem e bebam o seu sangue, vocês não têm vida em si mesmos. Quem se alimenta da minha carne e bebe o meu sangue tem vida eterna, e eu o ressuscitarei no último dia."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "João 6:14": {text: 'Quando o povo viu o sinal que ele realizou, começaram a dizer: "Este é realmente o Profeta que devia vir ao mundo."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/6/"},
+  "Lucas 9:20": {text: 'Então ele lhes perguntou: "E vocês, quem dizem que eu sou?" Pedro respondeu: "O Cristo de Deus."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/9/"},
+  "Lucas 9:35": {text: 'Então uma voz saiu da nuvem, dizendo: "Este é meu Filho, aquele que foi escolhido. Escutem-no."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/9/"},
+  "Colossenses 1:23": {text: '"— claro, desde que vocês continuem na fé, estabelecidos no alicerce e firmes, sem serem afastados da esperança das boas novas que ouviram e que foram pregadas em toda a criação debaixo do céu. Dessas boas novas eu, Paulo, me tornei ministro."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/51/1/"},
+  "1 Coríntios 15:58": {text: '"Portanto, meus amados irmãos, sejam firmes, inabaláveis, e tenham sempre bastante para fazer na obra do Senhor, sabendo que o seu trabalho árduo no Senhor não é em vão."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/15/"},
+  "Apocalipse 4:11": {text: '"Digno és, Jeová, nosso Deus, de receber a glória, a honra e o poder, porque criaste todas as coisas, e por tua vontade elas vieram à existência e foram criadas."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/66/4/"},
+  "Hebreus 11:6": {text: '"Além disso, sem fé é impossível agradar a Deus, pois quem se aproxima de Deus tem de crer que ele existe e que se torna o recompensador dos que o buscam seriamente."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/58/11/"},
+  "Romanos 1:20": {text: '"Pois as suas qualidades invisíveis — isto é, seu poder eterno e Divindade — são claramente vistas desde a criação do mundo, porque são percebidas por meio das coisas feitas, de modo que eles não têm desculpa."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/45/1/"},
+  "2 Timóteo 3:16": {text: '"Toda a Escritura é inspirada por Deus e proveitosa para ensinar, para repreender, para endireitar as coisas, para disciplinar em justiça."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/"},
+  "2 Timóteo 3:17": {text: '"a fim de que o homem de Deus seja plenamente competente, completamente equipado para toda boa obra."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/"},
+  "Lucas 3:1, 2": {text: '"No décimo quinto ano do reinado de Tibério César — quando Pôncio Pilatos era governador da Judeia, Herodes era governador distrital da Galileia, seu irmão Filipe era governador distrital da região da Itureia e de Traconites, e Lisânias era governador distrital de Abilene — nos dias do principal sacerdote Anás, e de Caifás, a declaração de Deus chegou a João, filho de Zacarias, no deserto."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/42/3/"},
+  "Jó 26:7": {text: '"Ele estende os céus do norte sobre o vazio, Suspende a terra sobre o nada."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/18/26/"},
+  "Provérbios 13:20": {text: '"Quem anda com sábios se tornará sábio, Mas quem se junta com tolos acabará mal."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/13/"},
+  "Provérbios 15:21": {text: '"A tolice alegra quem não tem bom senso, Mas o homem de discernimento caminha direito."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/20/15/"},
+  "Mateus 7:12": {text: '"Portanto, todas as coisas que querem que os homens façam a vocês, façam também a eles. De fato, isso é o que a Lei e os Profetas querem dizer."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/"},
+  "Josué 23:14": {text: '"Vejam, estou para morrer, e vocês bem sabem, de todo o seu coração e de toda a sua alma, que não falhou nem sequer uma palavra de todas as boas promessas que Jeová, seu Deus, lhes fez. Todas elas se cumpriram para vocês. Nem sequer uma delas falhou."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/6/23/"},
+  "1 Coríntios 3:12, 13": {text: '"Ora, se alguém construir sobre o alicerce com ouro, prata, pedras preciosas, ou com madeira, feno, palha, a qualidade da obra de cada um ficará evidente, pois o dia a porá à mostra; porque será revelada por meio de fogo, e o próprio fogo mostrará que tipo de obra cada um realizou."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/46/3/"},
+  "Mateus 7:20, 21": {text: '"Realmente, então, pelos seus frutos vocês reconhecerão esses homens. Nem todo o que me disser: \'Senhor, Senhor\', entrará no Reino dos céus, mas apenas aquele que fizer a vontade do meu Pai, que está nos céus."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/7/"},
+  "2 Timóteo 4:3, 4": {text: '"Pois haverá um tempo em que não suportarão o ensinamento sadio, mas, de acordo com os seus próprios desejos, se cercarão de instrutores que lhes façam cócegas nos ouvidos."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/4/"},
+  "Mateus 24:14": {text: '"E estas boas novas do Reino serão pregadas em toda a terra habitada, em testemunho a todas as nações, e então virá o fim."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/24/"},
+  "Mateus 28:19, 20": {text: '"Portanto, vão e façam discípulos de pessoas de todas as nações, batizando-as em nome do Pai, e do Filho, e do espírito santo, ensinando-as a obedecer a todas as coisas que lhes ordenei. E saibam que eu estou com vocês todos os dias, até o final do sistema de coisas."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/28/"},
+  "Mateus 6:9": {text: '"Portanto, orem do seguinte modo: \'Pai nosso, que estás nos céus, santificado seja o teu nome."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/40/6/"},
+  "Isaías 43:10": {text: '"Vocês são as minhas testemunhas", diz Jeová, "Sim, meu servo a quem escolhi, Para que vocês me conheçam e tenham fé em mim, E entendam que eu sou o mesmo. Antes de mim não foi formado nenhum Deus E depois de mim continuou a não haver nenhum."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/23/43/"},
+  "João 13:34, 35": {text: '"Eu lhes dou um novo mandamento: Amem uns aos outros; assim como eu amei vocês, amem também uns aos outros. Por meio disto todos saberão que vocês são meus discípulos: se tiverem amor entre si."', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/43/13/"},
+  "2 Timóteo 3:1, 13": {text: '"Mas as pessoas más e os impostores se tornarão cada vez piores, enganando e sendo enganados." (Trecho — note: 2 Tm 3:1 começa "Vimos, nos últimos dias, tempos críticos, difíceis de suportar"; 3:13 fala dos impostores.)', link: "https://www.jw.org/pt/biblioteca/biblia/nwt/livros/55/3/"}
+};
+
+document.querySelectorAll('.ref').forEach(ref => {
+  ref.addEventListener('click', e => {
+    e.preventDefault();
+    const verse = ref.getAttribute('data-verse');
+    const data = verses[verse];
+    if (data) {
+      document.getElementById('modal-title').textContent = verse;
+      document.getElementById('modal-text').textContent = data.text;
+      document.getElementById('modal-link').href = data.link;
+      document.getElementById('modal-bg').classList.add('show');
+    }
+  });
+});
+
+function closeModal() {
+  document.getElementById('modal-bg').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
