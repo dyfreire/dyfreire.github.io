@@ -1,5 +1,7 @@
 # Abraão em Moriá, estudo interativo
 
+**No ar em:** https://dyfreire.github.io/estudos/abraao-moria/
+
 Réplica do capítulo 5 do livro *Ande Corajosamente com Deus* ("Ele enfrentou seu maior desafio"),
 com uma camada de anotações clicáveis por cima do texto e os versículos da Tradução do Novo Mundo
 embutidos para funcionar sem internet.
@@ -25,8 +27,12 @@ python3 -m http.server 8000
 | Referência bíblica sublinhada | Abre o texto da Tradução do Novo Mundo, offline |
 | **Guia de cores** | Mostra a legenda; clique numa categoria para ligar ou desligar o realce dela |
 | **Roteiro** | Lista todas as 42 anotações agrupadas por tipo, clique para ir até o trecho |
-| **Respostas** | Abre ou fecha de uma vez os 13 blocos "Pontos de resposta esperados" |
-| Bloco verde sob cada campo | Os pontos que respondem exatamente aquela pergunta; abre e fecha individualmente |
+| **Respostas** | Abre ou fecha de uma vez os 13 blocos de resposta esperada e as 13 perguntas de seguimento |
+| **30 min** | Vai para o roteiro cronometrado da consideração |
+| **Resumo** | Vai para o resumo final com os oito pontos altos |
+| Etiqueta E1 a E5 ao lado do parágrafo | A etapa da trilha de ensino a que aquele parágrafo pertence |
+| Bloco verde sob cada campo | Os pontos que respondem exatamente aquela pergunta |
+| Bloco vermelho sob cada campo | Perguntas de seguimento para dirigir à assistência, com o que se quer ouvir |
 | **Tema** | Alterna claro e escuro (segue o sistema por padrão) |
 | **Limpar** | Apaga as marcas de "visto"; as respostas escritas continuam salvas |
 | Setas ← → | Com uma anotação aberta, vai para a anterior ou a seguinte |
@@ -55,8 +61,8 @@ publicação de onde saem. Ficam fechados por padrão, para você responder prim
 ```
 index.html              texto do capítulo + marcações
 assets/css/style.css    estilo, temas claro e escuro
-assets/js/verses.js     674 versículos da NWT (13 livros, 25 capítulos)
-assets/js/notes.js      as 42 anotações, é aqui que se edita o conteúdo
+assets/js/verses.js     948 versículos da NWT (17 livros, 36 capítulos)
+assets/js/notes.js      as 57 anotações, a trilha de 5 etapas, é aqui que se edita o conteúdo
 assets/js/app.js        modais, filtros, roteiro, progresso
 assets/img/             imagens do capítulo, baixadas do jw.org
 ```
@@ -81,24 +87,21 @@ O formato de `data-ref` é `livro:capítulo:versículos`, aceitando lista e inte
 Se precisar de um capítulo que ainda não está no `verses.js`, ele precisa ser acrescentado
 ao arquivo (foi gerado a partir de wol.jw.org).
 
-## Publicar no GitHub Pages
+## Publicação
+
+Está publicado em `dyfreire.github.io`, dentro de `estudos/abraao-moria/`, e listado nos dois
+índices do site (raiz e `estudos/`).
+
+Para atualizar: edite aqui, copie a pasta para o repositório do site e faça um commit em branch
+própria (a main é protegida por hook local, então o caminho é branch, PR e merge).
 
 ```bash
-git init
-git add .
-git commit -m "estudo interativo cap. 5"
-git branch -M main
-git remote add origin git@github.com:SEU-USUARIO/SEU-REPO.git
-git push -u origin main
+rsync -a --exclude .git ./ /caminho/do/repo/estudos/abraao-moria/
 ```
 
-Depois, no repositório: **Settings > Pages > Source: Deploy from a branch > main / (root)**.
-O site sai em `https://SEU-USUARIO.github.io/SEU-REPO/`.
-
-Uma observação antes de publicar: o texto, as imagens e os versículos são propriedade da Watch
-Tower Bible and Tract Society. Baixar para estudo pessoal é uma coisa, colocar num site público é
-republicação. Se a ideia é só usar no seu celular ou tablet, o mais seguro é manter local, ou usar
-um **repositório privado** com Pages restrito, em vez de um site aberto.
+Uma observação: o texto, as imagens e os versículos são propriedade da Watch Tower Bible and Tract
+Society, e o repositório é público. Para uso pessoal isso é reprodução de estudo; se em algum
+momento o alcance incomodar, o caminho é repositório privado ou uso apenas local.
 
 ## Fontes
 
