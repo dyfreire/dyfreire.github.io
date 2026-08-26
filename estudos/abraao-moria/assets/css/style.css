@@ -534,9 +534,62 @@ ol.steps em, ol.recap em {
   color: var(--ink-soft);
 }
 
+/* ---------------- roteiro de 30 minutos ---------------- */
+
+.runsheet { margin-top: 3rem; scroll-margin-top: 5rem; }
+.rs { border-top: 1px solid var(--rule); }
+.rsrow {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  gap: 0 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.rsrow .t {
+  font-family: var(--f-mono);
+  font-size: 0.86rem;
+  color: var(--c-chave);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.15rem;
+}
+.rsrow .t span {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+  margin-top: 0.15rem;
+}
+.rsrow h4 {
+  font-family: var(--f-ui);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+.rsrow p, .rsrow li { font-size: 0.96rem; }
+.rsrow p { margin: 0 0 0.5rem; color: var(--ink-soft); }
+.rsrow ul { margin: 0.3rem 0 0; padding-left: 1.15rem; }
+.rsrow li { color: var(--ink-soft); margin-bottom: 0.3rem; }
+.rsrow b { color: var(--ink); }
+.rstips {
+  background: var(--card-alt);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--c-pergunta);
+  padding: 0.9rem 1rem;
+  margin-top: 1.2rem;
+}
+.rstips h4 {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 0.5rem;
+}
+.rstips p { font-size: 0.94rem; margin: 0 0 0.4rem; }
+.rstips p:last-child { margin-bottom: 0; }
+
 /* ---------------- resumo final ---------------- */
 
-.wrapup { margin-top: 3rem; }
+.wrapup { margin-top: 3rem; scroll-margin-top: 5rem; }
 .wrapup .rsub { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 1.4rem; }
 ol.highs { counter-reset: hi; list-style: none; margin: 0; padding: 0; }
 ol.highs > li {

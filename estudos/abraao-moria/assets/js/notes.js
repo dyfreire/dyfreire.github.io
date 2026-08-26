@@ -351,7 +351,10 @@ window.NOTES = {
       depois.</p>
       <h4>Sugestão simples</h4>
       <p>Vale escrever num papel, ou no fim da Bíblia, uma lista curta das vezes em que você viu
-      Jeová ajudar. É a caderneta de Abraão, na sua versão.</p>`
+      Jeová ajudar. É a caderneta de Abraão, na sua versão.</p>
+      <p>Um detalhe que vale dizer: não basta pensar “Jeová me ajudou”. Pare e responda <b>como</b>
+      ele ajudou e <b>que lição</b> ficou. É assim que a lembrança fica guardada e serve na próxima
+      dificuldade.</p>`
   },
 
   /* ------------------------------ parágrafo 5 ------------------------------ */
@@ -738,6 +741,83 @@ window.NOTES = {
       <p class="srcline">A Sentinela, fev. 2016, § 15.</p>`
   },
 
+  n1: {
+    cat: "chave", para: "P9",
+    quote: "E nossa obediência a Jeová vai nos trazer",
+    title: "Ele não passou a vida perguntando “por quê”",
+    body: `
+      <p>Repare numa coisa: Abraão nunca soube, enquanto vivia, por que Jeová pediu aquilo. Ele
+      desceu o monte, viveu 50 anos mais, e ficou sem a explicação. E não se atormentou com isso.</p>
+      <h4>A comparação que ajuda</h4>
+      <p>Vinte e cinco anos antes, no caso de Sodoma, ele fez perguntas a Jeová e recebeu resposta.
+      Agora, no caso mais difícil, ele obedeceu sem entender e continuou servindo do mesmo jeito.</p>
+      <h4>Aplicação</h4>
+      <p>Talvez você esteja numa situação que não vai mudar neste sistema: uma doença, uma perda, uma
+      mudança difícil no serviço a Jeová. Em vez de gastar as forças perguntando “por que isso
+      aconteceu comigo?”, faça como Abraão: continue servindo. Na ressurreição ele vai receber a
+      explicação, e nós também.</p>
+      <p class="srcline">Ponto levantado na consideração ao vivo desta matéria.</p>`
+  },
+
+  n2: {
+    cat: "jeova", para: "P6",
+    quote: "Havia chegado a hora",
+    title: "Jeová confia em quem é leal",
+    body: `
+      <p>Uma prova assim também diz algo sobre a confiança de Jeová. Ele não coloca ninguém numa
+      situação maior do que a pessoa pode suportar
+      (<span class="scr" data-ref="46:10:13">1 Coríntios 10:13</span>).</p>
+      <h4>O que isso quer dizer</h4>
+      <p>Quando Jeová permite que uma prova chegue até nós, é porque ele acredita que podemos ser
+      leais até o fim. Ele conhece nossos limites melhor do que nós.</p>
+      <h4>Para dizer à assistência</h4>
+      <p>Uma prova difícil não é sinal de que Jeová se esqueceu de você. Pode ser sinal do contrário:
+      ele confia em você.</p>
+      <p class="srcline">Ponto levantado na consideração ao vivo desta matéria.</p>`
+  },
+
+  n5: {
+    cat: "hoje", para: "P2",
+    quote: "Abraão não parava de pensar no que Jeová tinha pedido para ele fazer",
+    title: "Jeová acima até dos laços de família",
+    body: `
+      <p>O pedido tocava no ponto mais sensível que existe: o filho. Para Abraão, a relação com Jeová
+      vinha antes até do laço familiar mais forte.</p>
+      <h4>Como isso aparece hoje</h4>
+      <ul>
+        <li><b>Um parente que não é Testemunha convida para uma comemoração.</b> Dizer não pode
+        causar mágoa na família.</li>
+        <li><b>Um filho ou irmão que foi desassociado.</b> Seguir a orientação da Bíblia dói, e
+        parentes podem não entender.</li>
+        <li><b>Uma decisão de vida:</b> mudar de cidade para onde há mais necessidade, e ouvir da
+        família que você está abandonando todos.</li>
+      </ul>
+      <p>Se a nossa relação com Jeová for a mais forte, passamos por esse teste como Abraão passou.</p>
+      <p class="srcline">Ponto levantado na consideração ao vivo desta matéria.</p>`
+  },
+
+  n6: {
+    cat: "insight", para: "P1",
+    quote: "rumo ao lugar que Jeová tinha dito para ele ir",
+    title: "Ele era um homem decidido, e não olhava para trás",
+    body: `
+      <p>Isso já era o jeito dele. Abraão tinha posição e recursos em Ur, e saiu de lá para viver em
+      tendas. É como quem atravessa uma ponte e derruba a ponte atrás de si: não fica pensando em
+      voltar.</p>
+      <h4>Onde se vê isso no relato</h4>
+      <ul>
+        <li>Saiu de manhã cedo, sem discutir
+        (<span class="scr" data-ref="1:22:3">Gênesis 22:3</span>).</li>
+        <li>Andou três dias sem mudar de rumo.</li>
+        <li>No monte, foi até o último gesto.</li>
+      </ul>
+      <h4>Aplicação</h4>
+      <p>Depois de tomar uma decisão certa, ficar olhando para trás só gasta a pessoa. Decidiu servir
+      a Jeová num lugar novo, decidiu recusar um trabalho, decidiu simplificar? Não abra a discussão
+      de novo dentro da própria cabeça toda semana.</p>
+      <p class="srcline">Ponto levantado na consideração ao vivo desta matéria.</p>`
+  },
+
   /* ------------------------- pergunta: para considerar ------------------------- */
 
   q1: {
@@ -817,6 +897,9 @@ window.NOTES = {
         <li>A família de Sem continuou falando a língua original, e Abraão era dessa família.</li>
         <li>Sem continuou vivo durante a maior parte da vida de Abraão: as duas vidas coincidiram por
         150 anos.</li>
+        <li>Sem viveu 600 anos ao todo (<span class="scr" data-ref="1:11:10-11">Gênesis 11:10, 11</span>).
+        Pela cronologia bíblica, ele morreu poucos anos depois de Sara. Ou seja, houve tempo de sobra
+        para conversas.</li>
       </ul>
       <h4>O ponto forte</h4>
       <p>A fé do maior exemplo de fé da Bíblia começou numa conversa com um homem muito velho, e não
@@ -973,7 +1056,12 @@ window.NOTES = {
         <li><b>Um irmão idoso ou doente.</b> Levar de carro à reunião, fazer companhia, buscar
         remédio, ajudar com a compra do mês.</li>
       </ul>
-      <p>A coragem aqui é assumir um gasto ou um trabalho que ninguém vai ver nem elogiar.</p>`
+      <p>A coragem aqui é assumir um gasto ou um trabalho que ninguém vai ver nem elogiar.</p>
+      <h4>O exemplo de Abraão com Ló</h4>
+      <p>No capítulo anterior do livro, Abraão não mediu esforços quando o sobrinho foi levado
+      cativo: juntou 318 homens da sua casa e foi atrás
+      (<span class="scr" data-ref="1:14:14-16">Gênesis 14:14-16</span>). Ele não perguntou se
+      valia a pena. Foi.</p>`
   },
 
   q10: {
