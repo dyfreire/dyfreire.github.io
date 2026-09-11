@@ -28,9 +28,25 @@ python3 -m http.server 8000     # ou servindo localmente
 | **Respostas** | Abre ou fecha de uma vez os 19 blocos de resposta e os 9 de seguimento |
 | **60 min** | Roteiro cronometrado do estudo |
 | **Resumo** | Os oito pontos altos e as frases de encerramento |
+| Seção **Suas respostas** | Baixa e carrega suas respostas em arquivo, para usar em outro aparelho |
 | Etiqueta E1 a E4 | A etapa da trilha de ensino a que o parágrafo pertence |
 
 Respostas digitadas, marcas de visto e tema ficam salvos no navegador.
+
+## Levar as respostas para outro aparelho
+
+O que você digita fica salvo automaticamente no navegador daquele aparelho. Para levar
+para outro, use a seção **Suas respostas**, no fim da página:
+
+- **Baixar minhas respostas** gera um `.json` com tudo que você escreveu e as anotações
+  marcadas como vistas.
+- **Carregar de um arquivo** aplica esse `.json` em qualquer aparelho. A página avisa
+  antes de substituir o que estiver escrito, e avisa também se o arquivo for de outro
+  estudo.
+
+Cada estudo tem seu próprio espaço no navegador, então as respostas de um não apagam as
+do outro.
+
 
 ## Conteúdo
 
