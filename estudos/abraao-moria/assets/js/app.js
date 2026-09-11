@@ -12,15 +12,20 @@
 
   /* ----------------------------- armazenamento ----------------------------- */
 
+  /* Namespace por estudo: sem isso, duas páginas no mesmo domínio dividiriam as
+     mesmas chaves e uma apagaria as respostas da outra. */
+  var NS = "estudo" + location.pathname.replace(/index\.html$/, "").replace(/\/+$/, "") + ".";
+
   var store = {
     get: function (key, fallback) {
       try {
-        var raw = localStorage.getItem("moria." + key);
+        var raw = localStorage.getItem(NS + key);
+        if (raw === null) raw = localStorage.getItem("moria." + key);  // dados da versão antiga
         return raw === null ? fallback : JSON.parse(raw);
       } catch (e) { return fallback; }
     },
     set: function (key, value) {
-      try { localStorage.setItem("moria." + key, JSON.stringify(value)); } catch (e) { /* modo privado */ }
+      try { localStorage.setItem(NS + key, JSON.stringify(value)); } catch (e) { /* modo privado */ }
     }
   };
 
@@ -336,6 +341,133 @@
     });
   }
 
+  /* ------------------- backup das respostas em arquivo ------------------- */
+
+  function nomeDoEstudo() {
+    var t = (document.title || "estudo").split(",")[0];
+    return t.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "estudo";
+  }
+
+  function contarRespostas(obj) {
+    return Object.keys(obj || {}).filter(function (k) {
+      return String(obj[k]).trim() !== "";
+    }).length;
+  }
+
+  function pintarStatus() {
+    var el2 = el("#backupStatus");
+    if (!el2) return;
+    var n = contarRespostas(store.get("ans", {}));
+    var v = annIds.filter(function (id) { return done[id]; }).length;
+    el2.textContent = n + (n === 1 ? " resposta escrita" : " respostas escritas") +
+                      " e " + v + " de " + annIds.length + " anotações marcadas como vistas.";
+  }
+
+  function baixarRespostas() {
+    var dados = {
+      formato: "estudo-jw/1",
+      estudo: nomeDoEstudo(),
+      titulo: document.title,
+      salvoEm: new Date().toISOString(),
+      respostas: store.get("ans", {}),
+      vistos: done
+    };
+    var blob = new Blob([JSON.stringify(dados, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    var dia = new Date().toISOString().slice(0, 10);
+    a.href = url;
+    a.download = nomeDoEstudo() + "-respostas-" + dia + ".json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function aplicarRespostas(dados) {
+    var respostas = dados.respostas || {};
+    var saved = store.get("ans", {});
+    var aplicadas = 0, ignoradas = 0;
+    els("textarea.answer").forEach(function (t) {
+      var k = t.getAttribute("data-a");
+      if (typeof respostas[k] === "string") {
+        t.value = respostas[k];
+        saved[k] = respostas[k];
+        if (respostas[k].trim()) aplicadas++;
+      }
+    });
+    Object.keys(respostas).forEach(function (k) {
+      if (!el('textarea.answer[data-a="' + k + '"]') && String(respostas[k]).trim()) ignoradas++;
+    });
+    store.set("ans", saved);
+
+    if (dados.vistos) {
+      done = {};
+      Object.keys(dados.vistos).forEach(function (id) {
+        if (NOTES[id] && dados.vistos[id]) done[id] = true;
+      });
+      store.set("done", done);
+      annNodes.forEach(function (n) {
+        n.classList.toggle("done", !!done[n.getAttribute("data-n")]);
+      });
+      updateProgress();
+      buildDrawer();
+    }
+    pintarStatus();
+    alert("Pronto. " + aplicadas + " respostas carregadas." +
+          (ignoradas ? "\n" + ignoradas + " respostas do arquivo não têm campo nesta página e foram ignoradas." : ""));
+  }
+
+  function setupBackup() {
+    var btnSalvar = el("#backupSave");
+    var btnCarregar = el("#backupLoad");
+    var input = el("#backupFile");
+    if (!btnSalvar || !btnCarregar || !input) return;
+
+    pintarStatus();
+    els("textarea.answer").forEach(function (t) {
+      t.addEventListener("input", pintarStatus);
+    });
+
+    btnSalvar.addEventListener("click", baixarRespostas);
+    btnCarregar.addEventListener("click", function () { input.click(); });
+
+    input.addEventListener("change", function () {
+      var file = input.files && input.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        var dados;
+        try {
+          dados = JSON.parse(reader.result);
+        } catch (e) {
+          alert("Não consegui ler esse arquivo. Ele precisa ser o .json baixado por esta página.");
+          input.value = "";
+          return;
+        }
+        if (!dados || typeof dados.respostas !== "object") {
+          alert("Esse arquivo não tem respostas de estudo dentro.");
+          input.value = "";
+          return;
+        }
+        if (dados.estudo && dados.estudo !== nomeDoEstudo() &&
+            !confirm("Esse arquivo é de outro estudo (" + dados.estudo + "). Carregar mesmo assim?")) {
+          input.value = "";
+          return;
+        }
+        if (contarRespostas(store.get("ans", {})) &&
+            !confirm("Isso vai substituir o que já está escrito nesta página. Continuar?")) {
+          input.value = "";
+          return;
+        }
+        aplicarRespostas(dados);
+        input.value = "";
+      };
+      reader.readAsText(file);
+    });
+  }
+
   /* --------------------------------- tema --------------------------------- */
 
   function setupTheme() {
@@ -437,6 +569,7 @@
   buildDrawer();
   setupAnswers();
   setupExpected();
+  setupBackup();
   setupTheme();
 
   var guideOpen = store.get("guideOpen", true);

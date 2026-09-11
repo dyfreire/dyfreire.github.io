@@ -45,6 +45,20 @@ Cada uma das 13 perguntas do capítulo tem, embaixo do campo de resposta, um blo
 os pontos esperados: as respostas que atingem exatamente a pergunta, com o parágrafo ou a
 publicação de onde saem. Ficam fechados por padrão, para você responder primeiro e conferir depois.
 
+## Levar as respostas para outro aparelho
+
+O que você digita fica salvo automaticamente no navegador daquele aparelho. Para levar
+para outro, use a seção **Suas respostas**, no fim da página:
+
+- **Baixar minhas respostas** gera um `.json` com tudo que você escreveu e as anotações
+  marcadas como vistas.
+- **Carregar de um arquivo** aplica esse `.json` em qualquer aparelho. A página avisa
+  antes de substituir o que estiver escrito, e avisa também se o arquivo for de outro
+  estudo.
+
+Cada estudo tem seu próprio espaço no navegador, então as respostas de um não apagam as
+do outro.
+
 ## Categorias de anotação
 
 | Cor | Categoria | Conteúdo |
