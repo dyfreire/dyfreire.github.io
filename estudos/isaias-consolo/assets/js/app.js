@@ -374,6 +374,20 @@
     });
   }
 
+  /* ------------------- versículos escritos no corpo da página ------------------- */
+
+  function renderInlineVerses() {
+    els(".vtext").forEach(function (box) {
+      var parsed = parseRef(box.getAttribute("data-ref"));
+      if (!parsed) {
+        box.textContent = "Versículo não incluído nesta cópia offline.";
+        return;
+      }
+      box.innerHTML = '<p class="vtext-ref">' + parsed.label + "</p>" +
+                      '<div class="vtext-body">' + parsed.html + "</div>";
+    });
+  }
+
   /* ------------------- backup das respostas em arquivo ------------------- */
 
   function nomeDoEstudo() {
@@ -606,6 +620,7 @@
   /* --------------------------------- início --------------------------------- */
 
   setupAnnotations();
+  renderInlineVerses();
   buildDirection();
   markParagraphSteps();
   buildGuide();

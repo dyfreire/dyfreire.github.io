@@ -427,6 +427,45 @@ textarea.answer:focus { border-color: var(--c-pergunta); outline: none; }
 .para textarea.answer { margin-top: 0.2rem; }
 
 
+/* ---------------- versículo escrito no corpo ---------------- */
+
+.vtext {
+  background: var(--card-alt);
+  border-left: 3px solid var(--c-scr);
+  padding: 0.75rem 0.9rem;
+  margin: 0 0 0.85rem;
+}
+.vtext-ref {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--c-scr);
+  margin: 0 0 0.4rem;
+}
+.vtext-body { font-family: var(--f-read); font-size: 1.02rem; line-height: 1.6; }
+.vtext-body p { margin: 0 0 0.5rem; }
+.vtext-body p:last-child { margin-bottom: 0; }
+.vtext-body .vn {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  color: var(--c-scr);
+  vertical-align: 0.35em;
+  margin-right: 0.15rem;
+}
+.vtext.leia { border-left-width: 4px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--c-scr); }
+.vtext.leia .vtext-ref::before { content: "LEIA  "; }
+
+.jwlink {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-strong);
+  white-space: nowrap;
+}
+.jwlink:hover { color: var(--c-scr); border-bottom-color: var(--c-scr); }
+.parafoot { margin: 0 0 0.9rem; }
+
 /* ---------------- comentário base editável ---------------- */
 
 .answerbox { margin: 0 0 0.6rem; }
