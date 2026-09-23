@@ -44,9 +44,9 @@ window.NOTES = {
       <p>A parte não é sobre o que fazemos por fora, é sobre o que decidimos por dentro. Alguém pode
       não votar, não usar bandeira e não discutir política, e ainda assim torcer por um lado no
       coração.</p>
-      <p>O texto da apostila aponta
-      <span class="scr" data-ref="20:4:23">Provérbios 4:23</span>: proteger o coração acima de tudo,
-      porque dele procedem as fontes da vida.</p>
+      <p>O texto da apostila é <span class="scr" data-ref="20:4:23">Provérbios 4:23</span>: proteger
+      o coração acima de tudo, porque dele procedem as fontes da vida. Ele entra no fim da abertura,
+      logo depois da frase de ênfase, funcionando como a ordem prática que fecha o raciocínio.</p>
       <h4>Frase para abrir</h4>
       <p>“Dá para uma pessoa parecer neutra por fora e já ter escolhido um lado por dentro. É disso
       que a parte trata.”</p>`
@@ -65,6 +65,29 @@ window.NOTES = {
   },
 
   /* ------------------------------ pergunta 1 ------------------------------ */
+
+  a21: {
+    cat: "pergunta", para: "Abertura",
+    quote: "o que é mais fácil de controlar",
+    title: "Três perguntas possíveis para abrir",
+    body: `
+      <p>Escolha uma e use só ela. A pergunta é retórica: não espere resposta, dê dois segundos de
+      silêncio e siga para o texto.</p>
+      <ol>
+        <li><b>“Quando o assunto é política, o que é mais fácil de controlar: o que a gente fala, ou
+        o que a gente sente?”</b> É a mais segura. Todo mundo concorda que sentir é mais difícil, e
+        isso já entrega o tema da parte.</li>
+        <li><b>“Você já se pegou torcendo por um lado, mesmo sem dizer nada para ninguém?”</b> Mais
+        direta e pessoal. Mexe mais, e serve se a congregação for de confiança e o assunto estiver
+        quente na região.</li>
+        <li><b>“Se ninguém estivesse olhando, a sua opinião sobre política seria a mesma que você
+        mostra?”</b> A mais provocativa. Use só se você estiver à vontade para conduzir o silêncio
+        que ela cria.</li>
+      </ol>
+      <h4>Cuidado</h4>
+      <p>Qualquer uma delas é para ser pensada, não respondida em voz alta. Se alguém começar a
+      responder, agradeça com um gesto e siga, senão a parte perde o tempo logo no começo.</p>`
+  },
 
   a3: {
     cat: "pergunta", para: "P1",
