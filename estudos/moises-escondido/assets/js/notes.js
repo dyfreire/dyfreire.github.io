@@ -110,13 +110,82 @@ window.NOTES = {
   a6: {
     cat: "insight", para: "§2",
     quote: "nenhum homem, por mais poderoso que fosse, tinha o direito de obrigá-las",
-    title: "A conclusão que elas tiraram sozinhas",
+    title: "Quem ensinou esse limite a elas",
     body: `
-      <p>Elas não tinham a Lei escrita, nem profeta por perto, nem congregação para consultar. Mesmo
-      assim entenderam que a autoridade de um rei tem limite, e que esse limite é o que o Soberano do
-      Universo considera errado.</p>
-      <p>Séculos depois, os apóstolos diriam a mesma coisa diante do tribunal
+      <p>A Lei escrita ainda não existia: ela só viria no Sinai, décadas depois. Mas elas não
+      aprenderam isso do nada. O conhecimento sobre Jeová corria dentro das famílias hebreias, e a
+      Bíblia mostra a corrente:</p>
+      <ul>
+        <li><b>A geração de José tinha morrido havia pouco</b>
+        (<span class="scr" data-ref="2:1:6">Êxodo 1:6</span>). Quem era idoso naquele Egito tinha
+        ouvido de gente que conviveu com ele.</li>
+        <li><b>José deixou uma promessa e cobrou um juramento:</b> Deus voltaria a atenção para eles
+        e os levaria à terra prometida a Abraão, Isaque e Jacó
+        (<span class="scr" data-ref="1:50:24-25">Gênesis 50:24, 25</span>). O povo guardou esse
+        juramento por gerações, e Moisés levou os ossos de José na saída
+        (<span class="scr" data-ref="2:13:19">Êxodo 13:19</span>).</li>
+        <li><b>Jeová era conhecido pelo nome de família:</b> o Deus de Abraão, de Isaque e de Jacó
+        (<span class="scr" data-ref="2:3:6">Êxodo 3:6</span>).</li>
+      </ul>
+      <p>No caso da família de Moisés isso é documentado: <b>Joquebede era filha de Levi</b>
+      (<span class="scr" data-ref="4:26:59">Números 26:59</span>), e Levi, filho de Jacó, viveu 137
+      anos (<span class="scr" data-ref="2:6:16">Êxodo 6:16</span>). A mãe de Moisés foi criada por um
+      homem que conviveu com Jacó e viu José governar o Egito.</p>
+      <p>A Bíblia não diz quem ensinou Sifrá e Puá. Mas elas vinham do mesmo povo e da mesma
+      tradição, e séculos depois os apóstolos repetiriam a mesma conclusão diante do tribunal
       (<span class="scr" data-ref="44:5:29">Atos 5:29</span>).</p>`
+  },
+
+  a22: {
+    cat: "hoje", para: "§5",
+    quote: "Eles ensinaram Miriã e Arão a amar e obedecer a Jeová",
+    title: "A corrente de ensino não parou ali",
+    body: `
+      <p>Junte as pontas: Levi ensinou Joquebede, Joquebede e Anrão ensinaram Miriã, Arão e Moisés, e
+      Moisés escreveu o relato que estamos estudando hoje. Quatro gerações, dentro de casa, no meio
+      da escravidão.</p>
+      <h4>Onde essa corrente está hoje</h4>
+      <ul>
+        <li><b>Os avós.</b> Contar aos netos o que viram Jeová fazer, inclusive nos tempos difíceis,
+        é exatamente o papel que Levi teve.</li>
+        <li><b>O culto em família.</b> É onde a criança ouve pela primeira vez que existe limite para
+        a autoridade humana.</li>
+        <li><b>O exemplo em casa.</b> As parteiras decidiram sozinhas na frente do rei, mas o que
+        pesou na decisão delas foi ensinado anos antes, por alguém.</li>
+      </ul>
+      <p>Quem está ensinando hoje pode não ver o resultado, como talvez Anrão e Joquebede não tenham
+      visto. O resultado aparece assim mesmo.</p>`
+  },
+
+  a23: {
+    cat: "pesquisa", para: "§2",
+    quote: "a fazer algo errado aos olhos do Soberano do Universo",
+    title: "Os exemplos que provavam isso para elas",
+    body: `
+      <p>O capítulo diz que elas <b>sabiam</b>. Esse saber tinha provas, e quase todas envolviam
+      justamente reis, alguns deles Faraós:</p>
+      <ul>
+        <li><b>Um Faraó já tinha sido corrigido por Jeová.</b> No tempo de Abraão, quando Sarai foi
+        levada ao palácio, Jeová infligiu pragas ao Faraó e à casa dele, e o rei teve que devolvê-la
+        (<span class="scr" data-ref="1:12:17-18">Gênesis 12:17, 18</span>).</li>
+        <li><b>Outro rei foi impedido por Deus num sonho.</b> Abimeleque foi avisado antes de cometer
+        o erro (<span class="scr" data-ref="1:20:3">Gênesis 20:3</span>).</li>
+        <li><b>O Faraó do tempo de José admitiu isso em público.</b> Depois que nenhum sábio do Egito
+        conseguiu interpretar o sonho, ele perguntou aos servos se existiria outro homem como José,
+        “em quem está o espírito de Deus”
+        (<span class="scr" data-ref="1:41:38">Gênesis 41:38</span>). O próprio José tinha dito:
+        “Quem sou eu? É Deus que falará” (<span class="scr" data-ref="1:41:16">41:16</span>).
+        Isso era história recente, de uns 60 anos antes.</li>
+        <li><b>A escravidão tinha prazo marcado, e não era o Faraó quem marcava.</b> Jeová avisou a
+        Abraão que os descendentes dele seriam escravizados e afligidos, e que Ele julgaria a nação e
+        os tiraria de lá com muitos bens
+        (<span class="scr" data-ref="1:15:13-14">Gênesis 15:13, 14</span>).</li>
+      </ul>
+      <h4>E a prova que elas viam com os próprios olhos</h4>
+      <p>Quanto mais os egípcios oprimiam, mais o povo se multiplicava, a ponto de os egípcios ficarem
+      com medo (<span class="scr" data-ref="2:1:12">Êxodo 1:12</span>). E quem via isso melhor do que
+      ninguém eram elas: parteira é justamente quem traz os bebês ao mundo. O plano do rei fracassava
+      nas mãos delas, todo dia.</p>`
   },
 
   a7: {
