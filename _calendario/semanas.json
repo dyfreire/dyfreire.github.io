@@ -1,94 +1,246 @@
 {
   "semanas": [
     {
-      "inicio": "2026-10-12", "fim": "2026-10-18", "leitura": "Jeremias 42-44",
+      "inicio": "2026-10-12",
+      "fim": "2026-10-18",
+      "leitura": "Jeremias 42-44",
       "meio": [
-        {"tipo": "discurso", "titulo": "Eles perguntaram o que fazer, mas não obedeceram", "detalhe": "Tesouros · 10 min", "href": "semanas/2026-10-12/meio-de-semana/discurso/"},
-        {"tipo": "joias", "titulo": "Joias de Jeremias 42 a 44", "detalhe": "Pergunta da apostila + 8 joias", "href": "semanas/2026-10-12/meio-de-semana/joias/"},
-        {"tipo": "livro", "titulo": "Calebe: ele continuou leal ao seu Deus", "detalhe": "Estudo de livro · wcg cap. 12", "href": "semanas/2026-10-12/meio-de-semana/estudo-livro/"}
-      ],
-      "fim_semana": []
-    },
-    {
-      "inicio": "2026-10-05", "fim": "2026-10-11", "leitura": "Jeremias 40-41",
-      "meio": [
-        {"tipo": "joias", "titulo": "Joias de Jeremias 40 e 41", "detalhe": "Pergunta da apostila + 9 joias", "href": "estudos/joias-jeremias-40-41/"},
-        {"tipo": "livro", "titulo": "Moisés apresenta-se a Faraó", "detalhe": "Estudo de livro · wcg cap. 11", "href": "estudos/moises-farao/"}
-      ],
-      "fim_semana": []
-    },
-    {
-      "inicio": "2026-09-28", "fim": "2026-10-04", "leitura": "",
-      "meio": [
-        {"tipo": "livro", "titulo": "Moisés tomou a decisão certa", "detalhe": "Estudo de livro · wcg cap. 10", "href": "estudos/moises-decisao/"}
+        {
+          "tipo": "discurso",
+          "titulo": "Eles perguntaram o que fazer, mas não obedeceram",
+          "detalhe": "Tesouros · 10 min",
+          "href": "semanas/2026-10-12/meio-de-semana/discurso/"
+        },
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 42 a 44",
+          "detalhe": "Pergunta da apostila + 8 joias",
+          "href": "semanas/2026-10-12/meio-de-semana/joias/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Calebe: ele continuou leal ao seu Deus",
+          "detalhe": "Estudo de livro · wcg cap. 12",
+          "href": "semanas/2026-10-12/meio-de-semana/estudo-livro/"
+        }
       ],
       "fim_semana": [
-        {"tipo": "sentinela", "titulo": "Ajude outros a conhecer a Jeová", "detalhe": "A Sentinela de julho de 2026", "href": "estudos/conhecer-jeova/"}
+        {
+          "tipo": "sentinela",
+          "titulo": "Você pode vencer a luta contra Satanás e os demônios",
+          "detalhe": "A Sentinela de agosto de 2026",
+          "href": "semanas/2026-10-12/fim-de-semana/sentinela/"
+        }
       ]
     },
     {
-      "inicio": "2026-09-21", "fim": "2026-09-27", "leitura": "",
+      "inicio": "2026-10-05",
+      "fim": "2026-10-11",
+      "leitura": "Jeremias 40-41",
       "meio": [
-        {"tipo": "parte", "titulo": "Continue neutro no seu coração", "detalhe": "Nossa Vida Cristã · 15 min", "href": "estudos/neutralidade/"},
-        {"tipo": "livro", "titulo": "Pela fé, Moisés foi escondido", "detalhe": "Estudo de livro · wcg cap. 9", "href": "estudos/moises-escondido/"}
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 40 e 41",
+          "detalhe": "Pergunta da apostila + 9 joias",
+          "href": "estudos/joias-jeremias-40-41/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Moisés apresenta-se a Faraó",
+          "detalhe": "Estudo de livro · wcg cap. 11",
+          "href": "estudos/moises-farao/"
+        }
       ],
       "fim_semana": []
     },
     {
-      "inicio": "2026-09-14", "fim": "2026-09-20", "leitura": "",
+      "inicio": "2026-09-28",
+      "fim": "2026-10-04",
+      "leitura": "",
+      "meio": [
+        {
+          "tipo": "livro",
+          "titulo": "Moisés tomou a decisão certa",
+          "detalhe": "Estudo de livro · wcg cap. 10",
+          "href": "estudos/moises-decisao/"
+        }
+      ],
+      "fim_semana": [
+        {
+          "tipo": "sentinela",
+          "titulo": "Ajude outros a conhecer a Jeová",
+          "detalhe": "A Sentinela de julho de 2026",
+          "href": "estudos/conhecer-jeova/"
+        }
+      ]
+    },
+    {
+      "inicio": "2026-09-21",
+      "fim": "2026-09-27",
+      "leitura": "",
+      "meio": [
+        {
+          "tipo": "parte",
+          "titulo": "Continue neutro no seu coração",
+          "detalhe": "Nossa Vida Cristã · 15 min",
+          "href": "estudos/neutralidade/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Pela fé, Moisés foi escondido",
+          "detalhe": "Estudo de livro · wcg cap. 9",
+          "href": "estudos/moises-escondido/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
+      "inicio": "2026-09-14",
+      "fim": "2026-09-20",
+      "leitura": "",
       "meio": [],
       "fim_semana": [
-        {"tipo": "sentinela", "titulo": "Encontre consolo no livro de Isaías", "detalhe": "A Sentinela de julho de 2026", "href": "estudos/isaias-consolo/"}
+        {
+          "tipo": "sentinela",
+          "titulo": "Encontre consolo no livro de Isaías",
+          "detalhe": "A Sentinela de julho de 2026",
+          "href": "estudos/isaias-consolo/"
+        }
       ]
     },
     {
-      "inicio": "2026-09-07", "fim": "2026-09-13", "leitura": "",
+      "inicio": "2026-09-07",
+      "fim": "2026-09-13",
+      "leitura": "",
       "meio": [],
       "fim_semana": [
-        {"tipo": "sentinela", "titulo": "O que aprendemos com os gibeonitas", "detalhe": "A Sentinela de julho de 2026", "href": "estudos/gibeonitas/"}
+        {
+          "tipo": "sentinela",
+          "titulo": "O que aprendemos com os gibeonitas",
+          "detalhe": "A Sentinela de julho de 2026",
+          "href": "estudos/gibeonitas/"
+        }
       ]
     },
     {
-      "inicio": "2026-08-24", "fim": "2026-08-30", "leitura": "",
+      "inicio": "2026-08-24",
+      "fim": "2026-08-30",
+      "leitura": "",
       "meio": [
-        {"tipo": "livro", "titulo": "Abraão: ele enfrentou seu maior desafio", "detalhe": "Estudo de livro · wcg cap. 5", "href": "estudos/abraao-moria/"}
+        {
+          "tipo": "livro",
+          "titulo": "Abraão: ele enfrentou seu maior desafio",
+          "detalhe": "Estudo de livro · wcg cap. 5",
+          "href": "estudos/abraao-moria/"
+        }
       ],
       "fim_semana": []
     },
     {
-      "inicio": "2026-08-10", "fim": "2026-08-16", "leitura": "Jeremias 24-25",
+      "inicio": "2026-08-10",
+      "fim": "2026-08-16",
+      "leitura": "Jeremias 24-25",
       "meio": [
-        {"tipo": "discurso", "titulo": "Por que alguns figos eram bons e outros eram ruins?", "detalhe": "Tesouros · 10 min", "href": "discursos/palestra-figos-10min.html"},
-        {"tipo": "joias", "titulo": "Joias espirituais de Jeremias 24-25", "detalhe": "10 joias", "href": "estudos/joias-jeremias-24-25.html"},
-        {"tipo": "leitura", "titulo": "Jeremias 24-25: figos bons e figos ruins", "detalhe": "Estudo da leitura da semana", "href": "estudos/estudo-jeremias-24-25.html"},
-        {"tipo": "livro", "titulo": "Sara: ela se recusou a olhar para trás", "detalhe": "Estudo de livro · wcg cap. 3", "href": "estudos/estudo-sara-coragem-cap3.html"}
+        {
+          "tipo": "discurso",
+          "titulo": "Por que alguns figos eram bons e outros eram ruins?",
+          "detalhe": "Tesouros · 10 min",
+          "href": "discursos/palestra-figos-10min.html"
+        },
+        {
+          "tipo": "joias",
+          "titulo": "Joias espirituais de Jeremias 24-25",
+          "detalhe": "10 joias",
+          "href": "estudos/joias-jeremias-24-25.html"
+        },
+        {
+          "tipo": "leitura",
+          "titulo": "Jeremias 24-25: figos bons e figos ruins",
+          "detalhe": "Estudo da leitura da semana",
+          "href": "estudos/estudo-jeremias-24-25.html"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Sara: ela se recusou a olhar para trás",
+          "detalhe": "Estudo de livro · wcg cap. 3",
+          "href": "estudos/estudo-sara-coragem-cap3.html"
+        }
       ],
       "fim_semana": [
-        {"tipo": "sentinela", "titulo": "Como continuar leal a Jeová ao enfrentar testes de fé", "detalhe": "A Sentinela", "href": "estudos/sentinela-2026-08-10-testes-fe.html"}
+        {
+          "tipo": "sentinela",
+          "titulo": "Como continuar leal a Jeová ao enfrentar testes de fé",
+          "detalhe": "A Sentinela",
+          "href": "estudos/sentinela-2026-08-10-testes-fe.html"
+        }
       ]
     },
     {
-      "inicio": "2026-07-27", "fim": "2026-08-02", "leitura": "",
+      "inicio": "2026-07-27",
+      "fim": "2026-08-02",
+      "leitura": "",
       "meio": [
-        {"tipo": "discurso", "titulo": "Ele pregou com coragem: Jeremias 20", "detalhe": "Tesouros · 10 min", "href": "discursos/jeremias-2026-07-27.html"},
-        {"tipo": "livro", "titulo": "Enoque: ele andou com Deus", "detalhe": "Estudo de livro · wcg cap. 1", "href": "estudos/estudo-wcg-secao1-cap1-enoque.html"}
+        {
+          "tipo": "discurso",
+          "titulo": "Ele pregou com coragem: Jeremias 20",
+          "detalhe": "Tesouros · 10 min",
+          "href": "discursos/jeremias-2026-07-27.html"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Enoque: ele andou com Deus",
+          "detalhe": "Estudo de livro · wcg cap. 1",
+          "href": "estudos/estudo-wcg-secao1-cap1-enoque.html"
+        }
       ],
       "fim_semana": [
-        {"tipo": "sentinela", "titulo": "Continue espiritualmente forte ao obter ensino adicional", "detalhe": "A Sentinela", "href": "sentinela-curso-adicional.html"}
+        {
+          "tipo": "sentinela",
+          "titulo": "Continue espiritualmente forte ao obter ensino adicional",
+          "detalhe": "A Sentinela",
+          "href": "sentinela-curso-adicional.html"
+        }
       ]
     },
     {
-      "inicio": "2026-07-13", "fim": "2026-07-19", "leitura": "Jeremias 16-17",
+      "inicio": "2026-07-13",
+      "fim": "2026-07-19",
+      "leitura": "Jeremias 16-17",
       "meio": [
-        {"tipo": "reuniao", "titulo": "Reunião Vida e Ministério: Jeremias 16-17", "detalhe": "Preparação da reunião", "href": "preparacao-reuniao-jul-2026.html"}
+        {
+          "tipo": "reuniao",
+          "titulo": "Reunião Vida e Ministério: Jeremias 16-17",
+          "detalhe": "Preparação da reunião",
+          "href": "preparacao-reuniao-jul-2026.html"
+        }
       ],
       "fim_semana": []
     }
   ],
   "outros": [
-    {"tipo": "sentinela", "titulo": "Por que os princípios bíblicos são importantes?", "detalhe": "A Sentinela · junho-julho de 2026", "href": "sentinela-principios.html"},
-    {"tipo": "estudo", "titulo": "Quem fala mal, quem mente e os falsos zelosos", "detalhe": "Estudo profundo", "href": "estudo-fofoca-mentira.html"},
-    {"tipo": "discurso", "titulo": "O amor identifica os cristãos verdadeiros", "detalhe": "Discurso público S34 n.º 72", "href": "discursos/s34-t72-amor-identifica.html"},
-    {"tipo": "pasta", "titulo": "Todos os discursos", "detalhe": "Seção completa", "href": "discursos/"}
+    {
+      "tipo": "sentinela",
+      "titulo": "Por que os princípios bíblicos são importantes?",
+      "detalhe": "A Sentinela · junho-julho de 2026",
+      "href": "sentinela-principios.html"
+    },
+    {
+      "tipo": "estudo",
+      "titulo": "Quem fala mal, quem mente e os falsos zelosos",
+      "detalhe": "Estudo profundo",
+      "href": "estudo-fofoca-mentira.html"
+    },
+    {
+      "tipo": "discurso",
+      "titulo": "O amor identifica os cristãos verdadeiros",
+      "detalhe": "Discurso público S34 n.º 72",
+      "href": "discursos/s34-t72-amor-identifica.html"
+    },
+    {
+      "tipo": "pasta",
+      "titulo": "Todos os discursos",
+      "detalhe": "Seção completa",
+      "href": "discursos/"
+    }
   ]
 }
