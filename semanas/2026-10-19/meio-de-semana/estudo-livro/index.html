@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josué em Jericó</title>
+<meta name="description" content="Preparação do estudo de livro Ande Corajosamente com Deus, capítulo 13, com comentário pronto em cada pergunta, textos bíblicos escritos e complementos do Guia de Pesquisa.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%B1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">Ande Corajosamente com Deus, cap. 13<b>Ele obedeceu mesmo sem entender</b></div>
+    <span class="progress" id="progress"></span>
+    <button class="btn" type="button" id="guideBtn" aria-pressed="true">Cores</button>
+    <button class="btn" type="button" id="routeBtn">Anotações</button>
+    <button class="btn" type="button" id="ansBtn" aria-pressed="false">Guia de Pesquisa</button>
+    <a class="btn" href="#roteiro">30 min</a>
+    <a class="btn" href="#resumo">Resumo</a>
+    <button class="btn" type="button" id="themeBtn">Tema</button>
+    <button class="btn" type="button" id="resetBtn" title="Limpar marcas de visto">Zerar</button>
+  </div>
+</header>
+
+<section class="guide" id="guide">
+  <div class="guide-in">
+    <h2>Guia de cores, clique para ligar ou desligar cada tipo</h2>
+    <div class="guide-grid" id="guideGrid"></div>
+    <p class="guide-note">
+      Cada trecho colorido abre uma anotação. Os <b>textos bíblicos</b> aparecem escritos (Tradução do Novo
+      Mundo), e as referências <span class="scr" data-ref="6:6:2-5">sublinhadas assim</span> abrem o texto
+      completo. Em cada pergunta, o campo já vem com um <b>comentário pronto</b>, e o bloco <b>Do Guia de
+      Pesquisa</b> traz complementos para um segundo comentário. O botão “Guia de Pesquisa” lá em cima abre
+      todos de uma vez. Tudo funciona sem internet.
+    </p>
+  </div>
+</section>
+
+<main>
+
+  <p class="chapter-eyebrow">13 &nbsp;Josué &middot; semana de 19 a 25 de outubro de 2026</p>
+  <h1>Ele obedeceu mesmo sem entender</h1>
+
+  <div class="factbox">
+    <p><b>Leia o relato na Bíblia:</b>
+      <span class="scr" data-ref="5:20:16-18">Deuteronômio 20:16-18</span>;
+      <span class="scr" data-ref="6:2:1">Josué 2:1</span>,
+      <span class="scr" data-ref="6:2:9-11">9-11</span>,
+      <span class="scr" data-ref="6:2:24">24</span>;
+      <span class="scr" data-ref="6:3:14-17">3:14-17</span>;
+      <span class="scr" data-ref="6:5:1">5:1</span>;
+      <span class="scr" data-ref="6:6:1-21">6:1-21</span>,
+      <span class="scr" data-ref="6:6:24">24</span></p>
+    <p><b>Tempo do estudo:</b> 30 minutos (parte 9 da reunião)</p>
+    <p class="src">Cada parágrafo traz o <b>conteúdo resumido</b>, com as frases citadas do capítulo, os
+    <b>textos bíblicos escritos</b> e um comentário pronto. O texto oficial completo está no
+    <a href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/">jw.org</a>
+    e no JW Library: cada parágrafo tem um link direto.</p>
+  </div>
+
+  <aside class="direction" id="direcao" aria-label="Direção do estudo">
+    <h2>Para onde este estudo quer levar</h2>
+    <p class="dsub">O capítulo mostra que a coragem de Josué foi, acima de tudo, coragem para obedecer. O
+    número da etapa aparece ao lado de cada parágrafo e dentro de cada anotação.</p>
+    <ol class="steps" id="stepsList"></ol>
+    <p class="dnote"><b>Em uma frase:</b> Jeová deu a Josué uma ordem que não fazia sentido para um militar,
+    marchar em volta de uma cidade murada; Josué lembrou do que Jeová já tinha feito, obedeceu dia após dia
+    sem ver resultado, e no sétimo dia a muralha caiu.</p>
+  </aside>
+
+  <figure>
+    <img src="assets/img/muralha.jpg" loading="lazy"
+         alt="Homens de Canaã prontos para a batalha, em cima da muralha de Jericó, observando com preocupação enquanto os israelitas marcham em volta da cidade.">
+    <figcaption>Os homens de Jericó, em cima da muralha, olham os israelitas marcharem</figcaption>
+  </figure>
+
+  <!-- ================================ §1 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§1</div>
+    <div class="ptxt">
+      <p class="resumo">Josué olhava para Jericó, a cidade que Deus mandou atacar e destruir. Ele se lembrou do
+      que Jeová disse pouco antes de Moisés morrer: <span data-n="a1">“Seja corajoso e forte.”</span> Depois
+      Jeová disse algo parecido: <span data-n="a2">“Seja corajoso e muito forte.”</span> Josué precisaria de
+      muita coragem. Por quê?</p>
+      <div class="vtext" data-ref="6:1:7"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p3">ler
+         o §1 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §2 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§2</div>
+    <div class="ptxt">
+      <p class="resumo">Jericó não era muito grande, mas era protegida por
+      <span data-n="a3">uma grande muralha em toda a sua volta</span>, e seria a primeira cidade a ser atacada.
+      O povo dali estava mergulhado na maldade. Séculos antes, Jeová tinha falado a Abraão sobre
+      <span data-n="a4">“o erro dos amorreus”</span>, os pecados de todo o povo de Canaã, e disse que um dia não
+      ia mais tolerar aquilo. Esse dia chegou. Eram prostituição nos locais de adoração, idolatria, incesto, e
+      até sacrifício de crianças. Jeová disse que <span data-n="a5">a terra precisaria vomitá-los</span>!</p>
+      <div class="vtext" data-ref="1:15:16"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p4">ler
+         o §2 no jw.org</a></p>
+    </div>
+  </div>
+
+  <p class="pullquote">
+    A instrução que Josué recebeu de Jeová sobre como atacar Jericó não fazia sentido do ponto de vista militar
+  </p>
+
+  <!-- ================================ §3 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§3</div>
+    <div class="ptxt">
+      <p class="resumo">Deus usaria Josué e seu exército, e começaria por Jericó a limpar a terra da maldade.
+      Mas as instruções pareciam não fazer muito sentido. Jeová não mandou atacar logo, nem cercar a cidade
+      por muito tempo. <span data-n="a6">Simplesmente marchar em volta de Jericó</span>, uma vez por dia,
+      durante seis dias, com sacerdotes levando a Arca e tocando buzinas. No sétimo dia, sete voltas,
+      <span data-n="a7">e daí gritar</span>.</p>
+      <div class="vtext leia" data-ref="6:6:2-5"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p5">ler
+         o §3 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §4 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§4</div>
+    <div class="ptxt">
+      <p class="resumo">Josué já tinha lutado antes. Aquela estratégia
+      <span data-n="a9">não fazia sentido do ponto de vista humano e militar</span>.
+      <span data-n="a8">E se Israel perdesse a batalha?</span> O que as outras cidades de Canaã iam pensar?
+      Iam achar que os israelitas não eram nada?</p>
+      <div class="vtext" data-ref="6:6:10"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p6">ler
+         o §4 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §5 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§5</div>
+    <div class="ptxt">
+      <p class="resumo">Só que <span data-n="a10">Jeová já tinha dado a Josué motivos para confiar nele</span>.
+      Quando Josué mandou dois espiões a Jericó, eles souberam que
+      <span data-n="a11">os homens daquela cidade estavam com medo dos israelitas</span>. Depois Jeová fez o
+      milagre de <span data-n="a12">parar as águas do rio Jordão</span>, e o povo atravessou.</p>
+      <div class="vtext" data-ref="6:2:9"></div>
+      <div class="vtext" data-ref="6:3:15-16"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p7">ler
+         o §5 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §6 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§6</div>
+    <div class="ptxt">
+      <p class="resumo"><span data-n="a13">Meditar nessas coisas</span> com certeza aumentou a fé de Josué e
+      deu coragem para obedecer. Ele liderou a marcha, e os sacerdotes tocaram as buzinas. A cidade estava
+      quieta, <span data-n="a14">“completamente fechada”</span>, porque o povo estava com medo. No dia
+      seguinte marcharam de novo, exatamente como Jeová mandou, e assim fizeram
+      <span data-n="a15">dia após dia, por seis dias</span>. Então chegou o sétimo dia.</p>
+      <div class="vtext" data-ref="6:6:1"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p8">ler
+         o §6 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §7 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§7</div>
+    <div class="ptxt">
+      <p class="resumo">Naquele dia, o exército deu sete voltas. No fim da sétima, Josué disse em voz alta:
+      <span data-n="a16">“Gritem, pois Jeová lhes entregou a cidade!”</span> Não precisaram esperar muito.
+      Assim que o povo deu um grande grito de guerra, <span data-n="a17">a muralha caiu por terra</span>.</p>
+      <div class="vtext leia" data-ref="6:6:20"></div>
+      <div class="vtext" data-ref="58:11:30"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p9">ler
+         o §7 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §8 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§8</div>
+    <div class="ptxt">
+      <p class="resumo">Josué e seus homens entraram e destruíram tudo o que respirava,
+      <span data-n="a18">assim como Jeová tinha ordenado</span>. Com a ajuda de Jeová, foram derrotando cidade
+      após cidade, nação após nação. Jeová estava limpando aquela terra do “erro dos amorreus”.</p>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p10">ler
+         o §8 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §9 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§9</div>
+    <div class="ptxt">
+      <p class="resumo">Só que <span data-n="a19">uma parte bem pequena da muralha de Jericó não caiu</span>.
+      Por quê? A resposta tem a ver com a coragem de uma mulher que mostrou fé em Deus, assunto do próximo
+      capítulo.</p>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/#p11">ler
+         o §9 no jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ============================ para considerar ============================ -->
+
+  <h2 class="sect">Para considerar</h2>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q1">De que maneiras Josué mostrou coragem?</span></p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q1">Ele mostrou coragem para obedecer. Josué era experiente em guerra, e a ordem de Jeová não fazia sentido para um militar: só marchar em volta da cidade. Mesmo assim ele obedeceu, dia após dia, com os inimigos olhando de cima da muralha. E Josué 6:10 mostra que o povo marchou calado durante seis dias. É preciso coragem para fazer uma coisa que todo mundo acharia estranha, só porque Jeová mandou.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q1">voltar ao comentário base</button></p>
+    </div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 1:7-9</span></summary>
+      <ul>
+        <li><b>w09 1/12 p. 17:</b> Jeová disse a Josué três vezes no mesmo capítulo que ele precisava ser
+        corajoso e forte. E a coragem viria de ler a Lei “em voz baixa dia e noite” e de aplicar o que lia.</li>
+        <li><b>Josué 1:9</b> foi o texto do ano de 2013, e o Guia indica o artigo “Seja corajoso, Jeová está com
+        você!” (w13 15/1 p. 8).</li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- =========================== analise mais a fundo =========================== -->
+
+  <h2 class="sect">Analise mais a fundo</h2>
+
+  <div class="qblock">
+    <p class="qtext">1. <span data-n="q2">Que partes das Escrituras</span> provavelmente estavam disponíveis
+    para Josué?</p>
+    <p class="qsrc">(<i>w09</i> 1/12 17 § 4, nota) &nbsp;A</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q2">A Sentinela de 2009 diz que Josué provavelmente tinha os cinco livros de Moisés, de Gênesis a Deuteronômio, o livro de Jó e um ou dois salmos. Era pouco, comparado com a Bíblia que temos hoje. Mas Jeová mandou que ele lesse isso dia e noite, e foi daí que veio a coragem dele. A imagem A mostra Josué lendo um rolo à noite.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q2">voltar ao comentário base</button></p>
+    </div>
+    <figure>
+      <img src="assets/img/josue-rolo.jpg" loading="lazy" alt="Josué, sentado em frente a uma tenda, lendo um rolo à noite.">
+      <figcaption><span class="imgtag">A</span>Josué lendo um rolo à noite, na frente da tenda</figcaption>
+    </figure>
+    <details class="followup" data-step="1">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 1:8</span></summary>
+      <ul>
+        <li><b>w09 1/12 p. 17:</b> uma obra de referência explica que Jeová mandou Josué “sussurrar” a Lei para
+        si mesmo, ponderar e meditar nela. Ter a Palavra não bastava; ele precisava ler e aplicar.</li>
+        <li>O Guia ainda indica para Josué 1:8 a lição 11 do <i>Seja Feliz para Sempre!</i>, “Como você pode
+        aproveitar ao máximo a leitura da Bíblia?”, e o Perspicaz, “Meditação” § 4.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">2. Antes de os israelitas marcharem em volta de Jericó,
+    <span data-n="q3">o que Jeová pediu para Josué fazer?</span> Por que essas instruções talvez não
+    parecessem uma boa estratégia?</p>
+    <p class="qsrc">(<span class="scr" data-ref="6:5:2-8">Jos. 5:2-8</span>; <i>w18.10</i> 23 §§ 5-7)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q3">Jeová mandou circuncidar todos os homens. A Sentinela de outubro de 2018 explica que isso deixaria o exército com dor e sem condições de lutar por vários dias, bem do lado de Jericó. Os israelitas talvez pensassem: e se o inimigo atacar agora, como vamos proteger nossas famílias? Mas aconteceu o contrário: os homens de Jericó ficaram com medo e trancaram a cidade.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q3">voltar ao comentário base</button></p>
+    </div>
+    <div class="vtext" data-ref="6:5:8"></div>
+    <details class="followup" data-step="2">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 5:2; 5:13-15</span></summary>
+      <ul>
+        <li><b>w18.10 p. 23:</b> antes disso, Josué encontrou um homem com espada na mão, o “príncipe do
+        exército de Jeová”. Foi provavelmente por meio desse anjo que Jeová deu as instruções sobre Jericó.</li>
+        <li>O mesmo artigo diz que a marcha, além de fortalecer a fé, evitou que os israelitas tivessem que
+        lutar contra os soldados poderosos de Jericó.</li>
+        <li>O Guia indica o Perspicaz, “Faca, Cutelo” § 3, para as facas de pedra de 5:2.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">3. Que prova existe de que <span data-n="q4">Jericó não ficou sitiada por muito
+    tempo</span> antes de ser conquistada?</p>
+    <p class="qsrc">(<i>w15</i> 15/11 13) &nbsp;B</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q4">Quando uma cidade era cercada por muito tempo, o povo comia a comida guardada e o inimigo levava o resto. Mas nas ruínas de Jericó os arqueólogos acharam muito cereal, como os jarros da imagem B. Uma revista de arqueologia diz que isso é fora do comum. E bate com a Bíblia: o ataque foi na primavera, logo depois da colheita, e Jeová proibiu que os israelitas pegassem as coisas da cidade.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q4">voltar ao comentário base</button></p>
+    </div>
+    <figure>
+      <img src="assets/img/cereais.jpg" loading="lazy" alt="Jarros de cereais queimados encontrados no local da antiga Jericó.">
+      <figcaption><span class="imgtag">B</span>Jarros de cereais queimados encontrados no local da antiga Jericó</figcaption>
+    </figure>
+    <details class="followup" data-step="4">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 6:20</span></summary>
+      <ul>
+        <li>O Guia indica, além da w15, o Perspicaz, “Arqueologia” § 25, e o livro <i>A Bíblia: Palavra de Deus
+        ou de Homem?</i>, cap. 4.</li>
+        <li><b>Jos. 6:18:</b> a ordem de ficar longe do que estava condenado explica por que o cereal ficou lá.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">4. Como <span data-n="q5">a profecia sobre Jericó em Josué 6:26</span> se cumpriu?</p>
+    <p class="qsrc">(<i>w98</i> 15/9 21 § 8)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q5">Josué disse que quem reconstruísse Jericó ia perder o filho mais velho ao lançar os alicerces e o filho mais novo ao colocar as portas. Uns 500 anos depois, no tempo do rei Acabe, Hiel reconstruiu Jericó e perdeu Abirão e Segube, como diz 1 Reis 16:34. A Sentinela de 1998 conclui: somente um Deus real poderia inspirar essas profecias e cuidar para que se cumprissem.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q5">voltar ao comentário base</button></p>
+    </div>
+    <div class="vtext" data-ref="11:16:34"></div>
+    <details class="followup" data-step="4">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 6:26</span></summary>
+      <ul>
+        <li><b>it “Jericó” § 9:</b> antes de Hiel, houve ali só um povoado, até no tempo de Davi. Foi no reinado de
+        Acabe que Hiel realmente reconstruiu a cidade, e a maldição proferida por Josué mais de 500 anos antes se
+        cumpriu.</li>
+        <li><b>it “Josué, Livro de”:</b> usa esse cumprimento como prova de que o livro é verdadeiro.</li>
+        <li>O Guia ainda indica os verbetes “Abirão”, “Maldição” e “Hiel”.</li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- ========================= medite no que aprendeu ========================= -->
+
+  <h2 class="sect">Medite no que aprendeu</h2>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q6">Por que Josué confiava nas promessas de Jeová?</span>
+    (<span class="scr" data-ref="6:23:14">Jos. 23:14</span>) Como podemos ter essa mesma confiança hoje?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q6">Porque ele viu cada promessa se cumprir. Com quase 110 anos, Josué disse que nem uma palavra de Jeová tinha falhado. Ele viu o Egito ser castigado, o mar se abrir, o povo ser sustentado no deserto e a terra ser entregue. Hoje podemos ter a mesma confiança fazendo o que Josué fez: lembrando e meditando no que Jeová já fez, na Bíblia e na nossa própria vida.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q6">voltar ao comentário base</button></p>
+    </div>
+    <div class="vtext" data-ref="6:23:14"></div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Josué 23:14</span></summary>
+      <ul>
+        <li><b>w10 1/1 p. 12, “Um Cumpridor de promessas”:</b> cita uma obra que desafia a pesquisar toda a
+        história para ver se encontra uma única vez em que Deus quebrou ou esqueceu uma promessa.</li>
+        <li><b>Para jovens, w08 15/5 p. 17-18:</b> criado no Egito, Josué conhecia a promessa da terra e depois
+        viu cada passo dela se cumprir. Por isso disse: “Quanto a mim e aos da minha casa, serviremos a
+        Jeová.”</li>
+        <li><b>Para idosos, w04 15/5:</b> já idoso, Josué reuniu os anciãos para lembrar o que Jeová tinha feito.
+        Os mais velhos fazem isso hoje quando contam a experiência deles.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">Como o exemplo de Josué nos ajuda a <span data-n="q7">seguir as instruções da organização
+    de Jeová</span>? &nbsp;C</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q7">Às vezes recebemos uma orientação que, na hora, não parece necessária. A imagem C mostra uma família assistindo ao vídeo sobre como se preparar para um desastre e montando as mochilas de emergência, com água, dinheiro e enlatados. Quando não há desastre nenhum à vista, pode parecer exagero, assim como marchar em volta de Jericó parecia. Mas Josué obedeceu porque confiava em quem estava dando a ordem.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q7">voltar ao comentário base</button></p>
+    </div>
+    <figure>
+      <img src="assets/img/familia-desastre.jpg" loading="lazy"
+           alt="Um pai fazendo a adoração em família e ajudando a esposa e os dois filhos a se preparem para possíveis desastres. Eles estão assistindo ao vídeo “Como se Preparar para um Desastre?”. Eles têm na frente deles garrafas de água, dinheiro, uma Bíblia, enlatados, fita adesiva, mochilas de emergência e outros itens.">
+      <figcaption><span class="imgtag">C</span>Uma família se prepara para um possível desastre na adoração em família</figcaption>
+    </figure>
+    <details class="followup" data-step="2">
+      <summary>Da Sentinela de outubro de 2018</summary>
+      <ul>
+        <li>O título do artigo é “Confie: Cristo está nos liderando”. Ele diz que Jeová, o Líder invisível de
+        Israel, sabia exatamente o que estava fazendo, e que a estratégia fortaleceu a fé dos israelitas.</li>
+        <li>Para um segundo comentário: a obediência a uma orientação que parece estranha pode nos proteger de
+        uma luta que nem sabemos que existiria.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q8">Como você pode imitar a coragem de Josué?</span></p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q8">Primeiro, lendo a Bíblia todos os dias, como Jeová mandou Josué fazer em Josué 1:8. É de lá que vem a coragem. Segundo, continuando a fazer o que Jeová pede mesmo sem ver resultado, como os seis dias de marcha. Pode ser o território onde quase ninguém atende, ou o estudo com o filho que ainda não mostra fruto. A muralha só caiu no sétimo dia.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q8">voltar ao comentário base</button></p>
+    </div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">verbete “Josué”</span></summary>
+      <ul>
+        <li><b>w02 1/12, “De que Josué se lembrou”:</b> quando a assembleia falou em apedrejar Josué e Calebe,
+        eles disseram com firmeza o que acreditavam. “A lealdade para com Jeová pode exigir que nós façamos o
+        mesmo.”</li>
+        <li><b>Uma aplicação para quem já tem idade:</b> o irmão que dá testemunho por carta ou telefone toda semana, sem saber
+        se alguém vai responder, está marchando em volta de Jericó.</li>
+      </ul>
+    </details>
+  </div>
+
+  <!-- ========================= pense no quadro completo ========================= -->
+
+  <h2 class="sect">Pense no quadro completo</h2>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q9">O que esse relato me ensina sobre Jeová?</span></p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q9">Que ele é paciente, mas não deixa a maldade para sempre. Em Gênesis 15:16 ele disse a Abraão que esperaria até o erro dos amorreus atingir a plena medida. Foram séculos. E também que ele é confiável: Josué gritou “Jeová entregou a cidade” antes de a muralha cair, porque Jeová já tinha prometido.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q9">voltar ao comentário base</button></p>
+    </div>
+    <details class="followup" data-step="4">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Gênesis 15:16</span></summary>
+      <ul>
+        <li>O Guia indica para esse versículo o livro <i>Achegue-se a Jeová</i>, cap. 6 § 12, “Jeová é um poderoso
+        guerreiro”, e o artigo “Por que Deus guerreou contra os cananeus?” (w10 1/1 p. 14).</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">Como esse relato está <span data-n="q10">relacionado com o propósito de Jeová</span>?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q10">Jeová tinha prometido a Abraão que os descendentes dele voltariam para Canaã. Jericó foi a primeira cidade da Terra Prometida. Ali começou o cumprimento da promessa, e Jeová começou a limpar a terra da maldade.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q10">voltar ao comentário base</button></p>
+    </div>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q11">O que eu gostaria de perguntar para Josué</span> quando ele for
+    ressuscitado?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q11">Eu perguntaria o que passava pela cabeça dele naqueles seis dias de marcha em silêncio, com os inimigos olhando de cima da muralha. E perguntaria como foi trabalhar quarenta anos ao lado de Moisés.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q11">voltar ao comentário base</button></p>
+    </div>
+  </div>
+
+  <!-- ================================ aprenda mais ================================ -->
+
+  <h2 class="sect">Aprenda mais</h2>
+
+  <div class="qblock">
+    <p class="qtext">Como o exemplo de Josué nos ajuda a <span data-n="q12">aprender dos mais velhos</span>, a
+    confiar nas promessas de Deus e a permanecer fiéis mesmo quando um irmão nos magoa?</p>
+    <p class="qsrc">“De que Josué se lembrou” (<i>w02</i> 1/12 9-12)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base</span></p>
+      <textarea class="answer" data-a="q12">Josué foi ajudante de Moisés por quarenta anos, e A Sentinela chama a relação deles de um encontro do mestre e do aluno. Hoje temos os anciãos e os irmãos mais velhos. Sobre as promessas, a maioria viu os mesmos milagres e duvidou, mas Josué lembrou e meditou. E sobre mágoas, Josué passou quarenta anos no deserto, sem ter culpa nenhuma, ao lado de gente sem fé, e continuou fiel.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q12">voltar ao comentário base</button></p>
+    </div>
+  </div>
+
+  <div class="learnmore">
+    <img src="assets/img/aprenda-1.jpg" alt="Miniatura do artigo De que Josué se lembrou." loading="lazy">
+    <div>
+      <p class="lmt">Leia o artigo completo.</p>
+      <p>“De que Josué se lembrou” (<i>w02</i> 1/12 9-12), no
+      <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2002882" target="_blank" rel="noopener">wol.jw.org</a>.</p>
+    </div>
+  </div>
+
+  <div class="learnmore">
+    <img src="assets/img/aprenda-2.jpg" alt="Miniatura do cartão bíblico Josué." loading="lazy">
+    <div>
+      <p class="lmt">Ajude seus filhos a aprender sobre acontecimentos importantes na vida de Josué.</p>
+      <p>“Josué”, <a href="https://www.jw.org/pt/ensinos-biblicos/criancas/cartoes-biblicos/josue/" target="_blank" rel="noopener">cartão bíblico no jw.org</a>.</p>
+    </div>
+  </div>
+
+  <section class="wrapup" id="guia">
+    <h2 class="sect">Guia de Pesquisa: verbete “Josué”</h2>
+    <p class="rsub">O que o Guia de Pesquisa do seu JW Library lista para Josué, por assunto. Bom para achar um
+    comentário diferente.</p>
+    <ul class="closing">
+      <li><b>Informações gerais:</b> it-2 “Josué” n.º 1; “De que Josué se lembrou” (w02 1/12 9-12); si p. 42-43</li>
+      <li><b>Para anciãos:</b> “Aceite a Bíblia pelo que realmente é” (w95 1/5 12-13)</li>
+      <li><b>Para crianças:</b> “Josué e Calebe” (ljfac artigo 6); vídeo “Vamos Aprender com os Amigos de Jeová,
+      Josué e Calebe”</li>
+      <li><b>Para idosos:</b> “Os idosos são membros valiosos da nossa fraternidade cristã” (w04 15/5 13-14)</li>
+      <li><b>Para jovens:</b> “Escolha servir a Jeová enquanto for jovem” (w08 15/5 17-18)</li>
+      <li><b>Confiança:</b> “Um Cumpridor de promessas” (w10 1/1 12); w03 1/3 14</li>
+      <li><b>Coragem:</b> wcg cap. 13; ijwbv artigo 10; w13 15/1 8-9; w06 1/10 16-17</li>
+      <li><b>Fé:</b> mwb17.06 2; w02 1/12 11-12 &nbsp;·&nbsp; <b>Leitura da Bíblia:</b> w09 1/12 17; w95 15/12 13
+      &nbsp;·&nbsp; <b>Obediência:</b> w86 15/12 11 § 6</li>
+      <li><b>Pressão de outros:</b> w11 15/7 10-12 &nbsp;·&nbsp; <b>Problemas e dificuldades:</b> w13 15/8 14</li>
+    </ul>
+  </section>
+
+  <!-- ================================ roteiro ================================ -->
+
+  <section class="runsheet" id="roteiro">
+    <h2 class="sect">Roteiro de 30 minutos</h2>
+    <p class="rsub">Estudo de livro, nove parágrafos curtos e as quatro seções de pergunta. Os tempos são
+    referência: o que passar de um item, tire do outro.</p>
+
+    <div class="rs">
+      <div class="rsrow">
+        <div class="t">0:00<span>1 min</span></div>
+        <div>
+          <h4>Abertura com uma pergunta</h4>
+          <p>“Vocês já receberam uma orientação que, na hora, não fazia sentido nenhum?” Depois diga onde o
+          estudo vai chegar: Josué recebeu uma ordem assim, e obedeceu.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">1:00<span>5 min</span></div>
+        <div>
+          <h4>Leitura dos nove parágrafos</h4>
+          <p>Designe um irmão. Os parágrafos são curtos; dá para ler em dois blocos, §1 a §4 e §5 a §9.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">6:00<span>3 min</span></div>
+        <div>
+          <h4>Leituras bíblicas com a assistência</h4>
+          <p><span class="scr" data-ref="6:6:2-5">Josué 6:2-5</span> e
+          <span class="scr" data-ref="6:6:20">6:20</span>. A ordem e o resultado.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">9:00<span>3 min</span></div>
+        <div>
+          <h4>Para considerar</h4>
+          <p>As maneiras de coragem. Aceite dois comentários e complete com o detalhe da marcha em silêncio
+          (Jos. 6:10).</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">12:00<span>7 min</span></div>
+        <div>
+          <h4>Analise mais a fundo, as quatro perguntas</h4>
+          <p>Um comentário por pergunta. Na 1, a imagem A. Na 3, a imagem B, dos cereais. Na 4, leia
+          <span class="scr" data-ref="11:16:34">1 Reis 16:34</span>.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">19:00<span>7 min</span></div>
+        <div>
+          <h4>Medite no que aprendeu</h4>
+          <p>Três minutos para as promessas, com <span class="scr" data-ref="6:23:14">Josué 23:14</span>. Dois
+          para a imagem C, das instruções. Dois para imitar a coragem.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">26:00<span>3 min</span></div>
+        <div>
+          <h4>Pense no quadro completo</h4>
+          <p>O que aprendemos sobre Jeová e como Jericó se liga à promessa feita a Abraão.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">29:00<span>1 min</span></div>
+        <div>
+          <h4>Encerramento</h4>
+          <p>Recomende “De que Josué se lembrou” e deixe a curiosidade: a pequena parte da muralha que não caiu é
+          o assunto da próxima semana.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rstips">
+      <h4>Se o tempo apertar</h4>
+      <p><b>Pode cortar:</b> a pergunta 2 de “Analise mais a fundo”, resumindo em uma frase, e a última pergunta
+      do quadro completo.</p>
+      <p><b>Não pode faltar:</b> por que a ordem não fazia sentido, os motivos que Josué tinha para confiar, a
+      obediência dia após dia, e Josué 23:14.</p>
+    </div>
+  </section>
+
+  <!-- ================================ resumo ================================ -->
+
+  <section class="wrapup" id="resumo">
+    <h2 class="sect">Resumo: os pontos altos deste estudo</h2>
+    <p class="rsub">Para o encerramento, ou para revisar depois em casa.</p>
+
+    <h3 class="sub">O caminho que percorremos</h3>
+    <ol class="recap">
+      <li data-step="1"><b>Por que era preciso coragem.</b> Uma cidade murada, cheia de maldade, a primeira da
+      conquista. <em>§1, §2</em></li>
+      <li data-step="2"><b>Uma ordem que não fazia sentido.</b> Nem atacar, nem cercar: marchar. <em>§3, §4</em></li>
+      <li data-step="3"><b>Motivos para confiar.</b> Os espiões, o Jordão, e a obediência dia após dia.
+      <em>§5, §6</em></li>
+      <li data-step="4"><b>A muralha caiu.</b> Exatamente como Jeová disse. <em>§7 a §9</em></li>
+    </ol>
+
+    <h3 class="sub">Os sete pontos altos</h3>
+    <ol class="highs">
+      <li>A coragem que Jeová pediu a Josué era coragem para obedecer, e vinha de ler a Lei dia e noite.</li>
+      <li>Jeová esperou séculos até a maldade de Canaã atingir a plena medida.</li>
+      <li>A ordem de marchar não fazia sentido para um militar experiente.</li>
+      <li>Josué tinha motivos para confiar: o medo de Jericó e o Jordão parado em plena enchente.</li>
+      <li>Seis dias de marcha em silêncio, sem ver nada mudar.</li>
+      <li>Josué gritou “Jeová entregou” antes de a muralha cair.</li>
+      <li>Josué 6:26 se cumpriu uns 500 anos depois, com Hiel.</li>
+    </ol>
+
+    <h3 class="sub">Três frases para o encerramento</h3>
+    <ul class="closing">
+      <li>“Josué não entendeu a ordem, mas conhecia quem estava dando a ordem.”</li>
+      <li>“A muralha não caiu no primeiro dia. Caiu no sétimo.”</li>
+      <li>“Nem uma palavra de Jeová falhou. Nem uma vai falhar.”</li>
+    </ul>
+  </section>
+
+  <section class="backup" id="backup">
+    <h2 class="sect">Suas respostas</h2>
+    <p class="bkp-txt">Cada campo já vem com um comentário pronto. O que você ajustar fica salvo
+    automaticamente <b>neste navegador, neste aparelho</b>. Para levar para outro aparelho, baixe o arquivo
+    aqui e carregue no outro lado.</p>
+    <p class="bkp-status" id="backupStatus"></p>
+    <div class="bkp-acoes">
+      <button class="btn" type="button" id="backupSave">Baixar minhas respostas</button>
+      <button class="btn" type="button" id="backupLoad">Carregar de um arquivo</button>
+      <input type="file" id="backupFile" accept="application/json,.json" hidden>
+    </div>
+    <p class="bkp-nota">O arquivo é um .json com os seus comentários e as anotações marcadas como vistas.
+    Carregar substitui o que estiver escrito nesta página, e a página avisa antes.</p>
+  </section>
+
+  <div class="colophon">
+    <p>Preparação baseada no capítulo 13 do livro
+    <a href="https://www.jw.org/pt/biblioteca/livros/ande-corajosamente-com-deus/dos-patriarcas-ao-tempo-dos-juizes/josue-obedeceu-mesmo-sem-entender/">Ande
+    Corajosamente com Deus</a>, “Ele obedeceu mesmo sem entender”. Publicações consultadas: A Sentinela de
+    1/12/2009, outubro de 2018, 15/11/2015, 15/9/1998, 1/12/2002, 1/1/2010, 15/5/2008 e 15/5/2004; Estudo
+    Perspicaz, verbetes “Jericó”, “Josué” e “Josué, Livro de”; Guia de Pesquisa do JW Library. Bíblia: Tradução
+    do Novo Mundo da Bíblia Sagrada, <a href="https://wol.jw.org/pt/wol/binav/r5/lp-t">wol.jw.org</a>, com 406
+    versículos incluídos nesta cópia para funcionar sem internet.</p>
+    <p>Os resumos, os comentários base, as anotações e o roteiro são notas de preparação pessoal, não material
+    publicado pelas Testemunhas de Jeová. O capítulo, as imagens e o texto da Bíblia são propriedade da Watch
+    Tower Bible and Tract Society.</p>
+  </div>
+
+</main>
+
+<dialog class="sheet" id="sheet" aria-label="Anotação">
+  <div class="sheet-box" id="sheetBox"></div>
+</dialog>
+
+<dialog class="drawer" id="drawer" aria-label="Roteiro de anotações">
+  <div class="drawer-box">
+    <div style="display:flex;align-items:flex-start;gap:.6rem">
+      <div>
+        <h3>Roteiro</h3>
+        <p class="hint">Todas as anotações, agrupadas por tipo. Clique para abrir e rolar até o trecho.</p>
+      </div>
+      <button class="sheet-close" type="button" id="drawerClose" aria-label="Fechar" style="margin-left:auto">&#10005;</button>
+    </div>
+    <div id="drawerList"></div>
+  </div>
+</dialog>
+
+<script src="assets/js/verses.js"></script>
+<script src="assets/js/notes.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
