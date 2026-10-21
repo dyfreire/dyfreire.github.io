@@ -1,6 +1,32 @@
 {
   "semanas": [
     {
+      "inicio": "2026-10-19",
+      "fim": "2026-10-25",
+      "leitura": "Jeremias 45-46",
+      "meio": [
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 45 e 46",
+          "detalhe": "Pergunta da apostila + 7 joias",
+          "href": "semanas/2026-10-19/meio-de-semana/joias/"
+        },
+        {
+          "tipo": "parte",
+          "titulo": "‘Partilhe com outros o que você tem’",
+          "detalhe": "Nossa Vida Cristã · consideração · 15 min",
+          "href": "semanas/2026-10-19/meio-de-semana/partilhe/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Josué: ele obedeceu mesmo sem entender",
+          "detalhe": "Estudo de livro · wcg cap. 13",
+          "href": "semanas/2026-10-19/meio-de-semana/estudo-livro/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
       "inicio": "2026-10-12",
       "fim": "2026-10-18",
       "leitura": "Jeremias 42-44",

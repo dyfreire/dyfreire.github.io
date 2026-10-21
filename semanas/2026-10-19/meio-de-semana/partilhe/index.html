@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Partilhe com outros o que você tem</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%9D%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Consideração da parte 8, com comentário pronto em cada pergunta.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .roteiro{display:grid;gap:10px}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>🤝 ‘Partilhe com outros o que você tem’</h1>
+  <h2>Nossa Vida Cristã · 19 a 25 de outubro de 2026 · parte 8 (15 min) · consideração</h2>
+  <p>As cinco perguntas da consideração, cada uma com os textos exatos do seu JW Library, o que as publicações
+  dizem, um comentário pronto e um segundo comentário para não repetir quem falou antes.</p>
+  <div class="meta-row"><span class="pill">⏱ 15 min</span><span class="pill">🙋 5 perguntas</span>
+  <span class="pill">🎬 vídeo “Divida suas coisas com outros” (2:03)</span><span class="pill">🔎 Guia de Pesquisa incluído</span></div>
+</header>
+
+<nav class="toc" aria-label="Perguntas">
+  <a href="#p1"><span class="num">1</span>Os cristãos daquela época</a>
+  <a href="#p2"><span class="num">2</span>Aprender desde já</a>
+  <a href="#p3"><span class="num">3</span>Os macedônios</a>
+  <a href="#p4"><span class="num">4</span>Além das coisas materiais</a>
+  <a href="#p5"><span class="num">5</span>O exemplo de Jeová</a>
+</nav>
+
+<section class="oficial">
+  <h3>O texto da apostila</h3>
+  <p>Em suas cartas, o apóstolo Paulo muitas vezes falou sobre a importância de dividir com outros o que temos. Os
+  conselhos dele foram muito importantes para os cristãos daquela época, e continuam sendo hoje (Efé. 4:28;
+  1 Tim. 6:17, 18).</p>
+  <p><b>Leia Hebreus 13:16.</b> Pouco depois de receberem o conselho de Paulo, os cristãos na Judeia tiveram que fugir
+  para os montes, deixando para trás casa, trabalho e muitas coisas que tinham. Nessa época, provavelmente surgiu uma
+  grande necessidade de todos os cristãos dividirem suas coisas uns com os outros.</p>
+  <p><b>Leia 2 Coríntios 8:2-4</b> (nota de estudo em 2 Cor. 8:2). Depois, mostre o vídeo
+  <i>Torne-se Amigo de Jeová: Divida Suas Coisas com Outros</i>.</p>
+</section>
+
+<section class="oficial" id="p1">
+  <h3>Pergunta 1</h3>
+  <p class="q">Por que seria bom para os cristãos daquela época aplicar os conselhos de Paulo?</p>
+  <div class="quote"><span class="verse-chip base">Hebreus 13:16</span> <sup>16</sup> Além disso, não se esqueçam de fazer o bem e de partilhar com outros o que vocês têm, pois Deus se agrada desses sacrifícios.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que a Bíblia e as publicações dizem</h4><ul><li>A apostila lembra que, pouco depois de receberem esse conselho, os cristãos da Judeia <b>tiveram que fugir para os
+   montes</b>, deixando para trás casa, trabalho e muitas coisas. Provavelmente surgiu uma grande necessidade de
+   dividirem tudo uns com os outros.</li><li>O Perspicaz (“Contribuição” § 10) mostra que a palavra grega traduzida “partilhar” em Hebreus 13:16 é a mesma
+   usada para “contribuição” em Romanos 15:26: <i>koinonía</i>.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (uns 30 segundos)</h4><p>Porque pouco tempo depois eles tiveram que fugir de Jerusalém para os montes, deixando casa e trabalho para trás. Quem já tinha o costume de partilhar, como Paulo aconselhou em Hebreus 13:16, estava pronto para ajudar e para aceitar ajuda. O conselho veio antes da necessidade.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>Hebreus 13:16 chama a partilha de sacrifício: “Deus se agrada desses sacrifícios.” Para os cristãos judeus, que
+  conheciam bem os sacrifícios do templo, essa comparação dizia muito.</p></div>
+</section>
+<section class="oficial" id="p2">
+  <h3>Pergunta 2</h3>
+  <p class="q">Pensando no que vai acontecer em breve, por que é importante aprender desde já a compartilhar com outros o que temos?</p>
+  <div class="quote"><span class="verse-chip base">Efésios 4:28</span> <sup>28</sup> Quem furta não furte mais; em vez disso, trabalhe arduamente, fazendo com as mãos um bom trabalho, a fim de ter algo para repartir com alguém em necessidade.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><div class="quote"><span class="verse-chip">1 Timóteo 6:17-18</span> <sup>17</sup> Dê instruções aos que são ricos no mundo atual: que eles não sejam arrogantes e que não baseiem a sua esperança nas riquezas incertas, mas em Deus, que nos proporciona ricamente todas as coisas que nos dão satisfação. <sup>18</sup> Diga-lhes que pratiquem o bem, que sejam ricos em boas obras, que sejam generosos, prontos para partilhar,<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que a Bíblia e as publicações dizem</h4><ul><li>Efésios 4:28 dá o motivo de trabalhar: <b>“a fim de ter algo para repartir com alguém em necessidade”</b>.</li><li>1 Timóteo 6:17, 18 diz para não basear a esperança “nas riquezas incertas”, e sim ser “generosos, prontos para partilhar”.</li><li>O Perspicaz (“Contribuição” § 11) lembra que, depois do Pentecostes, os cristãos em Jerusalém “tinham todas as
+   coisas em comum”, para que ninguém passasse necessidade.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (uns 30 segundos)</h4><p>Porque generosidade é um hábito, e hábito não se forma de um dia para o outro. Os cristãos da Judeia tiveram que fugir de repente. Nós também sabemos que vêm tempos difíceis. Se eu já tenho o costume de dividir agora, numa hora de aperto vai ser natural. E 1 Timóteo 6:17 lembra que as riquezas são incertas, então é melhor não depender delas.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>O livro <i>O Reino de Deus Já Governa!</i> (cap. 20 § 3) mostra que o primeiro registro de cristãos de um lugar
+  mandando ajuda para outro foi o de Antioquia, quando os irmãos souberam da fome na Judeia. Hoje seguimos o mesmo modelo.</p></div>
+</section>
+<section class="oficial" id="p3">
+  <h3>Pergunta 3</h3>
+  <p class="q">O que podemos aprender do exemplo dos macedônios?</p>
+  <div class="quote"><span class="verse-chip base">2 Coríntios 8:2-4</span> <sup>2</sup> Mesmo sob aflição durante uma grande prova, a imensa alegria e a extrema pobreza deles fizeram transbordar as riquezas de sua generosidade. <sup>3</sup> Pois o que eles fizeram foi segundo seus recursos, sim, sou testemunha de que foi até mesmo além de seus recursos; <sup>4</sup> eles nos suplicavam insistentemente, de sua própria iniciativa, pelo privilégio de dar bondosamente, para participar no serviço de ajuda aos santos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que a Bíblia e as publicações dizem</h4><ul><li>A nota de estudo em 2 Coríntios 8:2 explica que as congregações da Macedônia incluíam <b>Filipos e Tessalônica</b>.
+   O exemplo impressionava porque, mesmo em <b>“extrema pobreza”</b> e passando por uma grande prova, eles deram com alegria.</li><li>Não se sabe qual era a prova. Talvez estivessem sendo acusados de promover costumes ilegais para cidadãos romanos,
+   como aconteceu com Paulo em Filipos, ou talvez a prova fosse a própria pobreza.</li><li>A nota sugere que, por passarem por dificuldades parecidas com as dos irmãos da Judeia, os macedônios tiveram
+   <b>empatia</b> por eles.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (uns 30 segundos)</h4><p>Que não é preciso ter muito para ser generoso. Os macedônios estavam em extrema pobreza e, mesmo assim, deram além dos seus recursos. E o versículo 4 diz que eles suplicavam, de sua própria iniciativa, pelo privilégio de dar. A nota de estudo sugere um motivo: eles sabiam o que era sofrer, por isso sentiram a dor dos irmãos da Judeia.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>O versículo 5 explica a raiz: eles “se entregaram primeiramente ao Senhor”. Quem já entregou a vida a Jeová não
+  sente que está perdendo quando dá. E 2 Coríntios 9:7 completa: “Deus ama quem dá com alegria.”</p></div>
+</section>
+<section class="oficial" id="p4">
+  <h3>Pergunta 4</h3>
+  <p class="q">O que mais podemos compartilhar com outros, além de coisas materiais?</p>
+  <div class="quote"><span class="verse-chip">1 Timóteo 6:18</span> <sup>18</sup> Diga-lhes que pratiquem o bem, que sejam ricos em boas obras, que sejam generosos, prontos para partilhar,<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que a Bíblia e as publicações dizem</h4><ul><li>1 Timóteo 6:18 fala em ser <b>“ricos em boas obras”</b>, não só em dinheiro.</li><li>O livro <i>O Reino de Deus Já Governa!</i> (cap. 20 §§ 4-5) explica que temos um ministério duplo: o “ministério
+   da reconciliação”, que é a pregação e o ensino, e o ministério de socorros. Paulo usou a mesma palavra grega,
+   <i>diakonía</i>, para os dois.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (uns 30 segundos)</h4><p>Podemos partilhar o nosso tempo, as nossas habilidades e, principalmente, a verdade da Bíblia. O livro sobre o Reino explica que Paulo usou a mesma palavra, ministério, para a pregação e para a ajuda aos irmãos. Uma visita a quem está doente, uma carona para a reunião, ajudar um irmão idoso a usar o JW Library, tudo isso é partilhar.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>Para quem já tem idade: a experiência de anos com Jeová também é algo para partilhar. Contar a um jovem como Jeová
+  cuidou de você numa decisão difícil vale muito.</p></div>
+</section>
+<section class="oficial" id="p5">
+  <h3>Pergunta 5</h3>
+  <p class="q">Que exemplo Jeová nos dá sobre dividir as coisas com outros? (depois do vídeo)</p>
+  <div class="quote"><span class="verse-chip">1 Timóteo 6:17</span> <sup>17</sup> Dê instruções aos que são ricos no mundo atual: que eles não sejam arrogantes e que não baseiem a sua esperança nas riquezas incertas, mas em Deus, que nos proporciona ricamente todas as coisas que nos dão satisfação.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que a Bíblia e as publicações dizem</h4><ul><li>No vídeo “Divida suas coisas com outros” (2:03), Pedro e Sofia brigam pelos presentes. A mãe pergunta se Jeová,
+   quando criou o paraíso, ficou com os animais só para ele. A resposta: <b>“Não. Ele deu todos para a gente.”</b> E
+   ela conclui: “Jeová divide tudo com a gente.”</li><li>1 Timóteo 6:17 descreve Jeová como o Deus <b>“que nos proporciona ricamente todas as coisas que nos dão
+   satisfação”</b>.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (uns 30 segundos)</h4><p>Jeová é o maior exemplo. Como a mãe disse no vídeo, quando ele criou o paraíso não ficou com os animais só para ele, deu todos para a gente. E 1 Timóteo 6:17 diz que ele nos proporciona ricamente todas as coisas que nos dão satisfação. Tudo o que temos veio dele. Então, quando dividimos, estamos só fazendo o que ele faz com a gente.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>As crianças do vídeo aprenderam rápido: no fim, brincam juntas, e um oferece ao outro a vez de ir primeiro. Se uma criança
+  consegue aprender a dividir, um adulto também consegue.</p></div>
+</section>
+
+<section class="oficial">
+  <h3>Do Guia de Pesquisa, para ir mais fundo</h3>
+  <ul>
+    <li><b>Hebreus 13:16:</b> “Ofereçamos sacrifícios de toda a alma para Jeová” (w12 15/1 p. 23 § 9); “Façamos o bem e
+    partilhemos coisas com outros” (km 4/05 p. 1).</li>
+    <li><b>2 Coríntios 8:2-4:</b> “Paulo organizou contribuições para socorrer os santos” (w01 15/3 p. 30); “Deus ama o
+    dador animado” (w98 1/11 p. 25-26); “A ajuda humanitária faz parte do nosso ministério” (mwb19.05 p. 3).</li>
+    <li><b>1 Timóteo 6:18:</b> “Tenha apreço pela generosidade e razoabilidade de Jeová” (w13 15/6 p. 14 § 9); lição 37
+    ponto 3 do <i>Seja Feliz para Sempre!</i></li>
+    <li><b>Efésios 4:28:</b> lição 36 ponto 2 do <i>Seja Feliz para Sempre!</i>, “Sempre seja honesto”.</li>
+  </ul>
+</section>
+
+<footer><p>Fontes: apostila Vida e Ministério de setembro-outubro de 2026; Tradução do Novo Mundo (edição de estudo) e
+nota de estudo em 2 Coríntios 8:2, do JW Library; Guia de Pesquisa; Estudo Perspicaz, “Contribuição”; <i>O Reino de
+Deus Já Governa!</i>, cap. 20; legenda oficial do vídeo “Divida suas coisas com outros” (jw.org). Os comentários são
+notas de preparação pessoal.</p></footer>
+
+</div>
+</body>
+</html>
