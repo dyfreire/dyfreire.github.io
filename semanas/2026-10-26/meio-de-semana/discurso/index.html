@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discurso: Juiz justo e misericordioso</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Preparação do discurso de 10 minutos de Jeremias 47 e 48, com fontes reunidas.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  .src-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+  .src-card h3{margin:0 0 4px;font-size:1rem;color:var(--accent)}
+  .src-card .tag{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+  .src-card p{margin:.5rem 0}
+  .src-card mark{background:#3a3110;color:#ffe9a8;padding:0 2px;border-radius:3px}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .insight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .ins{background:var(--panel2);border:1px solid var(--jewel-line);border-radius:10px;padding:12px 14px}
+  .ins b{color:var(--jewel)}
+  .pend{border:1px dashed var(--warn);color:#ffd9b0;border-radius:10px;padding:12px 14px;background:#2a1d10}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>⚖️ Jeová é um Juiz justo e misericordioso</h1>
+  <h2>Tesouros da Palavra de Deus · discurso de 10 min · Jeremias 47 e 48 · 26 de outubro a 1.º de novembro de 2026</h2>
+  <p>Tudo o que você precisa num lugar só: o esboço da apostila, as fontes separadas com o trecho que
+  interessa marcado, os textos bíblicos exatos do seu JW Library, os insights e um roteiro de 10 minutos.</p>
+  <div class="meta-row">
+    <span class="pill">⏱ 10 min</span><span class="pill">📚 it “Moabe, Moabitas” · w24.05</span>
+    <span class="pill">🔎 Guia de Pesquisa incluído</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#esboco"><span class="num">1</span>Esboço da apostila</a>
+  <a href="#ideia"><span class="num">2</span>A ideia em uma frase</a>
+  <a href="#roteiro"><span class="num">3</span>Roteiro de 10 minutos</a>
+  <a href="#insights"><span class="num">4</span>Insights para usar</a>
+  <a href="#fontes"><span class="num">5</span>Fontes separadas</a>
+</nav>
+
+<h2 class="sec" id="esboco">1. O esboço da apostila</h2>
+<div class="oficial">
+  <h3>Os três pontos, como estão na apostila</h3>
+  <ol>
+    <li><b>Jeremias predisse que Jeová puniria Moabe por ter maltratado Judá.</b> (Jer. 48:27, 29, 42;
+    <i>it</i> “Moabe, Moabitas” n.º 2 § 22)</li>
+    <li><b>Jeová não ficaria feliz em destruir Moabe.</b> (Jer. 48:31, 36)</li>
+    <li><b>Ele mostraria misericórdia a alguns moabitas.</b> (Jer. 48:47; <i>it</i> “Moabe, Moabitas” n.º 2 § 24)</li>
+  </ol>
+  <p><b>PARA MEDITAR:</b> O que a misericórdia de Jeová nos incentiva a fazer agora? (<i>w24.05</i> 17 § 10)</p>
+  <figure class="fig"><img src="img/jovem-tv.jpg" alt="Uma jovem segurando uma foto de sua família e se lembrando de como era sua vida quando servia a Jeová. Na TV aparece a notícia falando do fim das religiões.">
+    <figcaption>Mesmo depois que a grande tribulação começar, alguns talvez decidam escutar a nossa mensagem. <b>O que a imagem mostra:</b> Uma jovem segurando uma foto de sua família e se lembrando de como era sua vida quando servia a Jeová. Na TV aparece a notícia falando do fim das religiões.</figcaption></figure>
+</div>
+
+<h2 class="sec" id="ideia">2. A ideia em uma frase</h2>
+<div class="learn"><h4>💡 O fio do discurso</h4>
+  <p><b>Jeová julga com justiça, sente quando precisa punir e deixa a porta aberta para quem quer voltar.</b>
+  Os três pontos são três cenas de Moabe: o que Moabe fez, o que Jeová sentiu e o que Jeová fez depois. O
+  “Para meditar” leva isso para hoje: se Jeová ainda deixa a porta aberta, a nossa parte é avisar as pessoas
+  agora.</p>
+</div>
+
+<h2 class="sec" id="roteiro">3. Roteiro de 10 minutos: o Juiz que chora</h2>
+<div class="roteiro">
+
+  <div class="rot"><div class="t">0:00<span>1 min</span></div><div>
+    <h4>Abertura: um juiz diferente</h4>
+    <p class="fala">“Quando a gente pensa num juiz, imagina alguém sério, batendo o martelo. Ele dá a sentença e vai
+    embora. Jeremias 48 mostra um Juiz diferente. Ele dá a sentença contra Moabe e depois diz: ‘chorarei por
+    você’.”</p>
+    <p>Situe em duas frases: os moabitas eram descendentes de Ló, sobrinho de Abraão. Eram parentes de Israel e
+    falavam uma língua parecida. Mesmo assim, foram inimigos de Israel por séculos (<i>it</i> “Moabe, Moabitas”
+    n.º 2 § 4).</p>
+    <div class="quote"><span class="verse-chip">Gênesis 19:37</span> A primogênita teve um filho e lhe deu o nome de Moabe. Ele é o pai dos atuais moabitas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div></div></div>
+
+  <div class="rot"><div class="t">1:00<span>2 min 30</span></div><div>
+    <h4>1. Justo: Moabe zombou do povo de Jeová</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 48:27</span> <sup>27</sup> Não era Israel um objeto de zombaria para você? Será que ele foi achado no meio de ladrões, Para que você balançasse a cabeça e falasse contra ele?<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip">Jeremias 48:29</span> <sup>29</sup> “Ouvimos falar do orgulho de Moabe; ele é muito arrogante. Ouvimos falar da sua arrogância, do seu orgulho, da sua prepotência e da altivez do seu coração.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>O Perspicaz (§ 22) mostra o que estava por trás: quando Judá foi castigada por meio dos babilônios, os
+    moabitas disseram “a casa de Judá é igual a todas as outras nações”. Eles não reconheceram que o julgamento
+    vinha de Deus e que Judá era o povo dele.</p>
+    <div class="quote"><span class="verse-chip">Ezequiel 25:8</span> “Assim diz o Soberano Senhor Jeová: ‘Visto que Moabe e Seir disseram: “Vejam! A casa de Judá é igual a todas as outras nações”,<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip base">Jeremias 48:42</span> <sup>42</sup> “‘Moabe será aniquilado e deixará de existir como povo, Pois foi contra Jeová que ele se enalteceu.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“Repare no final do versículo 42: ‘foi contra Jeová que ele se enalteceu’. Moabe não zombou só de
+    Judá. Quem zomba do povo de Jeová está se levantando contra o próprio Jeová.”</p>
+    <p><b>E a sentença se cumpriu.</b> O Perspicaz (§§ 25, 26) diz que há séculos os moabitas deixaram de existir como
+    povo. Cidades como Nebo, Hesbom e Aroer hoje são ruínas.</p>
+    <p class="fala"><b>Nos nossos dias:</b> “O colega de serviço que ri porque você vai à reunião. O parente que debocha
+    no almoço de domingo. Jeová viu Moabe balançar a cabeça para Judá. Ele vê hoje também. A justiça está nas mãos
+    dele.”</p></div></div>
+
+  <div class="rot"><div class="t">3:30<span>2 min 30</span></div><div>
+    <h4>2. Jeová não ficaria feliz em destruir Moabe</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 48:31</span> <sup>31</sup> É por isso que lamentarei por Moabe, Clamarei por causa de todo o Moabe E chorarei pelos homens de Quir-Heres.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip">Jeremias 48:36</span> <sup>36</sup> Por isso o meu coração lamentará como uma flauta por Moabe, E o meu coração lamentará como uma flauta pelos homens de Quir-Heres. Pois a riqueza que ele produziu acabará.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>Repare quem está falando: é Jeová. “Lamentarei”, “clamarei”, “chorarei”. E no versículo 36: “o meu coração
+    lamentará como uma flauta”.</p>
+    <p><b>Por que uma flauta?</b> O Perspicaz (“Pranto”) explica que nos enterros os músicos tocavam melodias tristes,
+    e a flauta era o instrumento preferido para lamentação. Quando Jesus chegou à casa da menina que tinha morrido,
+    os flautistas já estavam lá.</p>
+    <div class="quote"><span class="verse-chip">Mateus 9:23</span> Quando chegou à casa do líder da sinagoga e viu os flautistas e a multidão em alvoroço,<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“É a música triste do enterro. Jeová disse que o coração dele ia soar assim. Por Moabe. Um povo que
+    era inimigo dele.”</p>
+    <p>A Sentinela de maio de 2024 (p. 4 § 10) usa Ezequiel 33:11 para mostrar como Jeová se sente quando precisa
+    julgar alguém:</p>
+    <div class="quote"><span class="verse-chip base">Ezequiel 33:11</span> Diga a eles: ‘“Tão certo como eu vivo”, diz o Soberano Senhor Jeová, “não tenho prazer na morte de quem é mau, mas sim em que a pessoa má mude seu caminho e continue viva. Recuem, recuem dos seus maus caminhos. Afinal, por que vocês deveriam morrer, ó casa de Israel?”’<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“A mesma Sentinela diz: Jeová nunca destruiria alguém para sempre sem ter um bom motivo. <b>Ele é
+    muito misericordioso e sempre que possível mostra misericórdia.</b>”</p></div></div>
+
+  <div class="rot"><div class="t">6:00<span>2 min</span></div><div>
+    <h4>3. Misericórdia: a porta ficou aberta</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 48:47</span> <sup>47</sup> Mas, na parte final dos dias, vou ajuntar o povo cativo de Moabe’, diz Jeová. ‘Aqui termina o julgamento de Moabe.’”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>Depois de 46 versículos de julgamento, o capítulo termina com uma promessa. O Perspicaz (§ 24) diz que isso se
+    cumpriu quando Ciro, o conquistador de Babilônia, provavelmente permitiu que moabitas exilados voltassem para a
+    sua terra.</p>
+    <p><b>E Jeová já tinha mostrado misericórdia a uma moabita: Rute.</b> Ela deixou os deuses de Moabe e passou a
+    adorar a Jeová. Tornou-se antepassada de Davi e de Jesus (<i>it</i> “Moabe, Moabitas” n.º 2 § 8).</p>
+    <div class="quote"><span class="verse-chip">Rute 1:16</span> Mas Rute disse: “Não insista comigo para abandoná-la, para deixar de acompanhá-la; pois, aonde a senhora for, eu irei, e onde a senhora passar a noite, eu passarei a noite. Seu povo será o meu povo, e seu Deus será o meu Deus.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“Jeová condenou a nação. Mas a pessoa que escolheu Jeová, ele recebeu. Rute era moabita, e está na
+    família de onde veio Jesus.”</p></div></div>
+
+  <div class="rot"><div class="t">8:00<span>2 min</span></div><div>
+    <h4>Para meditar: o que a misericórdia de Jeová nos incentiva a fazer agora?</h4>
+    <p>Leia a pergunta e mostre a imagem.</p>
+    <p><b>A Sentinela de maio de 2024 (p. 17 § 10):</b> pode ser que Jeová decida salvar algumas pessoas que só
+    passarão a ter fé nele depois de verem a destruição de Babilônia, a Grande. Por isso, avisar agora é mais
+    importante do que nunca. <b>As pessoas só vão conseguir lembrar do que já tivermos falado para elas antes.</b></p>
+    <p>É o que aconteceu com o carcereiro de Filipos: ele só mostrou fé depois do grande terremoto (Atos 16:25-34).</p>
+    <div class="quote"><span class="verse-chip">Atos 16:30-31</span> <sup>30</sup> Ele os levou para fora e perguntou: “Senhores, o que tenho de fazer para ser salvo?” <sup>31</sup> Eles responderam: “Creia no Senhor Jesus e será salvo, você e os da sua casa.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“É o que a imagem mostra. A jovem segura a foto da família e lembra de quando servia a Jeová. Na TV,
+    a notícia do fim das religiões. Naquela hora ela lembrou. E só pôde lembrar porque, antes, alguém tinha
+    falado.”</p>
+    <p class="fala"><b>Nos nossos dias:</b> “A vizinha de tantos anos. O parente que não serve a Jeová. Quem não consegue
+    mais ir de casa em casa pode escrever uma carta ou dar testemunho por telefone. O que a gente falar hoje é o que
+    eles vão poder lembrar amanhã.”</p>
+    <p class="fala"><b>Fecho:</b> “Jeová é um Juiz justo: Moabe recebeu o que mereceu. Ele chorou pelo que precisou fazer.
+    E deixou a porta aberta. A nossa parte é avisar, enquanto ainda dá tempo.”</p></div></div>
+</div>
+
+<div class="block"><h4>✂️ Se o tempo apertar</h4>
+  <p>Corte a leitura de Mateus 9:23 (só mencione os flautistas) e a de Rute 1:16 (só conte que Rute era moabita).
+  <b>Não pode faltar:</b> o “chorarei” de 48:31, a promessa de 48:47 e a frase “as pessoas só vão conseguir lembrar
+  do que já tivermos falado”.</p>
+</div>
+
+<h2 class="sec" id="insights">4. Insights para usar no discurso</h2>
+<div class="insight">
+  <div class="ins"><b>Parentes, mas inimigos.</b> Os moabitas descendiam de Ló, sobrinho de Abraão, e a língua deles
+  era bem parecida com a de Israel. Mesmo assim, com poucas exceções, como Rute, mostraram grande inimizade a Israel
+  (<i>it</i> n.º 2 § 4).</div>
+  <div class="ins"><b>Nem pão nem água.</b> Quando Israel saiu do Egito, Moabe vendeu comida e água, mas não recebeu o
+  povo com hospitalidade. Por isso os moabitas foram barrados da congregação de Jeová (Deut. 23:3, 4; <i>it</i> n.º 2
+  §§ 5, 6).</div>
+  <div class="ins"><b>“Igual a todas as outras nações.”</b> Foi isso que Moabe disse quando Judá caiu (Ezeq. 25:8).
+  Eles não viram a mão de Jeová no castigo, nem que Judá era o povo dele (<i>it</i> n.º 2 § 22).</div>
+  <div class="ins"><b>Moabe sumiu.</b> Uma enciclopédia de 1959 citada no Perspicaz reconhece: Israel continuou, Moabe
+  desapareceu, e a explicação está “especialmente na obra dos profetas” (<i>it</i> n.º 2 § 26).</div>
+  <div class="ins"><b>A flauta do enterro.</b> A flauta era o instrumento preferido para lamentação (<i>it</i>
+  “Pranto”). É essa a comparação que Jeová usa para o próprio coração em 48:36.</div>
+  <div class="ins"><b>Isaías sentiu o mesmo.</b> Um século antes, Isaías disse: “meu coração treme por Moabe, como as
+  cordas de uma harpa” (Isa. 16:11). Os profetas refletiam o que Jeová sentia (<i>it</i> “Quir de Moabe”).</div>
+  <div class="ins"><b>“Sempre que possível.”</b> A Sentinela de maio de 2024 (p. 4 § 10) diz que Jeová nunca destruiria
+  alguém para sempre sem um bom motivo e que, sempre que possível, ele mostra misericórdia (2 Ped. 3:9).</div>
+  <div class="ins"><b>O último versículo é de esperança.</b> Jeremias 48 tem 46 versículos de julgamento e termina com
+  “vou ajuntar o povo cativo de Moabe”. Ciro provavelmente deixou os moabitas exilados voltarem (<i>it</i> n.º 2
+  § 24).</div>
+</div>
+
+<h2 class="sec" id="fontes">5. As fontes, separadas</h2>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Moabe, Moabitas” n.º 2 § 22</h3>
+  <p class="tag">Citado na apostila, ponto 1 · <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200003097">abrir no wol</a></p>
+  <p>A profecia de Jeremias, do sétimo século AEC, apontava para o tempo em que Jeová faria um ajuste de contas com
+  Moabe (Je 9:25, 26), fazendo isso por meio dos babilônios, sob o Rei Nabucodonosor. (Je 25:8, 9, 17-21; 27:1-7)
+  Muitas cidades moabitas seriam reduzidas à desolação. (Je 48) <mark>Pelo visto, quando Judá sofreu a execução do
+  julgamento de Jeová por meio dos babilônios, os moabitas disseram: “Eis que a casa de Judá é igual a todas as
+  outras nações.” Os moabitas, por deixarem assim de reconhecer que o julgamento realmente procedia de Deus e que os
+  habitantes de Judá eram Seu povo, haviam de sofrer desastre</mark>, e assim ‘viriam a conhecer Jeová’. (Ez 25:8-11)</p>
+</div>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Moabe, Moabitas” n.º 2 §§ 24 a 26</h3>
+  <p class="tag">§ 24 citado na apostila, ponto 3 · §§ 25 e 26 indicados no Guia de Pesquisa para Jer. 48:42</p>
+  <p><b>§ 24</b> <mark>Mais tarde, em cumprimento de Jeremias 48:47, Ciro, o conquistador de Babilônia, provavelmente
+  permitiu que moabitas exilados retornassem à sua pátria.</mark></p>
+  <p><b>§ 25</b> O cumprimento exato das profecias a respeito de Moabe não pode ser negado. <mark>Há séculos, os
+  moabitas deixaram de existir como povo.</mark> (Je 48:42) Atualmente, o que se acha terem sido cidades moabitas,
+  tais como Nebo, Hésbon, Aroer, Bete-Gamul e Baal-Meom, são hoje representadas por ruínas.</p>
+  <p><b>§ 26</b> A única explicação para o desaparecimento dos moabitas como povo é fornecida pela Bíblia. Comentou a
+  edição de 1959 da Encyclopædia Britannica: “Israel continuou sendo uma grande potência, ao passo que Moabe
+  desapareceu. [...] Mas a explicação deve ser encontrada no próprio Israel, e especialmente na obra dos
+  profetas.”</p>
+</div>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Moabe, Moabitas” n.º 2 §§ 4 e 8</h3>
+  <p class="tag">Para a abertura e para o exemplo de Rute</p>
+  <p><b>§ 4</b> Os moabitas, sendo descendentes de Ló, sobrinho de Abraão, eram aparentados com os israelitas. A língua
+  de ambos esses povos era bem similar, conforme se vê na inscrição na Pedra Moabita. [...] <mark>Não obstante, com
+  poucas exceções, tais como Rute, e Itma, um poderoso do Rei Davi, os moabitas mostraram ter grande inimizade a
+  Israel.</mark></p>
+  <p><b>§ 8</b> [...] Ali, Boaz, parente de Elimeleque, casou-se com Rute, a qual havia abandonado o politeísmo dos
+  moabitas e se havia tornado adoradora de Jeová. <mark>Assim, Rute, uma moabita, tornou-se antepassada de Davi, e,
+  portanto, também de Jesus Cristo.</mark></p>
+</div>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Pranto”</h3>
+  <p class="tag">Explica a flauta de Jer. 48:36</p>
+  <p>Ocasionalmente, utilizavam-se pranteadores profissionais nos enterros, e os músicos tocavam melodias lamuriosas
+  (Je 9:17, 18; Mt 9:23) [...] <mark>O pífaro ou flauta era o instrumento preferido para lamentação.</mark> (Je 48:36;
+  Mt 9:23)</p>
+</div>
+
+<div class="src-card">
+  <h3>A Sentinela, maio de 2024, “Confie no misericordioso Juiz de toda a terra”, p. 4 § 10</h3>
+  <p class="tag">Para o ponto 2 · <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2024/Confie-no-misericordioso-Juiz-de-toda-a-terra/">abrir no jw.org</a></p>
+  <p>Leia Ezequiel 33:11. <mark>Jeová nos diz como se sente quando precisa julgar uma pessoa.</mark> O apóstolo Pedro foi
+  inspirado a dizer algo parecido ao que o profeta Ezequiel tinha dito. Pedro disse: “Jeová . . . não deseja que
+  ninguém seja destruído.” (2 Ped. 3:9) Essas palavras nos consolam muito. Nós sabemos que Jeová nunca destruiria
+  alguém para sempre sem ter um bom motivo para fazer isso. <mark>Ele é muito misericordioso e sempre que possível
+  mostra misericórdia.</mark></p>
+  <div class="quote"><span class="verse-chip">2 Pedro 3:9</span> Jeová não é vagaroso com relação a sua promessa, como alguns pensam, mas ele é paciente com vocês, porque não deseja que ninguém seja destruído, mas deseja que todos alcancem o arrependimento.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<div class="src-card">
+  <h3>A Sentinela, maio de 2024, “Deixe o amor motivar você a pregar”, p. 17 §§ 9 e 10</h3>
+  <p class="tag">Citada no “Para meditar” · <a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-maio-2024/Deixe-o-amor-motivar-voc%C3%AA-a-pregar/">abrir no jw.org</a></p>
+  <p><b>§ 9</b> Nosso amor pelas pessoas nos motiva a dar o aviso de que o fim deste mundo mau está perto. (Leia
+  Ezequiel 33:7, 8.) Nós sentimos compaixão por todos, e isso inclui aqueles da nossa família que não servem a Jeová.
+  [...] Nós oramos para que o máximo de pessoas escute a nossa mensagem e decida servir a Jeová junto com a gente. Mas
+  e as pessoas que não nos escutam agora, incluindo nossos familiares?</p>
+  <p><b>§ 10</b> Como vimos no estudo anterior, pode ser que Jeová decida salvar algumas pessoas que só passarão a ter fé
+  nele depois de presenciarem a destruição de Babilônia, a Grande. <mark>Se esse for o caso, agora é mais importante do
+  que nunca avisar as pessoas do que vai acontecer no futuro. Pense nisto: as pessoas só vão conseguir lembrar do que
+  já tivermos falado para elas antes.</mark> (Veja também Ezequiel 33:33.) Talvez elas se lembrem do aviso que nós
+  demos a elas e decidam servir a Jeová junto com a gente antes que seja tarde demais. É igual ao que aconteceu com o
+  carcereiro de Filipos, que começou a mostrar fé nas boas novas só depois de ‘um grande terremoto’. Talvez algumas
+  pessoas que não escutam as boas novas hoje mudem de atitude depois da destruição de Babilônia, a Grande, que vai
+  abalar o mundo. (Atos 16:25-34)</p>
+  <div class="quote"><span class="verse-chip">Ezequiel 33:33</span> E, quando tudo se cumprir — e vai se cumprir —, eles terão de saber que havia um profeta entre eles.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<div class="src-card">
+  <h3>Os textos bíblicos do esboço, completos</h3>
+  <p class="tag">Texto exato da Tradução do Novo Mundo (edição de estudo) do seu JW Library</p>
+  <div class="quote"><span class="verse-chip base">Jeremias 48:26-30</span> <sup>26</sup> ‘Embriaguem-no, pois foi contra Jeová que ele se enalteceu. Moabe se revolve no seu vômito, E é um objeto de zombaria. <sup>27</sup> Não era Israel um objeto de zombaria para você? Será que ele foi achado no meio de ladrões, Para que você balançasse a cabeça e falasse contra ele? <sup>28</sup> Saiam das cidades e morem nos rochedos, habitantes de Moabe. E tornem-se como a pomba que faz seu ninho nas paredes do precipício.’” <sup>29</sup> “Ouvimos falar do orgulho de Moabe; ele é muito arrogante. Ouvimos falar da sua arrogância, do seu orgulho, da sua prepotência e da altivez do seu coração.” <sup>30</sup> “‘Eu conheço a fúria dele’, diz Jeová, ‘Mas sua conversa vã não levará a nada; Eles não farão nada.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 48:31-36</span> <sup>31</sup> É por isso que lamentarei por Moabe, Clamarei por causa de todo o Moabe E chorarei pelos homens de Quir-Heres. <sup>32</sup> Com mais choro do que por Jazer, Chorarei por você, ó videira de Sibma. Seus ramos viçosos cruzaram o mar, Estenderam-se até o mar, até Jazer. Sobre suas frutas de verão e sua colheita de uvas, O destruidor se lançou. <sup>33</sup> A alegria e o júbilo desapareceram do pomar E da terra de Moabe. Fiz secar o vinho dos lagares. Ninguém mais pisará uvas com gritos de alegria. Haverá gritos, mas não de alegria.’” <sup>34</sup> “‘Há um clamor desde Hesbom até Eleale. Eles erguem a voz até Jaaz, Desde Zoar até Horonaim, até Eglate-Selisia. Até mesmo as águas de Ninrim se esgotarão. <sup>35</sup> Farei desaparecer de Moabe’, diz Jeová, ‘Aqueles que fazem ofertas sobre os altos sagrados E os que oferecem sacrifícios ao seu deus. <sup>36</sup> Por isso o meu coração lamentará como uma flauta por Moabe, E o meu coração lamentará como uma flauta pelos homens de Quir-Heres. Pois a riqueza que ele produziu acabará.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 48:42</span> <sup>42</sup> “‘Moabe será aniquilado e deixará de existir como povo, Pois foi contra Jeová que ele se enalteceu.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 48:46-47</span> <sup>46</sup> ‘Ai de você, Moabe! O povo de Quemós foi eliminado. Pois os seus filhos foram levados cativos, E as suas filhas foram para o exílio. <sup>47</sup> Mas, na parte final dos dias, vou ajuntar o povo cativo de Moabe’, diz Jeová. ‘Aqui termina o julgamento de Moabe.’”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Sofonias 2:8-10</span> <sup>8</sup> “Eu ouvi os insultos de Moabe e as ofensas dos amonitas, Que zombaram do meu povo e fizeram ameaças arrogantes contra o seu território. <sup>9</sup> Portanto, tão certo como eu vivo”, diz Jeová dos exércitos, o Deus de Israel, “Moabe se tornará como Sodoma, E os amonitas como Gomorra: Um lugar de urtigas, um poço de sal, uma terra permanentemente desolada. Os que restarem do meu povo os saquearão, E o restante da minha nação tomará posse da terra deles. <sup>10</sup> Isso é o que receberão por causa do seu orgulho, Porque zombaram do povo de Jeová dos exércitos e se enalteceram contra eles.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Isaías 16:11</span> É por isso que meu coração treme por Moabe, Como as cordas de uma harpa; E o meu íntimo, por Quir-Haresete.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<div class="pend">Nas semanas anteriores esta página tinha uma seção sobre como o discurso foi feito no vídeo da
+reunião. Se você tiver o vídeo desta semana, é só mandar que eu acrescento.</div>
+
+<footer><p>Fontes: <a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/setembro-outubro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-26-de-outubro-1%C2%BA-de-novembro-de-2026/">apostila Vida e Ministério de setembro-outubro de 2026</a>; Estudo Perspicaz,
+verbetes “Moabe, Moabitas”, “Pranto” e “Quir de Moabe”; A Sentinela de maio de 2024; Tradução do Novo Mundo. O
+roteiro e os insights são notas de preparação pessoal.</p></footer>
+
+</div>
+</body>
+</html>

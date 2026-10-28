@@ -1,6 +1,32 @@
 {
   "semanas": [
     {
+      "inicio": "2026-10-26",
+      "fim": "2026-11-01",
+      "leitura": "Jeremias 47-48",
+      "meio": [
+        {
+          "tipo": "discurso",
+          "titulo": "Jeová é um Juiz justo e misericordioso",
+          "detalhe": "Tesouros · 10 min",
+          "href": "semanas/2026-10-26/meio-de-semana/discurso/"
+        },
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 47 e 48",
+          "detalhe": "Pergunta da apostila + 8 joias",
+          "href": "semanas/2026-10-26/meio-de-semana/joias/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Raabe: ela escolheu o lado de Jeová",
+          "detalhe": "Estudo de livro · wcg cap. 14",
+          "href": "semanas/2026-10-26/meio-de-semana/estudo-livro/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
       "inicio": "2026-10-19",
       "fim": "2026-10-25",
       "leitura": "Jeremias 45-46",
