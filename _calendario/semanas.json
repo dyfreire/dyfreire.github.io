@@ -24,7 +24,14 @@
           "href": "semanas/2026-10-26/meio-de-semana/estudo-livro/"
         }
       ],
-      "fim_semana": []
+      "fim_semana": [
+        {
+          "tipo": "sentinela",
+          "titulo": "Dê valor ao ‘privilégio de prestar destemidamente serviço sagrado’",
+          "detalhe": "A Sentinela de agosto de 2026",
+          "href": "semanas/2026-10-26/fim-de-semana/sentinela/"
+        }
+      ]
     },
     {
       "inicio": "2026-10-19",
