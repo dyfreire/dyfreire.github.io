@@ -1,6 +1,38 @@
 {
   "semanas": [
     {
+      "inicio": "2026-11-02",
+      "fim": "2026-11-08",
+      "leitura": "Jeremias 49-50",
+      "meio": [
+        {
+          "tipo": "discurso",
+          "titulo": "Ajude outros a se beneficiar da misericórdia de Jeová",
+          "detalhe": "Tesouros · 10 min",
+          "href": "semanas/2026-11-02/meio-de-semana/discurso/"
+        },
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 49 e 50",
+          "detalhe": "Pergunta da apostila + 8 joias simples",
+          "href": "semanas/2026-11-02/meio-de-semana/joias/"
+        },
+        {
+          "tipo": "parte",
+          "titulo": "Nunca se esqueça do que Jeová se lembra",
+          "detalhe": "Nossa Vida Cristã · vídeo e consideração · 15 min",
+          "href": "semanas/2026-11-02/meio-de-semana/somos-po/"
+        },
+        {
+          "tipo": "livro",
+          "titulo": "Noemi e Rute: elas enfrentaram juntas as dificuldades",
+          "detalhe": "Estudo de livro · wcg cap. 15",
+          "href": "semanas/2026-11-02/meio-de-semana/estudo-livro/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
       "inicio": "2026-10-26",
       "fim": "2026-11-01",
       "leitura": "Jeremias 47-48",
