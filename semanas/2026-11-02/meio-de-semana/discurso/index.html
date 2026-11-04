@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discurso: a misericórdia de Jeová</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Preparação do discurso de 10 minutos de Jeremias 49 e 50, com fontes reunidas.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  .src-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+  .src-card h3{margin:0 0 4px;font-size:1rem;color:var(--accent)}
+  .src-card .tag{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+  .src-card p{margin:.5rem 0}
+  .src-card mark{background:#3a3110;color:#ffe9a8;padding:0 2px;border-radius:3px}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .insight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .ins{background:var(--panel2);border:1px solid var(--jewel-line);border-radius:10px;padding:12px 14px}
+  .ins b{color:var(--jewel)}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>🕊️ Ajude outros a se beneficiar da misericórdia de Jeová</h1>
+  <h2>Tesouros da Palavra de Deus · discurso de 10 min · Jeremias 49 e 50 · 2 a 8 de novembro de 2026</h2>
+  <p>Tudo o que você precisa num lugar só: o esboço da apostila, as fontes separadas com o trecho que
+  interessa marcado, os textos bíblicos exatos do seu JW Library, os insights e um roteiro de 10 minutos.</p>
+  <div class="meta-row">
+    <span class="pill">⏱ 10 min</span><span class="pill">📚 it “Presunção” · w08 15/6</span>
+    <span class="pill">🔎 Guia de Pesquisa incluído</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#esboco"><span class="num">1</span>Esboço da apostila</a>
+  <a href="#ideia"><span class="num">2</span>A ideia em uma frase</a>
+  <a href="#roteiro"><span class="num">3</span>Roteiro de 10 minutos</a>
+  <a href="#insights"><span class="num">4</span>Insights para usar</a>
+  <a href="#fontes"><span class="num">5</span>Fontes separadas</a>
+</nav>
+
+<h2 class="sec" id="esboco">1. O esboço da apostila</h2>
+<div class="oficial">
+  <h3>Os três pontos, como estão na apostila</h3>
+  <ol>
+    <li><b>Jeová condenou Babilônia por causa dos seus pecados graves e da sua atitude arrogante.</b> (Jer. 50:14,
+    29, 31; <i>it</i> “Presunção” § 10)</li>
+    <li><b>Jeová perdoou completamente os israelitas que se arrependeram.</b> (Jer. 50:20)</li>
+    <li><b>Os cristãos se esforçam para imitar a misericórdia de Jeová declarando as boas novas e ajudando as pessoas a
+    sair da religião falsa.</b> (Jer. 50:2, 8; <i>w08</i> 15/6 8-9 §§ 8-11)</li>
+  </ol>
+  <figure class="fig"><img src="img/estudo-idosa.jpg" alt="Uma irmã estuda a Bíblia com uma idosa que tem várias imagens em casa. Elas estão lendo textos na Bíblia da estudante.">
+    <figcaption><b>O que a imagem mostra:</b> Uma irmã estuda a Bíblia com uma idosa que tem várias imagens em casa. Elas estão lendo textos na Bíblia da estudante.</figcaption></figure>
+</div>
+
+<h2 class="sec" id="ideia">2. A ideia em uma frase</h2>
+<div class="learn"><h4>💡 O fio do discurso</h4>
+  <p><b>Jeová é duro com o orgulho e generoso com quem se arrepende.</b> Os três pontos são três cenas: Babilônia,
+  orgulhosa, caiu; Israel, arrependido, foi perdoado por completo; e nós imitamos essa misericórdia ajudando as
+  pessoas a sair da religião falsa enquanto ainda há tempo.</p>
+</div>
+
+<h2 class="sec" id="roteiro">3. Roteiro de 10 minutos: a cidade orgulhosa e o povo perdoado</h2>
+<div class="roteiro">
+
+  <div class="rot"><div class="t">0:00<span>1 min</span></div><div>
+    <h4>Abertura: uma cidade que parecia impossível de derrubar</h4>
+    <p class="fala">“Babilônia era cercada por muralhas enormes, e o rio Eufrates passava no meio da cidade. Parecia
+    que nada ia derrubar aquela cidade. Mas, mais de cem anos antes, Jeremias escreveu que ela ia cair. E o capítulo
+    50 mostra duas coisas sobre Jeová ao mesmo tempo: o que ele faz com o orgulho e o que ele faz com o
+    arrependimento.”</p>
+    <p>Fontes da abertura: o capítulo “Profecias que se cumpriram” (gm cap. 9 § 16) diz que Babilônia “era cercada por gigantescas
+    muralhas e parecia inexpugnável”, e que o Eufrates atravessava a cidade. O livro <i>Jeremias</i> (jr cap. 13 § 15) diz
+    que, “um século antes de isso acontecer, Jeremias predisse com exatidão a queda repentina de Babilônia”.</p></div></div>
+
+  <div class="rot"><div class="t">1:00<span>3 min</span></div><div>
+    <h4>1. Babilônia pecou contra Jeová e foi arrogante</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 50:14</span> <sup>14</sup> Venham contra Babilônia em formação de batalha por todos os lados, Todos vocês que armam o arco. Atirem contra ela, não poupem flechas, Pois foi contra Jeová que ela pecou.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip">Jeremias 50:29</span> <sup>29</sup> Convoquem arqueiros contra Babilônia, Todos os que armam o arco. Acampem ao redor dela; que ninguém escape. Retribuam-lhe conforme os seus atos. Façam com ela o mesmo que ela fez. Pois ela agiu de modo arrogante contra Jeová, Contra o Santo de Israel.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip">Jeremias 50:31-32</span> <sup>31</sup> “Veja! Eu estou contra você, ó insolente”, diz o Soberano Senhor, Jeová dos exércitos, “Pois tem de chegar o seu dia, o tempo em que ajustarei contas com você. <sup>32</sup> Você, ó insolente, tropeçará e cairá, Não haverá ninguém para levantá-la. Eu porei fogo nas suas cidades, E ele devorará tudo que estiver em volta de você.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>Repare no motivo que se repete: “foi contra Jeová que ela pecou” (v. 14); “ela agiu de modo arrogante contra
+    Jeová” (v. 29). E no versículo 31 Jeová chama Babilônia de “insolente”.</p>
+    <p><b>O que é presunção?</b> O Perspicaz (§ 1) explica: é tomar para si mais do que se tem direito, uma ousadia
+    atrevida. Está ligada à soberba, à arrogância e ao orgulho. E a palavra hebraica vem de um verbo que significa
+    <b>“ferver, acalorar-se”</b> (§ 2). O orgulho esquenta a pessoa até ela passar do limite.</p>
+    <p>O § 10 diz que Babilônia era <b>“um protótipo da presunção contra Deus”</b>, ou seja, o modelo do orgulho
+    contra Deus. A tradução antiga do versículo 31 dizia: “Eis que sou contra ti, ó Presunção.”</p>
+    <p class="fala">“E não era só orgulho. A apostila de 2017 lembra que Babilônia foi arrogante e extremamente cruel
+    com os israelitas. O mesmo Perspicaz diz que hoje Babilônia, a Grande, a religião falsa, é a mais presunçosa
+    inimiga de Deus que há na terra. E Jeová prometeu: ‘Porei fim ao orgulho dos presunçosos.’”</p>
+    <div class="quote"><span class="verse-chip">Isaías 13:11</span> Ajustarei contas com a terra habitada por sua maldade, E com os maus, pelo erro deles. Porei fim ao orgulho dos presunçosos E humilharei a arrogância dos tiranos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala"><b>Nos nossos dias:</b> “A presunção começa pequena. É o ‘comigo isso não acontece’, o ‘eu não
+    preciso de conselho’. O rei Davi orou: ‘Guarda o teu servo de cometer atos presunçosos.’ Se até Davi pedia
+    isso, nós também precisamos pedir.”</p>
+    <div class="quote"><span class="verse-chip">Salmo 19:13</span> E guarda o teu servo de cometer atos presunçosos; Não deixes que eles me dominem. Então serei íntegro E inocente de pecados flagrantes.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div></div></div>
+
+  <div class="rot"><div class="t">4:00<span>2 min 30</span></div><div>
+    <h4>2. Jeová perdoou completamente os que se arrependeram</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 50:20</span> <sup>20</sup> “Naqueles dias e naquele tempo”, diz Jeová, “A culpa de Israel será procurada, Mas não haverá nenhuma, E os pecados de Judá não serão achados, Pois perdoarei aqueles que eu deixar sobreviver”.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“Imagine alguém revirando a casa inteira atrás de uma coisa e não achando nada. É o que diz o
+    versículo 20: a culpa de Israel ‘será procurada, mas não haverá nenhuma’. Não é que Jeová esqueceu de procurar.
+    É que, quando ele perdoa, não sobra nada para achar.”</p>
+    <p><b>Quem foi perdoado?</b> O versículo 4 mostra o povo voltando “caminhando e chorando” para buscar a Jeová. A
+    apostila de maio de 2017 resume: Jeová libertaria os israelitas arrependidos, e eles voltariam a obedecer ao pacto
+    e a restaurar a adoração verdadeira em Jerusalém.</p>
+    <div class="quote"><span class="verse-chip">Jeremias 50:4</span> <sup>4</sup> “Naqueles dias e naquele tempo”, diz Jeová, “o povo de Israel e o povo de Judá virão juntos. Virão caminhando e chorando, e juntos buscarão a Jeová, seu Deus.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>Nas referências da Bíblia de estudo, Jeremias 50:20 aparece ligado a Jeremias 31:34 e a Miqueias 7:18:</p>
+    <div class="quote"><span class="verse-chip">Jeremias 31:34</span> “E não ensinarão mais cada um ao seu próximo e cada um ao seu irmão, dizendo: ‘Conheçam a Jeová!’ Porque todos eles me conhecerão, desde o menor até o maior”, diz Jeová. “Pois perdoarei o seu erro e não me lembrarei mais do seu pecado.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="quote"><span class="verse-chip">Miqueias 7:18</span> Quem é Deus como tu, Que perdoa o erro e deixa passar a transgressão do restante da sua herança? Ele não continuará irado para sempre, Pois tem prazer no amor leal.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala"><b>Para os de idade:</b> “Tem irmão que ainda carrega um erro de 30, 40 anos atrás. Se você se
+    arrependeu de verdade, pode ter certeza: se Jeová procurar, não vai achar. Na parte de Vida Cristã de hoje vamos
+    ver mais sobre isso.”</p></div></div>
+
+  <div class="rot"><div class="t">6:30<span>2 min 30</span></div><div>
+    <h4>3. Imitamos a misericórdia: avisar e ajudar a sair</h4>
+    <div class="quote"><span class="verse-chip base">Jeremias 50:2</span> <sup>2</sup> “Anunciem entre as nações e façam uma proclamação. Ergam um sinal e façam uma proclamação. Não escondam nada! Digam: ‘Babilônia foi tomada. Bel foi humilhado. Merodaque ficou apavorado. As imagens dela foram humilhadas. Seus ídolos repugnantes ficaram apavorados.’<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>A nota da Tradução do Novo Mundo explica que a palavra traduzida “ídolos repugnantes” talvez esteja ligada a uma
+    palavra para <b>“esterco”</b>, e é usada como expressão de desprezo. É assim que Jeová vê os ídolos.</p>
+    <div class="quote"><span class="verse-chip">Jeremias 50:8</span> <sup>8</sup> “Fujam do meio de Babilônia, Saiam da terra dos caldeus, E sejam como os animais que saem na frente do rebanho.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p>A Sentinela de 15 de junho de 2008 (§§ 8, 9) explica: os judeus cativos deviam continuar sem se contaminar com a
+    religião falsa de Babilônia, para estarem prontos para voltar. Em 539 AEC, o rei Ciro decretou a volta, e milhares
+    voltaram. Mas nem todos podiam fazer a longa viagem.</p>
+    <p class="fala">“Os que ficaram, como o idoso profeta Daniel, podiam ter a bênção de Deus. Bastava apoiar de
+    coração a adoração pura e continuar separados da religião falsa. Sair de Babilônia é, antes de tudo, uma decisão
+    do coração.”</p>
+    <p>Hoje (§§ 10, 11), as religiões que têm raízes na antiga Babilônia são chamadas de “Babilônia, a Grande”. Os
+    cristãos verdadeiros têm o dever de alertar as pessoas. Fazemos isso com a Bíblia, as publicações e o estudo
+    bíblico, esperando que a pessoa veja a necessidade de sair “antes que seja tarde”.</p>
+    <div class="quote"><span class="verse-chip">Apocalipse 18:4</span> Ouvi outra voz vinda do céu dizer: “Saiam dela, meu povo, se não quiserem ser cúmplices dos pecados dela e se não quiserem receber parte das suas pragas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <p class="fala">“A imagem mostra isso. A irmã estuda com uma senhora que tem várias imagens em casa. E elas leem os
+    textos na Bíblia da própria estudante. A irmã tem paciência e deixa a Bíblia falar. A decisão de sair é da
+    estudante, e Jeová quer que ela tenha essa chance.”</p>
+    <p class="fala"><b>Fecho:</b> “Jeová derrubou a orgulhosa Babilônia. Perdoou por completo quem voltou chorando. E
+    nos deu a parte mais bonita: avisar as pessoas e ajudar cada uma a sair, enquanto ainda há tempo.”</p></div></div>
+</div>
+
+<div class="block"><h4>✂️ Se o tempo apertar</h4>
+  <p>Corte as leituras de Isaías 13:11 e Miqueias 7:18 (só mencione). <b>Não pode faltar:</b> “foi contra Jeová que
+  ela pecou”, a culpa “procurada” que não é achada em 50:20, o exemplo de Daniel e a imagem da irmã com a
+  estudante.</p>
+</div>
+
+<h2 class="sec" id="insights">4. Insights para usar no discurso</h2>
+<div class="insight">
+  <div class="ins"><b>A presunção ferve.</b> A palavra hebraica traduzida “presunção” vem de um verbo que significa
+  “ferver, acalorar-se”. O calor do orgulho ou da ira faz a pessoa agir sem pensar e passar dos seus direitos
+  (<i>it</i> “Presunção” § 2).</div>
+  <div class="ins"><b>“Ó Presunção.”</b> Na tradução antiga, Jeová chama Babilônia pelo nome do seu pecado: “Eis que
+  sou contra ti, ó Presunção.” A tradução atual diz “ó insolente” (<i>it</i> § 10; Jer. 50:31).</div>
+  <div class="ins"><b>O modelo do orgulho.</b> A antiga Babilônia era “um protótipo da presunção contra Deus”. E
+  Babilônia, a Grande, é “a mais presunçosa e amarga inimiga de Deus que há na terra” (<i>it</i> § 10).</div>
+  <div class="ins"><b>Pior que um erro.</b> “Um ato presunçoso é um pecado muito mais grave do que um erro.” Por isso
+  Davi pedia a Jeová que o guardasse disso (<i>it</i> § 4; Sal. 19:13).</div>
+  <div class="ins"><b>A desonra vem depois.</b> “Quando a presunção vem, a desonra vem em seguida, mas a sabedoria está
+  com os modestos” (Pro. 11:2; <i>it</i> § 6).</div>
+  <div class="ins"><b>Procurada e não achada.</b> Em 50:20, Jeová procura a culpa do povo arrependido e não acha
+  nenhuma. É o mesmo Deus de Jeremias 31:34: “não me lembrarei mais do seu pecado”.</div>
+  <div class="ins"><b>Daniel não pôde voltar.</b> O idoso Daniel continuou em Babilônia, mas teve a bênção de Deus
+  porque apoiou de coração a adoração pura e se manteve separado da religião falsa (<i>w08</i> 15/6 § 9).</div>
+  <div class="ins"><b>Ídolos de esterco.</b> A palavra de 50:2 para “ídolos repugnantes” talvez esteja ligada a uma
+  palavra para “esterco” e expressa desprezo (nota da Tradução do Novo Mundo).</div>
+</div>
+
+<h2 class="sec" id="fontes">5. As fontes, separadas</h2>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Presunção” § 10</h3>
+  <p class="tag">Citado na apostila, ponto 1 · <a href="https://www.jw.org/pt/biblioteca/livros/Estudo-Perspicaz-das-Escrituras/Presun%C3%A7%C3%A3o/">abrir no jw.org</a></p>
+  <p><b>A Presunção Acabará.</b> <mark>A antiga cidade de Babilônia era um protótipo da presunção contra Deus, razão
+  pela qual era alvo da inimizade eterna de Deus.</mark> O profeta Jeremias disse a ela: “‘Eis que sou contra ti, ó
+  Presunção’, é a pronunciação do Soberano Senhor. . . . a Presunção há de tropeçar e cair.” (Je 50:29, 31, 32)
+  <mark>A simbólica Babilônia, a Grande, tem-se revelado a mais presunçosa e amarga inimiga de Deus que há na
+  terra</mark>; embriaga os habitantes da terra “com o vinho da fornicação dela” e é responsável pelo “sangue dos
+  profetas, e dos santos, e de todos os que foram mortos na terra”. Por causa disso, ela sofrerá destruição eterna.
+  (Re 17:2, 5; 18:7, 8, 20, 24) Isto está em harmonia com a promessa de Jeová de pôr fim a toda a presunção
+  babilônica: “Farei realmente cessar o orgulho dos presunçosos e rebaixarei a altivez dos tiranos.” (Is 13:11)</p>
+</div>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Presunção” §§ 1, 2 e 4</h3>
+  <p class="tag">Para explicar a palavra</p>
+  <p><b>§ 1</b> <mark>Arrogar-se mais do que o seu direito ou aquilo que é próprio permitiria, ou sem autorização;
+  ousadia impertinente de conduta ou de pensamento</mark>; tomar liberdades indevidas; empreender algo em atrevido
+  desafio. Esta palavra está relacionada com a soberba, a arrogância, o orgulho e a petulância. Seus antônimos são a
+  mansidão e a modéstia.</p>
+  <p><b>§ 2</b> A palavra hebraica za·dhóhn, traduzida “presunção”, deriva do verbo zidh, <mark>que significa
+  “ferver, acalorar-se”</mark>. (Gên 25:29; Êx 21:14) O calor da ira ou do orgulho pode levar alguém a agir
+  precipitadamente, a tornar-se injustificadamente ousado e a ultrapassar os seus direitos. [...]</p>
+  <p><b>§ 4</b> O Rei Davi [...] orou: “Refreia também teu servo de atos presunçosos; não deixes que me dominem.”
+  (Sal 19:12, 13) Portanto, é grande o perigo, e temos de evitá-la com cuidado. <mark>Um ato presunçoso é um pecado
+  muito mais grave do que um erro.</mark> [...]</p>
+</div>
+
+<div class="src-card">
+  <h3>A Sentinela de 15 de junho de 2008, “Coisas das quais temos de fugir”, pp. 8-9 §§ 8-11</h3>
+  <p class="tag">Citada na apostila, ponto 3 · <a href="https://www.jw.org/pt/biblioteca/revistas/w20080615/Coisas-das-quais-temos-de-fugir/">abrir no jw.org</a></p>
+  <p><b>§ 8</b> O profeta Jeremias predisse a destruição de Jerusalém ocorrida em 607 AEC. Ele disse que o povo de
+  Deus seria levado ao cativeiro, mas que voltariam à sua terra depois de “setenta anos”. (Jer. 29:4, 10)
+  <mark>Para os judeus cativos em Babilônia, Jeremias tinha uma importante mensagem; eles deviam permanecer sem se
+  contaminar com a religião falsa que se praticava em Babilônia.</mark> Assim, no tempo devido, eles estariam
+  preparados para voltar a Jerusalém e restaurar a adoração pura. Isso aconteceu logo depois que os medos e persas
+  conquistaram Babilônia, em 539 AEC. O rei persa Ciro II decretou que os judeus retornassem a Jerusalém e
+  reconstruíssem o templo de Jeová. (Esd. 1:1-4)</p>
+  <p><b>§ 9</b> Milhares de judeus aproveitaram essa oportunidade e retornaram. (Esd. 2:64-67) Assim, eles cumpriram a
+  ordem profética de Jeremias, que, no caso deles, em certo sentido era uma fuga, uma retirada para outro lugar. (Leia
+  Jeremias 51:6, 45, 50.) As circunstâncias não permitiram que todos os judeus fizessem a longa viagem de volta para
+  Jerusalém e Judá. <mark>Os que ficaram em Babilônia, como o idoso profeta Daniel, podiam ter a bênção de Deus desde
+  que apoiassem de coração a adoração pura centralizada em Jerusalém e permanecessem separados da babilônica adoração
+  falsa.</mark></p>
+  <p><b>§ 10</b> Hoje, bilhões de humanos praticam várias formas de adoração falsa que têm raízes na antiga Babilônia.
+  (Gên. 11:6-9) Coletivamente, essas religiões são chamadas de “Babilônia, a Grande, a mãe das meretrizes e das coisas
+  repugnantes da terra”. (Rev. 17:5) A religião falsa tem uma longa história de apoio aos políticos do mundo. [...]
+  É de admirar que Jeová Deus em breve acabe com a religião falsa na Terra? (Rev. 18:8)</p>
+  <p><b>§ 11</b> <mark>Os cristãos verdadeiros sabem disso e têm o dever de alertar os membros de Babilônia, a
+  Grande.</mark> Uma das maneiras de fazer isso é pela distribuição de Bíblias e publicações relacionadas produzidas
+  pelo “escravo fiel e discreto” [...]. Quando uma pessoa se interessa pela mensagem da Bíblia, procura-se ajudá-la
+  por meio de um estudo bíblico. <mark>Espera-se que ela veja a necessidade de ‘fugir do meio de Babilônia’ antes que
+  seja tarde.</mark> (Rev. 18:4)</p>
+  <div class="quote"><span class="verse-chip">Jeremias 51:6</span> Fujam do meio de Babilônia E salvem a sua vida! Não sejam mortos por causa dos erros dela. Pois este é o tempo para a vingança de Jeová. Ele retribuirá a ela o que ela fez.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<div class="src-card">
+  <h3>Apostila Vida e Ministério de maio de 2017, p. 7, “Jeová abençoa os humildes e pune os arrogantes”</h3>
+  <p class="tag">Mesma leitura, Jeremias 49 e 50, em 2017</p>
+  <p><b>Je 50:4-7:</b> <mark>Jeová libertaria os israelitas arrependidos</mark>; eles iam chorar de alegria. Eles
+  voltariam a obedecer ao pacto que Jeová tinha feito com eles; também voltariam para Jerusalém a fim de restaurar a
+  adoração verdadeira.</p>
+  <p><b>Je 50:29, 39:</b> <mark>Babilônia foi arrogante e extremamente cruel com os israelitas</mark>; Jeová disse que
+  puniria Babilônia. A profecia de Jeová se cumpriu: Babilônia se tornou um lugar totalmente abandonado.</p>
+</div>
+
+<div class="src-card">
+  <h3>Livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i> (jr), cap. 13, “Jeová fez o que tinha em mente”, § 15</h3>
+  <p class="tag">Indicado no Guia de Pesquisa para Jer. 50:38 · para a abertura</p>
+  <p>Jeremias também profetizou a respeito do fim da nação que havia conquistado o Egito, a própria Babilônia.
+  <mark>Um século antes de isso acontecer, Jeremias predisse com exatidão a queda repentina de Babilônia.</mark> [...]
+  O profeta de Deus predisse que suas águas protetoras haviam de “secar-se”, e que seus homens poderosos não
+  lutariam. (Jer. 50:38; 51:30) [...] A situação de desolação em que a antes poderosa Babilônia se encontra até os
+  nossos dias prova a exatidão das profecias divinas.</p>
+</div>
+
+<div class="src-card">
+  <h3>Os textos bíblicos do esboço, completos</h3>
+  <p class="tag">Texto exato da Tradução do Novo Mundo (edição de estudo) do seu JW Library</p>
+  <div class="quote"><span class="verse-chip base">Jeremias 50:2-3</span> <sup>2</sup> “Anunciem entre as nações e façam uma proclamação. Ergam um sinal e façam uma proclamação. Não escondam nada! Digam: ‘Babilônia foi tomada. Bel foi humilhado. Merodaque ficou apavorado. As imagens dela foram humilhadas. Seus ídolos repugnantes ficaram apavorados.’ <sup>3</sup> Pois uma nação veio contra ela desde o norte E fez da terra dela um motivo de terror; Ninguém mais mora nela. Tanto homens como animais fugiram; Eles foram embora.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 50:8</span> <sup>8</sup> “Fujam do meio de Babilônia, Saiam da terra dos caldeus, E sejam como os animais que saem na frente do rebanho.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 50:14-15</span> <sup>14</sup> Venham contra Babilônia em formação de batalha por todos os lados, Todos vocês que armam o arco. Atirem contra ela, não poupem flechas, Pois foi contra Jeová que ela pecou. <sup>15</sup> Deem um grito de guerra contra ela por todos os lados. Ela se rendeu. Suas colunas caíram, suas muralhas foram derrubadas, Pois é a vingança de Jeová. Vinguem-se dela. Façam com ela o mesmo que ela fez.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 50:20</span> <sup>20</sup> “Naqueles dias e naquele tempo”, diz Jeová, “A culpa de Israel será procurada, Mas não haverá nenhuma, E os pecados de Judá não serão achados, Pois perdoarei aqueles que eu deixar sobreviver”.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 50:29-32</span> <sup>29</sup> Convoquem arqueiros contra Babilônia, Todos os que armam o arco. Acampem ao redor dela; que ninguém escape. Retribuam-lhe conforme os seus atos. Façam com ela o mesmo que ela fez. Pois ela agiu de modo arrogante contra Jeová, Contra o Santo de Israel. <sup>30</sup> Por isso, seus jovens cairão nas praças, Todos os seus soldados serão eliminados naquele dia”, diz Jeová. <sup>31</sup> “Veja! Eu estou contra você, ó insolente”, diz o Soberano Senhor, Jeová dos exércitos, “Pois tem de chegar o seu dia, o tempo em que ajustarei contas com você. <sup>32</sup> Você, ó insolente, tropeçará e cairá, Não haverá ninguém para levantá-la. Eu porei fogo nas suas cidades, E ele devorará tudo que estiver em volta de você.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Provérbios 11:2</span> Quando a presunção vem, a desonra vem em seguida, Mas a sabedoria está com os modestos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<footer><p>Fontes: <a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-2-8-de-novembro-de-2026/">apostila Vida e Ministério de novembro-dezembro de 2026</a>; Estudo Perspicaz,
+verbete “Presunção”; A Sentinela de 15/6/2008; apostila de maio de 2017; livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i>; gm cap. 9;
+Tradução do Novo Mundo e Guia de Pesquisa do JW Library. O roteiro e os insights são notas de preparação
+pessoal.</p></footer>
+
+</div>
+</body>
+</html>
