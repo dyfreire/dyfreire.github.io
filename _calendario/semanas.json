@@ -30,7 +30,14 @@
           "href": "semanas/2026-11-02/meio-de-semana/estudo-livro/"
         }
       ],
-      "fim_semana": []
+      "fim_semana": [
+        {
+          "tipo": "sentinela",
+          "titulo": "Confie em Jeová e seja protegido",
+          "detalhe": "A Sentinela de setembro de 2026",
+          "href": "semanas/2026-11-02/fim-de-semana/sentinela/"
+        }
+      ]
     },
     {
       "inicio": "2026-10-26",
