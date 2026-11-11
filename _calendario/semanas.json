@@ -1,6 +1,20 @@
 {
   "semanas": [
     {
+      "inicio": "2026-11-09",
+      "fim": "2026-11-15",
+      "leitura": "Jeremias 51-52",
+      "meio": [
+        {
+          "tipo": "joias",
+          "titulo": "Joias de Jeremias 51 e 52",
+          "detalhe": "Pergunta da apostila + 8 joias",
+          "href": "semanas/2026-11-09/meio-de-semana/joias/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
       "inicio": "2026-11-02",
       "fim": "2026-11-08",
       "leitura": "Jeremias 49-50",

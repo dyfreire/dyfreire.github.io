@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joias de Jeremias 51-52</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8E%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Joias espirituais simples de Jeremias 51 e 52, com comentário pronto.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro a{color:var(--accent)}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>💎 Joias espirituais: Jeremias 51 e 52</h1>
+  <h2>Vida e Ministério · 9 a 15 de novembro de 2026 · parte 2 (10 min)</h2>
+  <p>A pergunta da apostila com a resposta das publicações, e 8 joias simples da leitura: o que o texto me
+  ensina sobre Jeová, sobre Jesus e os discípulos, e como isso aparece no dia a dia. Cada uma tem o texto exato do seu
+  JW Library, um comentário pronto de até 30 segundos e o botão “de onde veio”.</p>
+  <div class="meta-row"><span class="pill">💎 1 pergunta + 8 joias</span>
+  <span class="pill">🏠 lições do dia a dia</span><span class="pill">✅ Marque as estudadas</span></div>
+</header>
+
+<section class="oficial" id="oficial">
+  <h3>Pergunta da apostila</h3>
+  <p class="q">Jer. 51:6, 7, 36. Como a mensagem que Jeremias pregou é semelhante à mensagem que pregamos hoje?
+  <span class="pill">jr 165 § 21; 167 § 25</span></p>
+  <div class="quote"><span class="verse-chip base">Jeremias 51:6-7</span> <sup>6</sup> Fujam do meio de Babilônia E salvem a sua vida! Não sejam mortos por causa dos erros dela. Pois este é o tempo para a vingança de Jeová. Ele retribuirá a ela o que ela fez. <sup>7</sup> Babilônia tem sido um cálice de ouro na mão de Jeová; Ela embriagou toda a terra. As nações beberam o seu vinho, Por isso é que as nações ficaram loucas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Jeremias 51:36</span> <sup>36</sup> Portanto, assim diz Jeová: “Estou defendendo a sua causa, E executarei vingança a seu favor. Vou secar o mar e os poços dela.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o livro <i>jr</i> diz</h4><ul>
+    <li><b>A mesma Babilônia, em escala maior.</b> Jeremias anunciou o fim de Babilônia em 539 AEC. O livro de
+    Revelação mostra “paralelos” com o que vai acontecer em escala maior: a queda de <b>“Babilônia, a Grande”, o
+    império mundial da religião falsa</b> (§ 21).</li>
+    <li><b>A mesma ordem: sair.</b> “O povo de Deus tem de ‘sair dela’ para não ter o mesmo destino” (Apocalipse 18:4;
+    Jeremias 51:6) (§ 21).</li>
+    <li><b>As águas secando.</b> As águas da cidade simbolizam “seus povos ou adeptos”, e estão “se secando”
+    (Jeremias 51:36; Apocalipse 16:12) (§ 21).</li>
+    <li><b>A mesma urgência.</b> “Assim como Jeremias, vivemos em tempos críticos.” A reação das pessoas à mensagem
+    “pode significar vida ou morte” (§ 25).</li>
+    <li><b>Não esconder o que vai acontecer.</b> Não somos profetas inspirados, mas fomos comissionados a pregar as
+    boas novas do Reino até o fim (Mateus 28:19, 20). Não queremos “furtar as palavras de Jeová” escondendo das pessoas
+    o que está para acontecer (§ 25).</li>
+  </ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>O livro sobre Jeremias explica que a mensagem dele tem paralelo com a nossa. Jeremias anunciou a queda de Babilônia. Nós anunciamos a queda de Babilônia, a Grande, que é a religião falsa. Ele disse: fujam do meio de Babilônia. Hoje, Apocalipse 18:4 diz: saiam dela, meu povo. E, como no tempo dele, a reação das pessoas à mensagem pode significar vida ou morte.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário: o “cálice de ouro” (v. 7)</h4><p>O Perspicaz explica que,
+  sob Nabucodonosor, Babilônia foi “um copo de ouro” na mão de Jeová para derramar a sua indignação contra Judá e
+  Jerusalém, que tinham sido infiéis. Ou seja, Jeová usou Babilônia para executar o seu julgamento. Depois, a própria
+  Babilônia foi julgada.</p></div>
+  <div class="quote"><span class="verse-chip">Apocalipse 18:4</span> Ouvi outra voz vinda do céu dizer: “Saiam dela, meu povo, se não quiserem ser cúmplices dos pecados dela e se não quiserem receber parte das suas pragas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Apocalipse 16:12</span> O sexto derramou a sua tigela sobre o grande rio Eufrates. E a água dele secou, a fim de que se preparasse o caminho para os reis do nascente do sol.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="block"><h4>➕ Outro ângulo: de onde vem a ordem de “fugir”</h4><p><i>A Sentinela</i> de 15/6/2008
+  explica que, hoje, bilhões praticam formas de adoração falsa com raízes na antiga Babilônia. E diz que os cristãos
+  têm o dever de alertar as pessoas, com publicações e estudos bíblicos, para que vejam a necessidade de “fugir do
+  meio de Babilônia” antes que seja tarde (Apocalipse 18:4).</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org</li><li>Livros</li><li><i>A Palavra de Deus para Nós por Meio de Jeremias</i> (jr)</li><li>Capítulo 13, “Jeová fez o que tinha em mente”</li><li>§ 21, página 165</li></ol><p class="citar"><b>Para citar:</b> <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, página 165, parágrafo 21</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010152#h=30" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org</li><li>Livros</li><li><i>A Palavra de Deus para Nós por Meio de Jeremias</i> (jr)</li><li>Capítulo 13, “Jeová fez o que tinha em mente”</li><li>§ 25, página 167</li></ol><p class="citar"><b>Para citar:</b> <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, página 167, parágrafo 25</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010152#h=34" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:7</li><li>“Babilônia” (it-1 n.º 2 par. 4)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Babilônia”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200000530#h=25" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:6</li><li>“Coisas das quais temos de fugir” (w08 15/6 págs. 8-9)</li><li>§§ 8-11</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de junho de 2008, páginas 8 e 9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2008449#h=13" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  <p class="pessoal">O livro <i>jr</i> cita Jeremias 23:30 numa tradução anterior (“furtar as palavras”). Na Bíblia de
+  estudo atual, o versículo diz “roubam as minhas palavras”.</p>
+</section>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 filtrar por palavra-chave…">
+  <button data-filter="all" class="pill on">Tudo</button>
+  <button data-filter="pending" class="pill">Só pendentes</button>
+  <button data-filter="done" class="pill">Só estudadas</button>
+  <span id="count" class="pill"></span>
+</div>
+
+<nav class="toc" aria-label="Índice das joias"><a href="#j1"><span class="num">1</span>Jeová não abandona o seu povo</a><a href="#j2"><span class="num">2</span>Contar o que Jeová fez</a><a href="#j3"><span class="num">3</span>Ídolo não tem vida. Jeová fez tudo</a><a href="#j4"><span class="num">4</span>Notícia atrás de notícia</a><a href="#j5"><span class="num">5</span>Lá de longe, lembrem-se de Jeová</a><a href="#j6"><span class="num">6</span>Uma cena que ninguém esquece</a><a href="#j7"><span class="num">7</span>Jeová cumpre nos mínimos detalhes</a><a href="#j8"><span class="num">8</span>Fiel até o fim</a></nav>
+<div class="section-divider">Que joias espirituais você encontrou na leitura desta semana?</div>
+<div id="joias">
+<details class="j" id="j1" open>
+  <summary>
+    <span class="j-num">1</span>
+    <span><span class="j-title">Jeová não abandona o seu povo</span><div class="j-status" data-status="Jeremias 51:5">Jeremias 51:5</div></span>
+    <span class="status-toggle" data-toggle="j1">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:5</span> <sup>5</sup> Pois Israel e Judá não são viúvas de seu Deus, Jeová dos exércitos. Mas sua terra está cheia de culpa do ponto de vista do Santo de Israel.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li><strong>Sobre Jeová:</strong> o povo tinha errado muito. O texto diz que a terra deles estava “cheia de culpa”.</li><li>Mesmo assim, Jeová diz que Israel e Judá <strong>“não são viúvas de seu Deus”</strong>. Viúva é a mulher que perdeu o marido e ficou sem proteção. Jeová diz: eles não ficaram sozinhos, eu continuo aqui.</li><li>Ele corrige, mas não abandona.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O irmão que errou, recebeu conselho e agora acha que Jeová não quer mais saber dele. Para quem tem idade e mora sozinho: Hebreus 13:5 é uma promessa pessoal de Jeová, “Eu nunca deixarei você”.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 51:5 me chamou a atenção. O povo tinha errado e a terra estava cheia de culpa. Mas Jeová diz que eles não são viúvas do seu Deus. Ou seja, não ficaram sem proteção. Isso me ensina que Jeová corrige, mas não abandona. E Hebreus 13:5 repete a promessa: Eu nunca deixarei você e nunca o abandonarei.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Hebreus 13:5</span> Que o seu modo de vida seja livre do amor ao dinheiro; fiquem satisfeitos com as coisas que têm. Pois ele disse: “Eu nunca deixarei você e nunca o abandonarei.”</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo</p></details>
+    <p class="pessoal">“O que esse texto me ensina”, a cena e o comentário são preparação pessoal, feitos a partir do texto bíblico. Não citar como publicação.</p>
+  </div>
+</details>
+<details class="j" id="j2">
+  <summary>
+    <span class="j-num">2</span>
+    <span><span class="j-title">Contar o que Jeová fez</span><div class="j-status" data-status="Jeremias 51:10">Jeremias 51:10</div></span>
+    <span class="status-toggle" data-toggle="j2">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:10</span> <sup>10</sup> Jeová nos trouxe justiça. Venham, relatemos em Sião os atos de Jeová, nosso Deus.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Quando Babilônia caiu, o povo disse: <strong>“Venham, relatemos em Sião os atos de Jeová, nosso Deus.”</strong></li><li>Relatar é contar com detalhes. Eles não guardaram para si o que Jeová tinha feito.</li><li><strong>Os servos de Jeová</strong> sempre fizeram isso: “Vou relatar todas as tuas obras maravilhosas” (Salmo 9:1).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>Contar uma experiência curta numa reunião, ou contar aos netos como Jeová ajudou a família num tempo difícil. Na parte 7 de hoje, sobre os donativos, Isaías 12:5 diz a mesma coisa: “Seja isso divulgado em toda a terra.”</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Em Jeremias 51:10, depois da queda de Babilônia, o povo diz: venham, vamos contar em Sião o que Jeová fez. Eles não guardaram a bênção só para eles. Isso me lembra que vale a pena contar o que Jeová fez por nós, numa conversa, para os filhos ou para um irmão desanimado. Isso fortalece quem ouve e honra a Jeová.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Salmo 9:1</span> Vou louvar-te de todo o meu coração, ó Jeová; Vou relatar todas as tuas obras maravilhosas. · <span class="verse-chip">Isaías 12:5</span> Cantem louvores a Jeová, pois ele fez coisas maravilhosas. Seja isso divulgado em toda a terra.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo</p></details>
+    <p class="pessoal">“O que esse texto me ensina”, a cena e o comentário são preparação pessoal, feitos a partir do texto bíblico. Não citar como publicação.</p>
+  </div>
+</details>
+<details class="j" id="j3">
+  <summary>
+    <span class="j-num">3</span>
+    <span><span class="j-title">Ídolo não tem vida. Jeová fez tudo</span><div class="j-status" data-status="Jeremias 51:15-19">Jeremias 51:15-19</div></span>
+    <span class="status-toggle" data-toggle="j3">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:15-19</span> <sup>15</sup> Ele é Aquele que fez a terra com o seu poder, Aquele que estabeleceu o solo produtivo com a sua sabedoria, E que estendeu os céus com o seu entendimento. <sup>16</sup> Quando ele faz ouvir a sua voz, As águas nos céus se agitam, E ele faz subir nuvens desde os confins da terra. Faz os relâmpagos para a chuva E faz o vento sair dos Seus depósitos. <sup>17</sup> Todos os homens agem de modo insensato e sem conhecimento. Todos os ourives ficarão envergonhados por causa das suas imagens esculpidas, Pois as suas imagens de metal são uma falsidade, E não há espírito nelas. <sup>18</sup> São uma ilusão, obras dignas de zombaria. Quando chegar o dia do seu ajuste de contas, elas desaparecerão. <sup>19</sup> A Porção de Jacó não é como essas coisas, Pois Ele é quem formou tudo, Sim, é o bastão da Sua herança. Jeová dos exércitos é o seu nome.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li><strong>Sobre Jeová:</strong> ele fez a terra “com o seu poder”, o solo “com a sua sabedoria” e os céus “com o seu entendimento”. Ele faz os relâmpagos para a chuva e faz o vento sair dos “Seus depósitos”.</li><li>Já as imagens dos ourives “são uma falsidade, e não há espírito nelas”. Ou seja, não têm vida.</li><li>O versículo 19 chama Jeová de <strong>“a Porção de Jacó”</strong>: o que o povo tinha de mais valioso era o seu Deus.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>A medalhinha no pescoço, a imagem no carro “para proteger”, a figa na porta. O Salmo 115 descreve bem: têm olhos, mas não veem. Quem confia em Jeová confia em quem faz a chuva e o vento.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 51:15 a 17 faz um contraste bonito. Jeová fez a terra com poder, sabedoria e entendimento. Já as imagens feitas pelos ourives não têm espírito, não têm vida. O Salmo 115 diz que elas têm olhos e não veem. Por isso a nossa confiança não está num objeto, mas no Criador de tudo.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Salmo 115:4-7</span> <sup>4</sup> Os ídolos deles são prata e ouro, Trabalho de mãos humanas. <sup>5</sup> Têm boca, mas não podem falar; Olhos, mas não podem ver. <sup>6</sup> Têm orelhas, mas não podem ouvir; Nariz, mas não podem cheirar. <sup>7</sup> Têm mãos, mas nada podem pegar; Pés, mas não podem andar. Não fazem nenhum som com a garganta.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo</p></details>
+    <p class="pessoal">“O que esse texto me ensina”, a cena e o comentário são preparação pessoal, feitos a partir do texto bíblico. Não citar como publicação.</p>
+  </div>
+</details>
+<details class="j" id="j4">
+  <summary>
+    <span class="j-num">4</span>
+    <span><span class="j-title">Notícia atrás de notícia</span><div class="j-status" data-status="Jeremias 51:46">Jeremias 51:46</div></span>
+    <span class="status-toggle" data-toggle="j4">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:46</span> <sup>46</sup> Não desanimem nem tenham medo por causa das notícias que se ouvirão no país. Em um ano chegará uma notícia, E no ano seguinte chegará outra notícia, De violência na terra e de governante contra governante.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Jeová avisou: <strong>“Não desanimem nem tenham medo por causa das notícias”</strong>. Num ano chega uma notícia, no outro ano chega outra, de violência e de governante contra governante.</li><li><strong>Sobre Jeová:</strong> ele preparou o seu povo antes. Quem foi avisado não se assusta da mesma forma.</li><li><strong>Sobre Jesus:</strong> ele disse o mesmo: “Vocês ouvirão falar de guerras e notícias de guerras. Cuidado para não ficar apavorados” (Mateus 24:6).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O jornal da noite, um vídeo atrás do outro no celular, a conversa da vizinha sobre a violência no bairro. Para quem passa o dia com a televisão ligada: o Salmo 112:7 diz que quem confia em Jeová “não terá medo de más notícias”.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 51:46 diz: não desanimem nem tenham medo por causa das notícias. Vinha uma notícia num ano e outra no ano seguinte. Hoje é igual, a gente vê notícia ruim todo dia. Mas Jesus disse em Mateus 24:6: cuidado para não ficar apavorados. E o Salmo 112:7 diz que quem confia em Jeová não tem medo de más notícias.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Mateus 24:6</span> Vocês ouvirão falar de guerras e notícias de guerras. Cuidado para não ficar apavorados, pois essas coisas têm de acontecer, mas ainda não é o fim. · <span class="verse-chip">Salmo 112:7</span> Não terá medo de más notícias. Seu coração é firme, confia em Jeová.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo</p></details>
+    <p class="pessoal">“O que esse texto me ensina”, a cena e o comentário são preparação pessoal, feitos a partir do texto bíblico. Não citar como publicação.</p>
+  </div>
+</details>
+<details class="j" id="j5">
+  <summary>
+    <span class="j-num">5</span>
+    <span><span class="j-title">Lá de longe, lembrem-se de Jeová</span><div class="j-status" data-status="Jeremias 51:50">Jeremias 51:50</div></span>
+    <span class="status-toggle" data-toggle="j5">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:50</span> <sup>50</sup> Vocês que escaparem da espada, continuem andando, não parem! Lá de longe, lembrem-se de Jeová E tenham Jerusalém no coração.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Jeová disse aos que escapavam: <strong>“continuem andando, não parem! Lá de longe, lembrem-se de Jeová e tenham Jerusalém no coração.”</strong></li><li><i>A Sentinela</i> de 2008 explica que nem todos os judeus podiam fazer a longa viagem de volta. Os que ficaram em Babilônia, <strong>“como o idoso profeta Daniel”</strong>, podiam ter a bênção de Deus se apoiassem de coração a adoração pura.</li><li>Ou seja, Jeová olha o coração, não só a distância.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O irmão internado que acompanha a reunião pelo telefone. A irmã que já não consegue ir ao Salão e assiste pela internet. Estão longe, mas o coração está na congregação. Jonas também se lembrou de Jeová lá do fundo do mar.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 51:50 diz: lá de longe, lembrem-se de Jeová e tenham Jerusalém no coração. A Sentinela de 2008 explica que nem todos podiam voltar para Jerusalém, como o idoso Daniel. Mas eles tinham a bênção de Jeová se apoiassem a adoração pura de coração. Isso consola quem hoje não consegue ir ao Salão: o coração está aqui, e Jeová vê.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Jonas 2:7</span> Quando a minha vida estava se desvanecendo, foi de Jeová que me lembrei. Então a minha oração chegou a ti, dentro do teu santo templo.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:6</li><li>“Coisas das quais temos de fugir” (w08 15/6 págs. 8-9)</li><li>§§ 8-11</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de junho de 2008, páginas 8 e 9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2008449#h=13" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+    <p class="pessoal">A cena do dia a dia e o comentário são preparação pessoal. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j6">
+  <summary>
+    <span class="j-num">6</span>
+    <span><span class="j-title">Uma cena que ninguém esquece</span><div class="j-status" data-status="Jeremias 51:60-64">Jeremias 51:60-64</div></span>
+    <span class="status-toggle" data-toggle="j6">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:60-64</span> <sup>60</sup> Jeremias escreveu num livro toda a calamidade que viria sobre Babilônia, todas estas palavras escritas contra Babilônia. <sup>61</sup> Então Jeremias disse a Seraías: “Quando você estiver chegando a Babilônia e a avistar, leia em voz alta todas estas palavras. <sup>62</sup> E diga: ‘Ó Jeová, tu disseste que este lugar será destruído e deixado sem nenhum habitante, sem homens nem animais, e que ela ficará desolada para sempre.’ <sup>63</sup> E, quando você terminar de ler este livro, amarre nele uma pedra e jogue-o no meio do rio Eufrates. <sup>64</sup> Então diga: ‘Assim afundará Babilônia e nunca mais se levantará de novo, por causa da calamidade que estou trazendo sobre ela. E eles ficarão cansados.’” Aqui terminam as palavras de Jeremias.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Jeremias mandou Seraías ler a mensagem em Babilônia, <strong>amarrar uma pedra no livro e jogar no rio Eufrates</strong>: “Assim afundará Babilônia e nunca mais se levantará.”</li><li>O livro <i>Revelação</i> explica que o livro afundando com a pedra era a garantia de que Babilônia nunca mais se levantaria.</li><li>Em Apocalipse 18:21, um anjo faz a mesma coisa com uma pedra de moinho: é a garantia de que Babilônia, a Grande, a religião falsa, também vai acabar.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>Para ensinar, uma cena vale mais do que muitas palavras. Quem viu o livro afundar nunca mais esqueceu. Na pregação, um exemplo simples do dia a dia ajuda a pessoa a lembrar da mensagem.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Em Jeremias 51:63 e 64, Seraías amarrou uma pedra no livro e jogou no rio Eufrates. O livro Revelação explica que isso era a garantia de que Babilônia nunca mais ia se levantar. E em Apocalipse 18:21 um anjo joga uma grande pedra no mar, mostrando que a religião falsa também vai acabar de uma vez.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Apocalipse 18:21</span> Então um anjo forte levantou uma pedra semelhante a uma grande pedra de moinho e a lançou no mar, dizendo: “Assim, com um lance rápido, Babilônia, a grande cidade, será lançada para baixo, e nunca mais será achada.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:63</li><li>“Pranto e regozijo pelo fim de Babilônia” (re cap. 37 pars. 9-10)</li></ol><p class="citar"><b>Para citar:</b> Livro <i>Revelação: Seu Grandioso Clímax Está Próximo!</i>, capítulo 37, parágrafos 9 e 10</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1101988037#h=14" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+    <p class="pessoal">A cena do dia a dia e o comentário são preparação pessoal. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j7">
+  <summary>
+    <span class="j-num">7</span>
+    <span><span class="j-title">Jeová cumpre nos mínimos detalhes</span><div class="j-status" data-status="Jeremias 51:11 · Jeremias 51:30">Jeremias 51:11 · Jeremias 51:30</div></span>
+    <span class="status-toggle" data-toggle="j7">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 51:11</span> <sup>11</sup> “Afiem as flechas; peguem os escudos redondos. Jeová despertou o espírito dos reis dos medos, Porque sua intenção é destruir Babilônia. Pois esta é a vingança de Jeová, a vingança pelo seu templo.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><div class="quote"><span class="verse-chip">Jeremias 51:30</span> <sup>30</sup> Os guerreiros de Babilônia pararam de lutar. Estão sentados nas suas fortalezas. Sua força acabou. Eles se tornaram como mulheres. As casas dela foram incendiadas. Suas trancas foram quebradas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Jeremias disse que os inimigos de Babilônia iam <strong>“afiar as flechas”</strong>. A apostila de 2017 lembra que os medos e os persas eram arqueiros experientes e que o arco era a principal arma deles.</li><li>Ele também disse que <strong>os guerreiros de Babilônia “pararam de lutar”</strong>. O Perspicaz cita uma crônica antiga: “O exército de Ciro entrou em Babilônia sem luta.”</li><li>O livro <i>jr</i> diz que Jeremias predisse a queda de Babilônia <strong>um século antes</strong>, e que a desolação da cidade até hoje prova a exatidão das profecias.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>Se Jeová acertou até o tipo de arma e o jeito como a cidade caiu, as promessas que faltam também vão se cumprir. Para quem espera há muitos anos pelo novo mundo: Jeová nunca errou um detalhe.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 51:11 fala em afiar as flechas, e a apostila explica que os medos e persas eram arqueiros experientes. O versículo 30 diz que os guerreiros de Babilônia pararam de lutar, e uma crônica antiga diz que o exército de Ciro entrou sem luta. Jeremias disse isso cem anos antes. Então eu posso confiar nas promessas que ainda faltam.</p></div>
+    
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:11</li><li>“A palavra de Jeová se cumpre em detalhes” (mwb17.06 pág. 3)</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de junho de 2017, página 3</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017203" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:30</li><li>“Nabonido” (it-2 par. 16)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 2, verbete “Nabonido”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200003156#h=18" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 51:30</li><li>“Jeová fez o que tinha em mente” (jr cap. 13 par. 15)</li></ol><p class="citar"><b>Para citar:</b> <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, capítulo 13, parágrafo 15</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010152#h=22" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+    <p class="pessoal">A cena do dia a dia e o comentário são preparação pessoal. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j8">
+  <summary>
+    <span class="j-num">8</span>
+    <span><span class="j-title">Fiel até o fim</span><div class="j-status" data-status="Jeremias 52:31-34">Jeremias 52:31-34</div></span>
+    <span class="status-toggle" data-toggle="j8">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Jeremias 52:31-34</span> <sup>31</sup> Então, no trigésimo sétimo ano do exílio de Joaquim, rei de Judá, no décimo segundo mês, no dia 25 do mês, no ano em que Evil-Merodaque se tornou rei de Babilônia, ele libertou Joaquim, rei de Judá, e o tirou da prisão. <sup>32</sup> Falou com ele bondosamente e o colocou numa posição mais honrada do que a dos outros reis que estavam com ele em Babilônia. <sup>33</sup> Assim, Joaquim tirou a sua roupa de prisioneiro e comeu regularmente à mesa do rei, todos os dias da sua vida. <sup>34</sup> Ele recebeu regularmente uma porção de alimento da parte do rei de Babilônia, dia após dia, até o dia da sua morte, todos os dias da sua vida.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Este é <strong>o último acontecimento que Jeremias registrou</strong>: o rei Joaquim foi solto da prisão. O Perspicaz diz que Evil-Merodaque lhe deu uma posição de favor acima dos outros reis cativos.</li><li>O livro <i>jr</i> calcula que nessa época <strong>Jeremias devia ter uns 90 anos</strong>, e que ele morreu fiel depois de uns 67 anos de serviço especial a Jeová.</li><li>A maioria rejeitou a mensagem dele. Mesmo assim, ele não foi um fracasso. Jeová tinha prometido: “eu estou com você” (Jeremias 1:19).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O irmão de idade que prega há 40, 50 anos e quase ninguém aceitou no território dele. Jeremias também viu pouca gente ouvir. Para Jeová, o que conta é ser fiel, e ele está com quem continua.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Jeremias 52:31 a 34 é o último fato que Jeremias registrou. O livro sobre Jeremias diz que ele devia ter uns 90 anos e serviu a Jeová por uns 67 anos. A maioria não quis ouvir, mas ele não foi um fracasso, porque Jeová disse: eu estou com você. Isso anima quem prega há muitos anos: o que conta para Jeová é a fidelidade.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Jeremias 1:19</span> E eles certamente lutarão contra você, Mas não o vencerão, Pois ‘eu estou com você’, diz Jeová, ‘para salvá-lo’.”</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 52:31</li><li>“Um profeta que serviu ‘na parte final dos dias’” (jr cap. 2 par. 27)</li></ol><p class="citar"><b>Para citar:</b> <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, capítulo 2, parágrafo 27</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010141#h=38" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Jeremias 52:31</li><li>“Evil-Merodaque” (it-1)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Evil-Merodaque”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200001453" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+    <p class="pessoal">A cena do dia a dia e o comentário são preparação pessoal. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+</div>
+
+<footer><p>Fontes: apostila Vida e Ministério de novembro-dezembro de 2026; Tradução do Novo Mundo (edição de
+estudo) e Guia de Pesquisa do JW Library; livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, caps. 2 e 13;
+<i>A Sentinela</i> de 15/6/2008; livro <i>Revelação</i>, cap. 37; apostila de junho de 2017; Estudo Perspicaz,
+verbetes “Babilônia”, “Nabonido” e “Evil-Merodaque”. As lições, as cenas e os comentários são notas de preparação
+pessoal.</p></footer>
+<script>
+(function(){
+  const KEY='joias-jeremias-51-52-2026-11-09';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  const done=load();
+  function paint(id){
+    const sec=document.getElementById(id), st=sec.querySelector('.j-status'), btn=sec.querySelector('[data-toggle]');
+    const on=!!done[id];
+    if(on) sec.dataset.done='1'; else sec.removeAttribute('data-done');
+    st.textContent=(on?'✔ Estudada · ':'')+st.dataset.status;
+    st.classList.toggle('answered',on);
+    btn.textContent=on?'↺ reabrir':'✔ marcar como estudada';
+  }
+  document.querySelectorAll('[data-toggle]').forEach(btn=>{
+    const id=btn.dataset.toggle; paint(id);
+    btn.addEventListener('click',e=>{e.preventDefault(); if(done[id]) delete done[id]; else done[id]=Date.now(); save(done); paint(id); update();});
+  });
+  const inp=document.getElementById('search');
+  function update(){
+    const q=inp.value.toLowerCase().trim();
+    const f=document.querySelector('[data-filter].on').dataset.filter;
+    let n=0;
+    document.querySelectorAll('details.j').forEach(d=>{
+      const ok=(!q||d.textContent.toLowerCase().includes(q))&&(f==='all'||(f==='pending'&&!d.dataset.done)||(f==='done'&&d.dataset.done));
+      d.style.display=ok?'':'none'; if(ok)n++;
+    });
+    document.getElementById('count').textContent=n+' joia(s) visível(is)';
+  }
+  inp.addEventListener('input',update);
+  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('on')); b.classList.add('on'); update();
+  }));
+  update();
+})();
+</script>
+
+</div>
+</body>
+</html>
