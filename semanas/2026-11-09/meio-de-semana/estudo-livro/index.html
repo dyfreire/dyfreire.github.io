@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baraque e Débora</title>
+<meta name="description" content="Preparação do estudo de livro Ande Corajosamente com Deus, capítulo 16, com comentário pronto em cada pergunta, textos bíblicos escritos, complementos do Guia de Pesquisa e o caminho de cada fonte.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css?v=3">
+<style>
+  details.rastro{margin:.6rem 0 0;border:1px dashed var(--rule, #ccc);border-radius:10px;padding:.35rem .8rem;font-size:.86rem}
+  details.rastro summary{cursor:pointer;opacity:.75}
+  details.rastro ol{margin:.4rem 0 .3rem 1.1rem;padding:0}
+  details.rastro p{margin:.3rem 0}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">Ande Corajosamente com Deus, cap. 16<b>“Certamente irei com você”</b></div>
+    <span class="progress" id="progress"></span>
+    <button class="btn" type="button" id="guideBtn" aria-pressed="true">Cores</button>
+    <button class="btn" type="button" id="routeBtn">Anotações</button>
+    <button class="btn" type="button" id="ansBtn" aria-pressed="false">Guia de Pesquisa</button>
+    <a class="btn" href="#roteiro">30 min</a>
+    <a class="btn" href="#resumo">Resumo</a>
+    <button class="btn" type="button" id="themeBtn">Tema</button>
+    <button class="btn" type="button" id="resetBtn" title="Limpar marcas de visto">Zerar</button>
+  </div>
+</header>
+
+<section class="guide" id="guide">
+  <div class="guide-in">
+    <h2>Guia de cores, clique para ligar ou desligar cada tipo</h2>
+    <div class="guide-grid" id="guideGrid"></div>
+    <p class="guide-note">
+      Cada trecho colorido abre uma anotação. Os <b>textos bíblicos</b> aparecem escritos (Tradução do Novo
+      Mundo), e as referências <span class="scr" data-ref="7:4:8-9">sublinhadas assim</span> abrem o texto
+      completo. Em cada pergunta, o campo já vem com um <b>comentário pronto</b> de até 30 segundos, o bloco
+      <b>Do Guia de Pesquisa</b> traz complementos para um segundo comentário e o <b>📍 de onde veio</b> mostra o
+      caminho de cada fonte, como citar e o link do wol. Tudo funciona sem internet.
+    </p>
+  </div>
+</section>
+
+<main>
+
+  <a class="backlink" href="../../../../">&larr; Calendário das reuniões</a>
+  <p class="chapter-eyebrow">16 &nbsp;Baraque e Débora &middot; semana de 9 a 15 de novembro de 2026</p>
+  <h1>“Certamente irei com você”</h1>
+
+  <div class="factbox">
+    <p><b>Leia o relato na Bíblia:</b>
+      <span class="scr" data-ref="7:4:1-16">Juízes 4:1-16</span>,
+      <span class="scr" data-ref="7:4:23-24">23, 24</span>;
+      <span class="scr" data-ref="7:5:1-23">5:1-23</span></p>
+    <p><b>Tempo do estudo:</b> 30 minutos (parte 8 da reunião)</p>
+    <p><b>Palavras que aparecem no estudo:</b> <i>profetisa</i> é a mulher que transmitia as mensagens de Jeová.
+    <i>Juiz</i>, aqui, era o homem que Jeová levantava para livrar o povo dos inimigos. <i>Carro de guerra com
+    foices</i>: carroça puxada por cavalos, com lâminas curvas e afiadas presas às rodas.</p>
+    <p class="src">Cada parágrafo traz o <b>conteúdo resumido</b>, com as frases do capítulo, os <b>textos
+    bíblicos escritos</b> e um link direto para o texto oficial no
+    <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916">wol.jw.org</a>.</p>
+  </div>
+
+  <aside class="direction" id="direcao" aria-label="Direção do estudo">
+    <h2>Para onde este estudo quer levar</h2>
+    <p class="dsub">O capítulo mostra um povo sem armas diante de 900 carros de guerra. Um juiz humilde e uma
+    profetisa corajosa confiaram em Jeová, desceram o monte, e Jeová lutou por eles. O número da etapa aparece ao
+    lado de cada parágrafo e dentro de cada anotação.</p>
+    <ol class="steps" id="stepsList"></ol>
+    <p class="dnote"><b>Em uma frase:</b> Baraque aceitou a ajuda de uma mulher fiel, Débora teve coragem de ir
+    junto, e os dois desceram o monte porque sabiam que a batalha era de Jeová; e Jeová mandou a chuva.</p>
+  </aside>
+
+  <!-- ================================ §1 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§1</div>
+    <div class="ptxt">
+      <p class="resumo">Era um período difícil em Israel. O povo <span data-n="a1">tinha se rebelado contra Jeová</span>, e, como
+  ele tinha avisado, deixou que os inimigos o oprimissem. Jeová entregou o povo nas mãos do rei cananeu Jabim. O
+  general dele era <span data-n="a2">um homem cruel chamado Sísera</span>, que liderava um grande exército com
+  <span data-n="a3">900 carros de guerra com foices de ferro</span>.</p>
+      <div class="vtext" data-ref="7:4:1-3"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=3">ler o §1 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §2 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§2</div>
+    <div class="ptxt">
+      <p class="resumo">Por 20 anos, o exército de Sísera espalhou o medo em Israel. Parece que, quando atacavam uma cidade,
+  <span data-n="a4">capturavam as mulheres jovens e as estupravam</span>. Reinava o terror: as estradas e os
+  vilarejos ficavam vazios. E <span data-n="a5">poucos israelitas tinham armas para se defender</span>.</p>
+      <div class="vtext" data-ref="7:5:6-8"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=4">ler o §2 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §3 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§3</div>
+    <div class="ptxt">
+      <p class="resumo">Naquela época vivia <span data-n="a6">Débora, uma mulher corajosa que servia como profetisa de
+  Jeová</span>. Ela também julgava os casos difíceis que o povo trazia. Jeová usou Débora para dar instruções a
+  <span data-n="a7">Baraque, que ele tinha escolhido para ser juiz</span>: reunir um exército de 10 mil homens e
+  levá-los para o monte Tabor. Jeová daria a vitória sobre Sísera.</p>
+      <div class="vtext" data-ref="7:4:4-7"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=5">ler o §3 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §4 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§4</div>
+    <div class="ptxt">
+      <p class="resumo">Baraque não ficou ofendido por receber instruções por meio de uma mulher. <span data-n="a8">Ele até disse que
+  só iria se Débora fosse junto.</span> Isso não era falta de confiança em Jeová: <span data-n="a9">Paulo colocou
+  Baraque numa lista de homens e mulheres de grande fé</span>. Baraque queria de Jeová toda a ajuda possível. Débora
+  respondeu: <span data-n="a10">“Certamente irei com você.”</span> E avisou que Sísera não seria morto por nenhum
+  homem: Deus daria essa tarefa a uma mulher.</p>
+      <div class="vtext" data-ref="7:4:8-9"></div>
+      <div class="vtext" data-ref="58:11:32"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=6">ler o §4 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §5 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§5</div>
+    <div class="ptxt">
+      <p class="resumo">Baraque pôs mãos à obra. Reuniu <span data-n="a11">10 mil homens valentes, que tinham poucas armas</span>, e
+  os preparou do melhor modo que pôde. O exército se reuniu no topo do <span data-n="a12">monte Tabor, que tinha uns
+  560 metros de altura</span>. De lá, Débora, Baraque e seus homens viam Sísera e seus carros de guerra se
+  aproximando.</p>
+      <div class="vtext" data-ref="7:4:10"></div>
+      <div class="vtext" data-ref="7:4:12-13"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=7">ler o §5 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §6 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§6</div>
+    <div class="ptxt">
+      <p class="resumo">Pensando como guerreiro, Baraque talvez esperasse no alto: subindo o monte, os carros ficariam mais lentos.
+  Mas <span data-n="a13">Baraque sabia que aquela batalha não era dele, mas de Jeová</span>. Por meio de Débora,
+  Jeová disse: ataque! <span data-n="a14">Cheios de coragem, Baraque e seus homens desceram correndo o monte</span>
+  até o vale para enfrentar aqueles carros de guerra assustadores.</p>
+      <div class="vtext" data-ref="7:4:14"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=8">ler o §6 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <p class="pullquote" id="destaque">
+    <span data-n="d1">Um juiz e uma profetisa enfrentaram um general cruel e seus carros de guerra</span>
+  </p>
+
+  <figure id="imagem-principal">
+    <img src="assets/img/tabor.jpg" loading="lazy"
+         alt="Débora, Baraque e o exército de israelitas no topo do monte Tabor. Eles veem os carros de guerra do exército de Sísera avançando na direção deles.">
+    <figcaption>Débora, Baraque e o exército no topo do monte Tabor, vendo os carros de guerra de Sísera avançando na
+    direção deles</figcaption>
+  </figure>
+
+  <!-- ================================ §7 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§7</div>
+    <div class="ptxt">
+      <p class="resumo">Do ponto de vista militar, eles não tinham a menor chance. Mas <span data-n="a15">Jeová viu a coragem deles e
+  lançou o exército cananeu em confusão</span>. <span data-n="a16">Começou a chover torrencialmente</span>, o vale
+  de Jezreel virou um lamaçal e os carros atolaram. Os soldados de Sísera tiveram que lutar corpo a corpo. Todos eles
+  morreram.</p>
+      <div class="vtext" data-ref="7:4:15-16"></div>
+      <div class="vtext" data-ref="7:5:4"></div>
+      <div class="vtext" data-ref="7:5:21"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=9">ler o §7 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+  <!-- ================================ §8 ================================ -->
+
+  <div class="para">
+    <div class="pnum">§8</div>
+    <div class="ptxt">
+      <p class="resumo">Sísera conseguiu fugir a pé, saindo do lamaçal até o solo seco. <span data-n="a17">Aquele covarde abandonou
+  seus homens para salvar a própria vida.</span> Baraque foi atrás dele. Enquanto isso, <span data-n="a18">Jeová
+  estava observando tudo e sabia muito bem o que ia fazer com Sísera</span>.</p>
+      <div class="vtext" data-ref="7:4:17"></div>
+      <p class="parafoot"><a class="jwlink" target="_blank" rel="noopener"
+         href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916#h=10">ler o §8 no wol.jw.org</a></p>
+    </div>
+  </div>
+
+
+  <!-- ========================= para considerar ========================= -->
+
+  <h2 class="sect">Para considerar</h2>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q1">De que maneiras Baraque e Débora mostraram coragem?</span></p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q1">Baraque aceitou enfrentar 900 carros de guerra com homens quase sem armas. E, quando Débora disse “vá”, ele desceu do monte para o campo aberto, onde os carros tinham vantagem. Débora saiu de casa, um lugar mais seguro, e foi para a batalha ao lado dele. A Sentinela diz que ela estava disposta a arriscar a vida por causa da sua fé em Jeová.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q1">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:4:14"></div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 4:9, 14</span></summary>
+      <ul>
+        <li><b>w03 15/11 p. 29:</b> Débora “estava disposta a sair de casa”, um lugar mais seguro, para acompanhar Baraque na batalha. “Ela também mostrou fé e coragem.”</li>
+        <li><b>w03 15/11 p. 29:</b> “Exigia fé da parte de todos os que se juntaram a Baraque.” Juízes 5:8: “Não se via nem escudo nem lança no meio de quarenta mil em Israel.”</li>
+        <li><b>w15 1/8 p. 15 § 11:</b> imagine a alegria dos soldados ao ver aquela mulher corajosa marchar com eles para o Tabor, “disposta a arriscar a vida ao lado deles por causa de sua fé em Jeová Deus”.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 15, §§ 11-15</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 15</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+
+  <!-- ========================= analise mais a fundo ========================= -->
+
+  <h2 class="sect">Analise mais a fundo</h2>
+
+  <div class="qblock">
+    <p class="qtext">1. <span data-n="q2">Como era a vida em Israel na época de Sísera?</span></p>
+    <p class="qsrc">(<i>w15</i> 1/8 13 § 6)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q2">A Sentinela diz que a religião e a cultura dos cananeus eram cruéis: tinham sacrifícios de crianças e prostituição nos templos. Era quase impossível viajar, e ninguém morava mais nos campos. O povo se escondia nas florestas e nos montes, com medo de plantar ou de viver em vilarejos sem muralha. Nas estradas, podiam ser atacados, os filhos raptados e as mulheres estupradas.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q2">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:5:6-7"></div>
+    <details class="followup" data-step="1">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 5:6, 7</span></summary>
+      <ul>
+        <li><b>w03 15/11 p. 28:</b> um erudito descreve: “A vida pública em Israel era regida pelo medo, toda a comunidade parecia estar paralisada e desamparada.” Por isso o povo clamou a Jeová.</li>
+        <li><b>w17.04 p. 29 § 6:</b> os israelitas que viviam nos campos “tinham medo até de sair de casa”, e não tinham armas nem para atacar nem para se defender.</li>
+        <li><b>w15 1/8, nota b:</b> a canção de Débora indica que Sísera voltava da batalha com moças como despojo (Juízes 5:30). A palavra usada para “moça” significa literalmente “ventre”, o que mostra como essas mulheres eram tratadas.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:4</li><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 13, § 6</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 13, parágrafo 6</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">2. <span data-n="q3">Por que Débora geralmente não é incluída entre os 12 juízes</span> que serviram antes do profeta Samuel?</p>
+    <p class="qsrc">(<i>w86</i> 1/6 31 §§ 6-8)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q3">A Sentinela de 1986 explica que Débora é chamada primeiro de profetisa, e está ligada ao juiz Baraque, que foi quem tomou a dianteira para livrar o povo. Os 12 juízes foram levantados principalmente como salvadores, que livravam o povo em batalha. Débora julgou de certa forma, mas não foi suscitada como um desses salvadores.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q3">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:4:4"></div>
+      <div class="vtext" data-ref="44:13:20"></div>
+    <details class="followup" data-step="2">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 4:4; Atos 13:20</span></summary>
+      <ul>
+        <li><b>w86 1/6 p. 31:</b> o mesmo vale para Eli, que foi “principalmente sumo sacerdote, não um ‘salvador’ que conduziu Israel à liberdade por meio de batalha” (Neemias 9:27).</li>
+        <li><b>w86 1/6 p. 31:</b> Atos 13:20 diz que foram dados “juízes até Samuel, o profeta”. Isso explica por que Samuel também não costuma ser contado entre os juízes.</li>
+        <li><b>Para não confundir:</b> isso não diminui Débora. A Sentinela de 2015 diz que ela “era juíza” e dava a resposta de Jeová às disputas do povo (Juízes 4:4, 5).</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:4</li><li>“Perguntas dos Leitores” (w86 1/6 pág. 31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 1986, página 31, Perguntas dos Leitores</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1986409#h=11" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:4</li><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 13, § 6</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 13, parágrafo 6</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">3. Em que sentido Débora foi <span data-n="q4">uma “mãe em Israel”</span>?</p>
+    <p class="qsrc">(<span class="scr" data-ref="7:4:4-5">Juí. 4:4, 5</span>; <span class="scr" data-ref="7:5:7">5:7</span>; <i>w15</i> 1/8 14 § 1) &nbsp;A</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q4">A Sentinela de 2015 diz que Débora usou a palavra mãe em sentido figurado. Não sabemos se ela tinha filhos. Jeová designou Débora para dar à nação uma proteção de mãe: ela julgava as disputas do povo, debaixo da palmeira, e chamou Baraque para agir. O Perspicaz explica que, aqui, mãe é a mulher que ajuda os outros e cuida deles.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q4">voltar ao comentário base</button></p>
+    </div>
+    <figure>
+      <img src="assets/img/debora-palmeira.jpg" loading="lazy" alt="Débora sentada debaixo de uma palmeira e resolvendo um problema entre dois homens que estão com ovelhas. Um casal de israelitas está andando em um caminho que leva até Débora.">
+      <figcaption><span class="imgtag">A</span>Débora debaixo da palmeira, resolvendo um problema entre dois homens que estão com ovelhas. Um casal sobe o caminho até ela</figcaption>
+    </figure>
+      <div class="vtext" data-ref="7:4:5"></div>
+    <details class="followup" data-step="2">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 5:7</span></summary>
+      <ul>
+        <li><b>it-2 “Mãe” § 8:</b> o mesmo sentido aparece em 1 Tessalonicenses 2:7, onde Paulo se compara a “uma mãe lactante” com os seus filhos espirituais. <span class="scr" data-ref="52:2:7">1 Tessalonicenses 2:7</span></li>
+        <li><b>w03 15/11 p. 28:</b> Jeová deu a Débora “o privilégio de agir como mãe figurativa de Israel”.</li>
+        <li><b>Na imagem A:</b> Débora sentada debaixo de uma palmeira, resolvendo um problema entre dois homens com ovelhas, enquanto um casal sobe o caminho até ela. É a cena de Juízes 4:5.</li>
+        <li><b>Para hoje:</b> a irmã mais velha que acolhe, ensina e cuida das irmãs mais novas da congregação faz um papel parecido.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:7</li><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 14, § 7 (1.º parágrafo da página)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 14, parágrafo 7</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:7</li><li>“Mãe” (it-2 par. 8)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 2, verbete “Mãe”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200003123#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">4. O que Débora e Baraque queriam dizer quando cantaram que <span data-n="q5">“as estrelas lutaram”</span> contra Sísera?</p>
+    <p class="qsrc">(<span class="scr" data-ref="7:5:20">Juí. 5:20</span>; <i>w05</i> 15/1 25 § 5)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q5">A Sentinela de 2005 diz que a Bíblia não explica como isso aconteceu. Pode ter sido ajuda de anjos, uma chuva de meteoritos que os sábios de Sísera viram como sinal de desgraça, ou previsões dos astrólogos que deram errado. Mas uma coisa é certa: houve algum tipo de intervenção de Jeová a favor do seu povo.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q5">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:5:21"></div>
+    <details class="followup" data-step="4">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 5:20, 21</span></summary>
+      <ul>
+        <li><b>w17.04 p. 30 § 9:</b> “se não fosse por Jeová, não seria muita coincidência cair uma chuva tão forte exatamente ali, bem naquela hora, a ponto de atolar 900 carros de guerra?” E Juízes 4:14, 15 diz três vezes que a vitória foi de Jeová.</li>
+        <li><b>it-1 “Estrela” § 15:</b> como a Bíblia não detalha, “parece ser suficiente” entender a frase como “alguma ação divina, de natureza milagrosa, a favor do exército de Israel”.</li>
+        <li><b>w03 15/11 p. 30:</b> o vale do Quisom é um uádi, um leito de rio que costuma ter pouca água, mas que pode virar uma torrente perigosa depois de um temporal. “A torrente de Quisom os arrastou” (Juízes 5:21).</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20</li><li>“Destaques do livro de Juízes” (w05 15/1 pág. 25 par. 5)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de janeiro de 2005, página 25</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2005046#h=21" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20 / 4:3</li><li>“Dê o seu melhor para louvar a Jeová!” (w17.04 págs. 28-32)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de abril de 2017, “Dê o seu melhor para louvar a Jeová!”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2017367#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20</li><li>“Estrela” (it-1 par. 15)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Estrela”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200004224#h=16" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+
+  <!-- ========================= medite no que aprendeu ========================= -->
+
+  <h2 class="sect">Medite no que aprendeu</h2>
+
+  <div class="qblock">
+    <p class="qtext">Baraque foi humilde e aceitou a ajuda de uma mulher fiel. <span data-n="q6">Em que situações um irmão pode imitar o exemplo dele?</span></p>
+    <p class="qsrc">&nbsp;B</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q6">A imagem B mostra uma irmã treinando três irmãos a operar equipamentos de aquecimento e refrigeração. Eles escutam e anotam. Um irmão imita Baraque quando aceita o treinamento de uma irmã que sabe mais do assunto, ou o conselho sensato da esposa. A Sentinela de 2015 lembra que Deus também dá privilégios às mulheres e confia em algumas delas.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q6">voltar ao comentário base</button></p>
+    </div>
+    <figure>
+      <img src="assets/img/irma-treinando.jpg" loading="lazy" alt="Uma irmã treinando três irmãos a operar equipamentos de aquecimento e refrigeração. Os irmãos estão escutando com atenção e fazendo anotações.">
+      <figcaption><span class="imgtag">B</span>Uma irmã treina três irmãos a operar equipamentos de aquecimento e refrigeração. Eles escutam com atenção e anotam</figcaption>
+    </figure>
+    <details class="followup" data-step="2">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 4:8</span></summary>
+      <ul>
+        <li><b>w15 1/8 p. 14 § 9:</b> Baraque “reconheceu o valor de ter ali alguém que representava a Jeová” para fortalecer a ele e a seus homens. “Jeová não considerou errado esse pedido.”</li>
+        <li><b>w15 1/8 p. 14 § 10:</b> para Deus, homens e mulheres têm o mesmo valor. “É muito importante que nunca tenhamos uma atitude preconceituosa, algo tão comum hoje.” <span class="scr" data-ref="48:3:28">Gálatas 3:28</span></li>
+        <li><b>w03 15/11 p. 29:</b> Moisés, Gideão e Jeremias também se sentiram incapazes, e nem por isso foram considerados menos fiéis.</li>
+        <li><b>Uma cena:</b> o irmão novo na pregação que aceita as dicas da irmã pioneira com 30 anos de experiência no território.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 14, §§ 9-10</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 14, parágrafos 9 e 10</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q7">Por que Débora precisou de coragem para acompanhar Baraque?</span> Que situações exigem esse tipo de coragem?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q7">Débora podia ter ficado em casa, que era mais seguro. Mas foi com Baraque para o meio de uma guerra contra 900 carros. E foi para apoiar, não para mandar: ela sabia que a glória nem ia ficar com ela. Hoje, esse tipo de coragem aparece quando alguém sai do seu conforto para apoiar outro irmão numa designação difícil.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q7">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:4:10"></div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 4:9, 10</span></summary>
+      <ul>
+        <li><b>w03 15/11 p. 29:</b> Débora “não tentou assumir o controle. Antes, continuou a ser uma serva modesta de Jeová.”</li>
+        <li><b>w03 15/11 p. 28:</b> quando disse “Não foi Jeová quem deu a ordem?”, Débora “negou enfaticamente que tivesse autoridade sobre Baraque”. Ela só transmitiu a ordem de Deus.</li>
+        <li><b>Situações de hoje:</b> a irmã que acompanha uma estudante a um lugar difícil, o irmão que vai junto com outro visitar alguém afastado, a família que se muda para ajudar uma congregação que precisa.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">De que outras maneiras <span data-n="q8">você pode imitar a coragem de Baraque e Débora</span>?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q8">A Sentinela de 2017 diz que hoje mostramos coragem dando o nosso melhor na pregação. E sugere perguntas: eu deixo a maior parte do trabalho para os outros? Dou mais valor às coisas materiais? A de 2015 lembra que quem toma o lado de Jeová pode enfrentar oposição, mas Jeová não mudou: ele defende quem confia nele.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q8">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:5:2"></div>
+    <details class="followup" data-step="3">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 5:2</span></summary>
+      <ul>
+        <li><b>w17.04 p. 31 § 14:</b> “Hoje, nós não mostramos nossa coragem por lutar numa guerra de verdade, mas por dar o nosso melhor na pregação.” E Jeová “não vai esquecer” a disposição de servir (Hebreus 6:10).</li>
+        <li><b>w17.04 p. 31 § 13:</b> Zebulão e Naftali “arriscaram a vida”. Rubem, Dã e Aser deram mais atenção aos rebanhos, aos navios e aos portos. (Juízes 5:15-18)</li>
+        <li><b>w03 15/11 p. 31:</b> obedecer mesmo quando o pedido de Deus parece contrariar o raciocínio humano. As instruções dele são sempre para o nosso bem. <span class="scr" data-ref="23:48:17-18">Isaías 48:17, 18</span></li>
+        <li><b>Para os de idade:</b> nem todos podem descer o monte correndo. Mas o cântico elogia “o povo que se ofereceu voluntariamente” (Juízes 5:2). Oferecer o que dá, uma carta, um telefonema, a presença na reunião, também é se oferecer.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20 / 4:3</li><li>“Dê o seu melhor para louvar a Jeová!” (w17.04 págs. 28-32)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de abril de 2017, “Dê o seu melhor para louvar a Jeová!”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2017367#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 16, § 16</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 16, parágrafo 16</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+
+  <!-- ========================= pense no quadro completo ========================= -->
+
+  <h2 class="sect">Pense no quadro completo</h2>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q9">O que esse relato me ensina sobre Jeová?</span></p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q9">Que a vitória é de Jeová. A Sentinela de 2017 lembra que Juízes 4:14 e 15 diz três vezes que foi ele quem deu a vitória. Também me ensina que Jeová é misericordioso: o povo tinha se rebelado, mas, quando clamou de coração, ele levantou um libertador. E ele dá privilégios às mulheres: confiou a Débora a tarefa de chamar Baraque.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q9">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:4:23-24"></div>
+    <details class="followup" data-step="4">
+      <summary>Do Guia de Pesquisa <span class="stepchip">Juízes 4:14, 15</span></summary>
+      <ul>
+        <li><b>w15 1/8 p. 14 § 7:</b> o terror durou 20 anos, “até que Jeová viu provas de que seu obstinado povo estava pronto para mudar”.</li>
+        <li><b>w03 15/11 p. 28:</b> em Juízes, o padrão se repete: “o clamor sincero pela misericórdia de Deus foi seguido pela designação divina de um salvador”.</li>
+        <li><b>w15 1/8 p. 16 § 16:</b> “Jeová não mudou. Ele ainda defende os que têm fé e confiança nele.”</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20 / 4:3</li><li>“Dê o seu melhor para louvar a Jeová!” (w17.04 págs. 28-32)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de abril de 2017, “Dê o seu melhor para louvar a Jeová!”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2017367#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:7</li><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 14, § 7 (1.º parágrafo da página)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 14, parágrafo 7</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>“‘Eu me levantei como mãe em Israel’” (w15 1/8)</li><li>pág. 16, § 16</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de agosto de 2015, página 16, parágrafo 16</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2015566#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext">Como esse relato está <span data-n="q10">relacionado com o propósito de Jeová</span>?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q10">A Sentinela de 2017 diz que Jeová nos dá a honra de apoiar o governo dele. Quando o servimos com coragem, damos a ele uma resposta para o Diabo, que disse que todos iam se virar contra Jeová. E o cântico termina olhando para o futuro: os inimigos de Jeová vão acabar, e os que o amam vão brilhar como o sol nascente.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q10">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="7:5:31"></div>
+    <details class="followup" data-step="4">
+      <summary>Da Sentinela <span class="stepchip">Juízes 5:31</span></summary>
+      <ul>
+        <li><b>w17.04 p. 32 § 16:</b> quando somos obedientes e apoiamos o governo de Deus, “damos a Jeová algo que ele não tem”: uma resposta para Satanás (Provérbios 27:11).</li>
+        <li><b>w17.04 p. 32 § 17:</b> no Armagedom, “nenhum humano vai precisar se oferecer para lutar com o inimigo”. Vamos ter que “ficar parados e ver a salvação de Jeová” (2 Crônicas 20:17).</li>
+        <li><b>w03 15/11 p. 31:</b> o final do cântico será verdade “quando Jeová acabar com o iníquo mundo de Satanás”.</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 5:20 / 4:3</li><li>“Dê o seu melhor para louvar a Jeová!” (w17.04 págs. 28-32)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de abril de 2017, “Dê o seu melhor para louvar a Jeová!”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2017367#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="qblock">
+    <p class="qtext"><span data-n="q11">O que eu gostaria de perguntar para Baraque e Débora</span> quando eles forem ressuscitados?</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q11">Para Baraque, eu perguntaria o que ele sentiu quando começou a chover lá embaixo, no meio dos carros de guerra. Para Débora, perguntaria como foi compor o cântico de vitória, e se ela imaginava que ainda íamos cantar a história dela milhares de anos depois.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q11">voltar ao comentário base</button></p>
+    </div>
+  </div>
+
+
+  <!-- ========================= aprenda mais ========================= -->
+
+  <h2 class="sect">Aprenda mais</h2>
+
+  <div class="qblock">
+    <p class="qtext">O que o exemplo de Baraque e Débora nos ensina sobre <span data-n="q12">confiança, modéstia e obediência</span>?</p>
+    <p class="qsrc">“Pela fé, Baraque derrotou um poderoso exército” (<i>w03</i> 15/11 28-31)</p>
+    <div class="answerbox">
+      <p class="anslabel">Meu comentário <span class="ansflag">comentário base · até 30 s</span></p>
+      <textarea class="answer" data-a="q12">Confiança: Baraque pediu que Débora fosse junto não por fraqueza, mas por fé, porque ela representava Jeová. Modéstia: Débora não tentou mandar, só passou a ordem de Deus. Obediência: quando chegou a hora, Baraque e os 10 mil desceram o monte, mesmo que isso parecesse um erro de estratégia. Baraque só venceu porque teve fé e obedeceu.</textarea>
+      <p class="ansactions"><button class="linkbtn" type="button" data-restore="q12">voltar ao comentário base</button></p>
+    </div>
+      <div class="vtext" data-ref="58:11:32-33"></div>
+    <details class="followup" data-step="3">
+      <summary>Da Sentinela <span class="stepchip">Juízes 4:8, 14; Hebreus 11:32-34</span></summary>
+      <ul>
+        <li><b>w05 15/1 p. 25:</b> a insistência de Baraque para que Débora fosse “não era um sinal de fraqueza, mas de forte fé”.</li>
+        <li><b>w03 15/11 p. 29:</b> “Como você teria se sentido caso estivesse no exército de Baraque? Será que se teria lembrado prontamente que a orientação era de Jeová?”</li>
+        <li><b>w03 15/11 p. 31:</b> “A liberdade de várias espécies de opressões é possível aos arrependidos que recorrem a Deus e exercem fé nele.”</li>
+      </ul>
+    </details>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Pela fé, Baraque derrotou um poderoso exército” (w03 15/11 págs. 28-31)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de novembro de 2003, páginas 28 a 31</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Juízes 4:8</li><li>“Destaques do livro de Juízes” (w05 15/1 pág. 25 par. 4)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de janeiro de 2005, página 25</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2005046#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  </div>
+
+  <div class="learnmore">
+    <img src="assets/img/aprenda-1.jpg" alt="Miniatura do artigo Dê o seu melhor para louvar a Jeová: Sísera foge a pé na chuva enquanto seus carros atolam." loading="lazy">
+    <div>
+      <p class="lmt">Veja como este relato nos faz ter certeza de que Jeová se importa com o que fazemos para ele.</p>
+      <p>“Dê o seu melhor para louvar a Jeová!” (<i>w17.04</i> 28-32), no
+      <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2017367" target="_blank" rel="noopener">wol.jw.org</a>.</p>
+    </div>
+  </div>
+  <div class="learnmore">
+    <img src="assets/img/aprenda-2.jpg" alt="Miniatura do artigo Pela fé, Baraque derrotou um poderoso exército." loading="lazy">
+    <div>
+      <p class="lmt">O que o exemplo de Baraque e Débora nos ensina sobre confiança, modéstia e obediência?</p>
+      <p>“Pela fé, Baraque derrotou um poderoso exército” (<i>w03</i> 15/11 28-31), no
+      <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2003848" target="_blank" rel="noopener">wol.jw.org</a>.</p>
+    </div>
+  </div>
+
+  <section class="wrapup" id="guia">
+    <h2 class="sect">Guia de Pesquisa: Juízes 4 e 5</h2>
+    <p class="rsub">O que o Guia de Pesquisa do seu JW Library lista para os versículos principais. Bom para achar um
+    comentário diferente.</p>
+    <ul class="closing">
+      <li><b>Juízes 4:4 e 5:7 (Débora, “mãe em Israel”):</b> “‘Eu me levantei como mãe em Israel’” (w15 1/8 13-16);
+      Perguntas dos Leitores (w86 1/6 31); it-1 “Débora”; it-2 “Mãe” e “Profetisa”</li>
+      <li><b>Juízes 4:6, 8 (o pedido de Baraque):</b> “Pela fé, Baraque derrotou um poderoso exército” (w03 15/11
+      28-29); “Destaques do livro de Juízes” (w05 15/1 25 § 4); it-2 “Tabor”</li>
+      <li><b>Juízes 4:14, 15 (a vitória):</b> “A salvação pertence a Jeová” (w98 15/12 11 § 9); “Do Tabor à
+      vitória!” (w90 1/5 17)</li>
+      <li><b>Juízes 5:20, 21 (as estrelas e o Quisom):</b> it-1 “Estrela” § 15; it-2 “Quisom, Vale da torrente do”;
+      w17.04 30 § 9; g94 8/7 6</li>
+      <li><b>Hebreus 11:32 (Baraque na lista da fé):</b> “O mundo não era digno deles” (w87 15/1 16-17); si p. 50
+      § 27</li>
+    </ul>
+  </section>
+
+  <!-- ================================ roteiro ================================ -->
+
+  <section class="runsheet" id="roteiro">
+    <h2 class="sect">Roteiro de 30 minutos</h2>
+    <p class="rsub">Estudo de livro, oito parágrafos e as quatro seções de pergunta. Os tempos são
+    referência: o que passar de um item, tire do outro.</p>
+    <div class="rs">
+      <div class="rsrow">
+        <div class="t">0:00<span>1 min</span></div>
+        <div>
+          <h4>Abertura com uma pergunta</h4>
+          <p>“Você já recebeu uma designação que parecia grande demais para você?” Depois diga: Baraque recebeu uma assim, e pediu ajuda. Débora disse: “Certamente irei com você.”</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">1:00<span>4 min</span></div>
+        <div>
+          <h4>Leitura dos oito parágrafos</h4>
+          <p>Designe um irmão. Leia §1 a §6, a frase em destaque com a imagem do monte Tabor, e depois §7 e §8.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">5:00<span>3 min</span></div>
+        <div>
+          <h4>Leituras bíblicas com a assistência</h4>
+          <p><span class="scr" data-ref="7:4:8-9">Juízes 4:8, 9</span>, <span class="scr" data-ref="7:4:14-15">Juízes 4:14, 15</span> e <span class="scr" data-ref="7:5:20-21">Juízes 5:20, 21</span>. O pedido de Baraque, a descida do monte e a chuva que atolou os carros.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">8:00<span>2 min</span></div>
+        <div>
+          <h4>Para considerar</h4>
+          <p>A coragem dos dois. Aceite dois comentários: um sobre Baraque e outro sobre Débora.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">10:00<span>8 min</span></div>
+        <div>
+          <h4>Analise mais a fundo</h4>
+          <p>Quatro perguntas, uns 2 minutos cada. Mostre a imagem A na pergunta da “mãe em Israel”.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">18:00<span>6 min</span></div>
+        <div>
+          <h4>Medite no que aprendeu</h4>
+          <p>Mostre a imagem B. Na pergunta sobre aceitar ajuda, dê espaço para um irmão comentar com humildade.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">24:00<span>4 min</span></div>
+        <div>
+          <h4>Pense no quadro completo</h4>
+          <p>Sobre Jeová, o propósito e a pergunta da ressurreição, que pode ser rápida.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">28:00<span>1 min</span></div>
+        <div>
+          <h4>Aprenda mais</h4>
+          <p>Recomende os dois artigos: “Dê o seu melhor para louvar a Jeová!” e “Pela fé, Baraque derrotou um poderoso exército”.</p>
+        </div>
+      </div>
+      <div class="rsrow">
+        <div class="t">29:00<span>1 min</span></div>
+        <div>
+          <h4>Encerramento</h4>
+          <p>Feche com: “Baraque desceu o monte porque sabia que a batalha era de Jeová. E Jeová mandou a chuva.”</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rstips">
+      <h4>Se o tempo apertar</h4>
+      <p><b>Pode cortar:</b> a pergunta 2 de “Analise mais a fundo” (resumindo em uma frase), a leitura de Juízes
+      5:20, 21 e a última pergunta do quadro completo.</p>
+      <p><b>Não pode faltar:</b> o pedido de Baraque, que era fé e não fraqueza; a “mãe em Israel”; a descida do monte;
+      a chuva que atolou os carros; e a imagem B.</p>
+    </div>
+  </section>
+
+  <!-- ================================ resumo ================================ -->
+
+  <section class="wrapup" id="resumo">
+    <h2 class="sect">Resumo: os pontos altos deste estudo</h2>
+    <p class="rsub">Para o encerramento, ou para revisar depois em casa.</p>
+
+    <h3 class="sub">O caminho que percorremos</h3>
+    <ol class="recap">
+      <li data-step="1"><b>Vinte anos de terror.</b> O povo se rebelou, e Sísera com 900 carros espalhou o medo. <em>§1, §2</em></li>
+      <li data-step="2"><b>Uma profetisa e um juiz humilde.</b> Débora transmite a ordem; Baraque pede que ela vá junto. <em>§3, §4</em></li>
+      <li data-step="3"><b>Do alto do Tabor para o vale.</b> 10 mil quase sem armas descem correndo o monte. <em>§5, §6</em></li>
+      <li data-step="4"><b>Jeová lutou pelo seu povo.</b> A chuva, a lama e o general covarde fugindo a pé. <em>§7, §8</em></li>
+    </ol>
+
+    <h3 class="sub">Os sete pontos altos</h3>
+    <ol class="highs">
+      <li>Israel sofreu 20 anos de terror porque se rebelou contra Jeová.</li>
+      <li>Débora era profetisa e julgava o povo debaixo de uma palmeira: uma “mãe em Israel”.</li>
+      <li>Baraque pediu que Débora fosse junto. Não era fraqueza, era fé: ela representava Jeová.</li>
+      <li>Débora saiu da segurança de casa e foi para a guerra, sem tentar mandar em ninguém.</li>
+      <li>Do ponto de vista militar, era loucura descer o monte. Baraque desceu porque a batalha era de Jeová.</li>
+      <li>A chuva atolou 900 carros de guerra. A Bíblia diz três vezes que a vitória foi de Jeová.</li>
+      <li>Hoje mostramos essa coragem dando o nosso melhor na pregação.</li>
+    </ol>
+
+    <h3 class="sub">Três frases para o encerramento</h3>
+    <ul class="closing">
+      <li>“Baraque pediu ajuda, e isso não foi falta de fé.”</li>
+      <li>“Débora foi junto para apoiar, não para mandar.”</li>
+      <li>“Eles desceram o monte. Jeová mandou a chuva.”</li>
+    </ul>
+  </section>
+
+  <section class="backup" id="backup">
+    <h2 class="sect">Suas respostas</h2>
+    <p class="bkp-txt">Cada campo já vem com um comentário pronto. O que você ajustar fica salvo
+    automaticamente <b>neste navegador, neste aparelho</b>. Para levar para outro aparelho, baixe o arquivo
+    aqui e carregue no outro lado.</p>
+    <p class="bkp-status" id="backupStatus"></p>
+    <div class="bkp-acoes">
+      <button class="btn" type="button" id="backupSave">Baixar minhas respostas</button>
+      <button class="btn" type="button" id="backupLoad">Carregar de um arquivo</button>
+      <input type="file" id="backupFile" accept="application/json,.json" hidden>
+    </div>
+    <p class="bkp-nota">O arquivo é um .json com os seus comentários e as anotações marcadas como vistas.
+    Carregar substitui o que estiver escrito nesta página, e a página avisa antes.</p>
+  </section>
+
+  <div class="colophon">
+    <p>Preparação baseada no capítulo 16 do livro <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102025916">Ande Corajosamente com Deus</a>, “Certamente irei
+    com você”. Publicações consultadas: A Sentinela de 1/8/2015, 15/1/2005, 15/11/2003, abril de 2017 e 1/6/1986;
+    Estudo Perspicaz, verbetes “Estrela”, “Mãe” e “Débora”; Despertai! de 8/7/1994; Guia de Pesquisa do JW Library.
+    Bíblia: Tradução do Novo Mundo da Bíblia Sagrada, com 265 versículos incluídos nesta cópia para funcionar sem
+    internet.</p>
+    <p>Os resumos, os comentários base, as anotações e o roteiro são notas de preparação pessoal, não material
+    publicado pelas Testemunhas de Jeová. O capítulo, as imagens e o texto da Bíblia são propriedade da Watch
+    Tower Bible and Tract Society.</p>
+  </div>
+
+</main>
+
+<dialog class="sheet" id="sheet" aria-label="Anotação">
+  <div class="sheet-box" id="sheetBox"></div>
+</dialog>
+
+<dialog class="drawer" id="drawer" aria-label="Roteiro de anotações">
+  <div class="drawer-box">
+    <div style="display:flex;align-items:flex-start;gap:.6rem">
+      <div>
+        <h3>Roteiro</h3>
+        <p class="hint">Todas as anotações, agrupadas por tipo. Clique para abrir e rolar até o trecho.</p>
+      </div>
+      <button class="sheet-close" type="button" id="drawerClose" aria-label="Fechar" style="margin-left:auto">&#10005;</button>
+    </div>
+    <div id="drawerList"></div>
+  </div>
+</dialog>
+
+<script src="assets/js/verses.js?v=1"></script>
+<script src="assets/js/notes.js?v=1"></script>
+<script src="assets/js/app.js?v=2"></script>
+</body>
+</html>
