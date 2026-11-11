@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nossos donativos dão glória a Jeová</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%9D%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Consideração da parte 7 com vídeo: resumo, três perguntas com respostas e roteiro de 15 minutos.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro a{color:var(--accent)}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>💝 Nossos donativos dão glória ao belo nome de Jeová</h1>
+  <h2>Nossa Vida Cristã · 9 a 15 de novembro de 2026 · parte 7 (15 min) · consideração com vídeo</h2>
+  <p>O texto da apostila, o vídeo em resumo com os minutos de cada parte, as três perguntas com o que se espera ouvir,
+  perguntas de apoio e um comentário de reserva para cada uma. Também tem o roteiro dos 15 minutos. Tudo com o botão
+  “de onde veio”.</p>
+  <div class="meta-row"><span class="pill">⏱ 15 min</span><span class="pill">🎬 vídeo de 6:08</span>
+  <span class="pill">❓ 3 perguntas</span><span class="pill">🔎 Guia de Pesquisa incluído</span></div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#apostila"><span class="num">1</span>O texto da apostila</a>
+  <a href="#video"><span class="num">2</span>O vídeo em resumo</a>
+  <a href="#q1"><span class="num">3</span>As três perguntas</a>
+  <a href="#conducao"><span class="num">4</span>Como conduzir</a>
+  <a href="#tom"><span class="num">5</span>O tom certo</a>
+</nav>
+
+<section class="oficial" id="apostila">
+  <h3>O texto da apostila</h3>
+  <p><b>7. Nossos donativos dão glória ao belo nome de Jeová</b> (15 min) Consideração a ser feita por um ancião.</p>
+  <p>Os israelitas que não iam trabalhar diretamente na construção do templo tiveram a oportunidade de dar glória ao
+  nome de Jeová por meio das suas generosas contribuições. (1 Crô. 29:8-10) Hoje, não conseguimos participar
+  diretamente em todos os projetos da organização. Mas podemos apoiar esses projetos por meio dos nossos donativos. No
+  jw.org encontramos atualizações que mostram como os nossos donativos ajudam a dar a glória que o nome de Jeová
+  merece. (Sal. 96:8) Essas atualizações também nos motivam a louvar a Jeová por todas as coisas boas que ele está
+  fazendo hoje e por nos permitir participar nelas. (1 Crô. 29:14-16; Isa. 12:5)</p>
+  <p><b>Mostre o VÍDEO</b> <i>Nossa Generosidade Dá Glória a Jeová</i>. Depois, pergunte:</p>
+  <ul><li>Como nossos donativos dão louvor a Jeová?</li>
+  <li>Como as atualizações da organização no jw.org e as cartas de agradecimento que você recebe têm te ajudado?</li>
+  <li>Por quais projetos da organização você se sente especialmente grato?</li></ul>
+  <figure class="fig"><img src="img/tablet.jpg" alt="Uma irmã idosa usa seu tablet para fazer um donativo no jw.org.">
+    <figcaption>Imagem da apostila: uma irmã idosa usa seu tablet para fazer um donativo no jw.org.</figcaption></figure>
+  <div class="quote"><span class="verse-chip base">1 Crônicas 29:9-10</span> <sup>9</sup> O povo se alegrou de fazer essas ofertas voluntárias, pois faziam as ofertas voluntárias a Jeová de pleno coração. O rei Davi também se alegrou muito. <sup>10</sup> Então Davi louvou a Jeová diante de toda a congregação. Ele disse: “Que tu sejas louvado, ó Jeová, Deus de Israel, nosso pai, por toda a eternidade.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip base">1 Crônicas 29:14</span> “No entanto, quem sou eu, e quem é o meu povo, para que possamos fazer essas ofertas voluntárias? Pois tudo vem de ti, e nós apenas te demos o que vem das tuas mãos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">1 Crônicas 29:16</span> Ó Jeová, nosso Deus, toda essa riqueza que juntamos para construir uma casa para o teu santo nome vem das tuas próprias mãos, e tudo pertence a ti.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip base">Salmo 96:8</span> Deem a Jeová a glória que o seu nome merece; Tragam uma dádiva e entrem nos seus pátios.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Isaías 12:5</span> Cantem louvores a Jeová, pois ele fez coisas maravilhosas. Seja isso divulgado em toda a terra.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Apostila Vida e Ministério, novembro-dezembro de 2026</li><li>9-15 de novembro</li><li>parte 7</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026</p><p><a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-9-15-de-novembro-de-2026/" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</section>
+
+<h2 class="sec" id="video">O vídeo em resumo (6:08)</h2>
+<figure class="fig"><img src="img/video.jpg" alt="Imagem de abertura do vídeo Nossa Generosidade Dá Glória a Jeová.">
+  <figcaption>Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (6:08)</figcaption></figure>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>50 s</span></div><div>
+    <h4>O agradecimento do Corpo Governante</h4>
+    <p>O Corpo Governante agradece pelos donativos: eles “alegram o coração de Jeová” e “dão louvor ao nome dele”. O
+    vídeo promete uma viagem pelo mundo para ver o que está sendo feito com eles, e o que alguns jovens sentem ao
+    doar.</p></div></div>
+  <div class="rot"><div class="t">0:49<span>1 min 15</span></div><div>
+    <h4>Costa Rica: a Bíblia em tshwa</h4>
+    <p>Uma irmã leu a carta de agradecimento de outubro de 2025 e soube que a Tradução do Novo Mundo saiu em tshwa,
+    para os irmãos de Moçambique. Ela percebeu que “mesmo um donativo bem simples” pode alcançar “os quatro cantos da
+    Terra”.</p></div></div>
+  <div class="rot"><div class="t">1:36<span>25 s</span></div><div>
+    <h4>As cartas de agradecimento</h4>
+    <p>Quem doa de forma eletrônica recebe uma carta todo mês. Muitos gostam de revê-las na adoração em família. Elas
+    mostram como o donativo está ligado à obra mundial.</p></div></div>
+  <div class="rot"><div class="t">2:02<span>1 min 20</span></div><div>
+    <h4>Camarões: a mesada do menino</h4>
+    <p>Um menino separa parte da mesada e põe na caixinha de donativos do Salão do Reino e, às vezes, das assembleias.
+    Quando visitou Betel e viu as novas exposições e o museu, entendeu que tudo aquilo existe por causa de donativos
+    como os dele. “Isso fortaleceu muito a minha fé.” Lição para todos: não importa a idade.</p></div></div>
+  <div class="rot"><div class="t">3:20<span>1 min 05</span></div><div>
+    <h4>Tailândia: a série de vídeos sobre Jesus</h4>
+    <p>Um irmão leu o artigo sobre como os donativos são usados na série de vídeos de Jesus e viu que o projeto é
+    enorme. A série o ajuda a entender a relação especial entre Jeová e Jesus e a querer ficar mais perto deles.
+    <span class="pessoal">(A legenda chama a série de dois jeitos: “A História e o Ministério de Jesus”, aos 3:29, e
+    “A Vida e o Ministério de Jesus”, aos 4:10.)</span></p></div></div>
+  <div class="rot"><div class="t">4:25<span>25 s</span></div><div>
+    <h4>Onde ver mais</h4>
+    <p>jw.org › Biblioteca › Séries de Artigos › “Como Seus Donativos São Usados”.</p></div></div>
+  <div class="rot"><div class="t">4:49<span>1 min</span></div><div>
+    <h4>Davi e o templo</h4>
+    <p>Davi também se sentiu privilegiado ao contribuir para a construção do templo (1 Crônicas 29:14). Todas as
+    riquezas são de Jeová, mas ele nos dá o privilégio de contribuir. Os donativos voluntários “são atos de fé”, se
+    tornam parte da adoração e dão louvor ao Pai.</p></div></div>
+  <div class="rot"><div class="t">5:50<span>18 s</span></div><div>
+    <h4>Agradecimento final</h4>
+    <p class="fala">“Todos nós agradecemos a Jeová pelo privilégio que temos de ser generosos com Aquele que nos deu
+    todas as coisas.”</p></div></div>
+</div>
+<details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>API de mídia (mediator)</li><li>pub-mwbv_202611_1_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (jw.org)</p></details>
+
+<div class="section-divider" style="margin-top:22px">As três perguntas da apostila</div>
+
+<section class="oficial" id="q1">
+  <h3>Pergunta 1 da apostila</h3>
+  <p class="q">Como nossos donativos dão louvor a Jeová?</p>
+  <div class="learn"><h4>💡 O que se espera ouvir</h4><ul><li><b>Alegram o coração de Jeová e dão louvor ao nome dele.</b> É o que o vídeo diz logo no começo (0:16).</li><li><b>Tornam possíveis os projetos que dão glória ao nome dele</b>: tradução da Bíblia, vídeos, exposições em Betel (vídeo, 4:13). A apostila liga isso ao Salmo 96:8: “Deem a Jeová a glória que o seu nome merece.”</li><li><b>São atos de fé, parte da nossa adoração.</b> O vídeo (5:33): os donativos voluntários “são muito mais do que só dinheiro, eles são atos de fé”.</li><li><b>Mostram gratidão e amor.</b> <i>A Sentinela</i> de janeiro de 2018: quando damos algo a Jeová, “estamos apenas devolvendo parte do que ele nos deu” (1 Crônicas 29:14).</li></ul></div>
+  <div class="block"><h4>🔁 Se a assistência ficar quieta, puxe com</h4><ul><li>“O que Davi disse em 1 Crônicas 29:14 sobre de onde vem o que damos?”</li><li>“Por que o vídeo diz que um donativo é um ato de fé?”</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário de apoio (se ninguém levantar a mão, até 30 segundos)</h4><p>O vídeo diz que os nossos donativos alegram o coração de Jeová e dão louvor ao nome dele. Eles ajudam a traduzir a Bíblia, a produzir vídeos e muito mais, e tudo isso dá glória ao nome de Jeová. E o que me tocou: Davi disse que tudo vem de Jeová. Então, quando damos, estamos devolvendo um pouco do que ele já nos deu.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>API de mídia (mediator)</li><li>pub-mwbv_202611_1_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (jw.org)</p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Crônicas 29:14</li><li>“Por que ser generoso com aquele que já tem tudo?” (w18.01 pág. 18 par. 4)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de janeiro de 2018, página 18, parágrafo 4</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2018245#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Crônicas 29:14</li><li>“Dádivas, presentes” (it-1 par. 8)</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Dádivas, presentes”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200001688#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Salmo 96:8</li><li>“Dê glória a Jeová” (w25.01 pág. 5 par. 11)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de janeiro de 2025, página 5, parágrafo 11</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2025240#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</section>
+<section class="oficial" id="q2">
+  <h3>Pergunta 2 da apostila</h3>
+  <p class="q">Como as atualizações da organização no jw.org e as cartas de agradecimento que você recebe têm te ajudado?</p>
+  <div class="learn"><h4>💡 O que se espera ouvir</h4><ul><li><b>Mostram aonde o donativo chegou.</b> A irmã da Costa Rica leu a carta de agradecimento de outubro de 2025 e soube que a Tradução do Novo Mundo saiu em tshwa, um idioma de Moçambique. Ela percebeu que até um donativo simples pode “alcançar os quatro cantos da Terra” (vídeo, 0:54).</li><li><b>Encorajam.</b> Quem doa de forma eletrônica recebe uma carta de agradecimento todo mês. Muitos gostam de revê-las <b>na adoração em família</b> (vídeo, 1:36).</li><li><b>Ligam o meu donativo à obra mundial.</b> As cartas ajudam a ver “como nossos donativos estão diretamente relacionados com a obra de Jeová feita no mundo todo” (vídeo, 1:52).</li><li><b>Fortalecem a fé.</b> O irmão da Tailândia leu o artigo sobre a série de vídeos de Jesus e viu o tamanho do projeto (vídeo, 3:25). As matérias ficam em jw.org › Biblioteca › Séries de Artigos › “Como Seus Donativos São Usados” (vídeo, 4:34).</li></ul></div>
+  <div class="block"><h4>🔁 Se a assistência ficar quieta, puxe com</h4><ul><li>“Alguém já leu uma dessas cartas na adoração em família? Como foi?”</li><li>“Que atualização do jw.org mais chamou a sua atenção?”</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário de apoio (se ninguém levantar a mão, até 30 segundos)</h4><p>Gostei do que a irmã da Costa Rica contou. Ela leu a carta de agradecimento e soube que a Bíblia saiu num idioma de Moçambique. Aí ela entendeu que até um donativo pequeno vai longe. Isso também me anima: o que eu dou, mesmo pouco, faz parte da obra no mundo todo.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>API de mídia (mediator)</li><li>pub-mwbv_202611_1_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (jw.org)</p></details>
+</section>
+<section class="oficial" id="q3">
+  <h3>Pergunta 3 da apostila</h3>
+  <p class="q">Por quais projetos da organização você se sente especialmente grato?</p>
+  <div class="learn"><h4>💡 O que se espera ouvir</h4><ul><li><b>Tradução da Bíblia:</b> a Tradução do Novo Mundo em tshwa (vídeo, 1:16).</li><li><b>Exposições e museu em Betel:</b> o menino de Camarões viu as exposições e disse que isso fortaleceu muito a fé dele (vídeo, 2:33).</li><li><b>A série de vídeos sobre Jesus:</b> o irmão da Tailândia diz que ela o ajuda a entender a relação entre Jeová e Jesus e a querer ficar mais perto deles (vídeo, 3:49).</li><li>Aqui vale ouvir a assistência: cada um tem um projeto que tocou de modo especial.</li></ul></div>
+  <div class="block"><h4>🔁 Se a assistência ficar quieta, puxe com</h4><ul><li>“Que vídeo ou publicação feita com os donativos ajudou você ou a sua família?”</li><li>“Para os jovens: o menino de Camarões separa parte da mesada. O que vocês acharam disso?”</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário de apoio (se ninguém levantar a mão, até 30 segundos)</h4><p>Sou muito grato pela tradução da Bíblia. O vídeo mostrou a Bíblia saindo num idioma de Moçambique. Pense na alegria daqueles irmãos de ler a Palavra de Jeová na língua que eles entendem. E isso só acontece porque irmãos do mundo todo, como nós, fazem donativos.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>API de mídia (mediator)</li><li>pub-mwbv_202611_1_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (jw.org)</p></details>
+</section>
+
+<h2 class="sec" id="conducao">Como conduzir os 15 minutos</h2>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>1 min 30</span></div><div>
+    <h4>Introdução com 1 Crônicas 29</h4>
+    <p>Resuma o texto da apostila e leia 1 Crônicas 29:9.</p>
+    <p class="fala">“Nem todo israelita podia trabalhar na construção do templo. Mas todos podiam dar glória a Jeová com
+    as suas contribuições. E o versículo 9 diz como eles se sentiam: o povo se alegrou, porque fazia as ofertas
+    voluntárias de pleno coração. Vamos ver como isso acontece hoje.”</p></div></div>
+  <div class="rot"><div class="t">1:30<span>6:08</span></div><div>
+    <h4>Vídeo</h4>
+    <p>Peça que deixem 1 Crônicas 29:14 aberto: o vídeo lê esse versículo no fim.</p></div></div>
+  <div class="rot"><div class="t">7:40<span>6 min</span></div><div>
+    <h4>As três perguntas</h4>
+    <p>Uns 2 minutos para cada uma. A pergunta 2 é a mais pessoal: combine antes com um ou dois irmãos que leem as
+    cartas de agradecimento em família.</p></div></div>
+  <div class="rot"><div class="t">13:40<span>1 min</span></div><div>
+    <h4>“Saiba mais on-line”: como fazer donativos</h4>
+    <p>No final da página inicial do JW Library, o ícone “Donativos”, ou donate.jw.org. Lá, em muitos países, há o
+    documento <i>Donativos para as Testemunhas de Jeová: Perguntas Frequentes</i> (botão “Perguntas frequentes”). Para
+    quem não usa tablet ou celular, lembre a caixinha de donativos do Salão, como faz o menino do vídeo.</p></div></div>
+  <div class="rot"><div class="t">14:40<span>20 s</span></div><div>
+    <h4>Fecho</h4>
+    <p class="fala">“Como Davi disse, tudo vem das mãos de Jeová. Quando damos, devolvemos um pouco do que ele já nos
+    deu, e o nome dele é louvado no mundo todo.”</p></div></div>
+</div>
+<p class="pessoal">O roteiro, as falas de introdução e fecho, as perguntas de apoio e os comentários de reserva são
+preparação pessoal.</p>
+
+<section class="oficial" id="tom">
+  <h3>O tom certo: gratidão, não cobrança</h3>
+  <ul>
+    <li>A palavra que se repete é <b>voluntário</b>. 1 Crônicas 29:9: o povo “se alegrou” porque fazia as ofertas “de
+    pleno coração”. O vídeo também fala de “donativos voluntários”.</li>
+    <li>O vídeo começa e termina com <b>agradecimento</b>, não com pedido.</li>
+    <li>Ninguém está de fora: a irmã idosa da imagem da apostila doa pelo tablet, o menino de Camarões doa com a
+    mesada. “Não importa a sua idade” (vídeo, 3:03).</li>
+    <li>Para quem tem pouco: a irmã da Costa Rica fala de “um donativo bem simples” que Jeová usou para alcançar o mundo
+    todo.</li>
+  </ul>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>API de mídia (mediator)</li><li>pub-mwbv_202611_1_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Nossa Generosidade Dá Glória a Jeová</i> (jw.org)</p><ol><li>jw.org</li><li>Apostila Vida e Ministério, novembro-dezembro de 2026</li><li>9-15 de novembro</li><li>parte 7</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026</p><p><a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-9-15-de-novembro-de-2026/" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</section>
+
+<footer><p>Fontes: apostila Vida e Ministério de novembro-dezembro de 2026; legenda oficial do vídeo <i>Nossa
+Generosidade Dá Glória a Jeová</i> (jw.org); <i>A Sentinela</i> de janeiro de 2025 e de janeiro de 2018; Estudo
+Perspicaz, verbete “Dádivas, presentes”; Tradução do Novo Mundo e Guia de Pesquisa do JW Library. Os comentários de
+apoio e o roteiro são notas de preparação pessoal.</p></footer>
+
+</div>
+</body>
+</html>
