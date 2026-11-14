@@ -24,7 +24,14 @@
           "href": "semanas/2026-11-09/meio-de-semana/estudo-livro/"
         }
       ],
-      "fim_semana": []
+      "fim_semana": [
+        {
+          "tipo": "sentinela",
+          "titulo": "Como desenvolver “um coração obediente”",
+          "detalhe": "A Sentinela de setembro de 2026",
+          "href": "semanas/2026-11-09/fim-de-semana/sentinela/"
+        }
+      ]
     },
     {
       "inicio": "2026-11-02",
