@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Joias de Lamentações 1-2</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8E%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Joias espirituais simples de Lamentações 1 e 2, com comentário pronto.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro .obs{color:var(--muted);font-style:italic}
+  details.rastro a{color:var(--accent)}
+  details.rastro hr{border:0;border-top:1px dashed var(--line);margin:8px 0}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .src-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+  .src-card h3{margin:0 0 4px;font-size:1rem;color:var(--accent)}
+  .src-card .tag{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+  .src-card p{margin:.5rem 0}
+  .src-card mark{background:#3a3110;color:#ffe9a8;padding:0 2px;border-radius:3px}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .rot.video{border-color:var(--gold)}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .fala.leia{border-left-color:var(--gold);background:var(--panel2);font-style:normal}
+  .insight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .ins{background:var(--panel2);border:1px solid var(--jewel-line);border-radius:10px;padding:12px 14px}
+  .ins b{color:var(--jewel)}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  .vtl{list-style:none;margin:8px 0;padding:0}
+  .vtl li{margin:4px 0}
+  .vtl b{font-family:ui-monospace,Menlo,monospace;color:var(--gold);margin-right:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>💎 Joias espirituais: Lamentações 1 e 2</h1>
+  <h2>Vida e Ministério · 16 a 22 de novembro de 2026 · parte 2 (10 min)</h2>
+  <p>A pergunta da apostila com a resposta da publicação, e 8 joias simples da leitura: o que o texto me
+  ensina sobre Jeová, sobre Jesus e os discípulos, e como isso aparece no dia a dia. Cada uma tem o texto exato do seu
+  JW Library, um comentário pronto de até 30 segundos e o botão “de onde veio”.</p>
+  <div class="meta-row"><span class="pill">💎 1 pergunta + 8 joias</span>
+  <span class="pill">🏠 lições do dia a dia</span><span class="pill">✅ Marque as estudadas</span></div>
+</header>
+
+<section class="oficial" id="oficial">
+  <h3>Pergunta da apostila</h3>
+  <p class="q">Lam. 2:1. Como a beleza de Israel foi lançada do céu para a Terra?
+  <span class="pill">w07 1/6 9 § 1</span></p>
+  <div class="quote"><span class="verse-chip base">Lamentações 2:1</span> <sup>1</sup> Como Jeová cobriu a filha de Sião com a nuvem da sua ira! Lançou do céu para a terra a beleza de Israel. Não se lembrou do apoio para os seus pés no dia da sua ira.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que <i>A Sentinela</i> de 1.º/6/2007 responde</h4><ul>
+    <li><b>Céu e terra como figura.</b> “Os céus são mais altos do que a terra” (Isaías 55:9). Por isso, quando algo
+    que estava no alto é rebaixado, a Bíblia às vezes diz que foi “lançado do céu para a terra” (§ 1).</li>
+    <li><b>O que era “a beleza de Israel”.</b> Era “a glória e o poder que possuía enquanto tinha a bênção de Jeová”
+    (§ 1).</li>
+    <li><b>Como ela caiu.</b> Foi lançada para baixo “com a destruição de Jerusalém e a desolação de Judá” (§ 1).
+    Desolação quer dizer que a terra ficou vazia, abandonada.</li>
+  </ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>A Sentinela de 2007 explica que os céus são mais altos do que a terra. Por isso, quando algo importante é rebaixado, a Bíblia diz que foi lançado do céu para a terra. A beleza de Israel era a glória e o poder que a nação tinha enquanto tinha a bênção de Jeová. Quando Jerusalém foi destruída e Judá ficou vazia e abandonada, essa beleza caiu por terra.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário: o que entrava nessa beleza</h4><p>O Estudo Perspicaz diz
+  que essa beleza “incluía o seu reino, e os seus governantes principescos, e o poder destes”, e que ela “foi como que
+  devorada pelo fogo” (Lamentações 2:1-3). E lembra que, mais tarde, a própria Babilônia, que conquistou Israel,
+  também caiu.</p></div>
+  <div class="block"><h4>➕ Outro ângulo: o “apoio para os seus pés”</h4><p>No mesmo versículo, Jeová “não se lembrou
+  do apoio para os seus pés”. <i>A Sentinela</i> de 2007 explica com o Salmo 132:7 que isso é o templo, a casa de
+  adoração de Jeová (§ 2). E <i>A Sentinela</i> de 1988 diz que Jeová lançou Jerusalém “do céu para a terra”,
+  permitindo a destruição dela e do templo. Ou seja, nem o templo protegeu um povo que abandonou a Jeová.</p></div>
+  <div class="quote"><span class="verse-chip">Isaías 55:9</span> “Pois, assim como os céus são mais altos do que a terra, Assim os meus caminhos são mais altos do que os seus caminhos, E os meus pensamentos, do que os seus pensamentos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Salmo 132:7</span> Entremos na morada dele; Curvemo-nos diante do apoio para os seus pés.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Perguntas bíblicas respondidas”, 2:1</li><li>página 9, parágrafo 1</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 9, parágrafo 1</p><p class="obs">É a referência que a própria apostila dá. O Guia de Pesquisa de Lamentações 2:1 aponta o mesmo trecho (w07 1/6 pág. 9 pars. 1-2).</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:1</li><li>“Destaques do livro de Lamentações” (w07 1/6 pág. 9 pars. 1-2)</li><li>página 9, parágrafo 2</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 9, parágrafo 2</p><p class="obs">O artigo usa a tradução anterior. “Escabelo” é o que hoje se lê “apoio para os seus pés” (Lamentações 2:1); “barraca” corresponde a “tenda” e “cabana numa plantação” (2:6).</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=13" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:1</li><li>“Céu, I” (it-1 par. 24)</li><li>subtítulo “Rebaixamento do Que É Enaltecido”</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Céu”, página 474</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200001949#h=25" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:1</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Ira de Jeová”</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26, parágrafo do subtítulo “A Ira de Jeová”</p><p class="obs">O mesmo parágrafo diz: “Era apropriado orar, pois muitos morreram nesse ‘dia da ira de Jeová’”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=8" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+  <p class="pessoal">A Sentinela de 2007 cita a tradução anterior: “escabelo” corresponde a “apoio para os seus pés”
+  na Bíblia de estudo atual. A frase “nem o templo protegeu” é conclusão da preparação pessoal.</p>
+</section>
+
+<div class="toolbar">
+  <input type="search" id="search" placeholder="🔎 filtrar por palavra-chave…">
+  <button data-filter="all" class="pill on">Tudo</button>
+  <button data-filter="pending" class="pill">Só pendentes</button>
+  <button data-filter="done" class="pill">Só estudadas</button>
+  <span id="count" class="pill"></span>
+</div>
+
+<nav class="toc" aria-label="Índice das joias"><a href="#j1"><span class="num">1</span>O pecado tira a alegria</a><a href="#j2"><span class="num">2</span>Ninguém para consolar, mas Jeová consola</a><a href="#j3"><span class="num">3</span>Jeová é justo</a><a href="#j4"><span class="num">4</span>Jeová mede antes de agir</a><a href="#j5"><span class="num">5</span>A falta que faz a instrução de Jeová</a><a href="#j6"><span class="num">6</span>Quem não avisa não ajuda</a><a href="#j7"><span class="num">7</span>A beleza vinha de Jeová</a><a href="#j8"><span class="num">8</span>Jeová cumpre o que diz</a></nav>
+<div class="section-divider">Que joias espirituais você encontrou na leitura desta semana?</div>
+<div id="joias">
+<details class="j" id="j1" open>
+  <summary>
+    <span class="j-num">1</span>
+    <span><span class="j-title">O pecado tira a alegria</span><div class="j-status" data-status="Lamentações 1:1 · Lamentações 1:5">Lamentações 1:1 · Lamentações 1:5</div></span>
+    <span class="status-toggle" data-toggle="j1">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 1:1</span> <sup>1</sup> Como ela está solitária, a cidade que era tão cheia de gente! Aquela que era populosa entre as nações se tornou como uma viúva. Aquela que era princesa entre as províncias foi sujeita a trabalhos forçados.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><div class="quote"><span class="verse-chip">Lamentações 1:5</span> <sup>5</sup> Seus adversários são agora o seu senhor; seus inimigos estão despreocupados. Pois Jeová lhe trouxe pesar por causa das suas muitas transgressões. Suas crianças foram para o cativeiro diante do adversário.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Jerusalém era uma cidade “cheia de gente”. Agora está “solitária”, “como uma viúva”.</li><li><strong>Sobre Jeová:</strong> o versículo 5 dá o motivo: “Jeová lhe trouxe pesar por causa das suas muitas transgressões”. Transgressão é passar do limite que Deus deu.</li><li><i>A Sentinela</i> de 1988 resume: <strong>“O pecado não produz alegria.”</strong> E a de 2007 diz: “A transgressão não traz alegria, mas sim lágrimas, suspiro, pesar e amargura.”</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>A pessoa que troca a reunião por um passeio ou por um dinheiro extra achando que vai ser mais feliz. No começo parece bom; depois vem o vazio. Para quem já viveu bastante: você já viu isso acontecer com alguém, e também viu a paz de quem obedeceu. Isaías 48:18 mostra o que Jeová queria: que a nossa paz fosse “como um rio”.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 1:1 mostra Jerusalém, que era cheia de gente, sozinha como uma viúva. O versículo 5 dá o motivo: as muitas transgressões dela. A Sentinela de 1988 resume assim: o pecado não produz alegria. Isso me ensina que as ordens de Jeová são para o nosso bem. Em Isaías 48:18 ele diz: se você prestasse atenção aos meus mandamentos, a sua paz seria como um rio.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Isaías 48:18</span> Como seria bom se você prestasse atenção aos meus mandamentos! Então a sua paz se tornaria como um rio, E a sua justiça como as ondas do mar.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 1:1</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Aflição de Jerusalém”, 1.º parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26, parágrafo do subtítulo “A Aflição de Jerusalém”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=5" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Lições para nós”, 1:1-9</li><li>página 9</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 9, “Lições para nós”, sobre 1:1-9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=17" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j2">
+  <summary>
+    <span class="j-num">2</span>
+    <span><span class="j-title">Ninguém para consolar, mas Jeová consola</span><div class="j-status" data-status="Lamentações 1:2 · Lamentações 1:16">Lamentações 1:2 · Lamentações 1:16</div></span>
+    <span class="status-toggle" data-toggle="j2">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 1:2</span> <sup>2</sup> Ela chora muito durante a noite, e suas lágrimas correm pelo rosto. De todos os seus amantes, não ficou nenhum para consolá-la. Todos os seus companheiros a traíram; tornaram-se seus inimigos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><div class="quote"><span class="verse-chip">Lamentações 1:16</span> <sup>16</sup> Estou chorando por causa dessas coisas; lágrimas escorrem dos meus olhos. Pois está longe de mim quem possa me consolar ou me reanimar. Meus filhos ficaram desolados, pois o inimigo venceu.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>O capítulo 1 repete cinco vezes que Jerusalém não tinha <strong>ninguém para consolá-la</strong> (versículos 2, 9, 16, 17 e 21).</li><li>Os “amantes” do versículo 2 eram as nações em que ela confiava. <i>A Sentinela</i> de 1988 diz que “amantes” como o Egito não a salvaram da conquista babilônica.</li><li><strong>Sobre Jeová:</strong> no último subtítulo, a mesma revista diz: <strong>“Apenas Jeová dá esperança em meio ao pesar.”</strong></li><li><strong>Sobre os discípulos:</strong> Paulo chama Jeová de “Deus de todo o consolo”, que nos consola “para que [...] possamos consolar outros” (2 Coríntios 1:3, 4).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>A irmã que ficou viúva e sente a casa vazia à noite. As visitas vieram no enterro, depois sumiram. Uma ligação no fim da tarde ou uma carona para a reunião pode ser o consolo que ela não encontra em mais ninguém.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Em Lamentações 1, Jerusalém repete várias vezes que não tem ninguém para consolá-la. As nações em que ela confiava não ajudaram. A Sentinela de 1988 diz que apenas Jeová dá esperança em meio ao pesar. E 2 Coríntios 1:4 mostra que Jeová nos consola para que a gente console outros. Então eu posso ser essa ajuda para um irmão que está sozinho.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">2 Coríntios 1:3, 4</span> <sup>3</sup> Louvado seja o Deus e Pai do nosso Senhor Jesus Cristo, o Pai de ternas misericórdias e o Deus de todo o consolo, <sup>4</sup> que nos consola em todas as nossas provações, para que, com o consolo que recebemos de Deus, possamos consolar outros em qualquer tipo de provação.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 1:1</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Aflição de Jerusalém”, 1.º parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26, parágrafo do subtítulo “A Aflição de Jerusalém”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=5" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 1:2</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>artigo aberto no wol</li><li>página 27, subtítulo “Traze-nos de Volta”</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 27, parágrafo do subtítulo “Traze-nos de Volta”</p><p class="obs">O Guia aponta a página 26 para Lamentações 1:2. A frase usada está na página 27, no último subtítulo do mesmo artigo.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=14" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j3">
+  <summary>
+    <span class="j-num">3</span>
+    <span><span class="j-title">Jeová é justo</span><div class="j-status" data-status="Lamentações 1:18">Lamentações 1:18</div></span>
+    <span class="status-toggle" data-toggle="j3">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 1:18</span> <sup>18</sup> Jeová é justo, pois foi contra as suas ordens que me rebelei. Escutem, todos os povos, e vejam a minha dor. Minhas moças e meus rapazes foram para o cativeiro.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Quem fala é a própria Jerusalém: <strong>“Jeová é justo, pois foi contra as suas ordens que me rebelei.”</strong></li><li>Ela não culpou Jeová pelo sofrimento. Ela reconheceu o próprio erro.</li><li><i>A Sentinela</i> de 2007 tira esta lição: <strong>“Jeová é sempre justo quando pune transgressores.”</strong> E a de 1988 diz que Jeová agiu com justiça ao punir a rebelde Jerusalém.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>Quando a gente colhe o resultado de uma escolha errada, é mais fácil culpar os outros, ou até Jeová. Jerusalém fez diferente. Para quem tem idade: reconhecer um erro antigo, sem desculpas, alivia o coração e honra a Jeová.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Em Lamentações 1:18, a própria Jerusalém diz: Jeová é justo, pois foi contra as ordens dele que me rebelei. Ela não culpou Jeová pelo sofrimento. A Sentinela de 2007 tira a lição: Jeová é sempre justo quando pune os que desobedecem. Isso me ensina a reconhecer os meus erros sem jogar a culpa nos outros, e muito menos em Jeová.</p></div>
+    
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Lições para nós”, 1:18</li><li>página 9</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 9, “Lições para nós”, sobre 1:18</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=18" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 1:18</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Aflição de Jerusalém”, 2.º parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=6" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j4">
+  <summary>
+    <span class="j-num">4</span>
+    <span><span class="j-title">Jeová mede antes de agir</span><div class="j-status" data-status="Lamentações 2:8">Lamentações 2:8</div></span>
+    <span class="status-toggle" data-toggle="j4">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 2:8</span> <sup>8</sup> Jeová decidiu destruir a muralha da filha de Sião. Estendeu a corda de medir. Não conteve sua mão de causar destruição. E fez a escarpa e a muralha ficar de luto. Juntas elas ficaram fracas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>“Jeová decidiu destruir a muralha da filha de Sião. <strong>Estendeu a corda de medir.</strong>” Corda de medir é a corda que o construtor usa para tirar as medidas.</li><li>O livro <i>Revelação</i> explica que, nas profecias, essa medição era <strong>garantia de que se faria justiça com base nas normas perfeitas de Jeová</strong>. No caso de Jerusalém, mostrava que a sentença de destruição não ia mudar.</li><li><strong>Sobre Jeová:</strong> ele não age por impulso. E o mesmo livro lembra que, em outra profecia de Jeremias (31:39), a corda de medir aparece para mostrar que a cidade seria reconstruída.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O pedreiro ou a costureira que mede duas vezes antes de cortar. Jeová é assim, e muito mais. Para quem já trabalhou em obra: você sabe que a medida certa evita parede torta. As decisões de Jeová sempre têm a medida certa.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 2:8 diz que Jeová estendeu a corda de medir antes de destruir a muralha. O livro Revelação explica que essa medição era a garantia de que se faria justiça com base nas normas perfeitas de Jeová. Em outra profecia, a corda de medir aparece para mostrar que a cidade seria reconstruída. Isso me ensina que Jeová não age por impulso. As decisões dele são justas e cheias de esperança.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Jeremias 31:39</span> E a corda de medir será estendida até a colina de Garebe, e virará na direção de Goa.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:8</li><li>“Revivificadas as duas testemunhas” (re cap. 25 par. 5)</li><li>página 162</li></ol><p class="citar"><b>Para citar:</b> Livro <i>Revelação: Seu Grandioso Clímax Está Próximo!</i>, capítulo 25, parágrafo 5, página 162</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1101988025#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j5">
+  <summary>
+    <span class="j-num">5</span>
+    <span><span class="j-title">A falta que faz a instrução de Jeová</span><div class="j-status" data-status="Lamentações 2:9">Lamentações 2:9</div></span>
+    <span class="status-toggle" data-toggle="j5">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 2:9</span> <sup>9</sup> Os portões dela caíram por terra. Ele destruiu e destroçou suas trancas. Seu rei e seus príncipes estão exilados nas nações. Não há lei; nem mesmo seus profetas recebem visão alguma da parte de Jeová.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Depois da destruição, <strong>“não há lei; nem mesmo seus profetas recebem visão alguma da parte de Jeová”</strong>.</li><li>O livro sobre Jeremias, no quadro “Vivendo sem lei”, explica que isso não queria dizer um povo sem controle. O mais provável é que fosse <strong>a falta da segurança e do consolo espirituais</strong> que eles tinham quando sacerdotes e profetas fiéis ensinavam a Lei de Deus.</li><li><strong>Sobre Jesus:</strong> ele disse: “Felizes os que têm consciência de sua necessidade espiritual” (Mateus 5:3).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>A reunião do meio de semana, a leitura da Bíblia, o estudo de <i>A Sentinela</i>. Quem passou um tempo internado sabe a falta que isso faz. Para quem já não consegue ir ao Salão: acompanhar pelo telefone ou pela internet mantém esse alimento chegando.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 2:9 diz que, depois da destruição, não havia lei e os profetas não recebiam visão de Jeová. O livro sobre Jeremias explica que o povo perdeu a segurança e o consolo que tinha quando sacerdotes fiéis ensinavam a Lei. Isso me faz dar valor ao que eu tenho hoje: as reuniões, a Bíblia e as publicações. Jesus disse que são felizes os que têm consciência da sua necessidade espiritual.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Mateus 5:3</span> “Felizes os que têm consciência de sua necessidade espiritual, porque a eles pertence o Reino dos céus.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:9</li><li>“Obedece, por favor, à voz de Jeová” (jr cap. 6)</li><li>quadro “Vivendo sem lei”, página 73</li></ol><p class="citar"><b>Para citar:</b> Livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, capítulo 6, quadro “Vivendo sem lei”, página 73</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010145#h=60" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j6">
+  <summary>
+    <span class="j-num">6</span>
+    <span><span class="j-title">Quem não avisa não ajuda</span><div class="j-status" data-status="Lamentações 2:14">Lamentações 2:14</div></span>
+    <span class="status-toggle" data-toggle="j6">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 2:14</span> <sup>14</sup> As visões que seus profetas tiveram para você eram falsas e vazias, E eles não expuseram o seu erro, o que evitaria que você fosse para o cativeiro, Mas continuaram a lhe contar visões falsas e enganosas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>“As visões que seus profetas tiveram para você eram falsas e vazias, e eles <strong>não expuseram o seu erro</strong>, o que evitaria que você fosse para o cativeiro.”</li><li><i>A Sentinela</i> de 1988 pergunta: “A quem principalmente cabia a culpa?” E responde: <strong>a falsos profetas</strong>, que diziam coisas que enganavam “em vez de condenar o pecado de Jerusalém”.</li><li><strong>Sobre Jeová:</strong> ele não deixou o povo sem aviso. A Sentinela de 2007 lembra que Jeremias proferiu a mensagem de julgamento <strong>durante 40 anos</strong>.</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O ancião que vem com jeito e diz: “Irmão, fiquei preocupado com isso.” Na hora dói. Mas é ele que está do seu lado. Para os pais e avós: dizer a verdade com carinho a um neto vale mais do que só agradar. Provérbios 27:6 diz: “Leais são os ferimentos causados por um amigo.”</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 2:14 diz que os profetas de Jerusalém não expuseram o erro do povo. A Sentinela de 1988 diz que a culpa principal era desses falsos profetas, que enganavam em vez de condenar o pecado. Já Jeremias passou 40 anos avisando. Isso me ensina a agradecer quando um irmão me dá um conselho. Provérbios 27:6 diz que leais são os ferimentos causados por um amigo.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Provérbios 27:6</span> Leais são os ferimentos causados por um amigo, Mas muitos são os beijos do inimigo.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:1</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Ira de Jeová”</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26, parágrafo do subtítulo “A Ira de Jeová”</p><p class="obs">O mesmo parágrafo diz: “Era apropriado orar, pois muitos morreram nesse ‘dia da ira de Jeová’”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=8" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>parágrafo de abertura</li><li>página 8, parágrafo 1</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 8, parágrafo 1</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j7">
+  <summary>
+    <span class="j-num">7</span>
+    <span><span class="j-title">A beleza vinha de Jeová</span><div class="j-status" data-status="Lamentações 2:15">Lamentações 2:15</div></span>
+    <span class="status-toggle" data-toggle="j7">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 2:15</span> <sup>15</sup> Por sua causa todos os que passam pela estrada batem palmas com desprezo. Assobiam espantados e balançam a cabeça por causa da filha de Jerusalém, dizendo: “É esta a cidade da qual se dizia: ‘Ela é perfeita em beleza, a alegria de toda a terra’?”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li>Quem passava zombava: <strong>“É esta a cidade da qual se dizia: ‘Ela é perfeita em beleza, a alegria de toda a terra’?”</strong></li><li>O Estudo Perspicaz explica que isso não quer dizer que cada detalhe da cidade era lindo. <strong>A beleza vinha do esplendor que Jeová deu a ela</strong>, por ser a capital dos seus reis ungidos, isto é, os reis que Jeová escolheu, e o lugar do seu templo.</li><li><strong>Sobre Jeová:</strong> sem ele, a cidade “perfeita em beleza” virou motivo de zombaria. O Salmo 50:2 diz: “De Sião, a perfeição da beleza, Deus resplandece.”</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>O Salão do Reino simples, de bairro, sem luxo. O que deixa o lugar bonito é Jeová ser adorado ali. Para quem tem idade: o valor de uma pessoa para Jeová não está na aparência, está no lugar que ela dá a ele na vida.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 2:15 mostra as pessoas zombando de Jerusalém, que era chamada de perfeita em beleza. O Estudo Perspicaz explica que essa beleza vinha do esplendor que Jeová deu à cidade, por causa do templo e dos reis que ele escolheu. Quando o povo abandonou a Jeová, a beleza acabou. Isso me ensina que o que deixa uma congregação bonita não é o prédio, é Jeová estar com ela.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Salmo 50:2</span> De Sião, a perfeição da beleza, Deus resplandece.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:15</li><li>“Perfeição” (it-2 par. 6)</li><li>página 633</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 2, verbete “Perfeição”, página 633</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200003440#h=7" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+<details class="j" id="j8">
+  <summary>
+    <span class="j-num">8</span>
+    <span><span class="j-title">Jeová cumpre o que diz</span><div class="j-status" data-status="Lamentações 2:17">Lamentações 2:17</div></span>
+    <span class="status-toggle" data-toggle="j8">✔ marcar como estudada</span>
+  </summary>
+  <div class="j-body">
+    <div class="quote"><span class="verse-chip base">Lamentações 2:17</span> <sup>17</sup> Jeová fez o que pretendia; cumpriu a sua palavra, O que tinha ordenado muito tempo atrás. Derrubou sem compaixão. Deixou que o inimigo se alegrasse por causa de você; exaltou o poder dos seus adversários.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+    <div class="learn"><h4>💡 O que esse texto me ensina</h4><ul><li><strong>“Jeová fez o que pretendia; cumpriu a sua palavra, o que tinha ordenado muito tempo atrás.”</strong></li><li><i>A Sentinela</i> de 2007 diz que essa palavra, pelo visto, é a de <strong>Levítico 26:17</strong>: Jeová tinha avisado que, se o povo se voltasse contra ele, seria derrotado pelos inimigos.</li><li>O livro sobre Jeremias descreve a cena: Jerusalém em ruínas, ainda com fumaça dos incêndios, e <strong>“tudo ocorreu exatamente como Deus havia dito”</strong>.</li><li><strong>Sobre Jeová:</strong> se ele cumpriu o aviso, vai cumprir também as promessas boas. Josué disse que “não falhou nem sequer uma palavra” (Josué 23:14).</li></ul></div>
+    <div class="block"><h4>🏠 No dia a dia</h4><p>A irmã de 80 anos que espera o novo mundo desde jovem e às vezes pensa: “será que eu vou ver?”. Jeová cumpriu o que tinha dito muito tempo atrás. Ele não esquece nenhuma promessa.</p></div>
+    <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Lamentações 2:17 diz que Jeová cumpriu a sua palavra, o que tinha ordenado muito tempo atrás. A Sentinela de 2007 diz que essa palavra era o aviso de Levítico 26:17. O livro sobre Jeremias diz que tudo ocorreu exatamente como Deus havia dito. Isso me dá confiança: se Jeová cumpriu o aviso, ele vai cumprir também as promessas boas. Como Josué disse, nem uma palavra falhou.</p></div>
+    <div class="connection"><strong>🔗 Ligue com:</strong> <span class="verse-chip">Levítico 26:17</span> Eu me voltarei contra vocês, e vocês serão derrotados pelos seus inimigos; os que os odeiam os oprimirão, e vocês fugirão mesmo quando ninguém os estiver perseguindo. · <span class="verse-chip">Josué 23:14</span> “Vejam, estou para morrer, e vocês bem sabem, de todo o seu coração e de toda a sua alma, que não falhou nem sequer uma palavra de todas as boas promessas que Jeová, seu Deus, lhes fez. Todas elas se cumpriram para vocês. Nem sequer uma delas falhou.</div>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:17</li><li>“Destaques do livro de Lamentações” (w07 1/6 pág. 9 pars. 3-4)</li><li>página 9, parágrafo 4</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 9, parágrafo 4</p><p class="obs">O artigo usa a tradução anterior: “declaração” é o que hoje se lê “cumpriu a sua palavra”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:17</li><li>“Jeová fez o que tinha em mente” (jr cap. 13)</li><li>parágrafo 1, página 154</li></ol><p class="citar"><b>Para citar:</b> Livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, capítulo 13, parágrafo 1, página 154</p><p class="obs">O livro cita a tradução anterior (“fez o que intentou”). Hoje se lê “fez o que pretendia”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102010152#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+    <p class="pessoal">A cena do dia a dia, o comentário e os textos de “Ligue com” sem publicação no rastro são preparação pessoal: não citar como publicação. As explicações vêm das publicações indicadas em “de onde veio”.</p>
+  </div>
+</details>
+</div>
+
+<footer><p>Fontes: <a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-16-22-de-novembro-de-2026/">apostila Vida e Ministério de novembro-dezembro de 2026</a>; Tradução do
+Novo Mundo (edição de estudo) e Guia de Pesquisa do JW Library; <i>A Sentinela</i> de 1.º/6/2007 e de 1.º/9/1988;
+livro <i>A Palavra de Deus para Nós por Meio de Jeremias</i>, caps. 6 e 13; livro <i>Revelação</i>, cap. 25; Estudo
+Perspicaz, verbetes “Céu” e “Perfeição”. A Bíblia de estudo não tem notas de estudo em Lamentações 1 e 2. As cenas e
+os comentários são notas de preparação pessoal.</p></footer>
+<script>
+(function(){
+  const KEY='joias-lamentacoes-1-2-2026-11-16';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+  function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
+  const done=load();
+  function paint(id){
+    const sec=document.getElementById(id), st=sec.querySelector('.j-status'), btn=sec.querySelector('[data-toggle]');
+    const on=!!done[id];
+    if(on) sec.dataset.done='1'; else sec.removeAttribute('data-done');
+    st.textContent=(on?'✔ Estudada · ':'')+st.dataset.status;
+    st.classList.toggle('answered',on);
+    btn.textContent=on?'↺ reabrir':'✔ marcar como estudada';
+  }
+  document.querySelectorAll('[data-toggle]').forEach(btn=>{
+    const id=btn.dataset.toggle; paint(id);
+    btn.addEventListener('click',e=>{e.preventDefault(); if(done[id]) delete done[id]; else done[id]=Date.now(); save(done); paint(id); update();});
+  });
+  const inp=document.getElementById('search');
+  function update(){
+    const q=inp.value.toLowerCase().trim();
+    const f=document.querySelector('[data-filter].on').dataset.filter;
+    let n=0;
+    document.querySelectorAll('details.j').forEach(d=>{
+      const ok=(!q||d.textContent.toLowerCase().includes(q))&&(f==='all'||(f==='pending'&&!d.dataset.done)||(f==='done'&&d.dataset.done));
+      d.style.display=ok?'':'none'; if(ok)n++;
+    });
+    document.getElementById('count').textContent=n+' joia(s) visível(is)';
+  }
+  inp.addEventListener('input',update);
+  document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('on')); b.classList.add('on'); update();
+  }));
+  update();
+})();
+</script>
+
+</div>
+</body>
+</html>

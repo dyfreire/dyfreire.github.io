@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discurso: uma terrível perda</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A7%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Discurso de 10 minutos de Lamentações 1 e 2, com vídeo, falas prontas e fontes.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro .obs{color:var(--muted);font-style:italic}
+  details.rastro a{color:var(--accent)}
+  details.rastro hr{border:0;border-top:1px dashed var(--line);margin:8px 0}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .src-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+  .src-card h3{margin:0 0 4px;font-size:1rem;color:var(--accent)}
+  .src-card .tag{font-size:.78rem;color:var(--muted);margin:0 0 8px}
+  .src-card p{margin:.5rem 0}
+  .src-card mark{background:#3a3110;color:#ffe9a8;padding:0 2px;border-radius:3px}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .rot.video{border-color:var(--gold)}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .fala.leia{border-left-color:var(--gold);background:var(--panel2);font-style:normal}
+  .insight{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+  .ins{background:var(--panel2);border:1px solid var(--jewel-line);border-radius:10px;padding:12px 14px}
+  .ins b{color:var(--jewel)}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  .vtl{list-style:none;margin:8px 0;padding:0}
+  .vtl li{margin:4px 0}
+  .vtl b{font-family:ui-monospace,Menlo,monospace;color:var(--gold);margin-right:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>💧 Uma reação compreensível diante de uma terrível perda</h1>
+  <h2>Tesouros da Palavra de Deus · discurso de 10 min · Lamentações 1 e 2 · 16 a 22 de novembro de 2026</h2>
+  <p>O esboço da apostila, um roteiro cronometrado com falas prontas (já contando os 2 min 46 s do vídeo), o
+  resumo do vídeo com os minutos, os insights e as fontes separadas com o trecho que interessa marcado. Cada bloco tem
+  o botão “de onde veio”.</p>
+  <div class="meta-row">
+    <span class="pill">⏱ 10 min (vídeo 2:46 + fala)</span><span class="pill">📚 w24.08 · w23.08</span>
+    <span class="pill">🔎 Guia de Pesquisa incluído</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#esboco"><span class="num">1</span>Esboço da apostila</a>
+  <a href="#roteiro"><span class="num">2</span>Roteiro de 10 minutos</a>
+  <a href="#video"><span class="num">3</span>O vídeo, minuto a minuto</a>
+  <a href="#insights"><span class="num">4</span>Insights para usar</a>
+  <a href="#fontes"><span class="num">5</span>Fontes separadas</a>
+</nav>
+
+<h2 class="sec" id="esboco">1. O esboço da apostila</h2>
+<div class="oficial">
+  <h3>Como está na apostila</h3>
+  <ul>
+    <li><b>[Mostre o VÍDEO <i>Introdução a Lamentações</i>.]</b></li>
+    <li><b>Jeremias ficou arrasado quando as pessoas que ele amava sofreram as consequências por terem deixado de
+    servir a Jeová.</b> (Lam. 2:11)</li>
+    <li><b>Jeremias esperava que elas fossem cair em si, orar humildemente a Jeová e se arrepender.</b> (Lam. 2:19;
+    <i>w24.08</i> 28 §§ 7-9)</li>
+    <li><b>PARA MEDITAR:</b> O que pode nos ajudar se nos culpamos pelas decisões ruins de outros? (<i>w23.08</i>
+    29-30 §§ 12-13)</li>
+  </ul>
+  <figure class="fig"><img src="img/jeremias-chora.jpg" alt="Jeremias chora enquanto escreve o livro de Lamentações em um rolo.">
+    <figcaption><b>Imagem da apostila:</b> Jeremias chora enquanto escreve o livro de Lamentações em um rolo.</figcaption></figure>
+  <div class="learn"><h4>💡 O fio do discurso, em uma frase</h4>
+  <p><b>Jeremias chorou pelo povo, mas não perdeu a esperança de que voltassem para Jeová.</b> Nós podemos sentir a
+  mesma dor, orar por quem se afastou e não carregar uma culpa que não é nossa.</p></div>
+  <p class="pessoal">A frase do fio é preparação pessoal, montada a partir dos três pontos da apostila.</p>
+</div>
+
+<h2 class="sec" id="roteiro">2. Roteiro de 10 minutos, com falas prontas</h2>
+<p class="fonte">Tempo estimado: 984 palavras faladas (com as leituras) a 140 palavras por minuto, mais o
+vídeo. Total: 9:48. As falas sem fonte estão marcadas como preparação pessoal.</p>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>21 s</span></div><div>
+    <h4>Abertura</h4>
+    <p class="fala">“Imagine ver a cidade onde você nasceu destruída e queimada: as casas, as ruas e até o lugar onde você adorava a Deus. Foi o que Jeremias viu acontecer com Jerusalém. Vamos ver um vídeo curto que apresenta o livro de Lamentações. Prestem atenção em como Jeremias se sentiu.” <span class="pessoal">(preparação pessoal)</span></p>
+    </div></div>
+  <div class="rot video"><div class="t">0:21<span>2 min 46 s</span></div><div>
+    <h4>▶️ Mostre o VÍDEO <i>Introdução a Lamentações</i></h4>
+    <p>Resumo e minutos estão na seção 3. Ao terminar, emende direto com o ponto 1.</p>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, parte 1</li><li>VÍDEO <i>Introdução a Lamentações</i> (2:46)</li><li>jw.org, API de mídia (mediator): pub-nwtsv_250_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Introdução a Lamentações</i>, no jw.org</p><p><a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir no jw.org</a></p></details></div></div>
+  <div class="rot"><div class="t">3:07<span>2 min 08 s</span></div><div>
+    <h4>1. Jeremias ficou arrasado (Lam. 2:11)</h4>
+    <p class="fala">“O vídeo mostrou que Jeremias viu a destruição de Jerusalém com os próprios olhos. E escreveu Lamentações pouco tempo depois. Vamos ler Lamentações 2:11.”</p><p class="fala leia">📖 <b>Leia Lamentações 2:11.</b></p><div class="quote"><span class="verse-chip">Lamentações 2:11</span> <sup>11</sup> Meus olhos estão cansados de tanto chorar. Minhas entranhas estão em alvoroço. Meu fígado se derrama por terra por causa da ruína da filha do meu povo, Por causa das crianças e dos bebês que desmaiam nas praças da cidade.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><p class="fala">“Jeremias diz que os olhos estavam cansados de tanto chorar. E diz que o fígado se derramava por terra. O que isso quer dizer? O Estudo Perspicaz explica que o fígado é vital para a vida. Por isso a Bíblia usa o fígado como figura de uma tristeza muito profunda. Hoje a gente diria: fiquei com o coração em pedaços.”</p><p class="fala">“A Sentinela de 1.º de junho de 2007 lembra que Jeremias tinha anunciado aquele julgamento durante 40 anos. E diz: nenhuma outra cidade na história foi lamentada com expressões tão comoventes e tão cheias de pesar.”</p><p class="fala">“Por que ele sofria tanto? O versículo responde: por causa da ruína do seu povo, por causa das crianças e dos bebês que desmaiavam nas praças. O vídeo lembrou que foi o próprio Jeová que causou essa destruição, por causa dos pecados do povo.”</p><p class="fala">“Aquelas pessoas tinham deixado de servir a Jeová. Mas Jeremias não disse: bem feito, eu avisei. Ele chorou por elas.” <span class="pessoal">(preparação pessoal)</span></p><p class="fala">“Talvez você conheça essa dor. Um filho, um neto, um irmão que você ajudou a conhecer a verdade e que deixou de servir a Jeová. Chorar por ele não é falta de fé. Jeremias era um profeta fiel e chorou muito.” <span class="pessoal">(preparação pessoal)</span></p><p class="fala">“Para quem já tem idade, essa dor pode ser antiga: um filho que saiu da verdade há 20 ou 30 anos e ainda faz falta na mesa da família. Jeová entende essa saudade.” <span class="pessoal">(preparação pessoal)</span></p>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, parte 1</li><li>VÍDEO <i>Introdução a Lamentações</i> (2:46)</li><li>jw.org, API de mídia (mediator): pub-nwtsv_250_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Introdução a Lamentações</i>, no jw.org</p><p><a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir no jw.org</a></p><hr><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:11</li><li>“Fígado” (it-1 par. 2)</li><li>página 975</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Fígado”, página 975</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002754#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>parágrafo de abertura</li><li>página 8, parágrafo 1</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 8, parágrafo 1</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details></div></div>
+  <div class="rot"><div class="t">5:15<span>2 min 35 s</span></div><div>
+    <h4>2. Jeremias esperava que eles voltassem (Lam. 2:19)</h4>
+    <p class="fala">“Mas Jeremias não ficou só no choro. A Sentinela de 2007 diz que, mesmo numa situação que parecia sem esperança, ele, cheio de pesar, recorreu a Jeová. E ele queria que o povo fizesse o mesmo: caísse em si, orasse com humildade e se arrependesse. Vamos ler Lamentações 2:19.”</p><p class="fala leia">📖 <b>Leia Lamentações 2:19.</b></p><div class="quote"><span class="verse-chip">Lamentações 2:19</span> <sup>19</sup> Levante-se! Clame durante a noite, no começo das vigílias. Derrame seu coração como água diante da face de Jeová. Levante as mãos a ele pela vida das suas crianças, Que desmaiam de fome em todas as esquinas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div><p class="fala">“Repare: derrame seu coração como água diante da face de Jeová. Não é uma oração decorada. É contar tudo para Jeová, como um filho conta para o pai.”</p><p class="fala">“Pense numa mãe que, toda noite, fala o nome do filho na oração e pede que ele volte. Isso é derramar o coração como água.” <span class="pessoal">(preparação pessoal)</span></p><p class="fala">“E como Jeová se sente com quem se afastou? A Sentinela de agosto de 2024, página 28, explica. Jeová não esperou os israelitas rebeldes darem o primeiro passo. Ele tomou a iniciativa de ajudá-los antes mesmo que mostrassem qualquer sinal de arrependimento. Em Jeremias 3:12 ele disse: Volte para mim, rebelde Israel. Não ficarei ressentido para sempre.”</p><p class="fala">“Lembre do pai do filho pródigo. Lucas 15:20 diz que, quando o filho ainda estava longe, o pai correu, e o abraçou e beijou ternamente. O pai não esperou o filho implorar por perdão.”</p><p class="fala">“E em Oseias 14:4 Jeová diz: Vou amá-los de livre e espontânea vontade. A revista diz que essas palavras são uma garantia de que Jeová ama muito quem o abandonou e quer que volte o quanto antes.”</p><p class="fala">“E Jesus disse, em Lucas 15:7, que haverá mais alegria no céu por causa de um pecador que se arrepende do que por causa de 99 justos que não precisam de arrependimento.”</p><p class="fala">“O vídeo terminou com uma frase que resume isso: Jeová sempre julga os desobedientes, mas perdoa os que se arrependem de coração. Era isso que Jeremias queria ver no seu povo.”</p><p class="fala">“Então, como Jeremias, a gente não desiste de ninguém. Continuamos orando. E, se a pessoa der um passo para voltar, ela vai encontrar braços abertos: os de Jeová e os nossos.” <span class="pessoal">(preparação pessoal)</span></p>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Confie plenamente em Jeová”</li><li>página 11, último parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 11, último parágrafo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=37" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>wol.jw.org</li><li>busca: “derrame seu coração como água”</li><li><i>A Sentinela</i> de julho de 2019, “Prepare-se agora para a perseguição”</li><li>página 3, parágrafo 6</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de julho de 2019, página 3, parágrafo 6</p><p class="obs">O Guia de Pesquisa não traz matéria para Lamentações 2:19; esta veio da busca no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2019485#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>“Como os anciãos ajudam quem foi removido da congregação?”</li><li>página 28, parágrafo 7</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 7</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>página 28, parágrafo 8</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 8</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=16" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>página 28, parágrafo 9</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=17" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana, parte 1</li><li>VÍDEO <i>Introdução a Lamentações</i> (2:46)</li><li>jw.org, API de mídia (mediator): pub-nwtsv_250_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Introdução a Lamentações</i>, no jw.org</p><p><a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir no jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details></div></div>
+  <div class="rot"><div class="t">7:49<span>1 min 39 s</span></div><div>
+    <h4>PARA MEDITAR: e se eu me culpo pela decisão de outro?</h4>
+    <p class="fala">“A apostila deixa uma pergunta para meditar: o que pode nos ajudar se nos culpamos pelas decisões ruins de outros?”</p><p class="fala">“A Sentinela de agosto de 2023 começa lembrando: nós não podemos tomar decisões por outros, nem podemos protegê-los das más consequências das decisões deles. E dá um exemplo. Um filho talvez decida parar de servir a Jeová, e isso causa uma grande dor nos pais. Mas, se os pais se culparem pela decisão do filho, isso vai ser um peso muito grande. E Jeová não quer que eles carreguem esse peso. Romanos 14:12 diz: cada um de nós prestará contas de si mesmo a Deus.”</p><p class="fala">“O que ajuda? Lembrar que Jeová deu livre-arbítrio para todos, ou seja, cada um escolhe o seu caminho. Ele não espera que os pais sejam perfeitos; quer que façam o melhor que puderem. A escolha do filho é responsabilidade dele. Se você pensa nos erros que cometeu, fale com Jeová, diga como se sente e peça o perdão dele. Jeová sabe que você não pode voltar no tempo e fazer as coisas de outra maneira. E Jeová não espera que você proteja o filho das consequências do erro. Se ele voltar, Jeová vai estar de braços abertos.”</p><p class="fala">“Para os pais e avós aqui: talvez você passe noites lembrando o que podia ter feito diferente. Conte isso a Jeová, como Jeremias fez. Depois deixe esse peso com ele.” <span class="pessoal">(preparação pessoal)</span></p>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Apostila Vida e Ministério, novembro-dezembro de 2026</li><li>16-22 de novembro</li><li>parte 1, PARA MEDITAR</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026</p><p><a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-16-22-de-novembro-de-2026/" target="_blank" rel="noopener">abrir no jw.org</a></p><hr><ol><li>Apostila da semana, PARA MEDITAR</li><li><i>A Sentinela</i> de agosto de 2023, estudo 36</li><li>“Carregue o que você precisa e deixe o resto para trás”</li><li>página 29, parágrafo 12</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2023, página 29, parágrafo 12</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana, PARA MEDITAR</li><li><i>A Sentinela</i> de agosto de 2023, estudo 36</li><li>página 30, parágrafo 13</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2023, página 30, parágrafo 13</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div></div>
+  <div class="rot"><div class="t">9:29<span>19 s</span></div><div>
+    <h4>Conclusão</h4>
+    <p class="fala">“Jeremias chorou pelo seu povo, e essa foi uma reação compreensível. Mas ele também orou e esperou que o povo voltasse. Nós podemos fazer o mesmo: sentir a dor, orar por quem se afastou e deixar com Jeová o que não depende de nós.” <span class="pessoal">(preparação pessoal)</span></p>
+    </div></div>
+  <div class="rot"><div class="t">9:48<span>fim</span></div><div><h4>Fim da parte</h4></div></div>
+</div>
+
+<div class="block"><h4>✂️ Se o tempo apertar</h4>
+  <p>Corte a fala sobre A Sentinela de 2007 (os 40 anos) e a de Oseias 14:4. <b>Não pode faltar:</b> a leitura de
+  2:11 com o fígado como figura de tristeza profunda; a leitura de 2:19 (“derrame seu coração como água”); Jeová toma
+  a iniciativa (Jeremias 3:12 e o pai do filho pródigo); e a resposta do PARA MEDITAR: a escolha do filho é
+  responsabilidade dele, e Jeová não quer que os pais carreguem esse peso.</p>
+</div>
+
+<h2 class="sec" id="video">3. O vídeo <i>Introdução a Lamentações</i>, minuto a minuto</h2>
+<figure class="fig"><img src="img/video-lamentacoes.jpg" alt="Imagem de capa do vídeo Introdução a Lamentações.">
+  <figcaption>Vídeo de 2:46. <a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&wtlocale=T" target="_blank" rel="noopener">Abrir no jw.org</a>.
+  Texto tirado da legenda oficial.</figcaption></figure>
+<ul class="vtl"><li><b>0:07</b>Jeremias viu com os próprios olhos os babilônios destruírem Jerusalém em 607 antes de Cristo. Pouco tempo depois, ele escreveu o livro de Lamentações.</li><li><b>0:20</b>Nesse livro, Jeremias mostra que estava muito triste por tudo o que tinha acontecido em Jerusalém.</li><li><b>0:32</b>No capítulo 1, Jerusalém é comparada a uma princesa. Por causa dos muitos pecados que ela cometeu, seus inimigos a deixam arrasada. Ela fica viúva e se torna escrava.</li><li><b>0:45</b>O capítulo 2 de Lamentações mostra que foi o próprio Jeová que causou a destruição de Jerusalém. Todos que passavam perto de Jerusalém ficavam assustados ao ver a destruição.</li><li><b>0:58</b>No capítulo 3, Jeremias compara o povo de Israel a um homem aflito. Esse homem fica implorando a Jeová que lembre dele e o ajude. Mas, Jeremias mostra paciência e esperança de que Jeová ajudaria os judeus a reconstruir Jerusalém por causa do seu amor e misericórdia.</li><li><b>1:19</b>O capítulo 4, dá destaque ao templo de Jeová, em Jerusalém. No passado, o templo era o grandioso local de adoração a Jeová, mas agora ele estava totalmente destruído. Jeremias também conta que um pouco antes de Jerusalém ser destruída, todos na cidade enfrentavam pobreza, fome e até morte.</li><li><b>1:43</b>Você sabia? Os quatro primeiros capítulos de Lamentações têm um detalhe muito interessante. Cada versículo começa com uma letra diferente do alfabeto hebraico.</li><li><b>1:56</b>No capítulo 5, Jeremias nos dá uma ideia de como os judeus em Jerusalém se sentiram depois de perder suas casas e se tornar escravos. Jeremias comparou esses judeus a crianças sem pai, que imploravam que Jeová acabasse com o sofrimento delas e as perdoasse.</li><li><b>2:16</b>Ao ler o livro de Lamentações, veja que Jeová sempre julga os desobedientes, perdoa os que se arrependem de coração. E que o Reino de Deus vai acabar com o sofrimento e trazer felicidade para todos nós.</li></ul>
+<details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, parte 1</li><li>VÍDEO <i>Introdução a Lamentações</i> (2:46)</li><li>jw.org, API de mídia (mediator): pub-nwtsv_250_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Introdução a Lamentações</i>, no jw.org</p><p><a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir no jw.org</a></p></details>
+
+<h2 class="sec" id="insights">4. Insights para usar no discurso</h2>
+<div class="insight">
+  <div class="ins"><b>O fígado e a tristeza.</b> O fígado é vital para a vida, por isso a Bíblia o usa “figuradamente
+  para retratar profunda tristeza” (Lam. 2:11). <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:11</li><li>“Fígado” (it-1 par. 2)</li><li>página 975</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Fígado”, página 975</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002754#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>Nenhuma cidade foi tão chorada.</b> Jeremias viu se cumprir a mensagem que anunciou por 40
+  anos. “Nenhuma outra cidade na história foi lamentada com expressões tão comoventes.” <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>parágrafo de abertura</li><li>página 8, parágrafo 1</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 8, parágrafo 1</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>Chorar e confiar.</b> “Mesmo numa situação aparentemente sem esperança, o profeta, cheio de
+  pesar, recorreu a Jeová em busca de salvação.” <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Confie plenamente em Jeová”</li><li>página 11, último parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 11, último parágrafo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=37" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>Era hora de orar.</b> Sobre o capítulo 2: “Era apropriado orar, pois muitos morreram nesse
+  ‘dia da ira de Jeová’.” <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:1</li><li>“Jeová dá esperança em meio ao pesar” (w88 1/9 pág. 26)</li><li>subtítulo “A Ira de Jeová”</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de setembro de 1988, página 26, parágrafo do subtítulo “A Ira de Jeová”</p><p class="obs">O mesmo parágrafo diz: “Era apropriado orar, pois muitos morreram nesse ‘dia da ira de Jeová’”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1988646#h=8" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>Derramar o coração.</b> Ao orar, “derrame seu coração como água” e conte para seu amoroso Pai
+  todos os seus medos e ansiedades (Lam. 2:19). <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org</li><li>busca: “derrame seu coração como água”</li><li><i>A Sentinela</i> de julho de 2019, “Prepare-se agora para a perseguição”</li><li>página 3, parágrafo 6</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de julho de 2019, página 3, parágrafo 6</p><p class="obs">O Guia de Pesquisa não traz matéria para Lamentações 2:19; esta veio da busca no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2019485#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>Jeová dá o primeiro passo.</b> Ele ajudou os israelitas rebeldes “antes mesmo que mostrassem
+  qualquer sinal de arrependimento”. <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>“Como os anciãos ajudam quem foi removido da congregação?”</li><li>página 28, parágrafo 7</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 7</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+  <div class="ins"><b>O fecho do vídeo.</b> “Jeová sempre julga os desobedientes, perdoa os que se arrependem de
+  coração.” E o Reino “vai acabar com o sofrimento”. <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, parte 1</li><li>VÍDEO <i>Introdução a Lamentações</i> (2:46)</li><li>jw.org, API de mídia (mediator): pub-nwtsv_250_VIDEO</li><li>legenda oficial (VTT)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Introdução a Lamentações</i>, no jw.org</p><p><a href="https://www.jw.org/open?lank=pub-nwtsv_250_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir no jw.org</a></p></details></div>
+  <div class="ins"><b>Não é seu, não carregue.</b> “A escolha que seu filho fizer é responsabilidade dele, não sua.”
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, PARA MEDITAR</li><li><i>A Sentinela</i> de agosto de 2023, estudo 36</li><li>página 30, parágrafo 13</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2023, página 30, parágrafo 13</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></div>
+</div>
+
+<h2 class="sec" id="fontes">5. As fontes, separadas</h2>
+<p class="pessoal">Nos parágrafos abaixo, o texto é o da publicação. Só o travessão que vem antes da referência
+bíblica final foi tirado, e a referência ficou entre parênteses.</p>
+
+<div class="src-card">
+  <h3><i>A Sentinela</i> de agosto de 2024, p. 28 §§ 7-9</h3>
+  <p class="tag">Citada na apostila, ponto 2 · estudo “Como os anciãos ajudam quem foi removido da congregação?” ·
+  <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p>
+  <p><b>§ 7</b> Os anciãos se esforçam para imitar a compaixão de Jeová quando lidam com alguém que foi removido da congregação. Por exemplo, Jeová não esperou os israelitas rebeldes darem o primeiro passo para voltar para ele. Em vez disso, <mark>ele tomou a iniciativa de ajudá-los antes mesmo que mostrassem qualquer sinal de arrependimento</mark>. Como vimos no segundo estudo desta revista, a compaixão de Jeová ficou bem clara quando ele disse para Oseias perdoar sua esposa e aceitá-la de volta, embora ela ainda estivesse pecando. Dessa forma, Jeová mostrou ao seu povo que tem muita compaixão e está disposto a perdoar. (Ose. 3:1; Mal. 3:7) Assim como Jeová, os anciãos realmente querem que um pecador se arrependa e volte para a congregação. Eles não vão criar dificuldades para a pessoa retornar. (Leia Jeremias 3:12.)</p>
+  <p><b>§ 8</b> Você se lembra da parábola do filho pródigo? Pense em como o pai recebeu seu filho. Assim que viu o filho voltando para casa, o pai “correu, e o abraçou e beijou ternamente”. (Luc. 15:20) <mark>O pai não esperou que o filho implorasse por perdão</mark>. Em vez disso, ele mesmo tomou a iniciativa, e é isso que qualquer pai amoroso faria. Os anciãos se esforçam para mostrar essa mesma atitude com aqueles que se afastaram da congregação. Eles querem que a ovelhinha perdida volte para casa. (Luc. 15:22-24, 32) Quando um pecador se arrepende, Jeová, Jesus e os anjos ficam muito felizes, e é assim que toda a congregação também se sente! (Leia Lucas 15:7.)</p>
+  <p><b>§ 9</b> Pelo que vimos até aqui, fica claro que Jeová não aceita que um pecador continue na congregação se ele não se arrepender. Mas isso não significa que Jeová vira as costas para ele. Jeová quer que ele retorne. Oseias 14:4 deixa claro como Jeová se sente com relação aos pecadores que se arrependem. Jeová diz: “Vou curá-los da sua infidelidade. Vou amá-los de livre e espontânea vontade, porque a minha ira se afastou.” Os anciãos, sabendo quais são os sentimentos de Jeová, vão ficar atentos a qualquer sinal de que a pessoa está começando a se arrepender. E, para aqueles que abandonaram a Jeová, <mark>essas palavras são uma garantia de que ele os ama muito e quer que retornem para a congregação o quanto antes</mark>.</p>
+  <div class="quote"><span class="verse-chip">Jeremias 3:12</span> Vá e proclame as seguintes palavras ao norte: “‘“Volte para mim, rebelde Israel”, diz Jeová.’ ‘“Não olharei com ira para vocês, pois eu sou leal”, diz Jeová.’ ‘“Não ficarei ressentido para sempre.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Lucas 15:20</span> Assim, levantou-se e foi ao encontro do seu pai. Enquanto ele ainda estava longe, seu pai o avistou e teve pena; então correu, e o abraçou e beijou ternamente.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Oseias 14:4</span> Vou curá-los da sua infidelidade. Vou amá-los de livre e espontânea vontade, Porque a minha ira se afastou de Israel.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>“Como os anciãos ajudam quem foi removido da congregação?”</li><li>página 28, parágrafo 7</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 7</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>página 28, parágrafo 8</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 8</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=16" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de agosto de 2024, estudo 35</li><li>página 28, parágrafo 9</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2024, página 28, parágrafo 9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024534#h=17" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+  <p class="pessoal">O artigo trata do trabalho dos anciãos com quem foi removido da congregação. No discurso, use o
+  ângulo que a apostila destaca: a compaixão de Jeová, que toma a iniciativa e quer que o pecador volte.</p>
+</div>
+
+<div class="src-card">
+  <h3><i>A Sentinela</i> de agosto de 2023, pp. 29-30 §§ 12-13</h3>
+  <p class="tag">PARA MEDITAR · estudo “Carregue o que você precisa e deixe o resto para trás” ·
+  <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p>
+  <p><b>§ 12</b> Sentir-se culpado pelas decisões de outros. Nós não podemos tomar decisões por outros, nem podemos protegê-los das más consequências de suas decisões. Por exemplo, um filho talvez decida parar de servir a Jeová. E essa decisão pode causar uma grande dor para os pais. Mas, <mark>se os pais se culparem pela decisão do filho, isso vai acabar sendo um peso muito grande para eles</mark>. E Jeová não quer que eles carreguem esse peso. (Rom. 14:12.)</p>
+  <p><b>§ 13</b> Como você pode se livrar desse peso? Lembre-se que Jeová deu livre-arbítrio para todos nós. Ele deixa que cada pessoa faça sua própria escolha. Isso inclui servi-lo ou não. Jeová sabe que você, como pai ou mãe, não é perfeito. Ele simplesmente quer que você faça o melhor que puder. <mark>A escolha que seu filho fizer é responsabilidade dele, não sua</mark>. (Pro. 20:11) Mesmo assim, pode ser que você fique pensando nos erros que cometeu como pai ou mãe. Então ore a Jeová dizendo como você se sente e peça o perdão dele. Jeová sabe que você não pode voltar no tempo e fazer as coisas de outra maneira. Por outro lado, <mark>Jeová não espera que você fique tentando proteger seu filho das consequências do erro dele</mark>. Se seu filho se esforçar para voltar, lembre-se que Jeová vai estar de braços abertos para recebê-lo. (Luc. 15:18-20.)</p>
+  <div class="quote"><span class="verse-chip">Romanos 14:12</span> Assim, cada um de nós prestará contas de si mesmo a Deus.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Provérbios 20:11</span> Até mesmo uma criança mostra o que é pelas suas ações, Se o seu comportamento é puro e correto.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Lucas 15:18 a 20</span> <sup>18</sup> Vou partir e voltar para a casa do meu pai e lhe dizer: “Pai, pequei contra o céu e contra o senhor. <sup>19</sup> Não sou mais digno de ser chamado seu filho. Trate-me como um dos seus empregados.”’ <sup>20</sup> Assim, levantou-se e foi ao encontro do seu pai. Enquanto ele ainda estava longe, seu pai o avistou e teve pena; então correu, e o abraçou e beijou ternamente.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana, PARA MEDITAR</li><li><i>A Sentinela</i> de agosto de 2023, estudo 36</li><li>“Carregue o que você precisa e deixe o resto para trás”</li><li>página 29, parágrafo 12</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2023, página 29, parágrafo 12</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=19" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana, PARA MEDITAR</li><li><i>A Sentinela</i> de agosto de 2023, estudo 36</li><li>página 30, parágrafo 13</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de agosto de 2023, página 30, parágrafo 13</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023528#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+</div>
+
+<div class="src-card">
+  <h3><i>A Sentinela</i> de 1.º de junho de 2007, “Destaques do livro de Lamentações”</h3>
+  <p class="tag">p. 8 §§ 1 e 5; p. 11, último parágrafo ·
+  <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p>
+  <p><b>p. 8 § 1</b> O PROFETA Jeremias vê cumprir-se a mensagem de julgamento que ele proferiu durante 40 anos. Como ele se sente ao presenciar a destruição de sua cidade amada? A Septuaginta grega em sua introdução ao livro de Lamentações diz: “Jeremias sentou-se chorando e lamentando com este lamento sobre Jerusalém.” Escrito em 607 AEC, enquanto ainda estão frescas na memória de Jeremias as lembranças de Jerusalém sendo sitiada por 18 meses e depois incendiada, o livro de Lamentações expressa de modo vívido a angústia que esse profeta sente no coração. (Jeremias 52:3-5, 12-14) <mark>Nenhuma outra cidade na história foi lamentada com expressões tão comoventes e tão cheias de pesar</mark>.</p>
+  <p><b>p. 8 § 5</b> Profundamente angustiado, Jeremias diz: “No ardor da ira, [Jeová] cortou todo chifre de Israel. Fez recuar a sua direita de diante do inimigo; e continua ardendo em Jacó como fogo chamejante que devora em todo o redor.” Descrevendo sua profunda tristeza, o profeta lamenta: “<mark>Meus olhos acabaram em puras lágrimas</mark>. Meus intestinos estão em fermento. Meu fígado se derramou por terra.” Até mesmo quem passa por perto expressa surpresa, dizendo: “É esta a cidade da qual se dizia: ‘Ela é a perfeição da lindeza, uma exultação para toda a terra’?” (Lamentações 2:3, 11, 15.)</p>
+  <p><b>p. 11</b> A avaliação que Jeová fez da situação de Jerusalém conforme expressa no livro de Lamentações nos ensina duas lições vitais. Primeira, a destruição de Jerusalém e a desolação de Judá servem de forte incentivo para obedecermos a Jeová e de aviso para não desconsiderarmos a vontade divina. (1 Coríntios 10:11) A segunda lição vem do exemplo de Jeremias. (Romanos 15:4) <mark>Mesmo numa situação aparentemente sem esperança, o profeta, cheio de pesar, recorreu a Jeová em busca de salvação</mark>. Isso mostra que é vital confiarmos plenamente em Jeová e na sua Palavra. (Hebreus 4:12.)</p>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>parágrafo de abertura</li><li>página 8, parágrafo 1</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 8, parágrafo 1</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Meus olhos acabaram-se em lágrimas”</li><li>página 8, parágrafo 5</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 8, parágrafo 5</p><p class="obs">O artigo cita a tradução anterior de 2:11 (“Meus intestinos estão em fermento”). Hoje se lê “Minhas entranhas estão em alvoroço”.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>Apostila da semana</li><li><i>A Sentinela</i> de 1.º de junho de 2007</li><li>“Destaques do livro de Lamentações”</li><li>“Confie plenamente em Jeová”</li><li>página 11, último parágrafo</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 1.º de junho de 2007, página 11, último parágrafo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007402#h=37" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</div>
+
+<div class="src-card">
+  <h3>Estudo Perspicaz, “Fígado” § 2 (p. 975)</h3>
+  <p class="tag">Guia de Pesquisa de Lamentações 2:11 ·
+  <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002754#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p>
+  <p>[...] <mark>O papel do fígado, vital para a vida, é reconhecido por ser usado figuradamente para retratar profunda
+  tristeza.</mark> (La 2:11)</p>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lamentações 2:11</li><li>“Fígado” (it-1 par. 2)</li><li>página 975</li></ol><p class="citar"><b>Para citar:</b> <i>Estudo Perspicaz das Escrituras</i>, volume 1, verbete “Fígado”, página 975</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002754#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</div>
+
+<div class="src-card">
+  <h3><i>A Sentinela</i> de julho de 2019, p. 3 § 6</h3>
+  <p class="tag">Busca no wol por “derrame seu coração como água” ·
+  <a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2019485#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p>
+  <p>Ore sempre. Imagine um menininho que recebe o abraço carinhoso de seu pai. O menino se sente tão seguro que fica totalmente à vontade para contar para o pai tudo o que aconteceu durante o dia, tanto as coisas boas como as ruins. O mesmo pode acontecer entre você e Jeová se você orar de coração a ele todo dia. (Leia Salmo 94:17-19.) Em sua oração, “derrame seu coração como água” e <mark>conte para seu amoroso Pai todos os seus medos e ansiedades</mark>. (Lam. 2:19) Sabe qual vai ser o resultado? Você vai sentir o que a Bíblia chama de “a paz de Deus, que está além de toda compreensão”. (Fil. 4:6, 7) Quanto mais você orar de coração, mais você vai se sentir perto de Jeová. (Rom. 8:38, 39.)</p>
+  <div class="quote"><span class="verse-chip">Filipenses 4:6, 7</span> <sup>6</sup> Não fiquem ansiosos por causa de coisa alguma, mas em tudo, por orações e súplicas, junto com agradecimentos, tornem os seus pedidos conhecidos a Deus; <sup>7</sup> e a paz de Deus, que está além de toda compreensão, guardará o seu coração e a sua mente por meio de Cristo Jesus.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org</li><li>busca: “derrame seu coração como água”</li><li><i>A Sentinela</i> de julho de 2019, “Prepare-se agora para a perseguição”</li><li>página 3, parágrafo 6</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de julho de 2019, página 3, parágrafo 6</p><p class="obs">O Guia de Pesquisa não traz matéria para Lamentações 2:19; esta veio da busca no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2019485#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><hr><ol><li>JW Library</li><li>Bíblia (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> o próprio texto bíblico (Tradução do Novo Mundo).</p></details>
+</div>
+
+<div class="src-card">
+  <h3>Os textos bíblicos do esboço, completos</h3>
+  <p class="tag">Texto exato da Tradução do Novo Mundo (edição de estudo) do seu JW Library</p>
+  <div class="quote"><span class="verse-chip base">Lamentações 2:11</span> <sup>11</sup> Meus olhos estão cansados de tanto chorar. Minhas entranhas estão em alvoroço. Meu fígado se derrama por terra por causa da ruína da filha do meu povo, Por causa das crianças e dos bebês que desmaiam nas praças da cidade.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Lamentações 2:19</span> <sup>19</sup> Levante-se! Clame durante a noite, no começo das vigílias. Derrame seu coração como água diante da face de Jeová. Levante as mãos a ele pela vida das suas crianças, Que desmaiam de fome em todas as esquinas.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+</div>
+
+<footer><p>Fontes: <a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-16-22-de-novembro-de-2026/">apostila Vida e Ministério de novembro-dezembro de 2026</a>; vídeo
+<i>Introdução a Lamentações</i> (jw.org); <i>A Sentinela</i> de agosto de 2024, de agosto de 2023, de julho de 2019 e
+de 1.º/6/2007; Estudo Perspicaz, verbete “Fígado”; Tradução do Novo Mundo e Guia de Pesquisa do JW Library. O roteiro,
+as cenas e as frases de ligação são notas de preparação pessoal.</p></footer>
+
+</div>
+</body>
+</html>
