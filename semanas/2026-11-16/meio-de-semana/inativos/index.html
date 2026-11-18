@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Não se esqueça dos irmãos inativos</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A4%9D%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Consideração da parte 7 com vídeo: resumo do vídeo com minutos, cinco lições prontas e roteiro de 15 minutos.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro a{color:var(--accent)}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+  details.rastro .obs{color:var(--muted);font-size:.82rem}
+  details.rastro .ptag{display:inline-block;margin:8px 0 0;padding:2px 8px;border-radius:999px;background:#3a3110;color:#ffe9a8;font-size:.75rem}
+  .apoio li{margin:6px 0}
+  .apoio .aim{display:block;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>🤝 Não se esqueça de nossos irmãos e irmãs inativos</h1>
+  <h2>Nossa Vida Cristã · 16 a 22 de novembro de 2026 · parte 7 (15 min) · consideração com vídeo</h2>
+  <p>O texto da apostila, o vídeo em resumo com os minutos de cada parte e cinco lições prontas para a pergunta “Que
+  lições você aprendeu com esse vídeo?”. Cada lição tem o versículo do seu JW Library, o que o vídeo e as publicações
+  dizem, um comentário pronto de até 30 segundos e um segundo comentário. Tudo com o botão “de onde veio”.</p>
+  <div class="meta-row"><span class="pill">⏱ 15 min</span><span class="pill">🎬 vídeo de 7:08</span>
+  <span class="pill">🙋 5 lições prontas</span><span class="pill">🔎 Guia de Pesquisa incluído</span></div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#apostila"><span class="num">1</span>O texto da apostila</a>
+  <a href="#video"><span class="num">2</span>O vídeo em resumo</a>
+  <a href="#l1"><span class="num">3</span>As cinco lições</a>
+  <a href="#conducao"><span class="num">4</span>Como conduzir</a>
+  <a href="#tom"><span class="num">5</span>O tom certo</a>
+  <a href="#guia"><span class="num">6</span>Guia de Pesquisa</a>
+</nav>
+
+<section class="oficial" id="apostila">
+  <h3>O texto da apostila</h3>
+  <p><b>7. Não se esqueça de nossos irmãos e irmãs inativos</b> (15 min) Consideração.</p>
+  <p>Nós fazemos o nosso máximo procurando as pessoas que querem aprender sobre Jeová e servir a ele. Mas não podemos
+  esquecer daqueles que “fazem parte da nossa família na fé” e estão inativos. (Gál. 6:10)</p>
+  <p>Nossos irmãos e irmãs podem ficar inativos por vários motivos. Alguns se envolvem demais com o trabalho, ficam
+  sobrecarregados com os problemas da vida, sofrem de depressão ou outros problemas de saúde. Também, alguns sofrem com
+  uma consciência pesada, e ainda outros tropeçaram por causa do que uma pessoa fez, ou foram magoados por alguém.
+  Muitos que estão inativos ainda amam a Jeová, mas talvez achem que não merecem voltar a servi-lo. Os anciãos querem
+  muito ajudar esses irmãos e irmãs a voltar para Jeová e tomam a iniciativa em fazer isso. (1 Ped. 5:2) Mas e você?
+  Como poderia ajudar alguém que está inativo?</p>
+  <p><b>Mostre o VÍDEO</b> <i>Ajudar os Inativos</i>. Depois, pergunte:</p>
+  <ul><li>Que lições você aprendeu com esse vídeo?</li></ul>
+  <figure class="fig"><img src="img/apostila.jpg" alt="Uma cena do vídeo Ajudar os Inativos. A irmã escuta com atenção a irmã inativa abrindo seu coração.">
+    <figcaption>Imagem da apostila: uma cena do vídeo <i>Ajudar os Inativos</i>. A irmã escuta com atenção a irmã
+    inativa abrindo seu coração.</figcaption></figure>
+  <div class="quote"><span class="verse-chip base">Gálatas 6:10</span> Então, enquanto tivermos oportunidade, façamos o bem a todos, mas especialmente aos que fazem parte da nossa família na fé.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip base">1 Pedro 5:2</span> pastoreiem o rebanho de Deus, que está aos seus cuidados, servindo como superintendentes não por obrigação, mas de boa vontade perante Deus; não por amor ao ganho desonesto, mas com entusiasmo;<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Apostila <i>Vida e Ministério</i>, novembro-dezembro de 2026</li><li>Programação de 16-22 de novembro</li><li>Nossa Vida Cristã, parte 7</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026, semana de 16 a 22 de novembro, parte 7</p><p class="obs">Na apostila, a referência a Gálatas 6:10 vem depois de um travessão; aqui ela está entre parênteses.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202026403#h=32" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>Apostila, parte 7</li><li>Gálatas 6:10</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Gálatas 6:10</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/48/6" target="_blank" rel="noopener">abrir Gálatas 6 no wol.jw.org</a></p><ol><li>Apostila, parte 7</li><li>1 Pedro 5:2</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> 1 Pedro 5:2</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/60/5" target="_blank" rel="noopener">abrir 1 Pedro 5 no wol.jw.org</a></p></details>
+</section>
+
+<h2 class="sec" id="video">O vídeo em resumo (7:08)</h2>
+<figure class="fig"><img src="img/video.jpg" alt="Cena do vídeo Ajudar os Inativos: Ebbe conversa com Laura.">
+  <figcaption>Vídeo <i>Ajudar os Inativos</i> (7:08), do JW Broadcasting de novembro de 2015. Ebbe narra a história.
+  Laura é a irmã inativa, e o irmão Clark é o ancião.</figcaption></figure>
+<p class="pessoal">Atenção: este vídeo não tem legenda oficial em português. O resumo e as frases entre aspas saíram do
+áudio em português e foram conferidos com a legenda oficial em inglês. Os minutos são do vídeo em português e são
+aproximados (alguns segundos para mais ou para menos).</p>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>18 s</span></div><div>
+    <h4>Ebbe apresenta Laura</h4><p>Ebbe mostra os amigos e a família. Depois mostra Laura e diz: “Laura é minha irmã, mas até uns meses atrás eu nem sabia que ela existia.”</p></div></div>
+  <div class="rot"><div class="t">0:18<span>42 s</span></div><div>
+    <h4>O encontro no metrô</h4><p>Ebbe não sabia que metrô pegar. Laura ajudou e deu um mapa a ela. Ebbe deu um folheto a Laura. Na conversa, descobriu que Laura também era Testemunha de Jeová e morava perto. Mas Ebbe nunca tinha visto Laura no Salão.</p></div></div>
+  <div class="rot"><div class="t">1:00<span>36 s</span></div><div>
+    <h4>O jantar com o irmão Clark</h4><p>O irmão Clark é ancião da congregação. Ele conhecia Laura: ela estava inativa havia bastante tempo, e os irmãos já tinham tentado ajudar. Ebbe pergunta se pode visitar Laura. Ele acha uma ótima ideia.</p></div></div>
+  <div class="rot"><div class="t">1:36<span>38 s</span></div><div>
+    <h4>A primeira visita não dá certo</h4><p>Ebbe achava que logo as duas seriam grandes amigas. Mas não chegou numa boa hora, e a visita não deu certo. Ela ficou sem graça. Pensou: se nem os anciãos tinham conseguido, quanto mais ela. Era melhor deixar com eles.</p></div></div>
+  <div class="rot"><div class="t">2:14<span>42 s</span></div><div>
+    <h4>O ancião anima Ebbe</h4><p>Ebbe conta tudo ao irmão Clark e pede desculpas. Ele entende e elogia o interesse dela. Diz que os anciãos não iam desistir dela e que Ebbe também não deveria desistir. Depois lê Lucas 15:8, a mulher que perde uma das dez dracmas, acende a lâmpada e varre a casa.</p></div></div>
+  <div class="rot"><div class="t">2:56<span>39 s</span></div><div>
+    <h4>Laura não era uma simples moeda</h4><p>O irmão Clark diz que Ebbe tinha capacidade de ajudar, mas precisava persistir. Ebbe entende: como a moeda da ilustração, Laura, a irmã dela, estava perdida. Ela decide fazer tudo o que puder, mas do jeito certo.</p></div></div>
+  <div class="rot"><div class="t">3:35<span>21 s</span></div><div>
+    <h4>Preparação</h4><p>“Fiz pesquisas, orei e me preparei.”</p></div></div>
+  <div class="rot"><div class="t">3:56<span>24 s</span></div><div>
+    <h4>A segunda visita</h4><p>Ebbe tenta fazer algo diferente. Laura ainda não se abre muito, mas melhora um pouco. “Eu não desisti. E os anciãos também não.”</p></div></div>
+  <div class="rot"><div class="t">4:20<span>1 min</span></div><div>
+    <h4>Cenas sem fala, só música</h4><p>Dois irmãos visitam Laura na sala. Laura chega ao Salão do Reino, é recebida com abraço e senta ao lado de Ebbe na reunião. Aparece a mulher da ilustração, com a lâmpada acesa, procurando no escuro.</p><p class="pessoal">Descrição das cenas feita nesta preparação: não há fala nesse trecho.</p></div></div>
+  <div class="rot"><div class="t">5:22<span>23 s</span></div><div>
+    <h4>Levou tempo</h4><p>“Não foi fácil. Levou tempo.” Mas as duas foram se conhecendo melhor, e aos poucos Laura foi se abrindo.</p></div></div>
+  <div class="rot"><div class="t">5:45<span>30 s</span></div><div>
+    <h4>Ouvir e abraçar</h4><p>Por causa do desânimo e da depressão, às vezes Laura falava coisas sem pensar. Ebbe se esforçava para ser uma boa ouvinte. Um dia ela abraçou Laura e disse: “gosto muito de você e sei que Jeová te ama.”</p><p class="pessoal">A imagem da apostila é uma cena desse momento: as duas no sofá, uma escutando a outra.</p></div></div>
+  <div class="rot"><div class="t">6:15<span>53 s</span></div><div>
+    <h4>O que Ebbe aprendeu</h4><p>Ebbe achou a irmã que estava perdida. E aprendeu: “nós não precisamos ser anciãos para ajudar um irmão ou irmã que se perdeu. Precisamos apenas ouvi-los e mostrar amor.” Termina dizendo que achou Laura, a irmã que estava perdida, e uma nova amiga.</p></div></div>
+</div>
+<details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Cenas do vídeo sem fala, descritas nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é a descrição pessoal do que aparece na tela.</p><ol><li>wol.jw.org: busca por “Ajudar os Inativos”</li><li>Apostila <i>Nossa Vida e Ministério Cristão</i>, abril de 2017 (semana de 10-16 de abril)</li><li>“Você também pode ajudar um irmão inativo”</li><li>“Assista ao vídeo Ajudar os Inativos. Depois, responda”</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de abril de 2017, página 5, perguntas sobre o vídeo</p><p class="obs">Essa apostila usou este mesmo vídeo em abril de 2017.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017127#h=5" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+
+<div class="section-divider" style="margin-top:22px">Que lições você aprendeu com esse vídeo?</div>
+
+<section class="oficial" id="l1">
+  <h3>Lição 1</h3>
+  <p class="q">Não precisamos ser anciãos para ajudar: todos podemos</p>
+  <div class="quote"><span class="verse-chip base">Gálatas 6:10</span> Então, enquanto tivermos oportunidade, façamos o bem a todos, mas especialmente aos que fazem parte da nossa família na fé.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o vídeo e as publicações dizem</h4><ul><li>No fim do vídeo (6:22), Ebbe resume: <b>“nós não precisamos ser anciãos para ajudar um irmão ou irmã que se perdeu. Precisamos apenas ouvi-los e mostrar amor.”</b></li><li>A apostila de abril de 2017, que usou este mesmo vídeo, diz: “Mas não são só os anciãos que podem fazer isso. Todos nós podemos ajudar os inativos.”</li><li><i>A Sentinela</i> de junho de 2020 (§ 6) pergunta quem pode ajudar a procurar os inativos e responde: “Todos nós”. Anciãos, pioneiros, membros da família e publicadores.</li><li>Gálatas 6:10 fala de fazer o bem “especialmente aos que fazem parte da nossa família na fé”. O <i>Nosso Ministério do Reino</i> de junho de 2002 mostra um jeito simples: “Mostre interesse tomando tempo para ouvi-los e edificá-los.”</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Gostei do que a Ebbe aprendeu no fim do vídeo. Ela disse que não precisamos ser anciãos para ajudar um irmão que se afastou. Basta ouvir e mostrar amor. E Gálatas 6:10 diz que devemos fazer o bem especialmente à nossa família na fé. Então, se eu conheço alguém que está inativo, eu posso fazer a minha parte. Uma visita, uma conversa, um ouvido atento.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p><b>Exemplo publicado, ótimo para quem tem idade.</b> Pablo ficou inativo por mais de 30 anos. Um dia de manhã, ao sair de casa, ele encontrou “uma irmã idosa muito boazinha”. Ela falou com tanto amor que ele chorou e disse: “Acho que foi Jeová que enviou você para falar comigo.” Naquele momento ele decidiu voltar. (<i>A Sentinela</i> de junho de 2020, § 13)</p><p class="pessoal">Preparação pessoal: a irmã que já não consegue sair para o campo pode ligar para a irmã que parou de vir às reuniões, perguntar como ela está e só escutar.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><ol><li>wol.jw.org: busca por “Ajudar os Inativos”</li><li>Apostila <i>Nossa Vida e Ministério Cristão</i>, abril de 2017 (semana de 10-16 de abril)</li><li>“Você também pode ajudar um irmão inativo”</li><li>2.º parágrafo, página 5</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de abril de 2017, página 5</p><p class="obs">Essa apostila usou este mesmo vídeo em abril de 2017.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017127#h=4" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 6, página 25</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 25, parágrafo 6</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>Apostila, parte 7</li><li>Gálatas 6:10</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Gálatas 6:10</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/48/6" target="_blank" rel="noopener">abrir Gálatas 6 no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Gálatas 6:10</li><li>“‘Quer’ ajudar outros?” (km 6/02 pág. 1 par. 3)</li><li>wol.jw.org: § 3</li></ol><p class="citar"><b>Para citar:</b> <i>Nosso Ministério do Reino</i> de junho de 2002, página 1, parágrafo 3</p><p class="obs">O texto de 2002 usa “aparentados conosco na fé”, a tradução antiga de Gálatas 6:10.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202002201#h=4" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 13, páginas 27-28</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, páginas 27 e 28, parágrafo 13</p><p class="obs">A primeira frase está na página 27; o relato de Pablo e da irmã idosa, na 28. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details>
+</section>
+<section class="oficial" id="l2">
+  <h3>Lição 2</h3>
+  <p class="q">Trabalhe junto com os anciãos</p>
+  <div class="quote"><span class="verse-chip base">1 Pedro 5:2</span> pastoreiem o rebanho de Deus, que está aos seus cuidados, servindo como superintendentes não por obrigação, mas de boa vontade perante Deus; não por amor ao ganho desonesto, mas com entusiasmo;<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o vídeo e as publicações dizem</h4><ul><li>Antes de visitar Laura, Ebbe perguntou ao irmão Clark, que é ancião, se podia ir (1:27). Ele conhecia Laura e sabia que os irmãos já tinham tentado ajudar (1:08).</li><li>Depois da primeira visita, ela voltou e contou tudo a ele (2:17). Ele elogiou o interesse dela e disse que os anciãos não iam desistir de Laura (2:32).</li><li>A apostila de abril de 2017 fez esta pergunta sobre o vídeo: “Por que devemos falar com os anciãos antes de tentar ajudar um irmão inativo?”</li><li>1 Pedro 5:2 pede aos anciãos que pastoreiem o rebanho “de boa vontade”. <i>A Sentinela</i> de 15/6/2007 explica que a palavra grega para superintendente se liga a um verbo que significa “vigiar cuidadosamente”. E <i>A Sentinela</i> de janeiro de 2023 (§ 11) diz que os anciãos mostram amor a Jeová e a Jesus quando tiram tempo para “ajudar os inativos a retornarem para Jeová”.</li><li><i>A Sentinela</i> de junho de 2020: se você encontrar um inativo que queira uma visita, pode passar o contato dele para os anciãos (§ 6). E, se os anciãos pedirem para você dirigir o estudo de um inativo, “o que acha de aceitar o privilégio?” (§ 15)</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Uma coisa que a Ebbe fez certo foi falar com o ancião antes. O irmão Clark conhecia a Laura e sabia o que os irmãos já tinham tentado. Depois da primeira visita, ela voltou e contou tudo para ele, e ele animou a Ebbe a não desistir. Primeiro Pedro 5:2 mostra que os anciãos pastoreiam o rebanho. Nós ajudamos junto com eles. Ninguém precisa fazer isso sozinho.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p class="pessoal">Preparação pessoal: quem tem idade às vezes lembra de um irmão que sumiu há muitos anos. Uma ideia é contar a um ancião: “O irmão que sentava ali no fundo mora perto de mim.” Esse aviso já é uma ajuda.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><ol><li>wol.jw.org: busca por “Ajudar os Inativos”</li><li>Apostila <i>Nossa Vida e Ministério Cristão</i>, abril de 2017 (semana de 10-16 de abril)</li><li>“Você também pode ajudar um irmão inativo”</li><li>2.ª pergunta sobre o vídeo</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de abril de 2017, página 5, 2.ª pergunta sobre o vídeo</p><p class="obs">Essa apostila usou este mesmo vídeo em abril de 2017.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017127#h=7" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>Apostila, parte 7</li><li>1 Pedro 5:2</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> 1 Pedro 5:2</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/60/5" target="_blank" rel="noopener">abrir 1 Pedro 5 no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Pedro 5:2</li><li>“Você se preocupa com os outros assim como Jeová se preocupa?” (w07 15/6 págs. 19-20)</li><li>wol.jw.org: página 19, parágrafo que cita 1 Pedro 5:2, 3</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de junho de 2007, página 19</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007445#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Pedro 5:2</li><li>“O amor do Cristo nos impele” (w23.01 pág. 29 pars. 10-11)</li><li>wol.jw.org: § 11</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de janeiro de 2023, página 29, parágrafo 11</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023246#h=18" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 6, página 25</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 25, parágrafo 6</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 15, páginas 28-29</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 29, parágrafo 15</p><p class="obs">O § 15 começa na página 28; a frase sobre dirigir o estudo está na 29. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=23" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details>
+</section>
+<section class="oficial" id="l3">
+  <h3>Lição 3</h3>
+  <p class="q">Não desista na primeira porta fechada</p>
+  <div class="quote"><span class="verse-chip">Gálatas 6:9</span> Assim, não desistamos de fazer o que é bom, pois colheremos no tempo devido, se não desanimarmos.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o vídeo e as publicações dizem</h4><ul><li>A primeira visita não deu certo (1:48). Ebbe ficou sem graça e pensou que era melhor deixar tudo com os anciãos (2:07).</li><li>O irmão Clark disse que ela tinha capacidade de ajudar, mas precisava persistir (3:07).</li><li>Antes de voltar, ela mudou o jeito: <b>“fiz pesquisas, orei e me preparei”</b> (3:42). Na segunda visita, Laura ainda não se abriu muito, mas melhorou um pouco. “Eu não desisti. E os anciãos também não.” (4:13)</li><li><i>A Sentinela</i> de junho de 2020 (§ 10): “Precisamos ser pacientes porque leva tempo para uma pessoa recuperar a saúde espiritual.” Muitos só voltaram depois de várias visitas dos anciãos e de outros irmãos.</li><li>O quadro da página 26 descreve o amigo de que a pessoa inativa precisa: alguém que “esteja disposto a sempre manter contato, e que vá visitá-la até mesmo várias vezes”.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>A primeira visita da Ebbe não deu certo, e ela ficou sem graça. Mas ela não parou. Ela pesquisou, orou e se preparou, e voltou de outro jeito. A Sentinela de junho de 2020 diz que precisamos ser pacientes, porque leva tempo para uma pessoa se recuperar. Muitos só voltaram depois de várias visitas. Então, uma porta fechada hoje não é uma porta fechada para sempre.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p class="pessoal">Preparação pessoal: Gálatas 6:9 vem logo antes do texto da apostila: “não desistamos de fazer o que é bom”. Para quem tem idade e não pode visitar sempre: um telefonema por semana, um bilhete, uma fruta do quintal. Pouco, mas sempre. (No vídeo, perto de 4:00, Ebbe aparece na porta de Laura com uma sacola de frutas e pão.)</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 10, página 26</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 26, parágrafo 10</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=17" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: quadro “Como ajudar uma pessoa que quer voltar”, página 26, 1.º item</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 26, quadro “Como ajudar uma pessoa que quer voltar”</p><p class="obs">O nome do quadro está na pergunta do § 9. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=58" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Gálatas 6:9, o versículo antes do texto da apostila</li><li>Ligação com a persistência feita nesta preparação</li></ol><p class="citar"><b>Para citar:</b> O versículo é a Bíblia; a ligação com o vídeo é preparação pessoal.</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/48/6" target="_blank" rel="noopener">abrir Gálatas 6 no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Cenas do vídeo sem fala, descritas nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é a descrição pessoal do que aparece na tela.</p></details>
+</section>
+<section class="oficial" id="l4">
+  <h3>Lição 4</h3>
+  <p class="q">Cada irmão inativo é precioso, como a moeda perdida</p>
+  <div class="quote"><span class="verse-chip base">Lucas 15:8-10</span> <sup>8</sup> “Ou que mulher que, tendo dez dracmas e perdendo uma dracma, não acende uma lâmpada, varre a casa e procura cuidadosamente até achá-la? <sup>9</sup> E, quando a acha, ela reúne as suas amigas e vizinhas, e diz: ‘Alegrem-se comigo, porque achei a dracma que havia perdido.’ <sup>10</sup> Eu lhes digo que, da mesma forma, há alegria entre os anjos de Deus por causa de um pecador que se arrepende.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o vídeo e as publicações dizem</h4><ul><li>O irmão Clark leu para Ebbe a ilustração de Lucas 15:8 (2:39). Ebbe entendeu que Laura não era uma simples moeda: era a irmã dela, e estava perdida (3:14).</li><li><i>A Sentinela</i> de junho de 2020 (§ 4) explica: a moeda talvez fizesse parte de um conjunto de dez dracmas que a mulher ganhou da mãe no dia do casamento. A lâmpada a óleo era fraca, então ela varreu a casa toda até ver a moeda brilhar no meio da poeira.</li><li>“A parte importante dessa ilustração é o quanto a mulher se esforçou para encontrar a moeda.” (§ 3)</li><li>A apostila de abril de 2017 lembra que os irmãos inativos “ainda são preciosos para Jeová. Eles foram comprados com o sangue do Filho dele.”</li><li><i>A Sentinela</i> de junho de 2020 (§ 1): Jeová e os anjos ficam muito felizes mesmo quando apenas um adorador que estava afastado volta para ele.</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>O que me tocou foi a moeda perdida. A Sentinela de junho de 2020 diz que aquela moeda talvez fosse um presente que a mulher ganhou da mãe no casamento. Por isso ela acendeu a lâmpada e varreu a casa toda. A Ebbe percebeu que a Laura não era uma simples moeda. Era a irmã dela. Cada irmão inativo vale muito para Jeová, e para nós também.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p class="pessoal">Preparação pessoal: quem já perdeu os óculos dentro de casa sabe como é. A gente acende a luz, olha embaixo do móvel, varre o canto e não descansa até achar. É esse o cuidado que a ilustração mostra, e o que Jeová sente por quem se afastou.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><ol><li>Vídeo, 2:39: o ancião lê Lucas 15:8</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Lucas 15:8-10</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/42/15" target="_blank" rel="noopener">abrir Lucas 15 no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 3, página 24</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 24, parágrafo 3</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 4, páginas 24-25</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, páginas 24 e 25, parágrafo 4</p><p class="obs">O conjunto de dez dracmas começa no fim da página 24; a lâmpada e o varrer estão na 25.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org: busca por “Ajudar os Inativos”</li><li>Apostila <i>Nossa Vida e Ministério Cristão</i>, abril de 2017 (semana de 10-16 de abril)</li><li>“Você também pode ajudar um irmão inativo”</li><li>1.º parágrafo, página 5</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de abril de 2017, página 5</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017127#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 1, página 24</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 24, parágrafo 1</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=6" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details>
+</section>
+<section class="oficial" id="l5">
+  <h3>Lição 5</h3>
+  <p class="q">Ouça sem julgar e diga que Jeová ama</p>
+  <div class="quote"><span class="verse-chip">Tiago 1:19</span> Tenham isto em mente, meus amados irmãos: todos devem ser prontos para ouvir, mas devem demorar para falar e demorar para ficar irados;<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="learn"><h4>💡 O que o vídeo e as publicações dizem</h4><ul><li>Por causa do desânimo e da depressão, às vezes Laura falava coisas sem pensar (5:45). Ebbe se esforçava para ser uma boa ouvinte (5:54). Um dia ela abraçou Laura e disse: <b>“gosto muito de você e sei que Jeová te ama”</b> (6:00).</li><li><i>A Sentinela</i> de junho de 2020 (§ 11) diz que a empatia “é como um medicamento poderoso” e cita Tiago 1:19. María, que ficou inativa por um tempo, contou: “Eu precisava de um amigo para desabafar, uma mão para me apoiar e um ombro para chorar.”</li><li>O quadro da página 26: a pessoa precisa de um amigo que esteja preparado para escutar com empatia, “que entenda as dificuldades dela e não a julgue”.</li><li>§ 13: “É importante dizermos aos inativos que Jeová os ama e que nós os amamos também.”</li></ul></div>
+  <div class="block coment"><h4>🙋 Comentário pronto (até 30 segundos)</h4><p>Gostei de ver a Ebbe ouvindo. Às vezes a Laura falava coisas sem pensar, por causa do desânimo e da depressão. Mas a Ebbe continuou ouvindo. E um dia abraçou a Laura e disse que gostava muito dela e que Jeová a amava. A Sentinela de junho de 2020 diz que a empatia é como um medicamento poderoso. Às vezes, ouvir com calma ajuda mais do que falar muito.</p></div>
+  <div class="block"><h4>➕ Para um segundo comentário</h4><p>A imagem da apostila mostra isso: “a irmã escuta com atenção a irmã inativa abrindo seu coração”.</p><p class="pessoal">Preparação pessoal: tempo para ouvir é uma coisa que muitos irmãos de idade têm. Uma cadeira na varanda, um cafezinho e a paciência de deixar o outro falar até o fim.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 11, páginas 26-27</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, páginas 26 e 27, parágrafo 11</p><p class="obs">“Medicamento poderoso” está na página 26; a frase de María, na 27. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=18" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li><i>A Sentinela</i> de junho de 2020, § 11, cita Tiago 1:19</li><li>JW Library: Tradução do Novo Mundo (edição de estudo)</li></ol><p class="citar"><b>Para citar:</b> Tiago 1:19</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/59/1" target="_blank" rel="noopener">abrir Tiago 1 no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: quadro “Como ajudar uma pessoa que quer voltar”, página 26, 3.º item</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 26, quadro “Como ajudar uma pessoa que quer voltar”</p><p class="obs">O nome do quadro está na pergunta do § 9. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=60" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 13, páginas 27-28</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, páginas 27 e 28, parágrafo 13</p><p class="obs">A primeira frase está na página 27; o relato de Pablo e da irmã idosa, na 28. O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=20" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>jw.org</li><li>Apostila <i>Vida e Ministério</i>, novembro-dezembro de 2026</li><li>Programação de 16-22 de novembro</li><li>Nossa Vida Cristã, parte 7</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026, semana de 16 a 22 de novembro, parte 7</p><p class="obs">Na apostila, a referência a Gálatas 6:10 vem depois de um travessão; aqui ela está entre parênteses.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202026403#h=32" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details>
+</section>
+
+<h2 class="sec" id="conducao">Como conduzir os 15 minutos</h2>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>1 min 30</span></div><div>
+    <h4>Introdução com Gálatas 6:10</h4>
+    <p>Resuma o texto da apostila e leia Gálatas 6:10.</p>
+    <p class="fala">“No campo, procuramos as pessoas que querem conhecer a Jeová. Mas Gálatas 6:10 lembra de outro
+    grupo: a nossa família na fé. Alguns irmãos ficaram inativos. Às vezes foi o trabalho, a doença, a depressão ou uma
+    mágoa. Muitos ainda amam a Jeová. Os anciãos tomam a iniciativa de ajudar. Mas e você? Como poderia ajudar? Vamos
+    ver o que uma irmã jovem aprendeu.”</p></div></div>
+  <div class="rot"><div class="t">1:30<span>7:08</span></div><div>
+    <h4>Vídeo</h4>
+    <p>Antes, peça atenção a duas coisas: o que Ebbe fez depois que a primeira visita não deu certo, e o texto que o
+    ancião leu para ela.</p></div></div>
+  <div class="rot"><div class="t">8:40<span>5 min 20</span></div><div>
+    <h4>“Que lições você aprendeu com esse vídeo?”</h4>
+    <p>Dá para uns seis ou sete comentários curtos. Se ficar parado, use as perguntas que a apostila de abril de 2017
+    fez sobre este mesmo vídeo:</p>
+    <ul class="apoio"><li>“O que Ebbe fez quando encontrou uma irmã que ela não conhecia?”<span class="aim">O que se quer ouvir: Ajudou a pegar o metrô certo, deu um folheto e puxou conversa. Depois, no jantar com o ancião, soube que Laura estava inativa e pediu para visitá-la (0:18 a 1:30). (lição 1)</span></li><li>“Por que devemos falar com os anciãos antes de tentar ajudar um irmão inativo?”<span class="aim">O que se quer ouvir: Eles conhecem a pessoa e o que já foi tentado; o irmão Clark orientou e animou Ebbe. (lição 2)</span></li><li>“Antes de visitar Laura pela segunda vez, como Ebbe se preparou?”<span class="aim">O que se quer ouvir: “Fiz pesquisas, orei e me preparei” (3:42). (lição 3)</span></li><li>“Como Ebbe mostrou persistência, paciência e amor?”<span class="aim">O que se quer ouvir: Voltou depois da primeira visita, deu tempo ao tempo, ouviu e abraçou. (lição 3 e 5)</span></li><li>“O que podemos aprender da ilustração de Jesus em Lucas 15:8-10?”<span class="aim">O que se quer ouvir: Cada irmão inativo é precioso e vale o esforço de procurar. (lição 4)</span></li><li>“Vários irmãos se esforçaram para ajudar Laura. Quais foram os resultados?”<span class="aim">O que se quer ouvir: Laura foi se abrindo, e Ebbe achou a irmã que estava perdida e uma nova amiga. Nas cenas sem fala, Laura aparece no Salão do Reino. (lição 1 e 4)</span></li></ul>
+    <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org: busca por “Ajudar os Inativos”</li><li>Apostila <i>Nossa Vida e Ministério Cristão</i>, abril de 2017 (semana de 10-16 de abril)</li><li>“Você também pode ajudar um irmão inativo”</li><li>“Assista ao vídeo Ajudar os Inativos. Depois, responda”</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Nossa Vida e Ministério Cristão</i> de abril de 2017, página 5, perguntas sobre o vídeo</p><p class="obs">Essa apostila usou este mesmo vídeo em abril de 2017.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202017127#h=5" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details></div></div>
+  <div class="rot"><div class="t">14:00<span>40 s</span></div><div>
+    <h4>A imagem da apostila</h4>
+    <p>Mostre a imagem e pergunte: “O que essa irmã está fazendo?” Resposta: está escutando com atenção (lição 5).
+    Lembre o passo prático de <i>A Sentinela</i> de junho de 2020, § 6: se encontrar um inativo que queira uma visita,
+    ofereça passar o contato dele para os anciãos.</p></div></div>
+  <div class="rot"><div class="t">14:40<span>20 s</span></div><div>
+    <h4>Fecho</h4>
+    <p class="fala">“A Ebbe achou a irmã que estava perdida e ganhou uma amiga. Nós também podemos ajudar. Não
+    precisamos ser anciãos. Precisamos ouvir e mostrar amor.”</p></div></div>
+</div>
+<div class="block">
+  <h4>Se o tempo apertar</h4>
+  <p>Corte os segundos comentários e use só uma pergunta de apoio. A imagem pode ser mostrada junto com o fecho.</p>
+  <h4>Não pode faltar</h4>
+  <ul><li>Gálatas 6:10: são da nossa família na fé.</li>
+  <li>Todos podemos ajudar, sempre junto com os anciãos.</li>
+  <li>O tom de amor: ouvir, não julgar, dizer que Jeová ama.</li></ul>
+</div>
+<p class="pessoal">O roteiro, as falas de introdução e fecho, os comentários prontos e os exemplos marcados como
+preparação pessoal são notas de preparação, não publicação.</p>
+<details class="rastro"><summary>📍 de onde veio</summary><p class="ptag">Preparação pessoal</p><ol><li>Escrito nesta preparação</li></ol><p class="citar"><b>Para citar:</b> Não citar como publicação: é ilustração ou aplicação pessoal.</p></details>
+
+<section class="oficial" id="tom">
+  <h3>O tom certo: amor, sem culpar</h3>
+  <ul>
+    <li>A apostila fala de <b>motivos</b>: trabalho demais, problemas da vida, depressão ou outros problemas de saúde,
+    consciência pesada, tropeço por causa do que alguém fez, mágoa. E diz: “Muitos que estão inativos ainda amam a
+    Jeová, mas talvez achem que não merecem voltar a servi-lo.”</li>
+    <li><i>A Sentinela</i> de janeiro de 2024 (§ 18) lembra que eles podem ter ficado com medo de não ser bem recebidos,
+    e avisa: “Não diga nada que poderia deixá-los com vergonha ou magoados.”</li>
+    <li>Na ilustração de Jesus, o filho que volta “acha que não merece mais ser tratado como um filho”. O pai corre,
+    abraça bem forte e mostra empatia. (<i>A Sentinela</i> de junho de 2020, § 8)</li>
+    <li>Para quem está inativo, a mensagem é a do § 18 do mesmo artigo: “Jeová ainda ama você.” Ele “está de braços
+    abertos esperando por você”.</li>
+    <li>No vídeo, o ancião não desiste de Laura (2:32), e Ebbe chama Laura de “minha irmã” do começo ao fim.</li>
+  </ul>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Apostila <i>Vida e Ministério</i>, novembro-dezembro de 2026</li><li>Programação de 16-22 de novembro</li><li>Nossa Vida Cristã, parte 7</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026, semana de 16 a 22 de novembro, parte 7</p><p class="obs">Na apostila, a referência a Gálatas 6:10 vem depois de um travessão; aqui ela está entre parênteses.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202026403#h=32" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org: busca por “ajudar os inativos”</li><li><i>A Sentinela</i> (estudo), janeiro de 2024</li><li>“Você está preparado para o dia mais importante do ano?”</li><li>§ 18, página 14</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de janeiro de 2024, página 14, parágrafo 18</p><p class="obs">O parágrafo fala dos inativos que vão à Celebração.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2024241#h=27" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 8, página 25</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 25, parágrafo 8</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: § 18, página 29</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, página 29, parágrafo 18</p><p class="obs">O Guia de Lucas 15:8 aponta os §§ 3-4. Esta frase está em outro parágrafo do mesmo artigo, conferido no wol.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=27" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>Apostila, parte 7: link “Mostre o VÍDEO” (pub-jwbai_201511_1_VIDEO)</li><li>jw.org: API de mídia (mediator), português do Brasil</li><li><i>Ajudar os Inativos</i>, JW Broadcasting de novembro de 2015, 7:08</li><li>Áudio dublado em português, transcrito nesta preparação</li><li>Sentido conferido na legenda oficial em inglês (jwbai_E_201511_01.vtt)</li></ol><p class="citar"><b>Para citar:</b> Vídeo <i>Ajudar os Inativos</i> (jw.org)</p><p class="obs">O vídeo não tem legenda oficial em português. As frases entre aspas saíram do áudio; confira de ouvido antes de citar palavra por palavra. O nome “Ebbe” é o da apostila de abril de 2017.</p><p><a href="https://www.jw.org/open?lank=pub-jwbai_201511_1_VIDEO&amp;wtlocale=T" target="_blank" rel="noopener">abrir o vídeo no jw.org</a></p></details>
+</section>
+
+<section class="oficial" id="guia">
+  <h3>Do Guia de Pesquisa, para ir mais fundo</h3>
+  <ul>
+    <li><b>Gálatas 6:10:</b> “‘Quer’ ajudar outros?” (km 6/02 pág. 1 par. 3): visitar, ouvir e ajudar de maneiras
+    práticas os irmãos com problemas de saúde e outras dificuldades.</li>
+    <li><b>1 Pedro 5:2:</b> “O amor do Cristo nos impele” (w23.01 pág. 29 pars. 10-11): os anciãos mostram amor quando
+    ajudam os inativos a retornarem. “Você se preocupa com os outros assim como Jeová se preocupa?” (w07 15/6 págs.
+    19-20): superintendente é quem vigia cuidadosamente.</li>
+    <li><b>Lucas 15:8</b> (lido no vídeo): “Voltem para mim” (w20.06 págs. 24-25 pars. 3-4). O artigo inteiro é sobre
+    ajudar os inativos: paciência (§ 10), empatia (§ 11), amor (§§ 12-13) e o quadro “Como ajudar uma pessoa que quer
+    voltar” (pág. 26).</li>
+  </ul>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Gálatas 6:10</li><li>“‘Quer’ ajudar outros?” (km 6/02 pág. 1 par. 3)</li><li>wol.jw.org: § 3</li></ol><p class="citar"><b>Para citar:</b> <i>Nosso Ministério do Reino</i> de junho de 2002, página 1, parágrafo 3</p><p class="obs">O texto de 2002 usa “aparentados conosco na fé”, a tradução antiga de Gálatas 6:10.</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202002201#h=4" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Pedro 5:2</li><li>“O amor do Cristo nos impele” (w23.01 pág. 29 pars. 10-11)</li><li>wol.jw.org: § 11</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de janeiro de 2023, página 29, parágrafo 11</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023246#h=18" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>1 Pedro 5:2</li><li>“Você se preocupa com os outros assim como Jeová se preocupa?” (w07 15/6 págs. 19-20)</li><li>wol.jw.org: página 19, parágrafo que cita 1 Pedro 5:2, 3</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de junho de 2007, página 19</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2007445#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 15:8 (lido no vídeo)</li><li>“Voltem para mim” (w20.06 págs. 24-25 pars. 3-4)</li><li>wol.jw.org: §§ 3-4, páginas 24-25</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de junho de 2020, páginas 24 e 25, parágrafos 3 e 4</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2020441#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</section>
+
+<footer><p>Fontes: apostila Vida e Ministério de novembro-dezembro de 2026; vídeo <i>Ajudar os Inativos</i> (jw.org,
+áudio em português conferido com a legenda oficial em inglês); apostila Nossa Vida e Ministério Cristão de abril de
+2017; <i>A Sentinela</i> de junho de 2020, janeiro de 2023, janeiro de 2024 e 15 de junho de 2007; <i>Nosso Ministério
+do Reino</i> de junho de 2002; Tradução do Novo Mundo e Guia de Pesquisa do JW Library. Os comentários, o roteiro e o
+que está marcado como preparação pessoal são notas pessoais.</p></footer>
+
+</div>
+</body>
+</html>
