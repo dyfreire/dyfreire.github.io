@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O que você diria?</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%AA%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Consideração da parte 6 (de casa em casa): resumo da lmd lição 1 ponto 4b, duas perguntas com respostas e roteiro de 5 minutos.">
+<style>
+  :root{
+    --bg:#0f1622; --panel:#172131; --panel2:#1c2940; --line:#243044;
+    --text:#e7eef7; --muted:#a8b3c4; --accent:#7fb6ff; --accent2:#aeeea0;
+    --warn:#ffb86b; --danger:#ff7575; --gold:#ffd700;
+    --jewel:#b48ee8; --jewel-bg:#2a1f3d; --jewel-line:#7c5fbf;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+  header.hero{padding:20px 22px;background:linear-gradient(180deg,#2a1f3d,#101a2a);border:1px solid var(--jewel-line);border-radius:14px;margin-bottom:18px}
+  header.hero h1{margin:0 0 6px;font-size:1.5rem;color:var(--text)}
+  header.hero h2{margin:8px 0 4px;font-size:1.05rem;color:var(--jewel);font-weight:600}
+  header.hero p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .meta-row .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:18px;position:sticky;top:8px;z-index:5}
+  .toolbar input[type=search]{flex:1;min-width:220px;background:#0c1422;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:8px;outline:none}
+  .toolbar input[type=search]:focus{border-color:var(--jewel)}
+  .toolbar button{background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.85rem}
+  .toolbar button:hover{border-color:var(--jewel)}
+  .pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:var(--muted)}
+  .pill.on{background:var(--jewel);color:#1a0f3a;border-color:transparent;font-weight:600}
+  .toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:18px}
+  .toc a{padding:10px 12px;background:var(--panel2);border-radius:8px;border:1px solid var(--line);text-decoration:none;color:#cfe7ff;font-size:.9rem}
+  .toc a:hover{border-color:var(--jewel)}
+  .toc a .num{color:var(--jewel);font-weight:700;margin-right:6px}
+  details.j{background:var(--panel);border:1px solid var(--jewel-line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+  details.j[open]{box-shadow:0 0 0 1px var(--jewel-line) inset,0 0 24px rgba(180,142,232,0.15)}
+  details.j>summary{cursor:pointer;list-style:none;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  details.j>summary::-webkit-details-marker{display:none}
+  .j-num{min-width:48px;height:48px;background:linear-gradient(135deg,#7c5fbf,#b48ee8);border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:#1a0f3a;flex-shrink:0}
+  .j-title{flex:1;font-weight:600;font-size:1.02rem;color:var(--text)}
+  .j-status{font-size:.8rem;color:var(--muted)}
+  .j-status.answered{color:var(--accent2)}
+  .j-body{padding:6px 18px 18px}
+  .block{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:14px}
+  .block h4{margin:0 0 8px;font-size:1rem;color:var(--jewel);letter-spacing:.2px}
+  .block h5{margin:14px 0 6px;color:#cfe7ff;font-size:.95rem}
+  .block ol,.block ul{padding-left:22px;margin:6px 0}
+  .block p{margin:.55rem 0}
+  .block em{color:#ffd0a8}
+  .verse-chip{display:inline-block;background:#143256;border:1px solid #21477e;color:#bcd9ff;padding:2px 8px;border-radius:999px;font-size:.78rem;margin:0 4px;text-decoration:none;font-weight:600}
+  .verse-chip.base{background:var(--gold);color:#3a2c00;border-color:var(--gold);font-weight:700}
+  .verse-chip.base::before{content:"★ ";font-size:.85em}
+  .quote{border-left:3px solid var(--jewel);background:#0e1a2e;padding:10px 14px;border-radius:6px;margin:10px 0;color:#e6f1ff;font-size:.93rem}
+  .quote .src{display:block;color:var(--muted);font-size:.78rem;margin-top:6px;font-style:italic}
+  .learn{border-left:4px solid var(--gold);background:linear-gradient(180deg,#2a1f3d,#1a1f3d);padding:14px 16px;border-radius:8px;margin:12px 0}
+  .learn h4{margin:0 0 8px;color:var(--gold);font-size:1rem}
+  .learn ul{margin:0;padding-left:22px}
+  .learn li{margin:6px 0}
+  .connection{background:#1a2336;border:1px dashed #4a6080;color:#cfd8e8;padding:12px;border-radius:10px;margin:10px 0;font-size:.9rem}
+  .status-toggle{cursor:pointer;font-size:.85rem;color:var(--muted);user-select:none}
+  .status-toggle:hover{color:var(--jewel)}
+  .status-toggle:hover{color:var(--jewel)}
+  .section-divider{text-align:center;color:var(--jewel);font-size:1.1rem;font-weight:700;margin:30px 0 14px;letter-spacing:.5px}
+  .apply-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+  .apply-cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .apply-cell strong{display:block;color:var(--jewel);font-size:.85rem;margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+  .apply-cell p{margin:0;font-size:.9rem}
+  footer{color:var(--muted);font-size:.85rem;margin-top:24px;text-align:center}
+  @media print{
+    body{background:#fff;color:#000}
+    .toolbar{display:none}
+    .block,.learn,.apply-cell{border:1px solid #888;background:#fff;color:#000}
+    .quote{background:#f4f4f4;color:#000;border-color:#888}
+    details.j{break-inside:avoid}
+  }
+
+  .coment{border-color:#3d6b4a;background:#14261c}
+  .coment h4{color:var(--accent2)}
+  .fonte{color:var(--muted);font-size:.8rem;margin:8px 0 0}
+  .oficial{border:1px solid var(--gold);border-radius:12px;padding:16px 18px;background:var(--panel);margin-bottom:18px}
+  .oficial h3{margin:0 0 6px;color:var(--gold);font-size:1rem}
+  .oficial .q{font-weight:600;font-size:1.02rem;margin:4px 0 10px}
+  details.rastro{margin:10px 0 0;border:1px dashed var(--line);border-radius:10px;padding:6px 12px;background:var(--panel2)}
+  details.rastro summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+  details.rastro ol{margin:8px 0 6px 18px;padding:0;font-size:.85rem}
+  details.rastro p{margin:6px 0;font-size:.88rem}
+  details.rastro .citar{color:var(--text)}
+  details.rastro a{color:var(--accent)}
+  .pessoal{color:var(--muted);font-size:.8rem;font-style:italic;margin:8px 0 0}
+  .roteiro{display:grid;gap:10px}
+  .rot{display:grid;grid-template-columns:92px 1fr;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .rot .t{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-weight:700}
+  .rot .t span{display:block;color:var(--muted);font-weight:400;font-size:.8rem}
+  .rot h4{margin:0 0 4px;color:var(--text)}
+  .rot p{margin:.35rem 0}
+  .fala{border-left:3px solid var(--accent2);padding:6px 12px;background:#12221a;border-radius:6px;font-style:italic}
+  .fig{margin:12px 0}
+  .fig img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .fig figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+  h2.sec{margin:28px 0 10px;color:var(--jewel);font-size:1.15rem}
+  .back{display:inline-block;margin:0 0 12px;color:var(--muted);font-size:.85rem;text-decoration:none}
+  .back:hover{color:var(--accent)}
+  @media (max-width:600px){.wrap{padding:16px 16px 60px}.toolbar{position:static}.rot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../../../../">&larr; Calendário das reuniões</a>
+
+<header class="hero">
+  <h1>🚪 O que você diria?</h1>
+  <h2>Faça Seu Melhor no Ministério · 16 a 22 de novembro de 2026 · parte 6 (5 min) · consideração</h2>
+  <p>De casa em casa, com base na <i>lmd</i> lição 1 ponto 4b. Tem a introdução, o resumo do ponto, a imagem, as duas
+  perguntas com o que se espera ouvir, um comentário de apoio para cada uma e o roteiro dos 5 minutos. Tudo com o botão
+  “de onde veio”.</p>
+  <div class="meta-row"><span class="pill">⏱ 5 min</span><span class="pill">🖼 imagem da apostila</span>
+  <span class="pill">❓ 2 perguntas</span><span class="pill">🔎 Guia de Pesquisa incluído</span></div>
+</header>
+
+<nav class="toc" aria-label="Seções">
+  <a href="#apostila"><span class="num">1</span>O texto da apostila</a>
+  <a href="#intro"><span class="num">2</span>A introdução</a>
+  <a href="#ponto"><span class="num">3</span>Resumo do ponto 4b</a>
+  <a href="#q1"><span class="num">4</span>Pergunta 1: como começar</a>
+  <a href="#q2"><span class="num">5</span>Pergunta 2: que verdade mostrar</a>
+  <a href="#conducao"><span class="num">6</span>Como conduzir os 5 minutos</a>
+</nav>
+
+<section class="oficial" id="apostila">
+  <h3>O texto da apostila</h3>
+  <p><b>6. O que você diria?</b> (5 min) Consideração. DE CASA EM CASA. Faça um resumo da <i>lmd</i> lição 1 ponto 4b.
+  Mostre a imagem. Depois, pergunte:</p>
+  <ul><li>De acordo com o que você está vendo, que pergunta você faria para começar uma conversa?</li>
+  <li>Que verdade da Bíblia você poderia mostrar?</li></ul>
+  <figure class="fig"><img src="img/portas.jpg" alt="Três portas de apartamentos no andar de um prédio. Uma das portas está com decorações de Natal: uma coroa natalina, luzes e presentes.">
+    <figcaption>Imagem da apostila: três portas de apartamentos no andar de um prédio. Uma das portas está com
+    decorações de Natal: uma coroa natalina, luzes e presentes.</figcaption></figure>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Apostila Vida e Ministério, novembro-dezembro de 2026</li><li>16-22 de novembro</li><li>parte 6</li></ol><p class="citar"><b>Para citar:</b> Apostila <i>Vida e Ministério</i> de novembro-dezembro de 2026</p><p><a href="https://www.jw.org/pt/biblioteca/jw-apostila-do-mes/novembro-dezembro-2026-mwb/Programa%C3%A7%C3%A3o-da-Reuni%C3%A3o-Vida-e-Minist%C3%A9rio-para-16-22-de-novembro-de-2026/" target="_blank" rel="noopener">abrir no jw.org</a></p></details>
+</section>
+
+<h2 class="sec" id="intro">A introdução (30 s)</h2>
+<div class="block">
+  <p class="fala">“Quando a gente toca a campainha, a pessoa ainda nem abriu a porta e a casa já está falando com a
+  gente. Um tapete, uma planta, um enfeite. A lição 1 da brochura <i>Ame as Pessoas: Faça Discípulos</i> ensina a
+  prestar atenção nisso. O princípio da lição é 1 Coríntios 13:4, 5: o amor ‘não procura os seus próprios interesses’.
+  Ou seja: a conversa começa pelo que interessa ao morador, não pelo que a gente tinha na cabeça.”</p>
+  <div class="quote"><span class="verse-chip base">1 Coríntios 13:4, 5</span> <sup>4</sup> O amor é paciente e bondoso. O amor não é ciumento. Não se gaba, não é orgulhoso, <sup>5</sup> não se comporta indecentemente, não procura os seus próprios interesses, não se irrita com facilidade. Não leva em conta o dano.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <p class="pessoal">A fala da introdução é preparação pessoal. O princípio é o que abre a lição 1 da <i>lmd</i>.</p>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Ame as Pessoas: Faça Discípulos</li><li>Lição 1 “Interesse pelas pessoas”</li><li>Princípio</li></ol><p class="citar"><b>Para citar:</b> Brochura <i>Ame as Pessoas: Faça Discípulos</i>, lição 1</p><p><a href="https://www.jw.org/pt/biblioteca/brochuras/ame-pessoas-faca-discipulos/licao-1/" target="_blank" rel="noopener">abrir no jw.org</a></p></details>
+</div>
+
+<h2 class="sec" id="ponto">Resumo do ponto 4b (1 min 30)</h2>
+<section class="oficial">
+  <h3>O que a lição diz</h3>
+  <p><b>4. Seja observador.</b> Pergunte-se:</p>
+  <ul>
+    <li>‘O que a pessoa está fazendo no momento? No que ela deve estar pensando?’</li>
+    <li><b>‘O que a roupa, a aparência ou a casa da pessoa revelam sobre suas crenças e sua cultura?’</b> ← ponto 4b</li>
+    <li>‘Será que esse é um bom momento para conversar com a pessoa?’</li>
+  </ul>
+  <div class="learn"><h4>💡 Os três pontos do resumo</h4><ul>
+    <li><b>Jesus fez isso.</b> Ele viu uma mulher chegando ao poço para tirar água e começou a conversa pelo que ela
+    estava fazendo: “Dê-me um pouco de água.” (João 4:6-9; <i>lmd</i> lição 1 ponto 1)</li>
+    <li><b>Por que funciona.</b> “É mais provável que a conversa seja boa se puxarmos um assunto que interessa à outra
+    pessoa.” (<i>lmd</i> lição 1 ponto 2)</li>
+    <li><b>Na prática:</b> antes de falar, olhe a roupa, a aparência e a casa. Elas contam no que a pessoa acredita e do
+    que ela gosta.</li>
+  </ul></div>
+  <div class="quote"><span class="verse-chip base">João 4:6-9</span> <sup>6</sup> De fato, ali ficava o poço de Jacó. E Jesus, cansado da viagem, estava sentado junto ao poço. Era por volta da sexta hora. <sup>7</sup> Uma mulher de Samaria chegou para tirar água. Jesus lhe disse: “Dê-me um pouco de água.” <sup>8</sup> (Os seus discípulos tinham ido à cidade para comprar alimento.) <sup>9</sup> Portanto, a samaritana lhe disse: “Como é que o senhor, sendo judeu, pede água a mim, apesar de eu ser samaritana?” (Porque os judeus não têm tratos com os samaritanos.)<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="apply-card">
+    <div class="apply-cell"><strong>No quintal</strong><p>Brinquedo de criança espalhado: provavelmente é uma família com filhos pequenos.</p></div>
+    <div class="apply-cell"><strong>Na porta</strong><p>Uma imagem religiosa: a pessoa tem uma fé e gosta de assunto religioso.</p></div>
+    <div class="apply-cell"><strong>Para quem já tem idade</strong><p>No testemunho por telefone ou por carta a gente não vê a porta, mas escuta. Uma criança chorando no fundo, um rádio com música religiosa. Isso também conta alguma coisa sobre a pessoa.</p></div>
+  </div>
+  <p class="pessoal">As três cenas são preparação pessoal: não citar como publicação.</p>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>jw.org</li><li>Ame as Pessoas: Faça Discípulos</li><li>Lição 1 “Interesse pelas pessoas”</li><li>ponto 4, segunda pergunta (ponto 4b)</li></ol><p class="citar"><b>Para citar:</b> Brochura <i>Ame as Pessoas: Faça Discípulos</i>, lição 1, ponto 4</p><p><a href="https://www.jw.org/pt/biblioteca/brochuras/ame-pessoas-faca-discipulos/licao-1/#p18" target="_blank" rel="noopener">abrir no jw.org (ponto 4b)</a></p><ol><li>jw.org</li><li>Ame as Pessoas: Faça Discípulos</li><li>Lição 1</li><li>pontos 1 e 2</li></ol><p class="citar"><b>Para citar:</b> “Na mesma lição, ponto 2...”</p></details>
+</section>
+
+<div class="section-divider" style="margin-top:22px">As duas perguntas da apostila</div>
+
+<section class="oficial" id="q1">
+  <h3>Pergunta 1 da apostila</h3>
+  <p class="q">De acordo com o que você está vendo, que pergunta você faria para começar uma conversa?</p>
+  <div class="learn"><h4>💡 O que se espera ouvir</h4><ul>
+    <li><b>“Nesta época do ano muitos pensam em Jesus. Na sua opinião, qual foi a maior realização de Jesus?”</b>
+    É uma apresentação sugerida no <i>Nosso Ministério do Reino</i> de novembro de 2012.</li>
+    <li><b>“O senhor acha que um dia as pessoas vão ser bondosas e compreensivas o ano inteiro, e não só no fim do
+    ano?”</b> Adaptada da pergunta que <i>A Sentinela</i> de 15/12/2006 faz: “Será que um dia as pessoas serão
+    generosas e compreensivas de modo permanente?”</li>
+    <li><b>“Vejo que vocês capricharam na decoração. Essa época é especial para a família de vocês?”</b>
+    <span class="pessoal">(preparação pessoal)</span></li>
+  </ul></div>
+  <div class="block"><h4>🔁 Se a assistência ficar quieta, puxe com</h4><ul>
+    <li>“O que essa porta conta sobre o morador?”</li>
+    <li>Ajuda para a resposta: <i>A Sentinela</i> de 15/12/2006 lembra que, nessa época, muita gente aproveita para
+    passar tempo com a família e, para muitas pessoas sinceras, a data é uma ocasião para honrar a Jesus Cristo.</li>
+  </ul></div>
+  <div class="block coment"><h4>🙋 Comentário de apoio (se ninguém levantar a mão, até 30 segundos)</h4><p>Essa porta
+  mostra que a pessoa gosta dessa época e provavelmente pensa em Jesus nesses dias. Então eu começaria por aí:
+  “Nesta época muita gente pensa em Jesus. Na sua opinião, qual foi a maior coisa que ele fez?” É um assunto de que
+  ela já gosta.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org</li><li>Nosso Ministério do Reino, novembro de 2012</li><li>“Apresentações-modelo”</li><li>Para iniciar estudos bíblicos no primeiro sábado de dezembro</li></ol><p class="citar"><b>Para citar:</b> “Uma apresentação sugerida no <i>Nosso Ministério do Reino</i> de novembro de 2012...”</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/202012408" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 2:14</li><li>“Espírito natalino o ano inteiro?” (w06 15/12 pág. 3)</li></ol><p class="citar"><b>Para citar:</b> <i>A Sentinela</i> de 15 de dezembro de 2006, página 3</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2006920" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details>
+</section>
+
+<section class="oficial" id="q2">
+  <h3>Pergunta 2 da apostila</h3>
+  <p class="q">Que verdade da Bíblia você poderia mostrar?</p>
+  <div class="learn"><h4>💡 O que se espera ouvir</h4><ul>
+    <li><b>Lucas 2:14: a paz que os anjos anunciaram.</b> O artigo do jw.org sobre esse texto explica que essa paz não
+    é só ausência de guerra. É também a paz de quem tem a aprovação de Jeová. E diz que Jesus, como Rei do Reino de
+    Deus, “vai trazer para a Terra inteira uma paz verdadeira que nunca vai acabar”.</li>
+    <li><b>Isaías 9:6, 7:</b> Jesus é chamado “Príncipe da Paz”, e “a expansão do seu reinado e a paz [...] não terão
+    fim”. Liga com a ideia de paz o ano inteiro.</li>
+    <li><b>João 3:16:</b> responde à pergunta “qual foi a maior realização de Jesus?”. Deus deu o seu Filho para que as
+    pessoas possam ter vida eterna.</li>
+    <li><b>Atos 20:35:</b> “Há mais felicidade em dar do que em receber.” Combina com os presentes da porta.
+    <span class="pessoal">(a ligação com os presentes é preparação pessoal)</span></li>
+  </ul></div>
+  <div class="quote"><span class="verse-chip base">Lucas 2:14</span> “Glória a Deus nas maiores alturas, e na terra paz entre os homens a quem ele concede o seu favor.”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Isaías 9:6, 7</span> <sup>6</sup> Porque um menino nos nasceu, Um filho nos foi dado; E o reinado estará sobre os seus ombros. Ele receberá o nome de Maravilhoso Conselheiro, Deus Poderoso, Pai Eterno, Príncipe da Paz. <sup>7</sup> A expansão do seu reinado E a paz sobre o trono de Davi E sobre o seu reino não terão fim, De modo que este será estabelecido firmemente e amparado Por meio da justiça e da retidão, Desde agora e para sempre. O zelo de Jeová dos exércitos fará isso.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">João 3:16</span> “Porque Deus amou tanto o mundo, que deu o seu Filho unigênito, para que todo aquele que nele exercer fé não seja destruído, mas tenha vida eterna.<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="quote"><span class="verse-chip">Atos 20:35</span> Em tudo eu lhes mostrei que, trabalhando arduamente assim, vocês devem ajudar os fracos e ter em mente as palavras do Senhor Jesus, que disse: ‘Há mais felicidade em dar do que em receber.’”<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+  <div class="connection"><b>⚠️ Cuidado:</b> na primeira conversa, não comece pela origem do Natal nem pela data em que
+  Jesus nasceu. Isso fecha a porta. Se o morador perguntar, o artigo “Quando Jesus nasceu?” do jw.org responde.
+  <span class="pessoal">(conselho de preparação pessoal)</span></div>
+  <div class="block coment"><h4>🙋 Comentário de apoio (se ninguém levantar a mão, até 30 segundos)</h4><p>Eu leria
+  Lucas 2:14. Os anjos falaram de paz na terra quando Jesus nasceu. Muita gente sente essa paz só no fim do ano. Mas a
+  Bíblia mostra que Jesus, como Rei, vai trazer uma paz que nunca vai acabar. É uma boa notícia para quem gosta dessa
+  época.</p></div>
+  <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Lucas 2:14</li><li>“Lucas 2:14: Paz na terra entre os homens de boa vontade” (ijwbv artigo 37)</li></ol><p class="citar"><b>Para citar:</b> O artigo “Lucas 2:14: Paz na terra entre os homens de boa vontade”, da série Textos Bíblicos Explicados, no jw.org</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300139" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>jw.org</li><li>Ensinos Bíblicos</li><li>Perguntas Bíblicas Respondidas</li><li>“Quando Jesus nasceu?”</li></ol><p class="citar"><b>Para citar:</b> O artigo “Quando Jesus nasceu?”, no jw.org</p><p><a href="https://www.jw.org/pt/ensinos-biblicos/perguntas/quando-jesus-nasceu/" target="_blank" rel="noopener">abrir no jw.org</a></p></details>
+</section>
+
+<h2 class="sec" id="conducao">Como conduzir os 5 minutos</h2>
+<div class="roteiro">
+  <div class="rot"><div class="t">0:00<span>30 s</span></div><div>
+    <h4>Introdução</h4>
+    <p>A porta começa a conversa antes de o morador abrir. Princípio: 1 Coríntios 13:4, 5.</p></div></div>
+  <div class="rot"><div class="t">0:30<span>1 min 30</span></div><div>
+    <h4>Resumo do ponto 4b</h4>
+    <p>Leia a pergunta do ponto 4b. Conte em uma frase o que Jesus fez no poço (João 4:7). Dê uma das cenas: para os
+    irmãos de idade, a do telefone.</p></div></div>
+  <div class="rot"><div class="t">2:00<span>1 min 30</span></div><div>
+    <h4>Mostre a imagem e faça a pergunta 1</h4>
+    <p>Deixe a assistência olhar a imagem uns segundos antes de perguntar. Duas ou três respostas bastam.</p></div></div>
+  <div class="rot"><div class="t">3:30<span>1 min 15</span></div><div>
+    <h4>Pergunta 2</h4>
+    <p>Se alguém citar Lucas 2:14, leia o versículo. Se houver tempo, lembre o cuidado: não começar pela origem do
+    Natal.</p></div></div>
+  <div class="rot"><div class="t">4:45<span>15 s</span></div><div>
+    <h4>Fecho</h4>
+    <p class="fala">“Antes de bater, olhe. A porta já começou a conversa. A gente só continua pelo assunto que o morador
+    escolheu e leva a ele uma verdade da Bíblia. Como diz Tiago 1:19: ‘prontos para ouvir’, ‘demorar para
+    falar’.”</p></div></div>
+</div>
+<div class="quote"><span class="verse-chip">Tiago 1:19</span> Tenham isto em mente, meus amados irmãos: todos devem ser prontos para ouvir, mas devem demorar para falar e demorar para ficar irados;<span class="src">Tradução do Novo Mundo (edição de estudo), do seu JW Library</span></div>
+<p class="pessoal">O roteiro, as falas de introdução e fecho, as perguntas de apoio e os comentários de reserva são
+preparação pessoal. Há mais respostas do que cabem em 5 minutos: escolha uma ou duas por pergunta e deixe a assistência
+responder.</p>
+
+<footer><p>Fontes: apostila Vida e Ministério de novembro-dezembro de 2026; brochura <i>Ame as Pessoas: Faça
+Discípulos</i>, lição 1; <i>A Sentinela</i> de 15/12/2006, p. 3; <i>Nosso Ministério do Reino</i> de novembro de 2012;
+artigo “Lucas 2:14: Paz na terra entre os homens de boa vontade” e “Quando Jesus nasceu?” (jw.org); Tradução do Novo
+Mundo e Guia de Pesquisa do JW Library. As cenas, o roteiro e os comentários de apoio são notas de preparação
+pessoal.</p></footer>
+
+</div>
+</body>
+</html>
