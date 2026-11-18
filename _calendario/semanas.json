@@ -30,7 +30,14 @@
           "href": "semanas/2026-11-16/meio-de-semana/inativos/"
         }
       ],
-      "fim_semana": []
+      "fim_semana": [
+        {
+          "tipo": "sentinela",
+          "titulo": "Pregando as boas novas em “todas as línguas das nações”",
+          "detalhe": "A Sentinela de setembro de 2026",
+          "href": "semanas/2026-11-16/fim-de-semana/sentinela/"
+        }
+      ]
     },
     {
       "inicio": "2026-11-09",
