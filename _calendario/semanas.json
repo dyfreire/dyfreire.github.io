@@ -1,6 +1,20 @@
 {
   "semanas": [
     {
+      "inicio": "2026-11-16",
+      "fim": "2026-11-22",
+      "leitura": "Lamentações 1-2",
+      "meio": [
+        {
+          "tipo": "parte",
+          "titulo": "O que você diria?",
+          "detalhe": "Faça Seu Melhor no Ministério · consideração de casa em casa · 5 min",
+          "href": "semanas/2026-11-16/meio-de-semana/o-que-voce-diria/"
+        }
+      ],
+      "fim_semana": []
+    },
+    {
       "inicio": "2026-11-09",
       "fim": "2026-11-15",
       "leitura": "Jeremias 51-52",
