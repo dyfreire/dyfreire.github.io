@@ -11,6 +11,25 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/style.css?v=5">
 <style>
+  /* Pontes "Ontem e hoje" */
+  details.ponte{margin-top:.6rem;border:1px solid var(--c-hoje);border-left:4px solid var(--c-hoje);border-radius:2px;background:var(--card)}
+  details.ponte>summary{cursor:pointer;list-style:none;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-hoje);padding:.5rem .7rem}
+  details.ponte>summary::-webkit-details-marker{display:none}
+  details.ponte>summary::before{content:"+";display:inline-block;width:1rem}
+  details.ponte[open]>summary::before{content:"\2212"}
+  .pitem{padding:.2rem .9rem .8rem;border-top:1px dashed var(--rule)}
+  .pitem:first-of-type{border-top:0}
+  .pitem p{font-family:var(--f-read);font-size:.98rem;line-height:1.5;margin:.35rem 0}
+  .ptit{font-family:var(--f-ui)!important;font-weight:700;color:var(--ink);margin-top:.6rem!important}
+  .ptag{display:inline-block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;padding:.08rem .45rem;border-radius:999px;margin-right:.25rem;vertical-align:.1em}
+  .ptag.ontem{background:var(--card-alt);color:var(--c-pesquisa);border:1px solid var(--c-pesquisa)}
+  .ptag.hoje{background:var(--card-alt);color:var(--c-hoje);border:1px solid var(--c-hoje)}
+  .pigual{color:var(--ink-soft)}
+  .pvs{font-family:var(--f-ui);font-size:.85rem}
+  .pontes{margin-top:3rem;scroll-margin-top:5rem}
+  .prow{display:grid;grid-template-columns:3.6rem 1fr;gap:0 .9rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+  .prow p{margin:.2rem 0;font-size:.95rem}
+  .pnum2{font-family:var(--f-mono);font-size:.85rem;color:var(--c-hoje);text-decoration:none;padding-top:.6rem}
   /* Rastro da fonte: "de onde veio" em cada adicional e em cada anotação de pesquisa */
   details.rastro{margin:.45rem 0 .1rem;border:1px dashed var(--rule-strong);border-radius:10px;padding:.3rem .75rem;font-family:var(--f-ui);font-size:.82rem;background:var(--card)}
   details.rastro summary{cursor:pointer;color:var(--c-pesquisa);font-weight:500}
@@ -33,6 +52,7 @@
     <button class="btn" type="button" id="guideBtn" aria-pressed="true">Cores</button>
     <button class="btn" type="button" id="routeBtn">Anotações</button>
     <button class="btn" type="button" id="ansBtn" aria-pressed="false">Adicionais</button>
+    <a class="btn" href="#pontes">Pontes</a>
     <a class="btn" href="#roteiro">60 min</a>
     <a class="btn" href="#resumo">Resumo</a>
     <button class="btn" type="button" id="themeBtn">Tema</button>
@@ -142,6 +162,23 @@
           <li><b>Para os de idade.</b> Muitos de nós aprendemos a verdade com alguém que teve paciência de explicar com palavras simples. Falar devagar e com palavras simples também é falar “a língua” de quem nos ouve.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Babel: sem a mesma língua, a obra para</p>
+          <p><span class="ptag ontem">Ontem</span> Em Babel, Jeová confundiu a língua dos construtores. O Estudo Perspicaz diz que isso “impossibilitou qualquer trabalho coordenado”. Gênesis 11:8 conta que eles “deixaram de construir a cidade”. <span class="pvs"><span class="scr" data-ref="1:11:6-9">Gênesis 11:6-9</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Pense numa obra aqui na rua. O mestre de obras só fala português, e o servente chegou do Haiti semana passada. Se ninguém traduz, o cimento vai para o lugar errado e o serviço emperra.</p>
+          <p class="pigual"><b>O que é igual:</b> Sem entender a língua, ninguém trabalha junto. Jeová fez o contrário de Babel: junta gente de todo idioma e dá a mensagem na língua de cada um.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Gênesis 11:6</li><li>“Idioma, língua” (it-1 “Idioma, língua” par. 9)</li><li>wol.jw.org: parágrafo 9 do verbete</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 1, verbete “Idioma, língua”, parágrafo 9</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002680#h=11" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Gênesis 11:8</li></ol><p class="citar"><b>Para citar:</b> Gênesis 11:8</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/1/11#v=1:11:8" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+        <div class="pitem">
+          <p class="ptit">O mensageiro que traz notícia boa</p>
+          <p><span class="ptag ontem">Ontem</span> Romanos 10:15 cita Isaías: “Como são lindos os pés daqueles que declaram boas novas de coisas boas!” A nota de estudo explica que, no tempo do exílio, “seria emocionante para os que estivessem em Jerusalém ver um mensageiro chegando com notícias de libertação”. <span class="pvs"><span class="scr" data-ref="45:10:14-15">Romanos 10:14-15</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> A família está no corredor do hospital, esperando a cirurgia acabar. A porta abre e o médico vem sorrindo, dizendo que correu tudo bem. Ninguém olha para o sapato dele, mas todo mundo fica feliz de ver ele chegar.</p>
+          <p class="pigual"><b>O que é igual:</b> Quem leva a mensagem do Reino é esse mensageiro. Para Jeová, os pés de quem prega são lindos, mesmo cansados.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Romanos 10:15</li></ol><p class="citar"><b>Para citar:</b> Romanos 10:15</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/45/10#v=45:10:15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Romanos 10:15</li><li>nota de estudo: “Como são lindos os pés” e “daqueles que declaram boas novas”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, edição de estudo, nota de estudo de Romanos 10:15</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/45/10#study=discover&v=45:10:15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -172,6 +209,16 @@
           <li><b>Ilustração.</b> Na rodoviária lotada, a criança segura firme a barra da saia da mãe para não se perder. Ela não larga, porque sabe que a mãe conhece o caminho. Os dez homens seguram firme porque viram que Deus está com o seu povo.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
           <li><b>Para os de idade.</b> Pense na primeira vez que você entrou num Salão do Reino. O que fez você voltar? Muitos responderiam como os dez homens: deu para ver que Deus estava com aquele povo.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
+      </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Zacarias falou para um povo pequeno e cansado</p>
+          <p><span class="ptag ontem">Ontem</span> Zacarias profetizou para os judeus que tinham deixado Babilônia e voltado para Jerusalém. A Sentinela de novembro de 2023 lembra que eles tinham que “construir suas casas, cuidar das plantações e alimentar suas famílias”. E ainda enfrentavam inimigos que queriam parar a obra do templo. <span class="pvs"><span class="scr" data-ref="38:8:23">Zacarias 8:23</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Pense na congregação pequena do interior: quinze publicadores, Salão simples, metade com mais de setenta anos, todo mundo cansado no fim do mês.</p>
+          <p class="pigual"><b>O que é igual:</b> Foi para um povo assim que Jeová prometeu que gente de todas as línguas ia chegar. A promessa não dependia do tamanho deles, e não depende do nosso.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>A Sentinela, edição de estudo de novembro de 2023</li><li>“Você pode ter certeza que Jeová vai te ajudar em tempos difíceis”</li><li>wol.jw.org: parágrafo 2</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de novembro de 2023, página 14, parágrafo 2</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023646#h=7" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>A Sentinela, edição de estudo de novembro de 2023</li><li>“Você pode ter certeza que Jeová vai te ajudar em tempos difíceis”</li><li>wol.jw.org: parágrafo 4</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de novembro de 2023, página 15, parágrafo 4</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023646#h=10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
       </details>
     </div>
   </div>
@@ -234,6 +281,23 @@
           <li><b>Para os de idade.</b> Com que livro você estudou? <i>A Verdade Que Conduz à Vida Eterna</i>, <i>Poderá Viver Para Sempre no Paraíso na Terra</i>, <i>O Que a Bíblia Realmente Ensina?</i> A Sentinela de julho de 2022 diz que cada um deles “atendeu à necessidade da época em que foi lançado”. Contar isso aos mais novos mostra a mão de Jeová na história.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Mateus 24:45</li><li>“Apoie Jesus, o nosso líder” (w22.07 págs. 10-12)</li><li>wol.jw.org: parágrafo 10</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de julho de 2022, página 10, parágrafo 10</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2022481#h=17" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">O administrador da casa e a comida na hora certa</p>
+          <p><span class="ptag ontem">Ontem</span> Na ilustração de Jesus, o administrador era um servo de “grande confiança”, que “supervisionava todos os assuntos relacionados ao seu senhor”. A tarefa dele era dar aos outros servos “a sua medida de mantimentos no tempo apropriado” (Lucas 12:42). <span class="pvs"><span class="scr" data-ref="42:12:42">Lucas 12:42</span> &middot; <span class="scr" data-ref="40:24:45">Mateus 24:45</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Na cozinha de um hospital, poucas cozinheiras preparam a comida de centenas de pacientes. Cada um recebe a dieta certa, na hora certa. O paciente nem conhece quem cozinhou, mas come todo dia.</p>
+          <p class="pigual"><b>O que é igual:</b> Poucos alimentam muitos, na hora certa. É assim que o escravo fiel cuida do alimento espiritual do povo de Jeová no mundo inteiro.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Lucas 12:42</li><li>nota de estudo: “administrador” e “do grupo de assistentes”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, edição de estudo, nota de estudo de Lucas 12:42</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/42/12#study=discover&v=42:12:42" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Lucas 12:42</li></ol><p class="citar"><b>Para citar:</b> Lucas 12:42</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/42/12#v=42:12:42" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+        <div class="pitem">
+          <p class="ptit">Do Fotodrama ao vídeo no celular</p>
+          <p><span class="ptag ontem">Ontem</span> Antes de 1919, os Estudantes da Bíblia já mostravam o “Fotodrama da Criação” em vários idiomas. Em 1921, o livro <i>A Harpa de Deus</i> saiu em 36 línguas.</p>
+          <p><span class="ptag hoje">Hoje</span> Na calçada, o irmão abre no celular um vídeo do jw.org na língua do morador. Em dois minutos, a pessoa vê e ouve a mensagem.</p>
+          <p class="pigual"><b>O que é igual:</b> Jeová usa os meios de cada época. O que não muda é a mensagem.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 4</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 4</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p11" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -271,6 +335,30 @@
           <li><b>As irmãs.</b> Salmo 68:11: “As mulheres que proclamam as boas novas são um grande exército.” A Sentinela de 15/8/2014 dizia que, naquele tempo, as mulheres eram “a maioria dos mais de 1 milhão de proclamadores do Reino de tempo integral”.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Salmo 68:11</li></ol><p class="citar"><b>Para citar:</b> Salmo 68:11</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/19/68#v=19:68:11" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Salmo 68:11</li><li>“Qual o papel das mulheres no propósito de Jeová?” (w14 15/8 pág. 10 par. 19)</li><li>wol.jw.org: parágrafo 19</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de 15 de agosto de 2014, página 10, parágrafo 19</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2014603#h=29" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></li>
           <li><b>Para os de idade.</b> Quem já não consegue sair na pregação ainda apoia a obra com a oração, com a carta e com o donativo. A lição 55 lembra a viúva pobre de Lucas 21:1-4 e pergunta: “Será que precisamos dar muito dinheiro para agradar a Jeová?”<details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Salmo 110:3</li><li>“Apoie a sua congregação” (lff lição 55)</li><li>wol.jw.org: ponto 3: “Apoie a congregação com os seus donativos”, 1.º parágrafo (a viúva de Lucas 21)</li></ol><p class="citar"><b>Para citar:</b> Seja Feliz para Sempre!, lição 55, ponto 3</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102021255#h=12" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Salmo 110:3</li><li>“Apoie a sua congregação” (lff lição 55)</li><li>wol.jw.org: ponto 3: “Apoie a congregação com os seus donativos”, 1.ª pergunta</li></ol><p class="citar"><b>Para citar:</b> Seja Feliz para Sempre!, lição 55, ponto 3</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1102021255#h=13" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
+      </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Espada que vira ferramenta de plantar</p>
+          <p><span class="ptag ontem">Ontem</span> Isaías 2:4 diz que o povo transformaria “as suas espadas em arados”. A nota de rodapé diz que, ao pé da letra, são “relhas de arado”, a peça de ferro que abre a terra. A arma de ferir vira ferramenta de plantar. <span class="pvs"><span class="scr" data-ref="23:2:2-4">Isaías 2:2-4</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> O rapaz que andava armado e brigava por causa de torcida hoje carrega a bolsa de pregação. No sábado, ele limpa o Salão junto com um irmão do time rival.</p>
+          <p class="pigual"><b>O que é igual:</b> Quando a pessoa aprende de Jeová, ela muda por dentro. O que servia para ferir passa a servir para ajudar.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Isaías 2:2, 4</li><li>nota de rodapé em “Na parte final dos dias” e em “arados”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, nota de rodapé de Isaías 2:2, 4</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/23/2#study=discover&v=23:2:2" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+        <div class="pitem">
+          <p class="ptit">Voluntário, sem ninguém obrigar</p>
+          <p><span class="ptag ontem">Ontem</span> O Salmo 110:3 diz: “Seu povo se apresentará voluntariamente no dia da sua força militar.” A nota de rodapé dá outro jeito de dizer: “no dia em que o seu exército se mobilizar”. <span class="pvs"><span class="scr" data-ref="19:110:3">Salmo 110:3</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Sábado, sete da manhã, mutirão de limpeza do Salão. Ninguém recebe salário e ninguém foi obrigado. Do mesmo jeito, irmãos traduzem, imprimem e cuidam do JW Library e do jw.org.</p>
+          <p class="pigual"><b>O que é igual:</b> Na hora em que Jeová chama, o povo dele aparece por amor.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Salmo 110:3</li><li>nota de rodapé em “no dia da sua força militar”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, nota de rodapé de Salmo 110:3</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/19/110#study=discover&v=19:110:3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 5</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 5</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p13" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+        <div class="pitem">
+          <p class="ptit">Jeová não esquece quem doa</p>
+          <p><span class="ptag ontem">Ontem</span> Os judeus que ficaram em Babilônia mandaram ouro e prata. A Sentinela de novembro de 2023 conta que Jeová pediu para Zacarias fazer uma coroa com esse ouro e essa prata. A “coroa grandiosa” serviria “como recordação” daquelas contribuições generosas.</p>
+          <p><span class="ptag hoje">Hoje</span> A irmã aposentada separa uma nota pequena todo mês e põe na caixa de donativos do Salão. Ela acha que é pouco. Mas é com donativos assim que saem publicações em mais de 1.100 idiomas.</p>
+          <p class="pigual"><b>O que é igual:</b> Jeová guarda a lembrança de quem dá com amor, seja ouro e prata, seja uma nota dobrada.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>A Sentinela, edição de estudo de novembro de 2023</li><li>“Você pode ter certeza que Jeová vai te ajudar em tempos difíceis”</li><li>wol.jw.org: parágrafo 20</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de novembro de 2023, página 19, parágrafo 20</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2023646#h=29" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 6</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 6</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p14" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
       </details>
     </div>
   </div>
@@ -333,6 +421,23 @@
           <li><b>Para os de idade.</b> Muitos irmãos de idade aprenderam a usar o celular só para ler a Bíblia e assistir às reuniões. Esse mesmo celular pode mostrar um vídeo na língua de um estrangeiro. É o nosso jeito de falar outras línguas.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Pentecostes: gente de longe na mesma cidade</p>
+          <p><span class="ptag ontem">Ontem</span> Pentecostes era a festa da colheita. A nota de estudo diz que “multidões de judeus e prosélitos vinham de terras distantes a Jerusalém”. Prosélito era “uma pessoa de outra nação que se converte ao judaísmo”. Atos 2:9-11 cita partos, medos, gente do Egito, de Roma, cretenses e árabes. <span class="pvs"><span class="scr" data-ref="44:2:5-11">Atos 2:5-11</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Em muitas cidades do Brasil, na fila do posto de saúde, dá para ouvir o espanhol de uma família venezuelana, o jeito de falar dos haitianos, o sotaque de um angolano. Gente de longe, na mesma fila.</p>
+          <p class="pigual"><b>O que é igual:</b> Jeová juntou o povo em Jerusalém e falou na língua de cada um. Hoje as nações vêm morar perto de nós, e o celular tem a mensagem na língua delas.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Atos 2:1</li><li>nota de estudo: “Pentecostes”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, edição de estudo, nota de estudo de Atos 2:1</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/44/2#study=discover&v=44:2:1" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Mateus 23:15</li><li>nota de estudo: “prosélito”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, edição de estudo, nota de estudo de Mateus 23:15</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/40/23#study=discover&v=40:23:15" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Atos 2:9-11</li></ol><p class="citar"><b>Para citar:</b> Atos 2:9-11</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/44/2#v=44:2:9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+        <div class="pitem">
+          <p class="ptit">Entender é uma coisa, sentir é outra</p>
+          <p><span class="ptag ontem">Ontem</span> Muitos em Jerusalém falavam “uma língua usada internacionalmente, talvez o grego”. Mesmo assim, a nota de estudo de Atos 2:8 diz: “Mas ouvir as boas novas na sua língua materna chamou sua atenção.” <span class="pvs"><span class="scr" data-ref="44:2:8">Atos 2:8</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> A senhora boliviana que costura aqui no bairro entende o português da feira. Mas, quando alguém fala com ela em espanhol, o rosto dela muda, ela puxa uma cadeira e quer conversar.</p>
+          <p class="pigual"><b>O que é igual:</b> A língua da cabeça entende. A língua do coração abre a porta.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Atos 2:8</li><li>nota de estudo: “a sua língua nativa”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, edição de estudo, nota de estudo de Atos 2:8</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/44/2#study=discover&v=44:2:8" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -362,6 +467,16 @@
           <li><b>Pergunta para a assistência.</b> Quem aqui já usou o JW Library para mostrar um vídeo ou um texto em outra língua? O que se quer ouvir: experiências curtas, de poucos segundos.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
           <li><b>Para os de idade.</b> Quem prega por carta pode colocar junto um folheto na língua do vizinho estrangeiro. Pode ser o folheto que vai ficar guardado por anos, como o de Youa, no quadro dos §§ 10 e 11.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>quadro “Uma refugiada encontra esperança”</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, quadro “Uma refugiada encontra esperança”</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p72" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
+      </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Explicar até o povo entender</p>
+          <p><span class="ptag ontem">Ontem</span> Em Neemias 8, Esdras, o sacerdote, trouxe o livro da Lei para a praça. A Lei foi lida em voz alta, “explicando-a claramente e dando o sentido dela”. Assim “ajudavam o povo a entender o que estava sendo lido” (Neemias 8:2, 8). <span class="pvs"><span class="scr" data-ref="16:8:1-8">Neemias 8:1-8</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Hoje, no consultório, é o intérprete do artigo. No Salão, é o irmão que dirige o estudo: lê o parágrafo devagar e explica com palavras simples para quem tem pouca leitura.</p>
+          <p class="pigual"><b>O que é igual:</b> Ler não basta. A mensagem tem que chegar de um jeito que a pessoa entenda.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Neemias 8:1-8</li></ol><p class="citar"><b>Para citar:</b> Neemias 8:1-8</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/16/8#v=16:8:1" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
       </details>
     </div>
   </div>
@@ -396,6 +511,16 @@
           <li><b>Para os de idade.</b> Youa guardou o folheto “por muitos anos”. Às vezes achamos que o folheto que deixamos foi para o lixo. A história dela mostra que ele pode estar guardado numa cesta, esperando a hora.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>quadro “Uma refugiada encontra esperança”</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, quadro “Uma refugiada encontra esperança”</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p72" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Filipe correu até o carro; Robert foi até o navio</p>
+          <p><span class="ptag ontem">Ontem</span> Um oficial da Etiópia lia o profeta Isaías no seu carro. Filipe correu ao lado e perguntou: “O senhor entende o que está lendo?” Ele respondeu: “Na verdade, como posso entender a menos que alguém me oriente?” (Atos 8:30, 31). <span class="pvs"><span class="scr" data-ref="44:8:27-31">Atos 8:27-31</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Robert foi até o porto e achou o homem da Turquia no navio. Perto de nós, pode ser o vizinho estrangeiro no ponto de ônibus, com o celular na mão. O folheto na língua dele está a um toque no JW Library.</p>
+          <p class="pigual"><b>O que é igual:</b> Nos dois casos, quem tinha a mensagem foi até a pessoa e usou a língua dela.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Atos 8:27-31</li></ol><p class="citar"><b>Para citar:</b> Atos 8:27-31</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/44/8#v=44:8:27" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 10</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 10</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p19" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -427,6 +552,16 @@
           <li><b>Para os de idade.</b> Muitos irmãos de idade começaram a ler a Bíblia numa linguagem difícil. Hoje temos uma tradução que o artigo chama de “exata e fácil de ler”. Ler um versículo dela em voz alta para um neto mostra isso.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 12</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 12</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p22" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">A Bíblia na língua dos netos</p>
+          <p><span class="ptag ontem">Ontem</span> Muitos judeus moravam no Egito e falavam grego. A Septuaginta “foi produzida por judeus alexandrinos” e era “usada pelos judeus e pelos cristãos de língua grega no Egito e em outros lugares”.</p>
+          <p><span class="ptag hoje">Hoje</span> Pense no bisneto de japoneses ou de italianos aqui no Brasil. O bisavô falava a língua da terra dele, mas o bisneto só fala português. Se a Bíblia não estiver em português, ele não entende.</p>
+          <p class="pigual"><b>O que é igual:</b> Quando o povo muda de língua, a Bíblia precisa acompanhar. Foi assim em Alexandria, e é assim com a Tradução do Novo Mundo em mais de 300 idiomas.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>Estudo Perspicaz das Escrituras, volume 1</li><li>verbete “Alexandria”</li><li>wol.jw.org: parágrafo sobre a Septuaginta</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 1, verbete “Alexandria”, página 81</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200000193#h=5" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>Estudo Perspicaz das Escrituras, volume 2</li><li>verbete “Versões”</li><li>wol.jw.org: subtítulo “A ‘Septuaginta’ grega”</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 2, verbete “Versões”, página 1187</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200004554#h=7" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 12</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 12</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p22" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -455,6 +590,16 @@
           <li><b>Um exemplo em português.</b> Um artigo do jw.org compara Romanos 10:13. A Tradução do Novo Mundo diz: “Todo aquele que invocar o nome de Jeová será salvo.” A Almeida revista e corrigida diz: “Porque todo aquele que invocar o nome do Senhor será salvo.” E explica que o versículo cita Joel 2:32, que no hebraico original “usa o nome de Deus”.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Romanos 10:13</li><li>“Romanos 10:13: ‘Invocar o nome do Senhor’” (ijwbv artigo 3)</li><li>wol.jw.org: citação da Tradução do Novo Mundo no topo</li></ol><p class="citar"><b>Para citar:</b> jw.org, artigo “Romanos 10:13: Invocar o nome do Senhor”, citação da Tradução do Novo Mundo no topo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300102#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Romanos 10:13</li><li>“Romanos 10:13: ‘Invocar o nome do Senhor’” (ijwbv artigo 3)</li><li>wol.jw.org: citação da Almeida revista e corrigida no topo</li></ol><p class="citar"><b>Para citar:</b> jw.org, artigo “Romanos 10:13: Invocar o nome do Senhor”, citação da Almeida revista e corrigida no topo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300102#h=4" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Romanos 10:13</li><li>“Romanos 10:13: ‘Invocar o nome do Senhor’” (ijwbv artigo 3)</li><li>wol.jw.org: 4.º parágrafo</li></ol><p class="citar"><b>Para citar:</b> jw.org, artigo “Romanos 10:13: Invocar o nome do Senhor”, 4.º parágrafo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300102#h=9" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details></li>
           <li><b>Para os de idade.</b> Muitos irmãos de idade cresceram ouvindo só “o Senhor” na igreja. O dia em que leram o nome Jeová pela primeira vez na Bíblia é uma ótima experiência para contar.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
+      </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">O costume de ontem e o líder religioso de hoje</p>
+          <p><span class="ptag ontem">Ontem</span> Com o tempo, surgiu entre os judeus “uma ideia supersticiosa, de que era errado até mesmo pronunciar o nome divino”. O Estudo Perspicaz explica que, ao ler as Escrituras, “o leitor judeu, em vez de pronunciar o nome divino”, dizia Adonai, que quer dizer Soberano Senhor. <span class="pvs"><span class="scr" data-ref="45:10:13">Romanos 10:13</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Hoje quem ouve a Bíblia na missa ou no culto escuta “Senhor” no lugar do nome. Romanos 10:13, na Almeida, revista e corrigida, diz: “Porque todo aquele que invocar o nome do Senhor será salvo.” A Tradução do Novo Mundo diz: “Todo aquele que invocar o nome de Jeová será salvo.” E a nota b do artigo lembra que, em 2008, o Papa orientou que o nome “não deve ser usado nem pronunciado”.</p>
+          <p class="pigual"><b>O que é igual:</b> Ontem era um costume supersticioso; hoje é orientação de líderes religiosos. Nos dois casos, o nome vira um título, e o povo fica sem saber como Deus se chama. Fale disso com respeito: o problema é o costume, não a pessoa que está ouvindo.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>Estudo Perspicaz das Escrituras, volume 2</li><li>verbete “Jeová”</li><li>wol.jw.org: subtítulo “Superstição oculta o nome”</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 2, verbete “Jeová”, página 37</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002391#h=6" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>Estudo Perspicaz das Escrituras, volume 2</li><li>verbete “Jeová”</li><li>wol.jw.org: parágrafo sobre Adonai</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 2, verbete “Jeová”, página 38</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002391#h=16" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Romanos 10:13</li><li>“Romanos 10:13: ‘Invocar o nome do Senhor’” (ijwbv artigo 3)</li><li>wol.jw.org: citação da Almeida revista e corrigida no topo</li></ol><p class="citar"><b>Para citar:</b> jw.org, artigo “Romanos 10:13: Invocar o nome do Senhor”, citação da Almeida revista e corrigida no topo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300102#h=4" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Romanos 10:13</li><li>“Romanos 10:13: ‘Invocar o nome do Senhor’” (ijwbv artigo 3)</li><li>wol.jw.org: citação da Tradução do Novo Mundo no topo</li></ol><p class="citar"><b>Para citar:</b> jw.org, artigo “Romanos 10:13: Invocar o nome do Senhor”, citação da Tradução do Novo Mundo no topo</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/502300102#h=3" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>nota b (no § 13)</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, nota b (no § 13)</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p38" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
       </details>
     </div>
   </div>
@@ -489,6 +634,16 @@
           <li><b>Para os de idade.</b> Quando a memória falha e a oração fica curta, ainda dá para começar como Jesus ensinou: “Pai, santificado seja o teu nome.” Foi o primeiro pedido que ele colocou na oração.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Lucas 11:2</li></ol><p class="citar"><b>Para citar:</b> Lucas 11:2</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/42/11#v=42:11:2" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">O nome nas cartas do dia a dia</p>
+          <p><span class="ptag ontem">Ontem</span> O Estudo Perspicaz cita documentos antigos escritos em hebraico, as Cartas de Laquis. Elas mostram que “o nome era usado na correspondência comum”. <span class="pvs"><span class="scr" data-ref="40:6:9">Mateus 6:9</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> É como o bilhete na porta da geladeira, com o nome de alguém da família. A gente escreve o nome de quem ama sem pensar duas vezes.</p>
+          <p class="pigual"><b>O que é igual:</b> Os servos de Deus usavam o nome dele no dia a dia, sem medo. Nós também: na oração, na conversa, na pregação.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>wol.jw.org (Biblioteca On-line)</li><li>pesquisa desta preparação</li><li>Estudo Perspicaz das Escrituras, volume 2</li><li>verbete “Jeová”</li><li>wol.jw.org: subtítulo “Superstição oculta o nome”</li></ol><p class="citar"><b>Para citar:</b> Estudo Perspicaz das Escrituras, volume 2, verbete “Jeová”, página 37</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/1200002391#h=6" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -518,6 +673,16 @@
           <li><b>Ilustração.</b> Quando a chuva forte pega a gente na rua, ninguém fica parado repetindo o nome da marquise. A gente corre para debaixo dela. Confiar no nome de Jeová é correr para ele.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
           <li><b>Para os de idade.</b> Muitos irmãos de idade já correram para essa torre muitas vezes: num diagnóstico, num enterro, numa noite sem dormir. Contar uma dessas vezes, em poucas palavras, fortalece quem é novo.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
+      </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Correr para a torre</p>
+          <p><span class="ptag ontem">Ontem</span> Provérbios 18:10: “O nome de Jeová é uma torre forte. O justo corre para dentro dela e recebe proteção.” A nota de rodapé diz que, ao pé da letra, quem entra “é colocado no alto”, isto é, “fora de alcance, a salvo”. <span class="pvs"><span class="scr" data-ref="20:18:10">Provérbios 18:10</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> Na enchente, a família sai correndo da casa baixa e sobe para a laje do vizinho, que é mais alta. Lá em cima, a água não alcança.</p>
+          <p class="pigual"><b>O que é igual:</b> A Sentinela de 2004 diz que Deus oferece proteção “especialmente aos justos que o buscam de modo ativo”. Quem corre para Jeová em oração está nessa laje.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Provérbios 18:10</li><li>nota de rodapé em “recebe proteção”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, nota de rodapé de Provérbios 18:10</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/20/18#study=discover&v=20:18:10" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Guia de Pesquisa</li><li>Provérbios 18:10</li><li>“Jeová é o nosso ‘baluarte em tempos de aflição’” (w04 15/8 pág. 17 par. 4)</li><li>wol.jw.org: parágrafo 4</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de 15 de agosto de 2004, página 17, parágrafo 4</p><p><a href="https://wol.jw.org/pt/wol/d/r5/lp-t/2004604#h=6" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
       </details>
     </div>
   </div>
@@ -552,6 +717,16 @@
           <li><b>Para os de idade.</b> Um amigo de 50 anos a gente reconhece pelo jeito de andar e pela voz no telefone. E ainda assim continua aprendendo sobre ele. Com Jeová é igual: quem tem muitos anos de verdade ainda descobre coisas novas sobre ele.<span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">O livro de recordação</p>
+          <p><span class="ptag ontem">Ontem</span> Malaquias 3:16 fala de “um livro de recordação para os que temiam a Jeová”. No tempo de Ester, o rei mandou ler “o livro dos registros históricos” e viu que Mordecai tinha salvado a vida dele. Perguntou o que Mordecai tinha recebido, e a resposta foi: “Nada foi feito por ele.” (Ester 6:1-3). <span class="pvs"><span class="scr" data-ref="39:3:16">Malaquias 3:16</span> &middot; <span class="scr" data-ref="17:6:1-3">Ester 6:1-3</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> A avó tem um caderninho com o aniversário de cada neto e bisneto. Ninguém fica esquecido, nem o que mora longe.</p>
+          <p class="pigual"><b>O que é igual:</b> O rei humano esqueceu Mordecai. Jeová não esquece ninguém que o teme e pensa no nome dele.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo</li><li>Malaquias 3:16</li><li>nota de rodapé em “meditavam no”</li></ol><p class="citar"><b>Para citar:</b> Tradução do Novo Mundo, nota de rodapé de Malaquias 3:16</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/39/3#study=discover&v=39:3:16" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Ester 6:1-3</li></ol><p class="citar"><b>Para citar:</b> Ester 6:1-3</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/17/6#v=17:6:1" target="_blank" rel="noopener">abrir no wol.jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
@@ -582,9 +757,43 @@
           <li><b>Para os de idade.</b> “Ainda que pequena”: o artigo valoriza a parte de cada um. Uma carta por semana, um folheto deixado na sala de espera do médico, uma oração pela pregação. Tudo isso faz parte da obra.<details class="rastro"><summary>📍 de onde veio</summary><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 17</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 17</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p27" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span></li>
         </ul>
       </details>
+      <details class="ponte" open>
+        <summary>Ontem e hoje: ligação prática</summary>
+        <div class="pitem">
+          <p class="ptit">Pouco, mas tudo</p>
+          <p><span class="ptag ontem">Ontem</span> Jesus viu uma viúva necessitada pôr “duas pequenas moedas de pouquíssimo valor”. E disse que ela pôs “mais do que todos eles” (Lucas 21:2, 3). <span class="pvs"><span class="scr" data-ref="42:21:1-4">Lucas 21:1-4</span></span></p>
+          <p><span class="ptag hoje">Hoje</span> A irmã de 85 anos não sai mais de casa. Ela escreve uma carta por semana e dá testemunho por telefone quando a neta liga.</p>
+          <p class="pigual"><b>O que é igual:</b> O artigo fala de ter “uma participação, ainda que pequena”. Para Jeová, o pouco feito de coração vale muito.</p>
+          <details class="rastro"><summary>📍 de onde veio</summary><ol><li>JW Library</li><li>Bíblia de estudo (Tradução do Novo Mundo)</li><li>Lucas 21:1-4</li></ol><p class="citar"><b>Para citar:</b> Lucas 21:1-4</p><p><a href="https://wol.jw.org/pt/wol/b/r5/lp-t/nwtsty/42/21#v=42:21:1" target="_blank" rel="noopener">abrir no wol.jw.org</a></p><ol><li>A Sentinela, edição de estudo de setembro de 2026</li><li>“Pregando as boas novas em ‘todas as línguas das nações’”</li><li>§ 17</li></ol><p class="citar"><b>Para citar:</b> A Sentinela de setembro de 2026, “Pregando as boas novas em ‘todas as línguas das nações’”, parágrafo 17</p><p><a href="https://www.jw.org/pt/biblioteca/revistas/sentinela-estudo-setembro-2026/Pregando-as-boas-novas-em-todas-as-l%C3%ADnguas-das-na%C3%A7%C3%B5es/#p27" target="_blank" rel="noopener">abrir no jw.org</a></p></details><span class="pessoal">Preparação pessoal: não citar como publicação</span>
+        </div>
+      </details>
     </div>
   </div>
 
+
+  <section class="pontes" id="pontes">
+    <h2 class="sect">Ontem e hoje</h2>
+    <p class="rsub">O que o artigo e a Bíblia contam, ao lado de uma cena dos nossos dias. Toque no § para ir ao parágrafo, onde estão a ponte completa e a fonte de cada lado.</p>
+    <p class="rsub"><b>Lembrete:</b> o lado “ontem” vem das publicações e pode ser citado. O lado “hoje” é ilustração desta preparação: use como exemplo seu, não como publicação.</p>
+    <div class="prow"><a class="pnum2" href="#par-1">§1</a><div><p class="ptit">Babel: sem a mesma língua, a obra para</p><p><span class="ptag ontem">Ontem</span> Em Babel, a língua misturada fez a obra parar.</p><p><span class="ptag hoje">Hoje</span> Na obra, o servente estrangeiro sem tradutor.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-1">§1</a><div><p class="ptit">O mensageiro que traz notícia boa</p><p><span class="ptag ontem">Ontem</span> O mensageiro chegando com notícia de libertação.</p><p><span class="ptag hoje">Hoje</span> O médico saindo do centro cirúrgico com notícia boa.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-2">§2</a><div><p class="ptit">Zacarias falou para um povo pequeno e cansado</p><p><span class="ptag ontem">Ontem</span> Zacarias falou a um povo pequeno e cansado.</p><p><span class="ptag hoje">Hoje</span> A congregação pequena do interior.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-4">§4</a><div><p class="ptit">O administrador da casa e a comida na hora certa</p><p><span class="ptag ontem">Ontem</span> O administrador dava a comida na hora certa.</p><p><span class="ptag hoje">Hoje</span> A cozinha do hospital que alimenta centenas.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-4">§4</a><div><p class="ptit">Do Fotodrama ao vídeo no celular</p><p><span class="ptag ontem">Ontem</span> O Fotodrama e A Harpa de Deus em várias línguas.</p><p><span class="ptag hoje">Hoje</span> O vídeo do jw.org no celular, na calçada.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-5">§5-6</a><div><p class="ptit">Espada que vira ferramenta de plantar</p><p><span class="ptag ontem">Ontem</span> Espadas transformadas em arados.</p><p><span class="ptag hoje">Hoje</span> O rapaz que andava armado e hoje prega.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-5">§5-6</a><div><p class="ptit">Voluntário, sem ninguém obrigar</p><p><span class="ptag ontem">Ontem</span> O povo se apresentava voluntariamente.</p><p><span class="ptag hoje">Hoje</span> O mutirão de limpeza do Salão no sábado.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-5">§5-6</a><div><p class="ptit">Jeová não esquece quem doa</p><p><span class="ptag ontem">Ontem</span> A coroa feita do ouro doado, como recordação.</p><p><span class="ptag hoje">Hoje</span> A nota dobrada na caixa de donativos.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-8">§8</a><div><p class="ptit">Pentecostes: gente de longe na mesma cidade</p><p><span class="ptag ontem">Ontem</span> Gente de terras distantes em Jerusalém no Pentecostes.</p><p><span class="ptag hoje">Hoje</span> Venezuelanos, haitianos e angolanos na fila do posto.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-8">§8</a><div><p class="ptit">Entender é uma coisa, sentir é outra</p><p><span class="ptag ontem">Ontem</span> Entendiam grego, mas a língua materna chamou a atenção.</p><p><span class="ptag hoje">Hoje</span> A costureira boliviana que se abre ao ouvir espanhol.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-9">§9</a><div><p class="ptit">Explicar até o povo entender</p><p><span class="ptag ontem">Ontem</span> Esdras e os que liam a Lei explicavam o sentido.</p><p><span class="ptag hoje">Hoje</span> O irmão que lê devagar e explica no estudo.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-10">§10-11</a><div><p class="ptit">Filipe correu até o carro; Robert foi até o navio</p><p><span class="ptag ontem">Ontem</span> Filipe correu até o carro do etíope.</p><p><span class="ptag hoje">Hoje</span> Robert no porto; nós no ponto de ônibus.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-12">§12</a><div><p class="ptit">A Bíblia na língua dos netos</p><p><span class="ptag ontem">Ontem</span> A Septuaginta para os judeus que falavam grego.</p><p><span class="ptag hoje">Hoje</span> O bisneto de imigrante que só fala português.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-13">§13</a><div><p class="ptit">O costume de ontem e o líder religioso de hoje</p><p><span class="ptag ontem">Ontem</span> A superstição que trocou o nome por Adonai.</p><p><span class="ptag hoje">Hoje</span> A Bíblia lida na missa e no culto com Senhor no lugar do nome.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-14">§14</a><div><p class="ptit">O nome nas cartas do dia a dia</p><p><span class="ptag ontem">Ontem</span> O nome nas cartas do dia a dia (Cartas de Laquis).</p><p><span class="ptag hoje">Hoje</span> O bilhete na geladeira com o nome de quem a gente ama.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-15">§15</a><div><p class="ptit">Correr para a torre</p><p><span class="ptag ontem">Ontem</span> Correr para dentro da torre forte.</p><p><span class="ptag hoje">Hoje</span> Subir na laje do vizinho na enchente.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-16">§16</a><div><p class="ptit">O livro de recordação</p><p><span class="ptag ontem">Ontem</span> O livro de recordação; Mordecai lembrado pelo rei.</p><p><span class="ptag hoje">Hoje</span> O caderninho de aniversários da avó.</p></div></div>
+    <div class="prow"><a class="pnum2" href="#par-17">§17</a><div><p class="ptit">Pouco, mas tudo</p><p><span class="ptag ontem">Ontem</span> As duas moedinhas da viúva.</p><p><span class="ptag hoje">Hoje</span> A carta por semana da irmã que não sai de casa.</p></div></div>
+  </section>
 
   <h2 class="sect">Como responderia?</h2>
 
@@ -733,8 +942,8 @@
   </div>
 </dialog>
 
-<script src="assets/js/verses.js?v=3"></script>
-<script src="assets/js/notes.js?v=3"></script>
-<script src="assets/js/app.js?v=3"></script>
+<script src="assets/js/verses.js?v=4"></script>
+<script src="assets/js/notes.js?v=4"></script>
+<script src="assets/js/app.js?v=4"></script>
 </body>
 </html>
