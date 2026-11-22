@@ -594,6 +594,53 @@ header.disc-header .tema { color: var(--highlight); font-style: italic; margin-t
   .acc .acc-body { display: block !important; }
   .acc-next { display: none !important; }
 }
+
+/* === FLUXOGRAMA EM CARTÕES (cola para tablet) === */
+.toc-list a { font-size: 19px; padding: 14px 4px; display: flex; align-items: center; gap: 6px; }
+.toc-list .pill { font-size: 14px; padding: 3px 10px; }
+.toc-list .toc-time { margin-left: auto; color: var(--muted); font-size: 15px; white-space: nowrap; padding-left: 10px; }
+[data-panel="estrutura"] .paragraph { font-size: 18px; line-height: 1.7; }
+.toc-clock { color: var(--muted); font-size: 15px; }
+.fc-intro { font-size: 18px; color: var(--muted); margin: 0 0 12px; line-height: 1.5; }
+.fc-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 15px; color: var(--muted); margin-bottom: 16px; }
+.fc-dot { display: inline-block; width: 14px; height: 14px; border-radius: 4px; margin-left: 6px; }
+.fc-intro-dot { background: #1f6feb; } .fc-base-dot { background: var(--accent); }
+.fc-illust-dot { background: var(--illust); } .fc-concl-dot { background: var(--highlight); }
+.fc-list { max-width: 900px; margin: 0 auto; }
+.fc-card {
+  background: var(--card); border: 1px solid var(--border); border-left: 8px solid var(--accent);
+  border-radius: 12px; padding: 18px 20px 16px; scroll-margin-top: 8px;
+}
+.fc-card.fc-intro { border-left-color: #1f6feb; }
+.fc-card.fc-illust { border-left-color: var(--illust); }
+.fc-card.fc-concl { border-left-color: var(--highlight); background: rgba(240, 185, 65, 0.07); }
+.fc-head { display: flex; align-items: center; gap: 14px; }
+.fc-num {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 42px; height: 42px; border-radius: 21px;
+  background: var(--highlight); color: #0d1117; font-size: 20px; font-weight: 800;
+}
+.fc-title { margin: 0; font-size: 24px; line-height: 1.3; color: #fff; }
+.fc-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.fc-meta span { font-size: 16px; font-weight: 600; padding: 4px 12px; border-radius: 14px; background: rgba(255,255,255,0.06); color: var(--text); }
+.fc-meta .fc-verse { color: var(--verse); background: rgba(210, 168, 255, 0.12); }
+.fc-meta .fc-time { color: var(--highlight); }
+.fc-points { margin: 12px 0 0; padding-left: 26px; }
+.fc-points li { font-size: 21px; line-height: 1.55; color: #e6edf3; margin-bottom: 10px; }
+.fc-points li::marker { color: var(--highlight); }
+.fc-open {
+  display: block; width: 100%; min-height: 56px; margin-top: 10px;
+  font-size: 18px; font-weight: 700; color: var(--text);
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 10px;
+  cursor: pointer; touch-action: manipulation;
+}
+.fc-arrow { text-align: center; font-size: 26px; color: var(--muted); line-height: 1; padding: 8px 0; }
+@media (max-width: 700px) {
+  .fc-title { font-size: 21px; }
+  .fc-points li { font-size: 20px; }
+  .toc-list .toc-time { display: none; }
+}
+@media print { .fc-open { display: none; } .fc-card { break-inside: avoid; } }
 </style>
 </head>
 <body>
@@ -652,26 +699,35 @@ header.disc-header .tema { color: var(--highlight); font-style: italic; margin-t
 <div class="tab-panel" data-panel="estrutura">
   <div class="section-title">📑 Estrutura do Discurso</div>
   <div class="toc-list">
-    <a href="#s1"><span class="pill">01</span>Introdução — A busca pela verdadeira religião</a>
-    <a href="#s2"><span class="pill">02</span>O amor é o sinal característico (João 13:34,35)</a>
-    <a href="#s3"><span class="pill">03</span>Romanos 12:10 — Amor fraternal e iniciativa</a>
-    <a href="#s4"><span class="pill">04</span>Ilustração: Gnus × Elefantes</a>
-    <a href="#s5"><span class="pill">05</span>Amor pra DE FORA — A pregação</a>
-    <a href="#s6"><span class="pill">06</span>Ilustração: A floresta verde (miragem)</a>
-    <a href="#s7"><span class="pill">07</span>Perdão (Colossenses 3:13)</a>
-    <a href="#s8"><span class="pill">08</span>Ilustração: O carro sem lubrificante</a>
-    <a href="#s9"><span class="pill">09</span>Ilustração: O ácido (ódio)</a>
-    <a href="#s10"><span class="pill">10</span>1 Pedro 4:8 — Amor intenso</a>
-    <a href="#s11"><span class="pill">11</span>Ilustração: Gravura das duas amigas</a>
-    <a href="#s12"><span class="pill">12</span>Conclusão — Colossenses 3:14 + Miragem</a>
+    <a href="#s1"><span class="pill">01</span>Introdução: a busca pela verdadeira religião<span class="toc-time">~1,5 min</span></a>
+    <a href="#s2"><span class="pill">02</span>O amor é o sinal característico (João 13:34, 35)<span class="toc-time">~4 min</span></a>
+    <a href="#s3"><span class="pill">03</span>Romanos 12:10: amor fraternal e iniciativa<span class="toc-time">~4,5 min</span></a>
+    <a href="#s4"><span class="pill">04</span>Ilustração: gnus e elefantes<span class="toc-time">~2,5 min</span></a>
+    <a href="#s5"><span class="pill">05</span>Amor para os de fora: a pregação<span class="toc-time">~1 min</span></a>
+    <a href="#s6"><span class="pill">06</span>Ilustração: a floresta verde (miragem)<span class="toc-time">~4 min</span></a>
+    <a href="#s7"><span class="pill">07</span>Perdão (Colossenses 3:13)<span class="toc-time">~1 min</span></a>
+    <a href="#s8"><span class="pill">08</span>Ilustração: o carro sem lubrificante<span class="toc-time">~2 min</span></a>
+    <a href="#s9"><span class="pill">09</span>Ilustração: o ácido (ódio)<span class="toc-time">~1,5 min</span></a>
+    <a href="#s10"><span class="pill">10</span>1 Pedro 4:8: amor intenso<span class="toc-time">~1,5 min</span></a>
+    <a href="#s11"><span class="pill">11</span>Ilustração: gravura das duas amigas<span class="toc-time">~2,5 min</span></a>
+    <a href="#s12"><span class="pill">12</span>Conclusão: Colossenses 3:14 e a miragem<span class="toc-time">~4 min</span></a>
   </div>
 
   <div class="section-title">📊 Tempo estimado por bloco</div>
   <div class="paragraph">
-    <p><strong>Introdução (1):</strong> ~3 min</p>
-    <p><strong>Pontos principais (2-3):</strong> ~7 min</p>
-    <p><strong>Ilustrações &amp; aplicação (4-9):</strong> ~15 min</p>
-    <p><strong>Conclusão (10-12):</strong> ~5 min</p>
+    <p><strong>1. Introdução: a busca pela verdadeira religião:</strong> ~1,5 min <span class="toc-clock">(0:00 a 1:30)</span></p>
+    <p><strong>2. O amor é o sinal característico (João 13:34, 35):</strong> ~4 min <span class="toc-clock">(1:30 a 5:30)</span></p>
+    <p><strong>3. Romanos 12:10: amor fraternal e iniciativa:</strong> ~4,5 min <span class="toc-clock">(5:30 a 10:00)</span></p>
+    <p><strong>4. Ilustração: gnus e elefantes:</strong> ~2,5 min <span class="toc-clock">(10:00 a 12:30)</span></p>
+    <p><strong>5. Amor para os de fora: a pregação:</strong> ~1 min <span class="toc-clock">(12:30 a 13:30)</span></p>
+    <p><strong>6. Ilustração: a floresta verde (miragem):</strong> ~4 min <span class="toc-clock">(13:30 a 17:30)</span></p>
+    <p><strong>7. Perdão (Colossenses 3:13):</strong> ~1 min <span class="toc-clock">(17:30 a 18:30)</span></p>
+    <p><strong>8. Ilustração: o carro sem lubrificante:</strong> ~2 min <span class="toc-clock">(18:30 a 20:30)</span></p>
+    <p><strong>9. Ilustração: o ácido (ódio):</strong> ~1,5 min <span class="toc-clock">(20:30 a 22:00)</span></p>
+    <p><strong>10. 1 Pedro 4:8: amor intenso:</strong> ~1,5 min <span class="toc-clock">(22:00 a 23:30)</span></p>
+    <p><strong>11. Ilustração: gravura das duas amigas:</strong> ~2,5 min <span class="toc-clock">(23:30 a 26:00)</span></p>
+    <p><strong>12. Conclusão: Colossenses 3:14 e a miragem:</strong> ~4 min <span class="toc-clock">(26:00 a 30:00)</span></p>
+    <p style="margin-top: 8px;"><strong>Total:</strong> ~30 min</p>
   </div>
 </div>
 
@@ -684,18 +740,18 @@ header.disc-header .tema { color: var(--highlight); font-style: italic; margin-t
     <aside class="sidebar" id="conteudoSidebar">
       <h4>📑 Índice</h4>
       <ul>
-<li><a href="#s1" class="sidebar-link"><span class="sb-num">1</span><span class="sb-title">Introdução — A busca pela verdadeira religião</span><span class="sb-count">15p</span></a></li>
-<li><a href="#s2" class="sidebar-link"><span class="sb-num">2</span><span class="sb-title">O amor é o sinal característico (João 13:34,35)</span><span class="sb-count">18p</span></a></li>
-<li><a href="#s3" class="sidebar-link"><span class="sb-num">3</span><span class="sb-title">Romanos 12:10 — Amor fraternal e iniciativa</span><span class="sb-count">24p</span></a></li>
-<li><a href="#s4" class="sidebar-link"><span class="sb-num">4</span><span class="sb-title">Ilustração: Gnus × Elefantes</span><span class="sb-count">21p</span></a></li>
-<li><a href="#s5" class="sidebar-link"><span class="sb-num">5</span><span class="sb-title">Amor pra DE FORA — A pregação</span><span class="sb-count">5p</span></a></li>
-<li><a href="#s6" class="sidebar-link"><span class="sb-num">6</span><span class="sb-title">Ilustração: A floresta verde (miragem)</span><span class="sb-count">33p</span></a></li>
+<li><a href="#s1" class="sidebar-link"><span class="sb-num">1</span><span class="sb-title">Introdução: a busca pela verdadeira religião</span><span class="sb-count">15p</span></a></li>
+<li><a href="#s2" class="sidebar-link"><span class="sb-num">2</span><span class="sb-title">O amor é o sinal característico (João 13:34, 35)</span><span class="sb-count">18p</span></a></li>
+<li><a href="#s3" class="sidebar-link"><span class="sb-num">3</span><span class="sb-title">Romanos 12:10: amor fraternal e iniciativa</span><span class="sb-count">24p</span></a></li>
+<li><a href="#s4" class="sidebar-link"><span class="sb-num">4</span><span class="sb-title">Ilustração: gnus e elefantes</span><span class="sb-count">21p</span></a></li>
+<li><a href="#s5" class="sidebar-link"><span class="sb-num">5</span><span class="sb-title">Amor para os de fora: a pregação</span><span class="sb-count">5p</span></a></li>
+<li><a href="#s6" class="sidebar-link"><span class="sb-num">6</span><span class="sb-title">Ilustração: a floresta verde (miragem)</span><span class="sb-count">33p</span></a></li>
 <li><a href="#s7" class="sidebar-link"><span class="sb-num">7</span><span class="sb-title">Perdão (Colossenses 3:13)</span><span class="sb-count">10p</span></a></li>
-<li><a href="#s8" class="sidebar-link"><span class="sb-num">8</span><span class="sb-title">Ilustração: O carro sem lubrificante</span><span class="sb-count">33p</span></a></li>
-<li><a href="#s9" class="sidebar-link"><span class="sb-num">9</span><span class="sb-title">Ilustração: O ácido (ódio)</span><span class="sb-count">16p</span></a></li>
-<li><a href="#s10" class="sidebar-link"><span class="sb-num">10</span><span class="sb-title">1 Pedro 4:8 — Amor intenso</span><span class="sb-count">17p</span></a></li>
-<li><a href="#s11" class="sidebar-link"><span class="sb-num">11</span><span class="sb-title">Ilustração: Gravura das duas amigas</span><span class="sb-count">21p</span></a></li>
-<li><a href="#s12" class="sidebar-link"><span class="sb-num">12</span><span class="sb-title">Conclusão — O resumo das ilustrações</span><span class="sb-count">25p</span></a></li>
+<li><a href="#s8" class="sidebar-link"><span class="sb-num">8</span><span class="sb-title">Ilustração: o carro sem lubrificante</span><span class="sb-count">33p</span></a></li>
+<li><a href="#s9" class="sidebar-link"><span class="sb-num">9</span><span class="sb-title">Ilustração: o ácido (ódio)</span><span class="sb-count">16p</span></a></li>
+<li><a href="#s10" class="sidebar-link"><span class="sb-num">10</span><span class="sb-title">1 Pedro 4:8: amor intenso</span><span class="sb-count">17p</span></a></li>
+<li><a href="#s11" class="sidebar-link"><span class="sb-num">11</span><span class="sb-title">Ilustração: gravura das duas amigas</span><span class="sb-count">21p</span></a></li>
+<li><a href="#s12" class="sidebar-link"><span class="sb-num">12</span><span class="sb-title">Conclusão: Colossenses 3:14 e a miragem</span><span class="sb-count">25p</span></a></li>
       </ul>
     </aside>
 
@@ -857,150 +913,92 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
 <!-- ABA: FLUXOGRAMA -->
 <div class="tab-panel" data-panel="fluxo">
   <div class="section-title">🗺️ Fluxograma do Discurso</div>
-  <div class="flow-container">
-    <svg class="flow-svg" viewBox="0 0 1100 1400" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L9,3 z" fill="#8b949e"/>
-        </marker>
-        <linearGradient id="gIntro" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#1a4a7a"/>
-          <stop offset="100%" stop-color="#0a2540"/>
-        </linearGradient>
-        <linearGradient id="gBase" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#2ea043"/>
-          <stop offset="100%" stop-color="#1a4a2a"/>
-        </linearGradient>
-        <linearGradient id="gIllust" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#79c0ff"/>
-          <stop offset="100%" stop-color="#1f6feb"/>
-        </linearGradient>
-        <linearGradient id="gConcl" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#f0b941"/>
-          <stop offset="100%" stop-color="#9e6a03"/>
-        </linearGradient>
-      </defs>
-
-      <!-- TÍTULO -->
-      <rect x="280" y="10" width="540" height="50" rx="8" fill="url(#gIntro)" stroke="#2ea043" stroke-width="2"/>
-      <text x="550" y="35" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">S34 t.72 — O AMOR IDENTIFICA</text>
-      <text x="550" y="52" text-anchor="middle" fill="#c9d1d9" font-size="13" font-style="italic">os cristãos verdadeiros</text>
-
-      <!-- 1. INTRODUÇÃO -->
-      <rect class="flow-block" data-section="s1" x="40" y="100" width="1020" height="120" rx="8" fill="url(#gIntro)" stroke="#2ea043" stroke-width="2"/>
-      <text x="60" y="125" fill="#fff" font-size="14" font-weight="700">① INTRODUÇÃO — A busca pela verdadeira religião</text>
-      <text x="60" y="150" fill="#c9d1d9" font-size="12">Pessoas sinceras buscam a organização verdadeira → decepcionam-se</text>
-      <text x="60" y="168" fill="#c9d1d9" font-size="12">porque não encontram AMOR verdadeiro praticado.</text>
-      <text x="60" y="195" fill="#79c0ff" font-size="11" font-style="italic">→ Ilustração: vagalume + zebra (sinal característico)</text>
-
-      <line x1="550" y1="220" x2="550" y2="240" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 2. TEXTO-BASE: João 13:34,35 -->
-      <rect class="flow-block" data-section="s2" x="200" y="245" width="700" height="100" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="3"/>
-      <text x="550" y="270" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">② TEXTO-BASE: João 13:34, 35</text>
-      <text x="550" y="295" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Novo mandamento: amem-se uns aos outros"</text>
-      <text x="550" y="312" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Nisto todos saberão que vocês são meus discípulos"</text>
-      <text x="550" y="332" text-anchor="middle" fill="#f0b941" font-size="11">Amor abnegado (≠ amor próprio)</text>
-
-      <!-- 3. ROMANOS 12:10 -->
-      <line x1="550" y1="345" x2="550" y2="365" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-      <rect class="flow-block" data-section="s3" x="200" y="370" width="700" height="85" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="2"/>
-      <text x="550" y="395" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">③ Romanos 12:10 — Amor fraternal</text>
-      <text x="550" y="418" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Tomem a INICIATIVA em honrar uns aos outros"</text>
-      <text x="550" y="435" text-anchor="middle" fill="#f0b941" font-size="11">Não esperar reciprocidade</text>
-
-      <line x1="550" y1="455" x2="550" y2="475" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 4. ILUSTRAÇÃO: GNUS -->
-      <rect class="flow-block" data-section="s4" x="40" y="480" width="500" height="100" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="60" y="505" fill="#fff" font-size="14" font-weight="700">④ Ilustração: Gnus × Elefantes</text>
-      <text x="60" y="528" fill="#c9d1d9" font-size="11">🐃 Gnus: "cada um por si" no perigo</text>
-      <text x="60" y="544" fill="#c9d1d9" font-size="11">🐘 Elefantes: juntam-se, defendem-se</text>
-      <text x="60" y="563" fill="#f0b941" font-size="11" font-style="italic">→ AssIM somos nós: nos unimos na dificuldade</text>
-
-      <!-- 4b. AMOR PRA DE FORA -->
-      <rect class="flow-block" data-section="s5" x="560" y="480" width="500" height="100" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="580" y="505" fill="#fff" font-size="14" font-weight="700">⑤ Amor pra DE FORA — A pregação</text>
-      <text x="580" y="528" fill="#c9d1d9" font-size="11">Não por escolas/creches/cestas básicas</text>
-      <text x="580" y="544" fill="#c9d1d9" font-size="11">Mas amorosamente: sol, chuva, pregação</text>
-      <text x="580" y="563" fill="#f0b941" font-size="11" font-style="italic">→ Elas conhecem a Jeová e têm esperança</text>
-
-      <line x1="550" y1="580" x2="550" y2="600" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 6. ILUSTRAÇÃO FLORESTA -->
-      <rect class="flow-block" data-section="s6" x="40" y="605" width="500" height="115" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="60" y="630" fill="#fff" font-size="14" font-weight="700">⑥ Ilustração: Floresta verde</text>
-      <text x="60" y="653" fill="#c9d1d9" font-size="11">Longe: exuberância, verde</text>
-      <text x="60" y="669" fill="#c9d1d9" font-size="11">Perto: cobras, lagartos, escorpiões</text>
-      <text x="60" y="688" fill="#f0b941" font-size="11" font-style="italic">→ Pode haver atrito, mas há reparação</text>
-
-      <!-- 6b. PERDÃO -->
-      <rect class="flow-block" data-section="s7" x="560" y="605" width="500" height="115" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="580" y="630" fill="#fff" font-size="14" font-weight="700">⑦ Perdão — Colossenses 3:13</text>
-      <text x="580" y="653" fill="#c9d1d9" font-size="11" font-style="italic">"Perdoem LIBERALMENTE uns aos outros"</text>
-      <text x="580" y="669" fill="#c9d1d9" font-size="11">Pedro, Paulo — Jeová entende imperfeição</text>
-      <text x="580" y="688" fill="#f0b941" font-size="11" font-style="italic">→ Reconhecer, eliminar, seguir a Jeová</text>
-
-      <line x1="550" y1="720" x2="550" y2="740" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 8. CARRO + 9. ÁCIDO -->
-      <rect class="flow-block" data-section="s8" x="40" y="745" width="500" height="110" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="60" y="770" fill="#fff" font-size="14" font-weight="700">⑧ Carro sem lubrificante</text>
-      <text x="60" y="793" fill="#c9d1d9" font-size="11">Motor bonito SEM lubrificante trava</text>
-      <text x="60" y="809" fill="#c9d1d9" font-size="11">Engrenagens rangem, desgastam</text>
-      <text x="60" y="828" fill="#f0b941" font-size="11" font-style="italic">→ O AMOR é o lubrificante da união</text>
-
-      <rect class="flow-block" data-section="s9" x="560" y="745" width="500" height="110" rx="8" fill="url(#gIllust)" stroke="#1f6feb" stroke-width="2"/>
-      <text x="580" y="770" fill="#fff" font-size="14" font-weight="700">⑨ Ácido — Ódio guardado</text>
-      <text x="580" y="793" fill="#c9d1d9" font-size="11">Ácido corrói recipiente forte</text>
-      <text x="580" y="809" fill="#c9d1d9" font-size="11">Ódio guardado: mente e coração</text>
-      <text x="580" y="828" fill="#f0b941" font-size="11" font-style="italic">→ Senso de urgência pra eliminar</text>
-
-      <line x1="550" y1="855" x2="550" y2="875" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 10. 1 PEDRO 4:8 -->
-      <rect class="flow-block" data-section="s10" x="200" y="880" width="700" height="95" rx="8" fill="url(#gBase)" stroke="#2ea043" stroke-width="2"/>
-      <text x="550" y="905" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">⑩ 1 Pedro 4:8 — Amor INTENSO</text>
-      <text x="550" y="928" text-anchor="middle" fill="#c9d1d9" font-size="11" font-style="italic">"Tenham INTENSO amor uns pelos outros, porque o amor cobre multidão de pecados"</text>
-      <text x="550" y="945" text-anchor="middle" fill="#f0b941" font-size="11">Como corda de violão afinada</text>
-      <text x="550" y="962" text-anchor="middle" fill="#79c0ff" font-size="11" font-style="italic">→ Gravura das duas amigas (urgência no perdão)</text>
-
-      <line x1="550" y1="975" x2="550" y2="995" stroke="#8b949e" stroke-width="2" marker-end="url(#arrow)"/>
-
-      <!-- 11. CONCLUSÃO -->
-      <rect class="flow-block" data-section="s11-12" x="200" y="1000" width="700" height="180" rx="8" fill="url(#gConcl)" stroke="#f0b941" stroke-width="3"/>
-      <text x="550" y="1025" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">⑪ CONCLUSÃO — O amor identifica</text>
-      <text x="550" y="1048" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">os CRISTÃOS VERDADEIROS</text>
-      <text x="550" y="1075" text-anchor="middle" fill="#fff" font-size="11" font-style="italic">Colossenses 3:14 — "Revistam-se de amor"</text>
-      <text x="550" y="1092" text-anchor="middle" fill="#fff" font-size="11" font-style="italic">É o "perfeito vínculo de união"</text>
-      <text x="550" y="1120" text-anchor="middle" fill="#79c0ff" font-size="11">Fio desencapado → coberto com amor (fita isolante)</text>
-      <text x="550" y="1137" text-anchor="middle" fill="#79c0ff" font-size="11">O ar que se respira no Salão do Reino é AMOR</text>
-      <text x="550" y="1158" text-anchor="middle" fill="#f0b941" font-size="13" font-weight="700">Não é miragem — é água de verdade</text>
-
-      <!-- RODAPÉ -->
-      <text x="550" y="1230" text-anchor="middle" fill="#8b949e" font-size="11" font-style="italic">Fluxo: Introdução → Texto-base → Aplicação (3 ilustrações) → Perdão (3 ilustrações) → Conclusão</text>
-      <text x="550" y="1252" text-anchor="middle" fill="#8b949e" font-size="11" font-style="italic">Textos-base: João 13:34,35 · Romanos 12:10 · Colossenses 3:13,14 · 1 Pedro 4:8</text>
-      <text x="550" y="1274" text-anchor="middle" fill="#2ea043" font-size="11" font-weight="700">✨ "Nisto todos saberão que vocês são meus discípulos: se tiverem amor entre si" — João 13:35 ✨</text>
-    </svg>
-
-    <div class="flow-legend">
-      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#1a4a7a,#0a2540);"></div>
-  <!-- Modal para conteúdo do fluxograma -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true">
-    <div class="modal-header">
-      <h3 id="modalTitle">Conteúdo</h3>
-      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
-    </div>
-    <div class="modal-body" id="modalBody">
-      <p class="modal-hint">👆 Clique em qualquer bloco do fluxograma acima para ver o conteúdo dessa seção aqui.</p>
-    </div>
-  </div>
-</div> Introdução</div>
-      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#2ea043,#1a4a2a);"></div> Pontos principais (texto-base)</div>
-      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#79c0ff,#1f6feb);"></div> Ilustrações</div>
-      <div class="item"><div class="dot" style="background: linear-gradient(90deg,#f0b941,#9e6a03);"></div> Conclusão</div>
-    </div>
+  <p class="fc-intro">Cola rápida: cada bloco resume a seção. Se precisar acelerar, dá para fazer a seção lendo só o bloco. Total ~30 min.</p>
+  <div class="fc-legend"><span class="fc-dot fc-intro-dot"></span>Introdução <span class="fc-dot fc-base-dot"></span>Ponto principal <span class="fc-dot fc-illust-dot"></span>Ilustração <span class="fc-dot fc-concl-dot"></span>Conclusão</div>
+  <div class="fc-list">
+    <article class="fc-card fc-intro" id="fluxo-s1">
+      <div class="fc-head"><span class="fc-num">1</span><h3 class="fc-title">Introdução: a busca pela verdadeira religião</h3></div>
+      <div class="fc-meta"><span class="fc-type">Introdução</span><span class="fc-time">⏱ ~1,5 min · 0:00 a 1:30</span></div>
+      <ul class="fc-points"><li>Muitas pessoas sinceras buscam a religião verdadeira e ficam decepcionadas.</li><li>Por quê? Nas religiões não se ensina e, pior, não se pratica o amor verdadeiro.</li><li>A Bíblia mostra que a organização de Deus ensina e pratica o amor: entre os membros e para os de fora.</li><li>O amor é o sinal característico do servo de Deus. Isso é importante? É sim.</li></ul>
+      <button type="button" class="fc-open" data-open="s1">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-base" id="fluxo-s2">
+      <div class="fc-head"><span class="fc-num">2</span><h3 class="fc-title">O amor é o sinal característico (João 13:34, 35)</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4 min · 1:30 a 5:30</span><span class="fc-verse">📖 João 13:34, 35</span></div>
+      <ul class="fc-points"><li>Vaga-lume e zebra: cada ser tem o seu sinal característico, que nasce com ele.</li><li>O sinal do cristão verdadeiro é o amor. Não é falar em línguas, não é cura.</li><li>“Novo mandamento”: amar como Jesus amou, com amor abnegado, a ponto de dar a vida.</li><li>“Entre si”: amor especial pelos irmãos. Só entre o povo de Jeová se encontra esse amor.</li></ul>
+      <button type="button" class="fc-open" data-open="s2">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-base" id="fluxo-s3">
+      <div class="fc-head"><span class="fc-num">3</span><h3 class="fc-title">Romanos 12:10: amor fraternal e iniciativa</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4,5 min · 5:30 a 10:00</span><span class="fc-verse">📖 Romanos 12:10</span></div>
+      <ul class="fc-points"><li>Amor fraternal é amor de família, de irmão mesmo: a gente sai em defesa dele.</li><li>Tomar a iniciativa: não espero o outro me amar para então amar. Eu faço a minha parte.</li><li>Gravura 1: o amor é prática, não só sentimento.</li><li>O amigo verdadeiro aparece na dificuldade, no leito do hospital. Os irmãos no mundo todo se ajudam.</li></ul>
+      <button type="button" class="fc-open" data-open="s3">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-illust" id="fluxo-s4">
+      <div class="fc-head"><span class="fc-num">4</span><h3 class="fc-title">Ilustração: gnus e elefantes</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~2,5 min · 10:00 a 12:30</span></div>
+      <ul class="fc-points"><li>Gnus: muitos e fortes, mas quando o leão ataca é cada um por si.</li><li>Elefantes: fazem um círculo com os mais frágeis no meio. Nenhum leão se arrisca.</li><li>Assim somos nós: na dificuldade a gente se ajunta e se ajuda. Por isso há paz e união.</li><li>Ponte: também mostramos amor aos de fora, mas não com escolas, creches ou cestas básicas.</li></ul>
+      <button type="button" class="fc-open" data-open="s4">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-base" id="fluxo-s5">
+      <div class="fc-head"><span class="fc-num">5</span><h3 class="fc-title">Amor para os de fora: a pregação</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1 min · 12:30 a 13:30</span></div>
+      <ul class="fc-points"><li>Ajudamos as pessoas com algo que não perece, que permanece para a vida eterna.</li><li>Enfrentamos sol, chuva e, em alguns lugares, até a perda da liberdade para que conheçam a Jeová.</li><li>Sair cedo no sol para pregar e ensinar é demonstração viva do amor.</li></ul>
+      <button type="button" class="fc-open" data-open="s5">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-illust" id="fluxo-s6">
+      <div class="fc-head"><span class="fc-num">6</span><h3 class="fc-title">Ilustração: a floresta verde (miragem)</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~4 min · 13:30 a 17:30</span><span class="fc-verse">📖 Salmo 130</span></div>
+      <ul class="fc-points"><li>Não somos perfeitos. De cima, a floresta é verde e linda; lá embaixo tem cobras, lagartos e escorpiões.</li><li>Entre os servos de Jeová sempre houve imperfeição e atrito. Pedro e Paulo foram humildes e se corrigiram.</li><li>Jeová não fica procurando os nossos erros. Se ficasse, quem ficaria de pé?</li><li>Se eu soltar uma “cobra”, reconheço e elimino rápido. O perdão é indispensável.</li></ul>
+      <button type="button" class="fc-open" data-open="s6">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-base" id="fluxo-s7">
+      <div class="fc-head"><span class="fc-num">7</span><h3 class="fc-title">Perdão (Colossenses 3:13)</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1 min · 17:30 a 18:30</span><span class="fc-verse">📖 Colossenses 3:13</span></div>
+      <ul class="fc-points"><li>Perdoar liberalmente, assim como Jeová nos perdoou.</li><li>Liberal é em abundância, sem “desde que”: passou, passou, vida que segue.</li><li>“Continuem a suportar” e “razão para queixa”: vai haver atrito, como no passado.</li></ul>
+      <button type="button" class="fc-open" data-open="s7">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-illust" id="fluxo-s8">
+      <div class="fc-head"><span class="fc-num">8</span><h3 class="fc-title">Ilustração: o carro sem lubrificante</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~2 min · 18:30 a 20:30</span></div>
+      <ul class="fc-points"><li>Imagine o carro mais bonito que você acha, sem nenhum lubrificante: funde o motor e trava tudo.</li><li>O lubrificante não impede o atrito das engrenagens; impede o desgaste excessivo.</li><li>O amor é esse lubrificante. A maioria das coisas não acontece do meu jeito.</li><li>Quantos abandonaram o caminho de Jeová por falta desse lubrificante.</li></ul>
+      <button type="button" class="fc-open" data-open="s8">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-illust" id="fluxo-s9">
+      <div class="fc-head"><span class="fc-num">9</span><h3 class="fc-title">Ilustração: o ácido (ódio)</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~1,5 min · 20:30 a 22:00</span></div>
+      <ul class="fc-points"><li>Onde você guardaria ácido? Num recipiente adequado, porque ele corrói.</li><li>Muito mais corrosivo é o ódio, a mágoa. Muitos guardam isso na mente e no coração.</li><li>Tem que ser removido com senso de urgência. “Com o tempo passa”? Não passa, só piora.</li></ul>
+      <button type="button" class="fc-open" data-open="s9">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-base" id="fluxo-s10">
+      <div class="fc-head"><span class="fc-num">10</span><h3 class="fc-title">1 Pedro 4:8: amor intenso</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1,5 min · 22:00 a 23:30</span><span class="fc-verse">📖 1 Pedro 4:8</span></div>
+      <ul class="fc-points"><li>Intenso é esticado, como a corda do violão na tensão certa, bem afinada.</li><li>Todo mundo afinado e em sintonia no amor: será uma maravilha.</li><li>O amor cobre uma multidão de pecados, como uma maquiagem poderosa que esconde defeitos.</li></ul>
+      <button type="button" class="fc-open" data-open="s10">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-illust" id="fluxo-s11">
+      <div class="fc-head"><span class="fc-num">11</span><h3 class="fc-title">Ilustração: gravura das duas amigas</h3></div>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~2,5 min · 23:30 a 26:00</span></div>
+      <ul class="fc-points"><li>Gravura: houve atrito entre duas irmãs. Passou uma década? Não: estão com a mesma roupa.</li><li>Resolveram em poucas horas, com senso de urgência. Eu ajo assim?</li><li>Perdoar não é fácil: orar pedindo espírito santo e estudar e praticar a Palavra de Deus.</li><li>Queremos adorar a Deus ao lado de quem também mostra o verdadeiro amor.</li></ul>
+      <button type="button" class="fc-open" data-open="s11">Abrir no discurso ▸</button>
+    </article>
+    <div class="fc-arrow" aria-hidden="true">↓</div>
+    <article class="fc-card fc-concl" id="fluxo-s12">
+      <div class="fc-head"><span class="fc-num">12</span><h3 class="fc-title">Conclusão: Colossenses 3:14 e a miragem</h3></div>
+      <div class="fc-meta"><span class="fc-type">Conclusão</span><span class="fc-time">⏱ ~4 min · 26:00 a 30:00</span><span class="fc-verse">📖 Colossenses 3:14</span></div>
+      <ul class="fc-points"><li>Revistam-se de amor, o perfeito vínculo de união: como encapar o fio desencapado para não haver explosão.</li><li>No Salão do Reino a gente sente o amor na pele: o ar que se respira é amor.</li><li>Recapitular: zebra e vaga-lume, gnu e elefante, carro, ácido, violão, fio desencapado.</li><li>Nosso amor não pode ser miragem: é água de verdade para quem chega perto. É esse amor que identifica os cristãos verdadeiros.</li></ul>
+      <button type="button" class="fc-open" data-open="s12">Abrir no discurso ▸</button>
+    </article>
   </div>
 </div>
 
@@ -1109,90 +1107,10 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: '-30% 0px -60% 0px' });
 sections.forEach(s => observer.observe(s));
 
-// === FLUXOGRAMA INTERATIVO ===
-const flowPanel = document.getElementById('flowDetailPanel');
-const flowBlocks = document.querySelectorAll('.flow-block');
-const flowData = {
-  s1: 'Introdução — A busca pela verdadeira religião',
-  s2: 'O amor é o sinal característico (João 13:34,35)',
-  s3: 'Romanos 12:10 — Amor fraternal e iniciativa',
-  s4: 'Ilustração: Gnus × Elefantes',
-  s5: 'Amor pra DE FORA — A pregação',
-  s6: 'Ilustração: A floresta verde (miragem)',
-  s7: 'Perdão (Colossenses 3:13)',
-  s8: 'Ilustração: O carro sem lubrificante',
-  s9: 'Ilustração: O ácido (ódio)',
-  s10: '1 Pedro 4:8 — Amor intenso',
-  s11: 'Ilustração: Gravura das duas amigas',
-  s12: 'Conclusão — Resumo das ilustrações (1-7)'
-};
-const paragraphsBySection = {};
-sections.forEach(sec => {
-  const sid = sec.id;
-  const paras = sec.querySelectorAll('.paragraph');
-  paragraphsBySection[sid] = Array.from(paras).map(p => ({
-    text: p.textContent,
-    classes: p.className
-  }));
+// === FLUXOGRAMA (cola): botão abre a seção na sanfona ===
+document.querySelectorAll('.fc-open').forEach(btn => {
+  btn.addEventListener('click', () => { if (window.accOpen) window.accOpen(btn.dataset.open); });
 });
-
-const modalOverlay = document.getElementById('modalOverlay');
-const modalBody = document.getElementById('modalBody');
-const modalTitle = document.getElementById('modalTitle');
-const modalClose = document.getElementById('modalClose');
-
-function closeModal() {
-  if (modalOverlay) modalOverlay.classList.remove('show');
-  flowBlocks.forEach(b => b.classList.remove('expanded'));
-}
-if (modalClose) modalClose.addEventListener('click', closeModal);
-if (modalOverlay) {
-  modalOverlay.addEventListener('click', e => {
-    if (e.target === modalOverlay) closeModal();
-  });
-}
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-});
-
-flowBlocks.forEach(block => {
-  block.addEventListener('click', () => {
-    const rawSid = block.dataset.section;
-    if (!rawSid) return;
-    // expand this block visually
-    flowBlocks.forEach(b => b.classList.remove('expanded'));
-    block.classList.add('expanded');
-    // Support compound sections (e.g. "s11-12")
-    const sids = rawSid.split('-');
-    let panelHtml = '';
-    let firstTitle = '';
-    sids.forEach((sid, idx) => {
-      const title = flowData[sid];
-      const paras = paragraphsBySection[sid] || [];
-      if (idx === 0) firstTitle = title;
-      const heading = sid.replace('s','') + (sids.length > 1 ? ' ' : '');
-      panelHtml += `<div class="fd-title" style="color: var(--accent); font-size: 16px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border);">${heading}. ${title}</div>`;
-      paras.forEach(p => {
-        const cls = (p.classes.includes('para-high') ? 'high' : '') + (p.classes.includes('para-illust') ? ' illust' : '');
-        const m = p.text.match(/¶(\d+)/);
-        const num = m ? m[1] : '';
-        const cleanText = p.text.replace(/¶\d+\s*/, '');
-        panelHtml += `<div class="fd-para ${cls.trim()}"><span class="fd-num">¶${num}</span>${cleanText}</div>`;
-      });
-      if (idx < sids.length - 1) {
-        panelHtml += '<hr>';
-      }
-    });
-    if (modalBody) modalBody.innerHTML = panelHtml;
-    if (modalTitle) {
-      modalTitle.textContent = sids.length > 1
-        ? `${sids[0].replace('s','')}–${sids[sids.length-1].replace('s','')}. ${firstTitle}`
-        : `${sids[0].replace('s','')}. ${firstTitle}`;
-    }
-    if (modalOverlay) modalOverlay.classList.add('show');
-  });
-});
-
 
 // === SANFONA (leitura no tablet) ===
 (function(){
