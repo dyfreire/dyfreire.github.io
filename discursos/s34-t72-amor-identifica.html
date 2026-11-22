@@ -573,6 +573,29 @@ header.disc-header .tema { color: var(--highlight); font-style: italic; margin-t
 }
 .acc .acc-body .paragraph .num { font-size: 14px; }
 .acc .acc-body .badges { margin-top: 8px; }
+.acc-nav { display: flex; gap: 10px; margin: 18px 0 8px; }
+.acc-nav .acc-next { flex: 1 1 auto; margin: 0; width: auto; }
+.acc-map {
+  flex: 0 0 auto; width: 76px; min-height: 64px;
+  font-size: 30px; line-height: 1;
+  color: var(--text); background: var(--card);
+  border: 2px solid var(--highlight); border-radius: 10px; cursor: pointer;
+  touch-action: manipulation;
+}
+.acc-nav .acc-map:only-child { margin-left: auto; }
+.acc.acc-searching .acc-nav { display: none; }
+.fc-card.fc-flash { animation: fcFlash 2.2s ease-out; }
+@keyframes fcFlash {
+  0%, 35% { box-shadow: 0 0 0 4px var(--highlight); background: rgba(240, 185, 65, 0.18); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 185, 65, 0); }
+}
+/* aba: só a ativa fica destacada (hover só em dispositivos com mouse) */
+.tab:hover { background: transparent; color: var(--muted); }
+@media (hover: hover) { .tab:not(.active):hover { color: var(--text); background: rgba(255,255,255,0.04); } }
+.tab, .tab:hover, .tab.active { transition: none; }
+.tab:focus { outline: none; }
+.tab:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.tab.active, .tab.active:hover { background: var(--accent); color: #fff; }
 .acc-next {
   display: block; width: 100%;
   margin: 18px 0 8px; min-height: 64px;
@@ -641,6 +664,29 @@ header.disc-header .tema { color: var(--highlight); font-style: italic; margin-t
   .toc-list .toc-time { display: none; }
 }
 @media print { .fc-open { display: none; } .fc-card { break-inside: avoid; } }
+
+/* === VERSÍCULOS NO FLUXOGRAMA === */
+.fc-points li.fc-bible { color: var(--verse); }
+.fc-points li.fc-bible::marker { color: var(--verse); }
+.verse-ref {
+  font: inherit; color: var(--verse); background: rgba(210, 168, 255, 0.12);
+  border: 1px solid rgba(210, 168, 255, 0.45); border-radius: 8px;
+  padding: 2px 10px; margin: 2px 0; cursor: pointer; white-space: nowrap;
+  text-decoration: underline; text-underline-offset: 3px; touch-action: manipulation;
+}
+.fc-meta button.fc-verse {
+  font: inherit; font-size: 16px; font-weight: 600; padding: 4px 12px; border-radius: 14px;
+  color: var(--verse); background: rgba(210, 168, 255, 0.12); border: 1px solid rgba(210, 168, 255, 0.45);
+  text-decoration: underline; text-underline-offset: 3px; min-height: 36px;
+}
+.verse-modal .modal-header h3 { font-size: 24px; color: var(--verse); }
+.verse-modal .verse-close {
+  width: 60px; height: 60px; font-size: 28px; border-radius: 12px;
+  color: var(--text); border: 2px solid var(--border); background: rgba(255,255,255,0.05);
+}
+.verse-modal .verse-text { font-size: 23px; line-height: 1.6; color: #e6edf3; margin: 0 0 14px; white-space: pre-line; }
+.verse-modal .verse-text sup { color: var(--verse); font-weight: 700; font-size: 15px; }
+.verse-modal .verse-src { font-size: 15px; color: var(--muted); margin: 8px 0 0; font-style: italic; }
 </style>
 </head>
 <body>
@@ -925,15 +971,15 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-base" id="fluxo-s2">
       <div class="fc-head"><span class="fc-num">2</span><h3 class="fc-title">O amor é o sinal característico (João 13:34, 35)</h3></div>
-      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4 min · 1:30 a 5:30</span><span class="fc-verse">📖 João 13:34, 35</span></div>
-      <ul class="fc-points"><li>Vaga-lume e zebra: cada ser tem o seu sinal característico, que nasce com ele.</li><li>O sinal do cristão verdadeiro é o amor. Não é falar em línguas, não é cura.</li><li>“Novo mandamento”: amar como Jesus amou, com amor abnegado, a ponto de dar a vida.</li><li>“Entre si”: amor especial pelos irmãos. Só entre o povo de Jeová se encontra esse amor.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4 min · 1:30 a 5:30</span><button type="button" class="fc-verse verse-ref" data-ref="João 13:34, 35">📖 João 13:34, 35</button></div>
+      <ul class="fc-points"><li>Vaga-lume e zebra: cada ser tem o seu sinal característico, que nasce com ele.</li><li>O sinal do cristão verdadeiro é o amor. Não é falar em línguas, não é cura.</li><li class="fc-bible">“Novo mandamento”: amar como Jesus amou, com amor abnegado, a ponto de dar a vida. <button type="button" class="verse-ref" data-ref="João 13:34">(João 13:34)</button></li><li class="fc-bible">“Entre si”: amor especial pelos irmãos. Só entre o povo de Jeová se encontra esse amor. <button type="button" class="verse-ref" data-ref="João 13:35">(João 13:35)</button></li></ul>
       <button type="button" class="fc-open" data-open="s2">Abrir no discurso ▸</button>
     </article>
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-base" id="fluxo-s3">
       <div class="fc-head"><span class="fc-num">3</span><h3 class="fc-title">Romanos 12:10: amor fraternal e iniciativa</h3></div>
-      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4,5 min · 5:30 a 10:00</span><span class="fc-verse">📖 Romanos 12:10</span></div>
-      <ul class="fc-points"><li>Amor fraternal é amor de família, de irmão mesmo: a gente sai em defesa dele.</li><li>Tomar a iniciativa: não espero o outro me amar para então amar. Eu faço a minha parte.</li><li>Gravura 1: o amor é prática, não só sentimento.</li><li>O amigo verdadeiro aparece na dificuldade, no leito do hospital. Os irmãos no mundo todo se ajudam.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~4,5 min · 5:30 a 10:00</span><button type="button" class="fc-verse verse-ref" data-ref="Romanos 12:10">📖 Romanos 12:10</button></div>
+      <ul class="fc-points"><li class="fc-bible">Amor fraternal é amor de família, de irmão mesmo: a gente sai em defesa dele. <button type="button" class="verse-ref" data-ref="Romanos 12:10">(Romanos 12:10)</button></li><li class="fc-bible">Tomar a iniciativa: não espero o outro me amar para então amar. Eu faço a minha parte. <button type="button" class="verse-ref" data-ref="Romanos 12:10">(Romanos 12:10)</button></li><li>Gravura 1: o amor é prática, não só sentimento.</li><li class="fc-bible">O amigo verdadeiro aparece na dificuldade, no leito do hospital. Os irmãos no mundo todo se ajudam. <button type="button" class="verse-ref" data-ref="Provérbios 17:17">(Provérbios 17:17)</button></li></ul>
       <button type="button" class="fc-open" data-open="s3">Abrir no discurso ▸</button>
     </article>
     <div class="fc-arrow" aria-hidden="true">↓</div>
@@ -953,15 +999,15 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-illust" id="fluxo-s6">
       <div class="fc-head"><span class="fc-num">6</span><h3 class="fc-title">Ilustração: a floresta verde (miragem)</h3></div>
-      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~4 min · 13:30 a 17:30</span><span class="fc-verse">📖 Salmo 130</span></div>
-      <ul class="fc-points"><li>Não somos perfeitos. De cima, a floresta é verde e linda; lá embaixo tem cobras, lagartos e escorpiões.</li><li>Entre os servos de Jeová sempre houve imperfeição e atrito. Pedro e Paulo foram humildes e se corrigiram.</li><li>Jeová não fica procurando os nossos erros. Se ficasse, quem ficaria de pé?</li><li>Se eu soltar uma “cobra”, reconheço e elimino rápido. O perdão é indispensável.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Ilustração</span><span class="fc-time">⏱ ~4 min · 13:30 a 17:30</span><button type="button" class="fc-verse verse-ref" data-ref="Salmo 130:3">📖 Salmo 130:3</button></div>
+      <ul class="fc-points"><li>Não somos perfeitos. De cima, a floresta é verde e linda; lá embaixo tem cobras, lagartos e escorpiões.</li><li>Entre os servos de Jeová sempre houve imperfeição e atrito. Pedro e Paulo foram humildes e se corrigiram.</li><li class="fc-bible">Jeová não fica procurando os nossos erros. Se ficasse, quem ficaria de pé? <button type="button" class="verse-ref" data-ref="Salmo 130:3">(Salmo 130:3)</button></li><li>Se eu soltar uma “cobra”, reconheço e elimino rápido. O perdão é indispensável.</li></ul>
       <button type="button" class="fc-open" data-open="s6">Abrir no discurso ▸</button>
     </article>
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-base" id="fluxo-s7">
       <div class="fc-head"><span class="fc-num">7</span><h3 class="fc-title">Perdão (Colossenses 3:13)</h3></div>
-      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1 min · 17:30 a 18:30</span><span class="fc-verse">📖 Colossenses 3:13</span></div>
-      <ul class="fc-points"><li>Perdoar liberalmente, assim como Jeová nos perdoou.</li><li>Liberal é em abundância, sem “desde que”: passou, passou, vida que segue.</li><li>“Continuem a suportar” e “razão para queixa”: vai haver atrito, como no passado.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1 min · 17:30 a 18:30</span><button type="button" class="fc-verse verse-ref" data-ref="Colossenses 3:13">📖 Colossenses 3:13</button></div>
+      <ul class="fc-points"><li class="fc-bible">Perdoar liberalmente, assim como Jeová nos perdoou. <button type="button" class="verse-ref" data-ref="Colossenses 3:13">(Colossenses 3:13)</button></li><li>Liberal é em abundância, sem “desde que”: passou, passou, vida que segue.</li><li class="fc-bible">“Continuem a suportar” e “razão para queixa”: vai haver atrito, como no passado. <button type="button" class="verse-ref" data-ref="Colossenses 3:13">(Colossenses 3:13)</button></li></ul>
       <button type="button" class="fc-open" data-open="s7">Abrir no discurso ▸</button>
     </article>
     <div class="fc-arrow" aria-hidden="true">↓</div>
@@ -981,8 +1027,8 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-base" id="fluxo-s10">
       <div class="fc-head"><span class="fc-num">10</span><h3 class="fc-title">1 Pedro 4:8: amor intenso</h3></div>
-      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1,5 min · 22:00 a 23:30</span><span class="fc-verse">📖 1 Pedro 4:8</span></div>
-      <ul class="fc-points"><li>Intenso é esticado, como a corda do violão na tensão certa, bem afinada.</li><li>Todo mundo afinado e em sintonia no amor: será uma maravilha.</li><li>O amor cobre uma multidão de pecados, como uma maquiagem poderosa que esconde defeitos.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Ponto principal</span><span class="fc-time">⏱ ~1,5 min · 22:00 a 23:30</span><button type="button" class="fc-verse verse-ref" data-ref="1 Pedro 4:8">📖 1 Pedro 4:8</button></div>
+      <ul class="fc-points"><li class="fc-bible">Intenso é esticado, como a corda do violão na tensão certa, bem afinada. <button type="button" class="verse-ref" data-ref="1 Pedro 4:8">(1 Pedro 4:8)</button></li><li>Todo mundo afinado e em sintonia no amor: será uma maravilha.</li><li class="fc-bible">O amor cobre uma multidão de pecados, como uma maquiagem poderosa que esconde defeitos. <button type="button" class="verse-ref" data-ref="1 Pedro 4:8">(1 Pedro 4:8)</button></li></ul>
       <button type="button" class="fc-open" data-open="s10">Abrir no discurso ▸</button>
     </article>
     <div class="fc-arrow" aria-hidden="true">↓</div>
@@ -995,13 +1041,25 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
     <div class="fc-arrow" aria-hidden="true">↓</div>
     <article class="fc-card fc-concl" id="fluxo-s12">
       <div class="fc-head"><span class="fc-num">12</span><h3 class="fc-title">Conclusão: Colossenses 3:14 e a miragem</h3></div>
-      <div class="fc-meta"><span class="fc-type">Conclusão</span><span class="fc-time">⏱ ~4 min · 26:00 a 30:00</span><span class="fc-verse">📖 Colossenses 3:14</span></div>
-      <ul class="fc-points"><li>Revistam-se de amor, o perfeito vínculo de união: como encapar o fio desencapado para não haver explosão.</li><li>No Salão do Reino a gente sente o amor na pele: o ar que se respira é amor.</li><li>Recapitular: zebra e vaga-lume, gnu e elefante, carro, ácido, violão, fio desencapado.</li><li>Nosso amor não pode ser miragem: é água de verdade para quem chega perto. É esse amor que identifica os cristãos verdadeiros.</li></ul>
+      <div class="fc-meta"><span class="fc-type">Conclusão</span><span class="fc-time">⏱ ~4 min · 26:00 a 30:00</span><button type="button" class="fc-verse verse-ref" data-ref="Colossenses 3:14">📖 Colossenses 3:14</button></div>
+      <ul class="fc-points"><li class="fc-bible">Revistam-se de amor, o perfeito vínculo de união: como encapar o fio desencapado para não haver explosão. <button type="button" class="verse-ref" data-ref="Colossenses 3:14">(Colossenses 3:14)</button></li><li>No Salão do Reino a gente sente o amor na pele: o ar que se respira é amor.</li><li>Recapitular: zebra e vaga-lume, gnu e elefante, carro, ácido, violão, fio desencapado.</li><li>Nosso amor não pode ser miragem: é água de verdade para quem chega perto. É esse amor que identifica os cristãos verdadeiros.</li></ul>
       <button type="button" class="fc-open" data-open="s12">Abrir no discurso ▸</button>
     </article>
   </div>
 </div>
 
+</div>
+
+
+<!-- Modal: texto bíblico (Tradução do Novo Mundo, edição de estudo, wol.jw.org/pt) -->
+<div class="modal-overlay" id="verseModal" aria-hidden="true">
+  <div class="modal verse-modal" role="dialog" aria-modal="true" aria-labelledby="verseModalTitle">
+    <div class="modal-header">
+      <h3 id="verseModalTitle">Versículo</h3>
+      <button type="button" class="modal-close verse-close" id="verseModalClose" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body" id="verseModalBody"></div>
+  </div>
 </div>
 
 <script>
@@ -1011,6 +1069,7 @@ Mas que amor é esse? Ao longo do discurso nós fomos vendo.<div class="badges">
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
       btn.classList.add('active');
       const target = btn.dataset.tab;
       document.querySelector(`[data-panel="${target}"]`).classList.add('active');
@@ -1132,18 +1191,25 @@ document.querySelectorAll('.fc-open').forEach(btn => {
     body.id = sec.id + '-body';
     // move os parágrafos (sem alterar o texto) para dentro do corpo da sanfona
     Array.from(sec.childNodes).forEach(n => { if (n !== head) body.appendChild(n); });
-    const next = document.createElement('button');
-    next.type = 'button';
+    const nav = document.createElement('div');
+    nav.className = 'acc-nav';
     if (i < secs.length - 1) {
+      const next = document.createElement('button');
+      next.type = 'button';
       next.className = 'acc-next';
       next.textContent = 'Próxima: ' + titleOf(secs[i + 1]) + '  ▸';
       next.addEventListener('click', () => openSection(secs[i + 1].id));
-    } else {
-      next.className = 'acc-next acc-close';
-      next.textContent = 'Fim do discurso. Fechar seção';
-      next.addEventListener('click', () => { closeAll(); scrollToEl(sec); });
+      nav.appendChild(next);
     }
-    body.appendChild(next);
+    const map = document.createElement('button');
+    map.type = 'button';
+    map.className = 'acc-map';
+    map.textContent = '🗺️';
+    map.setAttribute('aria-label', 'Ver no fluxograma');
+    map.title = 'Ver no fluxograma';
+    map.addEventListener('click', () => showInFlow(sec.id));
+    nav.appendChild(map);
+    body.appendChild(nav);
     sec.appendChild(body);
 
     head.setAttribute('role', 'button');
@@ -1166,16 +1232,31 @@ document.querySelectorAll('.fc-open').forEach(btn => {
     const top = el.getBoundingClientRect().top + window.pageYOffset - 8;
     window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
   }
-  function ensureConteudoTab() {
-    const tab = document.querySelector('[data-tab="conteudo"]');
-    const panel = document.querySelector('[data-panel="conteudo"]');
-    if (panel && !panel.classList.contains('active')) {
-      document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      if (tab) tab.classList.add('active');
-      panel.classList.add('active');
-    }
+  function showTab(name) {
+    document.querySelectorAll('.tab').forEach(b => {
+      const on = b.dataset.tab === name;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === name));
   }
+  function ensureConteudoTab() {
+    const panel = document.querySelector('[data-panel="conteudo"]');
+    if (panel && !panel.classList.contains('active')) showTab('conteudo');
+  }
+  function showInFlow(id) {
+    const card = document.getElementById('fluxo-' + id);
+    if (!card) return;
+    showTab('fluxo');
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+    scrollToEl(card);
+    card.classList.remove('fc-flash');
+    void card.offsetWidth; // reinicia a animação
+    card.classList.add('fc-flash');
+    clearTimeout(card._flashT);
+    card._flashT = setTimeout(() => card.classList.remove('fc-flash'), 2200);
+  }
+  window.accShowInFlow = showInFlow;
   function openSection(id) {
     const sec = document.getElementById(id);
     if (!sec || secs.indexOf(sec) < 0) return;
@@ -1205,6 +1286,50 @@ document.querySelectorAll('.fc-open').forEach(btn => {
   const start = secs.find(s => s.id === hash) || secs[0];
   secs.forEach(s => setOpen(s, s === start));
   if (start !== secs[0]) setTimeout(() => scrollToEl(start), 0);
+})();
+
+// === VERSÍCULOS (TNM, edição de estudo, texto copiado de wol.jw.org/pt) ===
+const TNM = {"João 13:34": [[34, "Eu lhes dou um novo mandamento: Amem uns aos outros; assim como eu amei vocês, amem também uns aos outros."]], "João 13:35": [[35, "Por meio disto todos saberão que vocês são meus discípulos: se tiverem amor entre si.”"]], "João 13:34, 35": [[34, "Eu lhes dou um novo mandamento: Amem uns aos outros; assim como eu amei vocês, amem também uns aos outros."], [35, "Por meio disto todos saberão que vocês são meus discípulos: se tiverem amor entre si.”"]], "Romanos 12:10": [[10, "Com amor fraternal, tenham ternos sentimentos uns pelos outros. Tomem a iniciativa em honrar uns aos outros."]], "Colossenses 3:13": [[13, "Continuem a suportar uns aos outros e a perdoar uns aos outros liberalmente, mesmo que alguém tenha razão para queixa contra outro. Assim como Jeová os perdoou liberalmente, vocês devem fazer o mesmo."]], "Colossenses 3:14": [[14, "Mas, além de todas essas coisas, revistam-se de amor, pois é o perfeito vínculo de união."]], "1 Pedro 4:8": [[8, "Acima de tudo, tenham intenso amor uns pelos outros, porque o amor cobre uma multidão de pecados."]], "Salmo 130:3": [[3, "Se vigiasses os erros, ó Jah,\nQuem, ó Jeová, poderia ficar de pé?"]], "Provérbios 17:17": [[17, "O verdadeiro amigo ama em todos os momentos\nE se torna um irmão em tempos de aflição."]]};
+(function(){
+  const ov = document.getElementById('verseModal');
+  const title = document.getElementById('verseModalTitle');
+  const body = document.getElementById('verseModalBody');
+  const closeBtn = document.getElementById('verseModalClose');
+  if (!ov) return;
+  let lastFocus = null;
+  function open(ref) {
+    const parts = TNM[ref];
+    if (!parts) return;
+    title.textContent = ref;
+    body.innerHTML = '';
+    parts.forEach(([v, t]) => {
+      const p = document.createElement('p');
+      p.className = 'verse-text';
+      const n = document.createElement('sup');
+      n.textContent = v;
+      p.appendChild(n);
+      p.appendChild(document.createTextNode(' ' + t));
+      body.appendChild(p);
+    });
+    const src = document.createElement('p');
+    src.className = 'verse-src';
+    src.textContent = 'Tradução do Novo Mundo (edição de estudo)';
+    body.appendChild(src);
+    lastFocus = document.activeElement;
+    ov.classList.add('show');
+    ov.setAttribute('aria-hidden', 'false');
+    closeBtn.focus();
+  }
+  function close() {
+    ov.classList.remove('show');
+    ov.setAttribute('aria-hidden', 'true');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.querySelectorAll('.verse-ref').forEach(b => b.addEventListener('click', () => open(b.dataset.ref)));
+  closeBtn.addEventListener('click', close);
+  ov.addEventListener('click', ev => { if (ev.target === ov) close(); });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && ov.classList.contains('show')) close(); });
+  window.openVerse = open;
 })();
 </script>
 </body>
